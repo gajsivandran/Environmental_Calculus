@@ -1,0 +1,100 @@
+# (APPENDIX) Appendix {-}
+
+# Calculus I Equation Sheet
+
+---
+
+**Basic Derivative Rules**
+
+| Rule | Function Form | Derivative Form |
+|:----:|:-----------------:|:--------------------:|
+| Constant | \(c\) | \(0\) |
+| Power | \(x^n\) | \(n x^{n-1}\) |
+| Constant Multiple | \(c \cdot f(x)\) | \(c \cdot f'(x)\) |
+| Sum | \(f(x) + g(x)\) | \(f'(x) + g'(x)\) |
+| Difference | \(f(x) - g(x)\) | \(f'(x) - g'(x)\) |
+| Product | \(f(x)g(x)\) | \(f'(x)g(x) + f(x)g'(x)\) |
+| Quotient | \(\dfrac{f(x)}{g(x)}\) | \(\dfrac{f'(x)g(x) - f(x)g'(x)}{g(x)^2}\) |
+| Chain | \(f(g(x))\) | \(f'(g(x)) \cdot g'(x)\) |
+| Inverse | \(f^{-1}(x)\) | \(\dfrac{1}{f'(f^{-1}(x))}\) |
+
+---
+
+**Trigonometric Derivatives**
+
+| Function | Derivative |
+|:--------:|:----------:|
+| \(\sin x\) | \(\cos x\) |
+| \(\cos x\) | \(-\sin x\) |
+| \(\tan x\) | \(\sec^2 x\) |
+| \(\sec x\) | \(\sec x \tan x\) |
+| \(\csc x\) | \(-\csc x \cot x\) |
+| \(\cot x\) | \(-\csc^2 x\) |
+
+---
+
+
+**Exponential & Logarithmic Derivatives**
+
+| Function | Derivative |
+|:--------:|:----------:|
+| \(a^x\) | \(a^x \ln(a)\) |
+| \(e^x\) | \(e^x\) |
+| \(a^{g(x)}\) | \(g'(x)\, a^{g(x)} \ln(a)\) |
+| \(e^{g(x)}\) | \(g'(x)\, e^{g(x)}\) |
+| \(\log_a(x)\) | \(\dfrac{1}{x \ln(a)}\) |
+| \(\ln(x)\) | \(\dfrac{1}{x}\) |
+| \(\log_a(g(x))\) | \(\dfrac{g'(x)}{g(x)\ln(a)}\) |
+| \(\ln(g(x))\) | \(\dfrac{g'(x)}{g(x)}\) |
+
+---
+
+**Average Rate of Change**
+
+  \[
+  AV_[a,b] = \frac{f(b) - f(a)}{b-a}
+  \]
+
+
+**Limit Definition of a Derivative**
+
+  \[
+  f'(a) = \lim_{h \to 0} \frac{f(a+h) - f(a)}{h}
+  \]
+
+---
+
+**General Functions & Forms**
+
+- **Linear Forms:**  
+  General: \(f(x) = ax+b\),  
+  Point-slope: \(y-y_1 = m(x-x_1)\),  
+  Slope-intercept: \(y=mx+b\)
+
+- **Quadratic Forms:**  
+  General: \(ax^2+bx+c\),  
+  Vertex: \(a(x-h)^2+k\),  
+  Roots: \(\dfrac{-b \pm \sqrt{b^2-4ac}}{2a}\)
+
+- **Polynomial (nth-order):**  
+  \(f(x) = a_nx^n + \dots + a_1x + a_0\)
+
+- **Transformations:**  
+  \(g(x) = a f(x-b) + c\)
+
+- **Sinusoid:**  
+  \(f(x) = a \sin(kx+b)+c,\ \ T=\dfrac{2\pi}{k}\)
+
+---
+
+**Applications**
+
+- **Slope of tangent line:** \(m = f'(a)\)  
+- **Tangent line equation:** \(y = f'(a)(x-a)+f(a)\)  
+- **Linear approximation:** \(L(x)=f(a)+f'(a)(x-a)\)  
+- **Related rates:** \(\dfrac{dy}{dt} = \dfrac{dy}{dx}\cdot\dfrac{dx}{dt}\)  
+- **Concavity:** \(f''>0 \Rightarrow\) concave up, \(f''<0 \Rightarrow\) concave down  
+- **Extrema:** solve \(f'(x)=0\), check sign of \(f'\) or use \(f''\)  
+
+---
+
