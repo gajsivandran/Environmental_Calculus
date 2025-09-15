@@ -130,4 +130,3 @@ solving-equations-1
 function-composition-inverses-1
 rates-units-1
 calculus-i-equation-sheet
-update-test
