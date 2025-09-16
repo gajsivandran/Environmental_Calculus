@@ -1,5 +1,5 @@
 --- 
-title: "Enviornmental Calculus - Active Learning with Case Studies"
+title: "Environmental Calculus - Active Learning with Case Studies"
 author: "Gaj Sivandran"
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
