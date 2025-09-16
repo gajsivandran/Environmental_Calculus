@@ -18,4 +18,6 @@ rmd_files:
   - index.Rmd
   - 01-intro.Rmd
   - 01a-intro-workbook.Rmd
+  - 02-Derivatives.Rmd
+  - 02a-Derivatives.Rmd
   - 05-Equation_sheet.Rmd
