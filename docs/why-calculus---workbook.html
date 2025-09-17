@@ -23,7 +23,7 @@
 <meta name="author" content="Gaj Sivandran" />
 
 
-<meta name="date" content="2025-09-16" />
+<meta name="date" content="2025-09-17" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -179,6 +179,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="2.8" data-path="why-calculus---workbook.html"><a href="why-calculus---workbook.html#questions"><i class="fa fa-check"></i><b>2.8</b> Questions?</a></li>
 <li class="chapter" data-level="2.9" data-path="why-calculus---workbook.html"><a href="why-calculus---workbook.html#paper-places"><i class="fa fa-check"></i><b>2.9</b> Paper Places</a></li>
+<li class="chapter" data-level="2.10" data-path="why-calculus---workbook.html"><a href="why-calculus---workbook.html#rate-of-change---a-first-look"><i class="fa fa-check"></i><b>2.10</b> Rate of Change - A First Look</a></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="pre-calculus-foundations.html"><a href="pre-calculus-foundations.html"><i class="fa fa-check"></i><b>3</b> Pre-Calculus Foundations</a>
 <ul>
@@ -744,6 +745,47 @@ We are going to make paper planes and then see how well they fly.</p>
 <p><strong>Discussion</strong></p>
 <p>Why did we make paper planes in calc?
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></p>
+</div>
+</div>
+<div id="rate-of-change---a-first-look" class="section level2 hasAnchor" number="2.10">
+<h2><span class="header-section-number">2.10</span> Rate of Change - A First Look<a href="why-calculus---workbook.html#rate-of-change---a-first-look" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div class="promptbox">
+<p><strong>Class Discussion</strong></p>
+<p><img src="images/Bolt.png" style="float:right; width:300px; margin:10px;" fig.alt="Picture of Usain Bolt winning a 100m race" /></p>
+<p>When we try to understand derivatives, the most common place to start is Position-&gt;Velocity-&gt;Acceleration and how they are linked.</p>
+<p>Lets have a look at this while watching Usain Bolt run the 100m in 9.69s</p>
+<p>While we watch this video I want you to keep in mind the idea of change - what variables are changing as we move through this race.</p>
+<p><a href="https://www.youtube.com/clip/UgkxYLQtjngzm0z_y34zOcFQH24uIOKdLFCd" target="_blank" rel="noopener">Usain Bolt 100m Record</a></p>
+<p><strong>Group Discussion</strong></p>
+<ol style="list-style-type: decimal">
+<li><p>How fast did he run? Can you calculate it?
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br></p></li>
+<li><p>What was the fastest he ran? OR what was his top speed (velocity)?
+When do you think this happened?
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br></p></li>
+</ol>
+<p>3)The time it took him to get to 10m markers was measured, and the plot is below. What does this tell us about how fast he ran?</p>
+<p><img src="images/Bolt2.png" style="width:500px; margin:10px;" fig.alt="Position vs time graph, showing ten segments, each with slightly different slopes, the first segment took 1.83s, a segment in the middle of the race took 0.82s" />
+<br><br><br><br><br><br><br></p>
+<p>4)If we fit a smooth curve to this path, instead of looking at the slope over every 10m, we can look at the <strong>instantaneous rate of change</strong> or the derivative at any point.</p>
+<p>Note: The reason the curve needs to be smooth will be covered later - this is all just a preview</p>
+<p><img src="images/Bolt3.png" style="width:500px; margin:10px;" fig.alt="Position vs time grpah, but instead of straight line segments, it is one smooth line through the points" />
+<br><br><br><br><br><br><br></p>
+<ol start="5" style="list-style-type: decimal">
+<li>No if we calculate the instantaneous rate of change and plot it against time - we get the velocity vs time relationship.</li>
+</ol>
+<p>Using this - try to describe how is velocity (speed) varied during the race.</p>
+<p><img src="images/Bolt4.png" style="width:500px; margin:10px;" fig.alt="Velocity vs time grpah, shows the velocity increase at the start of the race, then level out, before decreasing at the end of the race. In the video the decrease was associated with Usain Bolt celebrating early" />
+<br><br><br><br><br><br><br></p>
+<ol start="6" style="list-style-type: decimal">
+<li>The world wondered how fast he could actually run the 100m. A year later at the world championships sensors were places along the tract to capture in high resolution his position with time.</li>
+</ol>
+<ul>
+<li>What do you notice this time?</li>
+<li>What is causing the oscillating in the red line?</li>
+</ul>
+<p><img src="images/Bolt5.png" style="width:500px; margin:10px;" fig.alt="Velocity vs time grpah, black line shows increasing velcity and then levels out at 12m/s, the red line shows the instantaneous velocity whcih oscilates around the average through the race" />
+<br><br><br><br><br><br><br></p>
 </div>
 
 </div>

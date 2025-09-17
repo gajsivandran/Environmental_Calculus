@@ -30,6 +30,7 @@ office-hours
 class-notes
 questions
 paper-places
+rate-of-change---a-first-look
 pre-calculus-foundations
 learning-objectives
 what-youre-expected-to-know
