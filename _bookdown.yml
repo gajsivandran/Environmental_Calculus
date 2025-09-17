@@ -16,6 +16,7 @@ number_sections: true
 
 rmd_files:
   - index.Rmd
+  - 0a-index.Rmd
   - 01-intro.Rmd
   - 01a-intro-workbook.Rmd
   - 02-Derivatives.Rmd

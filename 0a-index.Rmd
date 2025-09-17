@@ -1,0 +1,254 @@
+# Why Calculus - Workbook
+
+## Teaching Team Introductions
+### Gaj Sivandran
+
+![](images/gaj_timeline.png){fig.alt='Image of person thinking, decorative'}
+
+**Teaching Interests**
+
+- Design (freshman and senior)
+- Fundamental engineering (statics, fluids)
+- Environmental labs
+- Water resources
+
+**Research Interests**
+
+- Climate change
+- Active learning pedagogy
+- Simulation modeling
+- Decision support (socio-economic modelling) 
+
+**Random Facts**
+
+- I have an 11yr old daughter that helps me write exam questions
+- Dogs >Cats, Cricket > Baseball,  AFL > NFL, Vegemite > Peanut butter 
+- I like to run very very long distances, stilling working on why
+
+## Classroom Etiquette
+
+![](images/hands.png){fig.alt='Decorative' style="float:right; width:250px; margin:10px;"}
+
+- Please feel free to bring your breakfast/lunch to class – just be sure to clean up before you leave
+- Bring whatever tech you need to take notes and engage. We will be using Poll everywhere 
+- Ask questions – but please be respectful of all voices and views - wrong answers have more value than right ones!
+
+## Why are you here?
+
+::: promptbox
+
+**Discussion**
+In small groups:
+
+![](images/declared_majors.png){fig.alt='Decorative' style="float:right; width:200px; margin:10px;"}
+
+
+- Introduce yourselves
+- Why are you all here?
+- What do you think this class could be useful for?
+- What do you notice about the declared majors in this class?
+
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+:::
+
+## What is Calculus?
+
+![](images/change1.png){fig.alt='Change is the only constant in life - Heraclitus' style="float:right; width:300px; margin:10px;"}
+![](images/change2.png){fig.alt='Charles Darwin Quote - It is not the strongest of the species that survives, nor the most intelligent that survives. It is the one that is most adaptable to change' style="width:400px; margin:10px;"}
+
+
+::: promptbox
+
+**Discussion**
+
+What do you see in this graph?
+
+![](images/change3.png){fig.alt='Bar graph of 10 hottest years in the US - from hottest down - 2024, 2012, 2016, 2017, 2021,2015, 2020, 2023,2006,1998' style="float:center; width:800px; margin:10px;"}
+<br><br><br><br>
+
+:::
+
+## My Expectations of You
+
+![](images/endure.png){fig.alt='Cover of the book Endure' style="float:right; width:100px; margin:10px;"}
+
+**Objective 1** : The ability to apply calculus to the natural system
+
+- Calculus is a language that allows us to tell complex environmental stories
+
+**Objective 2**: Effort
+
+- The best definition of I have come across *the struggle to continue against a mounting desire to stop - Alex Hutchinson, Endure*
+
+## Your Expectations of Me
+
+::: promptbox
+**Discussion**
+
+In a small group make 2 lists
+
+- What cac you come to see me about?
+
+<br><br><br><br><br><br><br><br>
+
+- What should you find someone else for?
+<br><br><br><br><br><br><br><br>
+
+:::
+
+## Syllabus Highlights
+
+### Assessments
+
+![](images/assessmentpie.png){fig.alt='Pie chart of assessment breakdown - percentages in text' style="float:right; width:300px; margin:10px;"}
+
+**Preparation and Participation** [20%]
+
+- Before class readings/questions
+- In-class activities
+- After-class self checks
+
+**Homeworks** [10%]
+
+- Roughly every week
+- Revise and resubmit
+- Grade on accuracy and effort
+
+**Tests** [60%]
+
+- 4 Tests over the term 
+- 2 can be re-taken during finals week
+- 1 pg of notes (2sides)
+
+**Project** [10%]
+
+- Low stakes group project applying the big picture concepts of this class
+- Focuses on reading and interpreting the math
+
+::: promptbox
+**Class discussion**
+
+Why do you think there is so much weight on tests and participation?
+
+<br><br><br><br>
+:::
+
+### Acedemic Integrity
+
+This class has been designed to reward you for doing your **own** work
+Tests will be relatively straightforward if you make the effort on the in-class and homework assessments
+
+Using these resources will only make studying for tests harder. Many of these resources give you the *illusion* of understanding - but the reality is quite different.
+
+![](images/milkcrate.png){fig.alt='A picture of a person trying to climb a pyramid made up of milk crates' style="float:right; width:300px; margin:10px;"}
+
+![](images/chegg.png){fig.alt='Pie chart of assessment breakdown - percentages in text' style="width:300px; margin:10px;"}
+
+
+
+
+### Late Assessment / Missed Assessment Policy
+
+This is a firm policy to make sure I am being fair to all of you.
+
+**Grace period:** Homeworks will be accepted 48 hrs after their due date with no penalty. Homeworks not turned in after 48 hrs will receive a grade of zero.
+
+**Missed Tests**: If you miss a test, you will need to use one of your 're-takes' during finals weeks to do it. However, if you have a legitimate reason, I will work with you to reschedule the test earlier so you can save your re-take.
+
+**Missed Class Preparation/Participation:** From time to time we miss class for several reasons (studying for another test that day, field work, illness, etc). There will be **no opportunity** to submit preparation and participation activities if they are missed. The purpose of these activities are to reinforce concepts in the moment – and have little value out the context of the material being covered that day.
+
+To accommodate for this, 5% of the total preparation and participation assessments will be dropped. There will also be additional extra-credit opportunities throughout the term. 
+
+**Exceptional Circumstances**: You must contact me 48 hours before the **actual** due date (not after the 48hr grace period) of a graded assignment to give me advanced notice, or within 12 hours after the work is due in the case of an emergency. If you fail to do this, you will receive zero credit for the missed assignment.
+
+::: promptbox
+
+**Class Discussion** 
+
+What do we consider **exceptional circumstances**?
+
+![](images/excuses.png){fig.alt='Decorative cartoon of common excuses' style="left; width:300px; margin:10px;"}
+:::
+
+### Test Retakes Policy
+
+There is no Final in this class – BUT – I will use the finals timeslot for the retakes. So don't plan an early break if you think you might be doing a retake.
+
+If you miss a test during the term for a valid reason (health, emergency etc) and inform me in a timely manner, I’ll schedule a time during office hours for you to take the test. This flexibility is only good for a couple of days as I want to get the graded tests back to the rest of the class.
+
+If you miss a test for another reason (slept in, went to a wedding etc) you can always use one of your retakes – that’s what they are for.
+
+Reasons to retake
+Missed a test
+Want to try for a better grade
+Love calc so much you want to do more problems
+
+You can retake upto 2 tests. Your best score counts – so no risk
+
+### Office Hours
+
+![](images/when2meet.png){fig.alt='Decorative cartoon of common excuses' style="float:left; width:100px; margin:10px;"}
+
+Please select ALL times that **could** work.
+
+I will always try to hang around for 30mins or so after class to answer any questions.
+
+Office hours will be posted on Canvas as soon as they are set.
+
+<br><br><br>
+
+### Class notes
+
+All notes that I take in class are available on the onenote notebook link on Canvas
+All lectures will be recorded - these will also be made available on Canvas
+
+From time to time the technology will fail us. Remember these are being provided as a *bonus*. There is no substitute for attending class and taking your own notes.
+
+## Questions?
+::: promptbox
+
+**Class discussion**
+
+Ask me anything - whats on your mind - need clarification on any of the things we've talked about?
+<br><br><br><br><br><br><br><br><br>
+
+:::
+
+## Paper Places
+
+::: promptbox
+
+**Paper Plane Activity**
+We are going to make paper planes and then see how well they fly.
+
+We are going to break into 4 groups:
+
+- Group 1: Instructions not included – I know how to make a paper plane already
+- Group 2: Notes -  Watch the video multiple times, pausing and taking notes – I’m confident I can make a good plane
+- Group 3: Team – Work together and make 1 TEAM plane. 
+- Group 4: Solo first + then team up - Make your own plane, then make a team plane
+
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe
+    src="https://www.youtube.com/embed/eHSa-vF6ZlM"
+    title="YouTube video"
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowfullscreen
+    style="position:absolute; top:0; left:0; width:100%; height:100%;">
+  </iframe>
+</div>
+
+
+
+
+
+**Discussion**
+
+Why did we make paper planes in calc?
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+
+:::
