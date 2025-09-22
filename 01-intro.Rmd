@@ -1417,14 +1417,3 @@ Let $f(x) = 2x + 1$, $g(x) = x^2$.
 
 ---
 
-## Key Takeaways
-
--   Always include **units** in models, computations, and figure labels.
--   Use informative **figure captions** and cross-reference figures with chunk labels (e.g., Figure \@ref(fig:...)).
--   Prefer clean, named R chunks with `fig.cap` and `cache=TRUE` for reproducible, fast builds.
-
-## Self-Check
-
-1.  Explain the difference between a function’s **value** and its **rate of change** at a time $t$.
-2.  If temperature drops by \~6.5 \u00B0C per 1000 m, what change do you expect from 500 m to 1800 m?
-3.  Name two insights you get from a **contour plot** that a simple line plot does not provide.

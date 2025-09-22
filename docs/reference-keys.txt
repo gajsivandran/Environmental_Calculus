@@ -91,13 +91,11 @@ unit-conversions
 solving-equations
 function-composition-inverses
 rates-units
-key-takeaways
-self-check
 pre-calculus-foundations-workbook
 learning-objectives-1
 reflection-prompt
 what-youre-expected-to-know-1
-self-check-1
+self-check
 how-to-approach-calculus-problems-1
 analogy-prompt-walking-to-class-in-the-rain
 clarify-the-ask-1
