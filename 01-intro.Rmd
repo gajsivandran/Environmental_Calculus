@@ -642,7 +642,7 @@ For any function, try answering these three questions:
 
 Try these on your own or with a partner. Don’t just plug in numbers — ask what the function is saying!
 
-#### 🟢 Level 1: Getting Comfortable
+**🟢 Level 1: Getting Comfortable**
 
 **1.** Let $f(x) = 3x + 2$.\
 **a.** What is the input and what is the output?\
@@ -664,7 +664,7 @@ Try these on your own or with a partner. Don’t just plug in numbers — ask wh
 
 ------------------------------------------------------------------------
 
-#### 🟡 Level 2: Adding Complexity
+**🟡 Level 2: Adding Complexity**
 
 **4.** You’re given $C(d) = 50 + 10d$, where $C$ is the cost in dollars of transporting material and $d$ is the distance in kilometers.\
 **a.** What is the cost of transport if the distance is 0 km?\
@@ -681,20 +681,22 @@ Try these on your own or with a partner. Don’t just plug in numbers — ask wh
 ------------------------------------------------------------------------
 
 **6.** A temperature function is defined as:\
-$T(h) = 15 - 0.0065h$, where $h$ is elevation in meters.\
+$T(h) = 15 - 0.0065h$, where $h$ is elevation in meters above sea level.\
 **a.** What is the temperature at sea level?\
 **b.** How much does the temperature drop every 1000 meters?\
 **c.** At what elevation will the temperature be 0°C?
 
 ------------------------------------------------------------------------
 
-#### 🔴 Level 3: Challenging Interpretation
+**🔴 Level 3: Challenging Interpretation**
 
 **7.** A water tank is being filled and drained at the same time. The volume of water is modeled by:\
 $V(t) = 100 + 30t - 2t^2$, where $V$ is volume in liters and $t$ is time in minutes.\
 **a.** What kind of function is this?\
 **b.** Looking at the expressions, can you explain what each term might be doing?\
 **c.** Explain What happens to the volume over time? [Hint: You can always plug values into the function to give you points, eg t=0, t=100] **d.** Can you find where the function has as peak/valley? ---
+
+---
 
 **8.** Let $G(x) = \frac{200}{x+5}$, where $G(x)$ is the growth rate of algae based on a the addition of a chemical $x$ (in mg/L).\
 **a.** What happens to the growth rate as chemical increases?\
@@ -737,7 +739,7 @@ When working with graphs or tables, try answering:
 
 Use reasoning and estimation to explore these problems. Think in terms of *shape* and *behavior* before trying to be exact.
 
-#### 🟢 Level 1: Getting Comfortable
+**🟢 Level 1: Getting Comfortable**
 
 **1.** Here is a table showing the number of insects counted in a trap each day:
 
@@ -749,8 +751,10 @@ Use reasoning and estimation to explore these problems. Think in terms of *shape
 |  3  |   25    |
 |  4  |   32    |
 
-**a.** Is this function increasing or decreasing?\
-**b.** Does the increase look linear? Describe in words what you notice in the rate of increase. **c.** Interpolate the number of insects at 0.5 days. **d.** Extrapolate the number of insects on day 5. **e.** What is the difference between interpolation and extrapolation?
+**a.** Describe in words what you notice in the rate of increase.\
+**b.** Interpolate the number of insects at 0.5 days.\
+**c.** Extrapolate the number of insects on day 5.\
+**d.** What is the difference between interpolation and extrapolation?
 
 ------------------------------------------------------------------------
 
@@ -770,7 +774,9 @@ abline(v = 12, lty = 2, col = "gray")  # peak at noon
 ```
 
 **a.** When is the temperature highest?\
-**b.** When is it increasing most rapidly? When is decreasing most rapidly? **c.** Describe the concavity of this graph. **c.** What shape is this curve — linear, quadratic, exponential, or something else?
+**b.** When is it increasing most rapidly? When is decreasing most rapidly?\
+**c.** Describe the concavity of this graph.\
+**d.** What shape is this curve — linear, quadratic, exponential, or something else?
 
 ------------------------------------------------------------------------
 
@@ -782,7 +788,7 @@ abline(v = 12, lty = 2, col = "gray")  # peak at noon
 
 ------------------------------------------------------------------------
 
-### 🟡 Level 2: Adding Complexity
+**🟡 Level 2: Adding Complexity**
 
 **4.** A glacier’s thickness is recorded at several times:
 
@@ -836,15 +842,14 @@ abline(v = 12, lty = 2, col = "gray")  # peak at noon
 
 ------------------------------------------------------------------------
 
-### 🔴 Level 3: Challenging Interpretation
+**🔴 Level 3: Challenging Interpretation**
 
-**7.** Below is a graph showing daily CO₂ concentration over a year. The trend shows a clear upward slope with regular seasonal fluctuations.
-The black line represents the moving average (smooths out the variable) and the red line is the monthly averages.
+**7.** Below are two graph showing CO₂ concentration over time.The black line represents the moving average (smooths out the variable) and the red line is the monthly averages.
 
-![full dataset](bookdown-demo_files/figure-html/co2_data_mlo.png)
-![recent trend data](bookdown-demo_files/figure-html/co2_trend_mlo.png)
-**a.** Is this function linear, exponential, or neither?\
-**b.** What causes the seasonal ups and downs?\
+![Line graph showing atmospheric CO₂ mole fraction (ppm) at Mauna Loa Observatory from 1958 to 2025. The red curve rises steadily from about 315 ppm in 1960 to over 420 ppm in 2025, with visible annual oscillations due to seasonal cycles. The overall trend is an accelerating increase in CO₂ concentration. Logos of Scripps Institution of Oceanography and NOAA are included.](images/co2_data_mlo.png)
+![Line graph showing recent monthly mean CO₂ at Mauna Loa Observatory from 2020 to 2025. Black line shows the smoothed mean trend rising from ~414 ppm in 2020 to nearly 428 ppm in 2025. Red curve shows monthly values oscillating up and down around the mean, with peaks each spring and troughs each fall. The seasonal cycle is superimposed on a clear upward long-term trend. NOAA logo appears at the bottom.](images/co2_trend_mlo.png)
+**a.** How would you describe (in words) the red line. Try to use functional shapes that you are familiar with.
+**b.** What underlying environmental process causes the ups and downs?\
 **c.** How could you approximate the average yearly increase?
 
 ------------------------------------------------------------------------
@@ -866,8 +871,7 @@ The black line represents the moving average (smooths out the variable) and the 
 
 ------------------------------------------------------------------------
 
-**9.**\
-A table shows the dissolved oxygen (DO) level in a lake throughout the day:
+**9.** A table shows the dissolved oxygen (DO) level in a lake throughout the day:
 
 | Hour | DO (mg/L) |
 |:----:|:---------:|
@@ -918,7 +922,7 @@ When you’re given a word problem, follow these steps:
 
 ------------------------------------------------------------------------
 
-### Example
+**Example**
 
 A glacier melts by 1.2 meters per year. It is currently 120 meters thick.
 
@@ -949,7 +953,7 @@ $$
 
 Start with simple cases, then move to more realistic modeling situations.
 
-#### 🟢 Level 1: Getting Comfortable
+**🟢 Level 1: Getting Comfortable**
 
 **1.** A tree grows at a steady rate of 0.8 meters per year. It is currently 2 meters tall.\
 **a.** Write a function $H(t)$ to model the tree height $t$ years from now.\
@@ -963,14 +967,13 @@ Start with simple cases, then move to more realistic modeling situations.
 
 ------------------------------------------------------------------------
 
-**3.**\
-A weather balloon starts at 1000 meters and rises at 150 meters per minute.\
+**3.** A weather balloon starts at 1000 meters and rises at 150 meters per minute.\
 **a.** Let $A(t)$ be the altitude in meters after $t$ minutes. Write the function.\
 **b.** How high will the balloon be after 4 minutes?
 
 ------------------------------------------------------------------------
 
-#### 🟡 Level 2: Adding Complexity
+**🟡 Level 2: Adding Complexity**
 
 **4.** Carbon dioxide levels in a closed chamber start at 400 ppm and rise 5 ppm per hour due to respiration.\
 **a.** Write a function $C(t)$ to model the CO₂ concentration after $t$ hours.\
@@ -993,7 +996,7 @@ A weather balloon starts at 1000 meters and rises at 150 meters per minute.\
 
 ------------------------------------------------------------------------
 
-#### 🔴 Level 3: Challenging Interpretation
+**🔴 Level 3: Challenging Interpretation**
 
 **7.** A tank is filled at a rate of 10 L/min for 6 minutes, then drained at 4 L/min for the next 10 minutes.\
 **a.** Write a piecewise function $V(t)$ for volume over time.\
@@ -1029,6 +1032,84 @@ This section gives you a **high-repetition practice zone** to help wake up your 
 > **Goal:** Get faster and more confident with everyday math operations that form the foundation of this course.
 
 Don’t worry if you don’t remember everything right away. These are **review** skills — and the best way to remember them is to do them. A lot.
+
+---
+
+### Function Evaluation
+
+> **How-To Evaluate a Function**  
+> - To evaluate, substitute the input into the function rule.  
+> - Example: If $f(x) = x^2 + 1$, then $f(3) = 3^2 + 1 = 10$.  
+> - You can also evaluate at expressions: $f(a + h)$ means plug $(a+h)$ everywhere $x$ appears.  
+
+---
+
+**🟢 Level 1: Recall**  
+Let $f(x) = x^2 + 1$.  
+1. Find $f(3)$  
+2. Find $f(a + h)$  
+
+**🟡 Level 2: Apply Substitution**  
+Let $f(x) = x^3 + 2(x + 7)^2 + \tfrac{1}{2x}$.  
+3. Evaluate $f(2)$  
+4. Evaluate $f(t)$  
+
+**🔴 Level 3: Mixed Practice**  
+Let $f(x) = \frac {1}{x} + e^x$.  
+5. Evaluate $f(a^2)$  
+6. Evaluate $f(a + h)$  
+7. Evaluate $f(x^2 + 2x)$  
+8. Evaluate $f(\triangle)$  
+9. Evaluate $f(\blacksquare)$  
+
+---
+
+**Applications**  
+
+1. The cost of producing $x$ items is modeled by $C(x) = 5x + 200$.  
+   Find the cost of producing 100 items.  
+
+2. The population of a species is modeled by $P(t) = 1000 e^{0.02t}$.  
+   Evaluate $P(10)$ to find the population after 10 years.  
+
+---
+
+### Function Composition & Inverses
+
+> **How-To**  
+> - Composition: $f(g(x))$ means plug the entire rule of $g(x)$ into $f$.  
+> - Example: if $f(x) = 2x+1$ and $g(x) = x^2$, then  
+>   $f(g(x)) = 2(x^2) + 1$.  
+> - Inverse Functions: An inverse "undoes" the original function.  
+>   By definition, $f^{-1}(f(x)) = x$ (for $x$ in the domain).  
+>
+> **Tip:** To find an inverse, swap $x$ and $y$, then solve for $y$.  
+
+---
+
+**🟢 Level 1: Recall**  
+Let $f(x) = 2x + 1$, $g(x) = x^2$.  
+1. Find $f(g(x))$  
+2. Find $g(f(x))$  
+
+**🟡 Level 2: Inverses**  
+3. Find the inverse of $f(x) = 2x + 1$  
+4. Check: $f(f^{-1}(x)) =$ ?  
+
+**🔴 Level 3: Mixed Practice**  
+5. If $h(x) = 3x - 4$, find $h^{-1}(x)$.  
+6. Verify $h(h^{-1}(x)) = x$.  
+7. If $f(x) = \tfrac{1}{x}$, find $f(f(x))$.  
+
+---
+
+**Applications**  
+
+1. A temperature conversion is given by $F(C) = \tfrac{9}{5}C + 32$.  
+   Find the inverse function to convert Fahrenheit back to Celsius.  
+
+2. A bacteria population is modeled by $P(t) = 100e^{0.2t}$.  
+   Find the inverse function $t(P)$ that gives the time when the population reaches a given size $P$.  
 
 ---
 
@@ -1186,44 +1267,6 @@ Don’t worry if you don’t remember everything right away. These are **review*
 
 ---
 
-### Function Evaluation
-
-> **How-To Evaluate a Function**  
-> - To evaluate, substitute the input into the function rule.  
-> - Example: If $f(x) = x^2 + 1$, then $f(3) = 3^2 + 1 = 10$.  
-> - You can also evaluate at expressions: $f(a + h)$ means plug $(a+h)$ everywhere $x$ appears.  
-
----
-
-**🟢 Level 1: Recall**  
-Let $f(x) = x^2 + 1$.  
-1. Find $f(3)$  
-2. Find $f(a + h)$  
-
-**🟡 Level 2: Apply Substitution**  
-Let $f(x) = x^3 + 2(x + 7)^2 + \tfrac{1}{2x}$.  
-3. Evaluate $f(2)$  
-4. Evaluate $f(t)$  
-
-**🔴 Level 3: Mixed Practice**  
-5. Evaluate $f(a^2)$  
-6. Evaluate $f(a + h)$  
-7. Evaluate $f(x^2 + 2x)$  
-8. Evaluate $f(\triangle)$  
-9. Evaluate $f(\blacksquare)$  
-
----
-
-**Applications**  
-
-1. The cost of producing $x$ items is modeled by $C(x) = 5x + 200$.  
-   Find the cost of producing 100 items.  
-
-2. The population of a species is modeled by $P(t) = 1000 e^{0.02t}$.  
-   Evaluate $P(10)$ to find the population after 10 years.  
-
----
-
 ### Simplifying Expressions
 
 > **How-To Simplify Expressions**  
@@ -1330,45 +1373,6 @@ Let $f(x) = x^3 + 2(x + 7)^2 + \tfrac{1}{2x}$.
 
 2. A ball is launched from the ground with height $h(t) = -5t^2 + 20t$.  
    Solve for $t$ when the ball hits the ground.  
-
----
-
-### Function Composition & Inverses
-
-> **How-To**  
-> - Composition: $f(g(x))$ means plug the entire rule of $g(x)$ into $f$.  
-> - Example: if $f(x) = 2x+1$ and $g(x) = x^2$, then  
->   $f(g(x)) = 2(x^2) + 1$.  
-> - Inverse Functions: An inverse "undoes" the original function.  
->   By definition, $f^{-1}(f(x)) = x$ (for $x$ in the domain).  
->
-> **Tip:** To find an inverse, swap $x$ and $y$, then solve for $y$.  
-
----
-
-**🟢 Level 1: Recall**  
-Let $f(x) = 2x + 1$, $g(x) = x^2$.  
-1. Find $f(g(x))$  
-2. Find $g(f(x))$  
-
-**🟡 Level 2: Inverses**  
-3. Find the inverse of $f(x) = 2x + 1$  
-4. Check: $f(f^{-1}(x)) =$ ?  
-
-**🔴 Level 3: Mixed Practice**  
-5. If $h(x) = 3x - 4$, find $h^{-1}(x)$.  
-6. Verify $h(h^{-1}(x)) = x$.  
-7. If $f(x) = \tfrac{1}{x}$, find $f(f(x))$.  
-
----
-
-**Applications**  
-
-1. A temperature conversion is given by $F(C) = \tfrac{9}{5}C + 32$.  
-   Find the inverse function to convert Fahrenheit back to Celsius.  
-
-2. A bacteria population is modeled by $P(t) = 100e^{0.2t}$.  
-   Find the inverse function $t(P)$ that gives the time when the population reaches a given size $P$.  
 
 ---
 

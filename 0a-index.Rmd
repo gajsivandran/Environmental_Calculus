@@ -3,7 +3,8 @@
 ## Teaching Team Introductions
 ### Gaj Sivandran
 
-![](images/gaj_timeline.png){fig.alt='Image of person thinking, decorative'}
+<img src="images/gaj_timeline.png" alt="Timeline of Gaj's career">
+
 
 **Teaching Interests**
 
@@ -152,7 +153,7 @@ Using these resources will only make studying for tests harder. Many of these re
 
 This is a firm policy to make sure I am being fair to all of you.
 
-**Grace period:** Homeworks will be accepted 48 hrs after their due date with no penalty. Homeworks not turned in after 48 hrs will receive a grade of zero.
+**Grace period:** Homeworks for this class are due Friday at 11:59pm. Homeworks will be accepted 72 hrs after their due date with no penalty (Monday 11:59pm). Graded work not turned in by this time will receive a grade of zero.
 
 **Missed Tests**: If you miss a test, you will need to use one of your 're-takes' during finals weeks to do it. However, if you have a legitimate reason, I will work with you to reschedule the test earlier so you can save your re-take.
 
@@ -215,7 +216,7 @@ Ask me anything - whats on your mind - need clarification on any of the things w
 
 :::
 
-## Paper Places
+## Paper Planes
 
 ::: promptbox
 

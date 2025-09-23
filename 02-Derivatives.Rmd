@@ -531,7 +531,7 @@ $$
 
                         
 
-```{r limit-hole-plot, echo=TRUE, fig.height=5, fig.width=7}
+```{r limit-hole-plot, echo=FALSE, fig.height=5, fig.width=7}
 # Define the function
 f <- function(x) {
   (x^2 - 1) / (x - 1)
@@ -681,7 +681,7 @@ This kind of jump is common in natural or engineered boundaries and reminds us t
 
 ### Plot the Discontinuity
 
-```{r dam-limit, echo=TRUE}
+```{r dam-limit, echo=FALSE}
 plot(NULL, xlim = c(-5, 5), ylim = c(8, 17), 
      xlab = "Distance from dam (km)", ylab = "Temperature (°C)", 
      main = "Temperature Discontinuity at Dam Outlet")
@@ -1112,7 +1112,7 @@ These questions will help you review and reinforce key ideas before we dive into
 
  
 
-### Match the Concept to the Context
+**1. Match the Concept to the Context**
 
 Match each mathematical concept with its real-world environmental interpretation:
 
@@ -1127,7 +1127,8 @@ Match each mathematical concept with its real-world environmental interpretation
 
  
 
-### Which of the following situations describes an **instantaneous** rate of change? *(Select all that apply)*
+** 2.Which of the following situations describes an **instantaneous** rate of change?**
+*(Select all that apply)*
 
 - [ ] A glacier retreats 10 meters per year between 2000 and 2010.
 - [ ] The temperature of a lake at exactly noon is rising at 0.2°C per hour.
@@ -1136,7 +1137,7 @@ Match each mathematical concept with its real-world environmental interpretation
 
  
 
-### True or False
+**3.True or False**
 
 The derivative of a function always tells us whether a quantity is increasing or decreasing.
 
@@ -1147,19 +1148,19 @@ The derivative of a function always tells us whether a quantity is increasing or
 
  
 
-### Fill in the Blank
+**4.Fill in the Blank**
 
 A **derivative** is a measure of how a quantity changes with respect to **_______**.
 
  
 
-### Explain It Like You're Teaching a Friend
+**5.Explain It Like You're Teaching a Friend**
 
 In your own words, explain the difference between **average** and **instantaneous** rate of change. Use an environmental example if you can.
 
  
 
-### Multiple Choice: What Does a Derivative Tell You?
+**6. Multiple Choice: What Does a Derivative Tell You?**
 
 What does the derivative of a function represent?
 
@@ -1170,7 +1171,7 @@ What does the derivative of a function represent?
 
  
 
-### Thinking Spatially
+**7. Thinking Spatially**
 
 Suppose the oxygen concentration in a lake decreases as depth increases. What would the **sign** of the derivative be?
 
@@ -1183,7 +1184,7 @@ Suppose the oxygen concentration in a lake decreases as depth increases. What wo
 
  
 
-### Choose the Best Description
+**8. Choose the Best Description**
 
 Which of the following best describes a **tangent line**?
 
@@ -1194,7 +1195,7 @@ Which of the following best describes a **tangent line**?
 
  
 
-### Real-World Framing
+**9. Real-World Framing**
 
 Which of the following is **not** typically modeled with derivatives?
 
@@ -1205,7 +1206,7 @@ Which of the following is **not** typically modeled with derivatives?
 
  
 
-### Reflect
+**10. Reflect**
 
 Describe a situation in your field (e.g., climate, marine, ecological, or urban systems) where understanding how fast something is changing could be important. What would the **derivative** tell you, and how might that help in decision making?
 
@@ -1216,7 +1217,7 @@ Describe a situation in your field (e.g., climate, marine, ecological, or urban 
 In this section, you'll strengthen your visual intuition about what derivatives represent. We'll explore how to read increasing/decreasing behavior, slope, and curvature from graphs—and what those features tell us about the underlying system.
 
 
-### Identify Slope Behavior from a Graph
+**1.Identify Slope Behavior from a Graph**
 
 Below is a sketch of a function representing streamflow over time. Without doing any calculations, answer the following:
 
@@ -1229,18 +1230,20 @@ grid()
 
 - During which intervals is the function increasing?  
 - During which intervals is it decreasing?  
-- Where is the slope of the tangent line steepest?  
-- Where does the slope of the tangent line appear to be zero?
+- Find the steepest positive tangent slope and negative tangent slope. Interpret what is physically happening at these moments.   
+- Where does the slope of the tangent line appear to be zero? Interpret what is physically happening at these moments.
 
  
 
-### Estimate the Sign of the Derivative
+**2.Estimate the Sign of the Derivative**
 
 For each marked point on the graph below, estimate whether the derivative is:
 
-- [ ] Positive  
-- [ ] Negative  
-- [ ] Zero
+- Positive  
+- Negative  
+- Zero
+
+Briefly explain why you came to your conclusion
 
 ```{r, echo=FALSE}
 curve(-0.1*(x - 5)^3 + 2*(x - 5), from = 0, to = 10, 
@@ -1264,7 +1267,7 @@ Complete the table:
 
  
 
-### Sketch the Tangent Line
+**3.Sketch the Tangent Line**
 
 ```{r tangent-sketch-activity-blank, echo=FALSE, fig.align='center', out.width='80%'}
 # Define a more complex function
@@ -1293,7 +1296,7 @@ Then, graphically estimate the slope of those tangent lines.
 What do the tangent line slopes mean with respect to the function?
 
 
-### Connect Shape to Slope
+**4.Connect Shape to Slope**
 
 Match the shape of the function to the behavior of its derivative:
 
@@ -1306,7 +1309,7 @@ Match the shape of the function to the behavior of its derivative:
 | Flattening            | E. Derivative is decreasing     |
 
 
-### Match the Graph to Its Derivative
+**5.Match the Graph to Its Derivative**
 
 Which statement is true:
 
@@ -1331,7 +1334,8 @@ curve(f_prime(x), from = 0, to = 10,
 ```
 
 
-### Real-World Interpretation
+**6.Real-World Interpretation**
+
 ```{r tide-24h-plot, echo=FALSE, fig.align='center', out.width='80%'}
 # Tidal height model over 24 hours (semi-diurnal with a small inequality term)
 t <- seq(0, 24, length.out = 1000)  # time in hours
@@ -1369,7 +1373,8 @@ $H(t)$ is a graph representing the height (H in meters) of a tidal zone througho
 - When is the tide falling?
 - Identify all the points where the rate of change of tide height is zero, H'(t) = 0. What do these features represent?
 
-### Increasing or Decreasing?
+**7.Increasing or Decreasing?**
+
 ```{r forest-biomass-plot, echo=FALSE, fig.align='center', out.width='80%'}
 # Forest biomass over time (arbitrary units)
 # Use a logistic curve (captures rising -> inflection -> flattening)
@@ -1430,7 +1435,7 @@ Consider a graph representing forest biomass over time.
 - In your own words, describe what these concavity means in relation to the derivative.
 - If the graph started to curve downward: What might that tell us about derivative.
 
-### Slope Sketch Challenge
+**8. Slope Sketch Challenge**
 
 Sketch a curve that satisfies all of the following:
 
@@ -1440,7 +1445,7 @@ Sketch a curve that satisfies all of the following:
 - Label one point where the derivative is positive, one where it is zero, and one where it is negative.
 
 
-### Which Graph Matches the Story?
+**9.Which Graph Matches the Story?**
 
 Read the scenario below and choose which of the following graphs (A, B, or C) best fits the story.
 
@@ -1450,7 +1455,9 @@ Read the scenario below and choose which of the following graphs (A, B, or C) be
 - Graph B: S-curve (logistic growth)  
 - Graph C: Sharp increase followed by sudden drop
 
-**Why did you choose your answer? What does the slope (derivative) of your choice look like over time?**
+**Why did you choose your answer?** 
+**What does the slope (derivative) of your choice look like over time?**
+**Sketch the derivative of the function you selected**
 
 ```{r, echo=FALSE}
 # Create sequence
@@ -1486,7 +1493,7 @@ plot(time, growth_C, type = "l", lwd = 2, col = "firebrick",
 
 In this section, you’ll explore the idea of the **average rate of change** a way of measuring how much a quantity changes per unit of time (or other input) over a chosen interval. Mathematically, it’s the **slope of a secant line** connecting two points on a graph. You’ll practice working with the formula, sketching diagrams, and interpreting units. You’ll also apply the concept in different contexts. Along the way, you’ll compare positive, negative, and zero rates of change, and connect these slopes to meaningful environmental stories. By the end, you should be able to move confidently between the equation, the graph, and the real-world context to explain what an average rate of change tells us—and what it doesn’t.
 
-### Concept Check: Formula
+**1.Concept Check: Formula**
 
 Write the formula for the average rate of change of a function \( f(x) \) from \( x = a \) to \( x = b \).
 
@@ -1499,14 +1506,14 @@ Sketch a diagram, with a random function, and label the following:
 
 Now explain in your own words what each part of the average rate of change formula means.
 
-### Units Matter
+**2.Units Matter**
 
 If \( f(t) \) represents lake temperature in degrees Celsius and \( t \) is measured in months, what are the **units** of the average rate of change?
 
 Why are units important when interpreting your result?
 
 
-### From a Table of Data
+**3.From a Table of Data**
 
 The table below shows the carbon content of soil over time.
 
@@ -1526,7 +1533,7 @@ Write a statement interpret your result in context, including units. What conclu
 *Note: Given the data is in periods of 5 years, no conclusions of what is happening at timescales below 5 years is possible.*
 
  
-### Graph Interpretation
+**4.Graph Interpretation**
 
 The graph below shows the area of a glacier over time.
 
@@ -1541,7 +1548,7 @@ grid()
 - How can you visually determine if the glacier is shrinking at a constant, accelerating or decelerating rate?
 
 
-### Secant Line Visualization
+**5.Secant Line Visualization**
 
 The graph below shows the glacier function with a secant line drawn between \( t = 5 \) and \( t = 15 \).
 
@@ -1558,7 +1565,7 @@ grid()
 
 - Estimate the slope of the secant line and interpret what it means in the context of glacier loss (with units).
 
-### Environmental Model Application
+**6.Environmental Model Application**
 
 Suppose sea level in a coastal region is modeled by:
 \[
@@ -1570,7 +1577,7 @@ where \( S(t) \) is in millimeters and \( t \) is years since 2000.
 - State the units of your answer.  
 - Interpret the result in the context of sea level trends.
 
-### Positive vs. Negative vs. Zero
+**7.Positive vs. Negative vs. Zero**
 
 Consider the **average rate of change** of an environmental quantity of your choice over a specified interval.
 
@@ -1581,7 +1588,7 @@ Consider the **average rate of change** of an environmental quantity of your cho
 
  
 
-### Comparing Intervals
+**8.Comparing Intervals**
 
 Let \( f(t) = 100 + 2t - 0.1t^2 \) represent the area covered by an invasive weed in (km\(^2\)) and \( t \) is years since 2000.
 
@@ -1590,10 +1597,10 @@ Let \( f(t) = 100 + 2t - 0.1t^2 \) represent the area covered by an invasive wee
 - Compare the **magnitudes** of the two rates.
 - Compare the **signs** of the two rates
 - Explain what this comparison suggests about how the invasive weed’s rate changes over time.  
-- Bonus: Just by looking at the three terms in $f(t)$, can you explain what is happening. *Hint: as your self what happens to each of the terms when t = 0, t is small, t is big* 
+- Bonus: Just by looking at the three terms in $f(t)$, can you explain what is happening. *Hint: ask your self what happens to each of the terms when t = 0, t is small, t is big* 
 
 
-### Storytelling with Data
+**9.Storytelling with Data**
 
 You are monitoring algae growth in a pond. Between week 2 and week 6, the average rate of change in biomass is \( 0.5 \,\text{g}/\text{m}^2/\text{week} \).
 
@@ -1603,7 +1610,7 @@ You are monitoring algae growth in a pond. Between week 2 and week 6, the averag
 
  
 
-### Reverse Engineering
+**10.Reverse Engineering**
 
 A study reports that the average rate of change of nitrogen concentration in a stream was \( -0.2 \,\text{mg}/\text{L}/\text{year} \) from 2010 to 2020.
 
@@ -1615,18 +1622,17 @@ A study reports that the average rate of change of nitrogen concentration in a s
 ---
 
 ## Practice: Instantaneous Rate of Change
-### Introduction  
 
 In this section, you’ll focus on the **instantaneous rate of change**, how fast something is changing at one specific moment in time. Unlike the average rate, which looks at overall change across an interval, the instantaneous rate captures the “right now” **slope of a tangent line**. You’ll practice distinguishing average vs. instantaneous change, sketching tangent lines on curves, and estimating slopes from tables, graphs, and formulas. You’ll also connect these ideas to environmental contexts.By the end, you’ll be able to interpret tangent slopes mathematically and ecologically, explain when instantaneous rates matter more than averages, and use them to make predictions about how environmental systems evolve in real time.  
 
-### Concept Check: Instantaneous vs. Average
+**1.Concept Check: Instantaneous vs. Average**
 
 In your own words, explain the difference between **average rate of change** and **instantaneous rate of change**.  
 
 Give an environmental example where the two would be very different.
 
 
-### Tangent Line Meaning
+**2.Tangent Line Meaning**
 
 The slope of the tangent line at a point on a graph represents the **instantaneous rate of change**.
 
@@ -1634,7 +1640,7 @@ The slope of the tangent line at a point on a graph represents the **instantaneo
 - Pick a point on your sketch and draw a tangent line.
 - Describe in words what the slope means in the context of an environmental scenario you created.
 
-### Zooming In on a Graph
+**3.Zooming In on a Graph**
 
 Below is a plot of stream temperature over time.
 
@@ -1650,9 +1656,9 @@ grid()
 - State what your result means about the rate of temperature change at that moment.
 
 
-### Matching Slopes to Graphs
+**4.Matching Slopes to Graphs**
 
-Five curves are shown below. Each point \( P \) has a different slope.
+Five curves are shown below. Each red point has a different slope.
 
 ```{r slope-matching, echo=FALSE, fig.width=7, fig.height=5}
 set.seed(123)
@@ -1698,7 +1704,7 @@ par(mfrow = c(1,1))
 
 
 
-### Instantaneous Rate from a Formula
+**5.Instantaneous Rate from a Formula**
 
 Given:
 \[
@@ -1720,7 +1726,7 @@ $$
 - Try again using  \( h = 0.001 \), what do you notice about your estimate? Is it approaching a value?
  
 
-### Biological Growth Example
+**6.Biological Growth Example**
 
 A fish population is modeled by:
 \[
@@ -1732,7 +1738,7 @@ where \( t \) is in months and \( P(t) \) is the number of individuals.
 - Interpret the meaning of your answer in terms of fish population growth.
 
 
-### Zero Instantaneous Rate
+**7.Zero Instantaneous Rate**
 
 - Give one real-world environmental example where the instantaneous rate of change would be exactly zero at some point in time.  
 - Sketch a graph of this situation.  
@@ -1740,7 +1746,7 @@ where \( t \) is in months and \( P(t) \) is the number of individuals.
 
  
 
-### Comparing Instantaneous Rates
+**8.Comparing Instantaneous Rates**
 
 Below is a plot of soil moisture over time after a rainstorm.
 
@@ -1755,7 +1761,7 @@ grid()
 - Compare the magnitudes of the two slopes.  
 - Explain what this says about how quickly the soil is drying over time.
 
-### From Instantaneous to Prediction
+**9.From Instantaneous to Prediction**
 
 The temperature in a tide pool is changing at a rate given by:
 \[
@@ -1773,7 +1779,7 @@ at \( t = 5 \) hours after sunrise, and the temperature at that time is 22.5 deg
 In this section, you’ll practice the core mathematical manipulations needed to compute derivatives directly from their **limit definition**. While shortcut rules for differentiation are faster, the limit definition is the foundation that makes those rules possible. Working through examples at specific points, for general functions, and with small numerical approximations will strengthen your algebra skills and deepen your understanding of where derivatives come from. You’ll also explore cases where limits fail (corners, jumps), and apply the definition to real data and environmental contexts. By the end, you should feel comfortable setting up and simplifying the difference quotient, interpreting results with correct units, and explaining why limits are essential to the concept of instantaneous change.  
 
 
-### Basic Derivative at a Point
+**1.Basic Derivative at a Point**
 
 Use the limit definition of the derivative to compute \( f'(3) \) for:
 \[
@@ -1782,7 +1788,7 @@ f(x) = x^2
 
  
 
-### General Derivative from Limit Definition
+**2.General Derivative from Limit Definition**
 
 Using the limit definition, find the derivative function \( f'(x) \) for:
 \[
@@ -1791,7 +1797,7 @@ f(x) = 5x - 7
 
  
 
-### Cubic Function at a Point
+**3.Cubic Function at a Point**
 
 Compute \( f'(2) \) using the limit definition for:
 \[
@@ -1800,7 +1806,7 @@ f(x) = x^3
 
  
 
-### Estimate with Small \( h \)
+**4.Estimate with Small \( h \)**
 
 Sometimes it’s easier to estimate a derivative numerically when the exact limit is messy.  
 Use:
@@ -1815,7 +1821,7 @@ Explain why this approximation works for smooth functions.
 
  
 
-### Environmental Example: Tree Height Growth
+**5.Environmental Example: Tree Height Growth**
 
 Let \( H(t) = 2.5\sqrt{t} \) represent the height (m) of a young tree after \( t \) years.
 
@@ -1823,18 +1829,19 @@ Let \( H(t) = 2.5\sqrt{t} \) represent the height (m) of a young tree after \( t
 - Estimate $H'(5)$
 - Interpret your answer in words, what is happening to the growth rate?
 
-### When the Limit Fails to Exist: Corner
+**6.When the Limit Fails to Exist: Corner**
 
 Consider:
 \[
 f(x) = |x - 2|
 \]
+
 - Use the limit definition of a derivative from the left and right at \( x = 2 \).  
 - Explain why \( f'(2) \) does not exist.
 
  
 
-### When the Limit Fails to Exist: Jump
+**7.When the Limit Fails to Exist: Jump**
 
 Let:
 \[
@@ -1844,11 +1851,12 @@ f(x) =
 x^2, & x \geq 1
 \end{cases}
 \]
+
 - Use the limit definition of the derivative from each side at \( x = 1 \).  
 - Explain why the derivative fails to exist at that point.
 
 
-### Estimate from Real Data
+**8.Estimate from Real Data**
 
 The dissolved oxygen (DO) in a lake was measured over several days:
 
@@ -1861,7 +1869,7 @@ The dissolved oxygen (DO) in a lake was measured over several days:
 - Use \( h = 0.1 \) and the limit definition of a derivative to estimate the instantaneous rate of change at \( t = 5.0 \).  
 - Include units in your answer.
 
-### Derivative of a Quadratic
+**9.Derivative of a Quadratic**
 
 For:
 \[
@@ -1870,48 +1878,51 @@ f(x) = 3x^2 - 4x + 5
 1. Derive \( f'(x) \) using the limit definition.  
 2. Now examine you answer, what happened to the $3x^2$ term? What about the $4x$ term? What about the $5$?
 
-### Challenge: Fractional Function
+**10.Challenge: Fractional Function**
 
 Using the limit definition, find \( f'(x) \) for:
 \[
 f(x) = \frac{1}{x}
 \]
-1. State the domain for which the derivative exists.  
-2. Explain why \( x = 0 \) must be excluded.
+
+- State the domain for which the derivative exists.  
+- Explain why \( x = 0 \) must be excluded.
 
 ---
 
 ## Practice: Environmental “Explain and Explore” Prompts
 
-### Introduction
 Having practiced the mechanics of the limit definition, you now have the tools to calculate derivatives from first principles. In the next section, we’ll step back from the algebra and focus on the bigger picture: **how rates of change help us interpret environmental systems and real-world data.**
 
 In this section, you’ll shift from practicing the mechanics of the limit definition to **exploring how derivatives help us understand real environmental systems**. The goal here is not to calculate every derivative by hand, but to think about what the *rate of change* means in context—whether it’s the growth of a fish population, the retreat of a glacier, or the decline of dissolved oxygen in a lake. You’ll connect mathematical concepts like slopes and instantaneous change to real-world data, scenarios, and management questions. By the end, you should be able to explain in your own words how derivatives provide insight into environmental patterns and processes, and why they are a powerful tool for interpreting change.  
 
 
 
-### Marine Biology
+**1.Marine Biology**
 Describe a marine ecosystem where tracking a population.
+
 - What rates would be of interest?  
 - What kind of data would you need to compute it?
 
  
 
-### Forestry
+**2.Forestry**
 Think of a forest growth or health measure.  
+
 - How would knowing the derivative help inform forest management decisions?  
 - What tools or data sets could you use to estimate it?
 
  
 
-### Climate Science
+**3.Climate Science**
 Choose a climate-related variable.
+
 - What insight would the derivative give about changes in this variable?  
 - How might the time scale of measurement (daily vs. yearly) affect your interpretation?
 
  
 
-### Freshwater Ecology
+**4.Freshwater Ecology**
 Identify a lake, river, or wetland variable that changes in response to seasonal cycles.
 
 - Describe a situation where you would want to know its rate of change.  
@@ -1919,8 +1930,9 @@ Identify a lake, river, or wetland variable that changes in response to seasonal
 
  
 
-### Human–Environment Interaction
+**5.Human–Environment Interaction**
 Pick a human activity that influences an environmental variable.  
+
 - How would you use the derivative to monitor and evaluate the impact?  
 - What kinds of monitoring programs or data sets could provide the necessary data?
 
