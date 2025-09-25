@@ -231,7 +231,7 @@ step-3-simplify-the-fraction-1
 step-4-take-the-limit-2
 step-5-generalize-2
 example-3-environmental-application-glacier-retreat
-derivative-rules
+under-construction-derivative-rules
 reading-mathematical-expressions-like-a-set-of-instructions
 think-of-math-as-a-recipe
 operators-are-instructions
@@ -315,7 +315,7 @@ practice-product-quotient-rules
 practice-chain-rule-practice
 practice-mixed-rules-putting-it-all-together
 practice-applications-derivatives-in-environmental-models
-applications
+under-construction-applications
 using-derivatives-to-find-extremes
 the-idea
 step-by-step-finding-extrema
