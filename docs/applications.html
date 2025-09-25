@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 2 Why Calculus - Workbook | Environmental Calculus - Active Learning with Case Studies</title>
+  <title>Chapter 8 Applications | Environmental Calculus - Active Learning with Case Studies</title>
   <meta name="description" content="A textbook companion to the Univeristy of Washington QSci 291 class" />
   <meta name="generator" content="bookdown 0.43 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 2 Why Calculus - Workbook | Environmental Calculus - Active Learning with Case Studies" />
+  <meta property="og:title" content="Chapter 8 Applications | Environmental Calculus - Active Learning with Case Studies" />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="A textbook companion to the Univeristy of Washington QSci 291 class" />
   <meta name="github-repo" content="rstudio/bookdown-demo" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 2 Why Calculus - Workbook | Environmental Calculus - Active Learning with Case Studies" />
+  <meta name="twitter:title" content="Chapter 8 Applications | Environmental Calculus - Active Learning with Case Studies" />
   
   <meta name="twitter:description" content="A textbook companion to the Univeristy of Washington QSci 291 class" />
   
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="index.html"/>
-<link rel="next" href="pre-calculus-foundations.html"/>
+<link rel="prev" href="derivative-rules.html"/>
+<link rel="next" href="calculus-i-equation-sheet.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -584,264 +584,643 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="why-calculus---workbook" class="section level1 hasAnchor" number="2">
-<h1><span class="header-section-number">Chapter 2</span> Why Calculus - Workbook<a href="why-calculus---workbook.html#why-calculus---workbook" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<div id="teaching-team-introductions" class="section level2 hasAnchor" number="2.1">
-<h2><span class="header-section-number">2.1</span> Teaching Team Introductions<a href="why-calculus---workbook.html#teaching-team-introductions" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<div id="gaj-sivandran" class="section level3 hasAnchor" number="2.1.1">
-<h3><span class="header-section-number">2.1.1</span> Gaj Sivandran<a href="why-calculus---workbook.html#gaj-sivandran" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p><img src="images/gaj_timeline.png" alt="Timeline of Gaj's career"></p>
-<p><strong>Teaching Interests</strong></p>
+<div id="applications" class="section level1 hasAnchor" number="8">
+<h1><span class="header-section-number">Chapter 8</span> Applications<a href="applications.html#applications" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="using-derivatives-to-find-extremes" class="section level2 hasAnchor" number="8.1">
+<h2><span class="header-section-number">8.1</span> Using Derivatives to Find Extremes<a href="applications.html#using-derivatives-to-find-extremes" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>In environmental science, we often want to know:</p>
 <ul>
-<li>Design (freshman and senior)</li>
-<li>Fundamental engineering (statics, fluids)</li>
-<li>Environmental labs</li>
-<li>Water resources</li>
+<li>What is the <strong>maximum population</strong> an ecosystem can support?</li>
+<li>When is the <strong>lowest point</strong> of CO₂ emissions over time?</li>
+<li>At what point will a species’ <strong>growth rate slow down</strong>?</li>
 </ul>
-<p><strong>Research Interests</strong></p>
-<ul>
-<li>Climate change</li>
-<li>Active learning pedagogy</li>
-<li>Simulation modeling</li>
-<li>Decision support (socio-economic modelling)</li>
-</ul>
-<p><strong>Random Facts</strong></p>
-<ul>
-<li>I have an 11yr old daughter that helps me write exam questions</li>
-<li>Dogs &gt;Cats, Cricket &gt; Baseball, AFL &gt; NFL, Vegemite &gt; Peanut butter</li>
-<li>I like to run very very long distances, stilling working on why</li>
-</ul>
+<p>These kinds of questions are about <strong>extrema</strong>—finding the highest or lowest values a function can take.</p>
+<p>Mathematically, these points are called <strong>maximums</strong> and <strong>minimums</strong>. Together, we call them <strong>extreme values</strong>. And calculus gives us a powerful tool to find them: the <strong>derivative</strong>.</p>
+<hr />
 </div>
+<div id="the-idea" class="section level2 hasAnchor" number="8.2">
+<h2><span class="header-section-number">8.2</span> The Idea<a href="applications.html#the-idea" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>If a function reaches a <strong>peak</strong> or a <strong>valley</strong>, its graph changes direction. At that turning point, the <strong>slope of the tangent line is zero</strong>.</p>
+<p>So, we look for values of <span class="math inline">\(x\)</span> where:</p>
+<p><span class="math display">\[
+f&#39;(x) = 0
+\]</span></p>
+<p>These are called <strong>critical points</strong>. They are the candidates for maximums or minimums.</p>
+<hr />
 </div>
-<div id="classroom-etiquette" class="section level2 hasAnchor" number="2.2">
-<h2><span class="header-section-number">2.2</span> Classroom Etiquette<a href="why-calculus---workbook.html#classroom-etiquette" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p><img src="images/hands.png" style="float:right; width:250px; margin:10px;" fig.alt="Decorative" /></p>
-<ul>
-<li>Please feel free to bring your breakfast/lunch to class – just be sure to clean up before you leave</li>
-<li>Bring whatever tech you need to take notes and engage. We will be using Poll everywhere</li>
-<li>Ask questions – but please be respectful of all voices and views - wrong answers have more value than right ones!</li>
-</ul>
-</div>
-<div id="why-are-you-here" class="section level2 hasAnchor" number="2.3">
-<h2><span class="header-section-number">2.3</span> Why are you here?<a href="why-calculus---workbook.html#why-are-you-here" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<div class="promptbox">
-<p><strong>Discussion</strong>
-In small groups:</p>
-<p><img src="images/declared_majors.png" style="float:right; width:200px; margin:10px;" fig.alt="Decorative" /></p>
-<ul>
-<li>Introduce yourselves</li>
-<li>Why are you all here?</li>
-<li>What do you think this class could be useful for?</li>
-<li>What do you notice about the declared majors in this class?</li>
-</ul>
-<p><br><br><br><br><br><br><br><br><br><br><br><br><br><br></p>
-</div>
-</div>
-<div id="what-is-calculus-1" class="section level2 hasAnchor" number="2.4">
-<h2><span class="header-section-number">2.4</span> What is Calculus?<a href="why-calculus---workbook.html#what-is-calculus-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p><img src="images/change1.png" style="float:right; width:300px; margin:10px;" fig.alt="Change is the only constant in life - Heraclitus" />
-<img src="images/change2.png" style="width:400px; margin:10px;" fig.alt="Charles Darwin Quote - It is not the strongest of the species that survives, nor the most intelligent that survives. It is the one that is most adaptable to change" /></p>
-<div class="promptbox">
-<p><strong>Discussion</strong></p>
-<p>What do you see in this graph?</p>
-<p><img src="images/change3.png" style="float:center; width:800px; margin:10px;" fig.alt="Bar graph of 10 hottest years in the US - from hottest down - 2024, 2012, 2016, 2017, 2021,2015, 2020, 2023,2006,1998" />
-<br><br><br><br></p>
-</div>
-</div>
-<div id="my-expectations-of-you" class="section level2 hasAnchor" number="2.5">
-<h2><span class="header-section-number">2.5</span> My Expectations of You<a href="why-calculus---workbook.html#my-expectations-of-you" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p><img src="images/endure.png" style="float:right; width:100px; margin:10px;" fig.alt="Cover of the book Endure" /></p>
-<p><strong>Objective 1</strong> : The ability to apply calculus to the natural system</p>
-<ul>
-<li>Calculus is a language that allows us to tell complex environmental stories</li>
-</ul>
-<p><strong>Objective 2</strong>: Effort</p>
-<ul>
-<li>The best definition of I have come across <em>the struggle to continue against a mounting desire to stop - Alex Hutchinson, Endure</em></li>
-</ul>
-</div>
-<div id="your-expectations-of-me" class="section level2 hasAnchor" number="2.6">
-<h2><span class="header-section-number">2.6</span> Your Expectations of Me<a href="why-calculus---workbook.html#your-expectations-of-me" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<div class="promptbox">
-<p><strong>Discussion</strong></p>
-<p>In a small group make 2 lists</p>
-<ul>
-<li>What can you come to see me about?</li>
-</ul>
-<p><br><br><br><br><br><br><br><br></p>
-<ul>
-<li>What should you find someone else for?
-<br><br><br><br><br><br><br><br></li>
-</ul>
-</div>
-</div>
-<div id="syllabus-highlights" class="section level2 hasAnchor" number="2.7">
-<h2><span class="header-section-number">2.7</span> Syllabus Highlights<a href="why-calculus---workbook.html#syllabus-highlights" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<div id="assessments" class="section level3 hasAnchor" number="2.7.1">
-<h3><span class="header-section-number">2.7.1</span> Assessments<a href="why-calculus---workbook.html#assessments" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p><img src="images/assessmentpie.png" style="float:right; width:300px; margin:10px;" fig.alt="Pie chart of assessment breakdown - percentages in text" /></p>
-<p><strong>Preparation and Participation</strong> [20%]</p>
-<ul>
-<li>Before class readings/questions</li>
-<li>In-class activities</li>
-<li>After-class self checks</li>
-</ul>
-<p><strong>Homeworks</strong> [10%]</p>
-<ul>
-<li>Roughly every week</li>
-<li>Revise and resubmit</li>
-<li>Grade on accuracy and effort</li>
-</ul>
-<p><strong>Tests</strong> [60%]</p>
-<ul>
-<li>4 Tests over the term</li>
-<li>2 can be re-taken during finals week</li>
-<li>1 pg of notes (2sides)</li>
-</ul>
-<p><strong>Project</strong> [10%]</p>
-<ul>
-<li>Low stakes group project applying the big picture concepts of this class</li>
-<li>Focuses on reading and interpreting the math</li>
-</ul>
-<div class="promptbox">
-<p><strong>Class discussion</strong></p>
-<p>Why do you think there is so much weight on tests and participation?</p>
-<p><br><br><br><br></p>
-</div>
-</div>
-<div id="acedemic-integrity" class="section level3 hasAnchor" number="2.7.2">
-<h3><span class="header-section-number">2.7.2</span> Acedemic Integrity<a href="why-calculus---workbook.html#acedemic-integrity" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>This class has been designed to reward you for doing your <strong>own</strong> work
-Tests will be relatively straightforward if you make the effort on the in-class and homework assessments</p>
-<p>Using these resources will only make studying for tests harder. Many of these resources give you the <em>illusion</em> of understanding - but the reality is quite different.</p>
-<p><img src="images/milkcrate.png" style="float:right; width:300px; margin:10px;" fig.alt="A picture of a person trying to climb a pyramid made up of milk crates" /></p>
-<p><img src="images/chegg.png" style="width:300px; margin:10px;" fig.alt="Pie chart of assessment breakdown - percentages in text" /></p>
-</div>
-<div id="late-assessment-missed-assessment-policy" class="section level3 hasAnchor" number="2.7.3">
-<h3><span class="header-section-number">2.7.3</span> Late Assessment / Missed Assessment Policy<a href="why-calculus---workbook.html#late-assessment-missed-assessment-policy" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>This is a firm policy to make sure I am being fair to all of you.</p>
-<p><strong>Grace period:</strong> Homeworks for this class are due Friday at 11:59pm. Homeworks will be accepted 72 hrs after their due date with no penalty (Monday 11:59pm). Graded work not turned in by this time will receive a grade of zero.</p>
-<p><strong>Missed Tests</strong>: If you miss a test, you will need to use one of your ‘re-takes’ during finals weeks to do it. However, if you have a legitimate reason, I will work with you to reschedule the test earlier so you can save your re-take.</p>
-<p><strong>Missed Class Preparation/Participation:</strong> From time to time we miss class for several reasons (studying for another test that day, field work, illness, etc). There will be <strong>no opportunity</strong> to submit preparation and participation activities if they are missed. The purpose of these activities are to reinforce concepts in the moment – and have little value out the context of the material being covered that day.</p>
-<p>To accommodate for this, 5% of the total preparation and participation assessments will be dropped. There will also be additional extra-credit opportunities throughout the term.</p>
-<p><strong>Exceptional Circumstances</strong>: You must contact me 48 hours before the <strong>actual</strong> due date (not after the 48hr grace period) of a graded assignment to give me advanced notice, or within 12 hours after the work is due in the case of an emergency. If you fail to do this, you will receive zero credit for the missed assignment.</p>
-<div class="promptbox">
-<p><strong>Class Discussion</strong></p>
-<p>What do we consider <strong>exceptional circumstances</strong>?</p>
-<p><img src="images/excuses.png" style="left; width:300px; margin:10px;" fig.alt="Decorative cartoon of common excuses" /></p>
-</div>
-</div>
-<div id="test-retakes-policy" class="section level3 hasAnchor" number="2.7.4">
-<h3><span class="header-section-number">2.7.4</span> Test Retakes Policy<a href="why-calculus---workbook.html#test-retakes-policy" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>There is no Final in this class – BUT – I will use the finals timeslot for the retakes. So don’t plan an early break if you think you might be doing a retake.</p>
-<p>If you miss a test during the term for a valid reason (health, emergency etc) and inform me in a timely manner, I’ll schedule a time during office hours for you to take the test. This flexibility is only good for a couple of days as I want to get the graded tests back to the rest of the class.</p>
-<p>If you miss a test for another reason (slept in, went to a wedding etc) you can always use one of your retakes – that’s what they are for.</p>
-<p>Reasons to retake
-Missed a test
-Want to try for a better grade
-Love calc so much you want to do more problems</p>
-<p>You can retake upto 2 tests. Your best score counts – so no risk</p>
-</div>
-<div id="office-hours" class="section level3 hasAnchor" number="2.7.5">
-<h3><span class="header-section-number">2.7.5</span> Office Hours<a href="why-calculus---workbook.html#office-hours" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p><img src="images/when2meet.png" style="float:left; width:100px; margin:10px;" fig.alt="Decorative cartoon of common excuses" /></p>
-<p>Please select ALL times that <strong>could</strong> work.</p>
-<p>I will always try to hang around for 30mins or so after class to answer any questions.</p>
-<p>Office hours will be posted on Canvas as soon as they are set.</p>
-<p><br><br><br></p>
-</div>
-<div id="class-notes" class="section level3 hasAnchor" number="2.7.6">
-<h3><span class="header-section-number">2.7.6</span> Class notes<a href="why-calculus---workbook.html#class-notes" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>All notes that I take in class are available on the onenote notebook link on Canvas
-All lectures will be recorded - these will also be made available on Canvas</p>
-<p>From time to time the technology will fail us. Remember these are being provided as a <em>bonus</em>. There is no substitute for attending class and taking your own notes.</p>
-</div>
-</div>
-<div id="questions" class="section level2 hasAnchor" number="2.8">
-<h2><span class="header-section-number">2.8</span> Questions?<a href="why-calculus---workbook.html#questions" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<div class="promptbox">
-<p><strong>Class discussion</strong></p>
-<p>Ask me anything - whats on your mind - need clarification on any of the things we’ve talked about?
-<br><br><br><br><br><br><br><br><br></p>
-</div>
-</div>
-<div id="paper-planes" class="section level2 hasAnchor" number="2.9">
-<h2><span class="header-section-number">2.9</span> Paper Planes<a href="why-calculus---workbook.html#paper-planes" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<div class="promptbox">
-<p><strong>Paper Plane Activity</strong>
-We are going to make paper planes and then see how well they fly.</p>
-<p>We are going to break into 4 groups:</p>
-<ul>
-<li>Group 1: Instructions not included – I know how to make a paper plane already</li>
-<li>Group 2: Notes - Watch the video multiple times, pausing and taking notes – I’m confident I can make a good plane</li>
-<li>Group 3: Team – Work together and make 1 TEAM plane.</li>
-<li>Group 4: Solo first + then team up - Make your own plane, then make a team plane</li>
-</ul>
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-<p><iframe
-    src="https://www.youtube.com/embed/eHSa-vF6ZlM"
-    title="YouTube video"
-    frameborder="0"
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-    allowfullscreen
-    style="position:absolute; top:0; left:0; width:100%; height:100%;">
-</iframe></p>
-</div>
-<p><strong>Discussion</strong></p>
-<p>Why did we make paper planes in calc?
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></p>
-</div>
-</div>
-<div id="rate-of-change---a-first-look" class="section level2 hasAnchor" number="2.10">
-<h2><span class="header-section-number">2.10</span> Rate of Change - A First Look<a href="why-calculus---workbook.html#rate-of-change---a-first-look" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<div class="promptbox">
-<p><strong>Class Discussion</strong></p>
-<p><img src="images/Bolt.png" style="float:right; width:300px; margin:10px;" fig.alt="Picture of Usain Bolt winning a 100m race" /></p>
-<p>When we try to understand derivatives, the most common place to start is Position-&gt;Velocity-&gt;Acceleration and how they are linked.</p>
-<p>Lets have a look at this while watching Usain Bolt run the 100m in 9.69s</p>
-<p>While we watch this video I want you to keep in mind the idea of change - what variables are changing as we move through this race.</p>
-<p><a href="https://www.youtube.com/clip/UgkxYLQtjngzm0z_y34zOcFQH24uIOKdLFCd" target="_blank" rel="noopener">Usain Bolt 100m Record</a></p>
-<p><strong>Group Discussion</strong></p>
+<div id="step-by-step-finding-extrema" class="section level2 hasAnchor" number="8.3">
+<h2><span class="header-section-number">8.3</span> Step-by-Step: Finding Extrema<a href="applications.html#step-by-step-finding-extrema" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Here’s the process we’ll use:</p>
 <ol style="list-style-type: decimal">
-<li><p>How fast did he run? Can you calculate it?
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br></p></li>
-<li><p>What was the fastest he ran? OR what was his top speed (velocity)?
-When do you think this happened?
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br></p></li>
+<li><strong>Take the derivative</strong> of the function.</li>
+<li><strong>Find critical points</strong> by solving <span class="math inline">\(f&#39;(x) = 0\)</span>.</li>
+<li><strong>Use a first derivative sign chart</strong> and <strong>second derivative sign chart</strong> to classify each critical point as a maximum, minimum, or neither.</li>
+<li><strong>Evaluate the function</strong> at those points to find the extreme values.</li>
 </ol>
-<p>3)The time it took him to get to 10m markers was measured, and the plot is below. What does this tell us about how fast he ran?</p>
-<p><img src="images/Bolt2.png" style="width:500px; margin:10px;" fig.alt="Position vs time graph, showing ten segments, each with slightly different slopes, the first segment took 1.83s, a segment in the middle of the race took 0.82s" />
-<br><br><br><br><br><br><br></p>
-<p>4)If we fit a smooth curve to this path, instead of looking at the slope over every 10m, we can look at the <strong>instantaneous rate of change</strong> or the derivative at any point.</p>
-<p>Note: The reason the curve needs to be smooth will be covered later - this is all just a preview</p>
-<p><img src="images/Bolt3.png" style="width:500px; margin:10px;" fig.alt="Position vs time grpah, but instead of straight line segments, it is one smooth line through the points" />
-<br><br><br><br><br><br><br></p>
-<ol start="5" style="list-style-type: decimal">
-<li>No if we calculate the instantaneous rate of change and plot it against time - we get the velocity vs time relationship.</li>
-</ol>
-<p>Using this - try to describe how is velocity (speed) varied during the race.</p>
-<p><img src="images/Bolt4.png" style="width:500px; margin:10px;" fig.alt="Velocity vs time grpah, shows the velocity increase at the start of the race, then level out, before decreasing at the end of the race. In the video the decrease was associated with Usain Bolt celebrating early" />
-<br><br><br><br><br><br><br></p>
-<ol start="6" style="list-style-type: decimal">
-<li>The world wondered how fast he could actually run the 100m. A year later at the world championships sensors were places along the tract to capture in high resolution his position with time.</li>
-</ol>
+<div id="step-1-take-the-derivative" class="section level3 hasAnchor" number="8.3.1">
+<h3><span class="header-section-number">8.3.1</span> Step 1: Take the Derivative<a href="applications.html#step-1-take-the-derivative" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>To find extrema, our first step is to compute the <strong>derivative</strong> of the function. This derivative represents the <strong>rate of change</strong> of the quantity we’re modeling—how fast it’s increasing or decreasing at each point.</p>
+<div id="why-the-derivative" class="section level4 hasAnchor" number="8.3.1.1">
+<h4><span class="header-section-number">8.3.1.1</span> Why the Derivative?<a href="applications.html#why-the-derivative" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>If we think of a graph as a hill or a valley, then:</p>
 <ul>
-<li>What do you notice this time?</li>
-<li>What is causing the oscillating in the red line?</li>
+<li>The <strong>slope</strong> of the function tells us whether we’re going <strong>uphill</strong> (positive slope) or <strong>downhill</strong> (negative slope).</li>
+<li>At a <strong>peak or valley</strong>, the slope <strong>flattens out</strong>. That’s why extrema occur when the derivative equals <strong>zero</strong>.</li>
 </ul>
-<p><img src="images/Bolt5.png" style="width:500px; margin:10px;" fig.alt="Velocity vs time grpah, black line shows increasing velcity and then levels out at 12m/s, the red line shows the instantaneous velocity whcih oscilates around the average through the race" />
-<br><br><br><br><br><br><br></p>
+<p>####️ How to Differentiate</p>
+<p>To take the derivative, apply the <strong>derivative rules</strong> you’ve learned—like the <strong>power rule</strong>, <strong>sum rule</strong>, <strong>product rule</strong>, or <strong>chain rule</strong>—term by term.</p>
+<blockquote>
+<p><strong>Tip:</strong> Write your function neatly and apply rules one piece at a time. If your function involves products, quotients, or composition of functions, use the appropriate rules (Product Rule, Quotient Rule, Chain Rule).</p>
+</blockquote>
 </div>
+<div id="what-youre-looking-for" class="section level4 hasAnchor" number="8.3.1.2">
+<h4><span class="header-section-number">8.3.1.2</span> What You’re Looking For<a href="applications.html#what-youre-looking-for" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>You’re not just taking the derivative for fun—you want to use it to <strong>find the points where the function might turn around</strong> (peaks and valleys). That’s what the next step is all about: solving <span class="math inline">\(f&#39;(x) = 0\)</span> to find those <strong>critical points</strong>.</p>
+</div>
+</div>
+<div id="step-2-find-the-critical-points" class="section level3 hasAnchor" number="8.3.2">
+<h3><span class="header-section-number">8.3.2</span> Step 2: Find the Critical Points<a href="applications.html#step-2-find-the-critical-points" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Now that we have the derivative, the next step is to <strong>find the values of <span class="math inline">\(x\)</span></strong> where the slope is zero. These are called <strong>critical points</strong>—the points where the function might reach a maximum or minimum.</p>
+<div id="why-set-the-derivative-to-zero" class="section level4 hasAnchor" number="8.3.2.1">
+<h4><span class="header-section-number">8.3.2.1</span> Why Set the Derivative to Zero?<a href="applications.html#why-set-the-derivative-to-zero" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>At any peak or valley on a graph, the function <strong>levels off</strong>, meaning the <strong>slope is zero</strong>. So, to find these potential extrema, we solve:</p>
+<p><span class="math display">\[
+f&#39;(x) = 0
+\]</span></p>
+<blockquote>
+<p>Critical points also occur where the derivative is <strong>undefined</strong>—like at sharp corners or cusps—but for now we’re focusing on smooth curves where the derivative exists everywhere.</p>
+</blockquote>
+<p>Depending on the complexity of the derivative, you might:</p>
+<ul>
+<li>Try <strong>factoring</strong> the expression (easiest when possible)</li>
+<li>Use the <strong>quadratic formula</strong> if the derivative is quadratic</li>
+<li>Use <strong>numerical methods</strong> or a graphing tool if algebraic solutions are tricky</li>
+</ul>
+<hr />
+</div>
+<div id="strategy-tips" class="section level4 hasAnchor" number="8.3.2.2">
+<h4><span class="header-section-number">8.3.2.2</span> Strategy Tips<a href="applications.html#strategy-tips" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<ul>
+<li><strong>Always try factoring first</strong>. It’s often the fastest way to identify roots.</li>
+<li>If factoring fails and your equation is quadratic, use the <strong>quadratic formula</strong>:</li>
+</ul>
+<p><span class="math display">\[
+x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}
+\]</span></p>
+<ul>
+<li>If your equation is higher-degree and doesn’t factor easily, consider graphing the derivative or using numerical solvers in R, a calculator, or software like Desmos.</li>
+</ul>
+<hr />
+<p>Once you’ve found the critical points, you can analyze each one to determine whether it’s a <strong>maximum</strong>, <strong>minimum</strong>, or <strong>neither</strong>.</p>
+</div>
+</div>
+<div id="step-3-classify-each-critical-point-using-a-sign-chart" class="section level3 hasAnchor" number="8.3.3">
+<h3><span class="header-section-number">8.3.3</span> Step 3: Classify Each Critical Point Using a Sign Chart<a href="applications.html#step-3-classify-each-critical-point-using-a-sign-chart" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>After finding the <strong>critical points</strong> (where <span class="math inline">\(f&#39;(x) = 0\)</span>), we need to determine whether each one corresponds to a <strong>local maximum</strong>, <strong>local minimum</strong>, or <strong>neither</strong>.</p>
+<p>One powerful tool for this is the <strong>first derivative sign chart</strong>. This method helps us understand how the function behaves around each critical point by analyzing whether the slope is positive or negative on either side.</p>
+<hr />
+<div id="how-to-build-a-first-derivative-sign-chart" class="section level4 hasAnchor" number="8.3.3.1">
+<h4><span class="header-section-number">8.3.3.1</span> How to Build a First Derivative Sign Chart<a href="applications.html#how-to-build-a-first-derivative-sign-chart" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<ol style="list-style-type: decimal">
+<li><p><strong>Factor the derivative</strong>, if possible.<br />
+This makes it easier to identify where the sign changes occur.</p></li>
+<li><p><strong>Mark the critical points</strong> on a number line.<br />
+These divide the domain into intervals.</p></li>
+<li><p><strong>Choose a test value</strong> in each interval.<br />
+Plug the test value into the <strong>factored derivative</strong> to determine its sign in that interval.</p></li>
+<li><p><strong>Record the sign</strong> of the derivative in each interval.</p>
+<ul>
+<li>If the sign changes from <strong>positive to negative</strong>, the function has a <strong>local maximum</strong>.<br />
+</li>
+<li>If the sign changes from <strong>negative to positive</strong>, the function has a <strong>local minimum</strong>.<br />
+</li>
+<li>If the sign <strong>does not change</strong>, it may be a flat point or inflection point.</li>
+</ul></li>
+</ol>
+<hr />
+</div>
+<div id="what-the-signs-tell-you" class="section level4 hasAnchor" number="8.3.3.2">
+<h4><span class="header-section-number">8.3.3.2</span> What the Signs Tell You<a href="applications.html#what-the-signs-tell-you" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<table>
+<colgroup>
+<col width="15%" />
+<col width="34%" />
+<col width="49%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Interval</th>
+<th>Sign of <span class="math inline">\(f&#39;(x)\)</span></th>
+<th>Behavior of <span class="math inline">\(f(x)\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\(f&#39;(x) &gt; 0\)</span></td>
+<td>Positive</td>
+<td>Function is <strong>increasing</strong></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(f&#39;(x) &lt; 0\)</span></td>
+<td>Negative</td>
+<td>Function is <strong>decreasing</strong></td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(f&#39;(x) = 0\)</span></td>
+<td>Zero at a point</td>
+<td>Function has <strong>flat slope</strong></td>
+</tr>
+</tbody>
+</table>
+<p>By sketching this number line and labeling the behavior in each interval, we can <strong>visualize</strong> how the function is changing and pinpoint <strong>maxima</strong> and <strong>minima</strong> accurately.</p>
+<hr />
+<blockquote>
+<p><strong>Tip:</strong> Always include the sign of the leading coefficient in your analysis! It can flip the sign of the entire derivative.</p>
+</blockquote>
+</div>
+</div>
+<div id="step-4-evaluate-the-function-at-the-critical-points" class="section level3 hasAnchor" number="8.3.4">
+<h3><span class="header-section-number">8.3.4</span> Step 4: Evaluate the Function at the Critical Points<a href="applications.html#step-4-evaluate-the-function-at-the-critical-points" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Once you’ve identified which critical points are <strong>maximums</strong> or <strong>minimums</strong>, the next step is to find the actual <strong>function values</strong> at those points. These values represent the <strong>extrema</strong>—the highest and lowest outputs of the function.</p>
+<hr />
+<div id="how-to-evaluate" class="section level4 hasAnchor" number="8.3.4.1">
+<h4><span class="header-section-number">8.3.4.1</span> How to Evaluate<a href="applications.html#how-to-evaluate" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>To do this, simply substitute each critical point back into the <strong>original function</strong> (not the derivative).</p>
+<p>If your function is <span class="math inline">\(f(x)\)</span>, and your critical points are <span class="math inline">\(x = a\)</span> and <span class="math inline">\(x = b\)</span>, you compute:</p>
+<ul>
+<li><span class="math inline">\(f(a)\)</span>: the function value at the first critical point<br />
+</li>
+<li><span class="math inline">\(f(b)\)</span>: the function value at the second critical point</li>
+</ul>
+<p>Repeat this for all critical points.</p>
+<hr />
+</div>
+<div id="what-youve-learned" class="section level4 hasAnchor" number="8.3.4.2">
+<h4><span class="header-section-number">8.3.4.2</span> What You’ve Learned<a href="applications.html#what-youve-learned" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<ul>
+<li>The value <span class="math inline">\(f(a)\)</span> tells you how high or low the function gets at <span class="math inline">\(x = a\)</span></li>
+<li>Comparing all the values lets you determine which are <strong>local minimums</strong>, <strong>local maximums</strong>, or <strong>global extremes</strong></li>
+</ul>
+<hr />
+</div>
+<div id="final-step" class="section level4 hasAnchor" number="8.3.4.3">
+<h4><span class="header-section-number">8.3.4.3</span> Final Step<a href="applications.html#final-step" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Once you’ve evaluated the function at each critical point, you can summarize the extrema as coordinate points:</p>
+<ul>
+<li><strong>Minimum</strong>: <span class="math inline">\((a, f(a))\)</span></li>
+<li><strong>Maximum</strong>: <span class="math inline">\((b, f(b))\)</span></li>
+</ul>
+<blockquote>
+<p>These coordinates give precise information about where and when a quantity reaches its highest or lowest point—critical in environmental models, economics, biology, and more.</p>
+</blockquote>
+</div>
+</div>
+</div>
+<div id="environmental-example-a-cubic-population-model" class="section level2 hasAnchor" number="8.4">
+<h2><span class="header-section-number">8.4</span> 🌱 Environmental Example: A Cubic Population Model<a href="#environmental-example-a-cubic-population-model" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Let’s investigate a population model defined by a cubic function:</p>
+<p><span class="math display">\[
+P(t) = -t^3 + 6t^2 - 9t + 20
+\]</span></p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="applications.html#cb2-1" tabindex="-1"></a><span class="co"># Define the cubic function</span></span>
+<span id="cb2-2"><a href="applications.html#cb2-2" tabindex="-1"></a>P <span class="ot">&lt;-</span> <span class="cf">function</span>(t) <span class="sc">-</span>t<span class="sc">^</span><span class="dv">3</span> <span class="sc">+</span> <span class="dv">6</span><span class="sc">*</span>t<span class="sc">^</span><span class="dv">2</span> <span class="sc">-</span> <span class="dv">9</span><span class="sc">*</span>t <span class="sc">+</span> <span class="dv">20</span></span>
+<span id="cb2-3"><a href="applications.html#cb2-3" tabindex="-1"></a></span>
+<span id="cb2-4"><a href="applications.html#cb2-4" tabindex="-1"></a><span class="co"># Plot the function</span></span>
+<span id="cb2-5"><a href="applications.html#cb2-5" tabindex="-1"></a><span class="fu">curve</span>(<span class="fu">P</span>(x), <span class="at">from =</span> <span class="dv">0</span>, <span class="at">to =</span> <span class="dv">5</span>, </span>
+<span id="cb2-6"><a href="applications.html#cb2-6" tabindex="-1"></a>      <span class="at">xlab =</span> <span class="st">&quot;Time (t)&quot;</span>, </span>
+<span id="cb2-7"><a href="applications.html#cb2-7" tabindex="-1"></a>      <span class="at">ylab =</span> <span class="st">&quot;Population P(t)&quot;</span>, </span>
+<span id="cb2-8"><a href="applications.html#cb2-8" tabindex="-1"></a>      <span class="at">main =</span> <span class="fu">expression</span>(<span class="fu">P</span>(t) <span class="sc">==</span> <span class="sc">-</span>t<span class="sc">^</span><span class="dv">3</span> <span class="sc">+</span> <span class="dv">6</span><span class="sc">*</span>t<span class="sc">^</span><span class="dv">2</span> <span class="sc">-</span> <span class="dv">9</span><span class="sc">*</span>t <span class="sc">+</span> <span class="dv">20</span>),</span>
+<span id="cb2-9"><a href="applications.html#cb2-9" tabindex="-1"></a>      <span class="at">col =</span> <span class="st">&quot;forestgreen&quot;</span>, <span class="at">lwd =</span> <span class="dv">2</span>)</span>
+<span id="cb2-10"><a href="applications.html#cb2-10" tabindex="-1"></a></span>
+<span id="cb2-11"><a href="applications.html#cb2-11" tabindex="-1"></a><span class="co"># Add grid</span></span>
+<span id="cb2-12"><a href="applications.html#cb2-12" tabindex="-1"></a><span class="fu">grid</span>()</span></code></pre></div>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-11-1.png" width="80%" style="display: block; margin: auto;" /></p>
+<p>This function could represent a population that declines initially and reaches a minimum. Due to favorable conditions the population starts to increase, and then declines because of environmental stressors like competition, disease, or habitat loss.</p>
+<hr />
+<div id="step-1-find-the-first-derivative" class="section level3 hasAnchor" number="8.4.1">
+<h3><span class="header-section-number">8.4.1</span> Step 1: Find the First Derivative<a href="applications.html#step-1-find-the-first-derivative" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>To identify when the population reaches a <strong>local maximum or minimum</strong>, we begin by finding the <strong>first derivative</strong> of the function <span class="math inline">\(P(t)\)</span>. The first derivative tells us the <strong>rate of change</strong> of the population with respect to time — in other words, whether the population is increasing or decreasing at a given moment.</p>
+<p>Our original function is:</p>
+<p><span class="math display">\[
+P(t) = -t^3 + 6t^2 - 9t + 20
+\]</span></p>
+<p>To take the derivative, apply the <strong>power rule</strong> term by term:</p>
+<ul>
+<li>The derivative of <span class="math inline">\(-t^3\)</span> is <span class="math inline">\(-3t^2\)</span></li>
+<li>The derivative of <span class="math inline">\(6t^2\)</span> is <span class="math inline">\(12t\)</span></li>
+<li>The derivative of <span class="math inline">\(-9t\)</span> is <span class="math inline">\(-9\)</span></li>
+<li>The constant term <span class="math inline">\(20\)</span> has a derivative of 0 (since constants don’t change)</li>
+</ul>
+<p>So the full derivative is:</p>
+<p><span class="math display">\[
+P&#39;(t) = -3t^2 + 12t - 9
+\]</span></p>
+</div>
+<div id="what-does-this-mean" class="section level3 hasAnchor" number="8.4.2">
+<h3><span class="header-section-number">8.4.2</span> What Does This Mean?<a href="applications.html#what-does-this-mean" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li>This new function <span class="math inline">\(P&#39;(t)\)</span> describes how fast the population is changing at any given time <span class="math inline">\(t\)</span>.</li>
+<li>If <span class="math inline">\(P&#39;(t) &gt; 0\)</span>, the population is <strong>increasing</strong>.</li>
+<li>If <span class="math inline">\(P&#39;(t) &lt; 0\)</span>, the population is <strong>decreasing</strong>.</li>
+<li>If <span class="math inline">\(P&#39;(t) = 0\)</span>, the population has a <strong>horizontal slope</strong> — which might indicate a <strong>peak (maximum)</strong> or <strong>valley (minimum)</strong>.</li>
+</ul>
+<hr />
+<blockquote>
+<p><strong>Next Step:</strong> To find the exact moments when these changes occur, we set <span class="math inline">\(P&#39;(t) = 0\)</span> and solve for <span class="math inline">\(t\)</span>. This gives us the <strong>critical points</strong> where the population may reach an extreme value.</p>
+</blockquote>
+</div>
+<div id="step-2-find-the-critical-points-1" class="section level3 hasAnchor" number="8.4.3">
+<h3><span class="header-section-number">8.4.3</span> Step 2: Find the Critical Points<a href="applications.html#step-2-find-the-critical-points-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>To find extreme points (like maximums or minimums), we look for where the <strong>derivative equals zero</strong>. These are called <strong>critical points</strong>, and they occur where:</p>
+<ul>
+<li>The slope of the function is zero (i.e., a horizontal tangent line), or<br />
+</li>
+<li>The derivative is undefined (we’ll cover this a little later).</li>
+</ul>
+<p>We’re solving:</p>
+<p><span class="math display">\[
+P&#39;(t) = -3t^2 + 12t - 9 = 0
+\]</span></p>
+<p>This is a <strong>quadratic equation</strong>, so we can solve it by <strong>factoring</strong> or using the <strong>quadratic formula</strong>.</p>
+<div id="try-factoring-first" class="section level4 hasAnchor" number="8.4.3.1">
+<h4><span class="header-section-number">8.4.3.1</span> Try Factoring First<a href="applications.html#try-factoring-first" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>We can simplify the equation by dividing both sides by <span class="math inline">\(-3\)</span>:</p>
+<p><span class="math display">\[
+t^2 - 4t + 3 = 0
+\]</span></p>
+<p>Now factor:</p>
+<p><span class="math display">\[
+(t - 1)(t - 3) = 0
+\]</span></p>
+<p>This tells us the derivative is zero at:</p>
+<p><span class="math display">\[
+t = 1 \quad \text{and} \quad t = 3
+\]</span></p>
+<p>These are our <strong>critical points</strong> — the places where the slope of the curve is zero, and the function might reach a local max or min.</p>
+<hr />
+</div>
+<div id="when-factoring-doesnt-work" class="section level4 hasAnchor" number="8.4.3.2">
+<h4><span class="header-section-number">8.4.3.2</span> When Factoring Doesn’t Work<a href="applications.html#when-factoring-doesnt-work" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Sometimes factoring is difficult or impossible. If our derivative is a quadratic equation, we use the <strong>quadratic formula</strong>:</p>
+<p><span class="math display">\[
+t = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}
+\]</span></p>
+<p>For our derivative:</p>
+<p><span class="math display">\[
+P&#39;(t) = at^2 + bt + c = -3t^2 + 12t - 9
+\]</span></p>
+<p>So:</p>
+<ul>
+<li><span class="math inline">\(a = -3\)</span></li>
+<li><span class="math inline">\(b = 12\)</span></li>
+<li><span class="math inline">\(c = -9\)</span></li>
+</ul>
+<p>Plugging into the formula:</p>
+<p><span class="math display">\[
+t = \frac{-12 \pm \sqrt{(12)^2 - 4(-3)(-9)}}{2(-3)} = \frac{-12 \pm \sqrt{144 - 108}}{-6}
+\]</span></p>
+<p><span class="math display">\[
+t = \frac{-12 \pm \sqrt{36}}{-6} = \frac{-12 \pm 6}{-6}
+\]</span></p>
+<p><span class="math display">\[
+t = 1 \quad \text{and} \quad t = 3
+\]</span></p>
+<blockquote>
+<p><strong>Key Takeaway:</strong> Whether you factor or use the quadratic formula, the goal is the same:<br />
+Find where the derivative equals zero. These points are where the original function might reach a <strong>peak or valley</strong>.</p>
+</blockquote>
+</div>
+</div>
+<div id="step-3-constructing-a-sign-chart" class="section level3 hasAnchor" number="8.4.4">
+<h3><span class="header-section-number">8.4.4</span> Step 3: Constructing a Sign Chart<a href="applications.html#step-3-constructing-a-sign-chart" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Let’s dig deeper into how to analyze the <strong>sign</strong> of a derivative in different intervals using the factored form.</p>
+<p>When we think of a <strong>local maximum</strong> - we think of this as a high point on the function, so either side of the function would decrease from this peak. So as we approach a maxima, the slope of the function would be positive. At the maxima (the critical point), the slope goes to zero. Then as we come down of the peak, the slope of function is negative. The reverse is true for a mimima.</p>
+<p>This feature is what a sign chart takes advantage of. What we will be doing is looking at the <strong>sign</strong> of the derivative on either side of a critical point. And bsed on the the sign determine if its a max or a min.</p>
+<p>In this example we’re working with the first derivative:</p>
+<p><span class="math display">\[
+P&#39;(t) = -3(t - 1)(t - 3)
+\]</span></p>
+<p>This is already factored, which makes it easier to analyze.</p>
+<p>So the <strong>critical points</strong> are at <span class="math inline">\(t = 1\)</span> and <span class="math inline">\(t = 3\)</span>. Sketch a number line and place these critical points on the line</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="applications.html#cb3-1" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb3-2"><a href="applications.html#cb3-2" tabindex="-1"></a></span>
+<span id="cb3-3"><a href="applications.html#cb3-3" tabindex="-1"></a><span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb3-4"><a href="applications.html#cb3-4" tabindex="-1"></a>  <span class="co"># Number line with arrowheads</span></span>
+<span id="cb3-5"><a href="applications.html#cb3-5" tabindex="-1"></a>  <span class="fu">geom_segment</span>(<span class="fu">aes</span>(<span class="at">x =</span> <span class="dv">0</span>, <span class="at">xend =</span> <span class="dv">5</span>, <span class="at">y =</span> <span class="sc">-</span><span class="dv">0</span>, <span class="at">yend =</span> <span class="dv">0</span>),</span>
+<span id="cb3-6"><a href="applications.html#cb3-6" tabindex="-1"></a>               <span class="at">arrow =</span> <span class="fu">arrow</span>(<span class="at">type =</span> <span class="st">&quot;closed&quot;</span>, <span class="at">ends =</span> <span class="st">&quot;both&quot;</span>, <span class="at">length =</span> <span class="fu">unit</span>(<span class="fl">0.15</span>, <span class="st">&quot;inches&quot;</span>)),</span>
+<span id="cb3-7"><a href="applications.html#cb3-7" tabindex="-1"></a>               <span class="at">linewidth =</span> <span class="fl">1.2</span>) <span class="sc">+</span></span>
+<span id="cb3-8"><a href="applications.html#cb3-8" tabindex="-1"></a>  </span>
+<span id="cb3-9"><a href="applications.html#cb3-9" tabindex="-1"></a>  <span class="co"># Critical points</span></span>
+<span id="cb3-10"><a href="applications.html#cb3-10" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">x =</span> <span class="dv">1</span>, <span class="at">y =</span> <span class="dv">0</span>), <span class="at">size =</span> <span class="dv">3</span>) <span class="sc">+</span></span>
+<span id="cb3-11"><a href="applications.html#cb3-11" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">x =</span> <span class="dv">3</span>, <span class="at">y =</span> <span class="dv">0</span>), <span class="at">size =</span> <span class="dv">3</span>) <span class="sc">+</span></span>
+<span id="cb3-12"><a href="applications.html#cb3-12" tabindex="-1"></a>  </span>
+<span id="cb3-13"><a href="applications.html#cb3-13" tabindex="-1"></a>  <span class="co"># Labels just above the line</span></span>
+<span id="cb3-14"><a href="applications.html#cb3-14" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">&quot;text&quot;</span>, <span class="at">x =</span> <span class="dv">1</span>, <span class="at">y =</span> <span class="fl">0.07</span>, <span class="at">label =</span> <span class="st">&quot;1 (critical point)&quot;</span>, <span class="at">hjust =</span> <span class="fl">0.5</span>) <span class="sc">+</span></span>
+<span id="cb3-15"><a href="applications.html#cb3-15" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">&quot;text&quot;</span>, <span class="at">x =</span> <span class="dv">3</span>, <span class="at">y =</span> <span class="fl">0.07</span>, <span class="at">label =</span> <span class="st">&quot;3 (critical point)&quot;</span>, <span class="at">hjust =</span> <span class="fl">0.5</span>) <span class="sc">+</span></span>
+<span id="cb3-16"><a href="applications.html#cb3-16" tabindex="-1"></a>  </span>
+<span id="cb3-17"><a href="applications.html#cb3-17" tabindex="-1"></a>  <span class="co"># Interval labels just below the line</span></span>
+<span id="cb3-18"><a href="applications.html#cb3-18" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">&quot;text&quot;</span>, <span class="at">x =</span> <span class="fl">0.5</span>, <span class="at">y =</span> <span class="sc">-</span><span class="fl">0.07</span>, <span class="at">label =</span> <span class="st">&quot;A&quot;</span>, <span class="at">color =</span> <span class="st">&quot;blue&quot;</span>) <span class="sc">+</span></span>
+<span id="cb3-19"><a href="applications.html#cb3-19" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">&quot;text&quot;</span>, <span class="at">x =</span> <span class="dv">2</span>, <span class="at">y =</span> <span class="sc">-</span><span class="fl">0.07</span>, <span class="at">label =</span> <span class="st">&quot;B&quot;</span>, <span class="at">color =</span> <span class="st">&quot;forestgreen&quot;</span>) <span class="sc">+</span></span>
+<span id="cb3-20"><a href="applications.html#cb3-20" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">&quot;text&quot;</span>, <span class="at">x =</span> <span class="dv">4</span>, <span class="at">y =</span> <span class="sc">-</span><span class="fl">0.07</span>, <span class="at">label =</span> <span class="st">&quot;C&quot;</span>, <span class="at">color =</span> <span class="st">&quot;red&quot;</span>) <span class="sc">+</span></span>
+<span id="cb3-21"><a href="applications.html#cb3-21" tabindex="-1"></a>   <span class="fu">coord_cartesian</span>(<span class="at">ylim =</span> <span class="fu">c</span>(<span class="sc">-</span><span class="dv">1</span>, <span class="dv">1</span>))<span class="sc">+</span></span>
+<span id="cb3-22"><a href="applications.html#cb3-22" tabindex="-1"></a>  <span class="fu">theme_void</span>()</span></code></pre></div>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-12-1.png" width="80%" style="display: block; margin: auto;" /></p>
+<p>These divide the number line into <strong>three intervals</strong>:</p>
+<ul>
+<li>Interval A: <span class="math inline">\((-\infty, 1)\)</span></li>
+<li>Interval B: <span class="math inline">\((1, 3)\)</span></li>
+<li>Interval C: <span class="math inline">\((3, \infty)\)</span></li>
+</ul>
+<hr />
+<div id="choose-test-point" class="section level4 hasAnchor" number="8.4.4.1">
+<h4><span class="header-section-number">8.4.4.1</span> Choose Test Point*<a href="applications.html#choose-test-point" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>For each interval, pick a <strong>test value</strong> (any number in the interval) and substitute it into each factor to determine the sign.</p>
+<p>Let’s use:</p>
+<ul>
+<li><span class="math inline">\(t = 0\)</span> for Interval A</li>
+<li><span class="math inline">\(t = 2\)</span> for Interval B</li>
+<li><span class="math inline">\(t = 4\)</span> for Interval C</li>
+</ul>
+<hr />
+</div>
+</div>
+<div id="step-by-step-sign-analysis" class="section level3 hasAnchor" number="8.4.5">
+<h3><span class="header-section-number">8.4.5</span> Step-by-Step Sign Analysis<a href="applications.html#step-by-step-sign-analysis" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<table>
+<colgroup>
+<col width="7%" />
+<col width="8%" />
+<col width="9%" />
+<col width="9%" />
+<col width="15%" />
+<col width="15%" />
+<col width="15%" />
+<col width="18%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Interval</th>
+<th>Test Point</th>
+<th><span class="math inline">\(t - 1\)</span></th>
+<th><span class="math inline">\(t - 3\)</span></th>
+<th>Product of Factors</th>
+<th>Multiply by <span class="math inline">\(-3\)</span></th>
+<th>Sign of <span class="math inline">\(P&#39;(t)\)</span></th>
+<th>Behavior of <span class="math inline">\(P(t)\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\(t &lt; 1\)</span></td>
+<td>0</td>
+<td><span class="math inline">\(-1\)</span></td>
+<td><span class="math inline">\(-3\)</span></td>
+<td><span class="math inline">\((+)\)</span></td>
+<td><span class="math inline">\(-\)</span></td>
+<td><strong>Negative</strong></td>
+<td><strong>Decreasing</strong></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(1 &lt; t &lt; 3\)</span></td>
+<td>2</td>
+<td><span class="math inline">\(+1\)</span></td>
+<td><span class="math inline">\(-1\)</span></td>
+<td><span class="math inline">\(-\)</span></td>
+<td><span class="math inline">\(+\)</span></td>
+<td><strong>Positive</strong></td>
+<td><strong>Increasing</strong></td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(t &gt; 3\)</span></td>
+<td>4</td>
+<td><span class="math inline">\(+3\)</span></td>
+<td><span class="math inline">\(+1\)</span></td>
+<td><span class="math inline">\(+\)</span></td>
+<td><span class="math inline">\(-\)</span></td>
+<td><strong>Negative</strong></td>
+<td><strong>Decreasing</strong></td>
+</tr>
+</tbody>
+</table>
+<div id="how-the-signs-work" class="section level4 hasAnchor" number="8.4.5.1">
+<h4><span class="header-section-number">8.4.5.1</span> How the Signs Work<a href="applications.html#how-the-signs-work" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>For <span class="math inline">\(P&#39;(t) = -3(t - 1)(t - 3)\)</span>:</p>
+<ol style="list-style-type: decimal">
+<li><strong>Evaluate each factor</strong> at the test point:
+<ul>
+<li>For example, at <span class="math inline">\(t = 0\)</span>, <span class="math inline">\(t - 1 = -1\)</span>, <span class="math inline">\(t - 3 = -3\)</span></li>
+</ul></li>
+<li><strong>Determine the sign</strong> of each factor:
+<ul>
+<li>Two negative numbers multiplied give a <strong>positive</strong></li>
+</ul></li>
+<li><strong>Include the leading coefficient</strong>:
+<ul>
+<li>We have a <strong>-3</strong> multiplied by the product of the factors.</li>
+<li>So, <span class="math inline">\(-3 \cdot (+) = -\)</span>, meaning the derivative is <strong>negative</strong></li>
+</ul></li>
+<li><strong>Interpret</strong>:
+<ul>
+<li>A <strong>negative derivative</strong> means the original function <span class="math inline">\(P(t)\)</span> is <strong>decreasing</strong></li>
+<li>A <strong>positive derivative</strong> means it is <strong>increasing</strong></li>
+</ul></li>
+</ol>
+</div>
+<div id="interpret-the-chart" class="section level4 hasAnchor" number="8.4.5.2">
+<h4><span class="header-section-number">8.4.5.2</span> Interpret the Chart<a href="applications.html#interpret-the-chart" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<ul>
+<li><p><strong>At <span class="math inline">\(t = 1\)</span></strong>:<br />
+The function switches from <strong>decreasing to increasing</strong>, so this is a <strong>local minimum</strong>.</p></li>
+<li><p><strong>At <span class="math inline">\(t = 3\)</span></strong>:<br />
+The function switches from <strong>increasing to decreasing</strong>, so this is a <strong>local maximum</strong>.</p></li>
+</ul>
+<hr />
+</div>
+</div>
+<div id="step-4-evaluate-the-function" class="section level3 hasAnchor" number="8.4.6">
+<h3><span class="header-section-number">8.4.6</span> Step 4: Evaluate the Function<a href="applications.html#step-4-evaluate-the-function" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Now that we’ve identified the critical points at <span class="math inline">\(t = 1\)</span> and <span class="math inline">\(t = 3\)</span>, we can find the population values at those times by plugging them into the original function:</p>
+<p><span class="math display">\[
+P(t) = -t^3 + 6t^2 - 9t + 20
+\]</span></p>
+<div id="at-t-1" class="section level4 hasAnchor" number="8.4.6.1">
+<h4><span class="header-section-number">8.4.6.1</span> At <span class="math inline">\(t = 1\)</span>:<a href="applications.html#at-t-1" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><span class="math display">\[
+P(1) = -(1)^3 + 6(1)^2 - 9(1) + 20 = -1 + 6 - 9 + 20 = 16
+\]</span></p>
+</div>
+<div id="at-t-3" class="section level4 hasAnchor" number="8.4.6.2">
+<h4><span class="header-section-number">8.4.6.2</span> At <span class="math inline">\(t = 3\)</span>:<a href="applications.html#at-t-3" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><span class="math display">\[
+P(3) = -(3)^3 + 6(3)^2 - 9(3) + 20 = -27 + 54 - 27 + 20 = 20
+\]</span></p>
+<hr />
+<p>So:</p>
+<ul>
+<li><span class="math inline">\((1, 16)\)</span> is a <strong>local minimum</strong><br />
+</li>
+<li><span class="math inline">\((3, 20)\)</span> is a <strong>local maximum</strong></li>
+</ul>
+<hr />
+<p>Now let’s update the plot to reflect this, with:</p>
+<ul>
+<li>Dashed <strong>horizontal lines</strong> showing the population value at each critical point<br />
+</li>
+<li><strong>Labels</strong> showing the full <span class="math inline">\((t, P(t))\)</span> coordinates</li>
+</ul>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="applications.html#cb4-1" tabindex="-1"></a>P <span class="ot">&lt;-</span> <span class="cf">function</span>(t) <span class="sc">-</span>t<span class="sc">^</span><span class="dv">3</span> <span class="sc">+</span> <span class="dv">6</span><span class="sc">*</span>t<span class="sc">^</span><span class="dv">2</span> <span class="sc">-</span> <span class="dv">9</span><span class="sc">*</span>t <span class="sc">+</span> <span class="dv">20</span></span>
+<span id="cb4-2"><a href="applications.html#cb4-2" tabindex="-1"></a></span>
+<span id="cb4-3"><a href="applications.html#cb4-3" tabindex="-1"></a><span class="fu">curve</span>(<span class="fu">P</span>(x), <span class="at">from =</span> <span class="dv">0</span>, <span class="at">to =</span> <span class="dv">5</span>, <span class="at">ylim =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">25</span>), <span class="at">col =</span> <span class="st">&quot;forestgreen&quot;</span>, <span class="at">lwd =</span> <span class="dv">2</span>,</span>
+<span id="cb4-4"><a href="applications.html#cb4-4" tabindex="-1"></a>      <span class="at">xlab =</span> <span class="st">&quot;Time (t)&quot;</span>, <span class="at">ylab =</span> <span class="st">&quot;Population P(t)&quot;</span>,</span>
+<span id="cb4-5"><a href="applications.html#cb4-5" tabindex="-1"></a>      <span class="at">main =</span> <span class="st">&quot;Cubic Model with Extrema&quot;</span>)</span>
+<span id="cb4-6"><a href="applications.html#cb4-6" tabindex="-1"></a></span>
+<span id="cb4-7"><a href="applications.html#cb4-7" tabindex="-1"></a><span class="co"># Critical point coordinates</span></span>
+<span id="cb4-8"><a href="applications.html#cb4-8" tabindex="-1"></a>t1 <span class="ot">&lt;-</span> <span class="dv">1</span></span>
+<span id="cb4-9"><a href="applications.html#cb4-9" tabindex="-1"></a>t2 <span class="ot">&lt;-</span> <span class="dv">3</span></span>
+<span id="cb4-10"><a href="applications.html#cb4-10" tabindex="-1"></a>P1 <span class="ot">&lt;-</span> <span class="fu">P</span>(t1)</span>
+<span id="cb4-11"><a href="applications.html#cb4-11" tabindex="-1"></a>P2 <span class="ot">&lt;-</span> <span class="fu">P</span>(t2)</span>
+<span id="cb4-12"><a href="applications.html#cb4-12" tabindex="-1"></a></span>
+<span id="cb4-13"><a href="applications.html#cb4-13" tabindex="-1"></a><span class="co"># Mark critical points</span></span>
+<span id="cb4-14"><a href="applications.html#cb4-14" tabindex="-1"></a><span class="fu">points</span>(t1, P1, <span class="at">pch =</span> <span class="dv">19</span>, <span class="at">col =</span> <span class="st">&quot;blue&quot;</span>)</span>
+<span id="cb4-15"><a href="applications.html#cb4-15" tabindex="-1"></a><span class="fu">points</span>(t2, P2, <span class="at">pch =</span> <span class="dv">19</span>, <span class="at">col =</span> <span class="st">&quot;red&quot;</span>)</span>
+<span id="cb4-16"><a href="applications.html#cb4-16" tabindex="-1"></a></span>
+<span id="cb4-17"><a href="applications.html#cb4-17" tabindex="-1"></a><span class="co"># Dashed horizontal lines at population values</span></span>
+<span id="cb4-18"><a href="applications.html#cb4-18" tabindex="-1"></a><span class="fu">abline</span>(<span class="at">h =</span> <span class="fu">c</span>(P1, P2), <span class="at">lty =</span> <span class="dv">2</span>, <span class="at">col =</span> <span class="st">&quot;gray60&quot;</span>)</span>
+<span id="cb4-19"><a href="applications.html#cb4-19" tabindex="-1"></a></span>
+<span id="cb4-20"><a href="applications.html#cb4-20" tabindex="-1"></a><span class="co"># Dashed vertical lines at t-values</span></span>
+<span id="cb4-21"><a href="applications.html#cb4-21" tabindex="-1"></a><span class="fu">abline</span>(<span class="at">v =</span> <span class="fu">c</span>(t1, t2), <span class="at">lty =</span> <span class="dv">2</span>, <span class="at">col =</span> <span class="st">&quot;gray70&quot;</span>)</span>
+<span id="cb4-22"><a href="applications.html#cb4-22" tabindex="-1"></a></span>
+<span id="cb4-23"><a href="applications.html#cb4-23" tabindex="-1"></a><span class="co"># Labels</span></span>
+<span id="cb4-24"><a href="applications.html#cb4-24" tabindex="-1"></a><span class="fu">text</span>(t1, P1 <span class="sc">+</span> <span class="fl">1.5</span>, <span class="at">labels =</span> <span class="st">&quot;Local Min</span><span class="sc">\n</span><span class="st">(1, 16)&quot;</span>, <span class="at">col =</span> <span class="st">&quot;blue&quot;</span>, <span class="at">pos =</span> <span class="dv">3</span>)</span>
+<span id="cb4-25"><a href="applications.html#cb4-25" tabindex="-1"></a><span class="fu">text</span>(t2, P2 , <span class="at">labels =</span> <span class="st">&quot;Local Max</span><span class="sc">\n</span><span class="st">(3, 20)&quot;</span>, <span class="at">col =</span> <span class="st">&quot;red&quot;</span>, <span class="at">pos =</span> <span class="dv">3</span>)</span></code></pre></div>
+<p><img src="bookdown-demo_files/figure-html/cubic-extrema-plot-1.png" width="80%" style="display: block; margin: auto;" /></p>
+</div>
+</div>
+<div id="final-takeaways" class="section level3 hasAnchor" number="8.4.7">
+<h3><span class="header-section-number">8.4.7</span> Final Takeaways<a href="applications.html#final-takeaways" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li><strong>Use the factored form</strong> of the derivative—it makes sign analysis much easier.</li>
+<li><strong>Pick one value per interval</strong> to test—this is enough to determine the sign throughout that interval.</li>
+<li><strong>Include the leading coefficient</strong> in your sign analysis—it can flip the sign of the whole expression!</li>
+<li>The sign of <span class="math inline">\(P&#39;(t)\)</span> tells you whether the original function <span class="math inline">\(P(t)\)</span> is increasing or decreasing in that interval.</li>
+</ul>
+<p>The first derivative sign chart helps us identify what type of a extreme value (max or min) we have at the critical points.</p>
+<hr />
+<p>##Second Derivative Sign Charts: Understanding Concavity</p>
+<p>Just like the <strong>first derivative</strong> tells us whether a function is increasing or decreasing, the <strong>second derivative</strong> tells us about the <em>curvature</em> of the function—also known as <strong>concavity</strong>.</p>
+<hr />
+</div>
+<div id="what-does-the-second-derivative-tell-us" class="section level3 hasAnchor" number="8.4.8">
+<h3><span class="header-section-number">8.4.8</span> What Does the Second Derivative Tell Us?<a href="applications.html#what-does-the-second-derivative-tell-us" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>If we think of the graph of a function as a hilly landscape:</p>
+<ul>
+<li><p><strong>Concave Up</strong>: Looks like a valley (opens upward)<br />
+→ The slope is increasing<br />
+→ The second derivative is <strong>positive</strong></p></li>
+<li><p><strong>Concave Down</strong>: Looks like a hill (opens downward)<br />
+→ The slope is decreasing<br />
+→ The second derivative is <strong>negative</strong></p></li>
+</ul>
+<p>The second derivative tells us how the <strong>rate of change is changing</strong>.</p>
+<hr />
+</div>
+<div id="how-to-use-a-second-derivative-sign-chart" class="section level3 hasAnchor" number="8.4.9">
+<h3><span class="header-section-number">8.4.9</span> How to Use a Second Derivative Sign Chart<a href="applications.html#how-to-use-a-second-derivative-sign-chart" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>We follow similar steps as the first derivative sign chart, but with <span class="math inline">\(f&#39;&#39;(x)\)</span>:</p>
+<ol style="list-style-type: decimal">
+<li><strong>Take the second derivative</strong> of the function: <span class="math inline">\(f&#39;&#39;(x)\)</span></li>
+<li><strong>Set <span class="math inline">\(f&#39;&#39;(x) = 0\)</span></strong> and solve to find <strong>possible inflection points</strong></li>
+<li><strong>Plot those values</strong> on a number line</li>
+<li><strong>Pick test points</strong> in each interval to determine the sign of <span class="math inline">\(f&#39;&#39;(x)\)</span></li>
+<li>Use the sign chart to determine <strong>concavity</strong>:
+<ul>
+<li><span class="math inline">\(f&#39;&#39;(x) &gt; 0\)</span>: concave up</li>
+<li><span class="math inline">\(f&#39;&#39;(x) &lt; 0\)</span>: concave down</li>
+</ul></li>
+</ol>
+</div>
+</div>
+<div id="the-procedure-is-identical-to-that-of-the-first-derivative-sign-chart.-the-difference-is-in-the-interpreation-of-the-signs.-the-second-derivative-sign-chart-helps-us-determine-information-about-the-functions-convavity." class="section level2 hasAnchor" number="8.5">
+<h2><span class="header-section-number">8.5</span> The procedure is identical to that of the first derivative sign chart. The difference is in the interpreation of the signs. The second derivative sign chart helps us determine information about the functions convavity.<a href="applications.html#the-procedure-is-identical-to-that-of-the-first-derivative-sign-chart.-the-difference-is-in-the-interpreation-of-the-signs.-the-second-derivative-sign-chart-helps-us-determine-information-about-the-functions-convavity." class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="what-are-inflection-points" class="section level3 hasAnchor" number="8.5.1">
+<h3><span class="header-section-number">8.5.1</span> What Are Inflection Points?<a href="applications.html#what-are-inflection-points" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>An <strong>inflection point</strong> is where the function changes concavity—from concave up to concave down or vice versa.<br />
+These occur where the second derivative <strong>changes sign</strong>.</p>
+<blockquote>
+<p>Note: Not every point where <span class="math inline">\(f&#39;&#39;(x) = 0\)</span> is an inflection point. The sign must actually <strong>change</strong> on either side.</p>
+</blockquote>
+<hr />
+<p>####What Can We Learn?</p>
+<ul>
+<li><strong>Where the function bends up or down</strong></li>
+<li><strong>Where the graph changes shape</strong> (inflection points)</li>
+<li><strong>How curvature affects the behavior of the system</strong></li>
+</ul>
+<p>In environmental modeling, this helps us:</p>
+<ul>
+<li>Understand when population growth is <strong>accelerating or decelerating</strong></li>
+<li>Detect <strong>turning points in resource usage</strong></li>
+<li>Identify <strong>shifts in environmental trends</strong></li>
+</ul>
+<hr />
+<div id="summary-5" class="section level4 hasAnchor" number="8.5.1.1">
+<h4><span class="header-section-number">8.5.1.1</span> Summary<a href="applications.html#summary-5" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<table>
+<colgroup>
+<col width="13%" />
+<col width="24%" />
+<col width="20%" />
+<col width="42%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Interval</th>
+<th><span class="math inline">\(f&#39;&#39;(x)\)</span> Sign</th>
+<th>Concavity</th>
+<th>Interpretation</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\(x &lt; a\)</span></td>
+<td><span class="math inline">\(&gt; 0\)</span></td>
+<td>Concave Up</td>
+<td>Slope is increasing</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(x = a\)</span></td>
+<td>0 (possible IP)</td>
+<td>—</td>
+<td>Candidate for inflection point</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(x &gt; a\)</span></td>
+<td><span class="math inline">\(&lt; 0\)</span></td>
+<td>Concave Down</td>
+<td>Slope is decreasing</td>
+</tr>
+</tbody>
+</table>
+<p>Use this analysis to <strong>combine with the first derivative</strong> for a complete picture of the function’s behavior.</p>
+<hr />
+</div>
+</div>
+</div>
+<div id="optimizaiton" class="section level2 hasAnchor" number="8.6">
+<h2><span class="header-section-number">8.6</span> Optimizaiton<a href="applications.html#optimizaiton" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 
 </div>
 </div>
+
+
+
             </section>
 
           </div>
         </div>
       </div>
-<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="pre-calculus-foundations.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="derivative-rules.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="calculus-i-equation-sheet.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -872,7 +1251,7 @@ gitbook.start({
     "size": 2
   },
   "edit": {
-    "link": "https://github.com/rstudio/bookdown-demo/edit/master/02-index_wB.Rmd",
+    "link": "https://github.com/rstudio/bookdown-demo/edit/master/08-application.Rmd",
     "text": "Edit"
   },
   "history": {

@@ -177,10 +177,10 @@ We could visualize this data by plotting these points on a *graph*
 
 Use R or graph paper to create a quick sketch of the temperature vs. elevation relationship.
 
-```{r lapse-rate-plot, echo=FALSE, fig.cap="Air temperature (°C) as a function of time (hours)", cache=TRUE}
+```{r lapse-rate-plot, echo=FALSE, fig.cap="Air temperature (degC) as a function of time (hours)", cache=FALSE}
 plot(0, 0, type = "n", 
      xlim = c(0, 5000), ylim = c(-15, 20),
-     xlab = "Elevation (m)", ylab = "Temperature (°C)",
+     xlab = "Elevation (m)", ylab = "Temperature (degC)",
      main = "Temperature vs Elevation")
 
 abline(v = 4392, col = "gray", lty = 2)
@@ -366,7 +366,7 @@ temp_df
 -   Stare at this equation T(t, h) = 10 - 5 \* cos(pi \* t / 12) - 0.0065 \* h, can you visualize the impact of t? what about h?
 -   The equation could have been written as f(x, y) = 10 - 5 \* cos(pi \* x / 12) - 0.0065 \* y, would this be harder to interpret?
 
-```{r apply-the-function-to-compute-temperature-405, fig.cap="Apply the function to compute temperature", cache=TRUE, echo=FALSE}
+```{r apply-the-function-to-compute-temperature-405, fig.cap="Apply the function to compute temperature", cache=FALSE, echo=FALSE}
 library(ggplot2)
 library(dplyr)
 
@@ -760,7 +760,7 @@ Use reasoning and estimation to explore these problems. Think in terms of *shape
 
 **2.** The following graph shows temperature over a 24-hour period. Use the graph to answer the questions below.
 
-```{r temp-day-curve, echo=FALSE, message=FALSE, warning=FALSE, fig.cap="Practice Problems", cache=TRUE}
+```{r temp-day-curve, echo=FALSE, message=FALSE, warning=FALSE, fig.cap="Practice Problems", cache=FALSE}
 ## Generate a smooth daily temperature curve
 time <- seq(0, 24, by = 0.1)
 temp <- 10 - 5 * cos(pi * time / 12)

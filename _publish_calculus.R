@@ -12,6 +12,25 @@ suppressPackageStartupMessages({
 })
 
 # ---------- helpers ----------
+nuke_knitr_caches <- function(root = ".") {
+  # remove common knitr cache dirs (e.g., bookdown-demo_cache, cache, *_cache)
+  pats <- c("*_cache", "cache")
+  killed <- character(0)
+  for (p in pats) {
+    hits <- list.dirs(root, recursive = FALSE, full.names = TRUE)
+    hits <- hits[basename(hits) == p | grepl("_cache$", basename(hits))]
+    for (h in unique(hits)) {
+      if (dir.exists(h)) {
+        unlink(h, recursive = TRUE, force = TRUE)
+        killed <- c(killed, h)
+      }
+    }
+  }
+  if (length(killed)) message("Removed knitr caches: ", paste(killed, collapse = ", "))
+  invisible(killed)
+}
+
+
 ensure_bookdown_outputs_to_docs <- function() {
   yml_path <- "_bookdown.yml"
   if (!file.exists(yml_path)) {
@@ -122,6 +141,7 @@ message("Branch : ", branch)
 
 # Build
 bookdown::clean_book(TRUE)
+nuke_knitr_caches(".")   # <-- add this line
 bookdown::render_book("index.Rmd", "bookdown::gitbook")
 ensure_nojekyll()
 if (!file.exists("docs/index.html")) stop("Build failed: docs/index.html not found")
