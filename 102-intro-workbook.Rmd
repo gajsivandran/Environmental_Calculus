@@ -20,7 +20,6 @@ Which of these objectives feels most familiar to you?
 Which one do you think will be the biggest challenge?  
 
 **Notes:**
-
 -  
 -  
 :::
@@ -55,11 +54,11 @@ Put a star next to the ones you’d like extra practice with.
 Calculus is about making sense of change. Use these steps as a guide when solving problems.
 
 ::: promptbox
-### 🌧️ Analogy Prompt: Walking to Class in the Rain
-Think about solving an everyday problem — walking to class in the rain.  
+### Analogy Prompt:Planning a Hike
+Think about the the process of planning a hike
 
-- What decisions do you make to solve this problem?  
-- How do you weigh different factors (time, staying dry, distance, carrying an umbrella)?  
+- What decisions do you make to undertake this task?  
+- How do you weigh different factors?  
 - What “tools” do you already have that help you make choices?  
 
 How might this be similar to the way we’ll approach calculus problems?  
@@ -77,8 +76,7 @@ How might this be similar to the way we’ll approach calculus problems?
 ### Clarify the Ask
 ::: promptbox
 **Prompt:**  
-Is the problem asking about a **rate**, a **maximum/minimum**, or an **accumulated total**?  
-Write one example of each type from science or daily life.
+What are we trying to answer - define the questions in your own terms.
 **Notes:**  
 
 <br><br>  <br><br> <br><br> 
@@ -105,7 +103,7 @@ Make a quick sketch if it helps.
 ::: promptbox
 **Prompt:**  
 Can you think of an equation that might be helpful for this problem? 
-What does each **term** mean in words?
+Think about what each **term** means in your own words?
 
 **Notes:**  
 
@@ -127,7 +125,7 @@ Solve the simple problem, but explain each step:
 
 Then think about complexity:
 
-- What assumptions did i make that weren't realistic
+- What assumptions did I make that weren't realistic
 
 **Notes:**  
 
@@ -556,7 +554,7 @@ par(mfrow = c(1, 1))
 Match each situation to a function type:  
 
 1. Forest biomass after a fire  
-2. The concentration of a chemical spill as you move downstream.  
+2. The concentration of a chemical spill as you move downstream.
 3. A sea level over time.  
 
 

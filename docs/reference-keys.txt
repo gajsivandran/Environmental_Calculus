@@ -245,10 +245,11 @@ rate-of-change---a-first-look
 pre-calculus-foundations-workbook
 learning-objectives-2
 reflection-prompt
+notes
 what-youre-expected-to-know-1
 self-check
 how-to-approach-calculus-problems-1
-analogy-prompt-walking-to-class-in-the-rain
+analogy-promptplanning-a-hike
 clarify-the-ask-1
 list-the-givens-1
 translate-the-math-1
