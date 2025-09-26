@@ -116,3 +116,8 @@ pre code {
   .prompt-box { break-inside: avoid; }
   .writein { min-height: 160px; }
 }
+
+/* Remove the "Appendix A/B/C" prefix */
+.book .book-body .page-wrapper .page-inner h1:before {
+  content: none !important;
+}

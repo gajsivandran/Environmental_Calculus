@@ -1,4 +1,6 @@
-# Why Calculus - Workbook
+# (PART) Workbook Chapters {-}
+
+# Why Calculus Workbook
 
 ## Teaching Team Introductions
 ### Gaj Sivandran
