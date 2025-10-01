@@ -27,6 +27,8 @@ For each objective, write one sentence in your own words or a question you still
 ### Class Brainstorm: What’s Changing?
 ::: promptbox
 **Activity:**  
+![QR code for shared google doc](images/change_brainstorm.png){style="float:right; width:250px; margin:10px;"}
+[Shared Google Doc](https://docs.google.com/document/d/1FgOMQHnzNYIyq1sEqhB6YfLKFwI-kqfl90Zuy9IlBsY/edit?usp=sharing)
 
 1. As a group, pick an **environmental system** you are interested in (e.g. Lake Washington).  
 2. Discuss:
@@ -39,10 +41,13 @@ For each objective, write one sentence in your own words or a question you still
 3. Share your group’s example with the class.  
 
 **Notes:**  
+
+
 <br><br><br><br><br><br>
 <br><br><br><br><br><br>
 
 :::
+
 
 ---
 
@@ -148,7 +153,104 @@ Complete this sentence as a group:
 <br><br><br><br><br><br>
 :::
 
-## What Is a Derivative?
+## What Is A Derivative? 
+
+You’ve probably seen derivatives before—even if you didn’t call them that. If you've ever looked at how fast something was growing, declining, or shifting in space or time, you've already been thinking about derivatives.
+
+
+```{r derivative-terms-table, echo=FALSE}
+knitr::kable(
+  data.frame(
+    `Math / Physics / Data / Context` = c(
+      "Rate of change",
+      "Slope of the tangent line",
+      "Instantaneous rate",
+      "Velocity",
+      "Acceleration",
+      "Gradient",
+      "Marginal change",
+      "Slope at a point",
+      "Rise over run",
+      "Delta Y / Delta X"
+    ),
+    `Environmental / Applied / Context` = c(
+      "Growth rate",
+      "Decay rate",
+      "Reaction rate",
+      "Flux",
+      "Turnover rate",
+      "Loss rate / Gain rate",
+      "Change per unit time",
+      "Response rate",
+      "Uptake rate",
+      "First difference"
+    )
+  ),
+  caption = "Terms Across Disciplines That Represent Derivatives",
+  booktabs = TRUE
+)
+```
+
+Mathematically, the derivative describes the **instantaneous rate of change**—the slope of the tangent line to a curve at a given point.
+
+
+### Derivative Notation: Speaking the Language of Change
+
+In calculus, there are several common notations used to represent the **derivative**—the instantaneous rate of change of a function. Understanding these notations is key to reading and writing mathematics fluently, especially when interpreting real-world problems in environmental science.
+
+---
+
+#### Common Derivative Notations
+
+Let’s say we have a function, we could right this as:
+
+$$
+f(x) = something\ with\ x's \ in\ it \\
+y= something\ with\ x's \ in\ it
+$$
+
+We can then write the notation of the derivative  with respect to \( x \) in several ways, all of which mean exactly the same thing:
+
+| Notation | Spoken As | Description |
+|:----------:|:-----------:|:-------------:|
+| \( f'(x) \) | "f prime of x" | Most compact form; often used in textbooks |
+| \( \frac{dy}{dx} \) | "dee y over dee x" | Emphasizes that \( y \) is a function of \( x \); Leibniz notation |
+| \( \frac{d}{dx} f(x) \) | "dee by dee x of f of x" | Shows that differentiation is an operation |
+| \( D_x f(x) \) | "D sub x of f of x" | Operator form used in some texts |
+| \( y' \) | "y prime" | Used when \( y = f(x) \), common in applied settings |
+
+
+- **Prime notation**: e.g., \( f'(x) \), \( g'(t) \)
+- **Leibniz notation**: e.g., \( \frac{dy}{dx} \), \( \frac{d}{dt} \)
+- **Operator notation**: e.g., \( \frac{d}{dx}(f(x)) \), applying \( \frac{d}{dt} \) to an expression
+
+---
+
+#### The Derivative as an Operator
+
+The notation \( \frac{d}{dx} \) is not just a symbol—it’s an **operator**. That means it **acts on** a function to produce another function: the derivative.
+
+Think of it this way:
+
+> The symbol \( \frac{d}{dx} \) is a command: 
+> “Take the derivative of whatever comes after this with respect to \( x \).”
+
+So if you write:
+
+$$
+\frac{d}{dx} \left(3x^2 + 2x\right)
+$$
+
+You are instructing the reader (or yourself!) to **differentiate** the expression \( 3x^2 + 2x \) with respect to \( x \). The result:
+
+$$
+\frac{d}{dx} \left(3x^2 + 2x\right) = 6x + 2
+$$
+
+---
+
+
+### Snapshots vs speed of change
 
 We’ve seen examples where snapshots (a single measurement) and speed (how fast something changes) both matter. The derivative is the mathematical tool that lets us capture that “speed of change” precisely.
 
