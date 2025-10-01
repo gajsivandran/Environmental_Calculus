@@ -406,6 +406,71 @@ where $S(t)$ is in millimeters and $t$ is years since 2000.
 
 ---
 
+::: promptbox
+**Environmentla Application - A Visual View**
+
+![](images/sea_level.png){fig.alt='Line graph showing changes in global mean sea level from 1993 to 2023. The black line (NASA) shows total sea level rise, increasing from near 0 mm in 1993 to over 110 mm in 2023. Two contributing factors are plotted: blue line (JPL) shows added ocean mass from mostly land ice melt, rising steadily from about 20 mm in 2003 to over 60 mm in 2023; red line (SIO) shows thermal expansion, rising from near 0 mm in 2003 to about 40 mm in 2023. The purple shaded region (Mass + steric) closely matches the black line. Together, the figure shows that sea level rise is explained by added water plus thermal expansion.'}
+
+**Discussion Questions**
+
+1.  **Describe the Trend**
+
+-   What does the plot tell you about how global sea level has changed since 1993?
+-   Is the trend linear, exponential, or something else?
+
+2.  **Estimate the Average Rate of Change**
+
+-   Pick two points on the black line (e.g., between 1993 and 2025) to estimate:
+
+    $$
+       \text{Average Rate} = \frac{\text{Change in Sea Level (mm)}}{\text{Change in Time (years)}}
+       $$
+
+-   What units does your answer have?
+
+
+3.  **Interpret in Context**
+
+-   What does your calculated rate tell you about sea level rise?
+-   Why is knowing the *average rate* important for cities, communities, and planners?
+
+4.  **Explore Acceleration**
+
+-   Estimate the average rate of change over each 5-year interval below by reading approximate values from the graph.
+
+-   Use the formula:
+
+    $$
+       \text{Avg. Rate} = \frac{\Delta \text{Sea Level}}{\Delta \text{Time}} \quad \text{(in mm/year)}
+       $$
+
+    -   Fill in the table:
+
+| Time Interval | Sea Level at Start (mm) | Sea Level at End (mm) | Avg. Rate (mm/year) |
+|---------------|--------------------------|-----------------------|---------------------|
+| 1995–2000     |                          |                       |                     |
+| 2000–2005     |                          |                       |                     |
+| 2005–2010     |                          |                       |                     |
+| 2010–2015     |                          |                       |                     |
+| 2015–2020     |                          |                       |                     |
+| 2020–2025     |                          |                       |                     |
+
+
+-   What do you notice about how the average rate changes over time?
+-   What does that suggest about the *acceleration* of sea level rise?
+
+5.  **Connect to Derivatives**
+
+-   If this were a smooth function $S(t)$ representing sea level at year $t$, what would the *derivative* $S'(t)$ represent?
+-   What would a plot of the average rate of change look like?
+-   What would happen if we looked at the average rate of change over shorter and shorter periods? How would this chang the way a plot of the rate of change look like?
+
+**Reflection Prompt**
+Describe a situation in your area of interest (marine biology, forestry, climate science, etc.) where an average rate of change is used. What does it tell you, and what might it leave out?
+:::
+
+
+
 ## Instantaneous Rate of Change
 
 The instantaneous rate of change tells us how fast something is changing at a *specific moment*. Unlike the average rate, which looks at an interval, the instantaneous rate captures the slope of the tangent line at a single point. This is the essence of a derivative.
