@@ -324,6 +324,7 @@ instantaneous-rate-of-change-1
 zooming-in-on-change
 tangent-hunt
 practice-bear-growth-scenario
+from-as-and-bs-to-as-and-hs
 data-to-derivative
 instantaneous-vs.-average
 the-limit-definition-of-a-derivative-1

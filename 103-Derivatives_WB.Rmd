@@ -640,6 +640,22 @@ Now try sketching the derivative, or the rate of change of the bear's weight.
 
 ---
 
+### From a's and b's to a's and h's
+
+::: promptbox
+**Changing our frame of reference**
+
+$$
+\frac{f(b)-f(a)}{b-a} = \frac{f(a+h)-f(a)}{h}
+$$
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>  
+
+
+:::
+
+---
+
 ### Data to Derivative
 
 ::: promptbox
