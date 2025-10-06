@@ -1316,3 +1316,43 @@ We want to compute the **instantaneous rate of change** of glacier area at \(t =
 **Notes:**  
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 :::
+
+
+::: promptbox
+**Practice**
+
+Given \(f(x)=7x\)
+
+Find an expression for the derivative function \(f'(x)\), using the limit definition of the derivative.
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+:::
+
+
+::: promptbox
+**Practice**
+
+Given \(f(x)=3x^2+6x+2\)
+
+Find an expression for the derivative function \(f'(x)\), using the limit definition of the derivative.
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+:::
+
+
+
+::: promptbox
+**Hard problem (because of the algebra)**
+
+Given \(f(x)=\frac{1}{x}\)
+
+Find an expression for the derivative function \(f'(x)\), using the limit definition of the derivative.
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+:::
+
+::: promptbox
+**Estimate vs Calculate**
+
+Given \(f(x)=e^x\)
+
+Estimate, using the limit definition of the derivative, \(f'(1)\).
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+:::
