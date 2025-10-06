@@ -1337,7 +1337,14 @@ Find an expression for the derivative function \(f'(x)\), using the limit defini
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 :::
 
+::: promptbox
+**Practice**
 
+Given \(f(x)=27\)
+
+Find an expression for the derivative function \(f'(x)\), using the limit definition of the derivative.
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+:::
 
 ::: promptbox
 **Hard problem (because of the algebra)**
