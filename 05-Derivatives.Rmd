@@ -663,7 +663,7 @@ If the left-hand and right-hand limits agree, then the overall limit *exists*. S
 
 $$
   \lim_{x \to a^-} f(x) = \lim_{x \to a^+} f(x)
-  $$
+$$
 
 ### When Does a Limit Exist?
 
@@ -895,10 +895,8 @@ for (i in seq_along(xR_list)) {
   }
 }
 par(op)
-
 ```
 
----
 
 **Step 2: Recall the Equations (3 minutes)**
 
@@ -1160,6 +1158,215 @@ points(3, 5, pch = 19)
 text(3, 5.5, labels = "(3, 5)", pos = 3)
 text(3, y0 - 1, labels = "Tangent at x = 1", pos = 3, col = "red")
 ```
+
+---
+
+### When Does a Derivative Exist? (Differentiability Conditions)
+
+Before we use derivatives, we need to know **when they exist**.  
+In other words, under what conditions is a function *differentiable* at a point?
+
+---
+
+#### Requirements for Differentiability
+
+At a point \(x = a\), a function \(f\) is **differentiable** if its **instantaneous rate of change** (the derivative) exists and is **finite**.
+
+Formally:
+\[
+f'(a) = \lim_{h \to 0} \frac{f(a + h) - f(a)}{h}
+\]
+exists and is a real number.
+
+For that limit to exist, three conditions must hold:
+
+| Requirement | Meaning | What Can Go Wrong |
+|--------------|----------|------------------|
+| **1. Function is defined** | \(f(a)\) exists | Hole, asymptote |
+| **2. Function is continuous** | \(\lim_{x \to a} f(x) = f(a)\) | Jump or removable discontinuity |
+| **3. Slope changes smoothly** | The left- and right-hand difference quotients approach the same finite value | Corner, cusp, vertical tangent, oscillation |
+
+Put simply:
+
+> A function is **differentiable** if it is **defined**, **continuous**, and **smooth** (no sharp turns or infinite slopes).
+
+---
+
+#### **Three Conditions for Continuity at a Point**
+
+A function \( f(x) \) is **continuous at a point** \( x = a \) if all three of the following conditions are satisfied:
+
+---
+
+**1. The function is defined at \(a\)**
+\[
+f(a) \text{ exists.}
+\]
+
+→ *In practice:* Check that there’s a real number assigned to \( f(a) \); the point is not a hole, asymptote, or gap.
+
+---
+
+**2. The limit exists as \(x \to a\)**
+\[
+\lim_{x \to a} f(x) \text{ exists.}
+\]
+
+→ *In practice:* Approach \(a\) from both the left and right.  
+If the left-hand and right-hand limits agree and are finite, the limit exists.
+
+---
+
+**3. The limit equals the function value**
+\[
+\lim_{x \to a} f(x) = f(a)
+\]
+
+→ *In practice:* Compare the numerical (or graphical) limit you found with the actual value of \( f(a) \).  
+If they match, the function is continuous at that point.
+
+---
+
+**Summary:**  
+A function is continuous at \(x=a\) if:
+1. \(f(a)\) exists,  
+2. \(\lim_{x\to a} f(x)\) exists, and  
+3. \(\lim_{x\to a} f(x) = f(a)\).
+
+
+#### **Smoothness: When Is a Function “Nice Enough” to Differentiate?**
+
+Continuity alone is **not enough** for differentiability.  
+A function can be continuous but still have sharp corners, cusps, or vertical tangents where the slope suddenly changes or becomes infinite.  
+To take a derivative, the function must also be **smooth** — meaning its slope changes gradually.
+
+---
+
+**What “Smoothness” Means**
+
+A function \( f(x) \) is **smooth at a point** \( x = a \) if:
+
+1. It is **continuous** at \( a \).  
+2. Its **derivative exists** and is **finite** at \( a \).  
+3. The **slope** changes continuously (no sudden jumps or sharp turns).
+
+In other words, a smooth function has no corners, cusps, breaks, or infinite slopes near that point.
+
+---
+
+**How to Test for Smoothness**
+
+To check whether a function is smooth at \(x = a\):
+
+1. **Confirm continuity:**  
+   \[
+   \lim_{x \to a} f(x) = f(a)
+   \]
+   → The graph is unbroken at \(a\).
+
+2. **Check the slopes from both sides:**  
+   \[
+   \lim_{h \to 0^-}\frac{f(a+h)-f(a)}{h}
+   \quad \text{and} \quad
+   \lim_{h \to 0^+}\frac{f(a+h)-f(a)}{h}
+   \]
+   → If both limits exist, are finite, and equal each other, the function is smooth at that point.
+
+3. **Look for visual cues:**  
+   - A **corner** or **cusp** means slopes differ → not smooth.  
+   - A **vertical tangent** means infinite slope → not smooth.  
+   - A **continuous curve** with gentle slope change → smooth.
+
+---
+
+**Why Smoothness Matters**
+
+Smoothness tells us that the system changes **gradually**, without abrupt shifts.  
+In environmental modeling, this matters because:
+
+- Temperature, population, or nutrient levels that change *smoothly* can be modeled with differential equations.  
+- Processes with *jumps* or *discontinuities* (like dam releases or landslides) require piecewise or non-differentiable models.
+
+---
+
+**Examples**
+
+| Function | Smooth? | Why |
+|:-----------:|:----------:|:-----:|
+| \(f(x) = x^2\) | ✅ Yes | Continuous and derivative exists everywhere |
+| \(f(x) = |x|\) | ❌ No | Corner at \(x=0\) — left and right slopes differ |
+| \(f(x) = \sqrt[3]{x}\) | ❌ No | Vertical tangent at \(x=0\) (infinite slope) |
+| \(f(x) = x\sin(1/x)\) (define \(f(0)=0\)) | ❌ No | Oscillating slope near \(x=0\) |
+| \(f(x) = e^{-x^2}\) | ✅ Yes | Infinitely smooth everywhere |
+
+---
+
+**Summary:**  
+> A function must be **continuous and smooth** (no corners, cusps, or infinite slopes) for its derivative to exist at a point.
+
+
+#### How to Test for Differentiability
+
+To test whether \(f\) is differentiable at \(x=a\):
+
+1. **Check definition:** Make sure \(f(a)\) exists.  
+   → If not, derivative automatically fails.
+
+2. **Check continuity:**  
+   \[
+   \lim_{x \to a} f(x) = f(a)
+   \]
+   → If there’s a jump or hole, \(f'(a)\) cannot exist.
+
+3. **Compare slopes from both sides:**  
+   \[
+   \lim_{h \to 0^-}\frac{f(a+h)-f(a)}{h}
+   \quad \text{and} \quad
+   \lim_{h \to 0^+}\frac{f(a+h)-f(a)}{h}
+   \]
+   → If they’re equal and finite, \(f'(a)\) exists.  
+   → If they differ or blow up, \(f'(a)\) does **not** exist.
+
+> **Key relationship:**  
+> If \(f\) is differentiable at \(a\), then \(f\) is **continuous** at \(a\).  
+> However, the converse is not always true —  
+> \( \text{continuous} \not\Rightarrow \text{differentiable}. \)
+
+---
+
+#### Common Ways Differentiability Fails
+
+| Type of Failure | Description | Example |
+|-----------------|--------------|----------|
+| **Discontinuity** | Jump or hole at the point | Step in dam outlet temperature |
+| **Corner or cusp** | Left and right slopes differ | \( f(x) = |x| \) at \(x=0\) |
+| **Vertical tangent** | Slope tends to \( \pm\infty \) | \( f(x) = (x)^{1/3} \) at \(x=0\) |
+| **Oscillating slope** | No single limiting slope | \( f(x) = x \sin(1/x) \) at \(x=0\) |
+
+---
+
+#### One-Sided and Endpoint Differentiability
+
+At the **endpoints** of a domain (e.g., \(t \ge 0\)), only **one** side of the function exists.  
+In this case, we use a **one-sided derivative**:
+
+\[
+f'_+(a) = \lim_{h \to 0^+} \frac{f(a+h) - f(a)}{h}
+\]
+
+The derivative exists at the endpoint if this **one-sided limit** exists and is finite.
+
+---
+
+#### Environmental Examples
+
+| Scenario | What’s Happening | Differentiability Outcome |
+|-----------|------------------|---------------------------|
+| **Dam outlet temperature step** | Sudden jump between upstream and downstream water | Derivative does **not** exist (discontinuous) |
+| **Piecewise linear rating curve** | Continuous but with a sharp corner | Derivative does **not** exist at the corner |
+| **Sharp flood peak** | Slope becomes extremely steep | Derivative may tend to \(\infty\), so does **not** exist |
+| **Smooth glacier retreat curve** | Continuous and smooth change in slope | Differentiable |
+
 
 ---
 
@@ -1684,7 +1891,7 @@ In this section, you’ll focus on the **instantaneous rate of change**, how fas
 
 **1.Concept Check: Instantaneous vs. Average**
 
-In your own words, explain the difference between **average rate of change** and **instantaneous rate of change**.  
+In your own words, explain the difference between **average rate of change** and **instantaneous rate of change**. This time use the equations to help explain yourself - a sketch might even help.  
 
 Give an environmental example where the two would be very different.
 
