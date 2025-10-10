@@ -23,7 +23,7 @@
 <meta name="author" content="Gaj Sivandran" />
 
 
-<meta name="date" content="2025-10-08" />
+<meta name="date" content="2025-10-10" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -616,6 +616,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="8.14" data-path="introduction-to-derivatives-workbook.html"><a href="introduction-to-derivatives-workbook.html#testing-for-differentiability"><i class="fa fa-check"></i><b>8.14</b> Testing for Differentiability</a></li>
 <li class="chapter" data-level="8.15" data-path="introduction-to-derivatives-workbook.html"><a href="introduction-to-derivatives-workbook.html#common-ways-differentiability-fails-1"><i class="fa fa-check"></i><b>8.15</b> Common Ways Differentiability Fails</a></li>
 <li class="chapter" data-level="8.16" data-path="introduction-to-derivatives-workbook.html"><a href="introduction-to-derivatives-workbook.html#environmental-examples-1"><i class="fa fa-check"></i><b>8.16</b> Environmental Examples</a></li>
+<li class="chapter" data-level="8.17" data-path="introduction-to-derivatives-workbook.html"><a href="introduction-to-derivatives-workbook.html#activity-from-function-to-derivative-graphs"><i class="fa fa-check"></i><b>8.17</b> Activity: From Function to Derivative Graphs</a></li>
 </ul></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -1244,7 +1245,7 @@ Look at the function below.</p>
 <div class="promptbox">
 <p><strong>Activity (Pairs):</strong>
 On the curve below:</p>
-<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-12-1.png" width="80%" style="display: block; margin: auto;" /></p>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-23-1.png" width="80%" style="display: block; margin: auto;" /></p>
 <ul>
 <li>Mark one point where the tangent slope is clearly <strong>positive</strong>.</li>
 <li>Mark one point where the tangent slope is clearly <strong>negative</strong>.</li>
@@ -1255,7 +1256,7 @@ On the curve below:</p>
 <p><em>Discuss:</em> What does each slope mean in an environmental context (e.g., population peak, fastest growth, fastest decline)? Break up the function into regions and tell a story.</p>
 <p><strong>Notes:</strong> <br><br><br><br><br><br><br><br><br><br><br><br></p>
 <p><strong>Challenge</strong>: Can you sketch the derivative - dont worry about getting the right magnitudes, just the right shape. [Hint: start with some points you know for sure, then ask yourself as you move left to right what is happening to the slope]</p>
-<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-13-1.png" width="80%" style="display: block; margin: auto;" /></p>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-24-1.png" width="80%" style="display: block; margin: auto;" /></p>
 </div>
 <hr />
 </div>
@@ -2542,6 +2543,70 @@ What feature prevents the derivative from existing?</p>
 </tbody>
 </table>
 <hr />
+</div>
+<div id="activity-from-function-to-derivative-graphs" class="section level2 hasAnchor" number="8.17">
+<h2><span class="header-section-number">8.17</span> Activity: From Function to Derivative Graphs<a href="introduction-to-derivatives-workbook.html#activity-from-function-to-derivative-graphs" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>In each question below, you are shown a graph of a function <span class="math inline">\(f(x)\)</span>.<br />
+On the blank axes provided, <strong>sketch the derivative <span class="math inline">\(f&#39;(x)\)</span></strong>.<br />
+Focus on identifying:</p>
+<ul>
+<li>where the slope is positive, negative, or zero,</li>
+<li>relative steepness (large vs. small magnitude),</li>
+<li>points of non-differentiability or smooth transitions.</li>
+</ul>
+<hr />
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-25-1.png" width="80%" style="display: block; margin: auto;" />
+<img src="bookdown-demo_files/figure-html/unnamed-chunk-26-1.png" width="80%" style="display: block; margin: auto;" /></p>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-27-1.png" width="80%" style="display: block; margin: auto;" /></p>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-28-1.png" width="80%" style="display: block; margin: auto;" /></p>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-29-1.png" width="80%" style="display: block; margin: auto;" /></p>
+<div class="promptbox">
+<p><strong>Recipe of Plotting Derivatives</strong></p>
+<ul>
+<li>What are we actually plotting?</li>
+<li>What are the key steps?</li>
+<li>What are the checks?</li>
+</ul>
+<p><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></p>
+</div>
+<div class="promptbox">
+<p><strong>More Limit Definition Practice</strong></p>
+<p>Given the quadratic equation:</p>
+<p><span class="math inline">\(f(x) = 3x^2 + x\)</span>.</p>
+<ol style="list-style-type: decimal">
+<li>Find the derivative function using the limit definition of the derivative</li>
+<li>What is the derivative at x=0, <span class="math inline">\(f&#39;x(0)\)</span>?</li>
+<li>What does the mean graphically?</li>
+<li>Can you find the equation for the tangent line at x=0?
+These equations might help with thinking about the equation of the tangent.
+<span class="math display">\[
+y - f(a) = f&#39;(a)\,(x - a)
+\]</span>
+<span class="math display">\[
+y = mx+b
+\]</span>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></li>
+</ol>
+</div>
+<div class="promptbox">
+<p><strong>Testing a Limit</strong></p>
+<p>Consider the function:</p>
+<p><span class="math display">\[
+f(x) = \frac{x^2 + 1}{x - 1}
+\]</span></p>
+<ol style="list-style-type: decimal">
+<li><p>Find the limit of <span class="math inline">\(f(x)\)</span> as <span class="math inline">\(x \to 2\)</span>.<br />
+<span class="math display">\[
+\lim_{x \to 2} \frac{x^2 + 1}{x - 1}
+\]</span></p></li>
+<li><p>Find the limit of <span class="math inline">\(f(x)\)</span> as <span class="math inline">\(x \to 1\)</span>.<br />
+<span class="math display">\[
+\lim_{x \to 1} \frac{x^2 + 1}{x - 1}
+\]</span></p></li>
+<li><p>Is this function differentiable everywhere?
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></p></li>
+</ol>
+</div>
 
 </div>
 </div>

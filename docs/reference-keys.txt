@@ -380,3 +380,4 @@ examples-2
 testing-for-differentiability
 common-ways-differentiability-fails-1
 environmental-examples-1
+activity-from-function-to-derivative-graphs
