@@ -1,0 +1,788 @@
+# Derivative Rules - Workbook
+
+## Learning Objectives — Derivative Rules
+
+By the end of this chapter, you should be able to:
+
+1. **Read mathematical expressions as instructions** and decompose a function into sums, constants, powers, products, quotients, and compositions.  
+2. **Apply basic rules** — constant, power, constant multiple, sum/difference, \( e^x \), \( \ln x \), \( \sin x \), \( \cos x \) — to differentiate common terms without reverting to limits.  
+3. **Use the product, quotient, and chain rules** to differentiate functions built from multiple changing parts, showing clear intermediate steps and correct notation.  
+4. **Select the right rule(s)** for a given function by identifying its top-level structure and any nested “inside–outside” relationships.  
+5. **Interpret derivatives in context**, explaining what a computed rate of change means for an environmental quantity (e.g., pollutant concentration, biomass, streamflow).  
+6. **Check and simplify results**, factoring, combining like terms, and performing quick reasonableness checks (units, signs, limiting behavior).  
+7. **Communicate with multiple notations** — prime, Leibniz, and operator — and translate between them accurately.  
+8. **Diagnose common errors**, such as forgetting the inner derivative or misusing product vs. chain rule, and correct them using structured reasoning or unit checks.  
+
+---
+
+**Success looks like:**  
+Given a new environmental model, you can:
+
+- Identify which derivative rules apply,  
+- Compute \( f'(x) \) cleanly, and  
+- Explain in words what that derivative tells you about how the system is changing.
+
+## Activity: Reading Math as Instructions — The Derivative of a Constant
+
+Not all functions *change*. A constant function is perfectly flat — no growth, no decline, no change over time or space.  
+
+The derivative gives us a way to *prove* that this lack of change equals a slope of zero.
+
+---
+
+### Step 1: Read the Expression Aloud
+
+::: promptbox
+**Prompt:**  
+Read this equation aloud and explain what each part is telling you to do:
+
+\[
+\frac{d}{dx}(c) = 0
+\]
+
+| Symbol / Term | What It Tells You To Do |
+|:---------------|:------------------------|
+| \( \frac{d}{dx} \) | |
+| \( c \) | |
+| \( = 0 \) | |
+
+**Notes:**  
+<br><br><br><br><br><br>
+:::
+
+---
+
+### Step 2: Translate to a Step-by-Step Recipe
+
+::: promptbox
+**Activity:**  
+In your own words, describe what the rule for a constant tells you to do.
+
+1. Recognize that the function’s value **never changes** — it’s constant for all \( x \).  
+2. The “rate of change” or “slope” is therefore **zero everywhere**.  
+3. When you apply the derivative operator \( \frac{d}{dx} \), the output is \( 0 \).
+
+Now apply this to three examples:
+
+| Function \( f(x) \) | What It Represents | Derivative \( f'(x) \) |
+|:--------------------:|:------------------:|:-----------------------:|
+| \( f(x) = 7 \) | Constant value | |
+| \( f(x) = -12 \) | Constant offset | |
+| \( f(x) = 3.14 \) | Physical constant | |
+
+**Notes:**  
+<br><br><br><br><br><br><br>
+:::
+
+---
+
+### Step 3: Deriving the Rule from the Limit Definition
+
+We can confirm this result directly from the **limit definition of a derivative**:
+
+\[
+f'(x) = \lim_{h \to 0} \frac{f(x+h) - f(x)}{h}
+\]
+
+If \( f(x) = c \) (a constant), then:
+
+\[
+f'(x) = \lim_{h \to 0} \frac{c - c}{h} = \lim_{h \to 0} \frac{0}{h} = 0
+\]
+
+Because the numerator is always zero, the slope — the rate of change — is zero everywhere.
+
+> In words: “When nothing changes, the rate of change is zero.”
+
+---
+
+### Step 4: Apply to Environmental Contexts
+
+::: promptbox
+**Practice:**  
+For each situation, identify whether the derivative (rate of change) would be zero or nonzero.
+
+| Scenario | Description | Is the Derivative Zero? | Why? |
+|:----------|:-------------|:-----------------------:|:-----|
+| A lake’s surface area remains 10 km² for 10 years | | | |
+| Atmospheric CO₂ remains steady at 420 ppm for one month | | | |
+| Soil temperature remains constant throughout the day | | | |
+
+Now write one more *realistic* example where a quantity stays constant in your field (e.g., hydrology, forestry, marine science).
+
+**Notes:**  
+<br><br><br><br><br><br><br>
+:::
+
+---
+
+### Step 5: Reflect — Flatness as Zero Change
+
+::: promptbox
+**Reflection Prompt:**  
+Complete this thought:
+
+> “When I see \( \frac{d}{dx}(c) = 0 \), I think of it as a statement that ________.”
+
+**Notes:**  
+<br><br><br><br><br><br>
+:::
+
+
+
+## Activity: Reading Math as Instructions — The Power Rule
+
+Mathematics is a language of instructions.  
+When you see a formula like the **Power Rule**, you’re not just seeing symbols — you’re seeing a *procedure* that tells you *what to do* and *how each step transforms the function*.
+
+---
+
+### Step 1: Read the Expression Aloud
+
+::: promptbox
+**Prompt:**  
+Read this equation aloud and explain what each part is asking you to do:
+
+\[
+\frac{d}{dx}\big(x^n\big) = n x^{n-1}
+\]
+
+| Symbol / Term | What It Tells You To Do |
+|:---------------|:------------------------|
+| \( \frac{d}{dx} \) | |
+| \( x^n \) | |
+| \( n \) | |
+| \( x^{n-1} \) | |
+
+**Notes:**  
+<br><br><br><br><br><br>
+:::
+
+---
+
+### Step 2: Translate to a Step-by-Step Recipe
+
+::: promptbox
+**Activity (Think–Pair–Share):**  
+In your own words, write the **recipe** the Power Rule gives you for differentiating \( x^n \):
+
+1. Look at the exponent \( n \).  
+2. Multiply the whole expression by that exponent.  
+3. Subtract one from the exponent.  
+4. Keep the base \( x \) the same.  
+
+Now apply this recipe to three quick examples:
+
+| Function \( f(x) \) | Your Steps | Derivative \( f'(x) \) |
+|:--------------------:|:-----------|:-----------------------:|
+| \( x^2 \) | | |
+| \( x^5 \) | | |
+| \( x^{-3} \) | | |
+
+**Notes:**  
+<br><br><br><br><br><br><br>
+:::
+
+---
+
+### Step 3: Deriving the Power Rule from the Limit Definition
+
+Let’s see how the Power Rule comes directly from the **limit definition of a derivative**.
+
+We start with:
+
+\[
+f'(x) = \lim_{h \to 0} \frac{(x+h)^n - x^n}{h}
+\]
+
+We expand \((x+h)^n\) using the **Binomial Theorem**:
+
+\[
+(x + h)^n = x^n + n x^{n-1}h + \frac{n(n-1)}{2}x^{n-2}h^2 + \cdots + h^n
+\]
+
+Substitute this expansion into the limit expression:
+
+\[
+f'(x) = \lim_{h \to 0} 
+\frac{\big(x^n + n x^{n-1}h + \frac{n(n-1)}{2}x^{n-2}h^2 + \cdots + h^n\big) - x^n}{h}
+\]
+
+Simplify the numerator — the \(x^n\) terms cancel:
+
+\[
+f'(x) = \lim_{h \to 0} 
+\frac{n x^{n-1}h + \frac{n(n-1)}{2}x^{n-2}h^2 + \cdots + h^n}{h}
+\]
+
+Now factor out \(h\):
+
+\[
+f'(x) = \lim_{h \to 0} 
+\Big( n x^{n-1} + \frac{n(n-1)}{2}x^{n-2}h + \cdots + h^{n-1} \Big)
+\]
+
+As \(h \to 0\), all terms containing \(h\) vanish, leaving only:
+
+\[
+\boxed{f'(x) = n x^{n-1}}
+\]
+
+That’s the **Power Rule** — it’s the simplified result of the limit definition.
+
+---
+
+### Step 4: Apply the Instructions to a Real Example
+
+::: promptbox
+**Practice:**  
+Let \( f(x) = x^4 \).
+
+1. Identify the base and exponent.  
+2. Apply the Power Rule as a set of instructions.  
+3. Simplify your result.  
+4. Interpret your answer: what does \( f'(x) \) *mean* if \(f(x)\) represents biomass growth rate over time?
+
+**Notes:**  
+<br><br><br><br><br><br><br><br><br><br>
+:::
+
+---
+
+### Step 5: Reflect — Reading vs. Memorizing
+
+::: promptbox
+**Reflection Prompt:**  
+Complete this thought:
+
+> “When I see \( \frac{d}{dx}(x^n) = n x^{n-1} \), I now think of it as a set of instructions to ________.”
+
+**Notes:**  
+<br><br><br><br><br><br>
+:::
+
+## Activity: Reading Math as Instructions — The Constant Multiplier Rule
+
+The **Constant Multiplier Rule** tells us how constants behave when we take derivatives.  
+It’s the mathematical version of saying: “Scaling a process doesn’t change *how fast* it changes — only *by how much*.”
+
+---
+
+### Step 1: Read the Expression Aloud
+
+::: promptbox
+**Prompt:**  
+Read this equation aloud and explain what each part is telling you to do:
+
+\[
+\frac{d}{dx}\big[c \cdot f(x)\big] = c \cdot f'(x) = c \cdot \frac{d}{dx}\big[f(x)\big]
+\]
+
+| Symbol / Term | What It Tells You To Do |
+|:---------------|:------------------------|
+| \( c \) | |
+| \( f(x) \) | |
+| \( f'(x) \) | |
+| \( c \cdot f'(x) \) | |
+
+**Notes:**  
+<br><br><br><br><br><br>
+:::
+
+---
+
+### Step 2: Translate to a Step-by-Step Recipe
+
+::: promptbox
+**Activity (Think–Pair–Share):**  
+Describe the **procedure** this rule gives you in plain English.
+
+1. Identify the constant \( c \).  
+2. Differentiate the variable part \( f(x) \) as usual.  
+3. Keep the constant \( c \) in front — it “comes along for the ride.”  
+4. Multiply \( c \) by the derivative \( f'(x) \).
+
+Now apply this recipe to three examples:
+
+| Function \( f(x) \) | Constant \( c \) | Derivative \( f'(x) \) |
+|:--------------------:|:----------------:|:-----------------------:|
+| \( 5x^3 \) |  | |
+| \( -2x^4 \) |  | |
+| \( 7 \) |  | |
+
+**Notes:**  
+<br><br><br><br><br><br><br>
+:::
+
+---
+
+### Step 3: Deriving the Rule from the Limit Definition
+
+We can prove the rule using the **limit definition of a derivative**:
+
+\[
+f'(x) = \lim_{h \to 0} \frac{f(x+h) - f(x)}{h}
+\]
+
+For a constant multiple \( g(x) = c \cdot f(x) \):
+
+\[
+g'(x) = \lim_{h \to 0} \frac{c \cdot f(x+h) - c \cdot f(x)}{h}
+\]
+
+Factor out the constant \( c \):
+
+\[
+g'(x) = c \cdot \lim_{h \to 0} \frac{f(x+h) - f(x)}{h}
+\]
+
+Recognize that the remaining limit is just \( f'(x) \):
+
+\[
+\boxed{g'(x) = c \cdot f'(x)}
+\]
+
+That’s the **Constant Multiplier Rule** — the constant stays the same, while the variable part changes according to its own derivative.
+
+---
+
+### Step 4: Apply the Instructions to a Real Example
+
+::: promptbox
+**Practice:**  
+Let \( f(x) = x^2 \), and define \( g(x) = 3f(x)\).
+
+1. Identify the constant multiplier \( c \).  
+2. Use the Power Rule to find \( f'(x) \).  
+3. Apply the Constant Multiplier Rule.  
+4. Simplify the result.
+
+
+
+**Interpretation:**  
+If \( f(x) \) describes tree height over time, multiplying by 3 simply scales the entire process — the *rate of growth* is three times faster, but the shape of the change is identical.
+
+**Notes:**  
+<br><br><br><br><br><br><br>
+:::
+
+---
+
+### Step 5: Reflect — Scaling and Change
+
+::: promptbox
+**Reflection Prompt:**  
+Complete this thought:
+
+> “When I see \( \frac{d}{dx}\big[c \cdot f(x)\big] = c \cdot f'(x) \), I think of it as saying ________.”
+
+**Notes:**  
+<br><br><br><br><br><br>
+:::
+
+
+## Activity: Reading Math as Instructions — The Sum and Difference Rules
+
+When we add or subtract functions, each one still changes according to its own rule.  
+The **Sum and Difference Rules** tell us that differentiation distributes over addition and subtraction —  
+you can take the derivative of each part *separately* and then combine the results.
+
+---
+
+### Step 1: Read the Expression Aloud
+
+::: promptbox
+**Prompt:**  
+Read the following equations aloud and describe what they’re instructing you to do:
+
+\[
+\frac{d}{dx}\big[f(x) + g(x)\big] = f'(x) + g'(x)
+\]
+
+\[
+\frac{d}{dx}\big[f(x) - g(x)\big] = f'(x) - g'(x)
+\]
+
+| Symbol / Term | What It Tells You To Do |
+|:---------------|:------------------------|
+| \( f(x) + g(x) \) | |
+| \( f'(x) + g'(x) \) | |
+| \( f(x) - g(x) \) | |
+| \( f'(x) - g'(x) \) | |
+
+**Notes:**  
+<br><br><br><br><br><br>
+:::
+
+---
+
+### Step 2: Translate to a Step-by-Step Recipe
+
+::: promptbox
+**Activity (Think–Pair–Share):**  
+Write the *recipe* the Sum and Difference Rules describe in your own words.
+
+1. Break the function into parts being added or subtracted.  
+2. Take the derivative of each part *individually*.  
+3. Keep the same operation (addition or subtraction) between them.  
+4. Simplify the result.
+
+Now apply this recipe to three quick examples:
+
+| Function \( f(x) \) | Steps You’d Take | Derivative \( f'(x) \) |
+|:--------------------:|:----------------|:-----------------------:|
+| \( x^2 + 3x \) | | |
+| \( 4x^3 - 5x^2 \) | | |
+| \( 2x^4 - 7x + 9 \) | | |
+
+**Notes:**  
+<br><br><br><br><br><br><br>
+:::
+
+---
+
+### Step 3: Deriving the Rule from the Limit Definition
+
+Let’s see how this rule arises from the **limit definition of the derivative**.
+
+We start with:
+\[
+h'(x) = \lim_{h \to 0} \frac{h(x+h) - h(x)}{h}
+\]
+and let \( h(x) = f(x) + g(x) \).
+
+Then:
+\[
+h'(x) = \lim_{h \to 0} \frac{[f(x+h) + g(x+h)] - [f(x) + g(x)]}{h}
+\]
+
+Simplify:
+\[
+h'(x) = \lim_{h \to 0} \frac{f(x+h) - f(x)}{h} + \lim_{h \to 0} \frac{g(x+h) - g(x)}{h}
+\]
+
+Recognize each term as a derivative:
+\[
+\boxed{h'(x) = f'(x) + g'(x)}
+\]
+
+The same reasoning works for subtraction:
+\[
+\boxed{\frac{d}{dx}[f(x) - g(x)] = f'(x) - g'(x)}
+\]
+
+In short — **differentiation distributes over addition and subtraction.**
+
+---
+
+### Step 4: Apply the Instructions to a Real Example
+
+::: promptbox
+**Practice:**  
+Let \( f(x) = 3x^3 + 4x^2 - 10x \).
+
+1. Identify how many terms there are.  
+2. Apply the derivative to each term using the Power Rule.  
+3. Combine the results.  
+4. Simplify your answer.
+
+
+
+**Notes:**  
+<br><br><br><br><br><br><br>
+:::
+
+---
+
+### Step 5: Visualize What’s Happening
+
+::: promptbox
+**Visualization Prompt:**  
+Examine the graphs of \( f(x) = x^2 \) and \( g(x) = x \).  
+Their sum \( f(x) + g(x) \) combines both shapes —  
+the derivative \( f'(x) + g'(x) \) describes how *both rates of change* add together at each point.
+
+```{r, echo=FALSE,fig.width=7, fig.height=10}
+# Clean, proportional plots for f(x) = x^2 + x and f'(x) = 2x + 1
+# x-axis from -5 to 5; square-looking panels; clear component comparison
+
+# ----- Functions -----
+f1 <- function(x) x^2
+g  <- function(x) x
+f  <- function(x) f1(x) + g(x)
+
+# Derivatives
+f1p <- function(x) 2 * x
+gp  <- function(x) rep(1, length(x))
+fp  <- function(x) f1p(x) + gp(x)
+
+# ----- Domain -----
+x <- seq(-5, 5, length.out = 800)
+y_f1  <- f1(x)
+y_g   <- g(x)
+y_f   <- f(x)
+y_f1p <- f1p(x)
+y_gp  <- gp(x)
+y_fp  <- fp(x)
+
+# ----- Plotting -----
+op <- par(mfrow = c(2,1), mar = c(4,4,2,1), cex = 1.2)
+
+# (1) Function view
+plot(x, y_f, type = "l", lwd = 3, col = "steelblue",
+     xlab = "x", ylab = "y",
+     xlim = c(-5, 5), ylim = c(-10, 30),
+     main = "Functions: f(x) = x^2 + x and Its Components")
+grid()
+lines(x, y_f1, lwd = 2, col = "darkorange")
+lines(x, y_g,  lwd = 2, col = "seagreen")
+abline(h = 0, v = 0, col = "gray70", lty = 2)
+
+legend("topleft",
+       legend = c("f(x) = x^2 + x", "x^2", "x"),
+       col = c("steelblue", "darkorange", "seagreen"),
+       lwd = c(3,2,2), bty = "n")
+
+# (2) Derivative view
+plot(x, y_fp, type = "l", lwd = 3, col = "steelblue",
+     xlab = "x", ylab = "f'(x)",
+     xlim = c(-5, 5), ylim = c(-10, 10),
+     main = "Derivatives: f'(x) = 2x + 1 and Its Components")
+grid()
+lines(x, y_f1p, lwd = 2, col = "darkorange")
+lines(x, y_gp,  lwd = 2, col = "seagreen")
+abline(h = 0, v = 0, col = "gray70", lty = 2)
+
+legend("topleft",
+       legend = c("f'(x) = 2x + 1", "(x^2)' = 2x", "(x)' = 1"),
+       col = c("steelblue", "darkorange", "seagreen"),
+       lwd = c(3,2,2), bty = "n")
+
+par(op)
+
+
+```
+
+What do you notice about how the slopes of the two functions interact?
+
+**Notes:**  
+<br><br><br><br><br><br><br>
+:::
+
+---
+
+### Step 6: Reflect — Combining Changes
+
+::: promptbox
+**Reflection Prompt:**  
+Complete this thought:
+
+> “When I see \( \frac{d}{dx}[f(x) \pm g(x)] = f'(x) \pm g'(x) \),  
+> I think of it as telling me that ________.”
+
+**Notes:**  
+<br><br><br><br><br><br>
+:::
+
+
+
+
+
+## Practice: Identifying and Applying Derivative Rules
+
+Each of the following problems involves one or more of the **basic derivative rules** you’ve learned so far:
+
+- **Constant Rule**: \( \frac{d}{dx}(c) = 0 \)  
+- **Constant Multiplier Rule**: \( \frac{d}{dx}[c \cdot f(x)] = c \cdot f'(x) \)  
+- **Power Rule**: \( \frac{d}{dx}(x^n) = n x^{n-1} \)  
+- **Sum/Difference Rule**: \( \frac{d}{dx}[f(x) \pm g(x)] = f'(x) \pm g'(x) \)
+
+For each function below:
+
+1. Identify **which rule(s)** apply.  
+2. Write each step of differentiation clearly.  
+3. Simplify your final answer.  
+4. When possible, interpret what the derivative tells you about how the quantity is changing.
+
+---
+
+### Problem 1
+\[
+f(x) = 7
+\]
+
+**Tasks:**  
+- Identify which rule applies.  
+- Explain why the derivative is zero.
+
+**Notes:**  
+<br><br><br><br><br><br>
+
+---
+
+### Problem 2
+\[
+f(x) = 5x^3
+\]
+
+**Tasks:**  
+- Identify which rule(s) apply.  
+- Compute \( f'(x) \).  
+- Interpret what happens to the rate of change when you multiply the function by 5.
+
+**Notes:**  
+<br><br><br><br><br><br>
+
+---
+
+### Problem 3
+\[
+f(x) = -2x^4 + 9x
+\]
+
+**Tasks:**  
+- Identify all rules used.  
+- Compute \( f'(x) \).  
+- Check whether the derivative is positive, negative, or zero when \( x = 1 \).
+
+**Notes:**  
+<br><br><br><br><br><br>
+
+---
+
+### Problem 4
+\[
+f(x) = 6x^2 - 8
+\]
+
+**Tasks:**  
+- Identify the constant, power, and constant multiplier rules as they appear.  
+- Compute \( f'(x) \).  
+- Which term disappears? Why?
+
+**Notes:**  
+<br><br><br><br><br><br>
+
+---
+
+### Problem 5
+\[
+f(x) = 3x^5 + 2x^2 - 10
+\]
+
+**Tasks:**  
+- Identify each rule used.  
+- Write out the derivative term by term.  
+- Simplify the final expression.
+
+**Notes:**  
+<br><br><br><br><br><br>
+
+---
+
+### Problem 6
+\[
+f(x) = -7x^{-3}
+\]
+
+**Tasks:**  
+- Identify which rule(s) apply.  
+- Compute \( f'(x) \) using the Power Rule for negative exponents.  
+- How does the sign of the derivative compare to the original function?
+
+**Notes:**  
+<br><br><br><br><br><br>
+
+---
+
+### Problem 7
+\[
+f(x) = \frac{1}{4}x^4 - 9x^2 + 12
+\]
+
+**Tasks:**  
+- Identify the rules used for each term.  
+- Compute the derivative step-by-step.  
+- Simplify and factor the result if possible.
+
+**Notes:**  
+<br><br><br><br><br><br>
+
+---
+
+### Problem 8
+\[
+f(x) = 2(5x^3 - 4x)
+\]
+
+**Tasks:**  
+- Identify which rule applies first (constant multiplier or power?).  
+- Apply the constant multiplier rule correctly.  
+- Expand and simplify \( f'(x) \).
+
+**Notes:**  
+<br><br><br><br><br><br>
+
+---
+
+### Problem 9
+\[
+f(x) = 4x^2 + 3x^{-1} - 7
+\]
+
+**Tasks:**  
+- Identify the power and constant rules used.  
+- Write each differentiation step.  
+- Discuss what happens to the derivative as \( x \to 0 \).
+
+**Notes:**  
+<br><br><br><br><br><br>
+
+---
+
+### Problem 10
+\[
+f(x) = -6x^5 + 3x^3 - 2x + 8
+\]
+
+**Tasks:**  
+- Identify all rules you’re applying.  
+- Compute \( f'(x) \).  
+- Evaluate \( f'(2) \) and interpret it as a rate of change (in context: imagine \( f(x) \) represents total carbon stored in a forest).
+
+**Notes:**  
+<br><br><br><br><br><br>
+
+---
+
+### Challenge 1
+\[
+f(x) = \sqrt{x}
+\]
+
+
+**Notes:**  
+<br><br><br><br><br><br>
+
+---
+
+### Challenge 2
+\[
+f(x) = \frac{1}{x}
+\]
+
+**Notes:**  
+<br><br><br><br><br><br>
+
+---
+
+### Challenge 3
+\[
+f(x) = x^{3/2}
+\]
+
+
+**Notes:**  
+<br><br><br><br><br><br>
+
+---

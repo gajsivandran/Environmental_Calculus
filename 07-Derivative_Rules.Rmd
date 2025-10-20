@@ -1,4 +1,4 @@
-# 🚧 Under Construction:  Derivative Rules
+# Derivative Rules
 
 Calculus is a powerful tool for analyzing change—but calculating derivatives from first principles using the limit definition can be time-consuming. Thankfully, mathematicians have developed **rules** that make the process faster, more intuitive, and easier to apply to real-world problems.
 

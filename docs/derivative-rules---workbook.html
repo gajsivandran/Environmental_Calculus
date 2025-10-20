@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Environmental Calculus - Active Learning with Case Studies</title>
+  <title>Chapter 9 Derivative Rules - Workbook | Environmental Calculus - Active Learning with Case Studies</title>
   <meta name="description" content="A textbook companion to the Univeristy of Washington QSci 291 class" />
   <meta name="generator" content="bookdown 0.43 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Environmental Calculus - Active Learning with Case Studies" />
+  <meta property="og:title" content="Chapter 9 Derivative Rules - Workbook | Environmental Calculus - Active Learning with Case Studies" />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="A textbook companion to the Univeristy of Washington QSci 291 class" />
   <meta name="github-repo" content="rstudio/bookdown-demo" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Environmental Calculus - Active Learning with Case Studies" />
+  <meta name="twitter:title" content="Chapter 9 Derivative Rules - Workbook | Environmental Calculus - Active Learning with Case Studies" />
   
   <meta name="twitter:description" content="A textbook companion to the Univeristy of Washington QSci 291 class" />
   
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
+<link rel="prev" href="introduction-to-derivatives-workbook.html"/>
 
-<link rel="next" href="pre-calculus-foundations.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -691,98 +691,841 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="header">
-<h1 class="title">Environmental Calculus - Active Learning with Case Studies</h1>
-<p class="author"><em>Gaj Sivandran</em></p>
-<p class="date"><em>2025-10-20</em></p>
-</div>
-<div id="why-calculus" class="section level1 hasAnchor" number="1">
-<h1><span class="header-section-number">Chapter 1</span> Why Calculus?<a href="index.html#why-calculus" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p>Welcome to <em>Calculus for Environmental Science</em>. 🌱</p>
-<p>This book is your companion for exploring the natural world through the lens of calculus—especially the powerful ideas of <strong>change</strong> and <strong>accumulation</strong>. You’ll find that calculus is not just about symbols on a page—it’s about asking meaningful questions, interpreting patterns, and making sense of complex environmental systems. And along the way, you’ll see that you are absolutely capable of mastering these ideas.</p>
+<div id="derivative-rules---workbook" class="section level1 hasAnchor" number="9">
+<h1><span class="header-section-number">Chapter 9</span> Derivative Rules - Workbook<a href="derivative-rules---workbook.html#derivative-rules---workbook" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="learning-objectives-derivative-rules" class="section level2 hasAnchor" number="9.1">
+<h2><span class="header-section-number">9.1</span> Learning Objectives — Derivative Rules<a href="derivative-rules---workbook.html#learning-objectives-derivative-rules" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>By the end of this chapter, you should be able to:</p>
+<ol style="list-style-type: decimal">
+<li><strong>Read mathematical expressions as instructions</strong> and decompose a function into sums, constants, powers, products, quotients, and compositions.<br />
+</li>
+<li><strong>Apply basic rules</strong> — constant, power, constant multiple, sum/difference, <span class="math inline">\(e^x\)</span>, <span class="math inline">\(\ln x\)</span>, <span class="math inline">\(\sin x\)</span>, <span class="math inline">\(\cos x\)</span> — to differentiate common terms without reverting to limits.<br />
+</li>
+<li><strong>Use the product, quotient, and chain rules</strong> to differentiate functions built from multiple changing parts, showing clear intermediate steps and correct notation.<br />
+</li>
+<li><strong>Select the right rule(s)</strong> for a given function by identifying its top-level structure and any nested “inside–outside” relationships.<br />
+</li>
+<li><strong>Interpret derivatives in context</strong>, explaining what a computed rate of change means for an environmental quantity (e.g., pollutant concentration, biomass, streamflow).<br />
+</li>
+<li><strong>Check and simplify results</strong>, factoring, combining like terms, and performing quick reasonableness checks (units, signs, limiting behavior).<br />
+</li>
+<li><strong>Communicate with multiple notations</strong> — prime, Leibniz, and operator — and translate between them accurately.<br />
+</li>
+<li><strong>Diagnose common errors</strong>, such as forgetting the inner derivative or misusing product vs. chain rule, and correct them using structured reasoning or unit checks.</li>
+</ol>
 <hr />
-<div id="why-this-book" class="section level2 hasAnchor" number="1.1">
-<h2><span class="header-section-number">1.1</span> Why This Book?<a href="index.html#why-this-book" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Most calculus textbooks lean heavily on physics examples—motion, velocity, and acceleration—because calculus was originally developed to solve physics problems. Those examples are powerful, and we’ll use them from time to time because they give us an intuitive “feel” for how change works.</p>
-<p>But today, calculus is a tool used across many disciplines: biology, ecology, environmental science, economics, engineering, and beyond. In this book, we’ll focus on examples that resonate with your studies and your interests as an environmental scientist.</p>
-<p>Environmental scientists face some of the most urgent and complex challenges of our time—climate change, biodiversity loss, resource management, and pollution. Calculus gives us tools to:</p>
+<p><strong>Success looks like:</strong><br />
+Given a new environmental model, you can:</p>
 <ul>
-<li>Predict how systems evolve over time<br />
+<li>Identify which derivative rules apply,<br />
 </li>
-<li>Estimate impacts and risks<br />
+<li>Compute <span class="math inline">\(f&#39;(x)\)</span> cleanly, and<br />
 </li>
-<li>Model natural and human systems with differential equations<br />
-</li>
-<li>Analyze rates of change and long-term accumulation</li>
+<li>Explain in words what that derivative tells you about how the system is changing.</li>
 </ul>
-<p>Throughout this book, you’ll work with <strong>real environmental data</strong>, use <strong>visual and conceptual approaches</strong>, and practice skills that matter for sustainability. Our goal is not just to “get through calculus,” but to see how these mathematical ideas open doors for discovery and problem-solving in the real world.</p>
-<hr />
 </div>
-<div id="what-is-calculus" class="section level2 hasAnchor" number="1.2">
-<h2><span class="header-section-number">1.2</span> What Is Calculus?<a href="index.html#what-is-calculus" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>At its heart, calculus is the mathematics of <strong>change</strong> and <strong>accumulation</strong>. These two ideas are everywhere in science:</p>
-<ul>
-<li>The <strong>rate of CO₂ increase</strong> in the atmosphere is a derivative.<br />
-</li>
-<li>The <strong>total added CO₂</strong> over a year is an integral.</li>
-</ul>
-<p>Traditionally, calculus is first introduced through physics examples like velocity (rate of change of position) and acceleration (rate of change of velocity). These are helpful because most of us can <em>feel</em> what it means to move faster or slower. We’ll use those examples when they make ideas clearer.</p>
-<p>But throughout this book, our main goal is to connect calculus directly to the environment you are studying. You’ll see derivatives and integrals applied to population growth, forest carbon storage, water flow in rivers, and other natural systems.</p>
-<p>We’ll build your understanding of these concepts step by step, supported by graphs, data, and hands-on examples. And if it’s been a while since your last math class, that’s completely okay—you’ll find plenty of support here. We’ll meet you where you are and grow your skills together.</p>
+<div id="activity-reading-math-as-instructions-the-derivative-of-a-constant" class="section level2 hasAnchor" number="9.2">
+<h2><span class="header-section-number">9.2</span> Activity: Reading Math as Instructions — The Derivative of a Constant<a href="derivative-rules---workbook.html#activity-reading-math-as-instructions-the-derivative-of-a-constant" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Not all functions <em>change</em>. A constant function is perfectly flat — no growth, no decline, no change over time or space.</p>
+<p>The derivative gives us a way to <em>prove</em> that this lack of change equals a slope of zero.</p>
+<hr />
+<div id="step-1-read-the-expression-aloud" class="section level3 hasAnchor" number="9.2.1">
+<h3><span class="header-section-number">9.2.1</span> Step 1: Read the Expression Aloud<a href="derivative-rules---workbook.html#step-1-read-the-expression-aloud" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <div class="promptbox">
-<p><strong>Change is Everywhere</strong></p>
-<p>In a small group, discuss where <em>change</em> could be happening in this image?</p>
-<p><img src="images/Nature.png" alt="Image of a river, shrubs on the banks, large trees in the background, a deer drinking at the stream" />
+<p><strong>Prompt:</strong><br />
+Read this equation aloud and explain what each part is telling you to do:</p>
+<p><span class="math display">\[
+\frac{d}{dx}(c) = 0
+\]</span></p>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Symbol / Term</th>
+<th align="left">What It Tells You To Do</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"><span class="math inline">\(\frac{d}{dx}\)</span></td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left"><span class="math inline">\(c\)</span></td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left"><span class="math inline">\(= 0\)</span></td>
+<td align="left"></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Notes:</strong><br />
 <br><br><br><br><br><br></p>
 </div>
 <hr />
 </div>
-<div id="how-this-book-works" class="section level2 hasAnchor" number="1.3">
-<h2><span class="header-section-number">1.3</span> How This Book Works<a href="index.html#how-this-book-works" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Each chapter is designed to support you as a learner. You’ll find:</p>
+<div id="step-2-translate-to-a-step-by-step-recipe" class="section level3 hasAnchor" number="9.2.2">
+<h3><span class="header-section-number">9.2.2</span> Step 2: Translate to a Step-by-Step Recipe<a href="derivative-rules---workbook.html#step-2-translate-to-a-step-by-step-recipe" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="promptbox">
+<p><strong>Activity:</strong><br />
+In your own words, describe what the rule for a constant tells you to do.</p>
+<ol style="list-style-type: decimal">
+<li>Recognize that the function’s value <strong>never changes</strong> — it’s constant for all <span class="math inline">\(x\)</span>.<br />
+</li>
+<li>The “rate of change” or “slope” is therefore <strong>zero everywhere</strong>.<br />
+</li>
+<li>When you apply the derivative operator <span class="math inline">\(\frac{d}{dx}\)</span>, the output is <span class="math inline">\(0\)</span>.</li>
+</ol>
+<p>Now apply this to three examples:</p>
+<table>
+<thead>
+<tr class="header">
+<th align="center">Function <span class="math inline">\(f(x)\)</span></th>
+<th align="center">What It Represents</th>
+<th align="center">Derivative <span class="math inline">\(f&#39;(x)\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center"><span class="math inline">\(f(x) = 7\)</span></td>
+<td align="center">Constant value</td>
+<td align="center"></td>
+</tr>
+<tr class="even">
+<td align="center"><span class="math inline">\(f(x) = -12\)</span></td>
+<td align="center">Constant offset</td>
+<td align="center"></td>
+</tr>
+<tr class="odd">
+<td align="center"><span class="math inline">\(f(x) = 3.14\)</span></td>
+<td align="center">Physical constant</td>
+<td align="center"></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Notes:</strong><br />
+<br><br><br><br><br><br><br></p>
+</div>
+<hr />
+</div>
+<div id="step-3-deriving-the-rule-from-the-limit-definition" class="section level3 hasAnchor" number="9.2.3">
+<h3><span class="header-section-number">9.2.3</span> Step 3: Deriving the Rule from the Limit Definition<a href="derivative-rules---workbook.html#step-3-deriving-the-rule-from-the-limit-definition" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>We can confirm this result directly from the <strong>limit definition of a derivative</strong>:</p>
+<p><span class="math display">\[
+f&#39;(x) = \lim_{h \to 0} \frac{f(x+h) - f(x)}{h}
+\]</span></p>
+<p>If <span class="math inline">\(f(x) = c\)</span> (a constant), then:</p>
+<p><span class="math display">\[
+f&#39;(x) = \lim_{h \to 0} \frac{c - c}{h} = \lim_{h \to 0} \frac{0}{h} = 0
+\]</span></p>
+<p>Because the numerator is always zero, the slope — the rate of change — is zero everywhere.</p>
+<blockquote>
+<p>In words: “When nothing changes, the rate of change is zero.”</p>
+</blockquote>
+<hr />
+</div>
+<div id="step-4-apply-to-environmental-contexts" class="section level3 hasAnchor" number="9.2.4">
+<h3><span class="header-section-number">9.2.4</span> Step 4: Apply to Environmental Contexts<a href="derivative-rules---workbook.html#step-4-apply-to-environmental-contexts" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="promptbox">
+<p><strong>Practice:</strong><br />
+For each situation, identify whether the derivative (rate of change) would be zero or nonzero.</p>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Scenario</th>
+<th align="left">Description</th>
+<th align="center">Is the Derivative Zero?</th>
+<th align="left">Why?</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">A lake’s surface area remains 10 km² for 10 years</td>
+<td align="left"></td>
+<td align="center"></td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">Atmospheric CO₂ remains steady at 420 ppm for one month</td>
+<td align="left"></td>
+<td align="center"></td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">Soil temperature remains constant throughout the day</td>
+<td align="left"></td>
+<td align="center"></td>
+<td align="left"></td>
+</tr>
+</tbody>
+</table>
+<p>Now write one more <em>realistic</em> example where a quantity stays constant in your field (e.g., hydrology, forestry, marine science).</p>
+<p><strong>Notes:</strong><br />
+<br><br><br><br><br><br><br></p>
+</div>
+<hr />
+</div>
+<div id="step-5-reflect-flatness-as-zero-change" class="section level3 hasAnchor" number="9.2.5">
+<h3><span class="header-section-number">9.2.5</span> Step 5: Reflect — Flatness as Zero Change<a href="derivative-rules---workbook.html#step-5-reflect-flatness-as-zero-change" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="promptbox">
+<p><strong>Reflection Prompt:</strong><br />
+Complete this thought:</p>
+<blockquote>
+<p>“When I see <span class="math inline">\(\frac{d}{dx}(c) = 0\)</span>, I think of it as a statement that ________.”</p>
+</blockquote>
+<p><strong>Notes:</strong><br />
+<br><br><br><br><br><br></p>
+</div>
+</div>
+</div>
+<div id="activity-reading-math-as-instructions-the-power-rule" class="section level2 hasAnchor" number="9.3">
+<h2><span class="header-section-number">9.3</span> Activity: Reading Math as Instructions — The Power Rule<a href="derivative-rules---workbook.html#activity-reading-math-as-instructions-the-power-rule" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Mathematics is a language of instructions.<br />
+When you see a formula like the <strong>Power Rule</strong>, you’re not just seeing symbols — you’re seeing a <em>procedure</em> that tells you <em>what to do</em> and <em>how each step transforms the function</em>.</p>
+<hr />
+<div id="step-1-read-the-expression-aloud-1" class="section level3 hasAnchor" number="9.3.1">
+<h3><span class="header-section-number">9.3.1</span> Step 1: Read the Expression Aloud<a href="derivative-rules---workbook.html#step-1-read-the-expression-aloud-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="promptbox">
+<p><strong>Prompt:</strong><br />
+Read this equation aloud and explain what each part is asking you to do:</p>
+<p><span class="math display">\[
+\frac{d}{dx}\big(x^n\big) = n x^{n-1}
+\]</span></p>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Symbol / Term</th>
+<th align="left">What It Tells You To Do</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"><span class="math inline">\(\frac{d}{dx}\)</span></td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left"><span class="math inline">\(x^n\)</span></td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left"><span class="math inline">\(n\)</span></td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left"><span class="math inline">\(x^{n-1}\)</span></td>
+<td align="left"></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Notes:</strong><br />
+<br><br><br><br><br><br></p>
+</div>
+<hr />
+</div>
+<div id="step-2-translate-to-a-step-by-step-recipe-1" class="section level3 hasAnchor" number="9.3.2">
+<h3><span class="header-section-number">9.3.2</span> Step 2: Translate to a Step-by-Step Recipe<a href="derivative-rules---workbook.html#step-2-translate-to-a-step-by-step-recipe-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="promptbox">
+<p><strong>Activity (Think–Pair–Share):</strong><br />
+In your own words, write the <strong>recipe</strong> the Power Rule gives you for differentiating <span class="math inline">\(x^n\)</span>:</p>
+<ol style="list-style-type: decimal">
+<li>Look at the exponent <span class="math inline">\(n\)</span>.<br />
+</li>
+<li>Multiply the whole expression by that exponent.<br />
+</li>
+<li>Subtract one from the exponent.<br />
+</li>
+<li>Keep the base <span class="math inline">\(x\)</span> the same.</li>
+</ol>
+<p>Now apply this recipe to three quick examples:</p>
+<table>
+<thead>
+<tr class="header">
+<th align="center">Function <span class="math inline">\(f(x)\)</span></th>
+<th align="left">Your Steps</th>
+<th align="center">Derivative <span class="math inline">\(f&#39;(x)\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center"><span class="math inline">\(x^2\)</span></td>
+<td align="left"></td>
+<td align="center"></td>
+</tr>
+<tr class="even">
+<td align="center"><span class="math inline">\(x^5\)</span></td>
+<td align="left"></td>
+<td align="center"></td>
+</tr>
+<tr class="odd">
+<td align="center"><span class="math inline">\(x^{-3}\)</span></td>
+<td align="left"></td>
+<td align="center"></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Notes:</strong><br />
+<br><br><br><br><br><br><br></p>
+</div>
+<hr />
+</div>
+<div id="step-3-deriving-the-power-rule-from-the-limit-definition" class="section level3 hasAnchor" number="9.3.3">
+<h3><span class="header-section-number">9.3.3</span> Step 3: Deriving the Power Rule from the Limit Definition<a href="derivative-rules---workbook.html#step-3-deriving-the-power-rule-from-the-limit-definition" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Let’s see how the Power Rule comes directly from the <strong>limit definition of a derivative</strong>.</p>
+<p>We start with:</p>
+<p><span class="math display">\[
+f&#39;(x) = \lim_{h \to 0} \frac{(x+h)^n - x^n}{h}
+\]</span></p>
+<p>We expand <span class="math inline">\((x+h)^n\)</span> using the <strong>Binomial Theorem</strong>:</p>
+<p><span class="math display">\[
+(x + h)^n = x^n + n x^{n-1}h + \frac{n(n-1)}{2}x^{n-2}h^2 + \cdots + h^n
+\]</span></p>
+<p>Substitute this expansion into the limit expression:</p>
+<p><span class="math display">\[
+f&#39;(x) = \lim_{h \to 0}
+\frac{\big(x^n + n x^{n-1}h + \frac{n(n-1)}{2}x^{n-2}h^2 + \cdots + h^n\big) - x^n}{h}
+\]</span></p>
+<p>Simplify the numerator — the <span class="math inline">\(x^n\)</span> terms cancel:</p>
+<p><span class="math display">\[
+f&#39;(x) = \lim_{h \to 0}
+\frac{n x^{n-1}h + \frac{n(n-1)}{2}x^{n-2}h^2 + \cdots + h^n}{h}
+\]</span></p>
+<p>Now factor out <span class="math inline">\(h\)</span>:</p>
+<p><span class="math display">\[
+f&#39;(x) = \lim_{h \to 0}
+\Big( n x^{n-1} + \frac{n(n-1)}{2}x^{n-2}h + \cdots + h^{n-1} \Big)
+\]</span></p>
+<p>As <span class="math inline">\(h \to 0\)</span>, all terms containing <span class="math inline">\(h\)</span> vanish, leaving only:</p>
+<p><span class="math display">\[
+\boxed{f&#39;(x) = n x^{n-1}}
+\]</span></p>
+<p>That’s the <strong>Power Rule</strong> — it’s the simplified result of the limit definition.</p>
+<hr />
+</div>
+<div id="step-4-apply-the-instructions-to-a-real-example" class="section level3 hasAnchor" number="9.3.4">
+<h3><span class="header-section-number">9.3.4</span> Step 4: Apply the Instructions to a Real Example<a href="derivative-rules---workbook.html#step-4-apply-the-instructions-to-a-real-example" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="promptbox">
+<p><strong>Practice:</strong><br />
+Let <span class="math inline">\(f(x) = x^4\)</span>.</p>
+<ol style="list-style-type: decimal">
+<li>Identify the base and exponent.<br />
+</li>
+<li>Apply the Power Rule as a set of instructions.<br />
+</li>
+<li>Simplify your result.<br />
+</li>
+<li>Interpret your answer: what does <span class="math inline">\(f&#39;(x)\)</span> <em>mean</em> if <span class="math inline">\(f(x)\)</span> represents biomass growth rate over time?</li>
+</ol>
+<p><strong>Notes:</strong><br />
+<br><br><br><br><br><br><br><br><br><br></p>
+</div>
+<hr />
+</div>
+<div id="step-5-reflect-reading-vs.-memorizing" class="section level3 hasAnchor" number="9.3.5">
+<h3><span class="header-section-number">9.3.5</span> Step 5: Reflect — Reading vs. Memorizing<a href="derivative-rules---workbook.html#step-5-reflect-reading-vs.-memorizing" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="promptbox">
+<p><strong>Reflection Prompt:</strong><br />
+Complete this thought:</p>
+<blockquote>
+<p>“When I see <span class="math inline">\(\frac{d}{dx}(x^n) = n x^{n-1}\)</span>, I now think of it as a set of instructions to ________.”</p>
+</blockquote>
+<p><strong>Notes:</strong><br />
+<br><br><br><br><br><br></p>
+</div>
+</div>
+</div>
+<div id="activity-reading-math-as-instructions-the-constant-multiplier-rule" class="section level2 hasAnchor" number="9.4">
+<h2><span class="header-section-number">9.4</span> Activity: Reading Math as Instructions — The Constant Multiplier Rule<a href="derivative-rules---workbook.html#activity-reading-math-as-instructions-the-constant-multiplier-rule" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>The <strong>Constant Multiplier Rule</strong> tells us how constants behave when we take derivatives.<br />
+It’s the mathematical version of saying: “Scaling a process doesn’t change <em>how fast</em> it changes — only <em>by how much</em>.”</p>
+<hr />
+<div id="step-1-read-the-expression-aloud-2" class="section level3 hasAnchor" number="9.4.1">
+<h3><span class="header-section-number">9.4.1</span> Step 1: Read the Expression Aloud<a href="derivative-rules---workbook.html#step-1-read-the-expression-aloud-2" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="promptbox">
+<p><strong>Prompt:</strong><br />
+Read this equation aloud and explain what each part is telling you to do:</p>
+<p><span class="math display">\[
+\frac{d}{dx}\big[c \cdot f(x)\big] = c \cdot f&#39;(x) = c \cdot \frac{d}{dx}\big[f(x)\big]
+\]</span></p>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Symbol / Term</th>
+<th align="left">What It Tells You To Do</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"><span class="math inline">\(c\)</span></td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left"><span class="math inline">\(f(x)\)</span></td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left"><span class="math inline">\(f&#39;(x)\)</span></td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left"><span class="math inline">\(c \cdot f&#39;(x)\)</span></td>
+<td align="left"></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Notes:</strong><br />
+<br><br><br><br><br><br></p>
+</div>
+<hr />
+</div>
+<div id="step-2-translate-to-a-step-by-step-recipe-2" class="section level3 hasAnchor" number="9.4.2">
+<h3><span class="header-section-number">9.4.2</span> Step 2: Translate to a Step-by-Step Recipe<a href="derivative-rules---workbook.html#step-2-translate-to-a-step-by-step-recipe-2" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="promptbox">
+<p><strong>Activity (Think–Pair–Share):</strong><br />
+Describe the <strong>procedure</strong> this rule gives you in plain English.</p>
+<ol style="list-style-type: decimal">
+<li>Identify the constant <span class="math inline">\(c\)</span>.<br />
+</li>
+<li>Differentiate the variable part <span class="math inline">\(f(x)\)</span> as usual.<br />
+</li>
+<li>Keep the constant <span class="math inline">\(c\)</span> in front — it “comes along for the ride.”<br />
+</li>
+<li>Multiply <span class="math inline">\(c\)</span> by the derivative <span class="math inline">\(f&#39;(x)\)</span>.</li>
+</ol>
+<p>Now apply this recipe to three examples:</p>
+<table>
+<thead>
+<tr class="header">
+<th align="center">Function <span class="math inline">\(f(x)\)</span></th>
+<th align="center">Constant <span class="math inline">\(c\)</span></th>
+<th align="center">Derivative <span class="math inline">\(f&#39;(x)\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center"><span class="math inline">\(5x^3\)</span></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr class="even">
+<td align="center"><span class="math inline">\(-2x^4\)</span></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr class="odd">
+<td align="center"><span class="math inline">\(7\)</span></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Notes:</strong><br />
+<br><br><br><br><br><br><br></p>
+</div>
+<hr />
+</div>
+<div id="step-3-deriving-the-rule-from-the-limit-definition-1" class="section level3 hasAnchor" number="9.4.3">
+<h3><span class="header-section-number">9.4.3</span> Step 3: Deriving the Rule from the Limit Definition<a href="derivative-rules---workbook.html#step-3-deriving-the-rule-from-the-limit-definition-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>We can prove the rule using the <strong>limit definition of a derivative</strong>:</p>
+<p><span class="math display">\[
+f&#39;(x) = \lim_{h \to 0} \frac{f(x+h) - f(x)}{h}
+\]</span></p>
+<p>For a constant multiple <span class="math inline">\(g(x) = c \cdot f(x)\)</span>:</p>
+<p><span class="math display">\[
+g&#39;(x) = \lim_{h \to 0} \frac{c \cdot f(x+h) - c \cdot f(x)}{h}
+\]</span></p>
+<p>Factor out the constant <span class="math inline">\(c\)</span>:</p>
+<p><span class="math display">\[
+g&#39;(x) = c \cdot \lim_{h \to 0} \frac{f(x+h) - f(x)}{h}
+\]</span></p>
+<p>Recognize that the remaining limit is just <span class="math inline">\(f&#39;(x)\)</span>:</p>
+<p><span class="math display">\[
+\boxed{g&#39;(x) = c \cdot f&#39;(x)}
+\]</span></p>
+<p>That’s the <strong>Constant Multiplier Rule</strong> — the constant stays the same, while the variable part changes according to its own derivative.</p>
+<hr />
+</div>
+<div id="step-4-apply-the-instructions-to-a-real-example-1" class="section level3 hasAnchor" number="9.4.4">
+<h3><span class="header-section-number">9.4.4</span> Step 4: Apply the Instructions to a Real Example<a href="derivative-rules---workbook.html#step-4-apply-the-instructions-to-a-real-example-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="promptbox">
+<p><strong>Practice:</strong><br />
+Let <span class="math inline">\(f(x) = x^2\)</span>, and define <span class="math inline">\(g(x) = 3f(x)\)</span>.</p>
+<ol style="list-style-type: decimal">
+<li>Identify the constant multiplier <span class="math inline">\(c\)</span>.<br />
+</li>
+<li>Use the Power Rule to find <span class="math inline">\(f&#39;(x)\)</span>.<br />
+</li>
+<li>Apply the Constant Multiplier Rule.<br />
+</li>
+<li>Simplify the result.</li>
+</ol>
+<p><strong>Interpretation:</strong><br />
+If <span class="math inline">\(f(x)\)</span> describes tree height over time, multiplying by 3 simply scales the entire process — the <em>rate of growth</em> is three times faster, but the shape of the change is identical.</p>
+<p><strong>Notes:</strong><br />
+<br><br><br><br><br><br><br></p>
+</div>
+<hr />
+</div>
+<div id="step-5-reflect-scaling-and-change" class="section level3 hasAnchor" number="9.4.5">
+<h3><span class="header-section-number">9.4.5</span> Step 5: Reflect — Scaling and Change<a href="derivative-rules---workbook.html#step-5-reflect-scaling-and-change" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="promptbox">
+<p><strong>Reflection Prompt:</strong><br />
+Complete this thought:</p>
+<blockquote>
+<p>“When I see <span class="math inline">\(\frac{d}{dx}\big[c \cdot f(x)\big] = c \cdot f&#39;(x)\)</span>, I think of it as saying ________.”</p>
+</blockquote>
+<p><strong>Notes:</strong><br />
+<br><br><br><br><br><br></p>
+</div>
+</div>
+</div>
+<div id="activity-reading-math-as-instructions-the-sum-and-difference-rules" class="section level2 hasAnchor" number="9.5">
+<h2><span class="header-section-number">9.5</span> Activity: Reading Math as Instructions — The Sum and Difference Rules<a href="derivative-rules---workbook.html#activity-reading-math-as-instructions-the-sum-and-difference-rules" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>When we add or subtract functions, each one still changes according to its own rule.<br />
+The <strong>Sum and Difference Rules</strong> tell us that differentiation distributes over addition and subtraction —<br />
+you can take the derivative of each part <em>separately</em> and then combine the results.</p>
+<hr />
+<div id="step-1-read-the-expression-aloud-3" class="section level3 hasAnchor" number="9.5.1">
+<h3><span class="header-section-number">9.5.1</span> Step 1: Read the Expression Aloud<a href="derivative-rules---workbook.html#step-1-read-the-expression-aloud-3" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="promptbox">
+<p><strong>Prompt:</strong><br />
+Read the following equations aloud and describe what they’re instructing you to do:</p>
+<p><span class="math display">\[
+\frac{d}{dx}\big[f(x) + g(x)\big] = f&#39;(x) + g&#39;(x)
+\]</span></p>
+<p><span class="math display">\[
+\frac{d}{dx}\big[f(x) - g(x)\big] = f&#39;(x) - g&#39;(x)
+\]</span></p>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Symbol / Term</th>
+<th align="left">What It Tells You To Do</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"><span class="math inline">\(f(x) + g(x)\)</span></td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left"><span class="math inline">\(f&#39;(x) + g&#39;(x)\)</span></td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left"><span class="math inline">\(f(x) - g(x)\)</span></td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left"><span class="math inline">\(f&#39;(x) - g&#39;(x)\)</span></td>
+<td align="left"></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Notes:</strong><br />
+<br><br><br><br><br><br></p>
+</div>
+<hr />
+</div>
+<div id="step-2-translate-to-a-step-by-step-recipe-3" class="section level3 hasAnchor" number="9.5.2">
+<h3><span class="header-section-number">9.5.2</span> Step 2: Translate to a Step-by-Step Recipe<a href="derivative-rules---workbook.html#step-2-translate-to-a-step-by-step-recipe-3" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="promptbox">
+<p><strong>Activity (Think–Pair–Share):</strong><br />
+Write the <em>recipe</em> the Sum and Difference Rules describe in your own words.</p>
+<ol style="list-style-type: decimal">
+<li>Break the function into parts being added or subtracted.<br />
+</li>
+<li>Take the derivative of each part <em>individually</em>.<br />
+</li>
+<li>Keep the same operation (addition or subtraction) between them.<br />
+</li>
+<li>Simplify the result.</li>
+</ol>
+<p>Now apply this recipe to three quick examples:</p>
+<table>
+<thead>
+<tr class="header">
+<th align="center">Function <span class="math inline">\(f(x)\)</span></th>
+<th align="left">Steps You’d Take</th>
+<th align="center">Derivative <span class="math inline">\(f&#39;(x)\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center"><span class="math inline">\(x^2 + 3x\)</span></td>
+<td align="left"></td>
+<td align="center"></td>
+</tr>
+<tr class="even">
+<td align="center"><span class="math inline">\(4x^3 - 5x^2\)</span></td>
+<td align="left"></td>
+<td align="center"></td>
+</tr>
+<tr class="odd">
+<td align="center"><span class="math inline">\(2x^4 - 7x + 9\)</span></td>
+<td align="left"></td>
+<td align="center"></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Notes:</strong><br />
+<br><br><br><br><br><br><br></p>
+</div>
+<hr />
+</div>
+<div id="step-3-deriving-the-rule-from-the-limit-definition-2" class="section level3 hasAnchor" number="9.5.3">
+<h3><span class="header-section-number">9.5.3</span> Step 3: Deriving the Rule from the Limit Definition<a href="derivative-rules---workbook.html#step-3-deriving-the-rule-from-the-limit-definition-2" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Let’s see how this rule arises from the <strong>limit definition of the derivative</strong>.</p>
+<p>We start with:
+<span class="math display">\[
+h&#39;(x) = \lim_{h \to 0} \frac{h(x+h) - h(x)}{h}
+\]</span>
+and let <span class="math inline">\(h(x) = f(x) + g(x)\)</span>.</p>
+<p>Then:
+<span class="math display">\[
+h&#39;(x) = \lim_{h \to 0} \frac{[f(x+h) + g(x+h)] - [f(x) + g(x)]}{h}
+\]</span></p>
+<p>Simplify:
+<span class="math display">\[
+h&#39;(x) = \lim_{h \to 0} \frac{f(x+h) - f(x)}{h} + \lim_{h \to 0} \frac{g(x+h) - g(x)}{h}
+\]</span></p>
+<p>Recognize each term as a derivative:
+<span class="math display">\[
+\boxed{h&#39;(x) = f&#39;(x) + g&#39;(x)}
+\]</span></p>
+<p>The same reasoning works for subtraction:
+<span class="math display">\[
+\boxed{\frac{d}{dx}[f(x) - g(x)] = f&#39;(x) - g&#39;(x)}
+\]</span></p>
+<p>In short — <strong>differentiation distributes over addition and subtraction.</strong></p>
+<hr />
+</div>
+<div id="step-4-apply-the-instructions-to-a-real-example-2" class="section level3 hasAnchor" number="9.5.4">
+<h3><span class="header-section-number">9.5.4</span> Step 4: Apply the Instructions to a Real Example<a href="derivative-rules---workbook.html#step-4-apply-the-instructions-to-a-real-example-2" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="promptbox">
+<p><strong>Practice:</strong><br />
+Let <span class="math inline">\(f(x) = 3x^3 + 4x^2 - 10x\)</span>.</p>
+<ol style="list-style-type: decimal">
+<li>Identify how many terms there are.<br />
+</li>
+<li>Apply the derivative to each term using the Power Rule.<br />
+</li>
+<li>Combine the results.<br />
+</li>
+<li>Simplify your answer.</li>
+</ol>
+<p><strong>Notes:</strong><br />
+<br><br><br><br><br><br><br></p>
+</div>
+<hr />
+</div>
+<div id="step-5-visualize-whats-happening" class="section level3 hasAnchor" number="9.5.5">
+<h3><span class="header-section-number">9.5.5</span> Step 5: Visualize What’s Happening<a href="derivative-rules---workbook.html#step-5-visualize-whats-happening" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="promptbox">
+<p><strong>Visualization Prompt:</strong><br />
+Examine the graphs of <span class="math inline">\(f(x) = x^2\)</span> and <span class="math inline">\(g(x) = x\)</span>.<br />
+Their sum <span class="math inline">\(f(x) + g(x)\)</span> combines both shapes —<br />
+the derivative <span class="math inline">\(f&#39;(x) + g&#39;(x)\)</span> describes how <em>both rates of change</em> add together at each point.</p>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-23-1.png" width="80%" style="display: block; margin: auto;" /></p>
+<p>What do you notice about how the slopes of the two functions interact?</p>
+<p><strong>Notes:</strong><br />
+<br><br><br><br><br><br><br></p>
+</div>
+<hr />
+</div>
+<div id="step-6-reflect-combining-changes" class="section level3 hasAnchor" number="9.5.6">
+<h3><span class="header-section-number">9.5.6</span> Step 6: Reflect — Combining Changes<a href="derivative-rules---workbook.html#step-6-reflect-combining-changes" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="promptbox">
+<p><strong>Reflection Prompt:</strong><br />
+Complete this thought:</p>
+<blockquote>
+<p>“When I see <span class="math inline">\(\frac{d}{dx}[f(x) \pm g(x)] = f&#39;(x) \pm g&#39;(x)\)</span>,<br />
+I think of it as telling me that ________.”</p>
+</blockquote>
+<p><strong>Notes:</strong><br />
+<br><br><br><br><br><br></p>
+</div>
+</div>
+</div>
+<div id="practice-identifying-and-applying-derivative-rules" class="section level2 hasAnchor" number="9.6">
+<h2><span class="header-section-number">9.6</span> Practice: Identifying and Applying Derivative Rules<a href="derivative-rules---workbook.html#practice-identifying-and-applying-derivative-rules" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Each of the following problems involves one or more of the <strong>basic derivative rules</strong> you’ve learned so far:</p>
 <ul>
-<li>Clear explanations of key concepts<br />
+<li><strong>Constant Rule</strong>: <span class="math inline">\(\frac{d}{dx}(c) = 0\)</span><br />
 </li>
-<li>Environmental examples to connect math with meaning<br />
+<li><strong>Constant Multiplier Rule</strong>: <span class="math inline">\(\frac{d}{dx}[c \cdot f(x)] = c \cdot f&#39;(x)\)</span><br />
 </li>
-<li>Practice problems to strengthen your skills<br />
+<li><strong>Power Rule</strong>: <span class="math inline">\(\frac{d}{dx}(x^n) = n x^{n-1}\)</span><br />
 </li>
-<li>Reflection prompts to help you think about what you’re learning</li>
+<li><strong>Sum/Difference Rule</strong>: <span class="math inline">\(\frac{d}{dx}[f(x) \pm g(x)] = f&#39;(x) \pm g&#39;(x)\)</span></li>
 </ul>
-<hr />
-</div>
-<div id="success-in-this-class" class="section level2 hasAnchor" number="1.4">
-<h2><span class="header-section-number">1.4</span> Success in This Class<a href="index.html#success-in-this-class" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p><img src="images/Growth%20Mindset.png" style="float:right; width:250px; margin:10px;" fig.alt="Image of person thinking, decorative" /></p>
-<p>First and foremost, know this: <strong>we believe in your ability to learn and grow.</strong> You bring unique strengths and perspectives, and your effort matters here.</p>
-<p>Mistakes are not a setback—they are the very heart of learning. When you get something wrong, you uncover where your thinking needs refinement, and that creates the space for real growth. Struggle is not a sign you don’t belong; it’s proof that your brain is stretching and building new connections.</p>
-<p>Just like in science, learning calculus is about <strong>iteration</strong>—trying, testing, revising, and improving. That process is what makes your understanding deeper and more durable.</p>
-<p>Assessments in this class are snapshots of your thinking at a particular moment in time. They are not final judgments about your intelligence, your worth, or your potential. You will have chances to revisit concepts, refine your understanding, and demonstrate what you’ve learned. Growth comes from re-engaging with the material, not from perfection on the first try.</p>
-<p>So give yourself permission to be imperfect. Keep engaging, reflecting, and asking questions. We’ll be here to support you every step of the way.</p>
-<hr />
-</div>
-<div id="looking-ahead" class="section level2 hasAnchor" number="1.5">
-<h2><span class="header-section-number">1.5</span> Looking Ahead<a href="index.html#looking-ahead" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>By the end of this course, you will be able to:</p>
-<ul>
-<li>Apply calculus concepts to natural systems<br />
+<p>For each function below:</p>
+<ol style="list-style-type: decimal">
+<li>Identify <strong>which rule(s)</strong> apply.<br />
 </li>
-<li>Analyze environmental data with confidence<br />
+<li>Write each step of differentiation clearly.<br />
 </li>
-<li>Interpret and communicate your results to others</li>
-</ul>
-<p>But even more important than any specific skill, you’ll leave this course with a stronger belief in your ability to <em>learn mathematics</em>.</p>
-<p>Calculus is not just a hurdle to clear—it’s a tool that expands how you see and understand the world. Our hope is that by connecting it to the environment you care about, you’ll discover both its usefulness and its beauty.</p>
-<p>Most importantly, you’ll leave with the confidence to keep growing—using mathematics as a tool to explore, protect, and better understand the natural world around you.</p>
+<li>Simplify your final answer.<br />
+</li>
+<li>When possible, interpret what the derivative tells you about how the quantity is changing.</li>
+</ol>
+<hr />
+<div id="problem-1-3" class="section level3 hasAnchor" number="9.6.1">
+<h3><span class="header-section-number">9.6.1</span> Problem 1<a href="derivative-rules---workbook.html#problem-1-3" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><span class="math display">\[
+f(x) = 7
+\]</span></p>
+<p><strong>Tasks:</strong><br />
+- Identify which rule applies.<br />
+- Explain why the derivative is zero.</p>
+<p><strong>Notes:</strong><br />
+<br><br><br><br><br><br></p>
 <hr />
 </div>
-<div id="a-big-disclaimer" class="section level2 hasAnchor" number="1.6">
-<h2><span class="header-section-number">1.6</span> ⚠️ A Big Disclaimer ⚠️<a href="index.html#a-big-disclaimer" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>I started writing this textbook to create a calculus resource that speaks directly to your interests as environmental scientists. My goal is to make calculus feel relevant, supportive, and connected to the systems you care about.</p>
-<p>That said, this is very much a <strong>work in progress</strong>. This draft will have typos, rough edges, and the occasional mistake. But here’s the good news: it’s also <strong>free</strong>. 🎉</p>
-<p>If you come across an error—big or small—please let me know so I can fix it for you and for future students. Your feedback is not just welcome, it’s essential to making this a better resource.</p>
-<p>Thanks for your patience, your sharp eyes, and your willingness to learn from (and with) an evolving text. Together, we’ll keep improving it.</p>
+<div id="problem-2-3" class="section level3 hasAnchor" number="9.6.2">
+<h3><span class="header-section-number">9.6.2</span> Problem 2<a href="derivative-rules---workbook.html#problem-2-3" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><span class="math display">\[
+f(x) = 5x^3
+\]</span></p>
+<p><strong>Tasks:</strong><br />
+- Identify which rule(s) apply.<br />
+- Compute <span class="math inline">\(f&#39;(x)\)</span>.<br />
+- Interpret what happens to the rate of change when you multiply the function by 5.</p>
+<p><strong>Notes:</strong><br />
+<br><br><br><br><br><br></p>
+<hr />
+</div>
+<div id="problem-3-3" class="section level3 hasAnchor" number="9.6.3">
+<h3><span class="header-section-number">9.6.3</span> Problem 3<a href="derivative-rules---workbook.html#problem-3-3" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><span class="math display">\[
+f(x) = -2x^4 + 9x
+\]</span></p>
+<p><strong>Tasks:</strong><br />
+- Identify all rules used.<br />
+- Compute <span class="math inline">\(f&#39;(x)\)</span>.<br />
+- Check whether the derivative is positive, negative, or zero when <span class="math inline">\(x = 1\)</span>.</p>
+<p><strong>Notes:</strong><br />
+<br><br><br><br><br><br></p>
+<hr />
+</div>
+<div id="problem-4" class="section level3 hasAnchor" number="9.6.4">
+<h3><span class="header-section-number">9.6.4</span> Problem 4<a href="derivative-rules---workbook.html#problem-4" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><span class="math display">\[
+f(x) = 6x^2 - 8
+\]</span></p>
+<p><strong>Tasks:</strong><br />
+- Identify the constant, power, and constant multiplier rules as they appear.<br />
+- Compute <span class="math inline">\(f&#39;(x)\)</span>.<br />
+- Which term disappears? Why?</p>
+<p><strong>Notes:</strong><br />
+<br><br><br><br><br><br></p>
+<hr />
+</div>
+<div id="problem-5" class="section level3 hasAnchor" number="9.6.5">
+<h3><span class="header-section-number">9.6.5</span> Problem 5<a href="derivative-rules---workbook.html#problem-5" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><span class="math display">\[
+f(x) = 3x^5 + 2x^2 - 10
+\]</span></p>
+<p><strong>Tasks:</strong><br />
+- Identify each rule used.<br />
+- Write out the derivative term by term.<br />
+- Simplify the final expression.</p>
+<p><strong>Notes:</strong><br />
+<br><br><br><br><br><br></p>
+<hr />
+</div>
+<div id="problem-6" class="section level3 hasAnchor" number="9.6.6">
+<h3><span class="header-section-number">9.6.6</span> Problem 6<a href="derivative-rules---workbook.html#problem-6" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><span class="math display">\[
+f(x) = -7x^{-3}
+\]</span></p>
+<p><strong>Tasks:</strong><br />
+- Identify which rule(s) apply.<br />
+- Compute <span class="math inline">\(f&#39;(x)\)</span> using the Power Rule for negative exponents.<br />
+- How does the sign of the derivative compare to the original function?</p>
+<p><strong>Notes:</strong><br />
+<br><br><br><br><br><br></p>
+<hr />
+</div>
+<div id="problem-7" class="section level3 hasAnchor" number="9.6.7">
+<h3><span class="header-section-number">9.6.7</span> Problem 7<a href="derivative-rules---workbook.html#problem-7" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><span class="math display">\[
+f(x) = \frac{1}{4}x^4 - 9x^2 + 12
+\]</span></p>
+<p><strong>Tasks:</strong><br />
+- Identify the rules used for each term.<br />
+- Compute the derivative step-by-step.<br />
+- Simplify and factor the result if possible.</p>
+<p><strong>Notes:</strong><br />
+<br><br><br><br><br><br></p>
+<hr />
+</div>
+<div id="problem-8" class="section level3 hasAnchor" number="9.6.8">
+<h3><span class="header-section-number">9.6.8</span> Problem 8<a href="derivative-rules---workbook.html#problem-8" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><span class="math display">\[
+f(x) = 2(5x^3 - 4x)
+\]</span></p>
+<p><strong>Tasks:</strong><br />
+- Identify which rule applies first (constant multiplier or power?).<br />
+- Apply the constant multiplier rule correctly.<br />
+- Expand and simplify <span class="math inline">\(f&#39;(x)\)</span>.</p>
+<p><strong>Notes:</strong><br />
+<br><br><br><br><br><br></p>
+<hr />
+</div>
+<div id="problem-9" class="section level3 hasAnchor" number="9.6.9">
+<h3><span class="header-section-number">9.6.9</span> Problem 9<a href="derivative-rules---workbook.html#problem-9" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><span class="math display">\[
+f(x) = 4x^2 + 3x^{-1} - 7
+\]</span></p>
+<p><strong>Tasks:</strong><br />
+- Identify the power and constant rules used.<br />
+- Write each differentiation step.<br />
+- Discuss what happens to the derivative as <span class="math inline">\(x \to 0\)</span>.</p>
+<p><strong>Notes:</strong><br />
+<br><br><br><br><br><br></p>
+<hr />
+</div>
+<div id="problem-10" class="section level3 hasAnchor" number="9.6.10">
+<h3><span class="header-section-number">9.6.10</span> Problem 10<a href="derivative-rules---workbook.html#problem-10" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><span class="math display">\[
+f(x) = -6x^5 + 3x^3 - 2x + 8
+\]</span></p>
+<p><strong>Tasks:</strong><br />
+- Identify all rules you’re applying.<br />
+- Compute <span class="math inline">\(f&#39;(x)\)</span>.<br />
+- Evaluate <span class="math inline">\(f&#39;(2)\)</span> and interpret it as a rate of change (in context: imagine <span class="math inline">\(f(x)\)</span> represents total carbon stored in a forest).</p>
+<p><strong>Notes:</strong><br />
+<br><br><br><br><br><br></p>
+<hr />
+</div>
+<div id="challenge-1" class="section level3 hasAnchor" number="9.6.11">
+<h3><span class="header-section-number">9.6.11</span> Challenge 1<a href="derivative-rules---workbook.html#challenge-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><span class="math display">\[
+f(x) = \sqrt{x}
+\]</span></p>
+<p><strong>Notes:</strong><br />
+<br><br><br><br><br><br></p>
+<hr />
+</div>
+<div id="challenge-2" class="section level3 hasAnchor" number="9.6.12">
+<h3><span class="header-section-number">9.6.12</span> Challenge 2<a href="derivative-rules---workbook.html#challenge-2" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><span class="math display">\[
+f(x) = \frac{1}{x}
+\]</span></p>
+<p><strong>Notes:</strong><br />
+<br><br><br><br><br><br></p>
+<hr />
+</div>
+<div id="challenge-3" class="section level3 hasAnchor" number="9.6.13">
+<h3><span class="header-section-number">9.6.13</span> Challenge 3<a href="derivative-rules---workbook.html#challenge-3" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><span class="math display">\[
+f(x) = x^{3/2}
+\]</span></p>
+<p><strong>Notes:</strong><br />
+<br><br><br><br><br><br></p>
+<hr />
 
+</div>
 </div>
 </div>
             </section>
@@ -790,8 +1533,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           </div>
         </div>
       </div>
+<a href="introduction-to-derivatives-workbook.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
 
-<a href="pre-calculus-foundations.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -822,7 +1565,7 @@ gitbook.start({
     "size": 2
   },
   "edit": {
-    "link": "https://github.com/rstudio/bookdown-demo/edit/master/index.Rmd",
+    "link": "https://github.com/rstudio/bookdown-demo/edit/master/104-DerivativesRules_WB.Rmd",
     "text": "Edit"
   },
   "history": {
