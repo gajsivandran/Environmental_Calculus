@@ -432,8 +432,4 @@ practice-problems-exponential-and-logarithmic-derivatives
 reading-math-self-check
 exponential-and-logarithmic-rules-general-form
 how-to-use-this-section
-problem-1-using-agx
-problem-2-using-egx
-problem-3-using-log_agx
-problem-4-using-lngx
 reflection-1
