@@ -786,3 +786,494 @@ f(x) = x^{3/2}
 <br><br><br><br><br><br>
 
 ---
+
+## Workbook: Trigonometric Derivatives
+
+**Learning goals**
+
+- Recognize and apply the derivative rules for sine, cosine, and tangent.
+- Visually connect a function’s graph to the shape of its derivative.
+- Practice taking derivatives that require the chain rule with trig functions.
+
+---
+
+### 1) Visual Warm-Up: Sketch the derivatives\( \sin x \), \( \cos x \), \( \tan x \)
+
+::: promptbox
+
+**Prompt:**  
+
+- For each top plot, sketch the derivative on the corresponding blank axes below.  
+- Where is the slope positive/negative/zero? Mark a few key points (e.g., where slope is zero or maximally positive/negative).
+
+```{r, message=FALSE, warning=FALSE, echo=FALSE, fig.width=8, fig.height=8}
+library(tidyverse)
+library(patchwork)
+
+# Domain
+x <- seq(-2*pi, 2*pi, length.out = 1500)
+
+# Data for sin and cos
+df_sin <- tibble(x = x, y = sin(x))
+df_cos <- tibble(x = x, y = cos(x))
+
+# Data for tan (clip extreme values to avoid vertical asymptote spikes)
+df_tan <- tibble(x = x, y = tan(x)) |>
+  mutate(y = ifelse(abs(y) > 3, NA_real_, y))  # hide |tan| > 3 for readability
+
+# Common theming
+base_theme <- theme_minimal(base_size = 12) +
+  theme(
+    plot.title = element_text(face = "bold"),
+    panel.grid.minor = element_blank()
+  )
+
+# Function plots
+p_sin <- ggplot(df_sin, aes(x, y)) +
+  geom_line() +
+  labs(title = "f(x) = sin(x)", y = NULL, x = NULL) +
+  base_theme
+
+p_cos <- ggplot(df_cos, aes(x, y)) +
+  geom_line() +
+  labs(title = "f(x) = cos(x)", y = NULL, x = NULL) +
+  base_theme
+
+p_tan <- ggplot(df_tan, aes(x, y)) +
+  geom_line(na.rm = TRUE) +
+  coord_cartesian(ylim = c(-3, 3)) +
+  labs(title = "f(x) = tan(x)", y = NULL, x = NULL) +
+  base_theme
+
+# Blank "derivative sketch" axes (matching x & y ranges)
+blank_sin <- ggplot() +
+  coord_cartesian(xlim = c(-2*pi, 2*pi), ylim = c(-1.5, 1.5)) +
+  labs(title = "Sketch f′(x) here (for sin)", x = "x", y = NULL) +
+  base_theme
+
+blank_cos <- ggplot() +
+  coord_cartesian(xlim = c(-2*pi, 2*pi), ylim = c(-1.5, 1.5)) +
+  labs(title = "Sketch f′(x) here (for cos)", x = "x", y = NULL) +
+  base_theme
+
+blank_tan <- ggplot() +
+  coord_cartesian(xlim = c(-2*pi, 2*pi), ylim = c(-3, 3)) +
+  labs(title = "Sketch f′(x) here (for tan)", x = "x", y = NULL) +
+  base_theme
+
+# Arrange as a 3x2 grid: function on top, blank axis below
+(p_sin / blank_sin) | (p_cos / blank_cos) | (p_tan / blank_tan)
+
+```
+
+:::
+
+---
+
+### 2) Trig Derivative Rules (for reference)
+
+| Function | Derivative |
+|:--------:|:----------:|
+| \(\sin x\) | \(\cos x\) |
+| \(\cos x\) | \(-\sin x\) |
+| \(\tan x\) | \(\sec^2 x\) |
+| \(\sec x\) | \(\sec x \tan x\) |
+| \(\csc x\) | \(-\csc x \cot x\) |
+| \(\cot x\) | \(-\csc^2 x\) |
+
+And a reminder of some of the trig functions
+
+| Function | Definition (in terms of sine and cosine) |
+|:----------|:----------------------------------------|
+| \( \tan(x) \) | \( \dfrac{\sin(x)}{\cos(x)} \) |
+| \( \sec(x) \) | \( \dfrac{1}{\cos(x)} \) |
+| \( \cot(x) \) | \( \dfrac{\cos(x)}{\sin(x)} \) |
+| \( \csc(x) \) | \( \dfrac{1}{\sin(x)} \) |
+
+
+*Notes:*  
+
+- These are **base** identities. The **ONLY** when the trigonometric operator is **x**. In a week we'll learn how to take the derivative of something that takes the form of \(sin(f(x))\)
+
+---
+
+### Practice Problems: Trigonometric Derivatives
+
+Use the derivative rules below to find each derivative.
+
+::: promptbox
+Find the derivative of  
+\[
+f(x) = 10\sin(x)
+\]
+
+**Notes:**  
+<br><br><br><br><br><br>
+
+
+<details>
+<summary><strong>Solution</strong></summary>
+
+\[
+f'(x) = 10\cos(x)
+\]
+</details>
+:::
+---
+
+::: promptbox
+Find the derivative of  
+\[
+f(x) = -7\cos(x)
+\]
+
+
+**Notes:**  
+<br><br><br><br><br><br>
+
+<details>
+<summary><strong>Solution</strong></summary>
+
+\[
+f'(x) = -7[-\sin(x)] = 7\sin(x)
+\]
+</details>
+
+:::
+
+---
+
+::: promptbox
+Find the derivative of  
+\[
+f(x) = 4\tan(x) - 2\csc(x)
+\]
+
+
+**Notes:**  
+<br><br><br><br><br><br>
+
+<details>
+<summary><strong>Solution</strong></summary>
+
+\[
+f'(x) = 4\sec^2(x) - 2[-\csc(x)\cot(x)] = 4\sec^2(x) + 2\csc(x)\cot(x)
+\]
+</details>
+
+:::
+
+
+## Workbook: Exponential and Logarithmic Derivatives
+
+**Learning goals**
+
+- Recognize and apply the derivative rules for exponential and logarithmic functions.
+- Visually connect the function and its derivative through growth and decay patterns.
+- Practice applying constant multiple and sum rules with exponential and logarithmic functions.
+
+---
+
+### 1) Visual Warm-Up: Sketch the derivatives of \( e^x \), \( a^x \), and \( \ln(x) \)
+
+::: promptbox
+
+**Prompt:**  
+
+- For each top plot, sketch the derivative on the corresponding blank axes below.  
+- How does the derivative compare to the original function?  
+- Where is the rate of change the greatest?
+
+```{r, message=FALSE, warning=FALSE, echo=FALSE, fig.width=8, fig.height=8}
+library(tidyverse)
+library(patchwork)
+
+# Domain
+x <- seq(-2, 4, length.out = 1000)
+
+# Example base functions
+df_exp <- tibble(x = x, y = exp(x))
+df_2x <- tibble(x = x, y = 2^x)
+df_ln <- tibble(x = seq(0.05, 4, length.out = 1000), y = log(x))
+
+# Common theme
+base_theme <- theme_minimal(base_size = 12) +
+  theme(
+    plot.title = element_text(face = "bold"),
+    panel.grid.minor = element_blank()
+  )
+
+# Function plots
+p_exp <- ggplot(df_exp, aes(x, y)) +
+  geom_line() +
+  labs(title = "f(x) = e^x", y = NULL, x = NULL) +
+  base_theme
+
+p_2x <- ggplot(df_2x, aes(x, y)) +
+  geom_line() +
+  labs(title = "f(x) = 2^x", y = NULL, x = NULL) +
+  base_theme
+
+p_ln <- ggplot(df_ln, aes(x, y)) +
+  geom_line() +
+  labs(title = "f(x) = ln(x)", y = NULL, x = NULL) +
+  base_theme
+
+# Blank axes
+blank_exp <- ggplot() +
+  coord_cartesian(xlim = c(-2, 4), ylim = c(0, 55)) +
+  labs(title = "Sketch f′(x) here (for e^x)", x = "x", y = NULL) +
+  base_theme
+
+blank_2x <- ggplot() +
+  coord_cartesian(xlim = c(-2, 4), ylim = c(0, 55)) +
+  labs(title = "Sketch f′(x) here (for 2^x)", x = "x", y = NULL) +
+  base_theme
+
+blank_ln <- ggplot() +
+  coord_cartesian(xlim = c(0, 4), ylim = c(-2, 2)) +
+  labs(title = "Sketch f′(x) here (for ln(x))", x = "x", y = NULL) +
+  base_theme
+
+# Combine plots
+(p_exp / blank_exp) | (p_2x / blank_2x) | (p_ln / blank_ln)
+
+```
+
+
+**Exponential & Logarithmic Derivatives**
+
+| Function | Derivative |
+|:--------:|:----------:|
+| \(a^x\) | \(a^x \ln(a)\) |
+| \(e^x\) | \(e^x\) |
+| \(\log_a(x)\) | \(\dfrac{1}{x \ln(a)}\) |
+| \(\ln(x)\) | \(\dfrac{1}{x}\) |
+
+
+*Notes:*  
+
+- These are **base identities**, valid only when the exponent or argument is **x** (not another function).  
+
+### Practice Problems: Exponential and Logarithmic Derivatives
+
+Use the derivative rules above to find each derivative.
+
+---
+
+::: promptbox
+Find the derivative of  
+\[
+f(x) = 6e^x
+\]
+
+**Notes:**  
+<br><br><br><br><br><br>
+
+<details>
+<summary><strong>Solution</strong></summary>
+
+\[
+f'(x) = 6e^x
+\]
+</details>
+:::
+
+---
+
+::: promptbox
+Find the derivative of  
+\[
+f(x) = 5 \cdot 3^x
+\]
+
+**Notes:**  
+<br><br><br><br><br><br>
+
+<details>
+<summary><strong>Solution</strong></summary>
+
+\[
+f'(x) = 5 \cdot 3^x \ln(3)
+\]
+</details>
+:::
+
+---
+
+::: promptbox
+Find the derivative of  
+\[
+f(x) = 4\ln(x) - 2\log_{10}(x)
+\]
+
+**Notes:**  
+<br><br><br><br><br><br>
+
+<details>
+<summary><strong>Solution</strong></summary>
+
+\[
+f'(x) = 4\left(\frac{1}{x}\right) - 2\left(\frac{1}{x \ln(10)}\right)
+\]
+</details>
+:::
+
+## Reading Math Self Check
+
+**Learning goal:**  
+Strengthen your ability to *read mathematical notation* and apply derivative rules that involve inner functions \( g(x) \).  
+
+---
+
+### Exponential and Logarithmic Rules (General Form)
+
+| Function | Derivative |
+|:--------:|:----------:|
+| \(a^{g(x)}\) | \(g'(x)\, a^{g(x)} \ln(a)\) |
+| \(e^{g(x)}\) | \(g'(x)\, e^{g(x)}\) |
+| \(\log_a(g(x))\) | \(\dfrac{g'(x)}{g(x)\ln(a)}\) |
+| \(\ln(g(x))\) | \(\dfrac{g'(x)}{g(x)}\) |
+
+---
+
+### How to Use This Section
+
+This section is meant to help you check your understanding — **without step-by-step guidance**.  
+
+Read each rule carefully, then apply it to the corresponding problem.  
+
+
+---
+
+::: promptbox
+#### Problem 1 — Using \(a^{g(x)}\)
+
+**Rule reminder:**  
+\[
+\frac{d}{dx}\big[a^{g(x)}\big] = g'(x)\,a^{g(x)}\ln(a)
+\]
+
+Find the derivative of  
+\[
+f(x) = 3^{2x}
+\]
+
+**Notes:**  
+<br><br><br><br><br><br>
+
+<details>
+<summary><strong>Solution</strong></summary>
+
+Here \(a = 3\) and \(g(x) = 2x\), so \(g'(x) = 2\).  
+\[
+f'(x) = 2 \cdot 3^{2x} \ln(3)
+\]
+</details>
+:::
+
+---
+
+::: promptbox
+#### Problem 2 — Using \(e^{g(x)}\)
+
+**Rule reminder:**  
+\[
+\frac{d}{dx}\big[e^{g(x)}\big] = g'(x)\,e^{g(x)}
+\]
+
+Find the derivative of  
+\[
+f(x) = e^{5x - 1}
+\]
+
+**Notes:**  
+<br><br><br><br><br><br>
+
+
+
+What happens if you use this rule to find the derivative of 
+\[
+f(x) = e^{x}
+\]
+<details>
+<summary><strong>Solution</strong></summary>
+
+Here \(g(x) = 5x - 1\), so \(g'(x) = 5\).  
+\[
+f'(x) = 5e^{5x - 1}
+\]
+</details>
+:::
+
+---
+
+::: promptbox
+#### Problem 3 — Using \(\log_a(g(x))\)
+
+**Rule reminder:**  
+\[
+\frac{d}{dx}\big[\log_a(g(x))\big] = \frac{g'(x)}{g(x)\ln(a)}
+\]
+
+Find the derivative of  
+\[
+f(x) = \log_2(x^3 + 1)
+\]
+
+**Notes:**  
+<br><br><br><br><br><br>
+
+<details>
+<summary><strong>Solution</strong></summary>
+
+Here \(a = 2\), \(g(x) = x^3 + 1\), and \(g'(x) = 3x^2\).  
+\[
+f'(x) = \frac{3x^2}{(x^3 + 1)\ln(2)}
+\]
+</details>
+:::
+
+---
+
+::: promptbox
+#### Problem 4 — Using \(\ln(g(x))\)
+
+**Rule reminder:**  
+\[
+\frac{d}{dx}\big[\ln(g(x))\big] = \frac{g'(x)}{g(x)}
+\]
+
+Find the derivative of  
+\[
+f(x) = \ln(4x^2 + 5)
+\]
+
+**Notes:**  
+<br><br><br><br><br><br>
+
+
+What happens if you use this rule to find the derivative of 
+\[
+f(x) = \ln(x)
+\]
+<details>
+<summary><strong>Solution</strong></summary>
+
+Here \(g(x) = 4x^2 + 5\), so \(g'(x) = 8x\).  
+\[
+f'(x) = \frac{8x}{4x^2 + 5}
+\]
+</details>
+:::
+
+---
+
+### Reflection
+
+- Which parts of the rule notation did you initially overlook?  
+- What helped you identify \(g(x)\) and \(g'(x)\) correctly?  
+- How does this process differ from using the simpler base forms like \(e^x\) or \(\ln(x)\)?
+
+*Key takeaway:*  
+Being able to “read” and interpret symbolic rules like these is a core mathematical skill — it’s not just about memorization, but about recognizing structure and patterns across different functions.
