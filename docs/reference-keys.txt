@@ -433,3 +433,4 @@ reading-math-self-check
 exponential-and-logarithmic-rules-general-form
 how-to-use-this-section
 reflection-1
+derivative-rule-practice

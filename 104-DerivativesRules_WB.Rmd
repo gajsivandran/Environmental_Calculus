@@ -1069,6 +1069,8 @@ blank_ln <- ggplot() +
 
 Use the derivative rules above to find each derivative.
 
+:::
+
 ---
 
 ::: promptbox
@@ -1293,3 +1295,689 @@ f'(x) = \frac{8x}{4x^2 + 5}
 
 *Key takeaway:*  
 Being able to “read” and interpret symbolic rules like these is a core mathematical skill — it’s not just about memorization, but about recognizing structure and patterns across different functions.
+
+
+## Derivative Rule Practice
+
+There are 4 sets of 5 questions.
+Each question has a function for which you must find the derivative.
+There is also a followup questions for each questions
+
+Solutions for these five are hidden behind a password at the bottom (once you are done - ask one of us)
+
+## Derivative Applications (Set 1 of 4) {-}
+
+
+::: promptbox
+### 1. \(f(x)=8x^{5/2}-6x^{3/2}+4x^{1/2}\){-}
+
+**Follow-up:** For what \(x>0\) is \(f'(x)=0\)?
+
+<details>
+<summary><strong>Math Hint</strong></summary>
+Use the Power Rule on each term: \( \frac{d}{dx}x^n = n x^{n-1} \).  
+Be careful with fractional exponents — subtracting 1 lowers the numerator by the denominator’s value.
+</details>
+
+<details>
+<summary><strong>Conceptual Phone a Friend</strong></summary>
+After differentiating, factor out a common \(x^{1/2}\).  
+Setting \(f'(x)=0\) asks “where does the slope flatten?” — you’re finding equilibrium between the competing positive and negative curvature terms.
+</details>
+
+---
+
+### 2. \(f(x)=5x^{-3}+2x^{-1/2}-7\){-}
+
+**Follow-up:** What is the sign of \(f'(x)\) when \(x=0.5\)? Explain why.
+
+<details>
+<summary><strong>Math Hint</strong></summary>
+Power Rule again. Don’t forget the negative signs that appear when differentiating negative exponents.
+</details>
+
+<details>
+<summary><strong>Conceptual Phone a Friend</strong></summary>
+At small \(x\), terms with higher negative powers dominate because they “blow up.”  
+Ask which derivative term—steeply negative or mildly negative—controls the overall direction of change.
+</details>
+
+---
+
+### 3. \(f(x)=x^4-8x^2+16\){-}
+
+**Follow-up:** Identify the points where the tangent line is horizontal.
+
+<details>
+<summary><strong>Math Hint</strong></summary>
+Apply the Power Rule term-by-term; combine like terms neatly.  
+You’ll get a polynomial you can factor.
+</details>
+
+<details>
+<summary><strong>Conceptual Phone a Friend</strong></summary>
+A “horizontal tangent” means the slope momentarily stops increasing or decreasing.  
+Think of it as the peak or valley of the curve—places where growth pauses before reversing.
+</details>
+
+---
+
+### 4. \(f(x)=2x^{1/3}-3x^{2/3}+4x^{5/3}\){-}
+
+**Follow-up:** How does the derivative behave near \(x=0\)?
+
+<details>
+<summary><strong>Math Hint</strong></summary>
+Be meticulous with fractional powers: \(x^{1/3}\), \(x^{2/3}\), \(x^{5/3}\).  
+Subtract 1 from each exponent carefully.
+</details>
+
+<details>
+<summary><strong>Conceptual Phone a Friend</strong></summary>
+Negative exponents create division by small numbers.  
+As \(x\to0\), imagine the graph’s slope stretching vertically — the function’s rate of change explodes rather than settling.
+</details>
+
+---
+
+### 5. \(f(x)=9x^6-5x^3+1\){-}
+
+**Follow-up:** What happens to the slope as \(x\to\infty\)?
+
+<details>
+<summary><strong>Math Hint</strong></summary>
+Differentiate each term using the Power Rule.  
+Keep coefficients exact; the highest power dictates long-term growth.
+</details>
+
+<details>
+<summary><strong>Conceptual Phone a Friend</strong></summary>
+For very large \(x\), the biggest power term outweighs all others.  
+Picture a rocket—lower-order terms fade as the \(x^6\) term propels the slope steeply upward.
+</details>
+
+---
+
+## 🔒 Answer Key (Questions 1 – 5){-}
+
+<details open>
+<summary><strong>Click to Unlock Solutions</strong></summary>
+
+<!-- Solutions container (initially hidden) -->
+<div id="sol_set1" hidden style="margin-top:0.75rem;">
+
+<p><strong>1.</strong><br>
+<strong>Derivative:</strong> \(f'(x)=20x^{3/2}-9x^{1/2}+2x^{-1/2}\).<br>
+<strong>Follow-up answer:</strong> For \(x>0\), there is <em>no</em> solution to \(f'(x)=0\).
+Multiplying by \(x^{1/2}\) gives \(20x^2-9x+2=0\) with discriminant \(81-160=-79&lt;0\),
+so \(f'(x)&gt;0\) for all \(x&gt;0\). The function is strictly increasing on \((0,\infty)\).
+</p>
+
+<p><strong>2.</strong><br>
+<strong>Derivative:</strong> \(f'(x)=-15x^{-4}-x^{-3/2}\).<br>
+<strong>Follow-up answer:</strong> At \(x=0.5\), both terms are negative and large in magnitude,
+so \(f'(0.5)&lt;0\). The function is decreasing there (the higher-order negative power dominates).
+</p>
+
+<p><strong>3.</strong><br>
+<strong>Derivative:</strong> \(f'(x)=4x^3-16x=4x(x^2-4)\).<br>
+<strong>Follow-up answer:</strong> Horizontal tangents where \(f'(x)=0\): \(x=-2,\,0,\,2\).
+</p>
+
+<p><strong>4.</strong><br>
+<strong>Derivative:</strong> \(f'(x)=\tfrac{2}{3}x^{-2/3}-2x^{-1/3}+\tfrac{20}{3}x^{2/3}\).<br>
+<strong>Follow-up answer:</strong> As \(x\to0^+\), the \( \tfrac{2}{3}x^{-2/3} \) term dominates
+(the most singular), so \(f'(x)\to +\infty\).
+</p>
+
+<p><strong>5.</strong><br>
+<strong>Derivative:</strong> \(f'(x)=54x^5-15x^2\).<br>
+<strong>Follow-up answer:</strong> As \(x\to\infty\), the \(54x^5\) term dominates, so
+\(f'(x)\to+\infty\) (slope grows rapidly positive).
+</p>
+
+</div>
+
+<!-- Password gate -->
+<form onsubmit="unlock_set1(); return false;" id="gate_set1" style="margin-top:0.75rem;">
+  <input type="password" id="pwd_set1" placeholder="Enter password" aria-label="Answer key password">
+  <button type="submit">Unlock</button>
+  <span id="msg_set1" style="margin-left:0.5rem;" aria-live="polite"></span>
+</form>
+
+<script>
+// Self-contained unlocker for Set 1
+function unlock_set1() {
+  var input = document.getElementById('pwd_set1');
+  var msg   = document.getElementById('msg_set1');
+  var sol   = document.getElementById('sol_set1');
+  var gate  = document.getElementById('gate_set1');
+  var pw    = (input.value || '').trim();
+
+  // Keep <details> open for retries
+  var det = gate.closest('details'); if (det) det.open = true;
+
+  if (pw === 'snakes') {
+    sol.hidden = false;      // show solutions
+    gate.hidden = true;      // hide gate after success
+    input.value = '';
+    msg.textContent = '';
+  } else {
+    msg.textContent = 'Incorrect password. Try again.';
+    input.value = '';
+    input.focus();
+  }
+}
+</script>
+
+<noscript>
+<p><em>Note:</em> JavaScript is required to unlock solutions.</p>
+</noscript>
+</details>
+
+
+:::
+
+## Derivative Applications (Set 2 of 4) {-}
+
+::: promptbox
+
+### 6. \(f(x)=10x^{-2}+4x^{1/2}-2\){-}
+
+**Follow-up:** For what \(x>0\) is \(f'(x)=0\)?
+
+<details>
+<summary><strong>Math Hint</strong></summary>
+Differentiate term-by-term with the Power Rule. You’ll get a mix of negative and fractional exponents.  
+Clear denominators by multiplying both sides of \(f'(x)=0\) by a positive power of \(x\) (e.g., \(x^3\) or \(x^{3/2}\)).
+</details>
+
+<details>
+<summary><strong>Conceptual Phone a Friend</strong></summary>
+You’re balancing a steep negative term from \(x^{-3}\) against a positive term from \(x^{-1/2}\).  
+Look for the \(x\) where these two “pulls” exactly cancel so the slope is zero.
+</details>
+
+---
+
+### 7. \(f(x)=\sqrt{x}+\dfrac{3}{x^2}\){-}
+
+**Follow-up:** At which \(x>0\) is \(f'(x)\) **smallest**?
+
+<details>
+<summary><strong>Math Hint</strong></summary>
+Write \(\sqrt{x}=x^{1/2}\) and \(3/x^2=3x^{-2}\). Compute \(f'(x)\).  
+To minimize \(f'(x)\), examine \(f''(x)\) and solve \(f''(x)=0\) (then confirm it’s a minimum).
+</details>
+
+<details>
+<summary><strong>Conceptual Phone a Friend</strong></summary>
+Think of \(f'(x)\) as a tug-of-war: \(x^{-1/2}\) (positive, decreasing) vs. \(x^{-3}\) (negative, rapidly shrinking in magnitude as \(x\) grows).  
+The minimum of \(f'(x)\) occurs where its rate of change flips from “more negative” to “less negative.”
+</details>
+
+---
+
+### 8. \(f(x)=4x^{3/2}+7x^{-1/2}-5x\){-}
+
+**Follow-up:** Does \(f'(x)\) change sign as \(x\) increases from \(0.1\) to \(10\)? Briefly justify.
+
+<details>
+<summary><strong>Math Hint</strong></summary>
+Differentiate carefully: the derivative will have one positive-power term and two with exponents \(1/2\) and \(-3/2\).  
+Evaluate the **sign** of \(f'(x)\) for a small \(x\) (e.g., \(0.1\)) and a large \(x\) (e.g., \(10\)).
+</details>
+
+<details>
+<summary><strong>Conceptual Phone a Friend</strong></summary>
+For tiny \(x\), the \(x^{-3/2}\) term dominates (very negative). For large \(x\), the \(x^{1/2}\) term dominates (positive).  
+If a continuous derivative goes from negative to positive on an interval, it must cross zero somewhere in between.
+</details>
+
+---
+
+### 9. \(f(x)=6x^{4}-9x^{1/2}+2x^{-1}\){-}
+
+**Follow-up:** Which term dominates \(f'(x)\) for **large** \(x\)? For **small** \(x>0\)? State the sign in each case.
+
+<details>
+<summary><strong>Math Hint</strong></summary>
+Differentiate and compare the exponents in \(f'(x)\).  
+As \(x\to\infty\), highest positive power wins; as \(x\to0^+\), the most negative exponent wins.
+</details>
+
+<details>
+<summary><strong>Conceptual Phone a Friend</strong></summary>
+Dominance is about “who grows fastest.” Big positive powers explode for large \(x\); steep negative powers explode near zero.  
+Use that to predict the sign of the slope in each regime.
+</details>
+
+---
+
+### 10. \(f(x)=5x^{2/3}-3x^{1/3}+7\){-}
+
+**Follow-up:** Compute \(f'(1)\). Then describe what happens to \(f'(x)\) as \(x\to0^+\).
+
+<details>
+<summary><strong>Math Hint</strong></summary>
+Apply the fractional Power Rule carefully: \( \dfrac{d}{dx}x^{p} = p\,x^{p-1}\).  
+Substitute \(x=1\) after you simplify \(f'(x)\).
+</details>
+
+<details>
+<summary><strong>Conceptual Phone a Friend</strong></summary>
+Near \(x=0^+\), terms like \(x^{-1/3}\) and \(x^{-2/3}\) can blow up.  
+Decide which negative fractional power drives the behavior and whether it sends the slope toward \(+\infty\) or \(-\infty\).
+</details>
+
+---
+
+## 🔒 Answer Key (Questions 6 – 10){-}
+
+<details open>
+<summary><strong>Click to Unlock Solutions</strong></summary>
+
+<!-- Solutions container (now parses Markdown & MathJax) -->
+<div id="sol_set2" hidden markdown="1" style="margin-top:0.75rem;">
+
+**6.**  
+**Derivative:** \(f'(x)=-20x^{-3}+2x^{-1/2}\).  
+**Follow-up answer:** Solve \(f'(x)=0\): \(-20x^{-3}+2x^{-1/2}=0 \Rightarrow 2x^{-1/2}=20x^{-3}\Rightarrow x^{5/2}=10\).  
+Thus \(x=10^{\,2/5}\) (unique \(x>0\) where the slope is zero).
+
+**7.**  
+**Derivative:** \(f'(x)=\tfrac{1}{2}x^{-1/2}-6x^{-3}\).  
+**Follow-up answer:** Minimize \(f'(x)\) via \(f''(x)=0\).  
+\(f''(x)=-\tfrac{1}{4}x^{-3/2}+18x^{-4}=0 \Rightarrow \tfrac{1}{4}x^{-3/2}=18x^{-4}\Rightarrow x^{5/2}=72\).  
+So \(f'(x)\) is smallest at \(x=72^{\,2/5}\) (and this is indeed a minimum for \(f'\)).
+
+**8.**  
+**Derivative:** \(f'(x)=6x^{1/2}-\tfrac{7}{2}x^{-3/2}-5\).  
+**Follow-up answer:** For small \(x\) (e.g., \(0.1\)), the \(-\tfrac{7}{2}x^{-3/2}\) term dominates \(\Rightarrow f'(x)<0\).  
+For large \(x\) (e.g., \(10\)), \(6x^{1/2}\) dominates \(\Rightarrow f'(x)>0\).  
+By continuity on \([0.1,10]\) (IVT), \(f'\) changes sign, so \(\exists\,c\in(0.1,10)\) with \(f'(c)=0\).
+
+**9.**  
+**Derivative:** \(f'(x)=24x^{3}-\tfrac{9}{2}x^{-1/2}-2x^{-2}\).  
+**Follow-up answer:** As \(x\to\infty\), \(24x^{3}\) dominates \(\Rightarrow f'(x)>0\) (large positive).  
+As \(x\to0^+\), \(-2x^{-2}\) dominates \(\Rightarrow f'(x)\to-\infty\) (large negative).
+
+**10.**  
+**Derivative:** \(f'(x)=\tfrac{10}{3}x^{-1/3}-x^{-2/3}\).  
+**Follow-up answer:** \(f'(1)=\tfrac{10}{3}-1=\tfrac{7}{3}>0\).  
+As \(x\to0^+\), the \(-x^{-2/3}\) term dominates, so \(f'(x)\to-\infty\).
+
+</div>
+
+<!-- Password gate -->
+<form onsubmit="unlock_set2(); return false;" id="gate_set2" style="margin-top:0.75rem;">
+  <input type="password" id="pwd_set2" placeholder="Enter password" aria-label="Answer key password">
+  <button type="submit">Unlock</button>
+  <span id="msg_set2" style="margin-left:0.5rem;" aria-live="polite"></span>
+</form>
+
+<script>
+// Self-contained unlocker for Set 2
+function unlock_set2() {
+  var input = document.getElementById('pwd_set2');
+  var msg   = document.getElementById('msg_set2');
+  var sol   = document.getElementById('sol_set2');
+  var gate  = document.getElementById('gate_set2');
+  var pw    = (input.value || '').trim();
+  var det   = gate.closest('details'); if (det) det.open = true;
+
+  if (pw === 'spiders') {
+    sol.hidden = false;
+    gate.hidden = true;
+    input.value = '';
+    msg.textContent = '';
+  } else {
+    msg.textContent = 'Incorrect password. Try again.';
+    input.value = '';
+    input.focus();
+  }
+}
+</script>
+
+<noscript>
+<p><em>Note:</em> JavaScript is required to unlock solutions.</p>
+</noscript>
+</details>
+
+:::
+
+
+## Derivative Applications (Set 3 of 4) {-}
+
+::: promptbox
+
+### 11. \(f(x)=6\sin x-3\cos x+2\){-}
+
+**Follow-up:** For \(x\in[0,2\pi]\), at which \(x\) is \(f'(x)\) **largest**?
+
+<details>
+<summary><strong>Math Hint</strong></summary>
+Differentiate with basic trig rules: \((\sin x)'=\cos x,\; (\cos x)'=-\sin x\).
+You’ll get a linear combination \(A\cos x+B\sin x\).
+</details>
+
+<details>
+<summary><strong>Conceptual Phone a Friend</strong></summary>
+A sum \(A\cos x+B\sin x\) has maximum value \(\sqrt{A^2+B^2}\) at a phase shift.
+Solve \(\tan x=\dfrac{B}{A}\) to find where the maximum occurs in \([0,2\pi]\).
+</details>
+
+---
+
+### 12. \(f(x)=4x^2+3\sin x\){-}
+
+**Follow-up:** At \(x=\tfrac{\pi}{2}\), which term contributes more to \(f'(x)\)?
+
+<details>
+<summary><strong>Math Hint</strong></summary>
+Differentiate to get a polynomial term and a cosine term.
+Then plug in \(x=\tfrac{\pi}{2}\).
+</details>
+
+<details>
+<summary><strong>Conceptual Phone a Friend</strong></summary>
+At \(x=\tfrac{\pi}{2}\), \(\cos x=0\). Compare that with the linear-in-\(x\) term from the polynomial derivative.
+</details>
+
+---
+
+### 13. \(f(x)=2e^{x}-5x^{2}+1\){-}
+
+**Follow-up:** Approximately where is the slope zero? (Solve \(f'(x)=0\) numerically.)
+
+<details>
+<summary><strong>Math Hint</strong></summary>
+Set \(2e^{x}-10x=0\Rightarrow e^{x}=5x\).
+Bracket the solution by testing a couple of nearby \(x\) values to see where the sides cross.
+</details>
+
+<details>
+<summary><strong>Conceptual Phone a Friend</strong></summary>
+Compare the growth rates: near \(x=0\) the exponential starts above the line \(5x\), but the line catches up.
+Look for the intersection between a gently curved exponential and a line through the origin.
+</details>
+
+---
+
+### 14. \(f(x)=7x^{3}+e^{x}\){-}
+
+**Follow-up:** Which term dominates \(f'(x)\) as \(x\to -\infty\)? As \(x\to+\infty\)?
+
+<details>
+<summary><strong>Math Hint</strong></summary>
+Differentiate to a sum of a polynomial and an exponential. Compare sizes in each limit.
+</details>
+
+<details>
+<summary><strong>Conceptual Phone a Friend</strong></summary>
+As \(x\to -\infty\), exponentials collapse toward \(0\) while even powers of \(x\) grow large (but positive).
+As \(x\to+\infty\), exponentials eventually outgrow any polynomial.
+</details>
+
+---
+
+### 15. \(f(x)=3\sin x+e^{x}\){-}
+
+**Follow-up:** Give a simple condition on \(x\) that **guarantees** \(f'(x)>0\).
+
+<details>
+<summary><strong>Math Hint</strong></summary>
+Differentiate to get \(f'(x)=3\cos x+e^{x}\). Use the bound \(\cos x\ge -1\) to find a lower bound for \(f'(x)\).
+</details>
+
+<details>
+<summary><strong>Conceptual Phone a Friend</strong></summary>
+Even when the cosine term is as small as \(-3\), the exponential can overpower it.
+Find \(x\) so that \(e^{x}>3\); then the sum must be positive no matter the cosine.
+</details>
+
+---
+
+## 🔒 Answer Key (Questions 11 – 15){-}
+
+<details open>
+<summary><strong>Click to Unlock Solutions</strong></summary>
+
+<!-- Solutions container (Markdown + MathJax enabled) -->
+<div id="sol_set3" hidden markdown="1" style="margin-top:0.75rem;">
+
+**11.**  
+**Derivative:** \(f'(x)=6\cos x+3\sin x.\)  
+**Follow-up answer:** The maximum of \(6\cos x+3\sin x\) is \(\sqrt{6^{2}+3^{2}}=3\sqrt{5}\), attained where  
+\(\tan x=\dfrac{3}{6}=\dfrac{1}{2}\). Thus in \([0,2\pi]\) the maximizer is \(x=\arctan(1/2)\approx1.107\) (and also \(+\;2\pi\) if extended).
+
+**12.**  
+**Derivative:** \(f'(x)=8x+3\cos x.\)  
+**Follow-up answer:** At \(x=\tfrac{\pi}{2}\), \(f'(x)=8\cdot \tfrac{\pi}{2}+3\cdot 0=4\pi\).  
+The polynomial term dominates; the trig term contributes \(0\).
+
+**13.**  
+**Derivative:** \(f'(x)=2e^{x}-10x.\)  
+**Follow-up answer:** Solve \(2e^{x}-10x=0\Rightarrow e^{x}=5x\).  
+Numerically \(x\approx0.258\) (root between \(0.2\) and \(0.3\); e.g., by one Newton step or bisection).
+
+**14.**  
+**Derivative:** \(f'(x)=21x^{2}+e^{x}.\)  
+**Follow-up answer:** As \(x\to-\infty\), \(e^{x}\to0\) and \(21x^{2}\) dominates (positive).  
+As \(x\to+\infty\), both terms increase, but \(e^{x}\) eventually dominates any polynomial.
+
+**15.**  
+**Derivative:** \(f'(x)=3\cos x+e^{x}.\)  
+**Follow-up answer:** Since \(\cos x\ge -1\), we have \(f'(x)\ge e^{x}-3\).  
+Thus **if \(x>\ln 3\)**, then \(e^{x}>3\) and \(f'(x)>0\) for all such \(x\).
+
+</div>
+
+<!-- Password gate -->
+<form onsubmit="unlock_set3(); return false;" id="gate_set3" style="margin-top:0.75rem;">
+  <input type="password" id="pwd_set3" placeholder="Enter password" aria-label="Answer key password">
+  <button type="submit">Unlock</button>
+  <span id="msg_set3" style="margin-left:0.5rem;" aria-live="polite"></span>
+</form>
+
+<script>
+// Self-contained unlocker for Set 3
+function unlock_set3() {
+  var input = document.getElementById('pwd_set3');
+  var msg   = document.getElementById('msg_set3');
+  var sol   = document.getElementById('sol_set3');
+  var gate  = document.getElementById('gate_set3');
+  var pw    = (input.value || '').trim();
+  var det   = gate.closest('details'); if (det) det.open = true;
+
+  if (pw === 'jellyfish') {
+    sol.hidden = false;
+    gate.hidden = true;
+    input.value = '';
+    msg.textContent = '';
+  } else {
+    msg.textContent = 'Incorrect password. Try again.';
+    input.value = '';
+    input.focus();
+  }
+}
+</script>
+
+<noscript>
+<p><em>Note:</em> JavaScript is required to unlock solutions.</p>
+</noscript>
+</details>
+:::
+
+## Derivative Applications (Set 4 of 4) {-}
+
+::: promptbox
+
+### 16. \(f(x)=e^{x}-\cos x\){-}
+
+**Follow-up:** Prove that \(f\) is **strictly increasing on \([0,\infty)\)**.
+
+<details>
+<summary><strong>Math Hint</strong></summary>
+Differentiate: \(f'(x)=e^{x}+\sin x\).  
+Remember bounds: \(-1\le \sin x\le 1\) and \(e^{x}\ge 1\) for \(x\ge 0\).
+</details>
+
+<details>
+<summary><strong>Conceptual Phone a Friend</strong></summary>
+Think of “steady growth + oscillation.” On \([0,\infty)\), the steady growth term is at least \(1\), while the oscillation can subtract at most \(1\).  
+Can the oscillation ever fully cancel the steady growth?
+</details>
+
+---
+
+### 17. \(f(x)=2\tan x+4x^{2}\){-}
+
+**Follow-up:** On the interval \(\left(-\tfrac{\pi}{2},\tfrac{\pi}{2}\right)\), **show that \(f'(x)\) has at least one root in \((-1,0)\)**.
+
+<details>
+<summary><strong>Math Hint</strong></summary>
+\(f'(x)=2\sec^{2}x+8x\). Evaluate \(f'(0)\) and \(f'(-1)\).  
+Use continuity of \(f'\) on \(\left(-\tfrac{\pi}{2},\tfrac{\pi}{2}\right)\).
+</details>
+
+<details>
+<summary><strong>Conceptual Phone a Friend</strong></summary>
+Near \(x=0\), the \(\sec^{2}x\) part is about \(1\), so \(f'\) is positive.  
+For a modest negative \(x\), the linear term \(8x\) can outweigh the \(\sec^{2}x\) term, making \(f'\) negative.  
+IVT then guarantees a sign change (hence a root) in \((-1,0)\).
+</details>
+
+---
+
+### 18. \(f(x)=5e^{x}+\ln x\){-}
+
+**Follow-up:** Determine the **domain of \(f\)** and describe the **end behavior of \(f'(x)\)** as \(x\to 0^{+}\) and as \(x\to\infty\).  
+(Does \(f'(x)\) ever become non-positive on its domain?)
+
+<details>
+<summary><strong>Math Hint</strong></summary>
+Domain: where is \(\ln x\) defined?  
+\(f'(x)=5e^{x}+\dfrac{1}{x}\). Examine limits of each term near \(0^{+}\) and \(\infty\).
+</details>
+
+<details>
+<summary><strong>Conceptual Phone a Friend</strong></summary>
+For small positive \(x\), \(1/x\) is huge and positive; the exponential is also positive.  
+For large \(x\), the exponential dominates any \(1/x\) term.  
+Ask: can a sum of two positive quantities be \(\le 0\)?
+</details>
+
+---
+
+### 19. \(f(x)=4x+3\ln x\){-}
+
+**Follow-up:** Does \(f'(x)\) ever cross zero on \((0,\infty)\)?  
+What does that imply about **where \(f\) attains a minimum** on \((0,\infty)\)?
+
+<details>
+<summary><strong>Math Hint</strong></summary>
+\(f'(x)=4+\dfrac{3}{x}\). Consider its sign for all \(x>0\).
+</details>
+
+<details>
+<summary><strong>Conceptual Phone a Friend</strong></summary>
+If the derivative never becomes negative on the domain, the function can’t turn down to form an interior minimum.  
+Where do you look for minima if the function is strictly increasing?
+</details>
+
+---
+
+### 20. \(f(x)=2e^{x}-\sin x+5\){-}
+
+**Follow-up:** Prove that \(f'(x)\ge 1\) for all \(x\ge 0\).  
+Then describe qualitatively how the derivative behaves over any interval of length \(2\pi\) on \([0,\infty)\).
+
+<details>
+<summary><strong>Math Hint</strong></summary>
+\(f'(x)=2e^{x}-\cos x\). On \(x\ge 0\), \(e^{x}\ge 1\) and \(-\cos x\ge -1\).  
+Compare \(2e^{x}\) with the most the cosine term can reduce.
+</details>
+
+<details>
+<summary><strong>Conceptual Phone a Friend</strong></summary>
+Think “exponential trend with a bounded wiggle.”  
+The cosine can only shift the slope up or down by at most \(1\), but the exponential term keeps pushing the slope upward as \(x\) grows.
+</details>
+
+---
+
+## 🔒 Answer Key (Questions 16 – 20){-}
+
+<details open>
+<summary><strong>Click to Unlock Solutions</strong></summary>
+
+<!-- Enable Markdown + MathJax inside the hidden block -->
+<div id="sol_set4" hidden markdown="1" style="margin-top:0.75rem;">
+
+**16.**  
+**Derivative:** \(f'(x)=e^{x}+\sin x\).  
+**Follow-up answer:** For \(x\ge 0\), \(e^{x}\ge 1\) and \(\sin x\ge -1\), so \(f'(x)\ge 1-1=0\).  
+Equality would require simultaneously \(e^{x}=1\) and \(\sin x=-1\); the first gives \(x=0\), but \(\sin 0=0\neq -1\).  
+Hence \(f'(x)>0\) on \([0,\infty)\), so \(f\) is strictly increasing there.
+
+**17.**  
+**Derivative:** \(f'(x)=2\sec^{2}x+8x\).  
+**Follow-up answer:** \(f'(0)=2>0\). At \(x=-1\), \(\sec^{2}(-1)\approx 3.425\), so \(f'(-1)\approx 2(3.425)+8(-1)\approx -1.15<0\).  
+By continuity on \(\left(-\tfrac{\pi}{2},\tfrac{\pi}{2}\right)\), there exists \(c\in(-1,0)\) with \(f'(c)=0\) (Intermediate Value Theorem).
+
+**18.**  
+**Derivative:** \(f'(x)=5e^{x}+\dfrac{1}{x}\), with **domain** \(x>0\).  
+**Follow-up answer:** As \(x\to 0^{+}\), \(1/x\to +\infty\) and \(5e^{x}\to 5\), so \(f'(x)\to +\infty\).  
+As \(x\to\infty\), \(5e^{x}\) dominates and \(f'(x)\to +\infty\).  
+Because both terms are positive for \(x>0\), \(f'(x)>0\) everywhere on its domain (never non-positive).
+
+**19.**  
+**Derivative:** \(f'(x)=4+\dfrac{3}{x}\).  
+**Follow-up answer:** For all \(x>0\), \(4+\dfrac{3}{x}>4>0\); thus \(f'(x)\) never crosses zero.  
+Therefore \(f\) is strictly increasing on \((0,\infty)\).  
+The minimum on \((0,\infty)\) is not attained in the interior; instead \(f(x)\to -\infty\) as \(x\to 0^{+}\) (since \(\ln x\to -\infty\)).
+
+**20.**  
+**Derivative:** \(f'(x)=2e^{x}-\cos x\).  
+**Follow-up answer:** For \(x\ge 0\), \(2e^{x}\ge 2\) and \(-\cos x\ge -1\); hence \(f'(x)\ge 2-1=1\).  
+Over any interval of length \(2\pi\), \(-\cos x\) completes one full “wiggle” between \(-1\) and \(+1\), but the baseline \(2e^{x}\) is increasing, so \(f'(x)\) is strictly increasing overall with small bounded oscillations.
+
+</div>
+
+<!-- Password gate -->
+<form onsubmit="unlock_set4(); return false;" id="gate_set4" style="margin-top:0.75rem;">
+  <input type="password" id="pwd_set4" placeholder="Enter password" aria-label="Answer key password">
+  <button type="submit">Unlock</button>
+  <span id="msg_set4" style="margin-left:0.5rem;" aria-live="polite"></span>
+</form>
+
+<script>
+// Self-contained unlocker for Set 4
+function unlock_set4() {
+  var input = document.getElementById('pwd_set4');
+  var msg   = document.getElementById('msg_set4');
+  var sol   = document.getElementById('sol_set4');
+  var gate  = document.getElementById('gate_set4');
+  var pw    = (input.value || '').trim();
+
+  var det = gate.closest('details'); if (det) det.open = true;
+
+  if (pw === 'dropbears') {
+    sol.hidden = false;
+    gate.hidden = true;
+    input.value = '';
+    msg.textContent = '';
+  } else {
+    msg.textContent = 'Incorrect password. Try again.';
+    input.value = '';
+    input.focus();
+  }
+}
+</script>
+
+<noscript>
+<p><em>Note:</em> JavaScript is required to unlock solutions.</p>
+</noscript>
+</details>
+:::
