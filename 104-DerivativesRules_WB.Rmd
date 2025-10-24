@@ -1311,18 +1311,19 @@ Solutions for these five are hidden behind a password at the bottom (once you ar
 ::: promptbox
 ### 1. \(f(x)=8x^{5/2}-6x^{3/2}+4x^{1/2}\){-}
 
-**Follow-up:** For what \(x>0\) is \(f'(x)=0\)?
+**Follow-up:** For \(x>0\), describe how the *sign* of \(f'(x)\) changes as \(x\) increases.  
+(Does the slope stay positive, become negative, or switch direction?)
 
 <details>
 <summary><strong>Math Hint</strong></summary>
-Use the Power Rule on each term: \( \frac{d}{dx}x^n = n x^{n-1} \).  
-Be careful with fractional exponents — subtracting 1 lowers the numerator by the denominator’s value.
+Use the Power Rule: \( \frac{d}{dx}x^n = n x^{n-1} \).  
+Each term keeps a positive coefficient, so think about how the powers affect growth.
 </details>
 
 <details>
 <summary><strong>Conceptual Phone a Friend</strong></summary>
-After differentiating, factor out a common \(x^{1/2}\).  
-Setting \(f'(x)=0\) asks “where does the slope flatten?” — you’re finding equilibrium between the competing positive and negative curvature terms.
+Differentiate each term and notice that as \(x\) grows, the higher-power term \(x^{3/2}\) grows fastest.  
+That means the slope increases for large \(x\) but could be smaller near \(x=0\).
 </details>
 
 ---
@@ -1407,9 +1408,10 @@ Picture a rocket—lower-order terms fade as the \(x^6\) term propels the slope 
 
 **1.**  
 **Derivative:** \(f'(x)=20x^{3/2}-9x^{1/2}+2x^{-1/2}\).  
-**Follow-up answer:** For \(x>0\), there is *no* solution to \(f'(x)=0\).  
-Multiplying by \(x^{1/2}\) gives \(20x^2-9x+2=0\) with discriminant \(81-160=-79<0\),  
-so \(f'(x)>0\) for all \(x>0\). The function is strictly increasing on \((0,\infty)\).
+**Follow-up answer:** For small \(x\), the \(2x^{-1/2}\) term dominates, so \(f'(x)\) is positive and large.  
+As \(x\) increases, \(20x^{3/2}\) eventually becomes dominant and positive as well, so the slope stays positive for all \(x>0\).  
+Thus \(f(x)\) is increasing on \((0,\infty)\).
+
 
 **2.**  
 **Derivative:** \(f'(x)=-15x^{-4}-x^{-3/2}\).  
@@ -1451,7 +1453,7 @@ function unlock_set1() {
     input.value = '';
     msg.textContent = '';
   } else {
-    msg.textContent = 'Incorrect password. Try again.';
+    msg.textContent = 'Stop guessing :) ';
     input.value = '';
     input.focus();
   }
@@ -1470,39 +1472,42 @@ function unlock_set1() {
 
 ::: promptbox
 
-### 6. \(f(x)=10x^{-2}+4x^{1/2}-2\){-}
+### 6. \(f(x)=x^{4}-x^{3}\){-}
 
-**Follow-up:** For what \(x>0\) is \(f'(x)=0\)?
+**Follow-up:** Solve \(f'(x)=0\) and list all \(x>0\) where the tangent is horizontal.
 
 <details>
 <summary><strong>Math Hint</strong></summary>
-Differentiate term-by-term with the Power Rule. You’ll get a mix of negative and fractional exponents.  
-Clear denominators by multiplying both sides of \(f'(x)=0\) by a positive power of \(x\) (e.g., \(x^3\) or \(x^{3/2}\)).
+Differentiate term-by-term: \( (x^4)'=4x^3\), \( (x^3)'=3x^2\).  
+You’ll get \(f'(x)=4x^3-3x^2\). Factor out the largest common power of \(x\).
 </details>
 
 <details>
 <summary><strong>Conceptual Phone a Friend</strong></summary>
-You’re balancing a steep negative term from \(x^{-3}\) against a positive term from \(x^{-1/2}\).  
-Look for the \(x\) where these two “pulls” exactly cancel so the slope is zero.
+Horizontal tangents occur where the slope is zero.  
+A repeated factor like \(x^2\) means the graph “flattens” at that \(x\) (multiplicity \(>1\)) and may not change direction there.
 </details>
+
 
 ---
 
 ### 7. \(f(x)=\sqrt{x}+\dfrac{3}{x^2}\){-}
 
-**Follow-up:** At which \(x>0\) is \(f'(x)\) **smallest**?
+**Follow-up:** Find \(f''(x)\).
 
 <details>
 <summary><strong>Math Hint</strong></summary>
-Write \(\sqrt{x}=x^{1/2}\) and \(3/x^2=3x^{-2}\). Compute \(f'(x)\).  
-To minimize \(f'(x)\), examine \(f''(x)\) and solve \(f''(x)=0\) (then confirm it’s a minimum).
+Rewrite as powers: \(\sqrt{x}=x^{1/2}\) and \(3/x^2=3x^{-2}\).  
+Differentiate once to get \(f'(x)=\tfrac{1}{2}x^{-1/2}-6x^{-3}\).  
+Differentiate again—each exponent decreases by 1 each time.
 </details>
 
 <details>
 <summary><strong>Conceptual Phone a Friend</strong></summary>
-Think of \(f'(x)\) as a tug-of-war: \(x^{-1/2}\) (positive, decreasing) vs. \(x^{-3}\) (negative, rapidly shrinking in magnitude as \(x\) grows).  
-The minimum of \(f'(x)\) occurs where its rate of change flips from “more negative” to “less negative.”
+You’re differentiating the derivative again to find how the slope \(f'(x)\) changes.  
+Simplify your final expression to write \(f''(x)\) with clean coefficients and exponents.
 </details>
+
 
 ---
 
@@ -1569,15 +1574,15 @@ Decide which negative fractional power drives the behavior and whether it sends 
 <div id="sol_set2" hidden markdown="1" style="margin-top:0.75rem;">
 
 **6.**  
-**Derivative:** \(f'(x)=-20x^{-3}+2x^{-1/2}\).  
-**Follow-up answer:** Solve \(f'(x)=0\): \(-20x^{-3}+2x^{-1/2}=0 \Rightarrow 2x^{-1/2}=20x^{-3}\Rightarrow x^{5/2}=10\).  
-Thus \(x=10^{\,2/5}\) (unique \(x>0\) where the slope is zero).
+**Derivative:** \(f'(x)=4x^{3}-3x^{2}=x^{2}(4x-3)\).  
+**Follow-up answer:** Roots at \(x=0\) (double root) and \(x=\tfrac{3}{4}\).  
+Since the prompt asks for \(x>0\), the horizontal tangent occurs at \(x=\tfrac{3}{4}\) (note: \(x=0\) is also a horizontal tangent but is not \(>0\)).
+
 
 **7.**  
 **Derivative:** \(f'(x)=\tfrac{1}{2}x^{-1/2}-6x^{-3}\).  
-**Follow-up answer:** Minimize \(f'(x)\) via \(f''(x)=0\).  
-\(f''(x)=-\tfrac{1}{4}x^{-3/2}+18x^{-4}=0 \Rightarrow \tfrac{1}{4}x^{-3/2}=18x^{-4}\Rightarrow x^{5/2}=72\).  
-So \(f'(x)\) is smallest at \(x=72^{\,2/5}\) (and this is indeed a minimum for \(f'\)).
+**Second derivative:** \(f''(x)=-\tfrac{1}{4}x^{-3/2}+18x^{-4}\).
+
 
 **8.**  
 **Derivative:** \(f'(x)=6x^{1/2}-\tfrac{7}{2}x^{-3/2}-5\).  
@@ -1641,19 +1646,21 @@ function unlock_set2() {
 
 ### 11. \(f(x)=6\sin x-3\cos x+2\){-}
 
-**Follow-up:** For \(x\in[0,2\pi]\), at which \(x\) is \(f'(x)\) **largest**?
+**Follow-up:** Explain why \(f'(x)=0\) has infinitely many solutions.
 
 <details>
 <summary><strong>Math Hint</strong></summary>
-Differentiate with basic trig rules: \((\sin x)'=\cos x,\; (\cos x)'=-\sin x\).
-You’ll get a linear combination \(A\cos x+B\sin x\).
+Differentiate using \((\sin x)'=\cos x\) and \((\cos x)'=-\sin x\).  
+You’ll get a combination of sine and cosine—both periodic functions.
 </details>
 
 <details>
 <summary><strong>Conceptual Phone a Friend</strong></summary>
-A sum \(A\cos x+B\sin x\) has maximum value \(\sqrt{A^2+B^2}\) at a phase shift.
-Solve \(\tan x=\dfrac{B}{A}\) to find where the maximum occurs in \([0,2\pi]\).
+Because sine and cosine repeat every \(2\pi\), any equation like  
+\(A\cos x + B\sin x = 0\) will also repeat its zeros every period.  
+That’s why the slope \(f'(x)\) equals zero infinitely many times.
 </details>
+
 
 ---
 
@@ -1676,21 +1683,22 @@ At \(x=\tfrac{\pi}{2}\), \(\cos x=0\). Compare that with the linear-in-\(x\) ter
 
 ### 13. \(f(x)=2e^{x}-5x^{2}+1\){-}
 
-**Follow-up:** Approximately where is the slope zero? (Solve \(f'(x)=0\) numerically.)
+**Follow-up:** Find \(f''(x)\), \(f'''(x)\), and \(f^{(4)}(x)\), what will happen if you keep going?
 
 <details>
 <summary><strong>Math Hint</strong></summary>
-Set \(2e^{x}-10x=0\Rightarrow e^{x}=5x\).
-Bracket the solution by testing a couple of nearby \(x\) values to see where the sides cross.
+Differentiate term by term.  
+Remember: the derivative of \(e^{x}\) is itself, and powers of \(x\) follow the Power Rule.  
+Keep track of signs—each new derivative reduces the degree of the polynomial part.
 </details>
 
 <details>
 <summary><strong>Conceptual Phone a Friend</strong></summary>
-Compare the growth rates: near \(x=0\) the exponential starts above the line \(5x\), but the line catches up.
-Look for the intersection between a gently curved exponential and a line through the origin.
+Notice that the exponential term never disappears under differentiation,  
+while the polynomial part eventually becomes constant and then \(0\).  
+This highlights the difference between exponential and algebraic growth.
 </details>
 
----
 
 ### 14. \(f(x)=7x^{3}+e^{x}\){-}
 
@@ -1711,17 +1719,18 @@ As \(x\to+\infty\), exponentials eventually outgrow any polynomial.
 
 ### 15. \(f(x)=3\sin x+e^{x}\){-}
 
-**Follow-up:** Give a simple condition on \(x\) that **guarantees** \(f'(x)>0\).
+**Follow-up:** Find \(f''(x)\).
 
 <details>
 <summary><strong>Math Hint</strong></summary>
-Differentiate to get \(f'(x)=3\cos x+e^{x}\). Use the bound \(\cos x\ge -1\) to find a lower bound for \(f'(x)\).
+Differentiate term by term: \((\sin x)'=\cos x\) and \((e^{x})'=e^{x}\).  
+Repeat once more to get the second derivative.
 </details>
 
 <details>
 <summary><strong>Conceptual Phone a Friend</strong></summary>
-Even when the cosine term is as small as \(-3\), the exponential can overpower it.
-Find \(x\) so that \(e^{x}>3\); then the sum must be positive no matter the cosine.
+Compare how the exponential and trigonometric parts behave.  
+The exponential term keeps growing, while sine and cosine oscillate between \(-1\) and \(1\).
 </details>
 
 ---
@@ -1736,8 +1745,9 @@ Find \(x\) so that \(e^{x}>3\); then the sum must be positive no matter the cosi
 
 **11.**  
 **Derivative:** \(f'(x)=6\cos x+3\sin x.\)  
-**Follow-up answer:** The maximum of \(6\cos x+3\sin x\) is \(\sqrt{6^{2}+3^{2}}=3\sqrt{5}\), attained where  
-\(\tan x=\dfrac{3}{6}=\dfrac{1}{2}\). Thus in \([0,2\pi]\) the maximizer is \(x=\arctan(1/2)\approx1.107\) (and also \(+\;2\pi\) if extended).
+**Follow-up answer:** The equation \(6\cos x+3\sin x=0\) simplifies to \(\tan x=-2\).  
+Since \(\tan x\) has period \(\pi\), this equality recurs every \(\pi\) units,  
+so there are infinitely many \(x\) satisfying \(f'(x)=0\).
 
 **12.**  
 **Derivative:** \(f'(x)=8x+3\cos x.\)  
@@ -1745,9 +1755,15 @@ Find \(x\) so that \(e^{x}>3\); then the sum must be positive no matter the cosi
 The polynomial term dominates; the trig term contributes \(0\).
 
 **13.**  
-**Derivative:** \(f'(x)=2e^{x}-10x.\)  
-**Follow-up answer:** Solve \(2e^{x}-10x=0\Rightarrow e^{x}=5x\).  
-Numerically \(x\approx0.258\) (root between \(0.2\) and \(0.3\); e.g., by one Newton step or bisection).
+**First derivative:** \(f'(x)=2e^{x}-10x\)  
+**Second derivative:** \(f''(x)=2e^{x}-10\)  
+**Third derivative:** \(f'''(x)=2e^{x}\)  
+**Fourth derivative:** \(f^{(4)}(x)=2e^{x}\)
+
+**Follow-up answer:**  
+The exponential term \(2e^{x}\) remains unchanged with each derivative,  
+while the polynomial part vanishes after two differentiations.
+
 
 **14.**  
 **Derivative:** \(f'(x)=21x^{2}+e^{x}.\)  
@@ -1755,9 +1771,9 @@ Numerically \(x\approx0.258\) (root between \(0.2\) and \(0.3\); e.g., by one Ne
 As \(x\to+\infty\), both terms increase, but \(e^{x}\) eventually dominates any polynomial.
 
 **15.**  
-**Derivative:** \(f'(x)=3\cos x+e^{x}.\)  
-**Follow-up answer:** Since \(\cos x\ge -1\), we have \(f'(x)\ge e^{x}-3\).  
-Thus **if \(x>\ln 3\)**, then \(e^{x}>3\) and \(f'(x)>0\) for all such \(x\).
+**First derivative:** \(f'(x)=3\cos x+e^{x}\)  
+**Second derivative:** \(f''(x)=-3\sin x+e^{x}\)
+
 
 </div>
 
@@ -1801,97 +1817,101 @@ function unlock_set3() {
 
 ::: promptbox
 
-### 16. \(f(x)=e^{x}-\cos x\){-}
+### 16. \(f(x)=e^{\,5x^{3}+3x-\ln x}\){-}
 
-**Follow-up:** Prove that \(f\) is **strictly increasing on \([0,\infty)\)**.
+**Follow-up:** Describe what happens to \(f'(x)\) as \(x\) becomes large.
 
 <details>
 <summary><strong>Math Hint</strong></summary>
-Differentiate: \(f'(x)=e^{x}+\sin x\).  
-Remember bounds: \(-1\le \sin x\le 1\) and \(e^{x}\ge 1\) for \(x\ge 0\).
+Use the identity  
+\[
+\frac{d}{dx}\big(e^{g(x)}\big)=g'(x)e^{g(x)}.
+\]  
+First find \(g'(x)\) for \(g(x)=5x^{3}+3x-\ln x\), then look at the signs of \(g'(x)\) and \(e^{g(x)}\) when \(x\) is large.
 </details>
 
 <details>
 <summary><strong>Conceptual Phone a Friend</strong></summary>
-Think of “steady growth + oscillation.” On \([0,\infty)\), the steady growth term is at least \(1\), while the oscillation can subtract at most \(1\).  
-Can the oscillation ever fully cancel the steady growth?
+Remember that \(e^{g(x)}\) is always positive.  
+If \(g'(x)\) grows quickly and stays positive for large \(x\), then \(f'(x)\) will also grow rapidly.  
+You’re describing how steeply the function rises for big \(x\).
+</details>
+
+### 17. \(f(x)=5\cdot2^{x}+7x^{2}\){-}
+
+**Follow-up:** Find  \(f''(x)\).
+
+<details>
+<summary><strong>Math Hint</strong></summary>
+Use the rule \(\dfrac{d}{dx}[a^{x}]=a^{x}\ln a\).  
+Differentiate each term separately; constants stay in front.
+</details>
+
+<details>
+<summary><strong>Conceptual Phone a Friend</strong></summary>
+The exponential term keeps its same shape after each derivative,  
+while the polynomial term’s power drops by 1 each time.
 </details>
 
 ---
 
-### 17. \(f(x)=2\tan x+4x^{2}\){-}
+### 18. \(f(x)=4e^{x}-6x^{3}+2\){-}
 
-**Follow-up:** On the interval \(\left(-\tfrac{\pi}{2},\tfrac{\pi}{2}\right)\), **show that \(f'(x)\) has at least one root in \((-1,0)\)**.
+**Follow-up:** Find  \(f''(x)\).
 
 <details>
 <summary><strong>Math Hint</strong></summary>
-\(f'(x)=2\sec^{2}x+8x\). Evaluate \(f'(0)\) and \(f'(-1)\).  
-Use continuity of \(f'\) on \(\left(-\tfrac{\pi}{2},\tfrac{\pi}{2}\right)\).
+Remember: \((e^{x})'=e^{x}\) and constants vanish when differentiated.  
+Apply the Power Rule to \(x^{3}\).
 </details>
 
 <details>
 <summary><strong>Conceptual Phone a Friend</strong></summary>
-Near \(x=0\), the \(\sec^{2}x\) part is about \(1\), so \(f'\) is positive.  
-For a modest negative \(x\), the linear term \(8x\) can outweigh the \(\sec^{2}x\) term, making \(f'\) negative.  
-IVT then guarantees a sign change (hence a root) in \((-1,0)\).
+Each differentiation reduces the power of the polynomial,  
+but the exponential term never changes form.
 </details>
 
 ---
 
-### 18. \(f(x)=5e^{x}+\ln x\){-}
+### 19. \(f(x)=8x+\log_{10}x\){-}
 
-**Follow-up:** Determine the **domain of \(f\)** and describe the **end behavior of \(f'(x)\)** as \(x\to 0^{+}\) and as \(x\to\infty\).  
-(Does \(f'(x)\) ever become non-positive on its domain?)
+**Follow-up:** Find  \(f''(x)\).
 
 <details>
 <summary><strong>Math Hint</strong></summary>
-Domain: where is \(\ln x\) defined?  
-\(f'(x)=5e^{x}+\dfrac{1}{x}\). Examine limits of each term near \(0^{+}\) and \(\infty\).
+Use the base-10 log rule:  
+\[
+\frac{d}{dx}[\log_{10}x]=\frac{1}{x\ln10}.
+\]
+The linear term’s derivative is just its coefficient.
 </details>
 
 <details>
 <summary><strong>Conceptual Phone a Friend</strong></summary>
-For small positive \(x\), \(1/x\) is huge and positive; the exponential is also positive.  
-For large \(x\), the exponential dominates any \(1/x\) term.  
-Ask: can a sum of two positive quantities be \(\le 0\)?
+The logarithm’s slope decreases as \(x\) grows,  
+while the linear term keeps a constant slope.
 </details>
 
 ---
 
-### 19. \(f(x)=4x+3\ln x\){-}
+### 20. \(f(x)=3e^{x}+2\ln x\){-}
 
-**Follow-up:** Does \(f'(x)\) ever cross zero on \((0,\infty)\)?  
-What does that imply about **where \(f\) attains a minimum** on \((0,\infty)\)?
+**Follow-up:** Find  \(f''(x)\).
 
 <details>
 <summary><strong>Math Hint</strong></summary>
-\(f'(x)=4+\dfrac{3}{x}\). Consider its sign for all \(x>0\).
+Differentiate term-by-term:  
+\((e^{x})'=e^{x}\) and \((\ln x)'=\tfrac{1}{x}\).  
+Then repeat to get \(f''(x)\).
 </details>
 
 <details>
 <summary><strong>Conceptual Phone a Friend</strong></summary>
-If the derivative never becomes negative on the domain, the function can’t turn down to form an interior minimum.  
-Where do you look for minima if the function is strictly increasing?
+Notice how the exponential part keeps increasing at the same rate,  
+but the logarithmic part’s second derivative is negative, showing it bends downward.
 </details>
 
----
 
-### 20. \(f(x)=2e^{x}-\sin x+5\){-}
-
-**Follow-up:** Prove that \(f'(x)\ge 1\) for all \(x\ge 0\).  
-Then describe qualitatively how the derivative behaves over any interval of length \(2\pi\) on \([0,\infty)\).
-
-<details>
-<summary><strong>Math Hint</strong></summary>
-\(f'(x)=2e^{x}-\cos x\). On \(x\ge 0\), \(e^{x}\ge 1\) and \(-\cos x\ge -1\).  
-Compare \(2e^{x}\) with the most the cosine term can reduce.
-</details>
-
-<details>
-<summary><strong>Conceptual Phone a Friend</strong></summary>
-Think “exponential trend with a bounded wiggle.”  
-The cosine can only shift the slope up or down by at most \(1\), but the exponential term keeps pushing the slope upward as \(x\) grows.
-</details>
 
 ---
 
@@ -1904,32 +1924,43 @@ The cosine can only shift the slope up or down by at most \(1\), but the exponen
 <div id="sol_set4" hidden markdown="1" style="margin-top:0.75rem;">
 
 **16.**  
-**Derivative:** \(f'(x)=e^{x}+\sin x\).  
-**Follow-up answer:** For \(x\ge 0\), \(e^{x}\ge 1\) and \(\sin x\ge -1\), so \(f'(x)\ge 1-1=0\).  
-Equality would require simultaneously \(e^{x}=1\) and \(\sin x=-1\); the first gives \(x=0\), but \(\sin 0=0\neq -1\).  
-Hence \(f'(x)>0\) on \([0,\infty)\), so \(f\) is strictly increasing there.
+Let \(g(x)=5x^{3}+3x-\ln x\).  
+Then \(g'(x)=15x^{2}+3-\tfrac{1}{x}\).  
+
+So  
+\[
+f'(x)=\big(15x^{2}+3-\tfrac{1}{x}\big)e^{\,5x^{3}+3x-\ln x}.
+\]
+
+**Follow-up answer:**  
+As \(x\) becomes large, \(15x^{2}+3-\tfrac{1}{x}\approx15x^{2}\) (positive and increasing),  
+and \(e^{\,5x^{3}+3x-\ln x}\) grows extremely fast.  
+Thus \(f'(x)\) increases rapidly, meaning \(f(x)\) becomes very steep for large \(x\).
+
 
 **17.**  
-**Derivative:** \(f'(x)=2\sec^{2}x+8x\).  
-**Follow-up answer:** \(f'(0)=2>0\). At \(x=-1\), \(\sec^{2}(-1)\approx 3.425\), so \(f'(-1)\approx 2(3.425)+8(-1)\approx -1.15<0\).  
-By continuity on \(\left(-\tfrac{\pi}{2},\tfrac{\pi}{2}\right)\), there exists \(c\in(-1,0)\) with \(f'(c)=0\) (Intermediate Value Theorem).
+**First derivative:** \(f'(x)=5\cdot2^{x}\ln2+14x\)  
+**Second derivative:** \(f''(x)=5\cdot2^{x}(\ln2)^{2}+14\)
+
+---
 
 **18.**  
-**Derivative:** \(f'(x)=5e^{x}+\dfrac{1}{x}\), with **domain** \(x>0\).  
-**Follow-up answer:** As \(x\to 0^{+}\), \(1/x\to +\infty\) and \(5e^{x}\to 5\), so \(f'(x)\to +\infty\).  
-As \(x\to\infty\), \(5e^{x}\) dominates and \(f'(x)\to +\infty\).  
-Because both terms are positive for \(x>0\), \(f'(x)>0\) everywhere on its domain (never non-positive).
+**First derivative:** \(f'(x)=4e^{x}-18x^{2}\)  
+**Second derivative:** \(f''(x)=4e^{x}-36x\)
+
+---
 
 **19.**  
-**Derivative:** \(f'(x)=4+\dfrac{3}{x}\).  
-**Follow-up answer:** For all \(x>0\), \(4+\dfrac{3}{x}>4>0\); thus \(f'(x)\) never crosses zero.  
-Therefore \(f\) is strictly increasing on \((0,\infty)\).  
-The minimum on \((0,\infty)\) is not attained in the interior; instead \(f(x)\to -\infty\) as \(x\to 0^{+}\) (since \(\ln x\to -\infty\)).
+**First derivative:** \(f'(x)=8+\dfrac{1}{x\ln10}\)  
+**Second derivative:** \(f''(x)=-\dfrac{1}{x^{2}\ln10}\)
+
+---
 
 **20.**  
-**Derivative:** \(f'(x)=2e^{x}-\cos x\).  
-**Follow-up answer:** For \(x\ge 0\), \(2e^{x}\ge 2\) and \(-\cos x\ge -1\); hence \(f'(x)\ge 2-1=1\).  
-Over any interval of length \(2\pi\), \(-\cos x\) completes one full “wiggle” between \(-1\) and \(+1\), but the baseline \(2e^{x}\) is increasing, so \(f'(x)\) is strictly increasing overall with small bounded oscillations.
+**First derivative:** \(f'(x)=3e^{x}+\dfrac{2}{x}\)  
+**Second derivative:** \(f''(x)=3e^{x}-\dfrac{2}{x^{2}}\)
+
+
 
 </div>
 
@@ -1957,7 +1988,7 @@ function unlock_set4() {
     input.value = '';
     msg.textContent = '';
   } else {
-    msg.textContent = 'Incorrect password. Try again.';
+    msg.textContent = 'Oi! Have you really finished?';
     input.value = '';
     input.focus();
   }

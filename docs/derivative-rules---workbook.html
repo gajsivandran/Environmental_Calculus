@@ -23,7 +23,7 @@
 <meta name="author" content="Gaj Sivandran" />
 
 
-<meta name="date" content="2025-10-23" />
+<meta name="date" content="2025-10-24" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -1976,20 +1976,21 @@ There is also a followup questions for each questions</p>
 <div class="promptbox">
 <div id="fx8x52-6x324x12" class="section level3 unnumbered hasAnchor">
 <h3>1. <span class="math inline">\(f(x)=8x^{5/2}-6x^{3/2}+4x^{1/2}\)</span><a href="derivative-rules---workbook.html#fx8x52-6x324x12" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p><strong>Follow-up:</strong> For what <span class="math inline">\(x&gt;0\)</span> is <span class="math inline">\(f&#39;(x)=0\)</span>?</p>
+<p><strong>Follow-up:</strong> For <span class="math inline">\(x&gt;0\)</span>, describe how the <em>sign</em> of <span class="math inline">\(f&#39;(x)\)</span> changes as <span class="math inline">\(x\)</span> increases.<br />
+(Does the slope stay positive, become negative, or switch direction?)</p>
 <details>
 <summary>
 <strong>Math Hint</strong>
 </summary>
-Use the Power Rule on each term: <span class="math inline">\(\frac{d}{dx}x^n = n x^{n-1}\)</span>.<br />
-Be careful with fractional exponents — subtracting 1 lowers the numerator by the denominator’s value.
+Use the Power Rule: <span class="math inline">\(\frac{d}{dx}x^n = n x^{n-1}\)</span>.<br />
+Each term keeps a positive coefficient, so think about how the powers affect growth.
 </details>
 <details>
 <summary>
 <strong>Conceptual Phone a Friend</strong>
 </summary>
-After differentiating, factor out a common <span class="math inline">\(x^{1/2}\)</span>.<br />
-Setting <span class="math inline">\(f&#39;(x)=0\)</span> asks “where does the slope flatten?” — you’re finding equilibrium between the competing positive and negative curvature terms.
+Differentiate each term and notice that as <span class="math inline">\(x\)</span> grows, the higher-power term <span class="math inline">\(x^{3/2}\)</span> grows fastest.<br />
+That means the slope increases for large <span class="math inline">\(x\)</span> but could be smaller near <span class="math inline">\(x=0\)</span>.
 </details>
 <hr />
 </div>
@@ -2077,9 +2078,9 @@ Picture a rocket—lower-order terms fade as the <span class="math inline">\(x^6
 <div id="sol_set1" hidden="" markdown="1" style="margin-top:0.75rem;">
 <p><strong>1.</strong><br />
 <strong>Derivative:</strong> <span class="math inline">\(f&#39;(x)=20x^{3/2}-9x^{1/2}+2x^{-1/2}\)</span>.<br />
-<strong>Follow-up answer:</strong> For <span class="math inline">\(x&gt;0\)</span>, there is <em>no</em> solution to <span class="math inline">\(f&#39;(x)=0\)</span>.<br />
-Multiplying by <span class="math inline">\(x^{1/2}\)</span> gives <span class="math inline">\(20x^2-9x+2=0\)</span> with discriminant <span class="math inline">\(81-160=-79&lt;0\)</span>,<br />
-so <span class="math inline">\(f&#39;(x)&gt;0\)</span> for all <span class="math inline">\(x&gt;0\)</span>. The function is strictly increasing on <span class="math inline">\((0,\infty)\)</span>.</p>
+<strong>Follow-up answer:</strong> For small <span class="math inline">\(x\)</span>, the <span class="math inline">\(2x^{-1/2}\)</span> term dominates, so <span class="math inline">\(f&#39;(x)\)</span> is positive and large.<br />
+As <span class="math inline">\(x\)</span> increases, <span class="math inline">\(20x^{3/2}\)</span> eventually becomes dominant and positive as well, so the slope stays positive for all <span class="math inline">\(x&gt;0\)</span>.<br />
+Thus <span class="math inline">\(f(x)\)</span> is increasing on <span class="math inline">\((0,\infty)\)</span>.</p>
 <p><strong>2.</strong><br />
 <strong>Derivative:</strong> <span class="math inline">\(f&#39;(x)=-15x^{-4}-x^{-3/2}\)</span>.<br />
 <strong>Follow-up answer:</strong> At <span class="math inline">\(x=0.5\)</span>, both terms are negative and large in magnitude, so <span class="math inline">\(f&#39;(0.5)&lt;0\)</span>.<br />
@@ -2114,7 +2115,7 @@ function unlock_set1() {
     input.value = '';
     msg.textContent = '';
   } else {
-    msg.textContent = 'Incorrect password. Try again.';
+    msg.textContent = 'Stop guessing :) ';
     input.value = '';
     input.focus();
   }
@@ -2132,41 +2133,42 @@ function unlock_set1() {
 <div id="derivative-applications-set-2-of-4" class="section level2 unnumbered hasAnchor">
 <h2>Derivative Applications (Set 2 of 4)<a href="derivative-rules---workbook.html#derivative-applications-set-2-of-4" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <div class="promptbox">
-<div id="fx10x-24x12-2" class="section level3 unnumbered hasAnchor">
-<h3>6. <span class="math inline">\(f(x)=10x^{-2}+4x^{1/2}-2\)</span><a href="derivative-rules---workbook.html#fx10x-24x12-2" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p><strong>Follow-up:</strong> For what <span class="math inline">\(x&gt;0\)</span> is <span class="math inline">\(f&#39;(x)=0\)</span>?</p>
+<div id="fxx4-x3" class="section level3 unnumbered hasAnchor">
+<h3>6. <span class="math inline">\(f(x)=x^{4}-x^{3}\)</span><a href="derivative-rules---workbook.html#fxx4-x3" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><strong>Follow-up:</strong> Solve <span class="math inline">\(f&#39;(x)=0\)</span> and list all <span class="math inline">\(x&gt;0\)</span> where the tangent is horizontal.</p>
 <details>
 <summary>
 <strong>Math Hint</strong>
 </summary>
-Differentiate term-by-term with the Power Rule. You’ll get a mix of negative and fractional exponents.<br />
-Clear denominators by multiplying both sides of <span class="math inline">\(f&#39;(x)=0\)</span> by a positive power of <span class="math inline">\(x\)</span> (e.g., <span class="math inline">\(x^3\)</span> or <span class="math inline">\(x^{3/2}\)</span>).
+Differentiate term-by-term: <span class="math inline">\((x^4)&#39;=4x^3\)</span>, <span class="math inline">\((x^3)&#39;=3x^2\)</span>.<br />
+You’ll get <span class="math inline">\(f&#39;(x)=4x^3-3x^2\)</span>. Factor out the largest common power of <span class="math inline">\(x\)</span>.
 </details>
 <details>
 <summary>
 <strong>Conceptual Phone a Friend</strong>
 </summary>
-You’re balancing a steep negative term from <span class="math inline">\(x^{-3}\)</span> against a positive term from <span class="math inline">\(x^{-1/2}\)</span>.<br />
-Look for the <span class="math inline">\(x\)</span> where these two “pulls” exactly cancel so the slope is zero.
+Horizontal tangents occur where the slope is zero.<br />
+A repeated factor like <span class="math inline">\(x^2\)</span> means the graph “flattens” at that <span class="math inline">\(x\)</span> (multiplicity <span class="math inline">\(&gt;1\)</span>) and may not change direction there.
 </details>
 <hr />
 </div>
 <div id="fxsqrtxdfrac3x2" class="section level3 unnumbered hasAnchor">
 <h3>7. <span class="math inline">\(f(x)=\sqrt{x}+\dfrac{3}{x^2}\)</span><a href="derivative-rules---workbook.html#fxsqrtxdfrac3x2" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p><strong>Follow-up:</strong> At which <span class="math inline">\(x&gt;0\)</span> is <span class="math inline">\(f&#39;(x)\)</span> <strong>smallest</strong>?</p>
+<p><strong>Follow-up:</strong> Find <span class="math inline">\(f&#39;&#39;(x)\)</span>.</p>
 <details>
 <summary>
 <strong>Math Hint</strong>
 </summary>
-Write <span class="math inline">\(\sqrt{x}=x^{1/2}\)</span> and <span class="math inline">\(3/x^2=3x^{-2}\)</span>. Compute <span class="math inline">\(f&#39;(x)\)</span>.<br />
-To minimize <span class="math inline">\(f&#39;(x)\)</span>, examine <span class="math inline">\(f&#39;&#39;(x)\)</span> and solve <span class="math inline">\(f&#39;&#39;(x)=0\)</span> (then confirm it’s a minimum).
+Rewrite as powers: <span class="math inline">\(\sqrt{x}=x^{1/2}\)</span> and <span class="math inline">\(3/x^2=3x^{-2}\)</span>.<br />
+Differentiate once to get <span class="math inline">\(f&#39;(x)=\tfrac{1}{2}x^{-1/2}-6x^{-3}\)</span>.<br />
+Differentiate again—each exponent decreases by 1 each time.
 </details>
 <details>
 <summary>
 <strong>Conceptual Phone a Friend</strong>
 </summary>
-Think of <span class="math inline">\(f&#39;(x)\)</span> as a tug-of-war: <span class="math inline">\(x^{-1/2}\)</span> (positive, decreasing) vs. <span class="math inline">\(x^{-3}\)</span> (negative, rapidly shrinking in magnitude as <span class="math inline">\(x\)</span> grows).<br />
-The minimum of <span class="math inline">\(f&#39;(x)\)</span> occurs where its rate of change flips from “more negative” to “less negative.”
+You’re differentiating the derivative again to find how the slope <span class="math inline">\(f&#39;(x)\)</span> changes.<br />
+Simplify your final expression to write <span class="math inline">\(f&#39;&#39;(x)\)</span> with clean coefficients and exponents.
 </details>
 <hr />
 </div>
@@ -2236,14 +2238,12 @@ Decide which negative fractional power drives the behavior and whether it sends 
 <!-- Solutions container (now parses Markdown & MathJax) -->
 <div id="sol_set2" hidden="" markdown="1" style="margin-top:0.75rem;">
 <p><strong>6.</strong><br />
-<strong>Derivative:</strong> <span class="math inline">\(f&#39;(x)=-20x^{-3}+2x^{-1/2}\)</span>.<br />
-<strong>Follow-up answer:</strong> Solve <span class="math inline">\(f&#39;(x)=0\)</span>: <span class="math inline">\(-20x^{-3}+2x^{-1/2}=0 \Rightarrow 2x^{-1/2}=20x^{-3}\Rightarrow x^{5/2}=10\)</span>.<br />
-Thus <span class="math inline">\(x=10^{\,2/5}\)</span> (unique <span class="math inline">\(x&gt;0\)</span> where the slope is zero).</p>
+<strong>Derivative:</strong> <span class="math inline">\(f&#39;(x)=4x^{3}-3x^{2}=x^{2}(4x-3)\)</span>.<br />
+<strong>Follow-up answer:</strong> Roots at <span class="math inline">\(x=0\)</span> (double root) and <span class="math inline">\(x=\tfrac{3}{4}\)</span>.<br />
+Since the prompt asks for <span class="math inline">\(x&gt;0\)</span>, the horizontal tangent occurs at <span class="math inline">\(x=\tfrac{3}{4}\)</span> (note: <span class="math inline">\(x=0\)</span> is also a horizontal tangent but is not <span class="math inline">\(&gt;0\)</span>).</p>
 <p><strong>7.</strong><br />
 <strong>Derivative:</strong> <span class="math inline">\(f&#39;(x)=\tfrac{1}{2}x^{-1/2}-6x^{-3}\)</span>.<br />
-<strong>Follow-up answer:</strong> Minimize <span class="math inline">\(f&#39;(x)\)</span> via <span class="math inline">\(f&#39;&#39;(x)=0\)</span>.<br />
-<span class="math inline">\(f&#39;&#39;(x)=-\tfrac{1}{4}x^{-3/2}+18x^{-4}=0 \Rightarrow \tfrac{1}{4}x^{-3/2}=18x^{-4}\Rightarrow x^{5/2}=72\)</span>.<br />
-So <span class="math inline">\(f&#39;(x)\)</span> is smallest at <span class="math inline">\(x=72^{\,2/5}\)</span> (and this is indeed a minimum for <span class="math inline">\(f&#39;\)</span>).</p>
+<strong>Second derivative:</strong> <span class="math inline">\(f&#39;&#39;(x)=-\tfrac{1}{4}x^{-3/2}+18x^{-4}\)</span>.</p>
 <p><strong>8.</strong><br />
 <strong>Derivative:</strong> <span class="math inline">\(f&#39;(x)=6x^{1/2}-\tfrac{7}{2}x^{-3/2}-5\)</span>.<br />
 <strong>Follow-up answer:</strong> For small <span class="math inline">\(x\)</span> (e.g., <span class="math inline">\(0.1\)</span>), the <span class="math inline">\(-\tfrac{7}{2}x^{-3/2}\)</span> term dominates <span class="math inline">\(\Rightarrow f&#39;(x)&lt;0\)</span>.<br />
@@ -2300,20 +2300,21 @@ function unlock_set2() {
 <div class="promptbox">
 <div id="fx6sin-x-3cos-x2" class="section level3 unnumbered hasAnchor">
 <h3>11. <span class="math inline">\(f(x)=6\sin x-3\cos x+2\)</span><a href="derivative-rules---workbook.html#fx6sin-x-3cos-x2" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p><strong>Follow-up:</strong> For <span class="math inline">\(x\in[0,2\pi]\)</span>, at which <span class="math inline">\(x\)</span> is <span class="math inline">\(f&#39;(x)\)</span> <strong>largest</strong>?</p>
+<p><strong>Follow-up:</strong> Explain why <span class="math inline">\(f&#39;(x)=0\)</span> has infinitely many solutions.</p>
 <details>
 <summary>
 <strong>Math Hint</strong>
 </summary>
-Differentiate with basic trig rules: <span class="math inline">\((\sin x)&#39;=\cos x,\; (\cos x)&#39;=-\sin x\)</span>.
-You’ll get a linear combination <span class="math inline">\(A\cos x+B\sin x\)</span>.
+Differentiate using <span class="math inline">\((\sin x)&#39;=\cos x\)</span> and <span class="math inline">\((\cos x)&#39;=-\sin x\)</span>.<br />
+You’ll get a combination of sine and cosine—both periodic functions.
 </details>
 <details>
 <summary>
 <strong>Conceptual Phone a Friend</strong>
 </summary>
-A sum <span class="math inline">\(A\cos x+B\sin x\)</span> has maximum value <span class="math inline">\(\sqrt{A^2+B^2}\)</span> at a phase shift.
-Solve <span class="math inline">\(\tan x=\dfrac{B}{A}\)</span> to find where the maximum occurs in <span class="math inline">\([0,2\pi]\)</span>.
+Because sine and cosine repeat every <span class="math inline">\(2\pi\)</span>, any equation like<br />
+<span class="math inline">\(A\cos x + B\sin x = 0\)</span> will also repeat its zeros every period.<br />
+That’s why the slope <span class="math inline">\(f&#39;(x)\)</span> equals zero infinitely many times.
 </details>
 <hr />
 </div>
@@ -2337,22 +2338,23 @@ At <span class="math inline">\(x=\tfrac{\pi}{2}\)</span>, <span class="math inli
 </div>
 <div id="fx2ex-5x21" class="section level3 unnumbered hasAnchor">
 <h3>13. <span class="math inline">\(f(x)=2e^{x}-5x^{2}+1\)</span><a href="derivative-rules---workbook.html#fx2ex-5x21" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p><strong>Follow-up:</strong> Approximately where is the slope zero? (Solve <span class="math inline">\(f&#39;(x)=0\)</span> numerically.)</p>
+<p><strong>Follow-up:</strong> Find <span class="math inline">\(f&#39;&#39;(x)\)</span>, <span class="math inline">\(f&#39;&#39;&#39;(x)\)</span>, and <span class="math inline">\(f^{(4)}(x)\)</span>, what will happen if you keep going?</p>
 <details>
 <summary>
 <strong>Math Hint</strong>
 </summary>
-Set <span class="math inline">\(2e^{x}-10x=0\Rightarrow e^{x}=5x\)</span>.
-Bracket the solution by testing a couple of nearby <span class="math inline">\(x\)</span> values to see where the sides cross.
+Differentiate term by term.<br />
+Remember: the derivative of <span class="math inline">\(e^{x}\)</span> is itself, and powers of <span class="math inline">\(x\)</span> follow the Power Rule.<br />
+Keep track of signs—each new derivative reduces the degree of the polynomial part.
 </details>
 <details>
 <summary>
 <strong>Conceptual Phone a Friend</strong>
 </summary>
-Compare the growth rates: near <span class="math inline">\(x=0\)</span> the exponential starts above the line <span class="math inline">\(5x\)</span>, but the line catches up.
-Look for the intersection between a gently curved exponential and a line through the origin.
+Notice that the exponential term never disappears under differentiation,<br />
+while the polynomial part eventually becomes constant and then <span class="math inline">\(0\)</span>.<br />
+This highlights the difference between exponential and algebraic growth.
 </details>
-<hr />
 </div>
 <div id="fx7x3ex" class="section level3 unnumbered hasAnchor">
 <h3>14. <span class="math inline">\(f(x)=7x^{3}+e^{x}\)</span><a href="derivative-rules---workbook.html#fx7x3ex" class="anchor-section" aria-label="Anchor link to header"></a></h3>
@@ -2374,19 +2376,20 @@ As <span class="math inline">\(x\to+\infty\)</span>, exponentials eventually out
 </div>
 <div id="fx3sin-xex" class="section level3 unnumbered hasAnchor">
 <h3>15. <span class="math inline">\(f(x)=3\sin x+e^{x}\)</span><a href="derivative-rules---workbook.html#fx3sin-xex" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p><strong>Follow-up:</strong> Give a simple condition on <span class="math inline">\(x\)</span> that <strong>guarantees</strong> <span class="math inline">\(f&#39;(x)&gt;0\)</span>.</p>
+<p><strong>Follow-up:</strong> Find <span class="math inline">\(f&#39;&#39;(x)\)</span>.</p>
 <details>
 <summary>
 <strong>Math Hint</strong>
 </summary>
-Differentiate to get <span class="math inline">\(f&#39;(x)=3\cos x+e^{x}\)</span>. Use the bound <span class="math inline">\(\cos x\ge -1\)</span> to find a lower bound for <span class="math inline">\(f&#39;(x)\)</span>.
+Differentiate term by term: <span class="math inline">\((\sin x)&#39;=\cos x\)</span> and <span class="math inline">\((e^{x})&#39;=e^{x}\)</span>.<br />
+Repeat once more to get the second derivative.
 </details>
 <details>
 <summary>
 <strong>Conceptual Phone a Friend</strong>
 </summary>
-Even when the cosine term is as small as <span class="math inline">\(-3\)</span>, the exponential can overpower it.
-Find <span class="math inline">\(x\)</span> so that <span class="math inline">\(e^{x}&gt;3\)</span>; then the sum must be positive no matter the cosine.
+Compare how the exponential and trigonometric parts behave.<br />
+The exponential term keeps growing, while sine and cosine oscillate between <span class="math inline">\(-1\)</span> and <span class="math inline">\(1\)</span>.
 </details>
 <hr />
 </div>
@@ -2400,24 +2403,28 @@ Find <span class="math inline">\(x\)</span> so that <span class="math inline">\(
 <div id="sol_set3" hidden="" markdown="1" style="margin-top:0.75rem;">
 <p><strong>11.</strong><br />
 <strong>Derivative:</strong> <span class="math inline">\(f&#39;(x)=6\cos x+3\sin x.\)</span><br />
-<strong>Follow-up answer:</strong> The maximum of <span class="math inline">\(6\cos x+3\sin x\)</span> is <span class="math inline">\(\sqrt{6^{2}+3^{2}}=3\sqrt{5}\)</span>, attained where<br />
-<span class="math inline">\(\tan x=\dfrac{3}{6}=\dfrac{1}{2}\)</span>. Thus in <span class="math inline">\([0,2\pi]\)</span> the maximizer is <span class="math inline">\(x=\arctan(1/2)\approx1.107\)</span> (and also <span class="math inline">\(+\;2\pi\)</span> if extended).</p>
+<strong>Follow-up answer:</strong> The equation <span class="math inline">\(6\cos x+3\sin x=0\)</span> simplifies to <span class="math inline">\(\tan x=-2\)</span>.<br />
+Since <span class="math inline">\(\tan x\)</span> has period <span class="math inline">\(\pi\)</span>, this equality recurs every <span class="math inline">\(\pi\)</span> units,<br />
+so there are infinitely many <span class="math inline">\(x\)</span> satisfying <span class="math inline">\(f&#39;(x)=0\)</span>.</p>
 <p><strong>12.</strong><br />
 <strong>Derivative:</strong> <span class="math inline">\(f&#39;(x)=8x+3\cos x.\)</span><br />
 <strong>Follow-up answer:</strong> At <span class="math inline">\(x=\tfrac{\pi}{2}\)</span>, <span class="math inline">\(f&#39;(x)=8\cdot \tfrac{\pi}{2}+3\cdot 0=4\pi\)</span>.<br />
 The polynomial term dominates; the trig term contributes <span class="math inline">\(0\)</span>.</p>
 <p><strong>13.</strong><br />
-<strong>Derivative:</strong> <span class="math inline">\(f&#39;(x)=2e^{x}-10x.\)</span><br />
-<strong>Follow-up answer:</strong> Solve <span class="math inline">\(2e^{x}-10x=0\Rightarrow e^{x}=5x\)</span>.<br />
-Numerically <span class="math inline">\(x\approx0.258\)</span> (root between <span class="math inline">\(0.2\)</span> and <span class="math inline">\(0.3\)</span>; e.g., by one Newton step or bisection).</p>
+<strong>First derivative:</strong> <span class="math inline">\(f&#39;(x)=2e^{x}-10x\)</span><br />
+<strong>Second derivative:</strong> <span class="math inline">\(f&#39;&#39;(x)=2e^{x}-10\)</span><br />
+<strong>Third derivative:</strong> <span class="math inline">\(f&#39;&#39;&#39;(x)=2e^{x}\)</span><br />
+<strong>Fourth derivative:</strong> <span class="math inline">\(f^{(4)}(x)=2e^{x}\)</span></p>
+<p><strong>Follow-up answer:</strong><br />
+The exponential term <span class="math inline">\(2e^{x}\)</span> remains unchanged with each derivative,<br />
+while the polynomial part vanishes after two differentiations.</p>
 <p><strong>14.</strong><br />
 <strong>Derivative:</strong> <span class="math inline">\(f&#39;(x)=21x^{2}+e^{x}.\)</span><br />
 <strong>Follow-up answer:</strong> As <span class="math inline">\(x\to-\infty\)</span>, <span class="math inline">\(e^{x}\to0\)</span> and <span class="math inline">\(21x^{2}\)</span> dominates (positive).<br />
 As <span class="math inline">\(x\to+\infty\)</span>, both terms increase, but <span class="math inline">\(e^{x}\)</span> eventually dominates any polynomial.</p>
 <p><strong>15.</strong><br />
-<strong>Derivative:</strong> <span class="math inline">\(f&#39;(x)=3\cos x+e^{x}.\)</span><br />
-<strong>Follow-up answer:</strong> Since <span class="math inline">\(\cos x\ge -1\)</span>, we have <span class="math inline">\(f&#39;(x)\ge e^{x}-3\)</span>.<br />
-Thus <strong>if <span class="math inline">\(x&gt;\ln 3\)</span></strong>, then <span class="math inline">\(e^{x}&gt;3\)</span> and <span class="math inline">\(f&#39;(x)&gt;0\)</span> for all such <span class="math inline">\(x\)</span>.</p>
+<strong>First derivative:</strong> <span class="math inline">\(f&#39;(x)=3\cos x+e^{x}\)</span><br />
+<strong>Second derivative:</strong> <span class="math inline">\(f&#39;&#39;(x)=-3\sin x+e^{x}\)</span></p>
 </div>
 <!-- Password gate -->
 <form onsubmit="unlock_set3(); return false;" id="gate_set3" style="margin-top:0.75rem;">
@@ -2459,102 +2466,105 @@ function unlock_set3() {
 <div id="derivative-applications-set-4-of-4" class="section level2 unnumbered hasAnchor">
 <h2>Derivative Applications (Set 4 of 4)<a href="derivative-rules---workbook.html#derivative-applications-set-4-of-4" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <div class="promptbox">
-<div id="fxex-cos-x" class="section level3 unnumbered hasAnchor">
-<h3>16. <span class="math inline">\(f(x)=e^{x}-\cos x\)</span><a href="derivative-rules---workbook.html#fxex-cos-x" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p><strong>Follow-up:</strong> Prove that <span class="math inline">\(f\)</span> is <strong>strictly increasing on <span class="math inline">\([0,\infty)\)</span></strong>.</p>
+<div id="fxe5x33x-ln-x" class="section level3 unnumbered hasAnchor">
+<h3>16. <span class="math inline">\(f(x)=e^{\,5x^{3}+3x-\ln x}\)</span><a href="derivative-rules---workbook.html#fxe5x33x-ln-x" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><strong>Follow-up:</strong> Describe what happens to <span class="math inline">\(f&#39;(x)\)</span> as <span class="math inline">\(x\)</span> becomes large.</p>
 <details>
 <summary>
 <strong>Math Hint</strong>
 </summary>
-Differentiate: <span class="math inline">\(f&#39;(x)=e^{x}+\sin x\)</span>.<br />
-Remember bounds: <span class="math inline">\(-1\le \sin x\le 1\)</span> and <span class="math inline">\(e^{x}\ge 1\)</span> for <span class="math inline">\(x\ge 0\)</span>.
+Use the identity<br />
+<span class="math display">\[
+\frac{d}{dx}\big(e^{g(x)}\big)=g&#39;(x)e^{g(x)}.
+\]</span><br />
+First find <span class="math inline">\(g&#39;(x)\)</span> for <span class="math inline">\(g(x)=5x^{3}+3x-\ln x\)</span>, then look at the signs of <span class="math inline">\(g&#39;(x)\)</span> and <span class="math inline">\(e^{g(x)}\)</span> when <span class="math inline">\(x\)</span> is large.
 </details>
 <details>
 <summary>
 <strong>Conceptual Phone a Friend</strong>
 </summary>
-Think of “steady growth + oscillation.” On <span class="math inline">\([0,\infty)\)</span>, the steady growth term is at least <span class="math inline">\(1\)</span>, while the oscillation can subtract at most <span class="math inline">\(1\)</span>.<br />
-Can the oscillation ever fully cancel the steady growth?
+Remember that <span class="math inline">\(e^{g(x)}\)</span> is always positive.<br />
+If <span class="math inline">\(g&#39;(x)\)</span> grows quickly and stays positive for large <span class="math inline">\(x\)</span>, then <span class="math inline">\(f&#39;(x)\)</span> will also grow rapidly.<br />
+You’re describing how steeply the function rises for big <span class="math inline">\(x\)</span>.
+</details>
+</div>
+<div id="fx5cdot2x7x2" class="section level3 unnumbered hasAnchor">
+<h3>17. <span class="math inline">\(f(x)=5\cdot2^{x}+7x^{2}\)</span><a href="derivative-rules---workbook.html#fx5cdot2x7x2" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><strong>Follow-up:</strong> Find <span class="math inline">\(f&#39;&#39;(x)\)</span>.</p>
+<details>
+<summary>
+<strong>Math Hint</strong>
+</summary>
+Use the rule <span class="math inline">\(\dfrac{d}{dx}[a^{x}]=a^{x}\ln a\)</span>.<br />
+Differentiate each term separately; constants stay in front.
+</details>
+<details>
+<summary>
+<strong>Conceptual Phone a Friend</strong>
+</summary>
+The exponential term keeps its same shape after each derivative,<br />
+while the polynomial term’s power drops by 1 each time.
 </details>
 <hr />
 </div>
-<div id="fx2tan-x4x2" class="section level3 unnumbered hasAnchor">
-<h3>17. <span class="math inline">\(f(x)=2\tan x+4x^{2}\)</span><a href="derivative-rules---workbook.html#fx2tan-x4x2" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p><strong>Follow-up:</strong> On the interval <span class="math inline">\(\left(-\tfrac{\pi}{2},\tfrac{\pi}{2}\right)\)</span>, <strong>show that <span class="math inline">\(f&#39;(x)\)</span> has at least one root in <span class="math inline">\((-1,0)\)</span></strong>.</p>
+<div id="fx4ex-6x32" class="section level3 unnumbered hasAnchor">
+<h3>18. <span class="math inline">\(f(x)=4e^{x}-6x^{3}+2\)</span><a href="derivative-rules---workbook.html#fx4ex-6x32" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><strong>Follow-up:</strong> Find <span class="math inline">\(f&#39;&#39;(x)\)</span>.</p>
 <details>
 <summary>
 <strong>Math Hint</strong>
 </summary>
-<span class="math inline">\(f&#39;(x)=2\sec^{2}x+8x\)</span>. Evaluate <span class="math inline">\(f&#39;(0)\)</span> and <span class="math inline">\(f&#39;(-1)\)</span>.<br />
-Use continuity of <span class="math inline">\(f&#39;\)</span> on <span class="math inline">\(\left(-\tfrac{\pi}{2},\tfrac{\pi}{2}\right)\)</span>.
+Remember: <span class="math inline">\((e^{x})&#39;=e^{x}\)</span> and constants vanish when differentiated.<br />
+Apply the Power Rule to <span class="math inline">\(x^{3}\)</span>.
 </details>
 <details>
 <summary>
 <strong>Conceptual Phone a Friend</strong>
 </summary>
-Near <span class="math inline">\(x=0\)</span>, the <span class="math inline">\(\sec^{2}x\)</span> part is about <span class="math inline">\(1\)</span>, so <span class="math inline">\(f&#39;\)</span> is positive.<br />
-For a modest negative <span class="math inline">\(x\)</span>, the linear term <span class="math inline">\(8x\)</span> can outweigh the <span class="math inline">\(\sec^{2}x\)</span> term, making <span class="math inline">\(f&#39;\)</span> negative.<br />
-IVT then guarantees a sign change (hence a root) in <span class="math inline">\((-1,0)\)</span>.
+Each differentiation reduces the power of the polynomial,<br />
+but the exponential term never changes form.
 </details>
 <hr />
 </div>
-<div id="fx5exln-x" class="section level3 unnumbered hasAnchor">
-<h3>18. <span class="math inline">\(f(x)=5e^{x}+\ln x\)</span><a href="derivative-rules---workbook.html#fx5exln-x" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p><strong>Follow-up:</strong> Determine the <strong>domain of <span class="math inline">\(f\)</span></strong> and describe the <strong>end behavior of <span class="math inline">\(f&#39;(x)\)</span></strong> as <span class="math inline">\(x\to 0^{+}\)</span> and as <span class="math inline">\(x\to\infty\)</span>.<br />
-(Does <span class="math inline">\(f&#39;(x)\)</span> ever become non-positive on its domain?)</p>
+<div id="fx8xlog_10x" class="section level3 unnumbered hasAnchor">
+<h3>19. <span class="math inline">\(f(x)=8x+\log_{10}x\)</span><a href="derivative-rules---workbook.html#fx8xlog_10x" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><strong>Follow-up:</strong> Find <span class="math inline">\(f&#39;&#39;(x)\)</span>.</p>
 <details>
 <summary>
 <strong>Math Hint</strong>
 </summary>
-Domain: where is <span class="math inline">\(\ln x\)</span> defined?<br />
-<span class="math inline">\(f&#39;(x)=5e^{x}+\dfrac{1}{x}\)</span>. Examine limits of each term near <span class="math inline">\(0^{+}\)</span> and <span class="math inline">\(\infty\)</span>.
+Use the base-10 log rule:<br />
+<span class="math display">\[
+\frac{d}{dx}[\log_{10}x]=\frac{1}{x\ln10}.
+\]</span>
+The linear term’s derivative is just its coefficient.
 </details>
 <details>
 <summary>
 <strong>Conceptual Phone a Friend</strong>
 </summary>
-For small positive <span class="math inline">\(x\)</span>, <span class="math inline">\(1/x\)</span> is huge and positive; the exponential is also positive.<br />
-For large <span class="math inline">\(x\)</span>, the exponential dominates any <span class="math inline">\(1/x\)</span> term.<br />
-Ask: can a sum of two positive quantities be <span class="math inline">\(\le 0\)</span>?
+The logarithm’s slope decreases as <span class="math inline">\(x\)</span> grows,<br />
+while the linear term keeps a constant slope.
 </details>
 <hr />
 </div>
-<div id="fx4x3ln-x" class="section level3 unnumbered hasAnchor">
-<h3>19. <span class="math inline">\(f(x)=4x+3\ln x\)</span><a href="derivative-rules---workbook.html#fx4x3ln-x" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p><strong>Follow-up:</strong> Does <span class="math inline">\(f&#39;(x)\)</span> ever cross zero on <span class="math inline">\((0,\infty)\)</span>?<br />
-What does that imply about <strong>where <span class="math inline">\(f\)</span> attains a minimum</strong> on <span class="math inline">\((0,\infty)\)</span>?</p>
+<div id="fx3ex2ln-x" class="section level3 unnumbered hasAnchor">
+<h3>20. <span class="math inline">\(f(x)=3e^{x}+2\ln x\)</span><a href="derivative-rules---workbook.html#fx3ex2ln-x" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><strong>Follow-up:</strong> Find <span class="math inline">\(f&#39;&#39;(x)\)</span>.</p>
 <details>
 <summary>
 <strong>Math Hint</strong>
 </summary>
-<span class="math inline">\(f&#39;(x)=4+\dfrac{3}{x}\)</span>. Consider its sign for all <span class="math inline">\(x&gt;0\)</span>.
+Differentiate term-by-term:<br />
+<span class="math inline">\((e^{x})&#39;=e^{x}\)</span> and <span class="math inline">\((\ln x)&#39;=\tfrac{1}{x}\)</span>.<br />
+Then repeat to get <span class="math inline">\(f&#39;&#39;(x)\)</span>.
 </details>
 <details>
 <summary>
 <strong>Conceptual Phone a Friend</strong>
 </summary>
-If the derivative never becomes negative on the domain, the function can’t turn down to form an interior minimum.<br />
-Where do you look for minima if the function is strictly increasing?
-</details>
-<hr />
-</div>
-<div id="fx2ex-sin-x5" class="section level3 unnumbered hasAnchor">
-<h3>20. <span class="math inline">\(f(x)=2e^{x}-\sin x+5\)</span><a href="derivative-rules---workbook.html#fx2ex-sin-x5" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p><strong>Follow-up:</strong> Prove that <span class="math inline">\(f&#39;(x)\ge 1\)</span> for all <span class="math inline">\(x\ge 0\)</span>.<br />
-Then describe qualitatively how the derivative behaves over any interval of length <span class="math inline">\(2\pi\)</span> on <span class="math inline">\([0,\infty)\)</span>.</p>
-<details>
-<summary>
-<strong>Math Hint</strong>
-</summary>
-<span class="math inline">\(f&#39;(x)=2e^{x}-\cos x\)</span>. On <span class="math inline">\(x\ge 0\)</span>, <span class="math inline">\(e^{x}\ge 1\)</span> and <span class="math inline">\(-\cos x\ge -1\)</span>.<br />
-Compare <span class="math inline">\(2e^{x}\)</span> with the most the cosine term can reduce.
-</details>
-<details>
-<summary>
-<strong>Conceptual Phone a Friend</strong>
-</summary>
-Think “exponential trend with a bounded wiggle.”<br />
-The cosine can only shift the slope up or down by at most <span class="math inline">\(1\)</span>, but the exponential term keeps pushing the slope upward as <span class="math inline">\(x\)</span> grows.
+Notice how the exponential part keeps increasing at the same rate,<br />
+but the logarithmic part’s second derivative is negative, showing it bends downward.
 </details>
 <hr />
 </div>
@@ -2567,28 +2577,31 @@ The cosine can only shift the slope up or down by at most <span class="math inli
 <!-- Enable Markdown + MathJax inside the hidden block -->
 <div id="sol_set4" hidden="" markdown="1" style="margin-top:0.75rem;">
 <p><strong>16.</strong><br />
-<strong>Derivative:</strong> <span class="math inline">\(f&#39;(x)=e^{x}+\sin x\)</span>.<br />
-<strong>Follow-up answer:</strong> For <span class="math inline">\(x\ge 0\)</span>, <span class="math inline">\(e^{x}\ge 1\)</span> and <span class="math inline">\(\sin x\ge -1\)</span>, so <span class="math inline">\(f&#39;(x)\ge 1-1=0\)</span>.<br />
-Equality would require simultaneously <span class="math inline">\(e^{x}=1\)</span> and <span class="math inline">\(\sin x=-1\)</span>; the first gives <span class="math inline">\(x=0\)</span>, but <span class="math inline">\(\sin 0=0\neq -1\)</span>.<br />
-Hence <span class="math inline">\(f&#39;(x)&gt;0\)</span> on <span class="math inline">\([0,\infty)\)</span>, so <span class="math inline">\(f\)</span> is strictly increasing there.</p>
+Let <span class="math inline">\(g(x)=5x^{3}+3x-\ln x\)</span>.<br />
+Then <span class="math inline">\(g&#39;(x)=15x^{2}+3-\tfrac{1}{x}\)</span>.</p>
+<p>So<br />
+<span class="math display">\[
+f&#39;(x)=\big(15x^{2}+3-\tfrac{1}{x}\big)e^{\,5x^{3}+3x-\ln x}.
+\]</span></p>
+<p><strong>Follow-up answer:</strong><br />
+As <span class="math inline">\(x\)</span> becomes large, <span class="math inline">\(15x^{2}+3-\tfrac{1}{x}\approx15x^{2}\)</span> (positive and increasing),<br />
+and <span class="math inline">\(e^{\,5x^{3}+3x-\ln x}\)</span> grows extremely fast.<br />
+Thus <span class="math inline">\(f&#39;(x)\)</span> increases rapidly, meaning <span class="math inline">\(f(x)\)</span> becomes very steep for large <span class="math inline">\(x\)</span>.</p>
 <p><strong>17.</strong><br />
-<strong>Derivative:</strong> <span class="math inline">\(f&#39;(x)=2\sec^{2}x+8x\)</span>.<br />
-<strong>Follow-up answer:</strong> <span class="math inline">\(f&#39;(0)=2&gt;0\)</span>. At <span class="math inline">\(x=-1\)</span>, <span class="math inline">\(\sec^{2}(-1)\approx 3.425\)</span>, so <span class="math inline">\(f&#39;(-1)\approx 2(3.425)+8(-1)\approx -1.15&lt;0\)</span>.<br />
-By continuity on <span class="math inline">\(\left(-\tfrac{\pi}{2},\tfrac{\pi}{2}\right)\)</span>, there exists <span class="math inline">\(c\in(-1,0)\)</span> with <span class="math inline">\(f&#39;(c)=0\)</span> (Intermediate Value Theorem).</p>
+<strong>First derivative:</strong> <span class="math inline">\(f&#39;(x)=5\cdot2^{x}\ln2+14x\)</span><br />
+<strong>Second derivative:</strong> <span class="math inline">\(f&#39;&#39;(x)=5\cdot2^{x}(\ln2)^{2}+14\)</span></p>
+<hr />
 <p><strong>18.</strong><br />
-<strong>Derivative:</strong> <span class="math inline">\(f&#39;(x)=5e^{x}+\dfrac{1}{x}\)</span>, with <strong>domain</strong> <span class="math inline">\(x&gt;0\)</span>.<br />
-<strong>Follow-up answer:</strong> As <span class="math inline">\(x\to 0^{+}\)</span>, <span class="math inline">\(1/x\to +\infty\)</span> and <span class="math inline">\(5e^{x}\to 5\)</span>, so <span class="math inline">\(f&#39;(x)\to +\infty\)</span>.<br />
-As <span class="math inline">\(x\to\infty\)</span>, <span class="math inline">\(5e^{x}\)</span> dominates and <span class="math inline">\(f&#39;(x)\to +\infty\)</span>.<br />
-Because both terms are positive for <span class="math inline">\(x&gt;0\)</span>, <span class="math inline">\(f&#39;(x)&gt;0\)</span> everywhere on its domain (never non-positive).</p>
+<strong>First derivative:</strong> <span class="math inline">\(f&#39;(x)=4e^{x}-18x^{2}\)</span><br />
+<strong>Second derivative:</strong> <span class="math inline">\(f&#39;&#39;(x)=4e^{x}-36x\)</span></p>
+<hr />
 <p><strong>19.</strong><br />
-<strong>Derivative:</strong> <span class="math inline">\(f&#39;(x)=4+\dfrac{3}{x}\)</span>.<br />
-<strong>Follow-up answer:</strong> For all <span class="math inline">\(x&gt;0\)</span>, <span class="math inline">\(4+\dfrac{3}{x}&gt;4&gt;0\)</span>; thus <span class="math inline">\(f&#39;(x)\)</span> never crosses zero.<br />
-Therefore <span class="math inline">\(f\)</span> is strictly increasing on <span class="math inline">\((0,\infty)\)</span>.<br />
-The minimum on <span class="math inline">\((0,\infty)\)</span> is not attained in the interior; instead <span class="math inline">\(f(x)\to -\infty\)</span> as <span class="math inline">\(x\to 0^{+}\)</span> (since <span class="math inline">\(\ln x\to -\infty\)</span>).</p>
+<strong>First derivative:</strong> <span class="math inline">\(f&#39;(x)=8+\dfrac{1}{x\ln10}\)</span><br />
+<strong>Second derivative:</strong> <span class="math inline">\(f&#39;&#39;(x)=-\dfrac{1}{x^{2}\ln10}\)</span></p>
+<hr />
 <p><strong>20.</strong><br />
-<strong>Derivative:</strong> <span class="math inline">\(f&#39;(x)=2e^{x}-\cos x\)</span>.<br />
-<strong>Follow-up answer:</strong> For <span class="math inline">\(x\ge 0\)</span>, <span class="math inline">\(2e^{x}\ge 2\)</span> and <span class="math inline">\(-\cos x\ge -1\)</span>; hence <span class="math inline">\(f&#39;(x)\ge 2-1=1\)</span>.<br />
-Over any interval of length <span class="math inline">\(2\pi\)</span>, <span class="math inline">\(-\cos x\)</span> completes one full “wiggle” between <span class="math inline">\(-1\)</span> and <span class="math inline">\(+1\)</span>, but the baseline <span class="math inline">\(2e^{x}\)</span> is increasing, so <span class="math inline">\(f&#39;(x)\)</span> is strictly increasing overall with small bounded oscillations.</p>
+<strong>First derivative:</strong> <span class="math inline">\(f&#39;(x)=3e^{x}+\dfrac{2}{x}\)</span><br />
+<strong>Second derivative:</strong> <span class="math inline">\(f&#39;&#39;(x)=3e^{x}-\dfrac{2}{x^{2}}\)</span></p>
 </div>
 <!-- Password gate -->
 <form onsubmit="unlock_set4(); return false;" id="gate_set4" style="margin-top:0.75rem;">
@@ -2613,7 +2626,7 @@ function unlock_set4() {
     input.value = '';
     msg.textContent = '';
   } else {
-    msg.textContent = 'Incorrect password. Try again.';
+    msg.textContent = 'Oi! Have you really finished?';
     input.value = '';
     input.focus();
   }
