@@ -448,3 +448,10 @@ step-3-deriving-the-rule-from-the-product-rule
 step-4-apply-the-instructions-to-real-examples
 step-5-reflect-low-d-high-minus-high-d-low
 step-6-quick-practice-apply-the-quotient-rule
+activity-reading-math-as-instructions-the-chain-rule
+step-1-read-the-expression-aloud-6
+step-2-translate-to-a-step-by-step-recipe-6
+step-3-deriving-the-rule-conceptually
+step-4-apply-the-instructions-to-real-examples-1
+step-5-reflect-when-one-change-depends-on-another
+step-6-quick-practice-apply-the-chain-rule

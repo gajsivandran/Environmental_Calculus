@@ -709,6 +709,15 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="9.12.5" data-path="derivative-rules---workbook.html"><a href="derivative-rules---workbook.html#step-5-reflect-low-d-high-minus-high-d-low"><i class="fa fa-check"></i><b>9.12.5</b> Step 5: Reflect — “Low d-High Minus High d-Low”</a></li>
 <li class="chapter" data-level="9.12.6" data-path="derivative-rules---workbook.html"><a href="derivative-rules---workbook.html#step-6-quick-practice-apply-the-quotient-rule"><i class="fa fa-check"></i><b>9.12.6</b> Step 6: Quick Practice — Apply the Quotient Rule</a></li>
 </ul></li>
+<li class="chapter" data-level="9.13" data-path="derivative-rules---workbook.html"><a href="derivative-rules---workbook.html#activity-reading-math-as-instructions-the-chain-rule"><i class="fa fa-check"></i><b>9.13</b> Activity: Reading Math as Instructions — The Chain Rule</a>
+<ul>
+<li class="chapter" data-level="9.13.1" data-path="derivative-rules---workbook.html"><a href="derivative-rules---workbook.html#step-1-read-the-expression-aloud-6"><i class="fa fa-check"></i><b>9.13.1</b> Step 1: Read the Expression Aloud</a></li>
+<li class="chapter" data-level="9.13.2" data-path="derivative-rules---workbook.html"><a href="derivative-rules---workbook.html#step-2-translate-to-a-step-by-step-recipe-6"><i class="fa fa-check"></i><b>9.13.2</b> Step 2: Translate to a Step-by-Step Recipe</a></li>
+<li class="chapter" data-level="9.13.3" data-path="derivative-rules---workbook.html"><a href="derivative-rules---workbook.html#step-3-deriving-the-rule-conceptually"><i class="fa fa-check"></i><b>9.13.3</b> Step 3: Deriving the Rule Conceptually</a></li>
+<li class="chapter" data-level="9.13.4" data-path="derivative-rules---workbook.html"><a href="derivative-rules---workbook.html#step-4-apply-the-instructions-to-real-examples-1"><i class="fa fa-check"></i><b>9.13.4</b> Step 4: Apply the Instructions to Real Examples</a></li>
+<li class="chapter" data-level="9.13.5" data-path="derivative-rules---workbook.html"><a href="derivative-rules---workbook.html#step-5-reflect-when-one-change-depends-on-another"><i class="fa fa-check"></i><b>9.13.5</b> Step 5: Reflect — When One Change Depends on Another</a></li>
+<li class="chapter" data-level="9.13.6" data-path="derivative-rules---workbook.html"><a href="derivative-rules---workbook.html#step-6-quick-practice-apply-the-chain-rule"><i class="fa fa-check"></i><b>9.13.6</b> Step 6: Quick Practice — Apply the Chain Rule</a></li>
+</ul></li>
 </ul></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -3159,7 +3168,219 @@ Simplify your answers where possible.</p>
 </div>
 </div>
 <hr />
+</div>
+</div>
+<div id="activity-reading-math-as-instructions-the-chain-rule" class="section level2 hasAnchor" number="9.13">
+<h2><span class="header-section-number">9.13</span> Activity: Reading Math as Instructions — The Chain Rule<a href="derivative-rules---workbook.html#activity-reading-math-as-instructions-the-chain-rule" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>The <strong>Chain Rule</strong> tells us how to take the derivative of a <em>composition</em> of functions —<br />
+when one function is inside another.<br />
+It’s the mathematical version of saying: <em>“When a change depends on something else that’s also changing, the total rate combines both.”</em></p>
+<hr />
+<div id="step-1-read-the-expression-aloud-6" class="section level3 hasAnchor" number="9.13.1">
+<h3><span class="header-section-number">9.13.1</span> Step 1: Read the Expression Aloud<a href="derivative-rules---workbook.html#step-1-read-the-expression-aloud-6" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="promptbox">
+<p><strong>Prompt:</strong><br />
+Read this equation aloud and explain what each part is telling you to do:</p>
+<p><span class="math display">\[
+\frac{d}{dx}\big[f(g(x))\big] = f&#39;(g(x)) \cdot g&#39;(x)
+\]</span></p>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Symbol / Term</th>
+<th align="left">What It Tells You To Do</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"><span class="math inline">\(f(g(x))\)</span></td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left"><span class="math inline">\(f&#39;(g(x))\)</span></td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left"><span class="math inline">\(g(x)\)</span></td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left"><span class="math inline">\(g&#39;(x)\)</span></td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left"><span class="math inline">\(f&#39;(g(x)) \cdot g&#39;(x)\)</span></td>
+<td align="left"></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Notes:</strong><br />
+<br><br><br><br><br><br></p>
+</div>
+<hr />
+</div>
+<div id="step-2-translate-to-a-step-by-step-recipe-6" class="section level3 hasAnchor" number="9.13.2">
+<h3><span class="header-section-number">9.13.2</span> Step 2: Translate to a Step-by-Step Recipe<a href="derivative-rules---workbook.html#step-2-translate-to-a-step-by-step-recipe-6" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="promptbox">
+<p><strong>Activity (Think–Pair–Share):</strong><br />
+Describe the <strong>procedure</strong> this rule gives you in plain English.</p>
+<ol style="list-style-type: decimal">
+<li>Identify the <strong>outer function</strong> <span class="math inline">\(f(\,\cdot\,)\)</span>.<br />
+</li>
+<li>Identify the <strong>inner function</strong> <span class="math inline">\(g(x)\)</span>.<br />
+</li>
+<li>Differentiate the outer function, keeping the inside the same: <span class="math inline">\(f&#39;(g(x))\)</span>.<br />
+</li>
+<li>Multiply by the derivative of the inner function <span class="math inline">\(g&#39;(x)\)</span>.</li>
+</ol>
+<p>Now apply this recipe to a few examples:</p>
+<table>
+<colgroup>
+<col width="28%" />
+<col width="27%" />
+<col width="25%" />
+<col width="18%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Function <span class="math inline">\(h(x)\)</span></th>
+<th align="left">Outer <span class="math inline">\(f(\cdot)\)</span></th>
+<th align="left">Inner <span class="math inline">\(g(x)\)</span></th>
+<th align="left"><span class="math inline">\(h&#39;(x)\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"><span class="math inline">\((3x^2 + 1)^4\)</span></td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left"><span class="math inline">\(\sin(5x)\)</span></td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left"><span class="math inline">\(e^{x^3}\)</span></td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Notes:</strong><br />
+<br><br><br><br><br><br></p>
+</div>
+<hr />
+</div>
+<div id="step-3-deriving-the-rule-conceptually" class="section level3 hasAnchor" number="9.13.3">
+<h3><span class="header-section-number">9.13.3</span> Step 3: Deriving the Rule Conceptually<a href="derivative-rules---workbook.html#step-3-deriving-the-rule-conceptually" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>If <span class="math inline">\(y = f(u)\)</span> and <span class="math inline">\(u = g(x)\)</span>, then small changes relate as:</p>
+<p><span class="math display">\[
+\frac{dy}{dx} = \frac{dy}{du} \cdot \frac{du}{dx}
+\]</span></p>
+<p>That is — a change in <span class="math inline">\(x\)</span> causes a change in <span class="math inline">\(u\)</span>,<br />
+which in turn causes a change in <span class="math inline">\(y\)</span>.<br />
+The total effect multiplies these two rates.</p>
+<p>This idea gives us:</p>
+<p><span class="math display">\[
+\boxed{\frac{d}{dx}[f(g(x))] = f&#39;(g(x)) \cdot g&#39;(x)}
+\]</span></p>
+<p>The Chain Rule captures how <strong>nested change</strong> works — one rate feeding into another.</p>
+<hr />
+</div>
+<div id="step-4-apply-the-instructions-to-real-examples-1" class="section level3 hasAnchor" number="9.13.4">
+<h3><span class="header-section-number">9.13.4</span> Step 4: Apply the Instructions to Real Examples<a href="derivative-rules---workbook.html#step-4-apply-the-instructions-to-real-examples-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="promptbox">
+<p><strong>Practice Example 1 — Everyday Context:</strong></p>
+<p>Let <span class="math inline">\(f(u) = u^2\)</span> and <span class="math inline">\(g(x) = 3x + 2\)</span>.<br />
+Then <span class="math inline">\(h(x) = f(g(x)) = (3x + 2)^2\)</span>.</p>
+<p><span class="math display">\[
+h&#39;(x) = f&#39;(g(x)) \cdot g&#39;(x)
+= 2(3x + 2) \cdot 3 = 6(3x + 2)
+\]</span></p>
+<p><strong>Interpretation (everyday):</strong><br />
+Imagine a <strong>conveyor belt</strong> feeding into a <strong>machine</strong>.</p>
+<ul>
+<li><span class="math inline">\(g(x)\)</span>: how fast the belt moves — converting time to position.<br />
+</li>
+<li><span class="math inline">\(f(u)\)</span>: how output depends on belt position — converting position to output.</li>
+</ul>
+<p>If the belt speeds up, the output changes faster — not just because the machine reacts,<br />
+but because the input itself is changing more quickly.<br />
+The Chain Rule captures this <em>change of a change</em> — when one process drives another.</p>
+<hr />
+<p><strong>Practice Example 2 — Environmental Context:</strong></p>
+<p>Let <span class="math inline">\(f(T)\)</span> be the <strong>rate of photosynthesis</strong> depending on <strong>temperature</strong>,<br />
+and <span class="math inline">\(T(t)\)</span> be the <strong>temperature</strong> changing over the course of a day.<br />
+Then total photosynthesis rate over time is <span class="math inline">\(f(T(t))\)</span>.</p>
+<p>The derivative is:</p>
+<p><span class="math display">\[
+\frac{d}{dt}[f(T(t))] = f&#39;(T(t)) \cdot T&#39;(t)
+\]</span></p>
+<ul>
+<li><span class="math inline">\(f&#39;(T(t))\)</span>: how sensitive photosynthesis is to temperature.<br />
+</li>
+<li><span class="math inline">\(T&#39;(t)\)</span>: how quickly the temperature is changing at that time.</li>
+</ul>
+<p>Together, they show how rapidly the system’s productivity responds<br />
+to both environmental sensitivity and rate of temperature change.</p>
+<p>If temperature rises quickly during midday (<span class="math inline">\(T&#39;(t)\)</span> large) and plants are temperature-sensitive (<span class="math inline">\(f&#39;(T(t))\)</span> large),<br />
+the total rate of change in photosynthesis spikes — a real-world Chain Rule in action.</p>
+<p><strong>Notes:</strong><br />
+<br><br><br><br><br><br><br></p>
+</div>
+<hr />
+</div>
+<div id="step-5-reflect-when-one-change-depends-on-another" class="section level3 hasAnchor" number="9.13.5">
+<h3><span class="header-section-number">9.13.5</span> Step 5: Reflect — When One Change Depends on Another<a href="derivative-rules---workbook.html#step-5-reflect-when-one-change-depends-on-another" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="promptbox">
+<p><strong>Reflection Prompt:</strong><br />
+Complete this thought:</p>
+<blockquote>
+<p>“When I see <span class="math inline">\(\frac{d}{dx}[f(g(x))] = f&#39;(g(x)) \cdot g&#39;(x)\)</span>,<br />
+I think of it as saying ________.”</p>
+</blockquote>
+<p><strong>Notes:</strong><br />
+<br><br><br><br><br><br></p>
+</div>
+<hr />
+</div>
+<div id="step-6-quick-practice-apply-the-chain-rule" class="section level3 hasAnchor" number="9.13.6">
+<h3><span class="header-section-number">9.13.6</span> Step 6: Quick Practice — Apply the Chain Rule<a href="derivative-rules---workbook.html#step-6-quick-practice-apply-the-chain-rule" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="hx-3x2-15" class="section level4 unnumbered hasAnchor">
+<h4>1. <span class="math inline">\(h(x) = (3x^2 + 1)^5\)</span><a href="derivative-rules---workbook.html#hx-3x2-15" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><span class="math inline">\(h&#39;(x) = \, ?\)</span>
+<br><br><br></p>
+<hr />
+</div>
+<div id="hx-sin4x" class="section level4 unnumbered hasAnchor">
+<h4>2. <span class="math inline">\(h(x) = \sin(4x)\)</span><a href="derivative-rules---workbook.html#hx-sin4x" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><span class="math inline">\(h&#39;(x) = \, ?\)</span>
+<br><br><br></p>
+<hr />
+</div>
+<div id="hx-ex3" class="section level4 unnumbered hasAnchor">
+<h4>3. <span class="math inline">\(h(x) = e^{x^3}\)</span><a href="derivative-rules---workbook.html#hx-ex3" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><span class="math inline">\(h&#39;(x) = \, ?\)</span>
+<br><br><br></p>
+<hr />
+</div>
+<div id="hx-sqrt5x-2" class="section level4 unnumbered hasAnchor">
+<h4>4. <span class="math inline">\(h(x) = \sqrt{5x + 2}\)</span><a href="derivative-rules---workbook.html#hx-sqrt5x-2" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><span class="math inline">\(h&#39;(x) = \, ?\)</span>
+<br><br><br></p>
+<hr />
+</div>
+<div id="hx-ln7x2---3" class="section level4 unnumbered hasAnchor">
+<h4>5. <span class="math inline">\(h(x) = \ln(7x^2 - 3)\)</span><a href="derivative-rules---workbook.html#hx-ln7x2---3" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><span class="math inline">\(h&#39;(x) = \, ?\)</span>
+<br><br><br></p>
+<hr />
 
+</div>
 </div>
 </div>
 </div>

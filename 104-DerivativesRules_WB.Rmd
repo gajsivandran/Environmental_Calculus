@@ -2470,3 +2470,194 @@ h'(x) = \, ?
 
 ---
 
+
+
+## Activity: Reading Math as Instructions — The Chain Rule
+
+The **Chain Rule** tells us how to take the derivative of a *composition* of functions —  
+when one function is inside another.  
+It’s the mathematical version of saying: *“When a change depends on something else that’s also changing, the total rate combines both.”*
+
+---
+
+### Step 1: Read the Expression Aloud
+
+::: promptbox
+**Prompt:**  
+Read this equation aloud and explain what each part is telling you to do:
+
+\[
+\frac{d}{dx}\big[f(g(x))\big] = f'(g(x)) \cdot g'(x)
+\]
+
+| Symbol / Term | What It Tells You To Do |
+|:---------------|:------------------------|
+| \( f(g(x)) \) | |
+| \( f'(g(x)) \) | |
+| \( g(x) \) | |
+| \( g'(x) \) | |
+| \( f'(g(x)) \cdot g'(x) \) | |
+
+**Notes:**  
+<br><br><br><br><br><br>
+:::
+
+---
+
+### Step 2: Translate to a Step-by-Step Recipe
+
+::: promptbox
+**Activity (Think–Pair–Share):**  
+Describe the **procedure** this rule gives you in plain English.
+
+1. Identify the **outer function** \( f(\,\cdot\,) \).  
+2. Identify the **inner function** \( g(x) \).  
+3. Differentiate the outer function, keeping the inside the same: \( f'(g(x)) \).  
+4. Multiply by the derivative of the inner function \( g'(x) \).
+
+Now apply this recipe to a few examples:
+
+| Function \( h(x) \) | Outer \( f(\cdot) \) | Inner \( g(x) \) | \( h'(x) \) |
+|:---------------------|:--------------------|:------------------|:-------------|
+| \( (3x^2 + 1)^4 \) | | | |
+| \( \sin(5x) \) | | | |
+| \( e^{x^3} \) | | | |
+
+**Notes:**  
+<br><br><br><br><br><br>
+:::
+
+---
+
+### Step 3: Deriving the Rule Conceptually
+
+If \( y = f(u) \) and \( u = g(x) \), then small changes relate as:
+
+\[
+\frac{dy}{dx} = \frac{dy}{du} \cdot \frac{du}{dx}
+\]
+
+That is — a change in \(x\) causes a change in \(u\),  
+which in turn causes a change in \(y\).  
+The total effect multiplies these two rates.
+
+This idea gives us:
+
+\[
+\boxed{\frac{d}{dx}[f(g(x))] = f'(g(x)) \cdot g'(x)}
+\]
+
+The Chain Rule captures how **nested change** works — one rate feeding into another.
+
+---
+
+### Step 4: Apply the Instructions to Real Examples
+
+::: promptbox
+**Practice Example 1 — Everyday Context:**
+
+Let \( f(u) = u^2 \) and \( g(x) = 3x + 2 \).  
+Then \( h(x) = f(g(x)) = (3x + 2)^2 \).
+
+\[
+h'(x) = f'(g(x)) \cdot g'(x)
+= 2(3x + 2) \cdot 3 = 6(3x + 2)
+\]
+
+**Interpretation (everyday):**  
+Imagine a **conveyor belt** feeding into a **machine**.  
+
+- \( g(x) \): how fast the belt moves — converting time to position.  
+- \( f(u) \): how output depends on belt position — converting position to output.  
+
+If the belt speeds up, the output changes faster — not just because the machine reacts,  
+but because the input itself is changing more quickly.  
+The Chain Rule captures this *change of a change* — when one process drives another.
+
+---
+
+**Practice Example 2 — Environmental Context:**
+
+Let \( f(T) \) be the **rate of photosynthesis** depending on **temperature**,  
+and \( T(t) \) be the **temperature** changing over the course of a day.  
+Then total photosynthesis rate over time is \( f(T(t)) \).
+
+The derivative is:
+
+\[
+\frac{d}{dt}[f(T(t))] = f'(T(t)) \cdot T'(t)
+\]
+
+- \( f'(T(t)) \): how sensitive photosynthesis is to temperature.  
+- \( T'(t) \): how quickly the temperature is changing at that time.  
+
+Together, they show how rapidly the system’s productivity responds  
+to both environmental sensitivity and rate of temperature change.
+
+If temperature rises quickly during midday (\(T'(t)\) large) and plants are temperature-sensitive (\(f'(T(t))\) large),  
+the total rate of change in photosynthesis spikes — a real-world Chain Rule in action.
+
+**Notes:**  
+<br><br><br><br><br><br><br>
+:::
+
+---
+
+### Step 5: Reflect — When One Change Depends on Another
+
+::: promptbox
+**Reflection Prompt:**  
+Complete this thought:
+
+> “When I see \( \frac{d}{dx}[f(g(x))] = f'(g(x)) \cdot g'(x) \),  
+> I think of it as saying ________.”
+
+**Notes:**  
+<br><br><br><br><br><br>
+:::
+
+---
+
+### Step 6: Quick Practice — Apply the Chain Rule
+
+#### 1. \( h(x) = (3x^2 + 1)^5 \){-}
+\(
+h'(x) = \, ?
+\)
+<br><br><br>
+
+---
+
+#### 2. \( h(x) = \sin(4x) \){-}
+\(
+h'(x) = \, ?
+\)
+<br><br><br>
+
+---
+
+#### 3. \( h(x) = e^{x^3} \){-}
+\(
+h'(x) = \, ?
+\)
+<br><br><br>
+
+---
+
+#### 4. \( h(x) = \sqrt{5x + 2} \){-}
+\(
+h'(x) = \, ?
+\)
+<br><br><br>
+
+---
+
+#### 5. \( h(x) = \ln(7x^2 - 3) \){-}
+\(
+h'(x) = \, ?
+\)
+<br><br><br>
+
+---
+
+
