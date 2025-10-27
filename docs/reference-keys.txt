@@ -434,3 +434,17 @@ exponential-and-logarithmic-rules-general-form
 how-to-use-this-section
 reflection-1
 derivative-rule-practice
+activity-reading-math-as-instructions-the-product-rule
+step-1-read-the-expression-aloud-4
+step-2-translate-to-a-step-by-step-recipe-4
+step-3-deriving-the-rule-from-the-limit-definition-3
+step-4-apply-the-instructions-to-a-real-example-3
+step-5-reflect-when-two-things-change-together
+step-6-quick-practice-apply-the-product-rule
+activity-reading-math-as-instructions-the-quotient-rule
+step-1-read-the-expression-aloud-5
+step-2-translate-to-a-step-by-step-recipe-5
+step-3-deriving-the-rule-from-the-product-rule
+step-4-apply-the-instructions-to-real-examples
+step-5-reflect-low-d-high-minus-high-d-low
+step-6-quick-practice-apply-the-quotient-rule

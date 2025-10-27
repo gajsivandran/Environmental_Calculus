@@ -2000,3 +2000,473 @@ function unlock_set4() {
 </noscript>
 </details>
 :::
+
+
+## Activity: Reading Math as Instructions — The Product Rule
+
+The **Product Rule** tells us how to take the derivative of two functions multiplied together.  
+It’s the mathematical version of saying: *“When two things change together, each one’s rate of change contributes to the total change.”*
+
+---
+
+### Step 1: Read the Expression Aloud
+
+::: promptbox
+**Prompt:**  
+Read this equation aloud and explain what each part is telling you to do:
+
+\[
+\frac{d}{dx}\big[f(x) \cdot g(x)\big] = f'(x)g(x) + f(x)g'(x)
+\]
+
+| Symbol / Term | What It Tells You To Do |
+|:---------------|:------------------------|
+| \( f(x) \) | |
+| \( g(x) \) | |
+| \( f'(x) \) | |
+| \( g'(x) \) | |
+| \( f'(x)g(x) + f(x)g'(x) \) | |
+
+**Notes:**  
+<br><br><br><br><br><br>
+:::
+
+---
+
+### Step 2: Translate to a Step-by-Step Recipe
+
+::: promptbox
+**Activity (Think–Pair–Share):**  
+Describe the **procedure** this rule gives you in plain English.
+
+1. Identify the two factors — call them \( f(x) \) and \( g(x) \).  
+2. Differentiate the first one (\( f(x) \)) and keep the second one the same.  
+3. Then keep the first one the same and differentiate the second one (\( g(x) \)).  
+4. Add both results together.
+
+Now apply this recipe to a few examples:
+
+| Function \( h(x) \) | \( f(x) \) | \( g(x) \) | \( h'(x) \) |
+|:---------------------|:-----------|:------------|:-------------|
+| \( x^2 \sin(x) \) | | | |
+| \( e^x \ln(x) \) | | | |
+| \( (3x-1)(2x^2+5) \) | | | |
+
+**Notes:**  
+<br><br><br><br><br><br>
+:::
+
+---
+
+### Step 3: Deriving the Rule from the Limit Definition
+
+If we start from the **limit definition of the derivative**:
+
+\[
+(fg)' = \lim_{h \to 0} \frac{f(x+h)g(x+h) - f(x)g(x)}{h}
+\]
+
+We can add and subtract \( f(x+h)g(x) \) to rearrange the expression:
+
+\[
+(fg)' = \lim_{h \to 0} \frac{f(x+h)g(x+h) - f(x+h)g(x) + f(x+h)g(x) - f(x)g(x)}{h}
+\]
+
+Group and factor terms:
+
+\[
+(fg)' = \lim_{h \to 0} \Big[ f(x+h)\frac{g(x+h)-g(x)}{h} + g(x)\frac{f(x+h)-f(x)}{h} \Big]
+\]
+
+As \( h \to 0 \), the limits become:
+
+\[
+\boxed{(fg)' = f'(x)g(x) + f(x)g'(x)}
+\]
+
+That’s the **Product Rule** — both parts “help” with the change.
+
+---
+
+### Step 4: Apply the Instructions to a Real Example
+
+::: promptbox
+**Practice:**  
+Let \( f(x) = x^2 \) and \( g(x) = \sin(x) \).  
+Use the Product Rule to find \( \dfrac{d}{dx}\big[f(x)g(x)\big] \).
+
+1. Identify \( f(x) \) and \( g(x) \).  
+2. Compute \( f'(x) \) and \( g'(x) \).  
+3. Substitute into \( f'(x)g(x) + f(x)g'(x) \).  
+4. Simplify.
+
+**Interpretation (everyday):**  
+Imagine you run a small bakery.  
+
+- \( f(x) \) represents **how many trays of cookies** you bake per hour — your *production speed*.  
+- \( g(x) \) represents **how many cookies** you put on each tray — your *batch size*.  
+
+Your total cookie output per hour is \( f(x) \times g(x) \).  
+Both of those quantities can change — maybe you’re baking faster as you get into a rhythm,  
+or maybe you start adding more cookies per tray as demand increases.
+
+The **Product Rule** tells you how your total production rate changes when *both* factors are changing at once:  
+
+\[
+\frac{d}{dx}[f(x)g(x)] = f'(x)g(x) + f(x)g'(x)
+\]
+
+- The first term, \( f'(x)g(x) \), represents the effect of **baking trays faster** (speed increasing)  
+  while the number of cookies per tray stays the same.  
+- The second term, \( f(x)g'(x) \), represents the effect of **adding more cookies per tray**  
+  while baking speed stays the same.
+
+Together, they show that your total output can rise faster when **both** your speed *and* your batch size grow. That’s what the Product Rule captures: *two changing things, both contributing to the total change*.
+
+**Notes:**  
+<br><br><br><br><br><br><br>
+
+
+**Interpretation (environmental):**  
+Now imagine an **ecosystem** instead of a bakery.  
+
+- \( f(x) \) represents **the amount of plant biomass** 
+  — how much living material there is per hectare.  
+- \( g(x) \) represents **the rate of photosynthesis per unit biomass** 
+  — how productive each unit of plant matter is.
+
+The total carbon fixed per hectare is \( f(x) \times g(x) \).  
+Both factors can change over time:  
+
+- forests **grow**, increasing total biomass (\( f(x) \) rises), and  
+- environmental conditions (light, water, temperature) **alter photosynthetic efficiency** (\( g(x) \) changes).
+
+The **Product Rule** describes how total carbon uptake changes when both of these processes evolve together:
+
+\[
+\frac{d}{dx}[f(x)g(x)] = f'(x)g(x) + f(x)g'(x)
+\]
+
+- \( f'(x)g(x) \): added carbon uptake because **biomass is growing**, even if efficiency stays the same.  
+- \( f(x)g'(x) \): added carbon uptake because **each unit of biomass is working harder**, even if biomass stays fixed.
+
+Together, these terms explain how ecosystems can accelerate or slow their overall productivity —  
+it’s not just *how much* life there is, but also *how efficiently* that life converts sunlight into energy.  
+The Product Rule captures how those two changing processes interact to drive total change.
+
+**Notes:**  
+<br><br><br><br><br><br><br>
+
+
+:::
+
+---
+
+### Step 5: Reflect — When Two Things Change Together
+
+::: promptbox
+**Reflection Prompt:**  
+Complete this thought:
+
+> “When I see \( \frac{d}{dx}[f(x)g(x)] = f'(x)g(x) + f(x)g'(x) \), I think of it as saying ________.”
+
+**Notes:**  
+<br><br><br><br><br><br>
+:::
+
+---
+
+### Step 6: Quick Practice — Apply the Product Rule
+
+::: promptbox
+**Instructions:**  
+Use the **Product Rule** to find the derivative of each function.  
+Show your steps clearly and simplify your final answers.
+
+---
+
+#### 1. \( h(x) = x^2 \sin(x) \) {-}
+
+\(
+h'(x) = \, ?
+\)
+<br><br><br>
+---
+
+#### 2. \( h(x) = (3x^2 + 1)(2x - 5) \) {-}
+
+\(
+h'(x) = \, ?
+\)
+<br><br><br>
+
+---
+
+#### 3. \( h(x) = e^x \ln(x) \) {-}
+
+\(
+h'(x) = \, ?
+\)
+<br><br><br>
+
+---
+
+#### 4. \( h(x) = x \cos(x) \) {-}
+
+\(
+h'(x) = \, ?
+\)
+<br><br><br>
+
+---
+
+#### 5. \( h(x) = \sqrt{x}(x^2 + 4) \) {-}
+
+\(
+h'(x) = \, ?
+\)
+<br><br><br>
+
+---
+
+
+**Notes:**  
+<br><br><br><br><br><br>
+:::
+
+
+## Activity: Reading Math as Instructions — The Quotient Rule
+
+The **Quotient Rule** tells us how to take the derivative of one function divided by another.  
+It’s the mathematical version of saying: *“When one changing quantity is divided by another, both affect how fast the ratio itself changes.”*
+
+---
+
+### Step 1: Read the Expression Aloud
+
+::: promptbox
+**Prompt:**  
+Read this equation aloud and explain what each part is telling you to do:
+
+\[
+\frac{d}{dx}\left[\frac{f(x)}{g(x)}\right] =
+\frac{f'(x)g(x) - f(x)g'(x)}{[g(x)]^2}
+\]
+
+| Symbol / Term | What It Tells You To Do |
+|:---------------|:------------------------|
+| \( f(x) \) | |
+| \( g(x) \) | |
+| \( f'(x) \) | |
+| \( g'(x) \) | |
+| \( f'(x)g(x) - f(x)g'(x) \) | |
+| \( [g(x)]^2 \) | |
+
+**Notes:**  
+<br><br><br><br><br><br>
+:::
+
+---
+
+### Step 2: Translate to a Step-by-Step Recipe
+
+::: promptbox
+**Activity (Think–Pair–Share):**  
+Describe the **procedure** this rule gives you in plain English.
+
+1. Identify the top and bottom functions — call them \( f(x) \) (top) and \( g(x) \) (bottom).  
+2. Differentiate the top (\( f'(x) \)) and keep the bottom the same.  
+3. Subtract the top times the derivative of the bottom (\( f(x)g'(x) \)).  
+4. Divide the entire numerator by the square of the bottom, \( [g(x)]^2 \).  
+
+Now apply this recipe to a few examples:
+
+| Function \( h(x) \) | \( f(x) \) | \( g(x) \) | \( h'(x) \) |
+|:---------------------|:-----------|:------------|:-------------|
+| \( \dfrac{x^2}{\sin(x)} \) | | | |
+| \( \dfrac{e^x}{x^2} \) | | | |
+| \( \dfrac{3x^2+1}{2x-5} \) | | | |
+
+**Notes:**  
+<br><br><br><br><br><br>
+:::
+
+---
+
+### Step 3: Deriving the Rule from the Product Rule
+
+We can use the **Product Rule** and the **Power Rule** to derive the Quotient Rule.  
+Since dividing by \( g(x) \) is the same as multiplying by \( g(x)^{-1} \):
+
+\[
+\frac{f(x)}{g(x)} = f(x)\cdot g(x)^{-1}
+\]
+
+Differentiate using the Product Rule:
+
+\[
+(fg^{-1})' = f'(x)g(x)^{-1} + f(x)(-1)g(x)^{-2}g'(x)
+\]
+
+Simplify:
+
+\[
+\boxed{\frac{f'(x)g(x) - f(x)g'(x)}{[g(x)]^2}}
+\]
+
+That’s the **Quotient Rule** — “low d-high minus high d-low, over low squared.”
+
+---
+
+### Step 4: Apply the Instructions to Real Examples
+
+::: promptbox
+**Practice:**  
+Let \( f(x) = x^2 \) and \( g(x) = \sin(x) \).  
+Use the Quotient Rule to find \( \dfrac{d}{dx}\!\left[\dfrac{f(x)}{g(x)}\right] \).
+
+1. Identify \( f(x) \) (top) and \( g(x) \) (bottom).  
+2. Compute \( f'(x) \) and \( g'(x) \).  
+3. Substitute into  
+   \[
+   \frac{d}{dx}\!\left[\frac{f(x)}{g(x)}\right] =
+   \frac{f'(x)g(x) - f(x)g'(x)}{[g(x)]^2}
+   \]
+4. Simplify.
+
+---
+
+**Interpretation (everyday):**  
+Imagine you’re tracking your **miles per gallon** while driving.
+
+- \( f(x) \) represents **miles traveled**, which increases over time.  
+- \( g(x) \) represents **gallons of fuel used**, which also changes as you drive.
+
+Your fuel efficiency — miles per gallon — is the **ratio** \( f(x)/g(x) \).  
+Both the distance and the fuel consumption are changing,  
+so the *rate of change of efficiency* depends on how they change **relative to each other**.
+
+The **Quotient Rule** tells us exactly how that balance shifts:
+
+\[
+\frac{d}{dx}\!\left[\frac{f(x)}{g(x)}\right]
+= \frac{f'(x)g(x) - f(x)g'(x)}{[g(x)]^2}
+\]
+
+- The first term, \( f'(x)g(x) \), shows the effect of driving farther while fuel use stays steady.  
+- The second term, \( f(x)g'(x) \), subtracts the effect of burning fuel faster.  
+- Dividing by \( [g(x)]^2 \) keeps everything scaled to “per gallon.”
+
+If you’re traveling more miles but also burning fuel faster, your efficiency might stay flat or drop —  
+the Quotient Rule captures how **competing changes** in numerator and denominator interact.
+
+---
+
+**Interpretation (environmental):**  
+Now think about a **lake ecosystem** where scientists study **nutrient efficiency**.  
+
+- \( f(x) \) represents **total biomass** (algae and plants) — the numerator.  
+- \( g(x) \) represents **available nutrients** (like nitrogen or phosphorus) — the denominator.
+
+The ratio \( f(x)/g(x) \) measures how efficiently the ecosystem turns nutrients into biomass.  
+Both can change:
+
+- biomass grows as organisms reproduce, and  
+- nutrient levels fall as they’re consumed.
+
+The **Quotient Rule** describes how efficiency changes when both processes shift at once:
+
+\[
+\frac{d}{dx}\!\left[\frac{f(x)}{g(x)}\right]
+= \frac{f'(x)g(x) - f(x)g'(x)}{[g(x)]^2}
+\]
+
+- \( f'(x)g(x) \): efficiency rises because biomass is increasing (numerator growing).  
+- \( f(x)g'(x) \): efficiency falls because nutrients are being depleted (denominator shrinking).  
+- Dividing by \( [g(x)]^2 \) reflects that the smaller the resource pool,  
+  the more sensitive the ratio becomes to change.
+
+This shows why nutrient-use efficiency can fluctuate even if total biomass is steady —  
+small shifts in either growth or nutrient supply can strongly affect the balance.
+
+**Notes:**  
+<br><br><br><br><br><br><br>
+:::
+
+---
+
+### Step 5: Reflect — “Low d-High Minus High d-Low”
+
+::: promptbox
+**Reflection Prompt:**  
+Complete this thought:
+
+> “When I see \( \dfrac{d}{dx}\!\left[\dfrac{f(x)}{g(x)}\right] = \dfrac{f'(x)g(x) - f(x)g'(x)}{[g(x)]^2} \),  
+> I think of it as saying ________.”
+
+**Notes:**  
+<br><br><br><br><br><br>
+:::
+
+---
+
+### Step 6: Quick Practice — Apply the Quotient Rule
+
+::: promptbox
+**Instructions:**  
+Use the **Quotient Rule** to find the derivative of each function.  
+Simplify your answers where possible.
+
+---
+
+#### 1. \( h(x) = \dfrac{x^2 + 1}{x} \){-}
+\(
+h'(x) = \, ?
+\)
+
+<br><br><br>
+
+---
+
+#### 2. \( h(x) = \dfrac{e^x}{x^2 + 1} \){-}
+\(
+h'(x) = \, ?
+\)
+
+<br><br><br>
+
+---
+
+#### 3. \( h(x) = \dfrac{\ln(x)}{x^3} \){-}
+\(
+h'(x) = \, ?
+\)
+
+<br><br><br>
+
+---
+
+#### 4. \( h(x) = \dfrac{x}{\cos(x)} \){-}
+\(
+h'(x) = \, ?
+\)
+
+<br><br><br>
+
+---
+
+#### 5. \( h(x) = \dfrac{x^2 + 4x}{3x - 2} \){-}
+\(
+h'(x) = \, ?
+\)
+
+<br><br><br>
+
+---
+
+**Notes:**  
+<br><br><br><br><br><br>
+:::
+
+---
+

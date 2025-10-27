@@ -23,7 +23,7 @@
 <meta name="author" content="Gaj Sivandran" />
 
 
-<meta name="date" content="2025-10-24" />
+<meta name="date" content="2025-10-26" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -691,6 +691,24 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="derivative-rules---workbook.html"><a href="derivative-rules---workbook.html#derivative-applications-set-2-of-4"><i class="fa fa-check"></i>Derivative Applications (Set 2 of 4)</a></li>
 <li class="chapter" data-level="" data-path="derivative-rules---workbook.html"><a href="derivative-rules---workbook.html#derivative-applications-set-3-of-4"><i class="fa fa-check"></i>Derivative Applications (Set 3 of 4)</a></li>
 <li class="chapter" data-level="" data-path="derivative-rules---workbook.html"><a href="derivative-rules---workbook.html#derivative-applications-set-4-of-4"><i class="fa fa-check"></i>Derivative Applications (Set 4 of 4)</a></li>
+<li class="chapter" data-level="9.11" data-path="derivative-rules---workbook.html"><a href="derivative-rules---workbook.html#activity-reading-math-as-instructions-the-product-rule"><i class="fa fa-check"></i><b>9.11</b> Activity: Reading Math as Instructions — The Product Rule</a>
+<ul>
+<li class="chapter" data-level="9.11.1" data-path="derivative-rules---workbook.html"><a href="derivative-rules---workbook.html#step-1-read-the-expression-aloud-4"><i class="fa fa-check"></i><b>9.11.1</b> Step 1: Read the Expression Aloud</a></li>
+<li class="chapter" data-level="9.11.2" data-path="derivative-rules---workbook.html"><a href="derivative-rules---workbook.html#step-2-translate-to-a-step-by-step-recipe-4"><i class="fa fa-check"></i><b>9.11.2</b> Step 2: Translate to a Step-by-Step Recipe</a></li>
+<li class="chapter" data-level="9.11.3" data-path="derivative-rules---workbook.html"><a href="derivative-rules---workbook.html#step-3-deriving-the-rule-from-the-limit-definition-3"><i class="fa fa-check"></i><b>9.11.3</b> Step 3: Deriving the Rule from the Limit Definition</a></li>
+<li class="chapter" data-level="9.11.4" data-path="derivative-rules---workbook.html"><a href="derivative-rules---workbook.html#step-4-apply-the-instructions-to-a-real-example-3"><i class="fa fa-check"></i><b>9.11.4</b> Step 4: Apply the Instructions to a Real Example</a></li>
+<li class="chapter" data-level="9.11.5" data-path="derivative-rules---workbook.html"><a href="derivative-rules---workbook.html#step-5-reflect-when-two-things-change-together"><i class="fa fa-check"></i><b>9.11.5</b> Step 5: Reflect — When Two Things Change Together</a></li>
+<li class="chapter" data-level="9.11.6" data-path="derivative-rules---workbook.html"><a href="derivative-rules---workbook.html#step-6-quick-practice-apply-the-product-rule"><i class="fa fa-check"></i><b>9.11.6</b> Step 6: Quick Practice — Apply the Product Rule</a></li>
+</ul></li>
+<li class="chapter" data-level="9.12" data-path="derivative-rules---workbook.html"><a href="derivative-rules---workbook.html#activity-reading-math-as-instructions-the-quotient-rule"><i class="fa fa-check"></i><b>9.12</b> Activity: Reading Math as Instructions — The Quotient Rule</a>
+<ul>
+<li class="chapter" data-level="9.12.1" data-path="derivative-rules---workbook.html"><a href="derivative-rules---workbook.html#step-1-read-the-expression-aloud-5"><i class="fa fa-check"></i><b>9.12.1</b> Step 1: Read the Expression Aloud</a></li>
+<li class="chapter" data-level="9.12.2" data-path="derivative-rules---workbook.html"><a href="derivative-rules---workbook.html#step-2-translate-to-a-step-by-step-recipe-5"><i class="fa fa-check"></i><b>9.12.2</b> Step 2: Translate to a Step-by-Step Recipe</a></li>
+<li class="chapter" data-level="9.12.3" data-path="derivative-rules---workbook.html"><a href="derivative-rules---workbook.html#step-3-deriving-the-rule-from-the-product-rule"><i class="fa fa-check"></i><b>9.12.3</b> Step 3: Deriving the Rule from the Product Rule</a></li>
+<li class="chapter" data-level="9.12.4" data-path="derivative-rules---workbook.html"><a href="derivative-rules---workbook.html#step-4-apply-the-instructions-to-real-examples"><i class="fa fa-check"></i><b>9.12.4</b> Step 4: Apply the Instructions to Real Examples</a></li>
+<li class="chapter" data-level="9.12.5" data-path="derivative-rules---workbook.html"><a href="derivative-rules---workbook.html#step-5-reflect-low-d-high-minus-high-d-low"><i class="fa fa-check"></i><b>9.12.5</b> Step 5: Reflect — “Low d-High Minus High d-Low”</a></li>
+<li class="chapter" data-level="9.12.6" data-path="derivative-rules---workbook.html"><a href="derivative-rules---workbook.html#step-6-quick-practice-apply-the-quotient-rule"><i class="fa fa-check"></i><b>9.12.6</b> Step 6: Quick Practice — Apply the Quotient Rule</a></li>
+</ul></li>
 </ul></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -2640,7 +2658,509 @@ function unlock_set4() {
 </details>
 </div>
 </div>
+</div>
+<div id="activity-reading-math-as-instructions-the-product-rule" class="section level2 hasAnchor" number="9.11">
+<h2><span class="header-section-number">9.11</span> Activity: Reading Math as Instructions — The Product Rule<a href="derivative-rules---workbook.html#activity-reading-math-as-instructions-the-product-rule" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>The <strong>Product Rule</strong> tells us how to take the derivative of two functions multiplied together.<br />
+It’s the mathematical version of saying: <em>“When two things change together, each one’s rate of change contributes to the total change.”</em></p>
+<hr />
+<div id="step-1-read-the-expression-aloud-4" class="section level3 hasAnchor" number="9.11.1">
+<h3><span class="header-section-number">9.11.1</span> Step 1: Read the Expression Aloud<a href="derivative-rules---workbook.html#step-1-read-the-expression-aloud-4" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="promptbox">
+<p><strong>Prompt:</strong><br />
+Read this equation aloud and explain what each part is telling you to do:</p>
+<p><span class="math display">\[
+\frac{d}{dx}\big[f(x) \cdot g(x)\big] = f&#39;(x)g(x) + f(x)g&#39;(x)
+\]</span></p>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Symbol / Term</th>
+<th align="left">What It Tells You To Do</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"><span class="math inline">\(f(x)\)</span></td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left"><span class="math inline">\(g(x)\)</span></td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left"><span class="math inline">\(f&#39;(x)\)</span></td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left"><span class="math inline">\(g&#39;(x)\)</span></td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left"><span class="math inline">\(f&#39;(x)g(x) + f(x)g&#39;(x)\)</span></td>
+<td align="left"></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Notes:</strong><br />
+<br><br><br><br><br><br></p>
+</div>
+<hr />
+</div>
+<div id="step-2-translate-to-a-step-by-step-recipe-4" class="section level3 hasAnchor" number="9.11.2">
+<h3><span class="header-section-number">9.11.2</span> Step 2: Translate to a Step-by-Step Recipe<a href="derivative-rules---workbook.html#step-2-translate-to-a-step-by-step-recipe-4" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="promptbox">
+<p><strong>Activity (Think–Pair–Share):</strong><br />
+Describe the <strong>procedure</strong> this rule gives you in plain English.</p>
+<ol style="list-style-type: decimal">
+<li>Identify the two factors — call them <span class="math inline">\(f(x)\)</span> and <span class="math inline">\(g(x)\)</span>.<br />
+</li>
+<li>Differentiate the first one (<span class="math inline">\(f(x)\)</span>) and keep the second one the same.<br />
+</li>
+<li>Then keep the first one the same and differentiate the second one (<span class="math inline">\(g(x)\)</span>).<br />
+</li>
+<li>Add both results together.</li>
+</ol>
+<p>Now apply this recipe to a few examples:</p>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Function <span class="math inline">\(h(x)\)</span></th>
+<th align="left"><span class="math inline">\(f(x)\)</span></th>
+<th align="left"><span class="math inline">\(g(x)\)</span></th>
+<th align="left"><span class="math inline">\(h&#39;(x)\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"><span class="math inline">\(x^2 \sin(x)\)</span></td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left"><span class="math inline">\(e^x \ln(x)\)</span></td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left"><span class="math inline">\((3x-1)(2x^2+5)\)</span></td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Notes:</strong><br />
+<br><br><br><br><br><br></p>
+</div>
+<hr />
+</div>
+<div id="step-3-deriving-the-rule-from-the-limit-definition-3" class="section level3 hasAnchor" number="9.11.3">
+<h3><span class="header-section-number">9.11.3</span> Step 3: Deriving the Rule from the Limit Definition<a href="derivative-rules---workbook.html#step-3-deriving-the-rule-from-the-limit-definition-3" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>If we start from the <strong>limit definition of the derivative</strong>:</p>
+<p><span class="math display">\[
+(fg)&#39; = \lim_{h \to 0} \frac{f(x+h)g(x+h) - f(x)g(x)}{h}
+\]</span></p>
+<p>We can add and subtract <span class="math inline">\(f(x+h)g(x)\)</span> to rearrange the expression:</p>
+<p><span class="math display">\[
+(fg)&#39; = \lim_{h \to 0} \frac{f(x+h)g(x+h) - f(x+h)g(x) + f(x+h)g(x) - f(x)g(x)}{h}
+\]</span></p>
+<p>Group and factor terms:</p>
+<p><span class="math display">\[
+(fg)&#39; = \lim_{h \to 0} \Big[ f(x+h)\frac{g(x+h)-g(x)}{h} + g(x)\frac{f(x+h)-f(x)}{h} \Big]
+\]</span></p>
+<p>As <span class="math inline">\(h \to 0\)</span>, the limits become:</p>
+<p><span class="math display">\[
+\boxed{(fg)&#39; = f&#39;(x)g(x) + f(x)g&#39;(x)}
+\]</span></p>
+<p>That’s the <strong>Product Rule</strong> — both parts “help” with the change.</p>
+<hr />
+</div>
+<div id="step-4-apply-the-instructions-to-a-real-example-3" class="section level3 hasAnchor" number="9.11.4">
+<h3><span class="header-section-number">9.11.4</span> Step 4: Apply the Instructions to a Real Example<a href="derivative-rules---workbook.html#step-4-apply-the-instructions-to-a-real-example-3" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="promptbox">
+<p><strong>Practice:</strong><br />
+Let <span class="math inline">\(f(x) = x^2\)</span> and <span class="math inline">\(g(x) = \sin(x)\)</span>.<br />
+Use the Product Rule to find <span class="math inline">\(\dfrac{d}{dx}\big[f(x)g(x)\big]\)</span>.</p>
+<ol style="list-style-type: decimal">
+<li>Identify <span class="math inline">\(f(x)\)</span> and <span class="math inline">\(g(x)\)</span>.<br />
+</li>
+<li>Compute <span class="math inline">\(f&#39;(x)\)</span> and <span class="math inline">\(g&#39;(x)\)</span>.<br />
+</li>
+<li>Substitute into <span class="math inline">\(f&#39;(x)g(x) + f(x)g&#39;(x)\)</span>.<br />
+</li>
+<li>Simplify.</li>
+</ol>
+<p><strong>Interpretation (everyday):</strong><br />
+Imagine you run a small bakery.</p>
+<ul>
+<li><span class="math inline">\(f(x)\)</span> represents <strong>how many trays of cookies</strong> you bake per hour — your <em>production speed</em>.<br />
+</li>
+<li><span class="math inline">\(g(x)\)</span> represents <strong>how many cookies</strong> you put on each tray — your <em>batch size</em>.</li>
+</ul>
+<p>Your total cookie output per hour is <span class="math inline">\(f(x) \times g(x)\)</span>.<br />
+Both of those quantities can change — maybe you’re baking faster as you get into a rhythm,<br />
+or maybe you start adding more cookies per tray as demand increases.</p>
+<p>The <strong>Product Rule</strong> tells you how your total production rate changes when <em>both</em> factors are changing at once:</p>
+<p><span class="math display">\[
+\frac{d}{dx}[f(x)g(x)] = f&#39;(x)g(x) + f(x)g&#39;(x)
+\]</span></p>
+<ul>
+<li>The first term, <span class="math inline">\(f&#39;(x)g(x)\)</span>, represents the effect of <strong>baking trays faster</strong> (speed increasing)<br />
+while the number of cookies per tray stays the same.<br />
+</li>
+<li>The second term, <span class="math inline">\(f(x)g&#39;(x)\)</span>, represents the effect of <strong>adding more cookies per tray</strong><br />
+while baking speed stays the same.</li>
+</ul>
+<p>Together, they show that your total output can rise faster when <strong>both</strong> your speed <em>and</em> your batch size grow. That’s what the Product Rule captures: <em>two changing things, both contributing to the total change</em>.</p>
+<p><strong>Notes:</strong><br />
+<br><br><br><br><br><br><br></p>
+<p><strong>Interpretation (environmental):</strong><br />
+Now imagine an <strong>ecosystem</strong> instead of a bakery.</p>
+<ul>
+<li><span class="math inline">\(f(x)\)</span> represents <strong>the amount of plant biomass</strong>
+— how much living material there is per hectare.<br />
+</li>
+<li><span class="math inline">\(g(x)\)</span> represents <strong>the rate of photosynthesis per unit biomass</strong>
+— how productive each unit of plant matter is.</li>
+</ul>
+<p>The total carbon fixed per hectare is <span class="math inline">\(f(x) \times g(x)\)</span>.<br />
+Both factors can change over time:</p>
+<ul>
+<li>forests <strong>grow</strong>, increasing total biomass (<span class="math inline">\(f(x)\)</span> rises), and<br />
+</li>
+<li>environmental conditions (light, water, temperature) <strong>alter photosynthetic efficiency</strong> (<span class="math inline">\(g(x)\)</span> changes).</li>
+</ul>
+<p>The <strong>Product Rule</strong> describes how total carbon uptake changes when both of these processes evolve together:</p>
+<p><span class="math display">\[
+\frac{d}{dx}[f(x)g(x)] = f&#39;(x)g(x) + f(x)g&#39;(x)
+\]</span></p>
+<ul>
+<li><span class="math inline">\(f&#39;(x)g(x)\)</span>: added carbon uptake because <strong>biomass is growing</strong>, even if efficiency stays the same.<br />
+</li>
+<li><span class="math inline">\(f(x)g&#39;(x)\)</span>: added carbon uptake because <strong>each unit of biomass is working harder</strong>, even if biomass stays fixed.</li>
+</ul>
+<p>Together, these terms explain how ecosystems can accelerate or slow their overall productivity —<br />
+it’s not just <em>how much</em> life there is, but also <em>how efficiently</em> that life converts sunlight into energy.<br />
+The Product Rule captures how those two changing processes interact to drive total change.</p>
+<p><strong>Notes:</strong><br />
+<br><br><br><br><br><br><br></p>
+</div>
+<hr />
+</div>
+<div id="step-5-reflect-when-two-things-change-together" class="section level3 hasAnchor" number="9.11.5">
+<h3><span class="header-section-number">9.11.5</span> Step 5: Reflect — When Two Things Change Together<a href="derivative-rules---workbook.html#step-5-reflect-when-two-things-change-together" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="promptbox">
+<p><strong>Reflection Prompt:</strong><br />
+Complete this thought:</p>
+<blockquote>
+<p>“When I see <span class="math inline">\(\frac{d}{dx}[f(x)g(x)] = f&#39;(x)g(x) + f(x)g&#39;(x)\)</span>, I think of it as saying ________.”</p>
+</blockquote>
+<p><strong>Notes:</strong><br />
+<br><br><br><br><br><br></p>
+</div>
+<hr />
+</div>
+<div id="step-6-quick-practice-apply-the-product-rule" class="section level3 hasAnchor" number="9.11.6">
+<h3><span class="header-section-number">9.11.6</span> Step 6: Quick Practice — Apply the Product Rule<a href="derivative-rules---workbook.html#step-6-quick-practice-apply-the-product-rule" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="promptbox">
+<p><strong>Instructions:</strong><br />
+Use the <strong>Product Rule</strong> to find the derivative of each function.<br />
+Show your steps clearly and simplify your final answers.</p>
+<hr />
+<div id="hx-x2-sinx" class="section level4 unnumbered hasAnchor">
+<h4>1. <span class="math inline">\(h(x) = x^2 \sin(x)\)</span><a href="derivative-rules---workbook.html#hx-x2-sinx" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><span class="math inline">\(h&#39;(x) = \, ?\)</span>
+<br><br><br>
+—</p>
+</div>
+<div id="hx-3x2-12x---5" class="section level4 unnumbered hasAnchor">
+<h4>2. <span class="math inline">\(h(x) = (3x^2 + 1)(2x - 5)\)</span><a href="derivative-rules---workbook.html#hx-3x2-12x---5" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><span class="math inline">\(h&#39;(x) = \, ?\)</span>
+<br><br><br></p>
+<hr />
+</div>
+<div id="hx-ex-lnx" class="section level4 unnumbered hasAnchor">
+<h4>3. <span class="math inline">\(h(x) = e^x \ln(x)\)</span><a href="derivative-rules---workbook.html#hx-ex-lnx" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><span class="math inline">\(h&#39;(x) = \, ?\)</span>
+<br><br><br></p>
+<hr />
+</div>
+<div id="hx-x-cosx" class="section level4 unnumbered hasAnchor">
+<h4>4. <span class="math inline">\(h(x) = x \cos(x)\)</span><a href="derivative-rules---workbook.html#hx-x-cosx" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><span class="math inline">\(h&#39;(x) = \, ?\)</span>
+<br><br><br></p>
+<hr />
+</div>
+<div id="hx-sqrtxx2-4" class="section level4 unnumbered hasAnchor">
+<h4>5. <span class="math inline">\(h(x) = \sqrt{x}(x^2 + 4)\)</span><a href="derivative-rules---workbook.html#hx-sqrtxx2-4" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><span class="math inline">\(h&#39;(x) = \, ?\)</span>
+<br><br><br></p>
+<hr />
+<p><strong>Notes:</strong><br />
+<br><br><br><br><br><br></p>
+</div>
+</div>
+</div>
+</div>
+<div id="activity-reading-math-as-instructions-the-quotient-rule" class="section level2 hasAnchor" number="9.12">
+<h2><span class="header-section-number">9.12</span> Activity: Reading Math as Instructions — The Quotient Rule<a href="derivative-rules---workbook.html#activity-reading-math-as-instructions-the-quotient-rule" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>The <strong>Quotient Rule</strong> tells us how to take the derivative of one function divided by another.<br />
+It’s the mathematical version of saying: <em>“When one changing quantity is divided by another, both affect how fast the ratio itself changes.”</em></p>
+<hr />
+<div id="step-1-read-the-expression-aloud-5" class="section level3 hasAnchor" number="9.12.1">
+<h3><span class="header-section-number">9.12.1</span> Step 1: Read the Expression Aloud<a href="derivative-rules---workbook.html#step-1-read-the-expression-aloud-5" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="promptbox">
+<p><strong>Prompt:</strong><br />
+Read this equation aloud and explain what each part is telling you to do:</p>
+<p><span class="math display">\[
+\frac{d}{dx}\left[\frac{f(x)}{g(x)}\right] =
+\frac{f&#39;(x)g(x) - f(x)g&#39;(x)}{[g(x)]^2}
+\]</span></p>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Symbol / Term</th>
+<th align="left">What It Tells You To Do</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"><span class="math inline">\(f(x)\)</span></td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left"><span class="math inline">\(g(x)\)</span></td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left"><span class="math inline">\(f&#39;(x)\)</span></td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left"><span class="math inline">\(g&#39;(x)\)</span></td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left"><span class="math inline">\(f&#39;(x)g(x) - f(x)g&#39;(x)\)</span></td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left"><span class="math inline">\([g(x)]^2\)</span></td>
+<td align="left"></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Notes:</strong><br />
+<br><br><br><br><br><br></p>
+</div>
+<hr />
+</div>
+<div id="step-2-translate-to-a-step-by-step-recipe-5" class="section level3 hasAnchor" number="9.12.2">
+<h3><span class="header-section-number">9.12.2</span> Step 2: Translate to a Step-by-Step Recipe<a href="derivative-rules---workbook.html#step-2-translate-to-a-step-by-step-recipe-5" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="promptbox">
+<p><strong>Activity (Think–Pair–Share):</strong><br />
+Describe the <strong>procedure</strong> this rule gives you in plain English.</p>
+<ol style="list-style-type: decimal">
+<li>Identify the top and bottom functions — call them <span class="math inline">\(f(x)\)</span> (top) and <span class="math inline">\(g(x)\)</span> (bottom).<br />
+</li>
+<li>Differentiate the top (<span class="math inline">\(f&#39;(x)\)</span>) and keep the bottom the same.<br />
+</li>
+<li>Subtract the top times the derivative of the bottom (<span class="math inline">\(f(x)g&#39;(x)\)</span>).<br />
+</li>
+<li>Divide the entire numerator by the square of the bottom, <span class="math inline">\([g(x)]^2\)</span>.</li>
+</ol>
+<p>Now apply this recipe to a few examples:</p>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Function <span class="math inline">\(h(x)\)</span></th>
+<th align="left"><span class="math inline">\(f(x)\)</span></th>
+<th align="left"><span class="math inline">\(g(x)\)</span></th>
+<th align="left"><span class="math inline">\(h&#39;(x)\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"><span class="math inline">\(\dfrac{x^2}{\sin(x)}\)</span></td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left"><span class="math inline">\(\dfrac{e^x}{x^2}\)</span></td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left"><span class="math inline">\(\dfrac{3x^2+1}{2x-5}\)</span></td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Notes:</strong><br />
+<br><br><br><br><br><br></p>
+</div>
+<hr />
+</div>
+<div id="step-3-deriving-the-rule-from-the-product-rule" class="section level3 hasAnchor" number="9.12.3">
+<h3><span class="header-section-number">9.12.3</span> Step 3: Deriving the Rule from the Product Rule<a href="derivative-rules---workbook.html#step-3-deriving-the-rule-from-the-product-rule" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>We can use the <strong>Product Rule</strong> and the <strong>Power Rule</strong> to derive the Quotient Rule.<br />
+Since dividing by <span class="math inline">\(g(x)\)</span> is the same as multiplying by <span class="math inline">\(g(x)^{-1}\)</span>:</p>
+<p><span class="math display">\[
+\frac{f(x)}{g(x)} = f(x)\cdot g(x)^{-1}
+\]</span></p>
+<p>Differentiate using the Product Rule:</p>
+<p><span class="math display">\[
+(fg^{-1})&#39; = f&#39;(x)g(x)^{-1} + f(x)(-1)g(x)^{-2}g&#39;(x)
+\]</span></p>
+<p>Simplify:</p>
+<p><span class="math display">\[
+\boxed{\frac{f&#39;(x)g(x) - f(x)g&#39;(x)}{[g(x)]^2}}
+\]</span></p>
+<p>That’s the <strong>Quotient Rule</strong> — “low d-high minus high d-low, over low squared.”</p>
+<hr />
+</div>
+<div id="step-4-apply-the-instructions-to-real-examples" class="section level3 hasAnchor" number="9.12.4">
+<h3><span class="header-section-number">9.12.4</span> Step 4: Apply the Instructions to Real Examples<a href="derivative-rules---workbook.html#step-4-apply-the-instructions-to-real-examples" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="promptbox">
+<p><strong>Practice:</strong><br />
+Let <span class="math inline">\(f(x) = x^2\)</span> and <span class="math inline">\(g(x) = \sin(x)\)</span>.<br />
+Use the Quotient Rule to find <span class="math inline">\(\dfrac{d}{dx}\!\left[\dfrac{f(x)}{g(x)}\right]\)</span>.</p>
+<ol style="list-style-type: decimal">
+<li>Identify <span class="math inline">\(f(x)\)</span> (top) and <span class="math inline">\(g(x)\)</span> (bottom).<br />
+</li>
+<li>Compute <span class="math inline">\(f&#39;(x)\)</span> and <span class="math inline">\(g&#39;(x)\)</span>.<br />
+</li>
+<li>Substitute into<br />
+<span class="math display">\[
+\frac{d}{dx}\!\left[\frac{f(x)}{g(x)}\right] =
+\frac{f&#39;(x)g(x) - f(x)g&#39;(x)}{[g(x)]^2}
+\]</span></li>
+<li>Simplify.</li>
+</ol>
+<hr />
+<p><strong>Interpretation (everyday):</strong><br />
+Imagine you’re tracking your <strong>miles per gallon</strong> while driving.</p>
+<ul>
+<li><span class="math inline">\(f(x)\)</span> represents <strong>miles traveled</strong>, which increases over time.<br />
+</li>
+<li><span class="math inline">\(g(x)\)</span> represents <strong>gallons of fuel used</strong>, which also changes as you drive.</li>
+</ul>
+<p>Your fuel efficiency — miles per gallon — is the <strong>ratio</strong> <span class="math inline">\(f(x)/g(x)\)</span>.<br />
+Both the distance and the fuel consumption are changing,<br />
+so the <em>rate of change of efficiency</em> depends on how they change <strong>relative to each other</strong>.</p>
+<p>The <strong>Quotient Rule</strong> tells us exactly how that balance shifts:</p>
+<p><span class="math display">\[
+\frac{d}{dx}\!\left[\frac{f(x)}{g(x)}\right]
+= \frac{f&#39;(x)g(x) - f(x)g&#39;(x)}{[g(x)]^2}
+\]</span></p>
+<ul>
+<li>The first term, <span class="math inline">\(f&#39;(x)g(x)\)</span>, shows the effect of driving farther while fuel use stays steady.<br />
+</li>
+<li>The second term, <span class="math inline">\(f(x)g&#39;(x)\)</span>, subtracts the effect of burning fuel faster.<br />
+</li>
+<li>Dividing by <span class="math inline">\([g(x)]^2\)</span> keeps everything scaled to “per gallon.”</li>
+</ul>
+<p>If you’re traveling more miles but also burning fuel faster, your efficiency might stay flat or drop —<br />
+the Quotient Rule captures how <strong>competing changes</strong> in numerator and denominator interact.</p>
+<hr />
+<p><strong>Interpretation (environmental):</strong><br />
+Now think about a <strong>lake ecosystem</strong> where scientists study <strong>nutrient efficiency</strong>.</p>
+<ul>
+<li><span class="math inline">\(f(x)\)</span> represents <strong>total biomass</strong> (algae and plants) — the numerator.<br />
+</li>
+<li><span class="math inline">\(g(x)\)</span> represents <strong>available nutrients</strong> (like nitrogen or phosphorus) — the denominator.</li>
+</ul>
+<p>The ratio <span class="math inline">\(f(x)/g(x)\)</span> measures how efficiently the ecosystem turns nutrients into biomass.<br />
+Both can change:</p>
+<ul>
+<li>biomass grows as organisms reproduce, and<br />
+</li>
+<li>nutrient levels fall as they’re consumed.</li>
+</ul>
+<p>The <strong>Quotient Rule</strong> describes how efficiency changes when both processes shift at once:</p>
+<p><span class="math display">\[
+\frac{d}{dx}\!\left[\frac{f(x)}{g(x)}\right]
+= \frac{f&#39;(x)g(x) - f(x)g&#39;(x)}{[g(x)]^2}
+\]</span></p>
+<ul>
+<li><span class="math inline">\(f&#39;(x)g(x)\)</span>: efficiency rises because biomass is increasing (numerator growing).<br />
+</li>
+<li><span class="math inline">\(f(x)g&#39;(x)\)</span>: efficiency falls because nutrients are being depleted (denominator shrinking).<br />
+</li>
+<li>Dividing by <span class="math inline">\([g(x)]^2\)</span> reflects that the smaller the resource pool,<br />
+the more sensitive the ratio becomes to change.</li>
+</ul>
+<p>This shows why nutrient-use efficiency can fluctuate even if total biomass is steady —<br />
+small shifts in either growth or nutrient supply can strongly affect the balance.</p>
+<p><strong>Notes:</strong><br />
+<br><br><br><br><br><br><br></p>
+</div>
+<hr />
+</div>
+<div id="step-5-reflect-low-d-high-minus-high-d-low" class="section level3 hasAnchor" number="9.12.5">
+<h3><span class="header-section-number">9.12.5</span> Step 5: Reflect — “Low d-High Minus High d-Low”<a href="derivative-rules---workbook.html#step-5-reflect-low-d-high-minus-high-d-low" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="promptbox">
+<p><strong>Reflection Prompt:</strong><br />
+Complete this thought:</p>
+<blockquote>
+<p>“When I see <span class="math inline">\(\dfrac{d}{dx}\!\left[\dfrac{f(x)}{g(x)}\right] = \dfrac{f&#39;(x)g(x) - f(x)g&#39;(x)}{[g(x)]^2}\)</span>,<br />
+I think of it as saying ________.”</p>
+</blockquote>
+<p><strong>Notes:</strong><br />
+<br><br><br><br><br><br></p>
+</div>
+<hr />
+</div>
+<div id="step-6-quick-practice-apply-the-quotient-rule" class="section level3 hasAnchor" number="9.12.6">
+<h3><span class="header-section-number">9.12.6</span> Step 6: Quick Practice — Apply the Quotient Rule<a href="derivative-rules---workbook.html#step-6-quick-practice-apply-the-quotient-rule" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="promptbox">
+<p><strong>Instructions:</strong><br />
+Use the <strong>Quotient Rule</strong> to find the derivative of each function.<br />
+Simplify your answers where possible.</p>
+<hr />
+<div id="hx-dfracx2-1x" class="section level4 unnumbered hasAnchor">
+<h4>1. <span class="math inline">\(h(x) = \dfrac{x^2 + 1}{x}\)</span><a href="derivative-rules---workbook.html#hx-dfracx2-1x" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><span class="math inline">\(h&#39;(x) = \, ?\)</span></p>
+<p><br><br><br></p>
+<hr />
+</div>
+<div id="hx-dfracexx2-1" class="section level4 unnumbered hasAnchor">
+<h4>2. <span class="math inline">\(h(x) = \dfrac{e^x}{x^2 + 1}\)</span><a href="derivative-rules---workbook.html#hx-dfracexx2-1" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><span class="math inline">\(h&#39;(x) = \, ?\)</span></p>
+<p><br><br><br></p>
+<hr />
+</div>
+<div id="hx-dfraclnxx3" class="section level4 unnumbered hasAnchor">
+<h4>3. <span class="math inline">\(h(x) = \dfrac{\ln(x)}{x^3}\)</span><a href="derivative-rules---workbook.html#hx-dfraclnxx3" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><span class="math inline">\(h&#39;(x) = \, ?\)</span></p>
+<p><br><br><br></p>
+<hr />
+</div>
+<div id="hx-dfracxcosx" class="section level4 unnumbered hasAnchor">
+<h4>4. <span class="math inline">\(h(x) = \dfrac{x}{\cos(x)}\)</span><a href="derivative-rules---workbook.html#hx-dfracxcosx" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><span class="math inline">\(h&#39;(x) = \, ?\)</span></p>
+<p><br><br><br></p>
+<hr />
+</div>
+<div id="hx-dfracx2-4x3x---2" class="section level4 unnumbered hasAnchor">
+<h4>5. <span class="math inline">\(h(x) = \dfrac{x^2 + 4x}{3x - 2}\)</span><a href="derivative-rules---workbook.html#hx-dfracx2-4x3x---2" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><span class="math inline">\(h&#39;(x) = \, ?\)</span></p>
+<p><br><br><br></p>
+<hr />
+<p><strong>Notes:</strong><br />
+<br><br><br><br><br><br></p>
+</div>
+</div>
+<hr />
 
+</div>
 </div>
 </div>
             </section>
