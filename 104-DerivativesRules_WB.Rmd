@@ -2661,3 +2661,137 @@ h'(x) = \, ?
 ---
 
 
+
+
+## Implicit Differentiation
+
+The **Implicit Differentiation Rule** tells us how to find \(\frac{dy}{dx}\) when \(x\) and \(y\) are **entangled** in the same equation.
+
+It’s the mathematical version of saying: *“When two variables change together to maintain a relationship, we can still find how fast one changes relative to the other.”*
+
+---
+
+### Step 1: See It — Why Implicit Differentiation Is Needed
+
+::: promptbox
+**Visual Example: The Curve \(x^2 + y^2 = 25\)**
+
+Let’s start with a simple relationship:
+\[
+x^2 + y^2 = 25
+\]
+This equation defines a **circle** — all points \((x, y)\) that are 5 units away from the origin.  
+Notice something important: you can’t write this as a single function \(y = f(x)\) because for most \(x\)-values, there are **two** possible \(y\)-values (one above, one below the \(x\)-axis).
+
+That’s exactly where **implicit differentiation** comes in.  
+We can still find the **slope** of the curve at any given point — even when \(y\) isn’t isolated.
+
+---
+
+### Step 3: Connect to Real-World Systems
+
+::: promptbox
+**Example — Environmental Relationship**
+
+Suppose a forest’s carbon assimilation rate \(A\) depends on both **temperature** \(T\) and **light intensity** \(L\):
+
+\[
+A(T, L) = k(T - 5)(L - 100)
+\]
+
+If the system maintains constant assimilation (\(A = A_0\)), then \(T\) and \(L\) must co-adjust to keep that equality true.
+
+Differentiate both sides with respect to \(T\):
+
+\[
+k[(L - 100) + (T - 5)\frac{dL}{dT}] = 0
+\]
+
+Solve for \(\frac{dL}{dT}\):
+
+\[
+\frac{dL}{dT} = -\frac{L - 100}{T - 5}
+\]
+
+**Interpretation:**  
+To keep carbon assimilation constant, light must **decrease** as temperature increases.  
+Implicit differentiation captures this interdependence — how one variable’s change must compensate for another’s.
+
+**Notes:**  
+<br><br><br><br><br><br>
+:::
+
+---
+
+### Step 4: Reflect — When Two Variables Depend on Each Other
+
+::: promptbox
+**Reflection Prompt:**  
+Complete this thought:
+
+> “When I see an equation like \(x^2 + y^2 = 25\),  
+> I think of it as saying ________.”
+
+**Notes:**  
+<br><br><br><br><br><br>
+:::
+
+---
+
+### Step 6: Quick Practice — Apply Implicit Differentiation
+
+Differentiate each equation **implicitly** with respect to \(x\), then solve for \(\frac{dy}{dx}\).  
+Each problem highlights a slightly different rule (product, chain, exponential, or logarithmic).
+
+---
+
+#### 1. \( x^2y + 3y^2 = 12 \){-}  
+\(
+\frac{dy}{dx} = \, ?
+\)
+<br><br><br>
+
+---
+
+#### 2. \( e^{x+y} = xy \){-}  
+\(
+\frac{dy}{dx} = \, ?
+\)
+<br><br><br>
+
+---
+
+#### 3. \( \sin(x + y) = y^2 \){-}  
+\(
+\frac{dy}{dx} = \, ?
+\)
+<br><br><br>
+
+---
+
+#### 4. \( x^3 + y^3 + 6xy = 7 \){-}  
+\(
+\frac{dy}{dx} = \, ?
+\)
+<br><br><br>
+
+---
+
+#### 5. \( \ln(xy) = x - y \){-}  
+\(
+\frac{dy}{dx} = \, ?
+\)
+<br><br><br>
+
+---
+
+> **Challenge question:**  
+> For the curve \( x^2 + xy + y^2 = 7 \), find the slope at the point \((2,1)\).  
+> (Hint: use your \(\frac{dy}{dx}\) expression, then substitute.)
+<br><br><br>
+
+---
+
+> **Takeaway:**  
+> These examples combine multiple differentiation rules — power, product, chain, exponential, and logarithmic — all within one equation.  
+> Implicit differentiation is the glue that connects them, letting you find slopes even when \(y\) can’t be isolated.

@@ -1,0 +1,451 @@
+# Test1 Review Material {-}
+
+Below are resources to help you practice and prepare for the test 2 in this course.
+
+Test 2 will cover the material covered in Chapter 4 of this textbook:
+
+- basic derivative rules
+- product, quotient and chain rules
+- implicit derivatives
+
+What's not on this test:
+
+- no interpretation style questions on this test
+- no derivations 
+- no limit definitions
+
+## Test Instructions {-}
+Below are the general instructions for all tests
+
+- You will get a chance to **retake** this. Your **highest** score counts toward your final grade.  
+- Follow the guidance for each part and **show all work** for full credit.  
+- **Non-graphical calculators** are allowed.  
+- **One page (two sides)** of handwritten (or font size 8) notes are allowed.
+- The equation sheet from the textbook is included as part of the test pack (it doesn't count as note pages)
+
+## Basic Rule Practice
+
+### 1. \(f(x)=7\){-}
+
+<details>
+<summary><strong>Math Hint</strong></summary>
+The derivative of any constant is always \(0\).  
+Think of a flat line — its slope never changes.
+</details>
+
+<details>
+<summary><strong>Solution</strong></summary>
+\(f'(x)=0\)
+</details>
+
+---
+
+### 2. \(f(x)=x^5\){-}
+
+<details>
+<summary><strong>Math Hint</strong></summary>
+Use the **power rule**: \((x^n)' = n x^{n-1}\).
+</details>
+
+<details>
+<summary><strong>Solution</strong></summary>
+\(f'(x)=5x^4\)
+</details>
+
+---
+
+### 3. \(f(x)=3x^4\){-}
+
+<details>
+<summary><strong>Math Hint</strong></summary>
+You have a constant multiplied by a power of \(x\).  
+Apply the **constant multiple rule** with the **power rule**.
+</details>
+
+<details>
+<summary><strong>Solution</strong></summary>
+\(f'(x)=12x^3\)
+</details>
+
+---
+
+### 4. \(f(x)=5x^3-2x^2\){-}
+
+<details>
+<summary><strong>Math Hint</strong></summary>
+Use the **difference rule**: differentiate each term individually.
+</details>
+
+<details>
+<summary><strong>Solution</strong></summary>
+\(f'(x)=15x^2-4x\)
+</details>
+
+---
+
+### 5. \(f(x)=x^4+3x^2+5\){-}
+
+<details>
+<summary><strong>Math Hint</strong></summary>
+Use the **sum rule** and note that the derivative of a constant is zero.
+</details>
+
+<details>
+<summary><strong>Solution</strong></summary>
+\(f'(x)=4x^3+6x\)
+</details>
+
+---
+
+### 6. \(f(x)=9x^7-4x^3+2x\){-}
+
+<details>
+<summary><strong>Math Hint</strong></summary>
+Each term loses one power when you apply the power rule.
+</details>
+
+<details>
+<summary><strong>Solution</strong></summary>
+\(f'(x)=63x^6-12x^2+2\)
+</details>
+
+---
+
+### 7. \(f(x)=\dfrac{1}{2}x^2-3x+4\){-}
+
+<details>
+<summary><strong>Math Hint</strong></summary>
+Differentiate each term.  
+The first term is a parabola — its slope changes linearly with \(x\).
+</details>
+
+<details>
+<summary><strong>Solution</strong></summary>
+\(f'(x)=x-3\)
+</details>
+
+---
+
+### 8. \(f(x)=10x^3+7x-12\){-}
+
+<details>
+<summary><strong>Math Hint</strong></summary>
+Differentiate each term using the power rule.
+</details>
+
+<details>
+<summary><strong>Solution</strong></summary>
+\(f'(x)=30x^2+7\)
+</details>
+
+---
+
+### 9. \(f(x)=x^6-9x^2+1\){-}
+
+<details>
+<summary><strong>Math Hint</strong></summary>
+Find \(f'(x)\) and simplify.
+</details>
+
+<details>
+<summary><strong>Solution</strong></summary>
+\(f'(x)=6x^5-18x=6x(x^4-3)\)
+</details>
+
+---
+
+### 10. \(f(x)=4x^3-12x^2+9x-1\){-}
+
+<details>
+<summary><strong>Math Hint</strong></summary>
+Differentiate each term; the derivative of a cubic is a quadratic.
+</details>
+
+<details>
+<summary><strong>Solution</strong></summary>
+\(f'(x)=12x^2-24x+9\)
+</details>
+
+---
+
+## Identity Rule Practice
+
+### 1. \(f(x)=e^x\){-}
+
+<details>
+<summary><strong>Math Hint</strong></summary>
+The derivative of \(e^x\) is itself.
+</details>
+
+<details>
+<summary><strong>Solution</strong></summary>
+\(f'(x)=e^x\)
+</details>
+
+---
+
+### 2. \(f(x)=3e^x\){-}
+
+<details>
+<summary><strong>Math Hint</strong></summary>
+Use the constant multiple rule.
+</details>
+
+<details>
+<summary><strong>Solution</strong></summary>
+\(f'(x)=3e^x\)
+</details>
+
+---
+
+### 3. \(f(x)=2e^{2x}\){-}
+
+<details>
+<summary><strong>Math Hint</strong></summary>
+Use \( (e^{g(x)})' = g'(x)e^{g(x)} \).
+</details>
+
+<details>
+<summary><strong>Solution</strong></summary>
+\(f'(x)=4e^{2x}\)
+</details>
+
+---
+
+### 4. \(f(x)=5e^{-x}\){-}
+
+<details>
+<summary><strong>Math Hint</strong></summary>
+For \(g(x)=-x\), \(g'(x)=-1\).
+</details>
+
+<details>
+<summary><strong>Solution</strong></summary>
+\(f'(x)=-5e^{-x}\)
+</details>
+
+---
+
+### 5. \(f(x)=e^{x^2}\){-}
+
+<details>
+<summary><strong>Math Hint</strong></summary>
+Use \( (e^{g(x)})' = g'(x)e^{g(x)} \).
+</details>
+
+<details>
+<summary><strong>Solution</strong></summary>
+\(f'(x)=2x e^{x^2}\)
+</details>
+
+---
+
+### 6. \(f(x)=e^{3x+1}\){-}
+
+<details>
+<summary><strong>Math Hint</strong></summary>
+Differentiate the exponent \(3x+1\).
+</details>
+
+<details>
+<summary><strong>Solution</strong></summary>
+\(f'(x)=3e^{3x+1}\)
+</details>
+
+---
+
+### 7. \(f(x)=10^x\){-}
+
+<details>
+<summary><strong>Math Hint</strong></summary>
+Use \( (a^x)' = a^x \ln(a) \).
+</details>
+
+<details>
+<summary><strong>Solution</strong></summary>
+\(f'(x)=10^x \ln(10)\)
+</details>
+
+---
+
+### 8. \(f(x)=2^{3x}\){-}
+
+<details>
+<summary><strong>Math Hint</strong></summary>
+Use \( (a^{g(x)})' = g'(x)a^{g(x)}\ln(a) \).
+</details>
+
+<details>
+<summary><strong>Solution</strong></summary>
+\(f'(x)=3(2^{3x}\ln 2)\)
+</details>
+
+---
+
+### 9. \(f(x)=5^x + 7^x\){-}
+
+<details>
+<summary><strong>Math Hint</strong></summary>
+Differentiate each term individually.
+</details>
+
+<details>
+<summary><strong>Solution</strong></summary>
+\(f'(x)=5^x\ln(5)+7^x\ln(7)\)
+</details>
+
+---
+
+### 10. \(f(x)=3^x - 2^x\){-}
+
+<details>
+<summary><strong>Math Hint</strong></summary>
+Use \(a^x\ln(a)\) for each term.
+</details>
+
+<details>
+<summary><strong>Solution</strong></summary>
+\(f'(x)=3^x\ln(3)-2^x\ln(2)\)
+</details>
+
+---
+
+### 11. \(f(x)=\ln(x)\){-}
+
+<details>
+<summary><strong>Math Hint</strong></summary>
+Derivative of \(\ln(x)\) is \(1/x\).
+</details>
+
+<details>
+<summary><strong>Solution</strong></summary>
+\(f'(x)=\dfrac{1}{x}\)
+</details>
+
+---
+
+### 12. \(f(x)=\ln(3x)\){-}
+
+<details>
+<summary><strong>Math Hint</strong></summary>
+Use chain rule with \(g(x)=3x\).
+</details>
+
+<details>
+<summary><strong>Solution</strong></summary>
+\(f'(x)=\dfrac{1}{x}\)
+</details>
+
+---
+
+### 13. \(f(x)=\ln(x^2+1)\){-}
+
+<details>
+<summary><strong>Math Hint</strong></summary>
+Use \((\ln g(x))'=\dfrac{g'(x)}{g(x)}\).
+</details>
+
+<details>
+<summary><strong>Solution</strong></summary>
+\(f'(x)=\dfrac{2x}{x^2+1}\)
+</details>
+
+---
+
+### 14. \(f(x)=\ln(\sqrt{x})\){-}
+
+<details>
+<summary><strong>Math Hint</strong></summary>
+\(\sqrt{x}=x^{1/2}\)
+</details>
+
+<details>
+<summary><strong>Solution</strong></summary>
+\(f'(x)=\dfrac{1}{2x}\)
+</details>
+
+---
+
+### 15. \(f(x)=\log_2(x)\){-}
+
+<details>
+<summary><strong>Math Hint</strong></summary>
+\((\log_a x)'=\dfrac{1}{x\ln(a)}\)
+</details>
+
+<details>
+<summary><strong>Solution</strong></summary>
+\(f'(x)=\dfrac{1}{x\ln(2)}\)
+</details>
+
+---
+
+### 16. \(f(x)=\log_3(2x)\){-}
+
+<details>
+<summary><strong>Math Hint</strong></summary>
+Use chain rule with \((\log_a(g(x)))'=\dfrac{g'(x)}{g(x)\ln(a)}\).
+</details>
+
+<details>
+<summary><strong>Solution</strong></summary>
+\(f'(x)=\dfrac{1}{x\ln(3)}\)
+</details>
+
+---
+
+### 17. \(f(x)=\ln(e^x+1)\){-}
+
+<details>
+<summary><strong>Math Hint</strong></summary>
+Use chain rule with \(g(x)=e^x+1\).
+</details>
+
+<details>
+<summary><strong>Solution</strong></summary>
+\(f'(x)=\dfrac{e^x}{e^x+1}\)
+</details>
+
+---
+
+### 18. \(f(x)=e^{\ln(x)}\){-}
+
+<details>
+<summary><strong>Math Hint</strong></summary>
+Simplify \(e^{\ln(x)}=x\).
+</details>
+
+<details>
+<summary><strong>Solution</strong></summary>
+\(f'(x)=1\)
+</details>
+
+---
+
+### 19. \(f(x)=x e^x\){-}
+
+<details>
+<summary><strong>Math Hint</strong></summary>
+Use product rule.
+</details>
+
+<details>
+<summary><strong>Solution</strong></summary>
+\(f'(x)=e^x(1+x)\)
+</details>
+
+---
+
+### 20. \(f(x)=x\ln(x)\){-}
+
+<details>
+<summary><strong>Math Hint</strong></summary>
+Use product rule.
+</details>
+
+<details>
+<summary><strong>Solution</strong></summary>
+\(f'(x)=\ln(x)+1\)
+</details>
+
+---

@@ -1802,6 +1802,239 @@ This example shows why the **Chain Rule is essential in environmental modeling**
 > This happens constantly in real-world systems, where one variable depends on another that is also changing.
 
 
+
+
+
+## Implicit Differentiation
+
+In calculus, **Implicit Differentiation** is used when a function is **not given explicitly** as \( y = f(x) \), but rather when \( x \) and \( y \) are **entangled** in an equation.  
+
+This happens often in environmental systems—where variables are linked through physical laws or conservation relationships rather than simple functions.
+
+The key idea:  
+When differentiating an equation involving both \(x\) and \(y\), **treat \(y\) as a function of \(x\)** (even if you can’t solve for it directly), and apply the **Chain Rule** whenever you differentiate a term involving \(y\).  
+
+---
+
+### When Do We Need Implicit Differentiation?
+
+Some relationships between \(x\) and \(y\) are too complicated to rewrite as \(y = f(x)\).  
+
+For example:
+
+\[
+x^2 + y^2 = 25
+\]
+
+describes a circle. There’s no single function \(y = f(x)\) because each \(x\) corresponds to two \(y\) values (above and below the axis).  
+
+Still, we can find the slope of the curve \(\frac{dy}{dx}\) by **differentiating both sides with respect to \(x\)** while remembering that \(y\) depends on \(x\).
+
+---
+
+### Why Does It Work?
+
+Imagine you’re measuring **depth** and **temperature** at a point in a lake. The two are linked by complex physical processes—**pressure increases with depth**, **light penetration decreases**, and **mixing layers** between warm surface water and cool bottom water shift with the weather. Because of all these intertwined effects, there’s no simple formula like \(T = f(D)\) that perfectly describes temperature as a function of depth.  
+
+Yet, we know that **a small change in depth causes a small change in temperature**—perhaps a few tenths of a degree per meter depending on the thermocline. Even if we can’t explicitly solve for \(T(D)\), we can still ask: *how fast does temperature change with depth right here?*
+
+To find that rate, we take the **derivative of the relationship itself**, even if \(T\) and \(D\) appear together in an equation like  
+\[
+F(D, T) = 0.
+\]  
+When we differentiate both sides with respect to \(D\), we apply the Chain Rule to any term involving \(T\), because \(T\) changes as \(D\) changes.  
+
+This is exactly what **implicit differentiation** does—it formalizes how we compute **slopes and sensitivities** in systems where variables are intertwined by physical laws rather than expressed as neat functions. It lets us answer questions like,
+
+> “If I go 1 m deeper, how much colder does the water get?”  
+
+without ever needing to untangle \(T\) as a direct function of \(D\).
+
+
+---
+
+### Step-by-Step Example
+
+Differentiate both sides of:
+
+\[
+x^2 + y^2 = 25
+\]
+
+---
+
+1. **Differentiate each term with respect to \(x\)**
+
+\[
+\frac{d}{dx}(x^2) + \frac{d}{dx}(y^2) = \frac{d}{dx}(25)
+\]
+
+---
+
+2. **Apply the derivatives**
+
+- For \(x^2\), the derivative is straightforward: \(2x\).  
+- For \(y^2\), apply the Chain Rule since \(y\) depends on \(x\):  
+  \[
+  \frac{d}{dx}(y^2) = 2y \frac{dy}{dx}.
+  \]
+
+- The derivative of a constant is zero.
+
+So:
+\[
+2x + 2y \frac{dy}{dx} = 0
+\]
+
+---
+
+3. **Solve for \(\frac{dy}{dx}\)**
+\[
+2y \frac{dy}{dx} = -2x
+\]
+\[
+\frac{dy}{dx} = -\frac{x}{y}
+\]
+
+---
+
+> **Interpretation:**  
+> The slope of the circle at any point \((x, y)\) is the negative ratio of \(x\) to \(y\).  
+> At the top (\(x=0, y=5\)), the slope is \(0\) (horizontal tangent).  
+> At the side (\(x=5, y=0\)), the slope is undefined (vertical tangent).
+
+---
+
+### Conceptual Analogy: Contour Lines on a Map
+
+
+::: activity
+**The Contour Map Analogy**
+
+Imagine standing on a **topographic map** — the kind that shows lines of equal elevation, called **contours**.  
+Each line represents all the points \((x, y)\) where the **elevation** \(E(x, y)\) is the same — for example, \(E(x, y) = 25\) meters.
+
+That’s an **implicit relationship** between \(x\) and \(y\):  
+you don’t have elevation written as “\(y = f(x)\)” or “\(x = f(y)\)”.  
+Instead, both variables are connected through the condition that elevation stays constant.
+
+Now imagine walking **along** one of those contour lines.  
+If you take a small step eastward (a change in \(x\)), you’ll also need to move slightly north or south (a change in \(y\)) to **stay on the same contour** — that is, to keep the elevation \(E(x, y)\) constant.
+
+That small “north/south adjustment” per unit “eastward step” is exactly what  
+\[
+\frac{dy}{dx}
+\]
+measures.  
+
+It tells you how \(y\) must change when \(x\) changes **to keep the overall relationship \(E(x, y) = \text{constant}\)** true.
+
+So, just like tracing a contour line:
+- \(E(x, y)\) is the fixed relationship (like \(x^2 + y^2 = 25\)).
+- As you move in \(x\), \(y\) must adjust to stay on that curve.
+- The **ratio** of those small changes — \(\frac{dy}{dx}\) — is what **implicit differentiation** gives you.
+
+```{r, echo=FALSE}
+# This R code generates the contour plot shown below
+# (Code is suppressed for students in the final version)
+
+x <- seq(-5, 5, length.out = 100)
+y <- seq(-5, 5, length.out = 100)
+grid <- expand.grid(x = x, y = y)
+grid$E <- grid$x^2 + grid$y^2
+E_matrix <- matrix(grid$E, nrow = 100, ncol = 100)
+
+contour(x, y, E_matrix,
+        levels = c(1, 4, 9, 16, 25),
+        col = "steelblue",
+        lwd = 2,
+        main = "Contour Map of E(x, y) = x² + y²",
+        xlab = "x (east-west)",
+        ylab = "y (north-south)")
+points(3, 4, pch = 19, col = "tomato")
+text(3, 4, "E = 25", pos = 4, col = "tomato")
+
+```
+
+
+:::
+
+---
+
+> **Takeaway:** Implicit differentiation is like walking along a contour line —  
+> you can’t separate \(x\) and \(y\), but you can still describe how one must change to keep the relationship balanced.
+
+---
+
+### Environmental Application
+
+Let’s look at a simple model of **carbon balance** in a forest canopy:
+
+\[
+A(T, L) = k (T - 5)(L - 100)
+\]
+
+where  
+- \(A\) = net photosynthetic assimilation rate,  
+- \(T\) = temperature (°C),  
+- \(L\) = light intensity (μmol photons m⁻² s⁻¹),  
+- \(k\) = scaling constant.
+
+Suppose the system maintains a constant assimilation rate, \(A = A_0\).  
+That means \(A(T, L) = A_0\) defines an **implicit curve** between \(T\) and \(L\): as temperature rises, light must adjust to keep assimilation fixed.
+
+Differentiate both sides with respect to \(T\):
+
+\[
+\frac{d}{dT}\big[ k (T - 5)(L - 100) \big] = 0.
+\]
+
+---
+
+1. **Apply the Product Rule and Chain Rule**
+\[
+k[(L - 100) + (T - 5)\frac{dL}{dT}] = 0
+\]
+
+---
+
+2. **Simplify and solve for \(\frac{dL}{dT}\)**
+\[
+(L - 100) + (T - 5)\frac{dL}{dT} = 0
+\]
+\[
+\frac{dL}{dT} = -\frac{L - 100}{T - 5}
+\]
+
+---
+
+> **Interpretation:**  
+> To keep carbon assimilation constant, light intensity must decrease as temperature rises (negative slope), and the magnitude of that adjustment depends on how far \(T\) and \(L\) are from their baseline values (5°C and 100 μmol m⁻² s⁻¹).
+
+---
+
+### Step-by-Step Summary
+
+> **Implicit Differentiation** is used when \(y\) (or another variable) can’t be isolated easily.  
+>
+> - Step 1: Differentiate both sides with respect to \(x\).  
+> - Step 2: Apply the Chain Rule to any term containing \(y\).  
+> - Step 3: Solve for \(\frac{dy}{dx}\).  
+>
+> In words: **differentiate everything, then untangle for the slope.**
+
+---
+
+### Key Takeaway
+
+Implicit differentiation extends the Chain Rule to relationships that **can’t be untangled** into a single function.  
+It’s the calculus tool for understanding how interconnected variables co-adjust—essential for studying **feedbacks** and **constraints** in environmental systems.
+
+
+
+
+
+
 ## Practice: Basic Derivative Rules
 
 ### Skill Drills — Build Comfort Through Repetition
@@ -1977,6 +2210,53 @@ Differentiate each function. Identify **which rules** you are using at each step
 8. \( u(x) = \dfrac{\sin(3x)}{\ln(x^2+1)} \)  
 9. \( v(r) = (r^2-4)^{-3} \cdot e^{-r} \)  
 10. \( w(z) = \dfrac{e^{\sin z} + z^2}{\sqrt{\tan z}} \)
+
+
+## Practice: Implicit Differentiation
+
+Sometimes equations involve both \(x\) and \(y\) mixed together — not neatly written as \(y = f(x)\).  
+That’s when you use **implicit differentiation**. It allows you to find \(\frac{dy}{dx}\) even when you can’t easily solve for \(y\).
+
+The idea is simple:  
+Differentiate **both sides** of the equation with respect to \(x\), treating \(y\) as a function of \(x\).  
+Whenever you take the derivative of a term involving \(y\), multiply by \(\frac{dy}{dx}\) — because \(y\) changes as \(x\) changes.
+
+\[
+\text{If } y = y(x), \quad \frac{d}{dx}[y^n] = n y^{n-1} \frac{dy}{dx}
+\]
+
+Think of it like a **ripple effect**: when \(x\) changes, \(y\) changes too, and you must account for both.
+
+**Tips for success:**  
+- Differentiate **both sides** of the equation with respect to \(x\).  
+- Every time you take the derivative of a \(y\)-term, **multiply by \(\frac{dy}{dx}\)**.  
+- After differentiating, **collect all terms with \(\frac{dy}{dx}\)** on one side and solve for it.  
+- Keep parentheses clear — they’ll help you organize the equation.
+
+---
+
+**Instructions:**  
+Differentiate each equation **implicitly** with respect to \(x\).  
+Solve for \(\frac{dy}{dx}\) where possible.
+
+1. \( x^2 + y^2 = 25 \)  
+2. \( xy = 6 \)  
+3. \( x^3 + y^3 = 9xy \)  
+4. \( \sin(xy) = x \)  
+5. \( e^{x+y} = x^2 \)  
+6. \( \ln(x^2 + y^2) = 3x \)  
+7. \( x^2y + xy^2 = 10 \)  
+8. \( \cos(y) = x^2 + 1 \)  
+9. \( y^2 + e^y = x \)  
+10. \( x^2 + xy + y^2 = 7 \)
+
+---
+
+> **Takeaway:**  
+> Implicit differentiation helps you find \(\frac{dy}{dx}\) when \(x\) and \(y\) are **intertwined** in the same equation.  
+> Differentiate everything, apply the Chain Rule to \(y\), then untangle to isolate \(\frac{dy}{dx}\).
+
+
 
 
 ## Practice: Applications — Derivatives in Environmental Models
