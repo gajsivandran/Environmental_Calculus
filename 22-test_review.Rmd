@@ -23,7 +23,7 @@ Below are the general instructions for all tests
 - **One page (two sides)** of handwritten (or font size 8) notes are allowed.
 - The equation sheet from the textbook is included as part of the test pack (it doesn't count as note pages)
 
-## Basic Rule Practice
+## Basic Rule Practice{-}
 
 ### 1. \(f(x)=7\){-}
 
@@ -168,13 +168,13 @@ Differentiate each term; the derivative of a cubic is a quadratic.
 
 ---
 
-## Identity Rule Practice
+## Identity Rule Practice {-}
 
 ### 1. \(f(x)=e^x\){-}
 
 <details>
 <summary><strong>Math Hint</strong></summary>
-The derivative of \(e^x\) is itself.
+Use the table entry for \(e^x\).
 </details>
 
 <details>
@@ -188,7 +188,7 @@ The derivative of \(e^x\) is itself.
 
 <details>
 <summary><strong>Math Hint</strong></summary>
-Use the constant multiple rule.
+Differentiate \(e^x\) from the table, then scale by the constant.
 </details>
 
 <details>
@@ -202,7 +202,7 @@ Use the constant multiple rule.
 
 <details>
 <summary><strong>Math Hint</strong></summary>
-Use \( (e^{g(x)})' = g'(x)e^{g(x)} \).
+Use the identity for \(e^{g(x)}\) with \(g(x)=2x\).
 </details>
 
 <details>
@@ -216,7 +216,7 @@ Use \( (e^{g(x)})' = g'(x)e^{g(x)} \).
 
 <details>
 <summary><strong>Math Hint</strong></summary>
-For \(g(x)=-x\), \(g'(x)=-1\).
+Use the identity for \(e^{g(x)}\) with \(g(x)=-x\).
 </details>
 
 <details>
@@ -230,7 +230,7 @@ For \(g(x)=-x\), \(g'(x)=-1\).
 
 <details>
 <summary><strong>Math Hint</strong></summary>
-Use \( (e^{g(x)})' = g'(x)e^{g(x)} \).
+Use the identity for \(e^{g(x)}\) with \(g(x)=x^2\).
 </details>
 
 <details>
@@ -244,7 +244,7 @@ Use \( (e^{g(x)})' = g'(x)e^{g(x)} \).
 
 <details>
 <summary><strong>Math Hint</strong></summary>
-Differentiate the exponent \(3x+1\).
+Use the identity for \(e^{g(x)}\) with \(g(x)=3x+1\).
 </details>
 
 <details>
@@ -258,7 +258,7 @@ Differentiate the exponent \(3x+1\).
 
 <details>
 <summary><strong>Math Hint</strong></summary>
-Use \( (a^x)' = a^x \ln(a) \).
+Use the table entry for \(a^x\) with \(a=10\).
 </details>
 
 <details>
@@ -272,12 +272,12 @@ Use \( (a^x)' = a^x \ln(a) \).
 
 <details>
 <summary><strong>Math Hint</strong></summary>
-Use \( (a^{g(x)})' = g'(x)a^{g(x)}\ln(a) \).
+Use the identity for \(a^{g(x)}\) with \(a=2\), \(g(x)=3x\).
 </details>
 
 <details>
 <summary><strong>Solution</strong></summary>
-\(f'(x)=3(2^{3x}\ln 2)\)
+\(f'(x)=3\cdot 2^{3x}\ln 2\)
 </details>
 
 ---
@@ -286,7 +286,7 @@ Use \( (a^{g(x)})' = g'(x)a^{g(x)}\ln(a) \).
 
 <details>
 <summary><strong>Math Hint</strong></summary>
-Differentiate each term individually.
+Apply the table entry for each exponential term separately.
 </details>
 
 <details>
@@ -300,7 +300,7 @@ Differentiate each term individually.
 
 <details>
 <summary><strong>Math Hint</strong></summary>
-Use \(a^x\ln(a)\) for each term.
+Use the \(a^x\) identity on each term.
 </details>
 
 <details>
@@ -314,7 +314,7 @@ Use \(a^x\ln(a)\) for each term.
 
 <details>
 <summary><strong>Math Hint</strong></summary>
-Derivative of \(\ln(x)\) is \(1/x\).
+Use the table entry for \(\ln(x)\) (domain \(x>0\)).
 </details>
 
 <details>
@@ -328,7 +328,7 @@ Derivative of \(\ln(x)\) is \(1/x\).
 
 <details>
 <summary><strong>Math Hint</strong></summary>
-Use chain rule with \(g(x)=3x\).
+Use the identity for \(\ln(g(x))\) with \(g(x)=3x\) (domain \(x>0\)).
 </details>
 
 <details>
@@ -342,7 +342,7 @@ Use chain rule with \(g(x)=3x\).
 
 <details>
 <summary><strong>Math Hint</strong></summary>
-Use \((\ln g(x))'=\dfrac{g'(x)}{g(x)}\).
+Use the identity for \(\ln(g(x))\) with \(g(x)=x^2+1\).
 </details>
 
 <details>
@@ -356,7 +356,7 @@ Use \((\ln g(x))'=\dfrac{g'(x)}{g(x)}\).
 
 <details>
 <summary><strong>Math Hint</strong></summary>
-\(\sqrt{x}=x^{1/2}\)
+Write \(\sqrt{x}=x^{1/2}\), then use the \(\ln(x)\) identity (domain \(x>0\)).
 </details>
 
 <details>
@@ -370,7 +370,7 @@ Use \((\ln g(x))'=\dfrac{g'(x)}{g(x)}\).
 
 <details>
 <summary><strong>Math Hint</strong></summary>
-\((\log_a x)'=\dfrac{1}{x\ln(a)}\)
+Use the table entry for \(\log_a(x)\) with \(a=2\) (domain \(x>0\)).
 </details>
 
 <details>
@@ -384,7 +384,7 @@ Use \((\ln g(x))'=\dfrac{g'(x)}{g(x)}\).
 
 <details>
 <summary><strong>Math Hint</strong></summary>
-Use chain rule with \((\log_a(g(x)))'=\dfrac{g'(x)}{g(x)\ln(a)}\).
+Use the identity for \(\log_a(g(x))\) with \(a=3\), \(g(x)=2x\) (domain \(x>0\)).
 </details>
 
 <details>
@@ -398,7 +398,7 @@ Use chain rule with \((\log_a(g(x)))'=\dfrac{g'(x)}{g(x)\ln(a)}\).
 
 <details>
 <summary><strong>Math Hint</strong></summary>
-Use chain rule with \(g(x)=e^x+1\).
+Use the identity for \(\ln(g(x))\) with \(g(x)=e^x+1\).
 </details>
 
 <details>
@@ -412,7 +412,7 @@ Use chain rule with \(g(x)=e^x+1\).
 
 <details>
 <summary><strong>Math Hint</strong></summary>
-Simplify \(e^{\ln(x)}=x\).
+First simplify using \(e^{\ln(x)}=x\) (domain \(x>0\)).
 </details>
 
 <details>
@@ -426,7 +426,7 @@ Simplify \(e^{\ln(x)}=x\).
 
 <details>
 <summary><strong>Math Hint</strong></summary>
-Use product rule.
+Differentiate each factor using the table entries \(d(x)/dx=1\) and \(d(e^x)/dx=e^x\), then combine appropriately.
 </details>
 
 <details>
@@ -436,21 +436,22 @@ Use product rule.
 
 ---
 
-### 20. \(f(x)=x\ln(x)\){-}
+### 20. \(f(x)=\ln(x^3+x)\){-}
 
 <details>
 <summary><strong>Math Hint</strong></summary>
-Use product rule.
+Use the identity for \(\ln(g(x))\) with \(g(x)=x^3+x\) (domain \(x>0\)).
 </details>
 
 <details>
 <summary><strong>Solution</strong></summary>
-\(f'(x)=\ln(x)+1\)
+\(f'(x)=\dfrac{3x^2+1}{x^3+x}\)
 </details>
 
 ---
 
-## Basic Trig Derivative Practice
+
+## Basic Trig Derivative Practice{-}
 
 ### 1. \(f(x)=\sin x\){-}
 
@@ -592,7 +593,7 @@ Use constant multiple and sum/difference rules.
 
 ---
 
-## Product Rule Practice
+## Product Rule Practice{-}
 
 ### 1. \(f(x)=x\sin x\){-}
 
@@ -734,7 +735,7 @@ Use product rule: \(u=2x-5, v=\tan x\)
 
 ---
 
-## Quotient Rule Practice
+## Quotient Rule Practice{-}
 
 ### 1. \(f(x)=\dfrac{1}{x}\){-}
 
@@ -876,7 +877,7 @@ Use quotient rule and simplify.
 
 ---
 
-## Chain Rule Practice
+## Chain Rule Practice{-}
 
 ### 1. \(f(x)=\sin(2x)\){-}
 
@@ -1018,7 +1019,7 @@ Outer: \(\cos(u)\); Inner: \(u=\sqrt{x}\)
 
 ---
 
-## Implicit Derivative Practice
+## Implicit Derivative Practice{-}
 
 ### 1. \(x^2 + y^2 = 25\){-}
 
