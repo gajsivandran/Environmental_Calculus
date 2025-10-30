@@ -1,4 +1,4 @@
-# Test1 Review Material {-}
+# Test 2 Review Material {-}
 
 Below are resources to help you practice and prepare for the test 2 in this course.
 
@@ -449,3 +449,711 @@ Use product rule.
 </details>
 
 ---
+
+## Basic Trig Derivative Practice
+
+### 1. \(f(x)=\sin x\){-}
+
+<details>
+<summary><strong>Math Hint</strong></summary>
+Use \((\sin x)'=\cos x\).
+</details>
+
+<details>
+<summary><strong>Solution</strong></summary>
+\(f'(x)=\cos x\)
+</details>
+
+---
+
+### 2. \(f(x)=\cos x\){-}
+
+<details>
+<summary><strong>Math Hint</strong></summary>
+\((\cos x)'=-\sin x\)
+</details>
+
+<details>
+<summary><strong>Solution</strong></summary>
+\(f'(x)=-\sin x\)
+</details>
+
+---
+
+### 3. \(f(x)=2\sin x\){-}
+
+<details>
+<summary><strong>Math Hint</strong></summary>
+Multiply the derivative of \(\sin x\) by 2.
+</details>
+
+<details>
+<summary><strong>Solution</strong></summary>
+\(f'(x)=2\cos x\)
+</details>
+
+---
+
+### 4. \(f(x)=5\cos x\){-}
+
+<details>
+<summary><strong>Math Hint</strong></summary>
+\((\cos x)'=-\sin x\)
+</details>
+
+<details>
+<summary><strong>Solution</strong></summary>
+\(f'(x)=-5\sin x\)
+</details>
+
+---
+
+### 5. \(f(x)=\sin x+\cos x\){-}
+
+<details>
+<summary><strong>Math Hint</strong></summary>
+Differentiate each term separately.
+</details>
+
+<details>
+<summary><strong>Solution</strong></summary>
+\(f'(x)=\cos x-\sin x\)
+</details>
+
+---
+
+### 6. \(f(x)=3\sin x-4\cos x\){-}
+
+<details>
+<summary><strong>Math Hint</strong></summary>
+Use constant multiple and sum/difference rules.
+</details>
+
+<details>
+<summary><strong>Solution</strong></summary>
+\(f'(x)=3\cos x+4\sin x\)
+</details>
+
+---
+
+### 7. \(f(x)=\tan x\){-}
+
+<details>
+<summary><strong>Math Hint</strong></summary>
+\((\tan x)'=\sec^2 x\)
+</details>
+
+<details>
+<summary><strong>Solution</strong></summary>
+\(f'(x)=\sec^2 x\)
+</details>
+
+---
+
+### 8. \(f(x)=\sec x\){-}
+
+<details>
+<summary><strong>Math Hint</strong></summary>
+\((\sec x)'=\sec x\tan x\)
+</details>
+
+<details>
+<summary><strong>Solution</strong></summary>
+\(f'(x)=\sec x\tan x\)
+</details>
+
+---
+
+### 9. \(f(x)=\cot x\){-}
+
+<details>
+<summary><strong>Math Hint</strong></summary>
+\((\cot x)'=-\csc^2 x\)
+</details>
+
+<details>
+<summary><strong>Solution</strong></summary>
+\(f'(x)=-\csc^2 x\)
+</details>
+
+---
+
+### 10. \(f(x)=\csc x\){-}
+
+<details>
+<summary><strong>Math Hint</strong></summary>
+\((\csc x)'=-\csc x\cot x\)
+</details>
+
+<details>
+<summary><strong>Solution</strong></summary>
+\(f'(x)=-\csc x\cot x\)
+</details>
+
+---
+
+## Product Rule Practice
+
+### 1. \(f(x)=x\sin x\){-}
+
+<details>
+<summary><strong>Math Hint</strong></summary>
+Use the product rule: \((uv)' = u'v + uv'\)
+</details>
+
+<details>
+<summary><strong>Solution</strong></summary>
+\(f'(x)=\sin x + x\cos x\)
+</details>
+
+---
+
+### 2. \(f(x)=x\cos x\){-}
+
+<details>
+<summary><strong>Math Hint</strong></summary>
+\((\cos x)'=-\sin x\)
+</details>
+
+<details>
+<summary><strong>Solution</strong></summary>
+\(f'(x)=\cos x - x\sin x\)
+</details>
+
+---
+
+### 3. \(f(x)=x^2 e^x\){-}
+
+<details>
+<summary><strong>Math Hint</strong></summary>
+Apply product rule: \(u=x^2, v=e^x\)
+</details>
+
+<details>
+<summary><strong>Solution</strong></summary>
+\(f'(x)=2x e^x + x^2 e^x = e^x(x^2 + 2x)\)
+</details>
+
+---
+
+### 4. \(f(x)=x^3\ln x\){-}
+
+<details>
+<summary><strong>Math Hint</strong></summary>
+Use the product rule and derivative of \(\ln x\).
+</details>
+
+<details>
+<summary><strong>Solution</strong></summary>
+\(f'(x)=3x^2\ln x + x^2\)
+</details>
+
+---
+
+### 5. \(f(x)=(x^2+1)\sin x\){-}
+
+<details>
+<summary><strong>Math Hint</strong></summary>
+Differentiate both terms using product rule.
+</details>
+
+<details>
+<summary><strong>Solution</strong></summary>
+\(f'(x)=2x\sin x + (x^2+1)\cos x\)
+</details>
+
+---
+
+### 6. \(f(x)=x e^{2x}\){-}
+
+<details>
+<summary><strong>Math Hint</strong></summary>
+Product rule with \(v' = 2e^{2x}\)
+</details>
+
+<details>
+<summary><strong>Solution</strong></summary>
+\(f'(x)=e^{2x}(1+2x)\)
+</details>
+
+---
+
+### 7. \(f(x)=x^2\cos x\){-}
+
+<details>
+<summary><strong>Math Hint</strong></summary>
+Product rule: \(u=x^2, v=\cos x\)
+</details>
+
+<details>
+<summary><strong>Solution</strong></summary>
+\(f'(x)=2x\cos x - x^2\sin x\)
+</details>
+
+---
+
+### 8. \(f(x)=(3x-2)(x^2+4)\){-}
+
+<details>
+<summary><strong>Math Hint</strong></summary>
+Use product rule or expand first.
+</details>
+
+<details>
+<summary><strong>Solution</strong></summary>
+\(f'(x)=9x^2-4x+12\)
+</details>
+
+---
+
+### 9. \(f(x)=(x+1)e^x\){-}
+
+<details>
+<summary><strong>Math Hint</strong></summary>
+Use product rule and factor \(e^x\).
+</details>
+
+<details>
+<summary><strong>Solution</strong></summary>
+\(f'(x)=e^x(x+2)\)
+</details>
+
+---
+
+### 10. \(f(x)=(2x-5)\tan x\){-}
+
+<details>
+<summary><strong>Math Hint</strong></summary>
+Use product rule: \(u=2x-5, v=\tan x\)
+</details>
+
+<details>
+<summary><strong>Solution</strong></summary>
+\(f'(x)=2\tan x + (2x-5)\sec^2 x\)
+</details>
+
+---
+
+## Quotient Rule Practice
+
+### 1. \(f(x)=\dfrac{1}{x}\){-}
+
+<details>
+<summary><strong>Math Hint</strong></summary>
+Rewrite as \(x^{-1}\) or use the quotient rule.
+</details>
+
+<details>
+<summary><strong>Solution</strong></summary>
+\(f'(x)=-\dfrac{1}{x^2}\)
+</details>
+
+---
+
+### 2. \(f(x)=\dfrac{x}{x^2+1}\){-}
+
+<details>
+<summary><strong>Math Hint</strong></summary>
+Use \((u/v)'=\dfrac{u'v-uv'}{v^2}\)
+</details>
+
+<details>
+<summary><strong>Solution</strong></summary>
+\(f'(x)=\dfrac{1-x^2}{(x^2+1)^2}\)
+</details>
+
+---
+
+### 3. \(f(x)=\dfrac{x^2}{x+1}\){-}
+
+<details>
+<summary><strong>Math Hint</strong></summary>
+Apply quotient rule and simplify.
+</details>
+
+<details>
+<summary><strong>Solution</strong></summary>
+\(f'(x)=\dfrac{x^2+2x}{(x+1)^2}\)
+</details>
+
+---
+
+### 4. \(f(x)=\dfrac{x^2+1}{x}\){-}
+
+<details>
+<summary><strong>Math Hint</strong></summary>
+Simplify after differentiating.
+</details>
+
+<details>
+<summary><strong>Solution</strong></summary>
+\(f'(x)=1-\dfrac{1}{x^2}\)
+</details>
+
+---
+
+### 5. \(f(x)=\dfrac{\sin x}{x}\){-}
+
+<details>
+<summary><strong>Math Hint</strong></summary>
+Use quotient rule: \(u=\sin x, v=x\)
+</details>
+
+<details>
+<summary><strong>Solution</strong></summary>
+\(f'(x)=\dfrac{x\cos x-\sin x}{x^2}\)
+</details>
+
+---
+
+### 6. \(f(x)=\dfrac{x}{\sin x}\){-}
+
+<details>
+<summary><strong>Math Hint</strong></summary>
+Differentiate and simplify.
+</details>
+
+<details>
+<summary><strong>Solution</strong></summary>
+\(f'(x)=\dfrac{\sin x - x\cos x}{\sin^2 x}\)
+</details>
+
+---
+
+### 7. \(f(x)=\dfrac{e^x}{x}\){-}
+
+<details>
+<summary><strong>Math Hint</strong></summary>
+Combine exponential and quotient rules.
+</details>
+
+<details>
+<summary><strong>Solution</strong></summary>
+\(f'(x)=\dfrac{e^x(x-1)}{x^2}\)
+</details>
+
+---
+
+### 8. \(f(x)=\dfrac{\ln x}{x}\){-}
+
+<details>
+<summary><strong>Math Hint</strong></summary>
+Use quotient rule: \(u=\ln x, v=x\)
+</details>
+
+<details>
+<summary><strong>Solution</strong></summary>
+\(f'(x)=\dfrac{1-\ln x}{x^2}\)
+</details>
+
+---
+
+### 9. \(f(x)=\dfrac{x^2}{e^x}\){-}
+
+<details>
+<summary><strong>Math Hint</strong></summary>
+Differentiate numerator and denominator.
+</details>
+
+<details>
+<summary><strong>Solution</strong></summary>
+\(f'(x)=\dfrac{2x-x^2}{e^x}\)
+</details>
+
+---
+
+### 10. \(f(x)=\dfrac{\tan x}{x^2}\){-}
+
+<details>
+<summary><strong>Math Hint</strong></summary>
+Use quotient rule and simplify.
+</details>
+
+<details>
+<summary><strong>Solution</strong></summary>
+\(f'(x)=\dfrac{x\sec^2 x - 2\tan x}{x^3}\)
+</details>
+
+---
+
+## Chain Rule Practice
+
+### 1. \(f(x)=\sin(2x)\){-}
+
+<details>
+<summary><strong>Math Hint</strong></summary>
+Outer: \(\sin(u)\), Inner: \(u=2x\)
+</details>
+
+<details>
+<summary><strong>Solution</strong></summary>
+\(f'(x)=2\cos(2x)\)
+</details>
+
+---
+
+### 2. \(f(x)=\cos(3x)\){-}
+
+<details>
+<summary><strong>Math Hint</strong></summary>
+Outer: \(\cos(u)\), Inner: \(u=3x\)
+</details>
+
+<details>
+<summary><strong>Solution</strong></summary>
+\(f'(x)=-3\sin(3x)\)
+</details>
+
+---
+
+### 3. \(f(x)=e^{5x}\){-}
+
+<details>
+<summary><strong>Math Hint</strong></summary>
+Use \( (e^{g(x)})' = g'(x)e^{g(x)} \)
+</details>
+
+<details>
+<summary><strong>Solution</strong></summary>
+\(f'(x)=5e^{5x}\)
+</details>
+
+---
+
+### 4. \(f(x)=\ln(4x+1)\){-}
+
+<details>
+<summary><strong>Math Hint</strong></summary>
+Use chain rule for \(\ln(g(x))\)
+</details>
+
+<details>
+<summary><strong>Solution</strong></summary>
+\(f'(x)=\dfrac{4}{4x+1}\)
+</details>
+
+---
+
+### 5. \(f(x)=\sqrt{3x+2}\){-}
+
+<details>
+<summary><strong>Math Hint</strong></summary>
+\(\sqrt{3x+2}=(3x+2)^{1/2}\)
+</details>
+
+<details>
+<summary><strong>Solution</strong></summary>
+\(f'(x)=\dfrac{3}{2\sqrt{3x+2}}\)
+</details>
+
+---
+
+### 6. \(f(x)=(2x+1)^5\){-}
+
+<details>
+<summary><strong>Math Hint</strong></summary>
+Use \((g(x))^n)'=n(g(x))^{n-1}g'(x)\)
+</details>
+
+<details>
+<summary><strong>Solution</strong></summary>
+\(f'(x)=10(2x+1)^4\)
+</details>
+
+---
+
+### 7. \(f(x)=\tan(4x)\){-}
+
+<details>
+<summary><strong>Math Hint</strong></summary>
+Outer: \(\tan(u)\), Inner: \(u=4x\)
+</details>
+
+<details>
+<summary><strong>Solution</strong></summary>
+\(f'(x)=4\sec^2(4x)\)
+</details>
+
+---
+
+### 8. \(f(x)=\sin(x^2)\){-}
+
+<details>
+<summary><strong>Math Hint</strong></summary>
+Outer: \(\sin(u)\), Inner: \(u=x^2\)
+</details>
+
+<details>
+<summary><strong>Solution</strong></summary>
+\(f'(x)=2x\cos(x^2)\)
+</details>
+
+---
+
+### 9. \(f(x)=e^{x^2+1}\){-}
+
+<details>
+<summary><strong>Math Hint</strong></summary>
+Differentiate exponent using chain rule.
+</details>
+
+<details>
+<summary><strong>Solution</strong></summary>
+\(f'(x)=2x e^{x^2+1}\)
+</details>
+
+---
+
+### 10. \(f(x)=\cos(\sqrt{x})\){-}
+
+<details>
+<summary><strong>Math Hint</strong></summary>
+Outer: \(\cos(u)\); Inner: \(u=\sqrt{x}\)
+</details>
+
+<details>
+<summary><strong>Solution</strong></summary>
+\(f'(x)=-\dfrac{\sin(\sqrt{x})}{2\sqrt{x}}\)
+</details>
+
+---
+
+## Implicit Derivative Practice
+
+### 1. \(x^2 + y^2 = 25\){-}
+
+<details>
+<summary><strong>Math Hint</strong></summary>
+Differentiate both sides with respect to \(x\).
+</details>
+
+<details>
+<summary><strong>Solution</strong></summary>
+\(\dfrac{dy}{dx} = -\dfrac{x}{y}\)
+</details>
+
+---
+
+### 2. \(x^3 + y^3 = 9xy\){-}
+
+<details>
+<summary><strong>Math Hint</strong></summary>
+Use the product rule on \(9xy\).
+</details>
+
+<details>
+<summary><strong>Solution</strong></summary>
+\(\dfrac{dy}{dx} = \dfrac{9y - 3x^2}{3y^2 - 9x}\)
+</details>
+
+---
+
+### 3. \(x^2y + xy^2 = 6\){-}
+
+<details>
+<summary><strong>Math Hint</strong></summary>
+Apply product rule to both terms.
+</details>
+
+<details>
+<summary><strong>Solution</strong></summary>
+\(\dfrac{dy}{dx} = -\dfrac{2xy + y^2}{x^2 + 2xy}\)
+</details>
+
+---
+
+### 4. \(\sin y = x^2 + y\){-}
+
+<details>
+<summary><strong>Math Hint</strong></summary>
+Differentiate \(\sin y\) using chain rule.
+</details>
+
+<details>
+<summary><strong>Solution</strong></summary>
+\(\dfrac{dy}{dx} = \dfrac{2x}{\cos y - 1}\)
+</details>
+
+---
+
+### 5. \(e^y = x^2y + 3\){-}
+
+<details>
+<summary><strong>Math Hint</strong></summary>
+Differentiate each term, use product rule for \(x^2y\).
+</details>
+
+<details>
+<summary><strong>Solution</strong></summary>
+\(\dfrac{dy}{dx} = \dfrac{2xy}{e^y - x^2}\)
+</details>
+
+---
+
+### 6. \(\tan y = x\){-}
+
+<details>
+<summary><strong>Math Hint</strong></summary>
+Differentiate \(\tan y\) with chain rule.
+</details>
+
+<details>
+<summary><strong>Solution</strong></summary>
+\(\dfrac{dy}{dx}=\cos^2 y\)
+</details>
+
+---
+
+### 7. \(x^2 + xy + y^2 = 7\){-}
+
+<details>
+<summary><strong>Math Hint</strong></summary>
+Use product rule on \(xy\) and chain rule on \(y^2\).
+</details>
+
+<details>
+<summary><strong>Solution</strong></summary>
+\(\dfrac{dy}{dx} = -\dfrac{2x + y}{x + 2y}\)
+</details>
+
+---
+
+### 8. \(x^2 = \sin y\){-}
+
+<details>
+<summary><strong>Math Hint</strong></summary>
+Differentiate both sides.
+</details>
+
+<details>
+<summary><strong>Solution</strong></summary>
+\(\dfrac{dy}{dx}=\dfrac{2x}{\cos y}\)
+</details>
+
+---
+
+### 9. \(x^2y^2 = 16\){-}
+
+<details>
+<summary><strong>Math Hint</strong></summary>
+Product rule: \(u=x^2, v=y^2\)
+</details>
+
+<details>
+<summary><strong>Solution</strong></summary>
+\(\dfrac{dy}{dx} = -\dfrac{y}{x}\)
+</details>
+
+---
+
+### 10. \(x^2 + \cos y = 4\){-}
+
+<details>
+<summary><strong>Math Hint</strong></summary>
+Derivative of \(\cos y\) is \(-\sin y\dfrac{dy}{dx}\).
+</details>
+
+<details>
+<summary><strong>Solution</strong></summary>
+\(\dfrac{dy}{dx} = \dfrac{2x}{\sin y}\)
+</details>

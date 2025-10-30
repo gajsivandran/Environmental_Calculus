@@ -243,6 +243,11 @@ summary-5
 optimizaiton
 basic-rule-practice
 identity-rule-practice
+basic-trig-derivative-practice
+product-rule-practice
+quotient-rule-practice
+chain-rule-practice
+implicit-derivative-practice
 why-calculus-workbook
 teaching-team-introductions
 gaj-sivandran
