@@ -23,7 +23,7 @@
 <meta name="author" content="Gaj Sivandran" />
 
 
-<meta name="date" content="2025-10-30" />
+<meta name="date" content="2025-10-31" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -837,6 +837,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="9.14" data-path="derivative-rules---workbook.html"><a href="derivative-rules---workbook.html#implicit-differentiation-1"><i class="fa fa-check"></i><b>9.14</b> Implicit Differentiation</a>
 <ul>
 <li class="chapter" data-level="9.14.1" data-path="derivative-rules---workbook.html"><a href="derivative-rules---workbook.html#step-1-see-it-why-implicit-differentiation-is-needed"><i class="fa fa-check"></i><b>9.14.1</b> Step 1: See It — Why Implicit Differentiation Is Needed</a></li>
+<li class="chapter" data-level="9.14.2" data-path="derivative-rules---workbook.html"><a href="derivative-rules---workbook.html#step-3-connect-to-real-world-systems"><i class="fa fa-check"></i><b>9.14.2</b> Step 3: Connect to Real-World Systems</a></li>
+<li class="chapter" data-level="9.14.3" data-path="derivative-rules---workbook.html"><a href="derivative-rules---workbook.html#step-4-reflect-when-two-variables-depend-on-each-other"><i class="fa fa-check"></i><b>9.14.3</b> Step 4: Reflect — When Two Variables Depend on Each Other</a></li>
+<li class="chapter" data-level="9.14.4" data-path="derivative-rules---workbook.html"><a href="derivative-rules---workbook.html#step-6-quick-practice-apply-implicit-differentiation"><i class="fa fa-check"></i><b>9.14.4</b> Step 6: Quick Practice — Apply Implicit Differentiation</a></li>
+</ul></li>
+<li class="chapter" data-level="9.15" data-path="derivative-rules---workbook.html"><a href="derivative-rules---workbook.html#mixed-rule-practice"><i class="fa fa-check"></i><b>9.15</b> Mixed Rule Practice</a>
+<ul>
+<li class="chapter" data-level="" data-path="derivative-rules---workbook.html"><a href="derivative-rules---workbook.html#quotient-chain-1"><i class="fa fa-check"></i>3. Quotient + Chain</a></li>
+<li class="chapter" data-level="" data-path="derivative-rules---workbook.html"><a href="derivative-rules---workbook.html#environmental-applications-logistic-growth-model"><i class="fa fa-check"></i>Environmental Applications Logistic Growth Model</a></li>
 </ul></li>
 </ul></li>
 <li class="divider"></li>
@@ -3519,7 +3527,9 @@ This equation defines a <strong>circle</strong> — all points <span class="math
 Notice something important: you can’t write this as a single function <span class="math inline">\(y = f(x)\)</span> because for most <span class="math inline">\(x\)</span>-values, there are <strong>two</strong> possible <span class="math inline">\(y\)</span>-values (one above, one below the <span class="math inline">\(x\)</span>-axis).</p>
 <p>That’s exactly where <strong>implicit differentiation</strong> comes in.<br />
 We can still find the <strong>slope</strong> of the curve at any given point — even when <span class="math inline">\(y\)</span> isn’t isolated.</p>
+</div>
 <hr />
+</div>
 <div id="step-3-connect-to-real-world-systems" class="section level3 hasAnchor" number="9.14.2">
 <h3><span class="header-section-number">9.14.2</span> Step 3: Connect to Real-World Systems<a href="derivative-rules---workbook.html#step-3-connect-to-real-world-systems" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <div class="promptbox">
@@ -3605,10 +3615,561 @@ For the curve <span class="math inline">\(x^2 + xy + y^2 = 7\)</span>, find the 
 These examples combine multiple differentiation rules — power, product, chain, exponential, and logarithmic — all within one equation.<br />
 Implicit differentiation is the glue that connects them, letting you find slopes even when <span class="math inline">\(y\)</span> can’t be isolated.</p>
 </blockquote>
+</div>
+</div>
+</div>
+<div id="mixed-rule-practice" class="section level2 hasAnchor" number="9.15">
+<h2><span class="header-section-number">9.15</span> Mixed Rule Practice<a href="derivative-rules---workbook.html#mixed-rule-practice" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="how-to-approach-mixed-rule-derivative-problems" class="section level4 unnumbered hasAnchor">
+<h4>How to Approach Mixed-Rule Derivative Problems<a href="derivative-rules---workbook.html#how-to-approach-mixed-rule-derivative-problems" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>When a function combines <strong>multiple differentiation rules</strong> — product, quotient, chain, and even implicit differentiation — the key is <em>organization</em>, not speed.<br />
+Here’s a systematic way to stay in control:</p>
+<hr />
+<div id="identify-the-outermost-structure-first" class="section level5 unnumbered hasAnchor">
+<h5>1. Identify the <strong>outermost structure</strong> first<a href="derivative-rules---workbook.html#identify-the-outermost-structure-first" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<p>Before differentiating anything, ask:<br />
+&gt; “What is the <em>main operation</em> holding this function together?”</p>
+<ul>
+<li>Is the whole expression a <strong>quotient</strong> (something divided by something)?<br />
+</li>
+<li>A <strong>product</strong> (two factors multiplied)?<br />
+</li>
+<li>A <strong>composition</strong> (a function inside another)?</li>
+</ul>
+<hr />
+</div>
+<div id="differentiate-layer-by-layer-not-all-at-once" class="section level5 unnumbered hasAnchor">
+<h5>2. Differentiate <strong>layer by layer</strong>, not all at once<a href="derivative-rules---workbook.html#differentiate-layer-by-layer-not-all-at-once" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<p>Treat each layer like peeling an onion:</p>
+<ul>
+<li>Apply the <strong>outer rule</strong> (product, quotient, or chain).<br />
+</li>
+<li>Pause — identify any <strong>new inner functions</strong> that appear.<br />
+</li>
+<li>Then differentiate <em>those</em> carefully before moving deeper.</li>
+</ul>
+<p>Example thought process:
+&gt; “The outermost layer is a quotient,<br />
+&gt; the numerator has a product,<br />
+&gt; and one of those products contains a chain rule.”</p>
+<p>That’s already your roadmap.</p>
+<hr />
+</div>
+<div id="use-clear-labels-for-sub-functions" class="section level5 unnumbered hasAnchor">
+<h5>3. Use clear labels for sub-functions<a href="derivative-rules---workbook.html#use-clear-labels-for-sub-functions" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<p>Name inner pieces temporarily:
+<span class="math display">\[
+N(x) = (x^2 + y^3)e^{\sin(x^2)}, \quad D(x) = \sin(\ln((x e^x + 1)^2)).
+\]</span>
+Then compute <span class="math inline">\(N&#39;(x)\)</span> and <span class="math inline">\(D&#39;(x)\)</span> separately.<br />
+You’ll make fewer algebraic mistakes and can check each part for correctness.</p>
+<hr />
+</div>
+<div id="watch-for-implicit-terms-y" class="section level5 unnumbered hasAnchor">
+<h5>4. Watch for <strong>implicit terms</strong> (<span class="math inline">\(y\)</span>)<a href="derivative-rules---workbook.html#watch-for-implicit-terms-y" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<p>Whenever <span class="math inline">\(y\)</span> appears without being defined as a function of <span class="math inline">\(x\)</span>,<br />
+remember:<br />
+<span class="math display">\[
+\frac{d}{dx}(y^n) = n y^{n-1} y&#39;.
+\]</span><br />
+This keeps your derivative consistent when later solving for <span class="math inline">\(\frac{dy}{dx}\)</span>.</p>
+<hr />
+</div>
+<div id="dont-simplify-until-the-end-or-at-all" class="section level5 unnumbered hasAnchor">
+<h5>5. Don’t simplify until the end (or at all)<a href="derivative-rules---workbook.html#dont-simplify-until-the-end-or-at-all" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<p>Simplifying while differentiating hides structure and multiplies errors.<br />
+Instead:</p>
+<ul>
+<li>Keep parentheses intact.<br />
+</li>
+<li>Factor only if it clarifies a repeated term.<br />
+</li>
+<li>Box your final unsimplified result, <em>then</em> simplify only if needed.</li>
+</ul>
+<hr />
+</div>
+<div id="build-a-mental-checklist" class="section level5 unnumbered hasAnchor">
+<h5>6. Build a mental checklist<a href="derivative-rules---workbook.html#build-a-mental-checklist" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<table>
+<colgroup>
+<col width="10%" />
+<col width="28%" />
+<col width="32%" />
+<col width="28%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Rule</th>
+<th align="left">Typical Signal</th>
+<th align="left">Inner derivative?</th>
+<th align="left">Common pitfall</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Product</td>
+<td align="left">factors joined by “×”</td>
+<td align="left">No</td>
+<td align="left">forgetting both parts</td>
+</tr>
+<tr class="even">
+<td align="left">Quotient</td>
+<td align="left">fraction</td>
+<td align="left">No</td>
+<td align="left">missing a negative</td>
+</tr>
+<tr class="odd">
+<td align="left">Chain</td>
+<td align="left">nested parentheses</td>
+<td align="left">Yes</td>
+<td align="left">dropping inner derivative</td>
+</tr>
+<tr class="even">
+<td align="left">Implicit</td>
+<td align="left"><span class="math inline">\(y\)</span> terms</td>
+<td align="left">Yes</td>
+<td align="left">forgetting <span class="math inline">\(y&#39;\)</span></td>
+</tr>
+<tr class="odd">
+<td align="left">Exponential / log</td>
+<td align="left">powers, <span class="math inline">\(e^{g(x)}\)</span>, <span class="math inline">\(\ln(g(x))\)</span></td>
+<td align="left">Yes</td>
+<td align="left">misusing log base</td>
+</tr>
+</tbody>
+</table>
+<hr />
+</div>
+<div id="practice-combining-two-rules-first" class="section level5 unnumbered hasAnchor">
+<h5>7. Practice combining two rules first<a href="derivative-rules---workbook.html#practice-combining-two-rules-first" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<p>Before tackling “Frankenstein” problems, build fluency with pairs.</p>
+<hr />
+</div>
+</div>
+<div id="product-chain" class="section level4 unnumbered hasAnchor promptbox">
+<h4>1. Product + Chain<a href="derivative-rules---workbook.html#product-chain" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Find <span class="math inline">\(f&#39;(x)\)</span> for<br />
+<span class="math display">\[
+f(x) = x^2 e^{3x+1}.
+\]</span></p>
+<details>
+<summary>
+<strong>Solution</strong>
+</summary>
+<p>We have a <strong>product</strong> of <span class="math inline">\(x^2\)</span> and <span class="math inline">\(e^{3x+1}\)</span>.<br />
+Use Product Rule: <span class="math inline">\((uv)&#39; = u&#39;v + uv&#39;\)</span>.</p>
+<span class="math display">\[
+\begin{aligned}
+f&#39;(x)
+&amp;= (2x)e^{3x+1} + x^2 \frac{d}{dx}\!\big[e^{3x+1}\big] \\
+&amp;= 2x e^{3x+1} + x^2 e^{3x+1}(3) \\
+&amp;= e^{3x+1}\,(2x + 3x^2).
+\end{aligned}
+\]</span>
+No simplification required.
+</details>
+</div>
+<hr />
+<div id="quotient-chain" class="section level4 unnumbered hasAnchor promptbox">
+<h4>2. Quotient + Chain<a href="derivative-rules---workbook.html#quotient-chain" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Find <span class="math inline">\(f&#39;(x)\)</span> for<br />
+<span class="math display">\[
+f(x) = \frac{\sin(2x)}{x^3 + 1}.
+\]</span></p>
+<details>
+<summary>
+<strong>Solution</strong>
+</summary>
+<p>Apply the <strong>Quotient Rule</strong>:<br />
+<span class="math display">\[
+\left(\frac{u}{v}\right)&#39; = \frac{u&#39;v - uv&#39;}{v^2}.
+\]</span></p>
+<p><span class="math display">\[
+\begin{aligned}
+u(x) &amp;= \sin(2x) &amp;\Rightarrow&amp;\ u&#39;(x) = \cos(2x)\cdot 2 = 2\cos(2x),\\
+v(x) &amp;= x^3 + 1 &amp;\Rightarrow&amp;\ v&#39;(x) = 3x^2.
+\end{aligned}
+\]</span></p>
+<span class="math display">\[
+f&#39;(x) = \frac{(2\cos(2x))(x^3+1) - \sin(2x)(3x^2)}{(x^3+1)^2}.
+\]</span>
+No simplification required.
+</details>
+</div>
+<hr />
+<div id="quotient-chain-1" class="section level3 unnumbered hasAnchor promptbox">
+<h3>3. Quotient + Chain<a href="derivative-rules---workbook.html#quotient-chain-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Find <span class="math inline">\(f&#39;(x)\)</span> for<br />
+<span class="math display">\[
+f(x) = \sin\!\left(\frac{2x}{x^3 + 1}\right).
+\]</span></p>
+<details>
+<summary>
+<strong>Solution</strong>
+</summary>
+<p>We have a <strong>chain rule</strong> (outer sine) whose <strong>inner function</strong> is a quotient.<br />
+So the <strong>Quotient Rule</strong> appears <em>inside</em> the chain.</p>
+<hr />
+<p>Outer function:<br />
+<span class="math display">\[
+f(x) = \sin(g(x)) \quad \Rightarrow \quad f&#39;(x) = \cos(g(x)) \cdot g&#39;(x).
+\]</span></p>
+<p>Inner function:<br />
+<span class="math display">\[
+g(x) = \frac{2x}{x^3 + 1}.
+\]</span></p>
+<p>Apply the <strong>Quotient Rule</strong> to <span class="math inline">\(g(x)\)</span>:<br />
+<span class="math display">\[
+g&#39;(x) = \frac{(2)(x^3 + 1) - 2x(3x^2)}{(x^3 + 1)^2}
+      = \frac{2x^3 + 2 - 6x^3}{(x^3 + 1)^2}
+      = \frac{2 - 4x^3}{(x^3 + 1)^2}.
+\]</span></p>
+<hr />
+<p>Now combine both results:</p>
+<p><span class="math display">\[
+f&#39;(x)
+= \cos\!\left(\frac{2x}{x^3 + 1}\right)
+  \cdot
+  \frac{2 - 4x^3}{(x^3 + 1)^2}.
+\]</span></p>
+No simplification required.
+</details>
+<hr />
+</div>
+<div id="chain-implicit" class="section level4 unnumbered hasAnchor promptbox">
+<h4>4. Chain + Implicit<a href="derivative-rules---workbook.html#chain-implicit" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Differentiate implicitly:
+<span class="math display">\[
+\cos(y) = x^2 + 3y.
+\]</span></p>
+<details>
+<summary>
+<strong>Solution</strong>
+</summary>
+<p>Differentiate both sides with respect to <span class="math inline">\(x\)</span>:</p>
+<p><span class="math display">\[
+\frac{d}{dx}[\cos(y)] = \frac{d}{dx}[x^2 + 3y].
+\]</span></p>
+<p>Left side (Chain Rule):<br />
+<span class="math display">\[
+-\sin(y) \cdot y&#39; = 2x + 3y&#39;.
+\]</span></p>
+Now isolate <span class="math inline">\(y&#39;\)</span>:
+<span class="math display">\[
+-\sin(y)\,y&#39; - 3y&#39; = 2x,
+\]</span>
+<span class="math display">\[
+y&#39;(-\sin(y) - 3) = 2x,
+\]</span>
+<span class="math display">\[
+\boxed{y&#39; = \frac{2x}{-\sin(y) - 3}}.
+\]</span>
+No simplification required.
+</details>
+</div>
+<hr />
+<p><strong>Key takeaway:</strong><br />
+Mixed-rule problems aren’t harder because they’re longer —<br />
+they’re harder because they require <strong>knowing what rule to apply when</strong>.<br />
+Slowing down and naming each layer keeps everything under control.</p>
+<div id="environmental-applications-logistic-growth-model" class="section level3 unnumbered hasAnchor">
+<h3>Environmental Applications Logistic Growth Model<a href="derivative-rules---workbook.html#environmental-applications-logistic-growth-model" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>The <strong>logistic growth model</strong> describes how a population evolves when growth is limited by resource availability.</p>
+<hr />
+<div id="population-model" class="section level5 unnumbered hasAnchor">
+<h5>1. Population Model<a href="derivative-rules---workbook.html#population-model" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<p>We begin with a population <span class="math inline">\(P(t)\)</span> that grows over time <span class="math inline">\(t\)</span>, approaching a maximum sustainable size <span class="math inline">\(K\)</span>, called the <strong>carrying capacity</strong>.</p>
+<p>The logistic model expresses this as:</p>
+<p><span class="math display">\[
+P(t) = \frac{K}{1 + A e^{-rt}},
+\]</span></p>
+<p>where:
+- <span class="math inline">\(K\)</span> = carrying capacity<br />
+- <span class="math inline">\(r\)</span> = intrinsic growth rate<br />
+- <span class="math inline">\(A = \frac{K - P_0}{P_0}\)</span>, determined by the initial population <span class="math inline">\(P_0\)</span></p>
+<hr />
+</div>
+<div id="derivative-the-logistic-differential-equation" class="section level5 unnumbered hasAnchor">
+<h5>2. Derivative — The Logistic Differential Equation<a href="derivative-rules---workbook.html#derivative-the-logistic-differential-equation" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<p>Differentiating <span class="math inline">\(P(t)\)</span> with respect to time gives the <strong>rate of population change</strong>:</p>
+<p><span class="math display">\[
+\frac{dP}{dt} = rP\!\left(1 - \frac{P}{K}\right).
+\]</span></p>
+<p>This is the <strong>logistic differential equation</strong>, which captures the feedback between population size and resource limits.</p>
+<hr />
+</div>
+<div id="interpretation-1" class="section level5 unnumbered hasAnchor">
+<h5>3. Interpretation<a href="derivative-rules---workbook.html#interpretation-1" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<ul>
+<li><p>When <span class="math inline">\(P\)</span> is small, <span class="math inline">\((1 - P/K) \approx 1\)</span>, and growth is approximately exponential:
+<span class="math display">\[
+\frac{dP}{dt} \approx rP.
+\]</span></p></li>
+<li><p>As <span class="math inline">\(P\)</span> increases, <span class="math inline">\((1 - P/K)\)</span> decreases, slowing growth.</p></li>
+<li><p>When <span class="math inline">\(P = K\)</span>:
+<span class="math display">\[
+\frac{dP}{dt} = 0,
+\]</span>
+meaning the population stabilizes at carrying capacity.</p></li>
+</ul>
+<hr />
+</div>
+<div id="growth-phases" class="section level5 unnumbered hasAnchor">
+<h5>4. Growth Phases<a href="derivative-rules---workbook.html#growth-phases" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Phase</th>
+<th align="left">Condition</th>
+<th align="left">Behavior</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"><strong>Initial</strong></td>
+<td align="left"><span class="math inline">\(P \ll K\)</span></td>
+<td align="left">Nearly exponential growth</td>
+</tr>
+<tr class="even">
+<td align="left"><strong>Midpoint</strong></td>
+<td align="left"><span class="math inline">\(P = \tfrac{K}{2}\)</span></td>
+<td align="left">Maximum growth rate</td>
+</tr>
+<tr class="odd">
+<td align="left"><strong>Late</strong></td>
+<td align="left"><span class="math inline">\(P \to K\)</span></td>
+<td align="left">Growth slows and levels off</td>
+</tr>
+</tbody>
+</table>
+<hr />
+</div>
+<div id="key-insight-2" class="section level5 unnumbered hasAnchor">
+<h5>5. Key Insight<a href="derivative-rules---workbook.html#key-insight-2" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<p>The logistic model formalizes <strong>self-limiting growth</strong>: as population size increases, available resources per individual decrease, reducing the overall growth rate.<br />
+It serves as the foundation for many ecological and environmental system models.</p>
+</div>
+<div id="complex-relationships" class="section level5 unnumbered hasAnchor">
+<h5>6. Complex Relationships<a href="derivative-rules---workbook.html#complex-relationships" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<p>Real systems often have parameters that <em>change over time</em> (or with environment).<br />
+Below are simple, smooth functions for the logistic model’s parameters and how
+they appear when substituted into the population model.</p>
+<hr />
+</div>
+<div id="simple-time-varying-parameters" class="section level5 unnumbered hasAnchor">
+<h5>Simple time-varying parameters<a href="derivative-rules---workbook.html#simple-time-varying-parameters" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<p>Let
+<span class="math display">\[
+\begin{aligned}
+r(t) &amp;= r_0 \;+\; \alpha\sin(2\pi t) \quad &amp;&amp;\text{(seasonal growth rate)},\\[2pt]
+K(t) &amp;= K_0\!\left[1+\varepsilon\cos(2\pi t)\right] \quad &amp;&amp;\text{(seasonal carrying capacity)},\\[2pt]
+A(t) &amp;= A_0\!\left[1+\delta e^{-t}\right] \quad &amp;&amp;\text{(transient offset)}.
+\end{aligned}
+\]</span></p>
+<p>All amplitudes satisfy <span class="math inline">\(\alpha,\varepsilon,\delta\ge 0\)</span> and are chosen so <span class="math inline">\(K(t)&gt;0\)</span> for all <span class="math inline">\(t\)</span>.</p>
+<hr />
+</div>
+<div id="substitution-into-the-population-model" class="section level5 unnumbered hasAnchor">
+<h5>Substitution into the population model<a href="derivative-rules---workbook.html#substitution-into-the-population-model" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<p>The constant-parameter logistic <em>solution</em> is
+<span class="math display">\[
+P(t)=\frac{K}{1+A\,e^{-rt}}.
+\]</span></p>
+<p><span class="math display">\[
+P(t)=
+\frac{K}{1+A\,
+\exp\!\left(
+-r_0t-\frac{\alpha}{2\pi}\big(1-\cos(2\pi t)\big)
+\right)}.
+\]</span></p>
+</div>
+<div class="promptbox">
+<div id="frankensteins-derivative" class="section level4 unnumbered hasAnchor">
+<h4>🧟 Frankenstein’s Derivative<a href="#frankensteins-derivative" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>You’ve learned how the <strong>product</strong>, <strong>quotient</strong>, <strong>chain</strong>, and <strong>implicit</strong> differentiation rules connect —<br />
+now you’ll bring them all together in one (truly monstrous) expression.</p>
+<hr />
+</div>
+<div id="your-task" class="section level4 unnumbered hasAnchor">
+<h4>Your Task<a href="derivative-rules---workbook.html#your-task" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Find <span class="math inline">\(f&#39;(x)\)</span> for the following function <strong>without simplifying</strong>:</p>
+<p><span class="math display">\[
+f(x)=\frac{(x^2+y^3)e^{\sin(x^2)}}{\sin\!\Big(\ln\!\big((x e^x+1)^2\big)\Big)}.
+\]</span></p>
+<hr />
+</div>
+<div id="guidelines" class="section level4 unnumbered hasAnchor">
+<h4>Guidelines<a href="derivative-rules---workbook.html#guidelines" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+</div>
+<div id="creating-a-solution-path" class="section level4 unnumbered hasAnchor promptbox">
+<h4>Creating a Solution Path<a href="derivative-rules---workbook.html#creating-a-solution-path" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>In a group on the poster paper provided - piece together a solution plan.</p>
+<ol style="list-style-type: decimal">
+<li><strong>Identify the outermost rule</strong> first (which rule applies to the full expression).<br />
+</li>
+<li>Clearly label <strong>inner</strong> and <strong>outer</strong> functions before differentiating each.<br />
+</li>
+<li>What is your solution route? Which rule to which section first?</li>
+<li>Show every derivative step — you <strong>do not need to simplify</strong>.</li>
+</ol>
+</div>
+<hr />
+<div id="attempt-the-solution" class="section level4 unnumbered hasAnchor">
+<h4>Attempt the solution<a href="derivative-rules---workbook.html#attempt-the-solution" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+</div>
+<div id="reflection-2" class="section level4 unnumbered hasAnchor">
+<h4>Reflection<a href="derivative-rules---workbook.html#reflection-2" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>After finishing, discuss with your group:</p>
+<ul>
+<li>How many distinct derivative rules were needed?<br />
+</li>
+<li>What was the “deepest” nesting of rules in your work?<br />
+</li>
+<li>Where might errors most easily occur — and how can you organize your work to prevent them?</li>
+</ul>
+<hr />
+</div>
+<div id="frankensteins-derivative-full-solution" class="section level2 unnumbered hasAnchor">
+<h2>🔒 Frankenstein’s Derivative — Full Solution<a href="#frankensteins-derivative-full-solution" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<details open>
+<summary>
+<strong>Click to Unlock Solution</strong>
+</summary>
+<div id="sol_frank" hidden="" markdown="1" style="margin-top:0.75rem;">
+<div id="step-by-step-solution-unsimplified" class="section level4 unnumbered hasAnchor">
+<h4>Step-by-Step Solution (unsimplified)<a href="derivative-rules---workbook.html#step-by-step-solution-unsimplified" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>We start with<br />
+<span class="math display">\[
+f(x)=\frac{(x^2+y^3)e^{\sin(x^2)}}{\sin\!\Big(\ln\!\big((x e^x+1)^2\big)\Big)}.
+\]</span></p>
+<hr />
+</div>
+<div id="step-1-outer-rule-quotient" class="section level4 unnumbered hasAnchor">
+<h4>Step 1 — Outer Rule (Quotient)<a href="derivative-rules---workbook.html#step-1-outer-rule-quotient" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><span class="math display">\[
+f&#39;(x)=\frac{D(x)\,N&#39;(x)-N(x)\,D&#39;(x)}{[D(x)]^2},
+\]</span>
+where<br />
+<span class="math inline">\(N(x)=(x^2+y^3)e^{\sin(x^2)}\)</span> and<br />
+<span class="math inline">\(D(x)=\sin\!\Big(\ln\!\big((x e^x+1)^2\big)\Big)\)</span>.</p>
+<hr />
+</div>
+<div id="step-2-differentiate-the-numerator-nx" class="section level4 unnumbered hasAnchor">
+<h4>Step 2 — Differentiate the Numerator <span class="math inline">\(N(x)\)</span><a href="derivative-rules---workbook.html#step-2-differentiate-the-numerator-nx" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Product rule: <span class="math inline">\(N=u\cdot v\)</span>.</p>
+<p><span class="math display">\[
+u(x)=x^2+y^3 \quad\Rightarrow\quad u&#39;(x)=2x+3y^2y&#39;.
+\]</span></p>
+<p><span class="math display">\[
+v(x)=e^{\sin(x^2)} \quad\Rightarrow\quad v&#39;(x)=e^{\sin(x^2)}\cdot \cos(x^2)\cdot(2x).
+\]</span></p>
+<p>Combine:
+<span class="math display">\[
+N&#39;(x)=\big(2x+3y^2y&#39;\big)e^{\sin(x^2)} + (x^2+y^3)e^{\sin(x^2)}\cos(x^2)(2x).
+\]</span></p>
+<hr />
+</div>
+<div id="step-3-differentiate-the-denominator-dx" class="section level4 unnumbered hasAnchor">
+<h4>Step 3 — Differentiate the Denominator <span class="math inline">\(D(x)\)</span><a href="derivative-rules---workbook.html#step-3-differentiate-the-denominator-dx" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><span class="math display">\[
+D(x)=\sin\!\Big(\ln\!\big((x e^x+1)^2\big)\Big)
+\]</span></p>
+<p>Outer sine ⇒ cosine times derivative of inside:</p>
+<p><span class="math display">\[
+D&#39;(x)=\cos\!\Big(\ln\!\big((x e^x+1)^2\big)\Big)\cdot
+\frac{d}{dx}\Big[\ln\!\big((x e^x+1)^2\big)\Big].
+\]</span></p>
+<p>Now for the inner log:
+<span class="math display">\[
+\frac{d}{dx}\Big[\ln((x e^x+1)^2)\Big]
+=\frac{1}{(x e^x+1)^2}\cdot \frac{d}{dx}\big[(x e^x+1)^2\big].
+\]</span></p>
+<p>Differentiate the square:
+<span class="math display">\[
+\frac{d}{dx}\big[(x e^x+1)^2\big]
+=2(x e^x+1)\cdot \frac{d}{dx}(x e^x+1).
+\]</span></p>
+<p>Product rule inside:
+<span class="math display">\[
+\frac{d}{dx}(x e^x+1)=e^x+x e^x.
+\]</span></p>
+<p>Assemble:
+<span class="math display">\[
+D&#39;(x)=\cos\!\Big(\ln\!\big((x e^x+1)^2\big)\Big)\cdot
+\frac{2(x e^x+1)(e^x+x e^x)}{(x e^x+1)^2}.
+\]</span></p>
+<hr />
+</div>
+<div id="step-4-combine-everything" class="section level4 unnumbered hasAnchor">
+<h4>Step 4 — Combine Everything<a href="derivative-rules---workbook.html#step-4-combine-everything" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div style="overflow-x:auto; background-color:#f8f9fa; border-radius:6px; padding:0.5em; font-size:0.9em;">
+<p><span class="math display">\[
+f&#39;(x)
+=
+\frac{
+\sin\!\Big(\ln\!\big((x e^x+1)^2\big)\Big)
+\Big[
+(2x+3y^2y&#39;)e^{\sin(x^2)}
++(x^2+y^3)e^{\sin(x^2)}\cos(x^2)(2x)
+\Big]
+-
+(x^2+y^3)e^{\sin(x^2)}
+\Big[
+\cos\!\Big(\ln\!\big((x e^x+1)^2\big)\Big)
+\frac{2(x e^x+1)(e^x+x e^x)}{(x e^x+1)^2}
+\Big]
+}{
+\Big[\sin\!\Big(\ln\!\big((x e^x+1)^2\big)\Big)\Big]^2
+}.
+\]</span></p>
+</div>
+<p>No simplification required.</p>
+<hr />
+<p>This is the <strong>unsimplified, fully expanded derivative</strong> showing all applications of:</p>
+<ul>
+<li>Quotient rule (outermost)</li>
+<li>Product rule (numerator)</li>
+<li>Chain rule (exponentials and trigs)</li>
+<li>Implicit differentiation (via <span class="math inline">\(y^3 \to 3y^2y&#39;\)</span>)</li>
+<li>Nested chain and product rules (in the denominator)</li>
+</ul>
+</div>
+</div>
+<form onsubmit="unlock_frank(); return false;" id="gate_frank" style="margin-top:0.75rem;">
+<input type="password" id="pwd_frank" placeholder="Enter password" aria-label="Frankenstein solution password">
+<button type="submit">Unlock</button>
+<span id="msg_frank" style="margin-left:0.5rem;" aria-live="polite"></span>
+</form>
+<script>
+function unlock_frank() {
+  var input = document.getElementById('pwd_frank');
+  var msg   = document.getElementById('msg_frank');
+  var sol   = document.getElementById('sol_frank');
+  var gate  = document.getElementById('gate_frank');
+  var pw    = (input.value || '').trim();
+  var det   = gate.closest('details'); if (det) det.open = true;
 
+  if (pw === 'victor') {
+    sol.hidden = false;
+    gate.hidden = true;
+    input.value = '';
+    msg.textContent = '';
+  } else {
+    msg.textContent = 'Stop guessing 👻';
+    input.value = '';
+    input.focus();
+  }
+}
+</script>
+<noscript>
+<p>
+<em>Note:</em> JavaScript is required to unlock the solution.
+</p>
+</noscript>
+</details>
 </div>
 </div>
-</div>
+
 </div>
 </div>
 </div>

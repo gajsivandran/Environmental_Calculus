@@ -469,3 +469,4 @@ step-1-see-it-why-implicit-differentiation-is-needed
 step-3-connect-to-real-world-systems
 step-4-reflect-when-two-variables-depend-on-each-other
 step-6-quick-practice-apply-implicit-differentiation
+mixed-rule-practice

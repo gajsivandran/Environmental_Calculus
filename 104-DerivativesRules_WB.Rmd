@@ -2686,6 +2686,8 @@ Notice something important: you can’t write this as a single function \(y = f(
 That’s exactly where **implicit differentiation** comes in.  
 We can still find the **slope** of the curve at any given point — even when \(y\) isn’t isolated.
 
+:::
+
 ---
 
 ### Step 3: Connect to Real-World Systems
@@ -2795,3 +2797,573 @@ Each problem highlights a slightly different rule (product, chain, exponential, 
 > **Takeaway:**  
 > These examples combine multiple differentiation rules — power, product, chain, exponential, and logarithmic — all within one equation.  
 > Implicit differentiation is the glue that connects them, letting you find slopes even when \(y\) can’t be isolated.
+
+## Mixed Rule Practice
+
+#### How to Approach Mixed-Rule Derivative Problems {-}
+
+When a function combines **multiple differentiation rules** — product, quotient, chain, and even implicit differentiation — the key is *organization*, not speed.  
+Here’s a systematic way to stay in control:
+
+---
+
+##### 1. Identify the **outermost structure** first {-}
+
+Before differentiating anything, ask:  
+> “What is the *main operation* holding this function together?”
+
+- Is the whole expression a **quotient** (something divided by something)?  
+- A **product** (two factors multiplied)?  
+- A **composition** (a function inside another)?  
+
+---
+
+##### 2. Differentiate **layer by layer**, not all at once {-}
+
+Treat each layer like peeling an onion:
+
+- Apply the **outer rule** (product, quotient, or chain).  
+- Pause — identify any **new inner functions** that appear.  
+- Then differentiate *those* carefully before moving deeper.
+
+Example thought process:
+> “The outermost layer is a quotient,  
+> the numerator has a product,  
+> and one of those products contains a chain rule.”
+
+That’s already your roadmap.
+
+---
+
+##### 3. Use clear labels for sub-functions {-}
+
+Name inner pieces temporarily:
+\[
+N(x) = (x^2 + y^3)e^{\sin(x^2)}, \quad D(x) = \sin(\ln((x e^x + 1)^2)).
+\]
+Then compute \(N'(x)\) and \(D'(x)\) separately.  
+You’ll make fewer algebraic mistakes and can check each part for correctness.
+
+---
+
+##### 4. Watch for **implicit terms** (\(y\)) {-}
+
+Whenever \(y\) appears without being defined as a function of \(x\),  
+remember:  
+\[
+\frac{d}{dx}(y^n) = n y^{n-1} y'.
+\]  
+This keeps your derivative consistent when later solving for \(\frac{dy}{dx}\).
+
+---
+
+##### 5. Don’t simplify until the end (or at all) {-}
+
+Simplifying while differentiating hides structure and multiplies errors.  
+Instead:
+
+- Keep parentheses intact.  
+- Factor only if it clarifies a repeated term.  
+- Box your final unsimplified result, *then* simplify only if needed.
+
+---
+
+
+##### 6. Build a mental checklist {-}
+
+| Rule | Typical Signal | Inner derivative? | Common pitfall |
+|:-----|:----------------|:------------------|:----------------|
+| Product | factors joined by “×” | No | forgetting both parts |
+| Quotient | fraction | No | missing a negative |
+| Chain | nested parentheses | Yes | dropping inner derivative |
+| Implicit | \(y\) terms | Yes | forgetting \(y'\) |
+| Exponential / log | powers, \(e^{g(x)}\), \(\ln(g(x))\) | Yes | misusing log base |
+
+---
+
+##### 7. Practice combining two rules first {-}
+
+Before tackling “Frankenstein” problems, build fluency with pairs.
+
+---
+
+::: promptbox
+
+#### 1. Product + Chain {-}
+
+Find \(f'(x)\) for  
+\[
+f(x) = x^2 e^{3x+1}.
+\]
+
+<details>
+<summary><strong>Solution</strong></summary>
+
+We have a **product** of \(x^2\) and \(e^{3x+1}\).  
+Use Product Rule: \((uv)' = u'v + uv'\).
+
+\[
+\begin{aligned}
+f'(x)
+&= (2x)e^{3x+1} + x^2 \frac{d}{dx}\!\big[e^{3x+1}\big] \\
+&= 2x e^{3x+1} + x^2 e^{3x+1}(3) \\
+&= e^{3x+1}\,(2x + 3x^2).
+\end{aligned}
+\]
+No simplification required.
+</details>
+
+:::
+
+---
+
+::: promptbox
+
+#### 2. Quotient + Chain {-}
+
+Find \(f'(x)\) for  
+\[
+f(x) = \frac{\sin(2x)}{x^3 + 1}.
+\]
+
+<details>
+<summary><strong>Solution</strong></summary>
+
+Apply the **Quotient Rule**:  
+\[
+\left(\frac{u}{v}\right)' = \frac{u'v - uv'}{v^2}.
+\]
+
+\[
+\begin{aligned}
+u(x) &= \sin(2x) &\Rightarrow&\ u'(x) = \cos(2x)\cdot 2 = 2\cos(2x),\\
+v(x) &= x^3 + 1 &\Rightarrow&\ v'(x) = 3x^2.
+\end{aligned}
+\]
+
+\[
+f'(x) = \frac{(2\cos(2x))(x^3+1) - \sin(2x)(3x^2)}{(x^3+1)^2}.
+\]
+No simplification required.
+</details>
+
+:::
+
+---
+
+::: promptbox
+
+### 3. Quotient + Chain {-}
+
+Find \(f'(x)\) for  
+\[
+f(x) = \sin\!\left(\frac{2x}{x^3 + 1}\right).
+\]
+
+<details>
+<summary><strong>Solution</strong></summary>
+
+We have a **chain rule** (outer sine) whose **inner function** is a quotient.  
+So the **Quotient Rule** appears *inside* the chain.
+
+---
+
+Outer function:  
+\[
+f(x) = \sin(g(x)) \quad \Rightarrow \quad f'(x) = \cos(g(x)) \cdot g'(x).
+\]
+
+Inner function:  
+\[
+g(x) = \frac{2x}{x^3 + 1}.
+\]
+
+Apply the **Quotient Rule** to \(g(x)\):  
+\[
+g'(x) = \frac{(2)(x^3 + 1) - 2x(3x^2)}{(x^3 + 1)^2}
+      = \frac{2x^3 + 2 - 6x^3}{(x^3 + 1)^2}
+      = \frac{2 - 4x^3}{(x^3 + 1)^2}.
+\]
+
+---
+
+Now combine both results:
+
+\[
+f'(x)
+= \cos\!\left(\frac{2x}{x^3 + 1}\right)
+  \cdot
+  \frac{2 - 4x^3}{(x^3 + 1)^2}.
+\]
+
+No simplification required.
+</details>
+
+---
+
+:::
+
+
+::: promptbox
+
+#### 4. Chain + Implicit {-}
+
+Differentiate implicitly:
+\[
+\cos(y) = x^2 + 3y.
+\]
+
+<details>
+<summary><strong>Solution</strong></summary>
+
+Differentiate both sides with respect to \(x\):
+
+\[
+\frac{d}{dx}[\cos(y)] = \frac{d}{dx}[x^2 + 3y].
+\]
+
+Left side (Chain Rule):  
+\[
+-\sin(y) \cdot y' = 2x + 3y'.
+\]
+
+Now isolate \(y'\):
+\[
+-\sin(y)\,y' - 3y' = 2x,
+\]
+\[
+y'(-\sin(y) - 3) = 2x,
+\]
+\[
+\boxed{y' = \frac{2x}{-\sin(y) - 3}}.
+\]
+No simplification required.
+</details>
+
+:::
+
+---
+
+
+**Key takeaway:**  
+Mixed-rule problems aren’t harder because they’re longer —  
+they’re harder because they require **knowing what rule to apply when**.  
+Slowing down and naming each layer keeps everything under control.
+
+
+### Environmental Applications Logistic Growth Model {-}
+
+The **logistic growth model** describes how a population evolves when growth is limited by resource availability.
+
+---
+
+##### 1. Population Model {-}
+
+We begin with a population \(P(t)\) that grows over time \(t\), approaching a maximum sustainable size \(K\), called the **carrying capacity**.  
+
+The logistic model expresses this as:
+
+\[
+P(t) = \frac{K}{1 + A e^{-rt}},
+\]
+
+where:
+- \(K\) = carrying capacity  
+- \(r\) = intrinsic growth rate  
+- \(A = \frac{K - P_0}{P_0}\), determined by the initial population \(P_0\)
+
+---
+
+##### 2. Derivative — The Logistic Differential Equation {-}
+
+Differentiating \(P(t)\) with respect to time gives the **rate of population change**:
+
+\[
+\frac{dP}{dt} = rP\!\left(1 - \frac{P}{K}\right).
+\]
+
+This is the **logistic differential equation**, which captures the feedback between population size and resource limits.
+
+---
+
+##### 3. Interpretation {-}
+
+- When \(P\) is small, \((1 - P/K) \approx 1\), and growth is approximately exponential:
+  \[
+  \frac{dP}{dt} \approx rP.
+  \]
+
+- As \(P\) increases, \((1 - P/K)\) decreases, slowing growth.  
+
+- When \(P = K\):
+  \[
+  \frac{dP}{dt} = 0,
+  \]
+  meaning the population stabilizes at carrying capacity.
+
+---
+
+##### 4. Growth Phases {-}
+
+| Phase | Condition | Behavior |
+|:------|:-----------|:-----------|
+| **Initial** | \(P \ll K\) | Nearly exponential growth |
+| **Midpoint** | \(P = \tfrac{K}{2}\) | Maximum growth rate |
+| **Late** | \(P \to K\) | Growth slows and levels off |
+
+---
+
+##### 5. Key Insight {-}
+
+The logistic model formalizes **self-limiting growth**: as population size increases, available resources per individual decrease, reducing the overall growth rate.  
+It serves as the foundation for many ecological and environmental system models.
+
+##### 6. Complex Relationships {-}
+
+Real systems often have parameters that *change over time* (or with environment).  
+Below are simple, smooth functions for the logistic model’s parameters and how
+they appear when substituted into the population model.
+
+---
+
+##### Simple time-varying parameters {-}
+
+Let
+\[
+\begin{aligned}
+r(t) &= r_0 \;+\; \alpha\sin(2\pi t) \quad &&\text{(seasonal growth rate)},\\[2pt]
+K(t) &= K_0\!\left[1+\varepsilon\cos(2\pi t)\right] \quad &&\text{(seasonal carrying capacity)},\\[2pt]
+A(t) &= A_0\!\left[1+\delta e^{-t}\right] \quad &&\text{(transient offset)}.
+\end{aligned}
+\]
+
+All amplitudes satisfy \(\alpha,\varepsilon,\delta\ge 0\) and are chosen so \(K(t)>0\) for all \(t\).
+
+---
+
+##### Substitution into the population model {-}
+
+The constant-parameter logistic *solution* is
+\[
+P(t)=\frac{K}{1+A\,e^{-rt}}.
+\]
+
+
+\[
+P(t)=
+\frac{K}{1+A\,
+\exp\!\left(
+-r_0t-\frac{\alpha}{2\pi}\big(1-\cos(2\pi t)\big)
+\right)}.
+\]
+
+
+
+
+
+
+::: promptbox
+
+#### 🧟 Frankenstein's Derivative {-}
+
+You’ve learned how the **product**, **quotient**, **chain**, and **implicit** differentiation rules connect —  
+now you’ll bring them all together in one (truly monstrous) expression.
+
+---
+
+#### Your Task {-}
+
+Find \( f'(x) \) for the following function **without simplifying**:
+
+\[
+f(x)=\frac{(x^2+y^3)e^{\sin(x^2)}}{\sin\!\Big(\ln\!\big((x e^x+1)^2\big)\Big)}.
+\]
+
+---
+
+#### Guidelines {-}
+
+::: promptbox
+
+#### Creating a Solution Path {-}
+
+In a group on the poster paper provided - piece together a solution plan.
+
+1. **Identify the outermost rule** first (which rule applies to the full expression).  
+2. Clearly label **inner** and **outer** functions before differentiating each.  
+3. What is your solution route? Which rule to which section first?
+4. Show every derivative step — you **do not need to simplify**.  
+
+:::
+
+---
+
+#### Attempt the solution {-}
+
+#### Reflection {-}
+
+After finishing, discuss with your group:
+
+- How many distinct derivative rules were needed?  
+- What was the “deepest” nesting of rules in your work?  
+- Where might errors most easily occur — and how can you organize your work to prevent them?
+
+---
+
+## 🔒 Frankenstein’s Derivative — Full Solution {-}
+
+<details open>
+<summary><strong>Click to Unlock Solution</strong></summary>
+
+<div id="sol_frank" hidden markdown="1" style="margin-top:0.75rem;">
+
+#### Step-by-Step Solution (unsimplified) {-}
+
+We start with  
+\[
+f(x)=\frac{(x^2+y^3)e^{\sin(x^2)}}{\sin\!\Big(\ln\!\big((x e^x+1)^2\big)\Big)}.
+\]
+
+---
+
+#### Step 1 — Outer Rule (Quotient) {-}
+
+\[
+f'(x)=\frac{D(x)\,N'(x)-N(x)\,D'(x)}{[D(x)]^2},
+\]
+where  
+\(N(x)=(x^2+y^3)e^{\sin(x^2)}\) and  
+\(D(x)=\sin\!\Big(\ln\!\big((x e^x+1)^2\big)\Big)\).
+
+---
+
+#### Step 2 — Differentiate the Numerator \(N(x)\) {-}
+
+Product rule: \(N=u\cdot v\).
+
+\[
+u(x)=x^2+y^3 \quad\Rightarrow\quad u'(x)=2x+3y^2y'.
+\]
+
+\[
+v(x)=e^{\sin(x^2)} \quad\Rightarrow\quad v'(x)=e^{\sin(x^2)}\cdot \cos(x^2)\cdot(2x).
+\]
+
+Combine:
+\[
+N'(x)=\big(2x+3y^2y'\big)e^{\sin(x^2)} + (x^2+y^3)e^{\sin(x^2)}\cos(x^2)(2x).
+\]
+
+---
+
+#### Step 3 — Differentiate the Denominator \(D(x)\) {-}
+
+\[
+D(x)=\sin\!\Big(\ln\!\big((x e^x+1)^2\big)\Big)
+\]
+
+Outer sine ⇒ cosine times derivative of inside:
+
+\[
+D'(x)=\cos\!\Big(\ln\!\big((x e^x+1)^2\big)\Big)\cdot
+\frac{d}{dx}\Big[\ln\!\big((x e^x+1)^2\big)\Big].
+\]
+
+Now for the inner log:
+\[
+\frac{d}{dx}\Big[\ln((x e^x+1)^2)\Big]
+=\frac{1}{(x e^x+1)^2}\cdot \frac{d}{dx}\big[(x e^x+1)^2\big].
+\]
+
+Differentiate the square:
+\[
+\frac{d}{dx}\big[(x e^x+1)^2\big]
+=2(x e^x+1)\cdot \frac{d}{dx}(x e^x+1).
+\]
+
+Product rule inside:
+\[
+\frac{d}{dx}(x e^x+1)=e^x+x e^x.
+\]
+
+Assemble:
+\[
+D'(x)=\cos\!\Big(\ln\!\big((x e^x+1)^2\big)\Big)\cdot
+\frac{2(x e^x+1)(e^x+x e^x)}{(x e^x+1)^2}.
+\]
+
+---
+
+#### Step 4 — Combine Everything {-}
+
+<div style="overflow-x:auto; background-color:#f8f9fa; border-radius:6px; padding:0.5em; font-size:0.9em;">
+
+\[
+f'(x)
+=
+\frac{
+\sin\!\Big(\ln\!\big((x e^x+1)^2\big)\Big)
+\Big[
+(2x+3y^2y')e^{\sin(x^2)} 
++(x^2+y^3)e^{\sin(x^2)}\cos(x^2)(2x)
+\Big]
+-
+(x^2+y^3)e^{\sin(x^2)}
+\Big[
+\cos\!\Big(\ln\!\big((x e^x+1)^2\big)\Big)
+\frac{2(x e^x+1)(e^x+x e^x)}{(x e^x+1)^2}
+\Big]
+}{
+\Big[\sin\!\Big(\ln\!\big((x e^x+1)^2\big)\Big)\Big]^2
+}.
+\]
+</div>
+
+No simplification required.
+
+---
+
+This is the **unsimplified, fully expanded derivative** showing all applications of:
+
+- Quotient rule (outermost)
+- Product rule (numerator)
+- Chain rule (exponentials and trigs)
+- Implicit differentiation (via \(y^3 \to 3y^2y'\))
+- Nested chain and product rules (in the denominator)
+
+</div>
+
+<form onsubmit="unlock_frank(); return false;" id="gate_frank" style="margin-top:0.75rem;">
+  <input type="password" id="pwd_frank" placeholder="Enter password" aria-label="Frankenstein solution password">
+  <button type="submit">Unlock</button>
+  <span id="msg_frank" style="margin-left:0.5rem;" aria-live="polite"></span>
+</form>
+
+<script>
+function unlock_frank() {
+  var input = document.getElementById('pwd_frank');
+  var msg   = document.getElementById('msg_frank');
+  var sol   = document.getElementById('sol_frank');
+  var gate  = document.getElementById('gate_frank');
+  var pw    = (input.value || '').trim();
+  var det   = gate.closest('details'); if (det) det.open = true;
+
+  if (pw === 'victor') {
+    sol.hidden = false;
+    gate.hidden = true;
+    input.value = '';
+    msg.textContent = '';
+  } else {
+    msg.textContent = 'Stop guessing 👻';
+    input.value = '';
+    input.focus();
+  }
+}
+</script>
+
+<noscript>
+<p><em>Note:</em> JavaScript is required to unlock the solution.</p>
+</noscript>
+</details>
+
+:::
