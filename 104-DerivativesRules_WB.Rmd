@@ -2798,6 +2798,9 @@ Each problem highlights a slightly different rule (product, chain, exponential, 
 > These examples combine multiple differentiation rules — power, product, chain, exponential, and logarithmic — all within one equation.  
 > Implicit differentiation is the glue that connects them, letting you find slopes even when \(y\) can’t be isolated.
 
+
+\newpage
+
 ## Mixed Rule Practice
 
 #### How to Approach Mixed-Rule Derivative Problems {-}
