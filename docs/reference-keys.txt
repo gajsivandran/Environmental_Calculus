@@ -264,7 +264,6 @@ step-1-differentiate-both-sides
 step-2-solve-for-dfracdydx
 step-1-differentiate-both-sides-1
 step-2-factor-out-fracdydx
-solutions-may-have-errors---please-reach-out-if-something-doesnt-seem-right
 why-calculus-workbook
 teaching-team-introductions
 gaj-sivandran

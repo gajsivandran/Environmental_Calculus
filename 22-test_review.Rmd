@@ -1705,6 +1705,7 @@ Assume \(y=y(x)\) (implicit differentiation where needed).
 Click to reveal **Step 1**, then **Step 2**, etc.
 
 **SOLUTIONS: may have errors - please reach out if something doesn't seem right**
+
 ---
 
 ### Challenge Q1 {-}
