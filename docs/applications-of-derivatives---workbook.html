@@ -907,7 +907,22 @@
 <li class="chapter" data-level="" data-path="derivative-rules---workbook.html"><a href="derivative-rules---workbook.html#environmental-applications-logistic-growth-model"><i class="fa fa-check"></i>Environmental Applications Logistic Growth Model</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="10" data-path="applications-of-derivatives---workbook.html"><a href="applications-of-derivatives---workbook.html"><i class="fa fa-check"></i><b>10</b> Applications of Derivatives - Workbook</a></li>
+<li class="chapter" data-level="10" data-path="applications-of-derivatives---workbook.html"><a href="applications-of-derivatives---workbook.html"><i class="fa fa-check"></i><b>10</b> Applications of Derivatives - Workbook</a>
+<ul>
+<li class="chapter" data-level="10.1" data-path="applications-of-derivatives---workbook.html"><a href="applications-of-derivatives---workbook.html#introduction-reading-behavior-through-derivatives"><i class="fa fa-check"></i><b>10.1</b> Introduction — Reading Behavior Through Derivatives</a></li>
+<li class="chapter" data-level="10.2" data-path="applications-of-derivatives---workbook.html"><a href="applications-of-derivatives---workbook.html#guided-activity-using-derivatives-to-find-extremes"><i class="fa fa-check"></i><b>10.2</b> Guided Activity — Using Derivatives to Find Extremes</a>
+<ul>
+<li class="chapter" data-level="10.2.1" data-path="applications-of-derivatives---workbook.html"><a href="applications-of-derivatives---workbook.html#thinking-about-extremes"><i class="fa fa-check"></i><b>10.2.1</b> Thinking About Extremes</a></li>
+<li class="chapter" data-level="10.2.2" data-path="applications-of-derivatives---workbook.html"><a href="applications-of-derivatives---workbook.html#visualizing-local-and-global-extrema"><i class="fa fa-check"></i><b>10.2.2</b> Visualizing Local and Global Extrema</a></li>
+<li class="chapter" data-level="10.2.3" data-path="applications-of-derivatives---workbook.html"><a href="applications-of-derivatives---workbook.html#local-vs.-global-thinking"><i class="fa fa-check"></i><b>10.2.3</b> Local vs. Global Thinking</a></li>
+<li class="chapter" data-level="10.2.4" data-path="applications-of-derivatives---workbook.html"><a href="applications-of-derivatives---workbook.html#connecting-to-derivatives"><i class="fa fa-check"></i><b>10.2.4</b> Connecting to Derivatives</a></li>
+<li class="chapter" data-level="10.2.5" data-path="applications-of-derivatives---workbook.html"><a href="applications-of-derivatives---workbook.html#classify-behavior-from-the-derivative"><i class="fa fa-check"></i><b>10.2.5</b> Classify Behavior from the Derivative</a></li>
+<li class="chapter" data-level="10.2.6" data-path="applications-of-derivatives---workbook.html"><a href="applications-of-derivatives---workbook.html#apply-to-a-new-example"><i class="fa fa-check"></i><b>10.2.6</b> Apply to a New Example</a></li>
+<li class="chapter" data-level="10.2.7" data-path="applications-of-derivatives---workbook.html"><a href="applications-of-derivatives---workbook.html#investigating-the-derivative"><i class="fa fa-check"></i><b>10.2.7</b> Investigating the Derivative</a></li>
+<li class="chapter" data-level="10.2.8" data-path="applications-of-derivatives---workbook.html"><a href="applications-of-derivatives---workbook.html#linking-derivatives-to-system-behavior"><i class="fa fa-check"></i><b>10.2.8</b> Linking Derivatives to System Behavior</a></li>
+<li class="chapter" data-level="10.2.9" data-path="applications-of-derivatives---workbook.html"><a href="applications-of-derivatives---workbook.html#adding-the-second-derivative"><i class="fa fa-check"></i><b>10.2.9</b> Adding the Second Derivative</a></li>
+</ul></li>
+</ul></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
 
@@ -930,7 +945,430 @@
             <section class="normal" id="section-">
 <div id="applications-of-derivatives---workbook" class="section level1 hasAnchor" number="10">
 <h1><span class="header-section-number">Chapter 10</span> Applications of Derivatives - Workbook<a href="applications-of-derivatives---workbook.html#applications-of-derivatives---workbook" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="introduction-reading-behavior-through-derivatives" class="section level2 hasAnchor" number="10.1">
+<h2><span class="header-section-number">10.1</span> Introduction — Reading Behavior Through Derivatives<a href="applications-of-derivatives---workbook.html#introduction-reading-behavior-through-derivatives" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>In this workbook, we’ll use <strong>derivatives</strong> to uncover what’s happening within a function — not just its values, but how it <em>behaves</em>.<br />
+By studying derivatives, we can see where a system is <strong>growing</strong>, <strong>slowing</strong>, or <strong>reversing direction</strong> — and what those shifts mean in an environmental context.</p>
+<ul>
+<li>We’ll use <strong>first derivatives</strong> to identify where the function is <strong>increasing or decreasing</strong> and to locate <strong>extrema</strong> — points where growth stops and reverses.<br />
+</li>
+<li>We’ll use <strong>second derivatives</strong> to understand how that rate of change itself is evolving — whether growth is <strong>accelerating</strong>, <strong>slowing</strong>, or approaching a <strong>tipping point</strong>.</li>
+</ul>
+<p>Together, these tools allow us to interpret a system’s story: when it’s changing most rapidly, when it levels off, and when it begins to turn — revealing the dynamic patterns that shape natural processes.</p>
+</div>
+<div id="guided-activity-using-derivatives-to-find-extremes" class="section level2 hasAnchor" number="10.2">
+<h2><span class="header-section-number">10.2</span> Guided Activity — Using Derivatives to Find Extremes<a href="applications-of-derivatives---workbook.html#guided-activity-using-derivatives-to-find-extremes" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>This activity will help you explore how derivatives identify <strong>extrema</strong> — the highest and lowest points of a system’s behavior.</p>
+<hr />
+<div id="thinking-about-extremes" class="section level3 hasAnchor" number="10.2.1">
+<h3><span class="header-section-number">10.2.1</span> Thinking About Extremes<a href="applications-of-derivatives---workbook.html#thinking-about-extremes" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="promptbox">
+<p>Before jumping into equations, think about these situations:</p>
+<table>
+<colgroup>
+<col width="21%" />
+<col width="40%" />
+<col width="37%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Scenario</th>
+<th>What variable reaches a high or low point?</th>
+<th>What does that point mean ecologically?</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>A glacier’s melt rate throughout the summer</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Algal population growth as nutrient levels rise</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Temperature of a lake over a 24-hour cycle</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Rainfall-runoff relationship during a storm</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Prompt:</strong><br />
+In each case, what would the <em>slope</em> of the curve (the derivative) tell you?<br />
+When might that slope be <strong>zero</strong>?</p>
+</div>
+<hr />
+</div>
+<div id="visualizing-local-and-global-extrema" class="section level3 hasAnchor" number="10.2.2">
+<h3><span class="header-section-number">10.2.2</span> Visualizing Local and Global Extrema<a href="applications-of-derivatives---workbook.html#visualizing-local-and-global-extrema" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>In this section we will interpret these functions and points of interest.</p>
+<p><img src="bookdown-demo_files/figure-html/four-extrema-types-wb-1.png" width="80%" style="display: block; margin: auto;" /></p>
+<div id="visual-observations" class="section level4 unnumbered hasAnchor promptbox">
+<h4>Visual Observations<a href="applications-of-derivatives---workbook.html#visual-observations" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<table>
+<colgroup>
+<col width="8%" />
+<col width="36%" />
+<col width="35%" />
+<col width="20%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Panel</th>
+<th>What kind of extrema do you see?</th>
+<th>Where does the curve rise/fall?</th>
+<th>Any flat regions?</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>A</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>B</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>C</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>D</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+<hr />
+</div>
+<div id="local-vs.-global-thinking" class="section level3 hasAnchor" number="10.2.3">
+<h3><span class="header-section-number">10.2.3</span> Local vs. Global Thinking<a href="applications-of-derivatives---workbook.html#local-vs.-global-thinking" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="promptbox">
+<p>Using what you’ve seen:</p>
+<ol style="list-style-type: decimal">
+<li>How is a <strong>local extremum</strong> different from a <strong>global extremum</strong>?<br />
+</li>
+<li>Why can <strong>endpoints</strong> matter when the domain is limited (like daily radiation between sunrise and sunset)?</li>
+</ol>
+</div>
+<hr />
+</div>
+<div id="connecting-to-derivatives" class="section level3 hasAnchor" number="10.2.4">
+<h3><span class="header-section-number">10.2.4</span> Connecting to Derivatives<a href="applications-of-derivatives---workbook.html#connecting-to-derivatives" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="promptbox">
+<div id="we-are-difference-machines" class="section level4 unnumbered hasAnchor">
+<h4>We Are “Difference Machines”<a href="applications-of-derivatives---workbook.html#we-are-difference-machines" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Our brains are wired to notice <strong>change</strong>, not constancy.</p>
+<p>If a light stays on, we stop seeing it.<br />
+If a sound is steady, it fades into the background.<br />
+But when something shifts — brightness flickers, volume drops, temperature rises — our attention snaps to it instantly.</p>
+<p>Your mind is not recording the world frame by frame — it’s continuously comparing <strong>what just happened</strong> to <strong>what’s happening now</strong>.</p>
+<p>We don’t process absolute information; we process <strong>differences</strong>.</p>
+<hr />
+</div>
+<div id="why-we-measure-change" class="section level4 unnumbered hasAnchor">
+<h4>Why We Measure Change<a href="applications-of-derivatives---workbook.html#why-we-measure-change" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Environmental scientists do the same thing.</p>
+<p>We rarely ask, “What is the exact value right now?”<br />
+Instead, we ask:
+- <em>How fast is the glacier melting?</em><br />
+- <em>Is the population growing or shrinking?</em><br />
+- <em>How quickly is CO₂ increasing?</em><br />
+- <em>When does the trend reverse?</em></p>
+<p>These are all <strong>questions about change</strong>, not state.</p>
+<p>Just as our brains focus on shifting inputs, our mathematical tools — <strong>derivatives</strong> — are designed to measure <strong>how one quantity changes relative to another</strong>.</p>
+<hr />
+</div>
+<div id="the-calculus-connection" class="section level4 unnumbered hasAnchor">
+<h4>The Calculus Connection<a href="applications-of-derivatives---workbook.html#the-calculus-connection" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<ul>
+<li>The <strong>first derivative</strong> <span class="math inline">\(f&#39;(x)\)</span> measures <em>how fast</em> something changes — our mathematical version of noticing movement, drift, or growth.<br />
+</li>
+<li>The <strong>second derivative</strong> <span class="math inline">\(f&#39;&#39;(x)\)</span> measures <em>how the rate of change itself evolves</em> — like sensing acceleration or sudden reversals.</li>
+</ul>
+<p>Both capture what your brain already prioritizes: <strong>difference</strong> and <strong>change over time</strong>.</p>
+</div>
+</div>
+<hr />
+<p>At each peak or valley, the slope of the tangent line is <strong>zero</strong>.</p>
+<table>
+<colgroup>
+<col width="28%" />
+<col width="33%" />
+<col width="37%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="center">Observation</th>
+<th align="center">Symbolic Meaning</th>
+<th align="center">Real-World Analogy</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">Curve is increasing</td>
+<td align="center"><span class="math inline">\(f&#39;(x) &gt; 0\)</span></td>
+<td align="center">Lake temperature rising during morning</td>
+</tr>
+<tr class="even">
+<td align="center">Curve is decreasing</td>
+<td align="center"><span class="math inline">\(f&#39;(x) &lt; 0\)</span></td>
+<td align="center">River discharge falling after storm peak</td>
+</tr>
+<tr class="odd">
+<td align="center">Curve flattens</td>
+<td align="center"><span class="math inline">\(f&#39;(x) = 0\)</span></td>
+<td align="center">Population growth stops accelerating</td>
+</tr>
+</tbody>
+</table>
+<div id="finding-critical-points" class="section level4 unnumbered hasAnchor promptbox">
+<h4>Finding Critical Points<a href="applications-of-derivatives---workbook.html#finding-critical-points" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>How can we use <span class="math inline">\(f&#39;(x) = 0\)</span> to predict where peaks and valleys occur before plotting the function?</p>
+</div>
+<hr />
+</div>
+<div id="classify-behavior-from-the-derivative" class="section level3 hasAnchor" number="10.2.5">
+<h3><span class="header-section-number">10.2.5</span> Classify Behavior from the Derivative<a href="applications-of-derivatives---workbook.html#classify-behavior-from-the-derivative" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>For each derivative, decide where the function is <strong>increasing</strong>, <strong>decreasing</strong>, or <strong>flat</strong> and over which intervals?</p>
+<p>Note we don’t have the function here - just its derivative.</p>
+<table>
+<colgroup>
+<col width="34%" />
+<col width="28%" />
+<col width="36%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Derivative Expression</th>
+<th>Critical points of <span class="math inline">\(f&#39;(x)\)</span></th>
+<th>Behavior of <span class="math inline">\(f(x)\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\(f&#39;(x) = 3x^2 - 6x\)</span></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(f&#39;(x) = -2(x-3)\)</span></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(f&#39;(x) = 4x^3 - 10x\)</span></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>There will be times where factoring isn’t simple. <strong>IF</strong> the function is quadratic you can always use the <strong>quadratic formula</strong> which gives the solutions (or roots) of a quadratic equation<br />
+<span class="math display">\[
+ax^2 + bx + c = 0
+\]</span>
+and is written as:</p>
+<p><span class="math display">\[
+x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}
+\]</span></p>
+<div id="how-to-build-a-sign-chart" class="section level4 unnumbered hasAnchor promptbox">
+<h4>How to build a sign chart<a href="applications-of-derivatives---workbook.html#how-to-build-a-sign-chart" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><span class="math inline">\(f&#39;(x) = 3x^2 - 6x\)</span>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></p>
+<p><span class="math inline">\(f&#39;(x) = -2(x-3)\)</span>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></p>
+<p><span class="math inline">\(f&#39;(x) = 4x^3 - 10x\)</span>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></p>
+</div>
+<hr />
+</div>
+<div id="apply-to-a-new-example" class="section level3 hasAnchor" number="10.2.6">
+<h3><span class="header-section-number">10.2.6</span> Apply to a New Example<a href="applications-of-derivatives---workbook.html#apply-to-a-new-example" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Let’s model population dynamics of bears:
+<span class="math display">\[
+P(t) = -t^3 + 6t^2 - 9t + 20
+\]</span></p>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-21-1.png" width="80%" style="display: block; margin: auto;" /></p>
+<div id="prompts" class="section level4 unnumbered hasAnchor promptbox">
+<h4>Prompts<a href="applications-of-derivatives---workbook.html#prompts" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<ul>
+<li>Between which time intervals does the population increase or decrease?<br />
+</li>
+<li>At what points might <span class="math inline">\(P&#39;(t) = 0\)</span>?<br />
+</li>
+<li>Which point seems to be a <strong>local maximum</strong> and which a <strong>local minimum</strong>?<br />
+</li>
+<li>How could this correspond to resource limitation or recovery in an ecosystem?<br />
+</li>
+<li>What might happen if external factors (like drought or nutrient input) shifted these extrema?</li>
+</ul>
+</div>
+<hr />
+</div>
+<div id="investigating-the-derivative" class="section level3 hasAnchor" number="10.2.7">
+<h3><span class="header-section-number">10.2.7</span> Investigating the Derivative<a href="applications-of-derivatives---workbook.html#investigating-the-derivative" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Now that you’ve visualized the population curve, let’s explore how its <strong>rate of change</strong> behaves.</p>
+<p>We’ll look at the derivative <span class="math inline">\(P&#39;(t)\)</span>, which tells us whether the population is growing or shrinking at any moment.</p>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-22-1.png" width="80%" style="display: block; margin: auto;" /></p>
+<div id="prompts-1" class="section level4 unnumbered hasAnchor promptbox">
+<h4>Prompts<a href="applications-of-derivatives---workbook.html#prompts-1" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<ul>
+<li>Where does <span class="math inline">\(P&#39;(t) = 0\)</span>?<br />
+</li>
+<li>Between which values of <span class="math inline">\(t\)</span> is <span class="math inline">\(P&#39;(t)\)</span> positive or negative?<br />
+</li>
+<li>How does the sign of <span class="math inline">\(P&#39;(t)\)</span> relate to whether <span class="math inline">\(P(t)\)</span> is increasing or decreasing?<br />
+</li>
+<li>How do these intervals correspond to growth and decline phases in a population?<br />
+</li>
+<li>What might cause these transitions in a real system (e.g., changes in food, space, or temperature)?</li>
+</ul>
+</div>
+<hr />
+</div>
+<div id="linking-derivatives-to-system-behavior" class="section level3 hasAnchor" number="10.2.8">
+<h3><span class="header-section-number">10.2.8</span> Linking Derivatives to System Behavior<a href="applications-of-derivatives---workbook.html#linking-derivatives-to-system-behavior" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Use your graph to fill in the table below.</p>
+<table>
+<colgroup>
+<col width="19%" />
+<col width="22%" />
+<col width="30%" />
+<col width="27%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Observation</th>
+<th>Derivative Sign</th>
+<th>Population Behavior</th>
+<th>Ecological Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\(P&#39;(t) &gt; 0\)</span></td>
+<td>Positive</td>
+<td><span class="math inline">\(P(t)\)</span> increasing</td>
+<td>Growth phase — population expanding</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(P&#39;(t) = 0\)</span></td>
+<td>Zero</td>
+<td>Slope of <span class="math inline">\(P(t)\)</span> flat</td>
+<td>Turning point — possible max or min</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(P&#39;(t) &lt; 0\)</span></td>
+<td>Negative</td>
+<td><span class="math inline">\(P(t)\)</span> decreasing</td>
+<td>Decline — competition or limitation</td>
+</tr>
+</tbody>
+</table>
+<hr />
+</div>
+<div id="adding-the-second-derivative" class="section level3 hasAnchor" number="10.2.9">
+<h3><span class="header-section-number">10.2.9</span> Adding the Second Derivative<a href="applications-of-derivatives---workbook.html#adding-the-second-derivative" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Next, explore the <strong>curvature</strong> of population change — whether the growth rate itself is speeding up or slowing down.</p>
+<p>We’ll look at the second derivative <span class="math inline">\(P&#39;&#39;(t)\)</span>.</p>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-23-1.png" width="80%" style="display: block; margin: auto;" /></p>
+<div id="prompts-2" class="section level4 unnumbered hasAnchor promptbox">
+<h4>Prompts<a href="applications-of-derivatives---workbook.html#prompts-2" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<ul>
+<li>Where does <span class="math inline">\(P&#39;&#39;(t) = 0\)</span>?<br />
+</li>
+<li>What happens to <span class="math inline">\(P&#39;(t)\)</span> and <span class="math inline">\(P(t)\)</span> near this point?<br />
+</li>
+<li>How does the curvature (concavity) change before and after <span class="math inline">\(P&#39;&#39;(t) = 0\)</span>?<br />
+</li>
+<li>What does a <strong>positive</strong> <span class="math inline">\(P&#39;&#39;(t)\)</span> tell you about the rate of change?<br />
+</li>
+<li>What does a <strong>negative</strong> <span class="math inline">\(P&#39;&#39;(t)\)</span> indicate about slowing or reversing growth?<br />
+</li>
+<li>In ecological terms, how might this point represent a <strong>tipping point</strong> or <strong>carrying capacity</strong>?</li>
+</ul>
+</div>
+<hr />
+<p>Now consider the <strong>second derivative</strong>, which describes how the rate of change itself is changing.<br />
+Use this table to connect the <strong>sign of <span class="math inline">\(P&#39;&#39;(t)\)</span></strong> with system behavior.</p>
+<table style="width:100%;">
+<colgroup>
+<col width="14%" />
+<col width="25%" />
+<col width="38%" />
+<col width="21%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Observation</th>
+<th>Second Derivative Sign</th>
+<th>Curvature / Behavior of <span class="math inline">\(P(t)\)</span></th>
+<th>Ecological Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\(P&#39;&#39;(t) &gt; 0\)</span></td>
+<td>Positive</td>
+<td>Concave up — slope of <span class="math inline">\(P(t)\)</span> increasing</td>
+<td>Growth is <strong>accelerating</strong>; system recovering or resources increasing</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(P&#39;&#39;(t) = 0\)</span></td>
+<td>Zero</td>
+<td>Point of inflection — curvature changes sign</td>
+<td><strong>Tipping point</strong> where growth shifts from accelerating to slowing</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(P&#39;&#39;(t) &lt; 0\)</span></td>
+<td>Negative</td>
+<td>Concave down — slope of <span class="math inline">\(P(t)\)</span> decreasing</td>
+<td>Growth is <strong>slowing</strong>; system approaching <strong>carrying capacity</strong> or limitation</td>
+</tr>
+</tbody>
+</table>
+<div id="discussion" class="section level4 unnumbered hasAnchor promptbox">
+<h4>Discussion<a href="applications-of-derivatives---workbook.html#discussion" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<ol style="list-style-type: decimal">
+<li>When <span class="math inline">\(P&#39;(t) = 0\)</span>, what does this mean physically in the system?<br />
+</li>
+<li>When <span class="math inline">\(P&#39;&#39;(t) = 0\)</span>, what does this indicate about how the rate of change itself is behaving?<br />
+</li>
+<li>How could identifying <strong>inflection points</strong> help forecast environmental transitions before they occur?<br />
+</li>
+<li>Think of a real example — such as CO₂ uptake by vegetation, or lake temperature over a year.
+<ul>
+<li>Where might you expect <strong>maxima</strong>, <strong>minima</strong>, and <strong>inflection points</strong> to occur?<br />
+</li>
+<li>What could each tell you about system resilience or change?</li>
+</ul></li>
+</ol>
+<blockquote>
+<p><strong>Big Takeaway:</strong><br />
+- <span class="math inline">\(f&#39;(x)\)</span> shows <strong>how fast</strong> something changes.<br />
+- <span class="math inline">\(f&#39;&#39;(x)\)</span> shows <strong>how that rate</strong> itself changes.<br />
+- Together, they reveal whether a system is <strong>accelerating, stabilizing, or reversing</strong> — the mathematical fingerprints of environmental balance.</p>
+</blockquote>
+</div>
 
+</div>
+</div>
 </div>
             </section>
 

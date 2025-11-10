@@ -539,3 +539,14 @@ step-4-reflect-when-two-variables-depend-on-each-other
 step-6-quick-practice-apply-implicit-differentiation
 mixed-rule-practice
 applications-of-derivatives---workbook
+introduction-reading-behavior-through-derivatives
+guided-activity-using-derivatives-to-find-extremes
+thinking-about-extremes
+visualizing-local-and-global-extrema
+local-vs.-global-thinking
+connecting-to-derivatives
+classify-behavior-from-the-derivative
+apply-to-a-new-example
+investigating-the-derivative
+linking-derivatives-to-system-behavior
+adding-the-second-derivative
