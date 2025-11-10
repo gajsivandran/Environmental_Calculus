@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 8 Introduction to Derivatives — Workbook | Environmental Calculus - Active Learning with Case Studies</title>
+  <title>More Mixed-Rule Derivative Practice | Environmental Calculus - Active Learning with Case Studies</title>
   <meta name="description" content="A textbook companion to the Univeristy of Washington QSci 291 class" />
   <meta name="generator" content="bookdown 0.43 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 8 Introduction to Derivatives — Workbook | Environmental Calculus - Active Learning with Case Studies" />
+  <meta property="og:title" content="More Mixed-Rule Derivative Practice | Environmental Calculus - Active Learning with Case Studies" />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="A textbook companion to the Univeristy of Washington QSci 291 class" />
   <meta name="github-repo" content="rstudio/bookdown-demo" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 8 Introduction to Derivatives — Workbook | Environmental Calculus - Active Learning with Case Studies" />
+  <meta name="twitter:title" content="More Mixed-Rule Derivative Practice | Environmental Calculus - Active Learning with Case Studies" />
   
   <meta name="twitter:description" content="A textbook companion to the Univeristy of Washington QSci 291 class" />
   
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="pre-calculus-foundations-workbook.html"/>
-<link rel="next" href="derivative-rules---workbook.html"/>
+<link rel="prev" href="test-2-review-material.html"/>
+<link rel="next" href="why-calculus-workbook.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -928,1985 +928,253 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="introduction-to-derivatives-workbook" class="section level1 hasAnchor" number="8">
-<h1><span class="header-section-number">Chapter 8</span> Introduction to Derivatives — Workbook<a href="introduction-to-derivatives-workbook.html#introduction-to-derivatives-workbook" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="more-mixed-rule-derivative-practice" class="section level1 unnumbered hasAnchor">
+<h1>More Mixed-Rule Derivative Practice<a href="more-mixed-rule-derivative-practice.html#more-mixed-rule-derivative-practice" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p><strong>Instructions.</strong> For each function, find <span class="math inline">\(f&#39;(x)\)</span> <strong>without simplifying</strong>.<br />
+Assume <span class="math inline">\(y=y(x)\)</span> (implicit differentiation when needed).<br />
+Click to reveal each step of the structured solution.</p>
 <hr />
-<div id="learning-objectives-quick-self-check" class="section level2 hasAnchor" number="8.1">
-<h2><span class="header-section-number">8.1</span> Learning Objectives (Quick Self-Check)<a href="introduction-to-derivatives-workbook.html#learning-objectives-quick-self-check" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<div class="promptbox">
-<p><strong>Check your readiness:</strong><br />
-For each objective, write one sentence in your own words or a question you still have:</p>
-<ol style="list-style-type: decimal">
-<li>What is the difference between an <strong>average rate of change</strong> and an <strong>instantaneous rate of change</strong>?<br />
-</li>
-<li>How can you interpret a derivative from a <strong>graph, dataset, or equation</strong>?<br />
-</li>
-<li>What does derivative <strong>notation</strong> mean, and how does it connect to context?<br />
-</li>
-<li>How could you apply derivatives to a <strong>real-world environmental example</strong>?</li>
-</ol>
-<p><strong>Notes:</strong><br />
-<br><br><br><br><br><br>
-<br><br><br><br><br><br></p>
-</div>
-<hr />
-</div>
-<div id="understanding-the-speed-of-change-1" class="section level2 hasAnchor" number="8.2">
-<h2><span class="header-section-number">8.2</span> Understanding the Speed of Change<a href="introduction-to-derivatives-workbook.html#understanding-the-speed-of-change-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p><em>A derivative is about how fast something is changing, right now, and in what direction.</em></p>
-<div id="class-brainstorm-whats-changing" class="section level3 hasAnchor" number="8.2.1">
-<h3><span class="header-section-number">8.2.1</span> Class Brainstorm: What’s Changing?<a href="introduction-to-derivatives-workbook.html#class-brainstorm-whats-changing" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<div class="promptbox">
-<p><strong>Activity:</strong><br />
-<img src="images/change_brainstorm.png" style="float:right; width:250px; margin:10px;" alt="QR code for shared google doc" />
-<a href="https://docs.google.com/document/d/1FgOMQHnzNYIyq1sEqhB6YfLKFwI-kqfl90Zuy9IlBsY/edit?usp=sharing">Shared Google Doc</a></p>
-<ol style="list-style-type: decimal">
-<li><p>As a group, pick an <strong>environmental system</strong> you are interested in (e.g. Lake Washington).<br />
-</p></li>
-<li><p>Discuss:</p>
-<ul>
-<li>What quantity is <strong>changing</strong> in that system?<br />
-</li>
-<li>What is it changing <strong>with respect to</strong> (time, distance, depth, etc.)?<br />
-</li>
-<li>Why might the <strong>speed of change</strong> matter for scientists, managers, or communities?<br />
-</li>
-<li>Rinse and repeat, can you think of another quantity or variable that is changing in your system?</li>
-</ul></li>
-<li><p>Share your group’s example with the class.</p></li>
-</ol>
-<p><strong>Notes:</strong></p>
-<p><br><br><br><br><br><br>
-<br><br><br><br><br><br></p>
-</div>
-<hr />
-</div>
-<div id="average-vs-right-now-build-the-contrast" class="section level3 hasAnchor" number="8.2.2">
-<h3><span class="header-section-number">8.2.2</span> Average vs Right-Now: Build the Contrast<a href="introduction-to-derivatives-workbook.html#average-vs-right-now-build-the-contrast" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<div class="promptbox">
-<p><strong>Practice:</strong><br />
-Using your scenario:</p>
-<ol style="list-style-type: decimal">
-<li>What <strong>average rate of change</strong> could you compute between two times?<br />
-</li>
-<li>What would the <strong>instantaneous rate</strong> tell you “right now”?<br />
-</li>
-<li>How would the decisions based on these two rates differ?</li>
-</ol>
-<p><strong>Notes:</strong><br />
-<br><br><br><br><br><br>
-<br><br><br><br><br><br></p>
-</div>
-<hr />
-</div>
-<div id="graph-interpretation-slope-as-a-story" class="section level3 hasAnchor" number="8.2.3">
-<h3><span class="header-section-number">8.2.3</span> Graph Interpretation: Slope as a Story<a href="introduction-to-derivatives-workbook.html#graph-interpretation-slope-as-a-story" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<div class="promptbox">
-<p><strong>Activity (no equations needed):</strong><br />
-Sketch a simple curve of your quantity vs. its input (e.g., population vs. time).</p>
-<ul>
-<li>Mark one place slope is <strong>positive</strong> (increase).<br />
-</li>
-<li>Mark one place slope is <strong>near zero</strong> (flat).<br />
-</li>
-<li>Mark one place slope is <strong>negative</strong> (decrease).<br />
-</li>
-<li>For each mark, write a one-sentence <em>story</em> of what’s happening.<br />
-</li>
-<li>What does the steepness tell you about your quantity?
-<strong>Notes:</strong><br />
-<br><br><br><br><br><br>
-<br><br><br><br><br><br></li>
-</ul>
-</div>
-<hr />
-</div>
-<div id="from-monitoring-to-action" class="section level3 hasAnchor" number="8.2.4">
-<h3><span class="header-section-number">8.2.4</span> From Monitoring to Action<a href="introduction-to-derivatives-workbook.html#from-monitoring-to-action" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<div class="promptbox">
-<p><strong>Practice:</strong><br />
-Imagine you only have resources to collect limited data.</p>
-<ol style="list-style-type: decimal">
-<li>When would an <strong>average rate</strong> be most useful?<br />
-</li>
-<li>When would you need an <strong>instantaneous rate</strong>?<br />
-</li>
-<li>What extra data (resolution, sensors) would help improve your estimates?</li>
-</ol>
-<p><strong>Notes:</strong><br />
-<br><br><br><br><br><br>
-<br><br><br><br><br><br></p>
-</div>
-<hr />
-</div>
-</div>
-<div id="why-we-need-new-math-tools-1" class="section level2 hasAnchor" number="8.3">
-<h2><span class="header-section-number">8.3</span> Why We Need New Math Tools<a href="introduction-to-derivatives-workbook.html#why-we-need-new-math-tools-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<div id="compare-snapshots-vs.-speed" class="section level3 hasAnchor" number="8.3.1">
-<h3><span class="header-section-number">8.3.1</span> Compare: Snapshots vs. Speed<a href="introduction-to-derivatives-workbook.html#compare-snapshots-vs.-speed" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<div class="promptbox">
-<p><strong>Activity (Whole Class Scenario + Small Groups):</strong></p>
-<p><strong>Scenario:</strong><br />
-A coastal city is monitoring <strong>sea level rise</strong> to plan future flood defenses.</p>
-<ul>
-<li>Snapshot: “Sea level is currently 1.2 meters above the baseline.”<br />
-</li>
-<li>Speed: “Sea level is rising at 4 mm per year.”</li>
-</ul>
-<hr />
-<p><strong>Step 1: Snapshot vs. Speed</strong></p>
-<ul>
-<li>What can the snapshot alone tell the city planners?<br />
-</li>
-<li>What critical information is missing if they only have the snapshot?<br />
-</li>
-<li>How does the speed of change alter the urgency of decisions?<br />
-<br><br><br><br><br><br></li>
-</ul>
-<hr />
-<p><strong>Step 2: Consequences of Missing Information</strong></p>
-<ul>
-<li>If planners <strong>only use the snapshot</strong>, what mistakes could they make?<br />
-</li>
-<li>If they <strong>only use the speed</strong>, what context would be missing?<br />
-</li>
-<li>Why do they need <em>both</em>?<br />
-<br><br><br><br><br><br></li>
-</ul>
-<hr />
-<p><strong>Step 3: Push Further</strong></p>
-<ul>
-<li>How would decisions differ if the speed of rise is <em>constant</em> vs. <em>accelerating</em>?<br />
-</li>
-<li>What additional data (short-term vs. long-term) would make predictions more reliable?<br />
-<br><br><br><br><br><br></li>
-</ul>
-<hr />
-<p><strong>Step 4: Generalize</strong><br />
-Complete this sentence as a group:</p>
-<blockquote>
-<p><em>In environmental systems, a snapshot tells us ________, but the derivative tells us ________.</em></p>
-</blockquote>
-<hr />
-<p><strong>Notes:</strong><br />
-<br><br><br><br><br><br></p>
-</div>
-</div>
-</div>
-<div id="what-is-a-derivative-1" class="section level2 hasAnchor" number="8.4">
-<h2><span class="header-section-number">8.4</span> What Is A Derivative?<a href="introduction-to-derivatives-workbook.html#what-is-a-derivative-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>You’ve probably seen derivatives before—even if you didn’t call them that. If you’ve ever looked at how fast something was growing, declining, or shifting in space or time, you’ve already been thinking about derivatives.</p>
-<table>
-<caption><span id="tab:derivative-terms-table">Table 8.1: </span>Terms Across Disciplines That Represent Derivatives</caption>
-<thead>
-<tr class="header">
-<th align="left">Math…Physics…Data…Context</th>
-<th align="left">Environmental…Applied…Context</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left">Rate of change</td>
-<td align="left">Growth rate</td>
-</tr>
-<tr class="even">
-<td align="left">Slope of the tangent line</td>
-<td align="left">Decay rate</td>
-</tr>
-<tr class="odd">
-<td align="left">Instantaneous rate</td>
-<td align="left">Reaction rate</td>
-</tr>
-<tr class="even">
-<td align="left">Velocity</td>
-<td align="left">Flux</td>
-</tr>
-<tr class="odd">
-<td align="left">Acceleration</td>
-<td align="left">Turnover rate</td>
-</tr>
-<tr class="even">
-<td align="left">Gradient</td>
-<td align="left">Loss rate / Gain rate</td>
-</tr>
-<tr class="odd">
-<td align="left">Marginal change</td>
-<td align="left">Change per unit time</td>
-</tr>
-<tr class="even">
-<td align="left">Slope at a point</td>
-<td align="left">Response rate</td>
-</tr>
-<tr class="odd">
-<td align="left">Rise over run</td>
-<td align="left">Uptake rate</td>
-</tr>
-<tr class="even">
-<td align="left">Delta Y / Delta X</td>
-<td align="left">First difference</td>
-</tr>
-</tbody>
-</table>
-<p>Mathematically, the derivative describes the <strong>instantaneous rate of change</strong>—the slope of the tangent line to a curve at a given point.</p>
-<div id="derivative-notation-speaking-the-language-of-change-1" class="section level3 hasAnchor" number="8.4.1">
-<h3><span class="header-section-number">8.4.1</span> Derivative Notation: Speaking the Language of Change<a href="introduction-to-derivatives-workbook.html#derivative-notation-speaking-the-language-of-change-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>In calculus, there are several common notations used to represent the <strong>derivative</strong>—the instantaneous rate of change of a function. Understanding these notations is key to reading and writing mathematics fluently, especially when interpreting real-world problems in environmental science.</p>
-<hr />
-<div id="common-derivative-notations-1" class="section level4 hasAnchor" number="8.4.1.1">
-<h4><span class="header-section-number">8.4.1.1</span> Common Derivative Notations<a href="introduction-to-derivatives-workbook.html#common-derivative-notations-1" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<p>Let’s say we have a function, we could right this as:</p>
+<div id="challenge-q1-1" class="section level3 unnumbered hasAnchor">
+<h3>Challenge Q1<a href="more-mixed-rule-derivative-practice.html#challenge-q1-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p><span class="math display">\[
-f(x) = something\ with\ x&#39;s \ in\ it \\
-y= something\ with\ x&#39;s \ in\ it
+f_1(x)=\frac{(x+y^2)\,e^{\cos(xy)}}{1+x^2}.
 \]</span></p>
-<p>We can then write the notation of the derivative with respect to <span class="math inline">\(x\)</span> in several ways, all of which mean exactly the same thing:</p>
-<table>
-<colgroup>
-<col width="30%" />
-<col width="32%" />
-<col width="37%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="center">Notation</th>
-<th align="center">Spoken As</th>
-<th align="center">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="center"><span class="math inline">\(f&#39;(x)\)</span></td>
-<td align="center">“f prime of x”</td>
-<td align="center">Most compact form; often used in textbooks</td>
-</tr>
-<tr class="even">
-<td align="center"><span class="math inline">\(\frac{dy}{dx}\)</span></td>
-<td align="center">“dee y over dee x”</td>
-<td align="center">Emphasizes that <span class="math inline">\(y\)</span> is a function of <span class="math inline">\(x\)</span>; Leibniz notation</td>
-</tr>
-<tr class="odd">
-<td align="center"><span class="math inline">\(\frac{d}{dx} f(x)\)</span></td>
-<td align="center">“dee by dee x of f of x”</td>
-<td align="center">Shows that differentiation is an operation</td>
-</tr>
-<tr class="even">
-<td align="center"><span class="math inline">\(D_x f(x)\)</span></td>
-<td align="center">“D sub x of f of x”</td>
-<td align="center">Operator form used in some texts</td>
-</tr>
-<tr class="odd">
-<td align="center"><span class="math inline">\(y&#39;\)</span></td>
-<td align="center">“y prime”</td>
-<td align="center">Used when <span class="math inline">\(y = f(x)\)</span>, common in applied settings</td>
-</tr>
-</tbody>
-</table>
-<ul>
-<li><strong>Prime notation</strong>: e.g., <span class="math inline">\(f&#39;(x)\)</span>, <span class="math inline">\(g&#39;(t)\)</span></li>
-<li><strong>Leibniz notation</strong>: e.g., <span class="math inline">\(\frac{dy}{dx}\)</span>, <span class="math inline">\(\frac{d}{dt}\)</span></li>
-<li><strong>Operator notation</strong>: e.g., <span class="math inline">\(\frac{d}{dx}(f(x))\)</span>, applying <span class="math inline">\(\frac{d}{dt}\)</span> to an expression</li>
-</ul>
-<hr />
-</div>
-<div id="the-derivative-as-an-operator-1" class="section level4 hasAnchor" number="8.4.1.2">
-<h4><span class="header-section-number">8.4.1.2</span> The Derivative as an Operator<a href="introduction-to-derivatives-workbook.html#the-derivative-as-an-operator-1" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<p>The notation <span class="math inline">\(\frac{d}{dx}\)</span> is not just a symbol—it’s an <strong>operator</strong>. That means it <strong>acts on</strong> a function to produce another function: the derivative.</p>
-<p>Think of it this way:</p>
-<blockquote>
-<p>The symbol <span class="math inline">\(\frac{d}{dx}\)</span> is a command:
-“Take the derivative of whatever comes after this with respect to <span class="math inline">\(x\)</span>.”</p>
-</blockquote>
-<p>So if you write:</p>
-<p><span class="math display">\[
-\frac{d}{dx} \left(3x^2 + 2x\right)
-\]</span></p>
-<p>You are instructing the reader (or yourself!) to <strong>differentiate</strong> the expression <span class="math inline">\(3x^2 + 2x\)</span> with respect to <span class="math inline">\(x\)</span>. The result:</p>
-<p><span class="math display">\[
-\frac{d}{dx} \left(3x^2 + 2x\right) = 6x + 2
-\]</span></p>
-<hr />
-</div>
-</div>
-<div id="snapshots-vs-speed-of-change" class="section level3 hasAnchor" number="8.4.2">
-<h3><span class="header-section-number">8.4.2</span> Snapshots vs speed of change<a href="introduction-to-derivatives-workbook.html#snapshots-vs-speed-of-change" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>We’ve seen examples where snapshots (a single measurement) and speed (how fast something changes) both matter. The derivative is the mathematical tool that lets us capture that “speed of change” precisely.</p>
-<hr />
-</div>
-<div id="spot-the-derivative-in-disguise" class="section level3 hasAnchor" number="8.4.3">
-<h3><span class="header-section-number">8.4.3</span> Spot the Derivative in Disguise<a href="introduction-to-derivatives-workbook.html#spot-the-derivative-in-disguise" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<div class="promptbox">
-<p><strong>Activity (Pairs or Small Groups):</strong><br />
-Below are phrases from different fields. Circle or underline the ones that represent a rate of change — in other words, a derivative in disguise.</p>
-<ul>
-<li>A glacier loses 2 km² of area per year<br />
-</li>
-<li>Dissolved oxygen drops by 1 mg/L per meter of depth<br />
-</li>
-<li>Tree canopy cover increases by 5% per kilometer toward the city center<br />
-</li>
-<li>The tide is rising at 5 cm per hour<br />
-</li>
-<li>Soil carbon decreases by 0.3 g per kilogram of soil nitrogen<br />
-</li>
-<li>Ocean salinity is 34 parts per million<br />
-</li>
-<li>Ocean salinity increases by 0.2 ppt per 100 km toward the equator<br />
-</li>
-<li>CO₂ levels are increasing by 2.5 ppm per year<br />
-</li>
-<li>A lake is 12°C in July<br />
-</li>
-<li>Mountain snowpack decreases by 10 cm per 100 m of elevation gain<br />
-</li>
-<li>The pH of a stream is 6.5<br />
-</li>
-<li>The pH of a stream drops by 0.1 units per kilometer downstream of a mine<br />
-</li>
-<li>Forest biomass is 400 tons of carbon per hectare<br />
-</li>
-<li>Forest biomass has been increasing by 3 tons per hectare per year<br />
-</li>
-<li>Wind speed increases by 0.5 m/s per 10 m of height<br />
-</li>
-<li>Annual rainfall totals 1200 mm<br />
-</li>
-<li>Rainfall intensity rises by 2 mm per minute during a storm<br />
-</li>
-<li>Nitrogen leaching is 4 kg/ha<br />
-</li>
-<li>Nitrogen leaching rises by 0.1 kg per mm of irrigation applied</li>
-</ul>
-<hr />
-<p><em>Discuss:</em><br />
-- Which are true derivatives?<br />
-- Which are just static descriptions or ratios?<br />
-- How can you tell the difference?</p>
-<p><strong>Notes:</strong><br />
-<br><br><br><br><br><br></p>
-</div>
-<hr />
-</div>
-<div id="tell-the-story-of-the-math" class="section level3 hasAnchor" number="8.4.4">
-<h3><span class="header-section-number">8.4.4</span> Tell the Story of the Math<a href="introduction-to-derivatives-workbook.html#tell-the-story-of-the-math" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<div class="promptbox">
-<p><strong>Activity (Whole Class):</strong><br />
-Consider the formula:</p>
-<p><span class="math display">\[
-\frac{\Delta y}{\Delta x}
-\]</span></p>
-<ul>
-<li>What do the symbols mean in plain language?<br />
-</li>
-<li>How does this formula connect to “rise over run” from algebra?<br />
-</li>
-<li>How could you explain this to a high school student using a real-world environmental example?</li>
-</ul>
-<p><strong>Notes:</strong><br />
-<br><br><br><br><br><br></p>
-</div>
-<hr />
-</div>
-<div id="reflection-2" class="section level3 hasAnchor" number="8.4.5">
-<h3><span class="header-section-number">8.4.5</span> Reflection<a href="introduction-to-derivatives-workbook.html#reflection-2" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<div class="promptbox">
-<p><strong>Prompt:</strong><br />
-Complete this thought:</p>
-<blockquote>
-<p><em>A derivative is not just a formula — it’s a way of describing ________.</em></p>
-</blockquote>
-<p><strong>Notes:</strong><br />
-<br><br><br><br><br><br></p>
-</div>
-</div>
-</div>
-<div id="average-rate-of-change-1" class="section level2 hasAnchor" number="8.5">
-<h2><span class="header-section-number">8.5</span> Average Rate of Change<a href="introduction-to-derivatives-workbook.html#average-rate-of-change-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>The average rate of change tells us how much something changes per unit of input (like time, distance, or depth) over a chosen interval.
-Mathematically, it’s the slope of a secant line connecting two points on a function.</p>
-<hr />
-<div id="practice-secant-slope-on-a-graph" class="section level3 hasAnchor" number="8.5.1">
-<h3><span class="header-section-number">8.5.1</span> Practice: Secant Slope on a Graph<a href="introduction-to-derivatives-workbook.html#practice-secant-slope-on-a-graph" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<div class="promptbox">
-<p><strong>Activity (Individual or Pairs):</strong>
-Look at the quadratic function below.</p>
-<p><span class="math display">\[f(x) = -x^2 + 4x + 5\]</span>
-<img src="bookdown-demo_files/figure-html/avg-rate-quad-1.png" width="80%" style="display: block; margin: auto;" /></p>
-<ul>
-<li>Pick two points on the curve.</li>
-<li>Estimate their coordinates.</li>
-<li>Use the formula below to compute the average rate of change.</li>
-</ul>
-<p><span class="math display">\[\frac{f(b) - f(a)}{b - a}\]</span></p>
-<ul>
-<li>What does the sign of your slope tell you about how the function is changing?</li>
-<li>Write a descriptive sentence about what your value represents</li>
-</ul>
-<p><strong>Notes:</strong> <br><br><br><br><br><br><br><br><br><br><br><br></p>
-</div>
-<hr />
-</div>
-<div id="practice-environmental-table" class="section level3 hasAnchor" number="8.5.2">
-<h3><span class="header-section-number">8.5.2</span> Practice: Environmental Table<a href="introduction-to-derivatives-workbook.html#practice-environmental-table" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<div class="promptbox">
-<p><strong>Activity (Small Groups):</strong>
-The table below shows the amount of carbon stored in forest soil over time.</p>
-<table>
-<thead>
-<tr class="header">
-<th align="center">Year</th>
-<th align="center">Carbon (kg/m²)</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="center">2000</td>
-<td align="center">4.1</td>
-</tr>
-<tr class="even">
-<td align="center">2005</td>
-<td align="center">4.8</td>
-</tr>
-<tr class="odd">
-<td align="center">2010</td>
-<td align="center">5.0</td>
-</tr>
-</tbody>
-</table>
-<ul>
-<li>Compute the average rate of change from 2000 to 2005.</li>
-<li>Compute the average rate of change from 2005 to 2010.</li>
-<li>Compute the average rate of change from 2000 to 2010.</li>
-<li>Write one or two sentences explaining what these numbers mean in the context of carbon storage.</li>
-</ul>
-<p><strong>Notes:</strong> <br><br><br><br><br><br><br><br><br><br><br><br></p>
-</div>
-<hr />
-</div>
-<div id="practice-application-to-sea-level" class="section level3 hasAnchor" number="8.5.3">
-<h3><span class="header-section-number">8.5.3</span> Practice: Application to Sea Level<a href="introduction-to-derivatives-workbook.html#practice-application-to-sea-level" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<div class="promptbox">
-<p><strong>Activity (Whole Class Discussion):</strong>
-Suppose sea level in a coastal region is modeled by</p>
-<p><span class="math display">\[S(t) = 3.2t + 45\]</span></p>
-<p>where <span class="math inline">\(S(t)\)</span> is in millimeters and <span class="math inline">\(t\)</span> is years since 2000.</p>
-<ul>
-<li>Calculate the average rate of change of <span class="math inline">\(S(t)\)</span> from 2010 to 2020.</li>
-<li>State the units of your result.</li>
-<li>Interpret the meaning: what does this tell us about sea level trends?</li>
-<li>Is there a shortcut to finding the average rate of change?</li>
-<li>Visualize this function with a sketch, add in the secant line, what do you notice?</li>
-</ul>
-<p><strong>Notes:</strong> <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></p>
-</div>
-<hr />
-<div class="promptbox">
-<p><strong>Environmentla Application - A Visual View</strong></p>
-<p><img src="images/sea_level.png" fig.alt="Line graph showing changes in global mean sea level from 1993 to 2023. The black line (NASA) shows total sea level rise, increasing from near 0 mm in 1993 to over 110 mm in 2023. Two contributing factors are plotted: blue line (JPL) shows added ocean mass from mostly land ice melt, rising steadily from about 20 mm in 2003 to over 60 mm in 2023; red line (SIO) shows thermal expansion, rising from near 0 mm in 2003 to about 40 mm in 2023. The purple shaded region (Mass + steric) closely matches the black line. Together, the figure shows that sea level rise is explained by added water plus thermal expansion." /></p>
-<p><strong>Discussion Questions</strong></p>
-<ol style="list-style-type: decimal">
-<li><strong>Describe the Trend</strong></li>
-</ol>
-<ul>
-<li>What does the plot tell you about how global sea level has changed since 1993?</li>
-<li>Is the trend linear, exponential, or something else?</li>
-</ul>
-<ol start="2" style="list-style-type: decimal">
-<li><strong>Estimate the Average Rate of Change</strong></li>
-</ol>
-<ul>
-<li><p>Pick two points on the black line (e.g., between 1993 and 2025) to estimate:</p>
-<p><span class="math display">\[
-   \text{Average Rate} = \frac{\text{Change in Sea Level (mm)}}{\text{Change in Time (years)}}
-   \]</span></p></li>
-<li><p>What units does your answer have?</p></li>
-</ul>
-<ol start="3" style="list-style-type: decimal">
-<li><strong>Interpret in Context</strong></li>
-</ol>
-<ul>
-<li>What does your calculated rate tell you about sea level rise?</li>
-<li>Why is knowing the <em>average rate</em> important for cities, communities, and planners?</li>
-</ul>
-<ol start="4" style="list-style-type: decimal">
-<li><strong>Explore Acceleration</strong></li>
-</ol>
-<ul>
-<li><p>Estimate the average rate of change over each 5-year interval below by reading approximate values from the graph.</p></li>
-<li><p>Use the formula:</p>
-<p><span class="math display">\[
-   \text{Avg. Rate} = \frac{\Delta \text{Sea Level}}{\Delta \text{Time}} \quad \text{(in mm/year)}
-   \]</span></p>
-<ul>
-<li>Fill in the table:</li>
-</ul></li>
-</ul>
-<table>
-<colgroup>
-<col width="17%" />
-<col width="30%" />
-<col width="27%" />
-<col width="24%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>Time Interval</th>
-<th>Sea Level at Start (mm)</th>
-<th>Sea Level at End (mm)</th>
-<th>Avg. Rate (mm/year)</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>1995–2000</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr class="even">
-<td>2000–2005</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr class="odd">
-<td>2005–2010</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr class="even">
-<td>2010–2015</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr class="odd">
-<td>2015–2020</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr class="even">
-<td>2020–2025</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<ul>
-<li>What do you notice about how the average rate changes over time?</li>
-<li>What does that suggest about the <em>acceleration</em> of sea level rise?</li>
-</ul>
-<ol start="5" style="list-style-type: decimal">
-<li><strong>Connect to Derivatives</strong></li>
-</ol>
-<ul>
-<li>If this were a smooth function <span class="math inline">\(S(t)\)</span> representing sea level at year <span class="math inline">\(t\)</span>, what would the <em>derivative</em> <span class="math inline">\(S&#39;(t)\)</span> represent?</li>
-<li>What would a plot of the average rate of change look like?</li>
-<li>What would happen if we looked at the average rate of change over shorter and shorter periods? How would this chang the way a plot of the rate of change look like?</li>
-</ul>
-<p><strong>Reflection Prompt</strong>
-Describe a situation in your area of interest (marine biology, forestry, climate science, etc.) where an average rate of change is used. What does it tell you, and what might it leave out?</p>
-</div>
-</div>
-</div>
-<div id="instantaneous-rate-of-change-1" class="section level2 hasAnchor" number="8.6">
-<h2><span class="header-section-number">8.6</span> Instantaneous Rate of Change<a href="introduction-to-derivatives-workbook.html#instantaneous-rate-of-change-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>The instantaneous rate of change tells us how fast something is changing at a <em>specific moment</em>. Unlike the average rate, which looks at an interval, the instantaneous rate captures the slope of the tangent line at a single point. This is the essence of a derivative.</p>
-<hr />
-<div id="zooming-in-on-change" class="section level3 hasAnchor" number="8.6.1">
-<h3><span class="header-section-number">8.6.1</span> Zooming In on Change<a href="introduction-to-derivatives-workbook.html#zooming-in-on-change" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<div class="promptbox">
-<p><strong>Activity (Whole Class Demonstration):</strong>
-Look at the function below.</p>
-<p><img src="bookdown-demo_files/figure-html/zoom-demo-1.png" width="80%" style="display: block; margin: auto;" /></p>
-<ul>
-<li>As a class, discuss: What does the slope of the curve at 2010 represent?</li>
-<li>Imagine drawing a tangent line right at that point. How is this different from a secant line?</li>
-<li>How might the meaning of this slope change if this were a glacier, a population, or a pollutant concentration?</li>
-</ul>
-<p><strong>Notes:</strong> <br><br><br><br><br><br><br><br><br><br><br><br></p>
-</div>
-<hr />
-</div>
-<div id="tangent-hunt" class="section level3 hasAnchor" number="8.6.2">
-<h3><span class="header-section-number">8.6.2</span> Tangent Hunt<a href="introduction-to-derivatives-workbook.html#tangent-hunt" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<div class="promptbox">
-<p><strong>Activity (Pairs):</strong>
-On the curve below:</p>
-<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-11-1.png" width="80%" style="display: block; margin: auto;" /></p>
-<ul>
-<li>Mark one point where the tangent slope is clearly <strong>positive</strong>.</li>
-<li>Mark one point where the tangent slope is clearly <strong>negative</strong>.</li>
-<li>Mark one point where the tangent slope is <strong>zero</strong>.</li>
-<li>When does the <em>sign</em> of the tangent slope change?</li>
-<li>Where is change happening the fastest? (positive and negative)</li>
-</ul>
-<p><em>Discuss:</em> What does each slope mean in an environmental context (e.g., population peak, fastest growth, fastest decline)? Break up the function into regions and tell a story.</p>
-<p><strong>Notes:</strong> <br><br><br><br><br><br><br><br><br><br><br><br></p>
-<p><strong>Challenge</strong>: Can you sketch the derivative - dont worry about getting the right magnitudes, just the right shape. [Hint: start with some points you know for sure, then ask yourself as you move left to right what is happening to the slope]</p>
-<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-12-1.png" width="80%" style="display: block; margin: auto;" /></p>
-</div>
-<hr />
-</div>
-<div id="practice-bear-growth-scenario" class="section level3 hasAnchor" number="8.6.3">
-<h3><span class="header-section-number">8.6.3</span> Practice: Bear Growth Scenario<a href="introduction-to-derivatives-workbook.html#practice-bear-growth-scenario" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<div class="promptbox">
-<p><strong>Activity (Small Groups):</strong>
-Imagine tracking the weight of a bear throughout its life. Sketch or imagine the weight vs. age curve.</p>
-<ul>
-<li>Where is the slope (rate of change) steepest?</li>
-<li>Where does the slope flatten out?</li>
-<li>Could it ever become negative?</li>
-</ul>
-<p><em>Group Discussion:</em> Why might wildlife managers care about whether the rate of weight gain is accelerating or decelerating?</p>
-<p><strong>Notes:</strong> <br><br><br><br><br><br></p>
-<p>Now try sketching the derivative, or the rate of change of the bear’s weight.
-<br><br><br><br><br><br><br><br><br><br><br><br></p>
-</div>
-<hr />
-</div>
-<div id="from-as-and-bs-to-as-and-hs" class="section level3 hasAnchor" number="8.6.4">
-<h3><span class="header-section-number">8.6.4</span> From a’s and b’s to a’s and h’s<a href="introduction-to-derivatives-workbook.html#from-as-and-bs-to-as-and-hs" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<div class="promptbox">
-<p><strong>Changing our frame of reference</strong></p>
-<p><span class="math display">\[
-\frac{f(b)-f(a)}{b-a} = \frac{f(a+h)-f(a)}{h}
-\]</span></p>
-<p><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></p>
-</div>
-<hr />
-</div>
-<div id="data-to-derivative" class="section level3 hasAnchor" number="8.6.5">
-<h3><span class="header-section-number">8.6.5</span> Data to Derivative<a href="introduction-to-derivatives-workbook.html#data-to-derivative" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<div class="promptbox">
-<p><strong>Activity (Hands-On, with Data Table):</strong>
-You measure dissolved oxygen in a lake for three consecutive days:</p>
-<table>
-<thead>
-<tr class="header">
-<th align="center">Day</th>
-<th align="center">DO (mg/L)</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="center">4.0</td>
-<td align="center">8.15</td>
-</tr>
-<tr class="even">
-<td align="center">5.0</td>
-<td align="center">8.10</td>
-</tr>
-<tr class="odd">
-<td align="center">6.0</td>
-<td align="center">8.05</td>
-</tr>
-</tbody>
-</table>
-<ul>
-<li>Estimate the instantaneous rate of change at Day 4, 5 and 6 using the formula:</li>
-</ul>
-<p><span class="math display">\[f&#39;(a) \approx \frac{f(a+h) - f(a)}{h}\]</span></p>
-<p>with <span class="math inline">\(h = 1\)</span>.</p>
-<ul>
-<li>Interpret your result in context, including units.</li>
-<li>Was it possible to calculate the instantaneous rate of change at day 6?</li>
-<li>How would a higher-resolution dataset (more frequent measurements) improve your estimate?</li>
-</ul>
-<p><strong>Notes:</strong> <br><br><br><br><br><br><br><br><br><br><br><br></p>
-<blockquote>
-<p>REMEMBER: We are just estimating here! If h is small enough its a good estimate, if h is big, well it becomes the ‘average’ rate of change.</p>
-</blockquote>
-<p><strong>Discuss</strong>: Is this more of an average or instantaneous rate of change?
-<br><br><br><br><br></p>
-</div>
-<hr />
-</div>
-<div id="instantaneous-vs.-average" class="section level3 hasAnchor" number="8.6.6">
-<h3><span class="header-section-number">8.6.6</span> Instantaneous vs. Average<a href="introduction-to-derivatives-workbook.html#instantaneous-vs.-average" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<div class="promptbox">
-<p><strong>Activity (Class Discussion):</strong>
-Compare these two statements:</p>
-<ol style="list-style-type: decimal">
-<li>A glacier retreats 20 meters per year between 2000 and 2010.</li>
-<li>On January 1st 2005, the glacier front is moving backward at 3.5 meters per year.</li>
-</ol>
-<ul>
-<li>Which is an average rate? Which is instantaneous?</li>
-<li>What added information do you get (or can deduce) when you have both pieces of information?</li>
-<li>Why does the distinction matter for scientists, policymakers, or communities?</li>
-<li>Brainstorm 2–3 other examples where average vs. instantaneous rates tell very different stories.</li>
-</ul>
-<p><strong>Notes:</strong> <br><br><br><br><br><br></p>
-</div>
-<hr />
-</div>
-</div>
-<div id="the-limit-definition-of-a-derivative-1" class="section level2 hasAnchor" number="8.7">
-<h2><span class="header-section-number">8.7</span> The Limit Definition of a Derivative<a href="introduction-to-derivatives-workbook.html#the-limit-definition-of-a-derivative-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>We don’t do many <em>proofs</em> in this class, but understanding the mathematical origins of the derivative really helps with interpretation. So we will work through this one together.</p>
-<div id="deriving-the-limit-definition-with-a-real-example-seattle-daylight" class="section level3 hasAnchor" number="8.7.1">
-<h3><span class="header-section-number">8.7.1</span> Deriving the Limit Definition with a Real Example — Seattle Daylight<a href="introduction-to-derivatives-workbook.html#deriving-the-limit-definition-with-a-real-example-seattle-daylight" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>We’ll use a simple model of <strong>daylight hours in Seattle</strong> (approx. 47.6°N) to build the derivative from limits.
-A realistic sinusoidal model for daylight hours <span class="math inline">\(D(t)\)</span> (in hours) on day <span class="math inline">\(t\)</span> of the year is:</p>
-<p><span class="math display">\[
-D(t) \;=\; 12.25 \;+\; 3.75 \,\cos\!\Big(\tfrac{2\pi}{365}\,(t - 172)\Big)
-\]</span></p>
-<ul>
-<li>Midline <span class="math inline">\(\approx 12.25\)</span> hours</li>
-<li>Amplitude <span class="math inline">\(\approx 3.75\)</span> hours</li>
-</ul>
-<p>Let’s first build an intuition for what daylight hours look like over a year in Seattle.</p>
-<p>Sketch what you think the curve looks like (peak near late June, minimum near late December), then compare to the model above.
-Annotate interesting points along this function.</p>
-<p><br><br><br><br><br><br><br><br><br></p>
-<hr />
-</div>
-<div id="connect-to-the-question" class="section level3 hasAnchor" number="8.7.2">
-<h3><span class="header-section-number">8.7.2</span> Connect to the Question<a href="introduction-to-derivatives-workbook.html#connect-to-the-question" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<div class="promptbox">
-<p><strong>Activity (Think-Pair-Share):</strong>
-Lets pick a specific day <span class="math inline">\(a=250\)</span> (<strong>day 250</strong> ≈ early Sep).</p>
-<ul>
-<li><p>What does <span class="math inline">\(D(a)\)</span> represent in words?<br />
-</p></li>
-<li><p>If you only know <span class="math inline">\(D(a)\)</span> and <span class="math inline">\(D(a+h)\)</span>, how would you estimate “how fast daylight is changing around day <span class="math inline">\(a\)</span>” using the <strong>average rate of change</strong>?</p></li>
-<li><p>Why might we want the <strong>instantaneous</strong> rate of change instead?</p></li>
-</ul>
-<p><strong>Notes:</strong> <br><br><br><br><br><br></p>
-</div>
-<hr />
-</div>
-<div id="from-average-to-instant-the-difference-quotient" class="section level3 hasAnchor" number="8.7.3">
-<h3><span class="header-section-number">8.7.3</span> From Average to Instant: The Difference Quotient<a href="introduction-to-derivatives-workbook.html#from-average-to-instant-the-difference-quotient" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<div class="promptbox">
-<p><strong>Step 1 — Average Rate on <span class="math inline">\([a, a+h]\)</span>:</strong>
-Write the average rate of change of daylight hours between day <span class="math inline">\(a\)</span> and day <span class="math inline">\(a+h\)</span> where <span class="math inline">\(h=10\)</span>:</p>
-<table>
-<thead>
-<tr class="header">
-<th align="center">Day of Year</th>
-<th align="center">Daylight Hours (hrs)</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="center">250</td>
-<td align="center">13.26</td>
-</tr>
-<tr class="even">
-<td align="center">260</td>
-<td align="center">12.61</td>
-</tr>
-<tr class="odd">
-<td align="center">270</td>
-<td align="center">11.96</td>
-</tr>
-</tbody>
-</table>
-<p><span class="math display">\[
-\frac{D(a+h) - D(a)}{h}
-\]</span></p>
-<ul>
-<li>What does the <strong>numerator</strong> represent in context?</li>
-<li>What are the <strong>units</strong> of this average rate?</li>
-</ul>
-<p><strong>Notes:</strong> <br><br><br><br><br><br><br><br><br><br><br><br></p>
-</div>
-<div class="promptbox">
-<p><strong>Step 2 — Shrink the Interval:</strong>
-To get the rate “<strong>right now</strong>” on day <span class="math inline">\(a\)</span>, we take the <strong>limit</strong> as <span class="math inline">\(h \to 0\)</span>:</p>
-<p><span class="math display">\[
-D&#39;(a) \;=\; \lim_{h \to 0} \frac{D(a+h) - D(a)}{h}
-\]</span></p>
-<p>So if we use the data below we can see we are shrinking our <span class="math inline">\(h\)</span> getting it close to <span class="math inline">\(0\)</span>.</p>
-<table>
-<thead>
-<tr class="header">
-<th align="center">Day of Year</th>
-<th align="center">Daylight Hours (hrs)</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="center">250</td>
-<td align="center">13.259</td>
-</tr>
-<tr class="even">
-<td align="center">251</td>
-<td align="center">13.195</td>
-</tr>
-<tr class="odd">
-<td align="center">252</td>
-<td align="center">13.131</td>
-</tr>
-</tbody>
-</table>
-<p>Calculate the average rate of change with an <span class="math inline">\(h=1\)</span></p>
-<p><br><br><br><br><br><br></p>
-<p>What if we shrink the interval even further and make <span class="math inline">\(h=0.01\)</span></p>
-<table>
-<thead>
-<tr class="header">
-<th align="center">Day of Year</th>
-<th align="center">Daylight Hours (hrs)</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="center">250.00</td>
-<td align="center">13.259240</td>
-</tr>
-<tr class="even">
-<td align="center">250.01</td>
-<td align="center">13.258602</td>
-</tr>
-<tr class="odd">
-<td align="center">250.02</td>
-<td align="center">13.257965</td>
-</tr>
-</tbody>
-</table>
-<p><br><br><br><br><br><br></p>
-<ul>
-<li>Why can’t we just set <span class="math inline">\(h=0\)</span> directly?</li>
-<li>In words, what does this limit do with the two-day comparison?</li>
-</ul>
-<p><strong>Notes:</strong> <br><br><br><br><br><br></p>
-<p><strong>Challenge:</strong> In your groups discuss this table, what do you notice on both ends of the table?</p>
-<table>
-<thead>
-<tr class="header">
-<th align="center">h</th>
-<th align="center">Average Rate of Change (hrs/day)</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="center">365</td>
-<td align="center">0.000000</td>
-</tr>
-<tr class="even">
-<td align="center">300</td>
-<td align="center">0.009487</td>
-</tr>
-<tr class="odd">
-<td align="center">200</td>
-<td align="center">-0.002907</td>
-</tr>
-<tr class="even">
-<td align="center">100</td>
-<td align="center">-0.046478</td>
-</tr>
-<tr class="odd">
-<td align="center">50</td>
-<td align="center">-0.062121</td>
-</tr>
-<tr class="even">
-<td align="center">10</td>
-<td align="center">-0.064676</td>
-</tr>
-<tr class="odd">
-<td align="center">1</td>
-<td align="center">-0.063844</td>
-</tr>
-<tr class="even">
-<td align="center">0.1</td>
-<td align="center">-0.063732</td>
-</tr>
-<tr class="odd">
-<td align="center">0.01</td>
-<td align="center">-0.063721</td>
-</tr>
-<tr class="even">
-<td align="center">0.001</td>
-<td align="center">-0.063720</td>
-</tr>
-<tr class="odd">
-<td align="center">0.00001</td>
-<td align="center">-0.063720</td>
-</tr>
-</tbody>
-</table>
-<p><br><br><br><br><br><br></p>
-<blockquote>
-<p>Technically what have found here is an <strong>estimate</strong> for the instantanous rate of change at a point</p>
-</blockquote>
-</div>
-<hr />
-</div>
-<div id="visualizing-secant-to-tangent-seattle-daylight" class="section level3 hasAnchor" number="8.7.4">
-<h3><span class="header-section-number">8.7.4</span> Visualizing Secant <span class="math inline">\(\to\)</span> Tangent (Seattle Daylight)<a href="introduction-to-derivatives-workbook.html#visualizing-secant-to-tangent-seattle-daylight" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Using the plot below, sketch:</p>
-<ul>
-<li>The secant at day 250 with <span class="math inline">\(h=365\)</span></li>
-<li>Now draw another secant with <span class="math inline">\(h=300\)</span></li>
-<li>Now draw it with <span class="math inline">\(h=50\)</span></li>
-<li>Finally sketch the <strong>tangent</strong> at <span class="math inline">\(h=250\)</span></li>
-</ul>
-<blockquote>
-<p>Remember the average rate of change equation is just <em>rise over run</em> or the slope of the secant lines, so the slopes of the lines are what tell us the rate of change</p>
-</blockquote>
-<p><img src="bookdown-demo_files/figure-html/daylight-secant-to-tangent-1.png" width="90%" style="display: block; margin: auto;" /></p>
-</div>
-<div id="read-what-the-slope-means" class="section level3 hasAnchor" number="8.7.5">
-<h3><span class="header-section-number">8.7.5</span> Read What the Slope Means<a href="introduction-to-derivatives-workbook.html#read-what-the-slope-means" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<div class="promptbox">
-<p><strong>Interpretation:</strong>
-Using your numerical/visual estimate of <span class="math inline">\(D&#39;(a)\)</span>:</p>
-<ul>
-<li>If <span class="math inline">\(D&#39;(a) &gt; 0\)</span>, what does that say about the <strong>season</strong> and daylight change?</li>
-<li>If <span class="math inline">\(D&#39;(a) &lt; 0\)</span>, what time of year might that correspond to?</li>
-<li>If <span class="math inline">\(D&#39;(a) \approx 0\)</span>, what’s happening seasonally?</li>
-</ul>
-<p><strong>Notes:</strong> <br><br><br><br><br><br></p>
-</div>
-<hr />
-</div>
-<div id="why-limits-matter-wrap-up" class="section level3 hasAnchor" number="8.7.6">
-<h3><span class="header-section-number">8.7.6</span> Why Limits Matter (Wrap-Up)<a href="introduction-to-derivatives-workbook.html#why-limits-matter-wrap-up" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<div class="promptbox">
-<p><strong>Prompt:</strong>
-Explain—in your own words—why the <strong>limit</strong> is essential for defining the <strong>instantaneous rate of change</strong>, using the Seattle daylight model as your example.</p>
-<p><strong>Notes:</strong> <br><br><br><br><br><br></p>
-</div>
-</div>
-</div>
-<div id="introducing-limit-notation" class="section level2 hasAnchor" number="8.8">
-<h2><span class="header-section-number">8.8</span> Introducing Limit Notation<a href="introduction-to-derivatives-workbook.html#introducing-limit-notation" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>We now need a way to <strong>formalize</strong> what happens as we “zoom in” on a function — this is where the idea of a <strong>limit</strong> comes in.</p>
-<hr />
-<div id="building-intuition" class="section level3 hasAnchor" number="8.8.1">
-<h3><span class="header-section-number">8.8.1</span> Building Intuition<a href="introduction-to-derivatives-workbook.html#building-intuition" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<div class="promptbox">
-<p><strong>Activity (Think-Pair-Share):</strong></p>
-<p>Imagine a pollutant concentration in a river, <span class="math inline">\(C(x)\)</span>, as you move downstream toward a factory outfall.</p>
-<ul>
-<li>At 0.9 km downstream, <span class="math inline">\(C = 4.9\)</span> mg/L<br />
-</li>
-<li>At 0.99 km, <span class="math inline">\(C = 4.99\)</span> mg/L<br />
-</li>
-<li>At 0.999 km, <span class="math inline">\(C = 4.999\)</span> mg/L</li>
-</ul>
-<p>As you move closer to 1 km, what value does the concentration seem to be approaching?</p>
-<p>This “approaching behavior” is what we call the <strong>limit</strong>.</p>
-<p><strong>Notes:</strong><br />
-<br><br><br><br><br><br></p>
-</div>
-<hr />
-</div>
-<div id="symbol-and-words" class="section level3 hasAnchor" number="8.8.2">
-<h3><span class="header-section-number">8.8.2</span> Symbol and Words<a href="introduction-to-derivatives-workbook.html#symbol-and-words" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<div class="promptbox">
-<p><strong>Practice:</strong></p>
-<p>The formal symbol is:<br />
+<details>
+<summary>
+<strong>Step 1</strong>
+</summary>
 <span class="math display">\[
-\lim_{x \to a} f(x)
-\]</span></p>
-<ul>
-<li>What does the arrow (<span class="math inline">\(\to\)</span>) mean?<br />
-</li>
-<li>What does the <span class="math inline">\(a\)</span> represent?<br />
-</li>
-<li>What is <span class="math inline">\(f(x)\)</span> approaching as <span class="math inline">\(x\)</span> gets closer to <span class="math inline">\(a\)</span>?</li>
-</ul>
-<p><strong>Notes:</strong><br />
-<br><br><br><br><br><br></p>
-</div>
-<hr />
-</div>
-<div id="why-not-just-plug-in" class="section level3 hasAnchor" number="8.8.3">
-<h3><span class="header-section-number">8.8.3</span> Why Not Just Plug In?<a href="introduction-to-derivatives-workbook.html#why-not-just-plug-in" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<div class="promptbox">
-<p><strong>Discussion Prompt:</strong></p>
-<p>Sometimes <span class="math inline">\(f(a)\)</span> is undefined (like dividing by zero). In fact - when we look at the limit defintion of a derivative, this is the problem we encounter.</p>
-<p><span class="math display">\[
-f&#39;(a) \;=\; \lim_{h \to 0} \frac{f(a+h) - f(a)}{h}
-\]</span>
-<strong>Notes:</strong><br />
-<br><br><br><br><br><br></p>
-</div>
-<hr />
-</div>
-<div id="one-sided-limits-1" class="section level3 hasAnchor" number="8.8.4">
-<h3><span class="header-section-number">8.8.4</span> One-Sided Limits<a href="introduction-to-derivatives-workbook.html#one-sided-limits-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<div class="promptbox">
-<p><strong>Activity (Small Groups):</strong></p>
-<p>We can approach a point from the <strong>left</strong> (<span class="math inline">\(a^-\)</span>) or from the <strong>right</strong> (<span class="math inline">\(a^+\)</span>).</p>
-<ul>
-<li>Sketch a graph where the left-hand and right-hand limits are the <strong>same</strong>.<br />
-</li>
-<li>Sketch a graph where they are <strong>different</strong>. Can you link this to a real-world example?</li>
-</ul>
-<p><strong>Notes:</strong><br />
-<br><br><br><br><br><br>
-<br><br><br><br><br><br></p>
-</div>
-</div>
-</div>
-<div id="from-average-to-instantaneous-the-role-of-limits-1" class="section level2 hasAnchor" number="8.9">
-<h2><span class="header-section-number">8.9</span> From Average to Instantaneous: The Role of Limits<a href="introduction-to-derivatives-workbook.html#from-average-to-instantaneous-the-role-of-limits-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>We want to connect the <strong>average rate of change</strong> to the <strong>instantaneous rate of change</strong>.<br />
-Start with the average rate formula:</p>
-<p><span class="math display">\[
-\text{Average Rate on } [a,b] = \frac{f(b) - f(a)}{b-a}
-\]</span></p>
-<hr />
-<div id="scaffold-the-derivation" class="section level3 hasAnchor" number="8.9.1">
-<h3><span class="header-section-number">8.9.1</span> Scaffold the Derivation<a href="introduction-to-derivatives-workbook.html#scaffold-the-derivation" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<div class="promptbox">
-<p><strong>Practice (Step by Step):</strong></p>
-<ol style="list-style-type: decimal">
-<li>Start with the formula for the average rate of change between two points <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span>:<br />
-<span class="math display">\[
-\frac{f(b) - f(a)}{b-a}
-\]</span>
-<ul>
-<li>What does the numerator mean?<br />
-</li>
-<li>What does the denominator mean?<br />
-<br><br><br><br><br><br></li>
-</ul></li>
-<li>Introduce a new variable <span class="math inline">\(h = b-a\)</span>.
-<ul>
-<li>Rewrite the denominator in terms of <span class="math inline">\(h\)</span>.<br />
-</li>
-<li>Replace <span class="math inline">\(b\)</span> with <span class="math inline">\(a+h\)</span>.<br />
-<br><br><br><br><br><br></li>
-</ul></li>
-<li>Show that the formula becomes:<br />
-<span class="math display">\[
-\frac{f(a+h) - f(a)}{h}
-\]</span>
-<ul>
-<li>Why is this still the average rate of change, just written differently? Try to explain this with a sketch.</li>
-</ul></li>
-</ol>
-<p><br><br><br><br><br><br></p>
-<ol start="4" style="list-style-type: decimal">
-<li>Now imagine shrinking the interval smaller and smaller: let <span class="math inline">\(h \to 0\)</span>. This makes the slope of secant line approach the slope of the tangent line.
-<ul>
-<li>What problem happens if you just set <span class="math inline">\(h=0\)</span>?<br />
-</li>
-<li>How does the <strong>limit</strong> fix this?<br />
-</li>
-<li>Add in the limit notation
-<br><br><br><br><br><br></li>
-</ul></li>
-<li>Arrive at the definition of the derivative:<br />
-<span class="math display">\[
-f&#39;(a) = \lim_{h \to 0} \frac{f(a+h) - f(a)}{h}
-\]</span></li>
-</ol>
-<p><strong>Notes:</strong><br />
-<br><br><br><br><br><br></p>
-</div>
-<div class="promptbox">
-<p>Let’s annotate this equation so we know what everything is and what to do with it.
-<br><br><br>
-<span class="math display">\[
-   f&#39;(a) = \lim_{h \to 0} \frac{f(a+h) - f(a)}{h}
-   \]</span><br />
-<br><br><br></p>
-</div>
-</div>
-</div>
-<div id="finding-the-derivative-using-the-limit-definition-of-a-derivative-1" class="section level2 hasAnchor" number="8.10">
-<h2><span class="header-section-number">8.10</span> Finding the Derivative Using the Limit Definition of a Derivative<a href="introduction-to-derivatives-workbook.html#finding-the-derivative-using-the-limit-definition-of-a-derivative-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>We’ll now practice moving from the <strong>definition</strong> of the derivative to actually <strong>computing</strong> one.<br />
-Remember, the derivative at a point <span class="math inline">\(a\)</span> is defined as:</p>
-<p><span class="math display">\[
-f&#39;(a) = \lim_{h \to 0} \frac{f(a+h) - f(a)}{h}
-\]</span></p>
-<p>We are going to take this one step at a time:</p>
-<ul>
-<li>We’ll deal with the numerator</li>
-<li>We’ll add in the fraction term</li>
-<li><h2 id="well-add-the-limit" class="hasAnchor">We’ll add the limit<a href="introduction-to-derivatives-workbook.html#well-add-the-limit" class="anchor-section" aria-label="Anchor link to header"></a></h2></li>
-</ul>
-<div id="step-1-setup-the-equations" class="section level3 hasAnchor" number="8.10.1">
-<h3><span class="header-section-number">8.10.1</span> Step 1: Setup the equations<a href="introduction-to-derivatives-workbook.html#step-1-setup-the-equations" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<div class="promptbox">
-<p><strong>Activity:</strong><br />
-Suppose we have the function:</p>
-<p><span class="math display">\[
-f(x) = x^2
-\]</span></p>
-<p>We want to find the derivative at <span class="math inline">\(x = 2\)</span>.</p>
-<ol style="list-style-type: decimal">
-<li>Write down the limit definition of the derivative at <span class="math inline">\(a = 2\)</span>.<br />
-</li>
-<li>Substitute <span class="math inline">\(a = 2\)</span> into the formula (but don’t simplify yet).<br />
-</li>
-<li>What expression do you now have?</li>
-</ol>
-<p><strong>Notes:</strong><br />
-<br><br><br><br><br><br></p>
-</div>
-<hr />
-</div>
-<div id="step-2-expand-the-numerator" class="section level3 hasAnchor" number="8.10.2">
-<h3><span class="header-section-number">8.10.2</span> Step 2: Expand the Numerator<a href="introduction-to-derivatives-workbook.html#step-2-expand-the-numerator" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<div class="promptbox">
-<p><strong>Activity:</strong><br />
-The numerator is:</p>
-<p><span class="math display">\[
-f(2+h) - f(2)
-\]</span></p>
-<ol style="list-style-type: decimal">
-<li>Compute <span class="math inline">\(f(2+h)\)</span>.<br />
-</li>
-<li>Compute <span class="math inline">\(f(2)\)</span>.<br />
-</li>
-<li>Subtract them to simplify the numerator.<br />
-</li>
-<li>Write your result in expanded form.</li>
-</ol>
-<p><strong>Notes:</strong><br />
-<br><br><br><br><br><br></p>
-</div>
-<hr />
-</div>
-<div id="step-3-simplify-the-difference-quotient" class="section level3 hasAnchor" number="8.10.3">
-<h3><span class="header-section-number">8.10.3</span> Step 3: Simplify the Difference Quotient<a href="introduction-to-derivatives-workbook.html#step-3-simplify-the-difference-quotient" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<div class="promptbox">
-<p><strong>Activity:</strong><br />
-Now substitute your numerator back into:</p>
-<p><span class="math display">\[
-\frac{f(2+h) - f(2)}{h}
-\]</span></p>
-<ol style="list-style-type: decimal">
-<li>Factor/simplify if possible.<br />
-</li>
-<li>What cancels out?<br />
-</li>
-<li>Why is this helpful?</li>
-</ol>
-<p><strong>Notes:</strong><br />
-<br><br><br><br><br><br>
-<br><br><br><br><br><br></p>
-</div>
-<hr />
-</div>
-<div id="step-4-take-the-limit" class="section level3 hasAnchor" number="8.10.4">
-<h3><span class="header-section-number">8.10.4</span> Step 4: Take the Limit<a href="introduction-to-derivatives-workbook.html#step-4-take-the-limit" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<div class="promptbox">
-<p><strong>Activity:</strong><br />
-Finally, take the limit as <span class="math inline">\(h \to 0\)</span>.</p>
-<ol style="list-style-type: decimal">
-<li>Substitute <span class="math inline">\(h = 0\)</span> <em>after</em> simplification.<br />
-</li>
-<li>What value do you get for <span class="math inline">\(f&#39;(2)\)</span>?<br />
-</li>
-<li>Interpret: What does this mean in terms of the slope of the tangent line?</li>
-</ol>
-<p><strong>Notes:</strong><br />
-<br><br><br><br><br><br></p>
-<blockquote>
-<p>You’ve found the <strong>derivative at a point</strong> <span class="math inline">\(a=2\)</span></p>
-</blockquote>
-</div>
-<hr />
-</div>
-<div id="step-5-generalize" class="section level3 hasAnchor" number="8.10.5">
-<h3><span class="header-section-number">8.10.5</span> Step 5: Generalize<a href="introduction-to-derivatives-workbook.html#step-5-generalize" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<div class="promptbox">
-<p><strong>Activity:</strong><br />
-Repeat the same process, but this time use <span class="math inline">\(x\)</span> instead of a fixed number like 2.</p>
-<ol style="list-style-type: decimal">
-<li>Start with:</li>
-</ol>
-<p><span class="math display">\[
-f&#39;(x) = \lim_{h \to 0} \frac{f(x+h) - f(x)}{h}
-\]</span></p>
-<ol start="2" style="list-style-type: decimal">
-<li>Expand <span class="math inline">\(f(x+h)\)</span> and subtract <span class="math inline">\(f(x)\)</span>.<br />
-</li>
-<li>Simplify and take the limit.<br />
-</li>
-<li>What is the <strong>general derivative function</strong> of <span class="math inline">\(f(x) = x^2\)</span>?</li>
-</ol>
-<p><strong>Notes:</strong><br />
-<br><br><br><br><br><br>
-<br><br><br><br><br><br></p>
-<blockquote>
-<p>You’ve now found the <strong>derivative function</strong></p>
-</blockquote>
-</div>
-</div>
-</div>
-<div id="workbook-more-practice-with-the-limit-definition" class="section level2 hasAnchor" number="8.11">
-<h2><span class="header-section-number">8.11</span> Workbook: More Practice with the Limit Definition<a href="introduction-to-derivatives-workbook.html#workbook-more-practice-with-the-limit-definition" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Now let’s apply the same step-by-step process to two new functions.<br />
-Work carefully through each scaffold — the algebra will get trickier, but the structure is the same.</p>
-<hr />
-<div id="example-1-fx-x3" class="section level3 hasAnchor" number="8.11.1">
-<h3><span class="header-section-number">8.11.1</span> Example 1: <span class="math inline">\(f(x) = x^3\)</span><a href="introduction-to-derivatives-workbook.html#example-1-fx-x3" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>We’ll find the derivative of <span class="math inline">\(f(x) = x^3\)</span> at a point, and then generalize.</p>
-<div id="step-1-write-the-definition" class="section level4 hasAnchor" number="8.11.1.1">
-<h4><span class="header-section-number">8.11.1.1</span> Step 1: Write the Definition<a href="introduction-to-derivatives-workbook.html#step-1-write-the-definition" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<div class="promptbox">
-<p><strong>Activity:</strong><br />
-Start with the limit definition:</p>
-<p><span class="math display">\[
-f&#39;(a) = \lim_{h \to 0} \frac{f(a+h) - f(a)}{h}
-\]</span></p>
-<ul>
-<li>Substitute <span class="math inline">\(f(x) = x^3\)</span>.<br />
-</li>
-<li>Don’t expand yet, just write down the expression.</li>
-</ul>
-<p><strong>Notes:</strong><br />
-<br><br><br><br><br><br></p>
-</div>
-</div>
-<div id="step-2-expand" class="section level4 hasAnchor" number="8.11.1.2">
-<h4><span class="header-section-number">8.11.1.2</span> Step 2: Expand<a href="introduction-to-derivatives-workbook.html#step-2-expand" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<div class="promptbox">
-<p><strong>Activity:</strong><br />
-- Expand <span class="math inline">\((a+h)^3\)</span>.<br />
-- Subtract <span class="math inline">\(a^3\)</span>.<br />
-- Simplify your numerator.</p>
-<p><strong>Notes:</strong><br />
-<br><br><br><br><br><br></p>
-</div>
-</div>
-<div id="step-3-simplify-the-fraction" class="section level4 hasAnchor" number="8.11.1.3">
-<h4><span class="header-section-number">8.11.1.3</span> Step 3: Simplify the Fraction<a href="introduction-to-derivatives-workbook.html#step-3-simplify-the-fraction" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<div class="promptbox">
-<p><strong>Activity:</strong><br />
-- Divide the numerator by <span class="math inline">\(h\)</span>.<br />
-- Cancel common factors where possible.<br />
-- What remains?</p>
-<p><strong>Notes:</strong><br />
-<br><br><br><br><br><br></p>
-</div>
-</div>
-<div id="step-4-take-the-limit-1" class="section level4 hasAnchor" number="8.11.1.4">
-<h4><span class="header-section-number">8.11.1.4</span> Step 4: Take the Limit<a href="introduction-to-derivatives-workbook.html#step-4-take-the-limit-1" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<div class="promptbox">
-<p><strong>Activity:</strong><br />
-- Let <span class="math inline">\(h \to 0\)</span>.<br />
-- What’s left?<br />
-- Interpret: What does this slope mean for the cubic function at <span class="math inline">\(x=a\)</span>?</p>
-<p><strong>Notes:</strong><br />
-<br><br><br><br><br><br></p>
-</div>
-</div>
-</div>
-<div id="step-5-generalize-1" class="section level3 hasAnchor" number="8.11.2">
-<h3><span class="header-section-number">8.11.2</span> Step 5: Generalize<a href="introduction-to-derivatives-workbook.html#step-5-generalize-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<div class="promptbox">
-<p><strong>Activity:</strong><br />
-Repeat the same process, but this time use <span class="math inline">\(x\)</span> instead of a fixed number <span class="math inline">\(a\)</span>.</p>
-<p>What is the derivative function?
-<strong>Notes:</strong><br />
-<br><br><br><br><br><br></p>
-</div>
-<hr />
-</div>
-<div id="example-2-fx-3x2-7x" class="section level3 hasAnchor" number="8.11.3">
-<h3><span class="header-section-number">8.11.3</span> Example 2: <span class="math inline">\(f(x) = 3x^2 + 7x\)</span><a href="introduction-to-derivatives-workbook.html#example-2-fx-3x2-7x" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>This time, the function is a polynomial. Let’s find its derivative using the limit definition.</p>
-<div id="step-1-write-the-definition-1" class="section level4 hasAnchor" number="8.11.3.1">
-<h4><span class="header-section-number">8.11.3.1</span> Step 1: Write the Definition<a href="introduction-to-derivatives-workbook.html#step-1-write-the-definition-1" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<div class="promptbox">
-<p><strong>Activity:</strong><br />
-- Start with:</p>
-<p><span class="math display">\[
-f&#39;(a) = \lim_{h \to 0} \frac{f(a+h) - f(a)}{h}
-\]</span></p>
-<ul>
-<li>Substitute <span class="math inline">\(f(x) = 3x^2 + 7x\)</span>.</li>
-</ul>
-<p><strong>Notes:</strong><br />
-<br><br><br><br><br><br></p>
-</div>
-</div>
-<div id="step-2-expand-1" class="section level4 hasAnchor" number="8.11.3.2">
-<h4><span class="header-section-number">8.11.3.2</span> Step 2: Expand<a href="introduction-to-derivatives-workbook.html#step-2-expand-1" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<div class="promptbox">
-<p><strong>Activity:</strong><br />
-- Expand <span class="math inline">\(3(a+h)^2 + 7(a+h)\)</span>.<br />
-- Subtract <span class="math inline">\((3a^2 + 7a)\)</span>.<br />
-- Simplify your numerator.</p>
-<p><strong>Notes:</strong><br />
-<br><br><br><br><br><br></p>
-</div>
-</div>
-<div id="step-3-simplify-the-fraction-1" class="section level4 hasAnchor" number="8.11.3.3">
-<h4><span class="header-section-number">8.11.3.3</span> Step 3: Simplify the Fraction<a href="introduction-to-derivatives-workbook.html#step-3-simplify-the-fraction-1" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<div class="promptbox">
-<p><strong>Activity:</strong><br />
-- Factor out <span class="math inline">\(h\)</span> from the numerator.<br />
-- Cancel the denominator.<br />
-- What remains?</p>
-<p><strong>Notes:</strong><br />
-<br><br><br><br><br><br></p>
-</div>
-</div>
-<div id="step-4-take-the-limit-2" class="section level4 hasAnchor" number="8.11.3.4">
-<h4><span class="header-section-number">8.11.3.4</span> Step 4: Take the Limit<a href="introduction-to-derivatives-workbook.html#step-4-take-the-limit-2" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<div class="promptbox">
-<p><strong>Activity:</strong><br />
-- Let <span class="math inline">\(h \to 0\)</span>.<br />
-- State the result clearly as <span class="math inline">\(f&#39;(x)\)</span>.<br />
-- Interpret: How do the terms <span class="math inline">\(3x^2\)</span> and <span class="math inline">\(7x\)</span> each behave under differentiation?</p>
-<p><strong>Notes:</strong><br />
-<br><br><br><br><br><br></p>
-</div>
-</div>
-</div>
-<div id="step-5-generalize-2" class="section level3 hasAnchor" number="8.11.4">
-<h3><span class="header-section-number">8.11.4</span> Step 5: Generalize<a href="introduction-to-derivatives-workbook.html#step-5-generalize-2" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<div class="promptbox">
-<p><strong>Activity:</strong><br />
-Repeat the same process, but this time use <span class="math inline">\(x\)</span> instead of a fixed number <span class="math inline">\(a\)</span>.</p>
-<p>What is the derivative function?</p>
-<p><strong>Notes:</strong><br />
-<br><br><br><br><br><br></p>
-</div>
-</div>
-<div id="example-3-environmental-application-glacier-retreat" class="section level3 hasAnchor" number="8.11.5">
-<h3><span class="header-section-number">8.11.5</span> Example 3: Environmental Application — Glacier Retreat<a href="introduction-to-derivatives-workbook.html#example-3-environmental-application-glacier-retreat" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Suppose the area of a glacier (in km<span class="math inline">\(^2\)</span>) is modeled by:</p>
-<p><span class="math display">\[
-G(t) = 100 - 2t - 0.1t^2
-\]</span></p>
-<p>where <span class="math inline">\(t\)</span> is years since 2000.</p>
-<p>We want to compute the <strong>instantaneous rate of change</strong> of glacier area at <span class="math inline">\(t = 10\)</span>.</p>
-<div class="promptbox">
-<p><strong>Practice (Small Groups):</strong><br />
-1. Write the limit definition for <span class="math inline">\(G&#39;(10)\)</span>.<br />
-2. Compute <span class="math inline">\(G(10+h)\)</span>.<br />
-3. Subtract <span class="math inline">\(G(10)\)</span>.<br />
-4. Divide by <span class="math inline">\(h\)</span>.<br />
-5. Simplify.<br />
-6. Take the limit as <span class="math inline">\(h \to 0\)</span>.</p>
-<p><strong>Discussion:</strong><br />
-- What does the sign of <span class="math inline">\(G&#39;(10)\)</span> tell you about the glacier at that time?<br />
-- How would you explain your result to a policymaker?</p>
-<p><strong>Notes:</strong><br />
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></p>
-</div>
-<div class="promptbox">
-<p><strong>Practice</strong></p>
-<p>Given <span class="math inline">\(f(x)=7x\)</span></p>
-<p>Find an expression for the derivative function <span class="math inline">\(f&#39;(x)\)</span>, using the limit definition of the derivative.
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></p>
-</div>
-<div class="promptbox">
-<p><strong>Practice</strong></p>
-<p>Given <span class="math inline">\(f(x)=3x^2+6x+2\)</span></p>
-<p>Find an expression for the derivative function <span class="math inline">\(f&#39;(x)\)</span>, using the limit definition of the derivative.
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></p>
-</div>
-<div class="promptbox">
-<p><strong>Practice</strong></p>
-<p>Given <span class="math inline">\(f(x)=27\)</span></p>
-<p>Find an expression for the derivative function <span class="math inline">\(f&#39;(x)\)</span>, using the limit definition of the derivative.
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></p>
-</div>
-<div class="promptbox">
-<p><strong>Hard problem (because of the algebra)</strong></p>
-<p>Given <span class="math inline">\(f(x)=\frac{1}{x}\)</span></p>
-<p>Find an expression for the derivative function <span class="math inline">\(f&#39;(x)\)</span>, using the limit definition of the derivative.
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></p>
-</div>
-<div class="promptbox">
-<p><strong>Estimate vs Calculate</strong></p>
-<p>Given <span class="math inline">\(f(x)=e^x\)</span></p>
-<p>Estimate, using the limit definition of the derivative, <span class="math inline">\(f&#39;(1)\)</span>.
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></p>
-</div>
-</div>
-</div>
-<div id="workbook-when-does-a-derivative-exist" class="section level2 hasAnchor" number="8.12">
-<h2><span class="header-section-number">8.12</span> Workbook: When Does a Derivative Exist?<a href="introduction-to-derivatives-workbook.html#workbook-when-does-a-derivative-exist" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<div id="exploring-differentiability-continuity-and-smoothness" class="section level3 hasAnchor" number="8.12.1">
-<h3><span class="header-section-number">8.12.1</span> Exploring Differentiability, Continuity, and Smoothness<a href="introduction-to-derivatives-workbook.html#exploring-differentiability-continuity-and-smoothness" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Before we use derivatives, we need to know <strong>when they exist</strong>.<br />
-In other words, under what conditions is a function <em>differentiable</em> at a point?</p>
-<hr />
-</div>
-<div id="requirements-for-differentiability-1" class="section level3 hasAnchor" number="8.12.2">
-<h3><span class="header-section-number">8.12.2</span> Requirements for Differentiability<a href="introduction-to-derivatives-workbook.html#requirements-for-differentiability-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>At a point <span class="math inline">\(x = a\)</span>, a function <span class="math inline">\(f\)</span> is <strong>differentiable</strong> if its <strong>instantaneous rate of change</strong> (the derivative) exists and is <strong>finite</strong>.</p>
-<p>Formally:
-<span class="math display">\[
-f&#39;(a) = \lim_{h \to 0} \frac{f(a + h) - f(a)}{h}
-\]</span>
-exists and is a real number.</p>
-<p>For that limit to exist, three conditions must hold:</p>
-<table>
-<colgroup>
-<col width="33%" />
-<col width="23%" />
-<col width="42%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>Requirement</th>
-<th>Meaning</th>
-<th>What Can Go Wrong</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><strong>1. Function is defined</strong></td>
-<td><span class="math inline">\(f(a)\)</span> exists</td>
-<td>Hole, asymptote</td>
-</tr>
-<tr class="even">
-<td><strong>2. Function is continuous</strong></td>
-<td><span class="math inline">\(\lim_{x \to a} f(x) = f(a)\)</span></td>
-<td>Jump or removable discontinuity</td>
-</tr>
-<tr class="odd">
-<td><strong>3. Slope changes smoothly</strong></td>
-<td>The left- and right-hand difference quotients approach the same finite value</td>
-<td>Corner, cusp, vertical tangent, oscillation</td>
-</tr>
-</tbody>
-</table>
-<blockquote>
-<p>A function is <strong>differentiable</strong> if it is <strong>defined</strong>, <strong>continuous</strong>, and <strong>smooth</strong> (no sharp turns or infinite slopes).</p>
-</blockquote>
-<hr />
-<div class="promptbox">
-<p><strong>Prompt 1: Definition and Meaning</strong>
-In your own words, what does it mean for a function to be <strong>differentiable</strong>?<br />
-How is this related to the idea of a function being <strong>continuous</strong> and <strong>smooth</strong>?</p>
-<p><strong>Notes:</strong><br />
-<br><br><br><br></p>
-</div>
-<hr />
-</div>
-<div id="continuity-the-foundation-for-differentiability" class="section level3 hasAnchor" number="8.12.3">
-<h3><span class="header-section-number">8.12.3</span> Continuity: The Foundation for Differentiability<a href="introduction-to-derivatives-workbook.html#continuity-the-foundation-for-differentiability" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>A function <span class="math inline">\(f(x)\)</span> is <strong>continuous at a point</strong> <span class="math inline">\(x = a\)</span> if all three of the following conditions are satisfied:</p>
-<hr />
-<p><strong>1. The function is defined at <span class="math inline">\(a\)</span></strong>
-<span class="math display">\[
-f(a) \text{ exists.}
-\]</span></p>
-<p>→ <em>In practice:</em> Check that there’s a real number assigned to <span class="math inline">\(f(a)\)</span>; the point is not a hole, asymptote, or gap.</p>
-<div class="promptbox">
-<p><strong>Prompt 2:</strong><br />
-Sketch or describe an example of a function that is <em>not defined</em> at a point.<br />
-What happens to continuity there?</p>
-<p><strong>Notes:</strong><br />
-<br><br><br><br></p>
-</div>
-<hr />
-<p><strong>2. The limit exists as <span class="math inline">\(x \to a\)</span></strong>
-<span class="math display">\[
-\lim_{x \to a} f(x) \text{ exists.}
-\]</span></p>
-<p>→ <em>In practice:</em> Approach <span class="math inline">\(a\)</span> from both the left and right.<br />
-If the left-hand and right-hand limits agree and are finite, the limit exists.</p>
-<div class="promptbox">
-<p><strong>Prompt 3:</strong><br />
-Give an example where the left-hand and right-hand limits are <em>different</em>.<br />
-How does this affect continuity?</p>
-<p><strong>Notes:</strong><br />
-<br><br><br><br></p>
-</div>
-<hr />
-<p><strong>3. The limit equals the function value</strong>
-<span class="math display">\[
-\lim_{x \to a} f(x) = f(a)
-\]</span></p>
-<p>→ <em>In practice:</em> Compare the numerical (or graphical) limit you found with the actual value of <span class="math inline">\(f(a)\)</span>.<br />
-If they match, the function is continuous at that point.</p>
-<div class="promptbox">
-<p><strong>Task A — Classify each panel (1–9):</strong><br />
-For each graph, decide whether the function is <strong>continuous</strong> within the region shown on the graph.<br />
-If it is <strong>not</strong> continuous, label the failure type:</p>
-<ul>
-<li><strong>Removable (hole / mismatched value)</strong></li>
-<li><strong>Jump</strong></li>
-<li><strong>Infinite</strong> (vertical asymptote)</li>
-<li><strong>Oscillation</strong> (no limiting value)</li>
-</ul>
-<p><strong>Task B — Multiple issues:</strong><br />
-Some panels show more than one issue in the same figure.<br />
-List <strong>all</strong> points of discontinuity and classify each one.</p>
-<p><strong>Task C — Continuous examples:</strong><br />
-Which panels are <strong>continuous as shown</strong> on their intervals?<br />
-Explain briefly why.</p>
-<p><strong>Suggested table (copy and fill):</strong></p>
-<table>
-<colgroup>
-<col width="9%" />
-<col width="18%" />
-<col width="30%" />
-<col width="12%" />
-<col width="29%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="right">Panel</th>
-<th align="left">Continuous?</th>
-<th align="left">Discontinuity points</th>
-<th align="left">Type(s)</th>
-<th align="left">One-sentence reason</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="right">1</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr class="even">
-<td align="right">2</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr class="odd">
-<td align="right">3</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr class="even">
-<td align="right">4</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr class="odd">
-<td align="right">5</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr class="even">
-<td align="right">6</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr class="odd">
-<td align="right">7</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr class="even">
-<td align="right">8</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr class="odd">
-<td align="right">9</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-</tbody>
-</table>
-<p><strong>Extension:</strong> For any discontinuity you labeled <strong>removable</strong>, propose a value for <span class="math inline">\(f(a)\)</span> that would make the function continuous at that point, and justify it.</p>
-<p><img src="bookdown-demo_files/figure-html/continuity-3x3-1.png" width="80%" style="display: block; margin: auto;" /></p>
-<p><strong>Notes:</strong><br />
-<br><br><br><br></p>
-</div>
-<hr />
-<p><strong>Summary:</strong><br />
-A function is continuous at <span class="math inline">\(x=a\)</span> if:
-1. <span class="math inline">\(f(a)\)</span> exists,<br />
-2. <span class="math inline">\(\lim_{x\to a} f(x)\)</span> exists, and<br />
-3. <span class="math inline">\(\lim_{x\to a} f(x) = f(a)\)</span>.</p>
-<hr />
-</div>
-</div>
-<div id="smoothness-when-is-a-function-nice-enough-to-differentiate-1" class="section level2 hasAnchor" number="8.13">
-<h2><span class="header-section-number">8.13</span> Smoothness: When Is a Function “Nice Enough” to Differentiate?<a href="introduction-to-derivatives-workbook.html#smoothness-when-is-a-function-nice-enough-to-differentiate-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Continuity alone is <strong>not enough</strong> for differentiability.<br />
-A function can be continuous but still have sharp corners, cusps, or vertical tangents where the slope suddenly changes or becomes infinite.<br />
-To take a derivative, the function must also be <strong>smooth</strong> — meaning its slope changes gradually.</p>
-<hr />
-<div id="what-smoothness-means" class="section level3 hasAnchor" number="8.13.1">
-<h3><span class="header-section-number">8.13.1</span> <strong>What “Smoothness” Means</strong><a href="introduction-to-derivatives-workbook.html#what-smoothness-means" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>A function <span class="math inline">\(f(x)\)</span> is <strong>smooth at a point</strong> <span class="math inline">\(x = a\)</span> if:</p>
-<ol style="list-style-type: decimal">
-<li>It is <strong>continuous</strong> at <span class="math inline">\(a\)</span>.<br />
-</li>
-<li>Its <strong>derivative exists</strong> and is <strong>finite</strong> at <span class="math inline">\(a\)</span>.<br />
-</li>
-<li>The <strong>slope</strong> changes continuously (no sudden jumps or sharp turns).</li>
-</ol>
-<hr />
-<div class="promptbox">
-<p><strong>Prompt 5:</strong><br />
-What visual features in a graph help you decide whether a function is “smooth”?<br />
-List or sketch examples of what <em>fails</em> to be smooth.</p>
-<p><strong>Notes:</strong><br />
-<br><br><br><br></p>
-</div>
-<hr />
-</div>
-<div id="how-to-test-for-smoothness" class="section level3 hasAnchor" number="8.13.2">
-<h3><span class="header-section-number">8.13.2</span> <strong>How to Test for Smoothness</strong><a href="introduction-to-derivatives-workbook.html#how-to-test-for-smoothness" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>To check whether a function is smooth at <span class="math inline">\(x = a\)</span>:</p>
-<ol style="list-style-type: decimal">
-<li><p><strong>Confirm continuity:</strong><br />
-<span class="math display">\[
-\lim_{x \to a} f(x) = f(a)
-\]</span>
-→ The graph is unbroken at <span class="math inline">\(a\)</span>.</p></li>
-<li><p><strong>Check the slopes from both sides:</strong><br />
-<span class="math display">\[
-\lim_{h \to 0^-}\frac{f(a+h)-f(a)}{h}
-\quad \text{and} \quad
-\lim_{h \to 0^+}\frac{f(a+h)-f(a)}{h}
-\]</span>
-→ If both limits exist, are finite, and equal each other, the function is smooth at that point.</p></li>
-<li><p><strong>Look for visual cues:</strong></p>
-<ul>
-<li>A <strong>corner</strong> or <strong>cusp</strong> means slopes differ → not smooth.<br />
-</li>
-<li>A <strong>vertical tangent</strong> means infinite slope → not smooth.<br />
-</li>
-<li>A <strong>continuous curve</strong> with gentle slope change → smooth.</li>
-</ul></li>
-</ol>
-<hr />
-<div class="promptbox">
-<p><strong>Prompt 6:</strong><br />
-Identify which of the following functions are smooth at <span class="math inline">\(x=0\)</span>:<br />
-Explain your reasoning.</p>
-<p><img src="bookdown-demo_files/figure-html/smoothness-4panels-1.png" width="80%" style="display: block; margin: auto;" />
-<strong>Notes:</strong><br />
-<br><br><br><br></p>
-</div>
-<hr />
-</div>
-<div id="why-smoothness-matters" class="section level3 hasAnchor" number="8.13.3">
-<h3><span class="header-section-number">8.13.3</span> <strong>Why Smoothness Matters</strong><a href="introduction-to-derivatives-workbook.html#why-smoothness-matters" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Smoothness tells us that the system changes <strong>gradually</strong>, without abrupt shifts.<br />
-In environmental modeling, this matters because:</p>
-<ul>
-<li>Temperature, population, or nutrient levels that change <em>smoothly</em> can be modeled with differential equations.<br />
-</li>
-<li>Processes with <em>jumps</em> or <em>discontinuities</em> (like dam releases or landslides) require piecewise or non-differentiable models.</li>
-</ul>
-<hr />
-</div>
-<div id="examples-2" class="section level3 hasAnchor" number="8.13.4">
-<h3><span class="header-section-number">8.13.4</span> <strong>Examples</strong><a href="introduction-to-derivatives-workbook.html#examples-2" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<table>
-<colgroup>
-<col width="40%" />
-<col width="37%" />
-<col width="21%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="center">Function</th>
-<th align="center">Smooth?</th>
-<th align="center">Why</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="center"><span class="math inline">\(f(x) = x^2\)</span></td>
-<td align="center">✅ Yes</td>
-<td align="center">Continuous and derivative exists everywhere</td>
-</tr>
-<tr class="even">
-<td align="center"><span class="math inline">\(f(x) = |x|\)</span></td>
-<td align="center">❌ No</td>
-<td align="center">Corner at <span class="math inline">\(x=0\)</span> — left and right slopes differ</td>
-</tr>
-<tr class="odd">
-<td align="center"><span class="math inline">\(f(x) = \sqrt[3]{x}\)</span></td>
-<td align="center">❌ No</td>
-<td align="center">Vertical tangent at <span class="math inline">\(x=0\)</span> (infinite slope)</td>
-</tr>
-<tr class="even">
-<td align="center"><span class="math inline">\(f(x) = x\sin(1/x)\)</span> (define <span class="math inline">\(f(0)=0\)</span>)</td>
-<td align="center">❌ No</td>
-<td align="center">Oscillating slope near <span class="math inline">\(x=0\)</span></td>
-</tr>
-<tr class="odd">
-<td align="center"><span class="math inline">\(f(x) = e^{-x^2}\)</span></td>
-<td align="center">✅ Yes</td>
-<td align="center">Infinitely smooth everywhere</td>
-</tr>
-</tbody>
-</table>
-<hr />
-</div>
-</div>
-<div id="testing-for-differentiability" class="section level2 hasAnchor" number="8.14">
-<h2><span class="header-section-number">8.14</span> Testing for Differentiability<a href="introduction-to-derivatives-workbook.html#testing-for-differentiability" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>To test whether <span class="math inline">\(f\)</span> is differentiable at <span class="math inline">\(x=a\)</span>:</p>
-<ol style="list-style-type: decimal">
-<li><p><strong>Check definition:</strong> Make sure <span class="math inline">\(f(a)\)</span> exists.<br />
-→ If not, derivative automatically fails.</p></li>
-<li><p><strong>Check continuity:</strong><br />
-<span class="math display">\[
-\lim_{x \to a} f(x) = f(a)
-\]</span>
-→ If there’s a jump or hole, <span class="math inline">\(f&#39;(a)\)</span> cannot exist.</p></li>
-<li><p><strong>Compare slopes from both sides:</strong><br />
-<span class="math display">\[
-\lim_{h \to 0^-}\frac{f(a+h)-f(a)}{h}
-\quad \text{and} \quad
-\lim_{h \to 0^+}\frac{f(a+h)-f(a)}{h}
-\]</span>
-→ If they’re equal and finite, <span class="math inline">\(f&#39;(a)\)</span> exists.<br />
-→ If they differ or blow up, <span class="math inline">\(f&#39;(a)\)</span> does <strong>not</strong> exist.</p></li>
-</ol>
-<blockquote>
-<p><strong>Key relationship:</strong><br />
-If <span class="math inline">\(f\)</span> is differentiable at <span class="math inline">\(a\)</span>, then <span class="math inline">\(f\)</span> is <strong>continuous</strong> at <span class="math inline">\(a\)</span>.<br />
-However, the converse is not always true —<br />
-<span class="math inline">\(\text{continuous} \not\Rightarrow \text{differentiable}.\)</span></p>
-</blockquote>
-<hr />
-<div class="promptbox">
-<p><strong>Prompt 7:</strong><br />
-Sketch or describe a function that is continuous but not differentiable.<br />
-What feature prevents the derivative from existing?</p>
-<p><strong>Notes:</strong><br />
-<br><br><br><br></p>
-</div>
-<hr />
-</div>
-<div id="common-ways-differentiability-fails-1" class="section level2 hasAnchor" number="8.15">
-<h2><span class="header-section-number">8.15</span> Common Ways Differentiability Fails<a href="introduction-to-derivatives-workbook.html#common-ways-differentiability-fails-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<table>
-<colgroup>
-<col width="41%" />
-<col width="34%" />
-<col width="24%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>Type of Failure</th>
-<th>Description</th>
-<th>Example</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><strong>Discontinuity</strong></td>
-<td>Jump or hole at the point</td>
-<td>Step in dam outlet temperature</td>
-</tr>
-<tr class="even">
-<td><strong>Corner or cusp</strong></td>
-<td>Left and right slopes differ</td>
-<td><span class="math inline">\(f(x) = |x|\)</span> at <span class="math inline">\(x=0\)</span></td>
-</tr>
-<tr class="odd">
-<td><strong>Vertical tangent</strong></td>
-<td>Slope tends to <span class="math inline">\(\pm\infty\)</span></td>
-<td><span class="math inline">\(f(x) = (x)^{1/3}\)</span> at <span class="math inline">\(x=0\)</span></td>
-</tr>
-<tr class="even">
-<td><strong>Oscillating slope</strong></td>
-<td>No single limiting slope</td>
-<td><span class="math inline">\(f(x) = x \sin(1/x)\)</span> at <span class="math inline">\(x=0\)</span></td>
-</tr>
-</tbody>
-</table>
-<hr />
-<div class="promptbox">
-<p><strong>Checking Differentiability at <span class="math inline">\(x=0\)</span></strong></p>
-<p>In each panel below, decide whether the function is <strong>differentiable at <span class="math inline">\(x=0\)</span></strong>.</p>
-<p>Use the following <strong>criteria</strong> to test:
-1. Is the function <strong>defined</strong> at <span class="math inline">\(x=0\)</span>?<br />
-2. Is the function <strong>continuous</strong> at <span class="math inline">\(x=0\)</span>?<br />
-3. Do the <strong>left-hand and right-hand slopes</strong> (derivatives) agree and are they <strong>finite</strong>?</p>
-<table>
-<colgroup>
-<col width="5%" />
-<col width="8%" />
-<col width="17%" />
-<col width="21%" />
-<col width="31%" />
-<col width="14%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left">Panel</th>
-<th align="left">Function</th>
-<th align="center">Defined at <span class="math inline">\(x=0\)</span>?</th>
-<th align="center">Continuous at <span class="math inline">\(x=0\)</span>?</th>
-<th align="center">Left &amp; Right Slopes Equal &amp; Finite?</th>
-<th align="center">Differentiable?</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left">1</td>
-<td align="left"><span class="math inline">\(f(x)=e^{-x^2}\)</span></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-</tr>
-<tr class="even">
-<td align="left">2</td>
-<td align="left"><span class="math inline">\(f(x)=\sqrt{|x|}\)</span></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-</tr>
-<tr class="odd">
-<td align="left">3</td>
-<td align="left"><span class="math inline">\(f(x)=x+|x|\)</span></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-</tr>
-<tr class="even">
-<td align="left">4</td>
-<td align="left"><span class="math inline">\(f(x)=\sin(x^2)\)</span></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-</tr>
-</tbody>
-</table>
-<p><img src="bookdown-demo_files/figure-html/differentiability-new-4panels-1.png" width="80%" style="display: block; margin: auto;" /></p>
-</div>
-<hr />
-</div>
-<div id="environmental-examples-1" class="section level2 hasAnchor" number="8.16">
-<h2><span class="header-section-number">8.16</span> Environmental Examples<a href="introduction-to-derivatives-workbook.html#environmental-examples-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<table>
-<colgroup>
-<col width="19%" />
-<col width="32%" />
-<col width="48%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>Scenario</th>
-<th>What’s Happening</th>
-<th>Differentiability Outcome</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><strong>Dam outlet temperature step</strong></td>
-<td>Sudden jump between upstream and downstream water</td>
-<td>Derivative does <strong>not</strong> exist (discontinuous)</td>
-</tr>
-<tr class="even">
-<td><strong>Piecewise linear rating curve</strong></td>
-<td>Continuous but with a sharp corner</td>
-<td>Derivative does <strong>not</strong> exist at the corner</td>
-</tr>
-<tr class="odd">
-<td><strong>Sharp flood peak</strong></td>
-<td>Slope becomes extremely steep</td>
-<td>Derivative may tend to <span class="math inline">\(\infty\)</span>, so does <strong>not</strong> exist</td>
-</tr>
-<tr class="even">
-<td><strong>Smooth glacier retreat curve</strong></td>
-<td>Continuous and smooth change in slope</td>
-<td>Differentiable</td>
-</tr>
-</tbody>
-</table>
-<hr />
-</div>
-<div id="activity-from-function-to-derivative-graphs" class="section level2 hasAnchor" number="8.17">
-<h2><span class="header-section-number">8.17</span> Activity: From Function to Derivative Graphs<a href="introduction-to-derivatives-workbook.html#activity-from-function-to-derivative-graphs" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>In each question below, you are shown a graph of a function <span class="math inline">\(f(x)\)</span>.<br />
-On the blank axes provided, <strong>sketch the derivative <span class="math inline">\(f&#39;(x)\)</span></strong>.<br />
-Focus on identifying:</p>
-<ul>
-<li>where the slope is positive, negative, or zero,</li>
-<li>relative steepness (large vs. small magnitude),</li>
-<li>points of non-differentiability or smooth transitions.</li>
-</ul>
-<hr />
-<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-13-1.png" width="80%" style="display: block; margin: auto;" />
-<img src="bookdown-demo_files/figure-html/unnamed-chunk-14-1.png" width="80%" style="display: block; margin: auto;" /></p>
-<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-15-1.png" width="80%" style="display: block; margin: auto;" /></p>
-<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-16-1.png" width="80%" style="display: block; margin: auto;" /></p>
-<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-17-1.png" width="80%" style="display: block; margin: auto;" /></p>
-<div class="promptbox">
-<p><strong>Recipe of Plotting Derivatives</strong></p>
-<ul>
-<li>What are we actually plotting?</li>
-<li>What are the key steps?</li>
-<li>What are the checks?</li>
-</ul>
-<p><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></p>
-</div>
-<div class="promptbox">
-<p><strong>More Limit Definition Practice</strong></p>
-<p>Given the quadratic equation:</p>
-<p><span class="math inline">\(f(x) = 3x^2 + x\)</span>.</p>
-<ol style="list-style-type: decimal">
-<li>Find the derivative function using the limit definition of the derivative</li>
-<li>What is the derivative at x=0, <span class="math inline">\(f&#39;x(0)\)</span>?</li>
-<li>What does the mean graphically?</li>
-<li>Can you find the equation for the tangent line at x=0?
-These equations might help with thinking about the equation of the tangent.
-<span class="math display">\[
-y - f(a) = f&#39;(a)\,(x - a)
+N(x)=(x+y^2)e^{\cos(xy)},\qquad D(x)=1+x^2.
 \]</span>
 <span class="math display">\[
-y = mx+b
+f_1&#39;(x)=\frac{D(x)N&#39;(x)-N(x)D&#39;(x)}{[D(x)]^2}.
 \]</span>
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></li>
-</ol>
+</details>
+<details>
+<summary>
+<strong>Step 2</strong>
+</summary>
+<span class="math display">\[
+A(x)=x+y^2,\quad A&#39;(x)=1+2y\,y&#39;,\qquad
+B(x)=e^{\cos(xy)},\quad B&#39;(x)=e^{\cos(xy)}(-\sin(xy))(y+x\,y&#39;).
+\]</span>
+<span class="math display">\[
+N&#39;(x)=(1+2y\,y&#39;)e^{\cos(xy)}+(x+y^2)e^{\cos(xy)}[-\sin(xy)](y+x\,y&#39;).
+\]</span>
+</details>
+<details>
+<summary>
+<strong>Step 3</strong>
+</summary>
+<span class="math display">\[
+D&#39;(x)=2x.
+\]</span>
+</details>
+<details>
+<summary>
+<strong>Step 4</strong>
+</summary>
+<span class="math display">\[
+\boxed{f_1&#39;(x)=
+\frac{(1+x^2)\!\left[(1+2y\,y&#39;)e^{\cos(xy)}+(x+y^2)e^{\cos(xy)}[-\sin(xy)](y+x\,y&#39;)\right]
+-2x(x+y^2)e^{\cos(xy)}}{(1+x^2)^2}}.
+\]</span>
+</details>
+<hr />
 </div>
-<div class="promptbox">
-<p><strong>Testing a Limit</strong></p>
-<p>Consider the function:</p>
+<div id="challenge-q2-1" class="section level3 unnumbered hasAnchor">
+<h3>Challenge Q2<a href="more-mixed-rule-derivative-practice.html#challenge-q2-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p><span class="math display">\[
-f(x) = \frac{x^2 + 1}{x - 1}
+f_2(x)=(x^2+y)\,\sin(\ln(1+xy)).
 \]</span></p>
-<ol style="list-style-type: decimal">
-<li><p>Find the limit of <span class="math inline">\(f(x)\)</span> as <span class="math inline">\(x \to 2\)</span>.<br />
+<details>
+<summary>
+<strong>Step 1</strong>
+</summary>
 <span class="math display">\[
-\lim_{x \to 2} \frac{x^2 + 1}{x - 1}
-\]</span></p></li>
-<li><p>Find the limit of <span class="math inline">\(f(x)\)</span> as <span class="math inline">\(x \to 1\)</span>.<br />
+f_2(x)=A(x)\,B(x),\quad A(x)=x^2+y,\; B(x)=\sin(\ln(1+xy)).
+\]</span>
 <span class="math display">\[
-\lim_{x \to 1} \frac{x^2 + 1}{x - 1}
-\]</span></p></li>
-<li><p>Is this function differentiable everywhere?
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></p></li>
-</ol>
+f_2&#39;(x)=A&#39;(x)B(x)+A(x)B&#39;(x).
+\]</span>
+</details>
+<details>
+<summary>
+<strong>Step 2</strong>
+</summary>
+<span class="math display">\[
+A&#39;(x)=2x+y&#39;.
+\]</span>
+<span class="math display">\[
+B&#39;(x)=\cos(\ln(1+xy))\cdot\frac{1}{1+xy}\cdot(y+x\,y&#39;)
+=\frac{\cos(\ln(1+xy))(y+x\,y&#39;)}{1+xy}.
+\]</span>
+</details>
+<details>
+<summary>
+<strong>Step 3</strong>
+</summary>
+<span class="math display">\[
+\boxed{f_2&#39;(x)=(2x+y&#39;)\sin(\ln(1+xy))
++(x^2+y)\frac{\cos(\ln(1+xy))(y+x\,y&#39;)}{1+xy}}.
+\]</span>
+</details>
+<hr />
 </div>
+<div id="challenge-q3-1" class="section level3 unnumbered hasAnchor">
+<h3>Challenge Q3<a href="more-mixed-rule-derivative-practice.html#challenge-q3-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><span class="math display">\[
+f_3(x)=\frac{\ln(x+y)\,e^{xy}}{\cos y}.
+\]</span></p>
+<details>
+<summary>
+<strong>Step 1</strong>
+</summary>
+<span class="math display">\[
+N(x)=\ln(x+y)e^{xy},\quad D(x)=\cos y.
+\]</span>
+<span class="math display">\[
+f_3&#39;(x)=\frac{D(x)N&#39;(x)-N(x)D&#39;(x)}{[D(x)]^2}.
+\]</span>
+</details>
+<details>
+<summary>
+<strong>Step 2</strong>
+</summary>
+<span class="math display">\[
+A(x)=\ln(x+y),\; A&#39;(x)=\frac{1+y&#39;}{x+y},\quad
+B(x)=e^{xy},\; B&#39;(x)=e^{xy}(y+x\,y&#39;).
+\]</span>
+<span class="math display">\[
+N&#39;(x)=A&#39;(x)B(x)+A(x)B&#39;(x)
+=\frac{1+y&#39;}{x+y}e^{xy}+\ln(x+y)e^{xy}(y+x\,y&#39;).
+\]</span>
+</details>
+<details>
+<summary>
+<strong>Step 3</strong>
+</summary>
+<span class="math display">\[
+D&#39;(x)=-\sin y\,y&#39;.
+\]</span>
+</details>
+<details>
+<summary>
+<strong>Step 4</strong>
+</summary>
+<span class="math display">\[
+\boxed{f_3&#39;(x)=
+\frac{\cos y\!\left[\frac{1+y&#39;}{x+y}e^{xy}+\ln(x+y)e^{xy}(y+x\,y&#39;)\right]
++\sin y\,y&#39;\ln(x+y)e^{xy}}{(\cos y)^2}}.
+\]</span>
+</details>
+<hr />
+</div>
+<div id="challenge-q4-1" class="section level3 unnumbered hasAnchor">
+<h3>Challenge Q4<a href="more-mixed-rule-derivative-practice.html#challenge-q4-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><span class="math display">\[
+f_4(x)=e^{y}\cdot\frac{x+\sin(xy)}{1+y^2}.
+\]</span></p>
+<details>
+<summary>
+<strong>Step 1</strong>
+</summary>
+<span class="math display">\[
+f_4(x)=P(x)\,Q(x),\quad P(x)=e^{y},\quad Q(x)=\frac{x+\sin(xy)}{1+y^2}.
+\]</span>
+<span class="math display">\[
+f_4&#39;(x)=P&#39;(x)Q(x)+P(x)Q&#39;(x).
+\]</span>
+</details>
+<details>
+<summary>
+<strong>Step 2</strong>
+</summary>
+<span class="math display">\[
+P&#39;(x)=e^{y}y&#39;.
+\]</span>
+<span class="math display">\[
+Q(x)=\frac{R(x)}{S(x)},\quad R(x)=x+\sin(xy),\; S(x)=1+y^2.
+\]</span>
+<span class="math display">\[
+R&#39;(x)=1+\cos(xy)(y+x\,y&#39;),\quad S&#39;(x)=2y\,y&#39;.
+\]</span>
+<span class="math display">\[
+Q&#39;(x)=\frac{R&#39;S-RS&#39;}{S^2}
+=\frac{(1+\cos(xy)(y+x\,y&#39;))(1+y^2)-(x+\sin(xy))(2y\,y&#39;)}{(1+y^2)^2}.
+\]</span>
+</details>
+<details>
+<summary>
+<strong>Step 3</strong>
+</summary>
+<span class="math display">\[
+\boxed{f_4&#39;(x)=
+e^{y}y&#39;\frac{x+\sin(xy)}{1+y^2}
++e^{y}\frac{(1+\cos(xy)(y+x\,y&#39;))(1+y^2)-(x+\sin(xy))(2y\,y&#39;)}{(1+y^2)^2}}.
+\]</span>
+</details>
+<hr />
+</div>
+<div id="challenge-q5-1" class="section level3 unnumbered hasAnchor">
+<h3>Challenge Q5<a href="more-mixed-rule-derivative-practice.html#challenge-q5-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><span class="math display">\[
+f_5(x)=\frac{(x^2+1)\tan(xy)}{e^{x+y}}.
+\]</span></p>
+<details>
+<summary>
+<strong>Step 1</strong>
+</summary>
+<span class="math display">\[
+N(x)=(x^2+1)\tan(xy),\quad D(x)=e^{x+y}.
+\]</span>
+<span class="math display">\[
+f_5&#39;(x)=\frac{D(x)N&#39;(x)-N(x)D&#39;(x)}{[D(x)]^2}.
+\]</span>
+</details>
+<details>
+<summary>
+<strong>Step 2</strong>
+</summary>
+<span class="math display">\[
+A(x)=x^2+1,\; A&#39;(x)=2x,\quad
+B(x)=\tan(xy),\; B&#39;(x)=\sec^2(xy)(y+x\,y&#39;).
+\]</span>
+<span class="math display">\[
+N&#39;(x)=2x\tan(xy)+(x^2+1)\sec^2(xy)(y+x\,y&#39;).
+\]</span>
+</details>
+<details>
+<summary>
+<strong>Step 3</strong>
+</summary>
+<span class="math display">\[
+D&#39;(x)=e^{x+y}(1+y&#39;).
+\]</span>
+</details>
+<details>
+<summary>
+<strong>Step 4</strong>
+</summary>
+<span class="math display">\[
+\boxed{f_5&#39;(x)=
+\frac{e^{x+y}\!\left[2x\tan(xy)+(x^2+1)\sec^2(xy)(y+x\,y&#39;)\right]
+-(x^2+1)\tan(xy)e^{x+y}(1+y&#39;)}{(e^{x+y})^2}}.
+\]</span>
+</details>
 
 </div>
 </div>
+
+
+
             </section>
 
           </div>
         </div>
       </div>
-<a href="pre-calculus-foundations-workbook.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="derivative-rules---workbook.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="test-2-review-material.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="why-calculus-workbook.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -2937,7 +1205,7 @@ gitbook.start({
     "size": 2
   },
   "edit": {
-    "link": "https://github.com/rstudio/bookdown-demo/edit/master/103-Derivatives_WB.Rmd",
+    "link": "https://github.com/rstudio/bookdown-demo/edit/master/22-test_review.Rmd",
     "text": "Edit"
   },
   "history": {

@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 5 🚧 Under Construction: Applications | Environmental Calculus - Active Learning with Case Studies</title>
+  <title>Chapter 10 Applications of Derivatives - Workbook | Environmental Calculus - Active Learning with Case Studies</title>
   <meta name="description" content="A textbook companion to the Univeristy of Washington QSci 291 class" />
   <meta name="generator" content="bookdown 0.43 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 5 🚧 Under Construction: Applications | Environmental Calculus - Active Learning with Case Studies" />
+  <meta property="og:title" content="Chapter 10 Applications of Derivatives - Workbook | Environmental Calculus - Active Learning with Case Studies" />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="A textbook companion to the Univeristy of Washington QSci 291 class" />
   <meta name="github-repo" content="rstudio/bookdown-demo" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 5 🚧 Under Construction: Applications | Environmental Calculus - Active Learning with Case Studies" />
+  <meta name="twitter:title" content="Chapter 10 Applications of Derivatives - Workbook | Environmental Calculus - Active Learning with Case Studies" />
   
   <meta name="twitter:description" content="A textbook companion to the Univeristy of Washington QSci 291 class" />
   
@@ -23,15 +23,15 @@
 <meta name="author" content="Gaj Sivandran" />
 
 
-<meta name="date" content="2025-11-03" />
+<meta name="date" content="2025-11-10" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="derivative-rules.html"/>
-<link rel="next" href="calculus-i-equation-sheet.html"/>
+<link rel="prev" href="derivative-rules---workbook.html"/>
+
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -62,70 +62,6 @@
 <script src="libs/plotly-main-2.11.1/plotly-latest.min.js"></script>
 
 
-<style type="text/css">
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-    color: #aaaaaa;
-  }
-pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
-code span.al { color: #ff0000; font-weight: bold; } /* Alert */
-code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
-code span.at { color: #7d9029; } /* Attribute */
-code span.bn { color: #40a070; } /* BaseN */
-code span.bu { color: #008000; } /* BuiltIn */
-code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
-code span.ch { color: #4070a0; } /* Char */
-code span.cn { color: #880000; } /* Constant */
-code span.co { color: #60a0b0; font-style: italic; } /* Comment */
-code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
-code span.do { color: #ba2121; font-style: italic; } /* Documentation */
-code span.dt { color: #902000; } /* DataType */
-code span.dv { color: #40a070; } /* DecVal */
-code span.er { color: #ff0000; font-weight: bold; } /* Error */
-code span.ex { } /* Extension */
-code span.fl { color: #40a070; } /* Float */
-code span.fu { color: #06287e; } /* Function */
-code span.im { color: #008000; font-weight: bold; } /* Import */
-code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
-code span.kw { color: #007020; font-weight: bold; } /* Keyword */
-code span.op { color: #666666; } /* Operator */
-code span.ot { color: #007020; } /* Other */
-code span.pp { color: #bc7a00; } /* Preprocessor */
-code span.sc { color: #4070a0; } /* SpecialChar */
-code span.ss { color: #bb6688; } /* SpecialString */
-code span.st { color: #4070a0; } /* String */
-code span.va { color: #19177c; } /* Variable */
-code span.vs { color: #4070a0; } /* VerbatimString */
-code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
-</style>
 
 <style type="text/css">
   
@@ -370,34 +306,106 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="4.12" data-path="derivative-rules.html"><a href="derivative-rules.html#practice-implicit-differentiation"><i class="fa fa-check"></i><b>4.12</b> Practice: Implicit Differentiation</a></li>
 <li class="chapter" data-level="4.13" data-path="derivative-rules.html"><a href="derivative-rules.html#practice-applications-derivatives-in-environmental-models"><i class="fa fa-check"></i><b>4.13</b> Practice: Applications — Derivatives in Environmental Models</a></li>
 </ul></li>
-<li class="chapter" data-level="5" data-path="under-construction-applications.html"><a href="under-construction-applications.html"><i class="fa fa-check"></i><b>5</b> 🚧 Under Construction: Applications</a>
+<li class="chapter" data-level="5" data-path="applications-of-derivatives-understanding-change-and-extremes-in-environmental-systems.html"><a href="applications-of-derivatives-understanding-change-and-extremes-in-environmental-systems.html"><i class="fa fa-check"></i><b>5</b> Applications of Derivatives: Understanding Change and Extremes in Environmental Systems</a>
 <ul>
-<li class="chapter" data-level="5.1" data-path="under-construction-applications.html"><a href="under-construction-applications.html#using-derivatives-to-find-extremes"><i class="fa fa-check"></i><b>5.1</b> Using Derivatives to Find Extremes</a></li>
-<li class="chapter" data-level="5.2" data-path="under-construction-applications.html"><a href="under-construction-applications.html#the-idea"><i class="fa fa-check"></i><b>5.2</b> The Idea</a></li>
-<li class="chapter" data-level="5.3" data-path="under-construction-applications.html"><a href="under-construction-applications.html#step-by-step-finding-extrema"><i class="fa fa-check"></i><b>5.3</b> Step-by-Step: Finding Extrema</a>
+<li class="chapter" data-level="5.1" data-path="applications-of-derivatives-understanding-change-and-extremes-in-environmental-systems.html"><a href="applications-of-derivatives-understanding-change-and-extremes-in-environmental-systems.html#using-derivatives-to-find-extremes"><i class="fa fa-check"></i><b>5.1</b> Using Derivatives to Find Extremes</a>
 <ul>
-<li class="chapter" data-level="5.3.1" data-path="under-construction-applications.html"><a href="under-construction-applications.html#step-1-take-the-derivative"><i class="fa fa-check"></i><b>5.3.1</b> Step 1: Take the Derivative</a></li>
-<li class="chapter" data-level="5.3.2" data-path="under-construction-applications.html"><a href="under-construction-applications.html#step-2-find-the-critical-points"><i class="fa fa-check"></i><b>5.3.2</b> Step 2: Find the Critical Points</a></li>
-<li class="chapter" data-level="5.3.3" data-path="under-construction-applications.html"><a href="under-construction-applications.html#step-3-classify-each-critical-point-using-a-sign-chart"><i class="fa fa-check"></i><b>5.3.3</b> Step 3: Classify Each Critical Point Using a Sign Chart</a></li>
-<li class="chapter" data-level="5.3.4" data-path="under-construction-applications.html"><a href="under-construction-applications.html#step-4-evaluate-the-function-at-the-critical-points"><i class="fa fa-check"></i><b>5.3.4</b> Step 4: Evaluate the Function at the Critical Points</a></li>
+<li class="chapter" data-level="5.1.1" data-path="applications-of-derivatives-understanding-change-and-extremes-in-environmental-systems.html"><a href="applications-of-derivatives-understanding-change-and-extremes-in-environmental-systems.html#why-extremes-matter"><i class="fa fa-check"></i><b>5.1.1</b> Why Extremes Matter</a></li>
+<li class="chapter" data-level="5.1.2" data-path="applications-of-derivatives-understanding-change-and-extremes-in-environmental-systems.html"><a href="applications-of-derivatives-understanding-change-and-extremes-in-environmental-systems.html#the-mathematical-lens"><i class="fa fa-check"></i><b>5.1.2</b> The Mathematical Lens</a></li>
+<li class="chapter" data-level="5.1.3" data-path="applications-of-derivatives-understanding-change-and-extremes-in-environmental-systems.html"><a href="applications-of-derivatives-understanding-change-and-extremes-in-environmental-systems.html#the-big-idea"><i class="fa fa-check"></i><b>5.1.3</b> The Big Idea</a></li>
+<li class="chapter" data-level="5.1.4" data-path="applications-of-derivatives-understanding-change-and-extremes-in-environmental-systems.html"><a href="applications-of-derivatives-understanding-change-and-extremes-in-environmental-systems.html#environmental-interpretation-7"><i class="fa fa-check"></i><b>5.1.4</b> Environmental Interpretation</a></li>
 </ul></li>
-<li class="chapter" data-level="5.4" data-path="under-construction-applications.html"><a href="under-construction-applications.html#environmental-example-a-cubic-population-model"><i class="fa fa-check"></i><b>5.4</b> 🌱 Environmental Example: A Cubic Population Model</a>
+<li class="chapter" data-level="5.2" data-path="applications-of-derivatives-understanding-change-and-extremes-in-environmental-systems.html"><a href="applications-of-derivatives-understanding-change-and-extremes-in-environmental-systems.html#understanding-maximums-and-minimums"><i class="fa fa-check"></i><b>5.2</b> Understanding Maximums and Minimums</a>
 <ul>
-<li class="chapter" data-level="5.4.1" data-path="under-construction-applications.html"><a href="under-construction-applications.html#step-1-find-the-first-derivative"><i class="fa fa-check"></i><b>5.4.1</b> Step 1: Find the First Derivative</a></li>
-<li class="chapter" data-level="5.4.2" data-path="under-construction-applications.html"><a href="under-construction-applications.html#what-does-this-mean"><i class="fa fa-check"></i><b>5.4.2</b> What Does This Mean?</a></li>
-<li class="chapter" data-level="5.4.3" data-path="under-construction-applications.html"><a href="under-construction-applications.html#step-2-find-the-critical-points-1"><i class="fa fa-check"></i><b>5.4.3</b> Step 2: Find the Critical Points</a></li>
-<li class="chapter" data-level="5.4.4" data-path="under-construction-applications.html"><a href="under-construction-applications.html#step-3-constructing-a-sign-chart"><i class="fa fa-check"></i><b>5.4.4</b> Step 3: Constructing a Sign Chart</a></li>
-<li class="chapter" data-level="5.4.5" data-path="under-construction-applications.html"><a href="under-construction-applications.html#step-by-step-sign-analysis"><i class="fa fa-check"></i><b>5.4.5</b> Step-by-Step Sign Analysis</a></li>
-<li class="chapter" data-level="5.4.6" data-path="under-construction-applications.html"><a href="under-construction-applications.html#step-4-evaluate-the-function"><i class="fa fa-check"></i><b>5.4.6</b> Step 4: Evaluate the Function</a></li>
-<li class="chapter" data-level="5.4.7" data-path="under-construction-applications.html"><a href="under-construction-applications.html#final-takeaways"><i class="fa fa-check"></i><b>5.4.7</b> Final Takeaways</a></li>
-<li class="chapter" data-level="5.4.8" data-path="under-construction-applications.html"><a href="under-construction-applications.html#what-does-the-second-derivative-tell-us"><i class="fa fa-check"></i><b>5.4.8</b> What Does the Second Derivative Tell Us?</a></li>
-<li class="chapter" data-level="5.4.9" data-path="under-construction-applications.html"><a href="under-construction-applications.html#how-to-use-a-second-derivative-sign-chart"><i class="fa fa-check"></i><b>5.4.9</b> How to Use a Second Derivative Sign Chart</a></li>
+<li class="chapter" data-level="5.2.1" data-path="applications-of-derivatives-understanding-change-and-extremes-in-environmental-systems.html"><a href="applications-of-derivatives-understanding-change-and-extremes-in-environmental-systems.html#what-is-a-maximum"><i class="fa fa-check"></i><b>5.2.1</b> What Is a Maximum?</a></li>
+<li class="chapter" data-level="5.2.2" data-path="applications-of-derivatives-understanding-change-and-extremes-in-environmental-systems.html"><a href="applications-of-derivatives-understanding-change-and-extremes-in-environmental-systems.html#what-is-a-minimum"><i class="fa fa-check"></i><b>5.2.2</b> What Is a Minimum?</a></li>
+<li class="chapter" data-level="5.2.3" data-path="applications-of-derivatives-understanding-change-and-extremes-in-environmental-systems.html"><a href="applications-of-derivatives-understanding-change-and-extremes-in-environmental-systems.html#global-extrema-and-finite-domains"><i class="fa fa-check"></i><b>5.2.3</b> Global Extrema and Finite Domains</a></li>
+<li class="chapter" data-level="5.2.4" data-path="applications-of-derivatives-understanding-change-and-extremes-in-environmental-systems.html"><a href="applications-of-derivatives-understanding-change-and-extremes-in-environmental-systems.html#visualizing-local-vs.-global-extrema"><i class="fa fa-check"></i><b>5.2.4</b> Visualizing Local vs. Global Extrema</a></li>
+<li class="chapter" data-level="5.2.5" data-path="applications-of-derivatives-understanding-change-and-extremes-in-environmental-systems.html"><a href="applications-of-derivatives-understanding-change-and-extremes-in-environmental-systems.html#what-each-panel-illustrates"><i class="fa fa-check"></i><b>5.2.5</b> What each panel illustrates:</a></li>
+<li class="chapter" data-level="5.2.6" data-path="applications-of-derivatives-understanding-change-and-extremes-in-environmental-systems.html"><a href="applications-of-derivatives-understanding-change-and-extremes-in-environmental-systems.html#why-the-difference-matters"><i class="fa fa-check"></i><b>5.2.6</b> Why the Difference Matters</a></li>
 </ul></li>
-<li class="chapter" data-level="5.5" data-path="under-construction-applications.html"><a href="under-construction-applications.html#the-procedure-is-identical-to-that-of-the-first-derivative-sign-chart.-the-difference-is-in-the-interpreation-of-the-signs.-the-second-derivative-sign-chart-helps-us-determine-information-about-the-functions-convavity."><i class="fa fa-check"></i><b>5.5</b> The procedure is identical to that of the first derivative sign chart. The difference is in the interpreation of the signs. The second derivative sign chart helps us determine information about the functions convavity.</a>
+<li class="chapter" data-level="5.3" data-path="applications-of-derivatives-understanding-change-and-extremes-in-environmental-systems.html"><a href="applications-of-derivatives-understanding-change-and-extremes-in-environmental-systems.html#the-idea"><i class="fa fa-check"></i><b>5.3</b> The Idea</a>
 <ul>
-<li class="chapter" data-level="5.5.1" data-path="under-construction-applications.html"><a href="under-construction-applications.html#what-are-inflection-points"><i class="fa fa-check"></i><b>5.5.1</b> What Are Inflection Points?</a></li>
+<li class="chapter" data-level="5.3.1" data-path="applications-of-derivatives-understanding-change-and-extremes-in-environmental-systems.html"><a href="applications-of-derivatives-understanding-change-and-extremes-in-environmental-systems.html#visualizing-the-idea"><i class="fa fa-check"></i><b>5.3.1</b> Visualizing the Idea</a></li>
+<li class="chapter" data-level="5.3.2" data-path="applications-of-derivatives-understanding-change-and-extremes-in-environmental-systems.html"><a href="applications-of-derivatives-understanding-change-and-extremes-in-environmental-systems.html#why-critical-points-arent-always-extremes"><i class="fa fa-check"></i><b>5.3.2</b> Why “Critical Points” Aren’t Always Extremes</a></li>
+<li class="chapter" data-level="5.3.3" data-path="applications-of-derivatives-understanding-change-and-extremes-in-environmental-systems.html"><a href="applications-of-derivatives-understanding-change-and-extremes-in-environmental-systems.html#environmental-example-3"><i class="fa fa-check"></i><b>5.3.3</b> Environmental Example</a></li>
 </ul></li>
-<li class="chapter" data-level="5.6" data-path="under-construction-applications.html"><a href="under-construction-applications.html#optimizaiton"><i class="fa fa-check"></i><b>5.6</b> Optimizaiton</a></li>
+<li class="chapter" data-level="5.4" data-path="applications-of-derivatives-understanding-change-and-extremes-in-environmental-systems.html"><a href="applications-of-derivatives-understanding-change-and-extremes-in-environmental-systems.html#step-by-step-finding-extrema"><i class="fa fa-check"></i><b>5.4</b> Step-by-Step: Finding Extrema</a>
+<ul>
+<li class="chapter" data-level="5.4.1" data-path="applications-of-derivatives-understanding-change-and-extremes-in-environmental-systems.html"><a href="applications-of-derivatives-understanding-change-and-extremes-in-environmental-systems.html#the-four-step-process"><i class="fa fa-check"></i><b>5.4.1</b> The Four-Step Process</a></li>
+</ul></li>
+<li class="chapter" data-level="5.5" data-path="applications-of-derivatives-understanding-change-and-extremes-in-environmental-systems.html"><a href="applications-of-derivatives-understanding-change-and-extremes-in-environmental-systems.html#step-1-take-the-derivative"><i class="fa fa-check"></i><b>5.5</b> Step 1: Take the Derivative</a>
+<ul>
+<li class="chapter" data-level="5.5.1" data-path="applications-of-derivatives-understanding-change-and-extremes-in-environmental-systems.html"><a href="applications-of-derivatives-understanding-change-and-extremes-in-environmental-systems.html#how-to-differentiate"><i class="fa fa-check"></i><b>5.5.1</b> How to Differentiate</a></li>
+<li class="chapter" data-level="5.5.2" data-path="applications-of-derivatives-understanding-change-and-extremes-in-environmental-systems.html"><a href="applications-of-derivatives-understanding-change-and-extremes-in-environmental-systems.html#what-youre-looking-for"><i class="fa fa-check"></i><b>5.5.2</b> What You’re Looking For</a></li>
+</ul></li>
+<li class="chapter" data-level="5.6" data-path="applications-of-derivatives-understanding-change-and-extremes-in-environmental-systems.html"><a href="applications-of-derivatives-understanding-change-and-extremes-in-environmental-systems.html#step-2-find-the-critical-points"><i class="fa fa-check"></i><b>5.6</b> Step 2: Find the Critical Points</a>
+<ul>
+<li class="chapter" data-level="5.6.1" data-path="applications-of-derivatives-understanding-change-and-extremes-in-environmental-systems.html"><a href="applications-of-derivatives-understanding-change-and-extremes-in-environmental-systems.html#why-set-the-derivative-to-zero"><i class="fa fa-check"></i><b>5.6.1</b> Why Set the Derivative to Zero?</a></li>
+<li class="chapter" data-level="5.6.2" data-path="applications-of-derivatives-understanding-change-and-extremes-in-environmental-systems.html"><a href="applications-of-derivatives-understanding-change-and-extremes-in-environmental-systems.html#how-to-solve-fx-0"><i class="fa fa-check"></i><b>5.6.2</b> How to Solve <span class="math inline">\(f&#39;(x) = 0\)</span></a></li>
+<li class="chapter" data-level="5.6.3" data-path="applications-of-derivatives-understanding-change-and-extremes-in-environmental-systems.html"><a href="applications-of-derivatives-understanding-change-and-extremes-in-environmental-systems.html#quick-example"><i class="fa fa-check"></i><b>5.6.3</b> Quick Example</a></li>
+</ul></li>
+<li class="chapter" data-level="5.7" data-path="applications-of-derivatives-understanding-change-and-extremes-in-environmental-systems.html"><a href="applications-of-derivatives-understanding-change-and-extremes-in-environmental-systems.html#step-3-classify-each-critical-point-using-a-sign-chart"><i class="fa fa-check"></i><b>5.7</b> Step 3: Classify Each Critical Point Using a Sign Chart</a>
+<ul>
+<li class="chapter" data-level="5.7.1" data-path="applications-of-derivatives-understanding-change-and-extremes-in-environmental-systems.html"><a href="applications-of-derivatives-understanding-change-and-extremes-in-environmental-systems.html#how-to-build-a-first-derivative-sign-chart"><i class="fa fa-check"></i><b>5.7.1</b> How to Build a First Derivative Sign Chart</a></li>
+<li class="chapter" data-level="5.7.2" data-path="applications-of-derivatives-understanding-change-and-extremes-in-environmental-systems.html"><a href="applications-of-derivatives-understanding-change-and-extremes-in-environmental-systems.html#visualizing-the-sign-chart"><i class="fa fa-check"></i><b>5.7.2</b> Visualizing the Sign Chart</a></li>
+</ul></li>
+<li class="chapter" data-level="5.8" data-path="applications-of-derivatives-understanding-change-and-extremes-in-environmental-systems.html"><a href="applications-of-derivatives-understanding-change-and-extremes-in-environmental-systems.html#step-4-evaluate-the-function-at-the-critical-points"><i class="fa fa-check"></i><b>5.8</b> Step 4: Evaluate the Function at the Critical Points</a>
+<ul>
+<li class="chapter" data-level="5.8.1" data-path="applications-of-derivatives-understanding-change-and-extremes-in-environmental-systems.html"><a href="applications-of-derivatives-understanding-change-and-extremes-in-environmental-systems.html#how-to-interpret-the-results"><i class="fa fa-check"></i><b>5.8.1</b> How to Interpret the Results</a></li>
+<li class="chapter" data-level="5.8.2" data-path="applications-of-derivatives-understanding-change-and-extremes-in-environmental-systems.html"><a href="applications-of-derivatives-understanding-change-and-extremes-in-environmental-systems.html#putting-it-all-together"><i class="fa fa-check"></i><b>5.8.2</b> Putting It All Together</a></li>
+<li class="chapter" data-level="5.8.3" data-path="applications-of-derivatives-understanding-change-and-extremes-in-environmental-systems.html"><a href="applications-of-derivatives-understanding-change-and-extremes-in-environmental-systems.html#environmental-perspective"><i class="fa fa-check"></i><b>5.8.3</b> Environmental Perspective</a></li>
+</ul></li>
+<li class="chapter" data-level="5.9" data-path="applications-of-derivatives-understanding-change-and-extremes-in-environmental-systems.html"><a href="applications-of-derivatives-understanding-change-and-extremes-in-environmental-systems.html#environmental-example-a-cubic-population-model"><i class="fa fa-check"></i><b>5.9</b> 🌱 Environmental Example: A Cubic Population Model</a>
+<ul>
+<li class="chapter" data-level="5.9.1" data-path="applications-of-derivatives-understanding-change-and-extremes-in-environmental-systems.html"><a href="applications-of-derivatives-understanding-change-and-extremes-in-environmental-systems.html#step-0-the-model"><i class="fa fa-check"></i><b>5.9.1</b> Step 0: The Model</a></li>
+<li class="chapter" data-level="5.9.2" data-path="applications-of-derivatives-understanding-change-and-extremes-in-environmental-systems.html"><a href="applications-of-derivatives-understanding-change-and-extremes-in-environmental-systems.html#step-1-find-the-first-derivative"><i class="fa fa-check"></i><b>5.9.2</b> Step 1: Find the First Derivative</a></li>
+<li class="chapter" data-level="5.9.3" data-path="applications-of-derivatives-understanding-change-and-extremes-in-environmental-systems.html"><a href="applications-of-derivatives-understanding-change-and-extremes-in-environmental-systems.html#what-the-derivative-tells-us"><i class="fa fa-check"></i><b>5.9.3</b> What the Derivative Tells Us</a></li>
+<li class="chapter" data-level="5.9.4" data-path="applications-of-derivatives-understanding-change-and-extremes-in-environmental-systems.html"><a href="applications-of-derivatives-understanding-change-and-extremes-in-environmental-systems.html#step-2-find-the-critical-points-1"><i class="fa fa-check"></i><b>5.9.4</b> Step 2: Find the Critical Points</a></li>
+<li class="chapter" data-level="5.9.5" data-path="applications-of-derivatives-understanding-change-and-extremes-in-environmental-systems.html"><a href="applications-of-derivatives-understanding-change-and-extremes-in-environmental-systems.html#interpretation-1"><i class="fa fa-check"></i><b>5.9.5</b> Interpretation</a></li>
+<li class="chapter" data-level="5.9.6" data-path="applications-of-derivatives-understanding-change-and-extremes-in-environmental-systems.html"><a href="applications-of-derivatives-understanding-change-and-extremes-in-environmental-systems.html#step-3-construct-a-sign-chart"><i class="fa fa-check"></i><b>5.9.6</b> Step 3: Construct a Sign Chart</a></li>
+<li class="chapter" data-level="5.9.7" data-path="applications-of-derivatives-understanding-change-and-extremes-in-environmental-systems.html"><a href="applications-of-derivatives-understanding-change-and-extremes-in-environmental-systems.html#why-use-a-sign-chart"><i class="fa fa-check"></i><b>5.9.7</b> Why Use a Sign Chart?</a></li>
+<li class="chapter" data-level="5.9.8" data-path="applications-of-derivatives-understanding-change-and-extremes-in-environmental-systems.html"><a href="applications-of-derivatives-understanding-change-and-extremes-in-environmental-systems.html#the-derivative-factored-form"><i class="fa fa-check"></i><b>5.9.8</b> The Derivative (Factored Form)</a></li>
+<li class="chapter" data-level="5.9.9" data-path="applications-of-derivatives-understanding-change-and-extremes-in-environmental-systems.html"><a href="applications-of-derivatives-understanding-change-and-extremes-in-environmental-systems.html#step-3a-divide-the-number-line"><i class="fa fa-check"></i><b>5.9.9</b> Step 3a: Divide the Number Line</a></li>
+<li class="chapter" data-level="5.9.10" data-path="applications-of-derivatives-understanding-change-and-extremes-in-environmental-systems.html"><a href="applications-of-derivatives-understanding-change-and-extremes-in-environmental-systems.html#step-3b-choose-test-points"><i class="fa fa-check"></i><b>5.9.10</b> Step 3b: Choose Test Points</a></li>
+<li class="chapter" data-level="5.9.11" data-path="applications-of-derivatives-understanding-change-and-extremes-in-environmental-systems.html"><a href="applications-of-derivatives-understanding-change-and-extremes-in-environmental-systems.html#step-3c-interpret-the-signs"><i class="fa fa-check"></i><b>5.9.11</b> Step 3c: Interpret the Signs</a></li>
+<li class="chapter" data-level="5.9.12" data-path="applications-of-derivatives-understanding-change-and-extremes-in-environmental-systems.html"><a href="applications-of-derivatives-understanding-change-and-extremes-in-environmental-systems.html#step-3d-what-the-signs-mean"><i class="fa fa-check"></i><b>5.9.12</b> Step 3d: What the Signs Mean</a></li>
+<li class="chapter" data-level="5.9.13" data-path="applications-of-derivatives-understanding-change-and-extremes-in-environmental-systems.html"><a href="applications-of-derivatives-understanding-change-and-extremes-in-environmental-systems.html#step-3e-key-takeaway"><i class="fa fa-check"></i><b>5.9.13</b> Step 3e: Key Takeaway</a></li>
+<li class="chapter" data-level="5.9.14" data-path="applications-of-derivatives-understanding-change-and-extremes-in-environmental-systems.html"><a href="applications-of-derivatives-understanding-change-and-extremes-in-environmental-systems.html#step-4-evaluate-the-function"><i class="fa fa-check"></i><b>5.9.14</b> Step 4: Evaluate the Function</a></li>
+<li class="chapter" data-level="5.9.15" data-path="applications-of-derivatives-understanding-change-and-extremes-in-environmental-systems.html"><a href="applications-of-derivatives-understanding-change-and-extremes-in-environmental-systems.html#step-4a-interpret-the-results"><i class="fa fa-check"></i><b>5.9.15</b> Step 4a: Interpret the Results</a></li>
+<li class="chapter" data-level="5.9.16" data-path="applications-of-derivatives-understanding-change-and-extremes-in-environmental-systems.html"><a href="applications-of-derivatives-understanding-change-and-extremes-in-environmental-systems.html#summary-5"><i class="fa fa-check"></i><b>5.9.16</b> Summary</a></li>
+<li class="chapter" data-level="5.9.17" data-path="applications-of-derivatives-understanding-change-and-extremes-in-environmental-systems.html"><a href="applications-of-derivatives-understanding-change-and-extremes-in-environmental-systems.html#final-takeaways"><i class="fa fa-check"></i><b>5.9.17</b> Final Takeaways</a></li>
+</ul></li>
+<li class="chapter" data-level="5.10" data-path="applications-of-derivatives-understanding-change-and-extremes-in-environmental-systems.html"><a href="applications-of-derivatives-understanding-change-and-extremes-in-environmental-systems.html#second-derivative-sign-charts-understanding-concavity"><i class="fa fa-check"></i><b>5.10</b> Second Derivative Sign Charts: Understanding Concavity</a>
+<ul>
+<li class="chapter" data-level="5.10.1" data-path="applications-of-derivatives-understanding-change-and-extremes-in-environmental-systems.html"><a href="applications-of-derivatives-understanding-change-and-extremes-in-environmental-systems.html#what-does-the-second-derivative-tell-us"><i class="fa fa-check"></i><b>5.10.1</b> What Does the Second Derivative Tell Us?</a></li>
+<li class="chapter" data-level="5.10.2" data-path="applications-of-derivatives-understanding-change-and-extremes-in-environmental-systems.html"><a href="applications-of-derivatives-understanding-change-and-extremes-in-environmental-systems.html#step-by-step-building-a-second-derivative-sign-chart"><i class="fa fa-check"></i><b>5.10.2</b> Step-by-Step: Building a Second Derivative Sign Chart</a></li>
+<li class="chapter" data-level="5.10.3" data-path="applications-of-derivatives-understanding-change-and-extremes-in-environmental-systems.html"><a href="applications-of-derivatives-understanding-change-and-extremes-in-environmental-systems.html#what-are-inflection-points"><i class="fa fa-check"></i><b>5.10.3</b> What Are Inflection Points?</a></li>
+<li class="chapter" data-level="5.10.4" data-path="applications-of-derivatives-understanding-change-and-extremes-in-environmental-systems.html"><a href="applications-of-derivatives-understanding-change-and-extremes-in-environmental-systems.html#why-this-matters-in-environmental-modeling"><i class="fa fa-check"></i><b>5.10.4</b> Why This Matters in Environmental Modeling</a></li>
+<li class="chapter" data-level="5.10.5" data-path="applications-of-derivatives-understanding-change-and-extremes-in-environmental-systems.html"><a href="applications-of-derivatives-understanding-change-and-extremes-in-environmental-systems.html#key-takeaways-1"><i class="fa fa-check"></i><b>5.10.5</b> Key Takeaways</a></li>
+<li class="chapter" data-level="5.10.6" data-path="applications-of-derivatives-understanding-change-and-extremes-in-environmental-systems.html"><a href="applications-of-derivatives-understanding-change-and-extremes-in-environmental-systems.html#summary-table"><i class="fa fa-check"></i><b>5.10.6</b> Summary Table</a></li>
+<li class="chapter" data-level="5.10.7" data-path="applications-of-derivatives-understanding-change-and-extremes-in-environmental-systems.html"><a href="applications-of-derivatives-understanding-change-and-extremes-in-environmental-systems.html#key-takeaway-1"><i class="fa fa-check"></i><b>5.10.7</b> Key Takeaway</a></li>
+</ul></li>
+<li class="chapter" data-level="5.11" data-path="applications-of-derivatives-understanding-change-and-extremes-in-environmental-systems.html"><a href="applications-of-derivatives-understanding-change-and-extremes-in-environmental-systems.html#checking-asymptotes-interpreting-limits-and-long-term-behavior"><i class="fa fa-check"></i><b>5.11</b> Checking Asymptotes: Interpreting Limits and Long-Term Behavior</a>
+<ul>
+<li class="chapter" data-level="5.11.1" data-path="applications-of-derivatives-understanding-change-and-extremes-in-environmental-systems.html"><a href="applications-of-derivatives-understanding-change-and-extremes-in-environmental-systems.html#why-asymptotes-matter-in-environmental-systems"><i class="fa fa-check"></i><b>5.11.1</b> Why Asymptotes Matter in Environmental Systems</a></li>
+<li class="chapter" data-level="5.11.2" data-path="applications-of-derivatives-understanding-change-and-extremes-in-environmental-systems.html"><a href="applications-of-derivatives-understanding-change-and-extremes-in-environmental-systems.html#the-three-types-of-asymptotes"><i class="fa fa-check"></i><b>5.11.2</b> The Three Types of Asymptotes</a></li>
+<li class="chapter" data-level="5.11.3" data-path="applications-of-derivatives-understanding-change-and-extremes-in-environmental-systems.html"><a href="applications-of-derivatives-understanding-change-and-extremes-in-environmental-systems.html#step-by-step-how-to-check-for-asymptotes"><i class="fa fa-check"></i><b>5.11.3</b> Step-by-Step: How to Check for Asymptotes</a></li>
+<li class="chapter" data-level="5.11.4" data-path="applications-of-derivatives-understanding-change-and-extremes-in-environmental-systems.html"><a href="applications-of-derivatives-understanding-change-and-extremes-in-environmental-systems.html#visualizing-the-three-asymptote-types"><i class="fa fa-check"></i><b>5.11.4</b> Visualizing the Three Asymptote Types</a></li>
+<li class="chapter" data-level="5.11.5" data-path="applications-of-derivatives-understanding-change-and-extremes-in-environmental-systems.html"><a href="applications-of-derivatives-understanding-change-and-extremes-in-environmental-systems.html#environmental-interpretation-8"><i class="fa fa-check"></i><b>5.11.5</b> Environmental Interpretation</a></li>
+<li class="chapter" data-level="5.11.6" data-path="applications-of-derivatives-understanding-change-and-extremes-in-environmental-systems.html"><a href="applications-of-derivatives-understanding-change-and-extremes-in-environmental-systems.html#how-this-complements-derivatives"><i class="fa fa-check"></i><b>5.11.6</b> How This Complements Derivatives</a></li>
+<li class="chapter" data-level="5.11.7" data-path="applications-of-derivatives-understanding-change-and-extremes-in-environmental-systems.html"><a href="applications-of-derivatives-understanding-change-and-extremes-in-environmental-systems.html#quick-practice-reading-asymptotes-from-a-function"><i class="fa fa-check"></i><b>5.11.7</b> Quick Practice — Reading Asymptotes from a Function</a></li>
+<li class="chapter" data-level="5.11.8" data-path="applications-of-derivatives-understanding-change-and-extremes-in-environmental-systems.html"><a href="applications-of-derivatives-understanding-change-and-extremes-in-environmental-systems.html#reflection"><i class="fa fa-check"></i><b>5.11.8</b> Reflection</a></li>
+</ul></li>
+<li class="chapter" data-level="5.12" data-path="applications-of-derivatives-understanding-change-and-extremes-in-environmental-systems.html"><a href="applications-of-derivatives-understanding-change-and-extremes-in-environmental-systems.html#practice-applying-derivatives-to-real-world-change"><i class="fa fa-check"></i><b>5.12</b> Practice: Applying Derivatives to Real-World Change</a>
+<ul>
+<li class="chapter" data-level="" data-path="applications-of-derivatives-understanding-change-and-extremes-in-environmental-systems.html"><a href="applications-of-derivatives-understanding-change-and-extremes-in-environmental-systems.html#practice-a-local-vs.-global-extrema-and-increasingdecreasing-behavior"><i class="fa fa-check"></i>Practice A — Local vs. Global Extrema and Increasing/Decreasing Behavior</a></li>
+<li class="chapter" data-level="" data-path="applications-of-derivatives-understanding-change-and-extremes-in-environmental-systems.html"><a href="applications-of-derivatives-understanding-change-and-extremes-in-environmental-systems.html#practice-b-algebraic-skill-building"><i class="fa fa-check"></i>Practice B — Algebraic Skill Building</a></li>
+<li class="chapter" data-level="" data-path="applications-of-derivatives-understanding-change-and-extremes-in-environmental-systems.html"><a href="applications-of-derivatives-understanding-change-and-extremes-in-environmental-systems.html#practice-c-first-derivative-sign-chart-construction"><i class="fa fa-check"></i>Practice C — First Derivative Sign Chart Construction</a></li>
+<li class="chapter" data-level="" data-path="applications-of-derivatives-understanding-change-and-extremes-in-environmental-systems.html"><a href="applications-of-derivatives-understanding-change-and-extremes-in-environmental-systems.html#practice-d-second-derivative-and-concavity"><i class="fa fa-check"></i>Practice D — Second Derivative and Concavity</a></li>
+<li class="chapter" data-level="" data-path="applications-of-derivatives-understanding-change-and-extremes-in-environmental-systems.html"><a href="applications-of-derivatives-understanding-change-and-extremes-in-environmental-systems.html#practice-e-second-derivative-sign-charts-and-inflection-behavior"><i class="fa fa-check"></i>Practice E — Second Derivative Sign Charts and Inflection Behavior</a></li>
+<li class="chapter" data-level="5.12.1" data-path="applications-of-derivatives-understanding-change-and-extremes-in-environmental-systems.html"><a href="applications-of-derivatives-understanding-change-and-extremes-in-environmental-systems.html#reflection-1"><i class="fa fa-check"></i><b>5.12.1</b> Reflection</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="calculus-i-equation-sheet.html"><a href="calculus-i-equation-sheet.html"><i class="fa fa-check"></i>Calculus I Equation Sheet</a></li>
 <li class="chapter" data-level="" data-path="test1-review-material.html"><a href="test1-review-material.html"><i class="fa fa-check"></i>Test1 Review Material</a>
@@ -588,6 +596,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="test-2-review-material.html"><a href="test-2-review-material.html#q10-1"><i class="fa fa-check"></i>Q10</a></li>
 </ul></li>
 </ul></li>
+<li class="chapter" data-level="" data-path="more-mixed-rule-derivative-practice.html"><a href="more-mixed-rule-derivative-practice.html"><i class="fa fa-check"></i>More Mixed-Rule Derivative Practice</a>
+<ul>
+<li class="chapter" data-level="" data-path="more-mixed-rule-derivative-practice.html"><a href="more-mixed-rule-derivative-practice.html#challenge-q1-1"><i class="fa fa-check"></i>Challenge Q1</a></li>
+<li class="chapter" data-level="" data-path="more-mixed-rule-derivative-practice.html"><a href="more-mixed-rule-derivative-practice.html#challenge-q2-1"><i class="fa fa-check"></i>Challenge Q2</a></li>
+<li class="chapter" data-level="" data-path="more-mixed-rule-derivative-practice.html"><a href="more-mixed-rule-derivative-practice.html#challenge-q3-1"><i class="fa fa-check"></i>Challenge Q3</a></li>
+<li class="chapter" data-level="" data-path="more-mixed-rule-derivative-practice.html"><a href="more-mixed-rule-derivative-practice.html#challenge-q4-1"><i class="fa fa-check"></i>Challenge Q4</a></li>
+<li class="chapter" data-level="" data-path="more-mixed-rule-derivative-practice.html"><a href="more-mixed-rule-derivative-practice.html#challenge-q5-1"><i class="fa fa-check"></i>Challenge Q5</a></li>
+</ul></li>
 <li class="part"><span><b>I Workbook Chapters</b></span></li>
 <li class="chapter" data-level="6" data-path="why-calculus-workbook.html"><a href="why-calculus-workbook.html"><i class="fa fa-check"></i><b>6</b> Why Calculus Workbook</a>
 <ul>
@@ -707,7 +723,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="8.4.2" data-path="introduction-to-derivatives-workbook.html"><a href="introduction-to-derivatives-workbook.html#snapshots-vs-speed-of-change"><i class="fa fa-check"></i><b>8.4.2</b> Snapshots vs speed of change</a></li>
 <li class="chapter" data-level="8.4.3" data-path="introduction-to-derivatives-workbook.html"><a href="introduction-to-derivatives-workbook.html#spot-the-derivative-in-disguise"><i class="fa fa-check"></i><b>8.4.3</b> Spot the Derivative in Disguise</a></li>
 <li class="chapter" data-level="8.4.4" data-path="introduction-to-derivatives-workbook.html"><a href="introduction-to-derivatives-workbook.html#tell-the-story-of-the-math"><i class="fa fa-check"></i><b>8.4.4</b> Tell the Story of the Math</a></li>
-<li class="chapter" data-level="8.4.5" data-path="introduction-to-derivatives-workbook.html"><a href="introduction-to-derivatives-workbook.html#reflection"><i class="fa fa-check"></i><b>8.4.5</b> Reflection</a></li>
+<li class="chapter" data-level="8.4.5" data-path="introduction-to-derivatives-workbook.html"><a href="introduction-to-derivatives-workbook.html#reflection-2"><i class="fa fa-check"></i><b>8.4.5</b> Reflection</a></li>
 </ul></li>
 <li class="chapter" data-level="8.5" data-path="introduction-to-derivatives-workbook.html"><a href="introduction-to-derivatives-workbook.html#average-rate-of-change-1"><i class="fa fa-check"></i><b>8.5</b> Average Rate of Change</a>
 <ul>
@@ -844,7 +860,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li class="chapter" data-level="9.9.1" data-path="derivative-rules---workbook.html"><a href="derivative-rules---workbook.html#exponential-and-logarithmic-rules-general-form"><i class="fa fa-check"></i><b>9.9.1</b> Exponential and Logarithmic Rules (General Form)</a></li>
 <li class="chapter" data-level="9.9.2" data-path="derivative-rules---workbook.html"><a href="derivative-rules---workbook.html#how-to-use-this-section"><i class="fa fa-check"></i><b>9.9.2</b> How to Use This Section</a></li>
-<li class="chapter" data-level="9.9.3" data-path="derivative-rules---workbook.html"><a href="derivative-rules---workbook.html#reflection-1"><i class="fa fa-check"></i><b>9.9.3</b> Reflection</a></li>
+<li class="chapter" data-level="9.9.3" data-path="derivative-rules---workbook.html"><a href="derivative-rules---workbook.html#reflection-3"><i class="fa fa-check"></i><b>9.9.3</b> Reflection</a></li>
 </ul></li>
 <li class="chapter" data-level="9.10" data-path="derivative-rules---workbook.html"><a href="derivative-rules---workbook.html#derivative-rule-practice"><i class="fa fa-check"></i><b>9.10</b> Derivative Rule Practice</a></li>
 <li class="chapter" data-level="" data-path="derivative-rules---workbook.html"><a href="derivative-rules---workbook.html#derivative-applications-set-1-of-4"><i class="fa fa-check"></i>Derivative Applications (Set 1 of 4)</a></li>
@@ -891,6 +907,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="derivative-rules---workbook.html"><a href="derivative-rules---workbook.html#environmental-applications-logistic-growth-model"><i class="fa fa-check"></i>Environmental Applications Logistic Growth Model</a></li>
 </ul></li>
 </ul></li>
+<li class="chapter" data-level="10" data-path="applications-of-derivatives---workbook.html"><a href="applications-of-derivatives---workbook.html"><i class="fa fa-check"></i><b>10</b> Applications of Derivatives - Workbook</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
 
@@ -911,640 +928,17 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="under-construction-applications" class="section level1 hasAnchor" number="5">
-<h1><span class="header-section-number">Chapter 5</span> 🚧 Under Construction: Applications<a href="#under-construction-applications" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<div id="using-derivatives-to-find-extremes" class="section level2 hasAnchor" number="5.1">
-<h2><span class="header-section-number">5.1</span> Using Derivatives to Find Extremes<a href="under-construction-applications.html#using-derivatives-to-find-extremes" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>In environmental science, we often want to know:</p>
-<ul>
-<li>What is the <strong>maximum population</strong> an ecosystem can support?</li>
-<li>When is the <strong>lowest point</strong> of CO₂ emissions over time?</li>
-<li>At what point will a species’ <strong>growth rate slow down</strong>?</li>
-</ul>
-<p>These kinds of questions are about <strong>extrema</strong>—finding the highest or lowest values a function can take.</p>
-<p>Mathematically, these points are called <strong>maximums</strong> and <strong>minimums</strong>. Together, we call them <strong>extreme values</strong>. And calculus gives us a powerful tool to find them: the <strong>derivative</strong>.</p>
-<hr />
-</div>
-<div id="the-idea" class="section level2 hasAnchor" number="5.2">
-<h2><span class="header-section-number">5.2</span> The Idea<a href="under-construction-applications.html#the-idea" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>If a function reaches a <strong>peak</strong> or a <strong>valley</strong>, its graph changes direction. At that turning point, the <strong>slope of the tangent line is zero</strong>.</p>
-<p>So, we look for values of <span class="math inline">\(x\)</span> where:</p>
-<p><span class="math display">\[
-f&#39;(x) = 0
-\]</span></p>
-<p>These are called <strong>critical points</strong>. They are the candidates for maximums or minimums.</p>
-<hr />
-</div>
-<div id="step-by-step-finding-extrema" class="section level2 hasAnchor" number="5.3">
-<h2><span class="header-section-number">5.3</span> Step-by-Step: Finding Extrema<a href="under-construction-applications.html#step-by-step-finding-extrema" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Here’s the process we’ll use:</p>
-<ol style="list-style-type: decimal">
-<li><strong>Take the derivative</strong> of the function.</li>
-<li><strong>Find critical points</strong> by solving <span class="math inline">\(f&#39;(x) = 0\)</span>.</li>
-<li><strong>Use a first derivative sign chart</strong> and <strong>second derivative sign chart</strong> to classify each critical point as a maximum, minimum, or neither.</li>
-<li><strong>Evaluate the function</strong> at those points to find the extreme values.</li>
-</ol>
-<div id="step-1-take-the-derivative" class="section level3 hasAnchor" number="5.3.1">
-<h3><span class="header-section-number">5.3.1</span> Step 1: Take the Derivative<a href="under-construction-applications.html#step-1-take-the-derivative" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>To find extrema, our first step is to compute the <strong>derivative</strong> of the function. This derivative represents the <strong>rate of change</strong> of the quantity we’re modeling—how fast it’s increasing or decreasing at each point.</p>
-<div id="why-the-derivative" class="section level4 hasAnchor" number="5.3.1.1">
-<h4><span class="header-section-number">5.3.1.1</span> Why the Derivative?<a href="under-construction-applications.html#why-the-derivative" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<p>If we think of a graph as a hill or a valley, then:</p>
-<ul>
-<li>The <strong>slope</strong> of the function tells us whether we’re going <strong>uphill</strong> (positive slope) or <strong>downhill</strong> (negative slope).</li>
-<li>At a <strong>peak or valley</strong>, the slope <strong>flattens out</strong>. That’s why extrema occur when the derivative equals <strong>zero</strong>.</li>
-</ul>
-<p>####️ How to Differentiate</p>
-<p>To take the derivative, apply the <strong>derivative rules</strong> you’ve learned—like the <strong>power rule</strong>, <strong>sum rule</strong>, <strong>product rule</strong>, or <strong>chain rule</strong>—term by term.</p>
-<blockquote>
-<p><strong>Tip:</strong> Write your function neatly and apply rules one piece at a time. If your function involves products, quotients, or composition of functions, use the appropriate rules (Product Rule, Quotient Rule, Chain Rule).</p>
-</blockquote>
-</div>
-<div id="what-youre-looking-for" class="section level4 hasAnchor" number="5.3.1.2">
-<h4><span class="header-section-number">5.3.1.2</span> What You’re Looking For<a href="under-construction-applications.html#what-youre-looking-for" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<p>You’re not just taking the derivative for fun—you want to use it to <strong>find the points where the function might turn around</strong> (peaks and valleys). That’s what the next step is all about: solving <span class="math inline">\(f&#39;(x) = 0\)</span> to find those <strong>critical points</strong>.</p>
-</div>
-</div>
-<div id="step-2-find-the-critical-points" class="section level3 hasAnchor" number="5.3.2">
-<h3><span class="header-section-number">5.3.2</span> Step 2: Find the Critical Points<a href="under-construction-applications.html#step-2-find-the-critical-points" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Now that we have the derivative, the next step is to <strong>find the values of <span class="math inline">\(x\)</span></strong> where the slope is zero. These are called <strong>critical points</strong>—the points where the function might reach a maximum or minimum.</p>
-<div id="why-set-the-derivative-to-zero" class="section level4 hasAnchor" number="5.3.2.1">
-<h4><span class="header-section-number">5.3.2.1</span> Why Set the Derivative to Zero?<a href="under-construction-applications.html#why-set-the-derivative-to-zero" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<p>At any peak or valley on a graph, the function <strong>levels off</strong>, meaning the <strong>slope is zero</strong>. So, to find these potential extrema, we solve:</p>
-<p><span class="math display">\[
-f&#39;(x) = 0
-\]</span></p>
-<blockquote>
-<p>Critical points also occur where the derivative is <strong>undefined</strong>—like at sharp corners or cusps—but for now we’re focusing on smooth curves where the derivative exists everywhere.</p>
-</blockquote>
-<p>Depending on the complexity of the derivative, you might:</p>
-<ul>
-<li>Try <strong>factoring</strong> the expression (easiest when possible)</li>
-<li>Use the <strong>quadratic formula</strong> if the derivative is quadratic</li>
-<li>Use <strong>numerical methods</strong> or a graphing tool if algebraic solutions are tricky</li>
-</ul>
-<hr />
-</div>
-<div id="strategy-tips" class="section level4 hasAnchor" number="5.3.2.2">
-<h4><span class="header-section-number">5.3.2.2</span> Strategy Tips<a href="under-construction-applications.html#strategy-tips" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<ul>
-<li><strong>Always try factoring first</strong>. It’s often the fastest way to identify roots.</li>
-<li>If factoring fails and your equation is quadratic, use the <strong>quadratic formula</strong>:</li>
-</ul>
-<p><span class="math display">\[
-x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}
-\]</span></p>
-<ul>
-<li>If your equation is higher-degree and doesn’t factor easily, consider graphing the derivative or using numerical solvers in R, a calculator, or software like Desmos.</li>
-</ul>
-<hr />
-<p>Once you’ve found the critical points, you can analyze each one to determine whether it’s a <strong>maximum</strong>, <strong>minimum</strong>, or <strong>neither</strong>.</p>
-</div>
-</div>
-<div id="step-3-classify-each-critical-point-using-a-sign-chart" class="section level3 hasAnchor" number="5.3.3">
-<h3><span class="header-section-number">5.3.3</span> Step 3: Classify Each Critical Point Using a Sign Chart<a href="under-construction-applications.html#step-3-classify-each-critical-point-using-a-sign-chart" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>After finding the <strong>critical points</strong> (where <span class="math inline">\(f&#39;(x) = 0\)</span>), we need to determine whether each one corresponds to a <strong>local maximum</strong>, <strong>local minimum</strong>, or <strong>neither</strong>.</p>
-<p>One powerful tool for this is the <strong>first derivative sign chart</strong>. This method helps us understand how the function behaves around each critical point by analyzing whether the slope is positive or negative on either side.</p>
-<hr />
-<div id="how-to-build-a-first-derivative-sign-chart" class="section level4 hasAnchor" number="5.3.3.1">
-<h4><span class="header-section-number">5.3.3.1</span> How to Build a First Derivative Sign Chart<a href="under-construction-applications.html#how-to-build-a-first-derivative-sign-chart" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<ol style="list-style-type: decimal">
-<li><p><strong>Factor the derivative</strong>, if possible.<br />
-This makes it easier to identify where the sign changes occur.</p></li>
-<li><p><strong>Mark the critical points</strong> on a number line.<br />
-These divide the domain into intervals.</p></li>
-<li><p><strong>Choose a test value</strong> in each interval.<br />
-Plug the test value into the <strong>factored derivative</strong> to determine its sign in that interval.</p></li>
-<li><p><strong>Record the sign</strong> of the derivative in each interval.</p>
-<ul>
-<li>If the sign changes from <strong>positive to negative</strong>, the function has a <strong>local maximum</strong>.<br />
-</li>
-<li>If the sign changes from <strong>negative to positive</strong>, the function has a <strong>local minimum</strong>.<br />
-</li>
-<li>If the sign <strong>does not change</strong>, it may be a flat point or inflection point.</li>
-</ul></li>
-</ol>
-<hr />
-</div>
-<div id="what-the-signs-tell-you" class="section level4 hasAnchor" number="5.3.3.2">
-<h4><span class="header-section-number">5.3.3.2</span> What the Signs Tell You<a href="under-construction-applications.html#what-the-signs-tell-you" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<table>
-<colgroup>
-<col width="15%" />
-<col width="34%" />
-<col width="49%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>Interval</th>
-<th>Sign of <span class="math inline">\(f&#39;(x)\)</span></th>
-<th>Behavior of <span class="math inline">\(f(x)\)</span></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><span class="math inline">\(f&#39;(x) &gt; 0\)</span></td>
-<td>Positive</td>
-<td>Function is <strong>increasing</strong></td>
-</tr>
-<tr class="even">
-<td><span class="math inline">\(f&#39;(x) &lt; 0\)</span></td>
-<td>Negative</td>
-<td>Function is <strong>decreasing</strong></td>
-</tr>
-<tr class="odd">
-<td><span class="math inline">\(f&#39;(x) = 0\)</span></td>
-<td>Zero at a point</td>
-<td>Function has <strong>flat slope</strong></td>
-</tr>
-</tbody>
-</table>
-<p>By sketching this number line and labeling the behavior in each interval, we can <strong>visualize</strong> how the function is changing and pinpoint <strong>maxima</strong> and <strong>minima</strong> accurately.</p>
-<hr />
-<blockquote>
-<p><strong>Tip:</strong> Always include the sign of the leading coefficient in your analysis! It can flip the sign of the entire derivative.</p>
-</blockquote>
-</div>
-</div>
-<div id="step-4-evaluate-the-function-at-the-critical-points" class="section level3 hasAnchor" number="5.3.4">
-<h3><span class="header-section-number">5.3.4</span> Step 4: Evaluate the Function at the Critical Points<a href="under-construction-applications.html#step-4-evaluate-the-function-at-the-critical-points" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Once you’ve identified which critical points are <strong>maximums</strong> or <strong>minimums</strong>, the next step is to find the actual <strong>function values</strong> at those points. These values represent the <strong>extrema</strong>—the highest and lowest outputs of the function.</p>
-<hr />
-<div id="how-to-evaluate" class="section level4 hasAnchor" number="5.3.4.1">
-<h4><span class="header-section-number">5.3.4.1</span> How to Evaluate<a href="under-construction-applications.html#how-to-evaluate" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<p>To do this, simply substitute each critical point back into the <strong>original function</strong> (not the derivative).</p>
-<p>If your function is <span class="math inline">\(f(x)\)</span>, and your critical points are <span class="math inline">\(x = a\)</span> and <span class="math inline">\(x = b\)</span>, you compute:</p>
-<ul>
-<li><span class="math inline">\(f(a)\)</span>: the function value at the first critical point<br />
-</li>
-<li><span class="math inline">\(f(b)\)</span>: the function value at the second critical point</li>
-</ul>
-<p>Repeat this for all critical points.</p>
-<hr />
-</div>
-<div id="what-youve-learned" class="section level4 hasAnchor" number="5.3.4.2">
-<h4><span class="header-section-number">5.3.4.2</span> What You’ve Learned<a href="under-construction-applications.html#what-youve-learned" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<ul>
-<li>The value <span class="math inline">\(f(a)\)</span> tells you how high or low the function gets at <span class="math inline">\(x = a\)</span></li>
-<li>Comparing all the values lets you determine which are <strong>local minimums</strong>, <strong>local maximums</strong>, or <strong>global extremes</strong></li>
-</ul>
-<hr />
-</div>
-<div id="final-step" class="section level4 hasAnchor" number="5.3.4.3">
-<h4><span class="header-section-number">5.3.4.3</span> Final Step<a href="under-construction-applications.html#final-step" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<p>Once you’ve evaluated the function at each critical point, you can summarize the extrema as coordinate points:</p>
-<ul>
-<li><strong>Minimum</strong>: <span class="math inline">\((a, f(a))\)</span></li>
-<li><strong>Maximum</strong>: <span class="math inline">\((b, f(b))\)</span></li>
-</ul>
-<blockquote>
-<p>These coordinates give precise information about where and when a quantity reaches its highest or lowest point—critical in environmental models, economics, biology, and more.</p>
-</blockquote>
-</div>
-</div>
-</div>
-<div id="environmental-example-a-cubic-population-model" class="section level2 hasAnchor" number="5.4">
-<h2><span class="header-section-number">5.4</span> 🌱 Environmental Example: A Cubic Population Model<a href="#environmental-example-a-cubic-population-model" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Let’s investigate a population model defined by a cubic function:</p>
-<p><span class="math display">\[
-P(t) = -t^3 + 6t^2 - 9t + 20
-\]</span></p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="under-construction-applications.html#cb2-1" tabindex="-1"></a><span class="co"># Define the cubic function</span></span>
-<span id="cb2-2"><a href="under-construction-applications.html#cb2-2" tabindex="-1"></a>P <span class="ot">&lt;-</span> <span class="cf">function</span>(t) <span class="sc">-</span>t<span class="sc">^</span><span class="dv">3</span> <span class="sc">+</span> <span class="dv">6</span><span class="sc">*</span>t<span class="sc">^</span><span class="dv">2</span> <span class="sc">-</span> <span class="dv">9</span><span class="sc">*</span>t <span class="sc">+</span> <span class="dv">20</span></span>
-<span id="cb2-3"><a href="under-construction-applications.html#cb2-3" tabindex="-1"></a></span>
-<span id="cb2-4"><a href="under-construction-applications.html#cb2-4" tabindex="-1"></a><span class="co"># Plot the function</span></span>
-<span id="cb2-5"><a href="under-construction-applications.html#cb2-5" tabindex="-1"></a><span class="fu">curve</span>(<span class="fu">P</span>(x), <span class="at">from =</span> <span class="dv">0</span>, <span class="at">to =</span> <span class="dv">5</span>, </span>
-<span id="cb2-6"><a href="under-construction-applications.html#cb2-6" tabindex="-1"></a>      <span class="at">xlab =</span> <span class="st">&quot;Time (t)&quot;</span>, </span>
-<span id="cb2-7"><a href="under-construction-applications.html#cb2-7" tabindex="-1"></a>      <span class="at">ylab =</span> <span class="st">&quot;Population P(t)&quot;</span>, </span>
-<span id="cb2-8"><a href="under-construction-applications.html#cb2-8" tabindex="-1"></a>      <span class="at">main =</span> <span class="fu">expression</span>(<span class="fu">P</span>(t) <span class="sc">==</span> <span class="sc">-</span>t<span class="sc">^</span><span class="dv">3</span> <span class="sc">+</span> <span class="dv">6</span><span class="sc">*</span>t<span class="sc">^</span><span class="dv">2</span> <span class="sc">-</span> <span class="dv">9</span><span class="sc">*</span>t <span class="sc">+</span> <span class="dv">20</span>),</span>
-<span id="cb2-9"><a href="under-construction-applications.html#cb2-9" tabindex="-1"></a>      <span class="at">col =</span> <span class="st">&quot;forestgreen&quot;</span>, <span class="at">lwd =</span> <span class="dv">2</span>)</span>
-<span id="cb2-10"><a href="under-construction-applications.html#cb2-10" tabindex="-1"></a></span>
-<span id="cb2-11"><a href="under-construction-applications.html#cb2-11" tabindex="-1"></a><span class="co"># Add grid</span></span>
-<span id="cb2-12"><a href="under-construction-applications.html#cb2-12" tabindex="-1"></a><span class="fu">grid</span>()</span></code></pre></div>
-<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-8-1.png" width="80%" style="display: block; margin: auto;" /></p>
-<p>This function could represent a population that declines initially and reaches a minimum. Due to favorable conditions the population starts to increase, and then declines because of environmental stressors like competition, disease, or habitat loss.</p>
-<hr />
-<div id="step-1-find-the-first-derivative" class="section level3 hasAnchor" number="5.4.1">
-<h3><span class="header-section-number">5.4.1</span> Step 1: Find the First Derivative<a href="under-construction-applications.html#step-1-find-the-first-derivative" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>To identify when the population reaches a <strong>local maximum or minimum</strong>, we begin by finding the <strong>first derivative</strong> of the function <span class="math inline">\(P(t)\)</span>. The first derivative tells us the <strong>rate of change</strong> of the population with respect to time — in other words, whether the population is increasing or decreasing at a given moment.</p>
-<p>Our original function is:</p>
-<p><span class="math display">\[
-P(t) = -t^3 + 6t^2 - 9t + 20
-\]</span></p>
-<p>To take the derivative, apply the <strong>power rule</strong> term by term:</p>
-<ul>
-<li>The derivative of <span class="math inline">\(-t^3\)</span> is <span class="math inline">\(-3t^2\)</span></li>
-<li>The derivative of <span class="math inline">\(6t^2\)</span> is <span class="math inline">\(12t\)</span></li>
-<li>The derivative of <span class="math inline">\(-9t\)</span> is <span class="math inline">\(-9\)</span></li>
-<li>The constant term <span class="math inline">\(20\)</span> has a derivative of 0 (since constants don’t change)</li>
-</ul>
-<p>So the full derivative is:</p>
-<p><span class="math display">\[
-P&#39;(t) = -3t^2 + 12t - 9
-\]</span></p>
-</div>
-<div id="what-does-this-mean" class="section level3 hasAnchor" number="5.4.2">
-<h3><span class="header-section-number">5.4.2</span> What Does This Mean?<a href="under-construction-applications.html#what-does-this-mean" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<ul>
-<li>This new function <span class="math inline">\(P&#39;(t)\)</span> describes how fast the population is changing at any given time <span class="math inline">\(t\)</span>.</li>
-<li>If <span class="math inline">\(P&#39;(t) &gt; 0\)</span>, the population is <strong>increasing</strong>.</li>
-<li>If <span class="math inline">\(P&#39;(t) &lt; 0\)</span>, the population is <strong>decreasing</strong>.</li>
-<li>If <span class="math inline">\(P&#39;(t) = 0\)</span>, the population has a <strong>horizontal slope</strong> — which might indicate a <strong>peak (maximum)</strong> or <strong>valley (minimum)</strong>.</li>
-</ul>
-<hr />
-<blockquote>
-<p><strong>Next Step:</strong> To find the exact moments when these changes occur, we set <span class="math inline">\(P&#39;(t) = 0\)</span> and solve for <span class="math inline">\(t\)</span>. This gives us the <strong>critical points</strong> where the population may reach an extreme value.</p>
-</blockquote>
-</div>
-<div id="step-2-find-the-critical-points-1" class="section level3 hasAnchor" number="5.4.3">
-<h3><span class="header-section-number">5.4.3</span> Step 2: Find the Critical Points<a href="under-construction-applications.html#step-2-find-the-critical-points-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>To find extreme points (like maximums or minimums), we look for where the <strong>derivative equals zero</strong>. These are called <strong>critical points</strong>, and they occur where:</p>
-<ul>
-<li>The slope of the function is zero (i.e., a horizontal tangent line), or<br />
-</li>
-<li>The derivative is undefined (we’ll cover this a little later).</li>
-</ul>
-<p>We’re solving:</p>
-<p><span class="math display">\[
-P&#39;(t) = -3t^2 + 12t - 9 = 0
-\]</span></p>
-<p>This is a <strong>quadratic equation</strong>, so we can solve it by <strong>factoring</strong> or using the <strong>quadratic formula</strong>.</p>
-<div id="try-factoring-first" class="section level4 hasAnchor" number="5.4.3.1">
-<h4><span class="header-section-number">5.4.3.1</span> Try Factoring First<a href="under-construction-applications.html#try-factoring-first" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<p>We can simplify the equation by dividing both sides by <span class="math inline">\(-3\)</span>:</p>
-<p><span class="math display">\[
-t^2 - 4t + 3 = 0
-\]</span></p>
-<p>Now factor:</p>
-<p><span class="math display">\[
-(t - 1)(t - 3) = 0
-\]</span></p>
-<p>This tells us the derivative is zero at:</p>
-<p><span class="math display">\[
-t = 1 \quad \text{and} \quad t = 3
-\]</span></p>
-<p>These are our <strong>critical points</strong> — the places where the slope of the curve is zero, and the function might reach a local max or min.</p>
-<hr />
-</div>
-<div id="when-factoring-doesnt-work" class="section level4 hasAnchor" number="5.4.3.2">
-<h4><span class="header-section-number">5.4.3.2</span> When Factoring Doesn’t Work<a href="under-construction-applications.html#when-factoring-doesnt-work" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<p>Sometimes factoring is difficult or impossible. If our derivative is a quadratic equation, we use the <strong>quadratic formula</strong>:</p>
-<p><span class="math display">\[
-t = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}
-\]</span></p>
-<p>For our derivative:</p>
-<p><span class="math display">\[
-P&#39;(t) = at^2 + bt + c = -3t^2 + 12t - 9
-\]</span></p>
-<p>So:</p>
-<ul>
-<li><span class="math inline">\(a = -3\)</span></li>
-<li><span class="math inline">\(b = 12\)</span></li>
-<li><span class="math inline">\(c = -9\)</span></li>
-</ul>
-<p>Plugging into the formula:</p>
-<p><span class="math display">\[
-t = \frac{-12 \pm \sqrt{(12)^2 - 4(-3)(-9)}}{2(-3)} = \frac{-12 \pm \sqrt{144 - 108}}{-6}
-\]</span></p>
-<p><span class="math display">\[
-t = \frac{-12 \pm \sqrt{36}}{-6} = \frac{-12 \pm 6}{-6}
-\]</span></p>
-<p><span class="math display">\[
-t = 1 \quad \text{and} \quad t = 3
-\]</span></p>
-<blockquote>
-<p><strong>Key Takeaway:</strong> Whether you factor or use the quadratic formula, the goal is the same:<br />
-Find where the derivative equals zero. These points are where the original function might reach a <strong>peak or valley</strong>.</p>
-</blockquote>
-</div>
-</div>
-<div id="step-3-constructing-a-sign-chart" class="section level3 hasAnchor" number="5.4.4">
-<h3><span class="header-section-number">5.4.4</span> Step 3: Constructing a Sign Chart<a href="under-construction-applications.html#step-3-constructing-a-sign-chart" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Let’s dig deeper into how to analyze the <strong>sign</strong> of a derivative in different intervals using the factored form.</p>
-<p>When we think of a <strong>local maximum</strong> - we think of this as a high point on the function, so either side of the function would decrease from this peak. So as we approach a maxima, the slope of the function would be positive. At the maxima (the critical point), the slope goes to zero. Then as we come down of the peak, the slope of function is negative. The reverse is true for a mimima.</p>
-<p>This feature is what a sign chart takes advantage of. What we will be doing is looking at the <strong>sign</strong> of the derivative on either side of a critical point. And bsed on the the sign determine if its a max or a min.</p>
-<p>In this example we’re working with the first derivative:</p>
-<p><span class="math display">\[
-P&#39;(t) = -3(t - 1)(t - 3)
-\]</span></p>
-<p>This is already factored, which makes it easier to analyze.</p>
-<p>So the <strong>critical points</strong> are at <span class="math inline">\(t = 1\)</span> and <span class="math inline">\(t = 3\)</span>. Sketch a number line and place these critical points on the line</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="under-construction-applications.html#cb3-1" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
-<span id="cb3-2"><a href="under-construction-applications.html#cb3-2" tabindex="-1"></a></span>
-<span id="cb3-3"><a href="under-construction-applications.html#cb3-3" tabindex="-1"></a><span class="fu">ggplot</span>() <span class="sc">+</span></span>
-<span id="cb3-4"><a href="under-construction-applications.html#cb3-4" tabindex="-1"></a>  <span class="co"># Number line with arrowheads</span></span>
-<span id="cb3-5"><a href="under-construction-applications.html#cb3-5" tabindex="-1"></a>  <span class="fu">geom_segment</span>(<span class="fu">aes</span>(<span class="at">x =</span> <span class="dv">0</span>, <span class="at">xend =</span> <span class="dv">5</span>, <span class="at">y =</span> <span class="sc">-</span><span class="dv">0</span>, <span class="at">yend =</span> <span class="dv">0</span>),</span>
-<span id="cb3-6"><a href="under-construction-applications.html#cb3-6" tabindex="-1"></a>               <span class="at">arrow =</span> <span class="fu">arrow</span>(<span class="at">type =</span> <span class="st">&quot;closed&quot;</span>, <span class="at">ends =</span> <span class="st">&quot;both&quot;</span>, <span class="at">length =</span> <span class="fu">unit</span>(<span class="fl">0.15</span>, <span class="st">&quot;inches&quot;</span>)),</span>
-<span id="cb3-7"><a href="under-construction-applications.html#cb3-7" tabindex="-1"></a>               <span class="at">linewidth =</span> <span class="fl">1.2</span>) <span class="sc">+</span></span>
-<span id="cb3-8"><a href="under-construction-applications.html#cb3-8" tabindex="-1"></a>  </span>
-<span id="cb3-9"><a href="under-construction-applications.html#cb3-9" tabindex="-1"></a>  <span class="co"># Critical points</span></span>
-<span id="cb3-10"><a href="under-construction-applications.html#cb3-10" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">x =</span> <span class="dv">1</span>, <span class="at">y =</span> <span class="dv">0</span>), <span class="at">size =</span> <span class="dv">3</span>) <span class="sc">+</span></span>
-<span id="cb3-11"><a href="under-construction-applications.html#cb3-11" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">x =</span> <span class="dv">3</span>, <span class="at">y =</span> <span class="dv">0</span>), <span class="at">size =</span> <span class="dv">3</span>) <span class="sc">+</span></span>
-<span id="cb3-12"><a href="under-construction-applications.html#cb3-12" tabindex="-1"></a>  </span>
-<span id="cb3-13"><a href="under-construction-applications.html#cb3-13" tabindex="-1"></a>  <span class="co"># Labels just above the line</span></span>
-<span id="cb3-14"><a href="under-construction-applications.html#cb3-14" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">&quot;text&quot;</span>, <span class="at">x =</span> <span class="dv">1</span>, <span class="at">y =</span> <span class="fl">0.07</span>, <span class="at">label =</span> <span class="st">&quot;1 (critical point)&quot;</span>, <span class="at">hjust =</span> <span class="fl">0.5</span>) <span class="sc">+</span></span>
-<span id="cb3-15"><a href="under-construction-applications.html#cb3-15" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">&quot;text&quot;</span>, <span class="at">x =</span> <span class="dv">3</span>, <span class="at">y =</span> <span class="fl">0.07</span>, <span class="at">label =</span> <span class="st">&quot;3 (critical point)&quot;</span>, <span class="at">hjust =</span> <span class="fl">0.5</span>) <span class="sc">+</span></span>
-<span id="cb3-16"><a href="under-construction-applications.html#cb3-16" tabindex="-1"></a>  </span>
-<span id="cb3-17"><a href="under-construction-applications.html#cb3-17" tabindex="-1"></a>  <span class="co"># Interval labels just below the line</span></span>
-<span id="cb3-18"><a href="under-construction-applications.html#cb3-18" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">&quot;text&quot;</span>, <span class="at">x =</span> <span class="fl">0.5</span>, <span class="at">y =</span> <span class="sc">-</span><span class="fl">0.07</span>, <span class="at">label =</span> <span class="st">&quot;A&quot;</span>, <span class="at">color =</span> <span class="st">&quot;blue&quot;</span>) <span class="sc">+</span></span>
-<span id="cb3-19"><a href="under-construction-applications.html#cb3-19" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">&quot;text&quot;</span>, <span class="at">x =</span> <span class="dv">2</span>, <span class="at">y =</span> <span class="sc">-</span><span class="fl">0.07</span>, <span class="at">label =</span> <span class="st">&quot;B&quot;</span>, <span class="at">color =</span> <span class="st">&quot;forestgreen&quot;</span>) <span class="sc">+</span></span>
-<span id="cb3-20"><a href="under-construction-applications.html#cb3-20" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">&quot;text&quot;</span>, <span class="at">x =</span> <span class="dv">4</span>, <span class="at">y =</span> <span class="sc">-</span><span class="fl">0.07</span>, <span class="at">label =</span> <span class="st">&quot;C&quot;</span>, <span class="at">color =</span> <span class="st">&quot;red&quot;</span>) <span class="sc">+</span></span>
-<span id="cb3-21"><a href="under-construction-applications.html#cb3-21" tabindex="-1"></a>   <span class="fu">coord_cartesian</span>(<span class="at">ylim =</span> <span class="fu">c</span>(<span class="sc">-</span><span class="dv">1</span>, <span class="dv">1</span>))<span class="sc">+</span></span>
-<span id="cb3-22"><a href="under-construction-applications.html#cb3-22" tabindex="-1"></a>  <span class="fu">theme_void</span>()</span></code></pre></div>
-<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-9-1.png" width="80%" style="display: block; margin: auto;" /></p>
-<p>These divide the number line into <strong>three intervals</strong>:</p>
-<ul>
-<li>Interval A: <span class="math inline">\((-\infty, 1)\)</span></li>
-<li>Interval B: <span class="math inline">\((1, 3)\)</span></li>
-<li>Interval C: <span class="math inline">\((3, \infty)\)</span></li>
-</ul>
-<hr />
-<div id="choose-test-point" class="section level4 hasAnchor" number="5.4.4.1">
-<h4><span class="header-section-number">5.4.4.1</span> Choose Test Point*<a href="under-construction-applications.html#choose-test-point" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<p>For each interval, pick a <strong>test value</strong> (any number in the interval) and substitute it into each factor to determine the sign.</p>
-<p>Let’s use:</p>
-<ul>
-<li><span class="math inline">\(t = 0\)</span> for Interval A</li>
-<li><span class="math inline">\(t = 2\)</span> for Interval B</li>
-<li><span class="math inline">\(t = 4\)</span> for Interval C</li>
-</ul>
-<hr />
-</div>
-</div>
-<div id="step-by-step-sign-analysis" class="section level3 hasAnchor" number="5.4.5">
-<h3><span class="header-section-number">5.4.5</span> Step-by-Step Sign Analysis<a href="under-construction-applications.html#step-by-step-sign-analysis" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<table>
-<colgroup>
-<col width="7%" />
-<col width="8%" />
-<col width="9%" />
-<col width="9%" />
-<col width="15%" />
-<col width="15%" />
-<col width="15%" />
-<col width="18%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>Interval</th>
-<th>Test Point</th>
-<th><span class="math inline">\(t - 1\)</span></th>
-<th><span class="math inline">\(t - 3\)</span></th>
-<th>Product of Factors</th>
-<th>Multiply by <span class="math inline">\(-3\)</span></th>
-<th>Sign of <span class="math inline">\(P&#39;(t)\)</span></th>
-<th>Behavior of <span class="math inline">\(P(t)\)</span></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><span class="math inline">\(t &lt; 1\)</span></td>
-<td>0</td>
-<td><span class="math inline">\(-1\)</span></td>
-<td><span class="math inline">\(-3\)</span></td>
-<td><span class="math inline">\((+)\)</span></td>
-<td><span class="math inline">\(-\)</span></td>
-<td><strong>Negative</strong></td>
-<td><strong>Decreasing</strong></td>
-</tr>
-<tr class="even">
-<td><span class="math inline">\(1 &lt; t &lt; 3\)</span></td>
-<td>2</td>
-<td><span class="math inline">\(+1\)</span></td>
-<td><span class="math inline">\(-1\)</span></td>
-<td><span class="math inline">\(-\)</span></td>
-<td><span class="math inline">\(+\)</span></td>
-<td><strong>Positive</strong></td>
-<td><strong>Increasing</strong></td>
-</tr>
-<tr class="odd">
-<td><span class="math inline">\(t &gt; 3\)</span></td>
-<td>4</td>
-<td><span class="math inline">\(+3\)</span></td>
-<td><span class="math inline">\(+1\)</span></td>
-<td><span class="math inline">\(+\)</span></td>
-<td><span class="math inline">\(-\)</span></td>
-<td><strong>Negative</strong></td>
-<td><strong>Decreasing</strong></td>
-</tr>
-</tbody>
-</table>
-<div id="how-the-signs-work" class="section level4 hasAnchor" number="5.4.5.1">
-<h4><span class="header-section-number">5.4.5.1</span> How the Signs Work<a href="under-construction-applications.html#how-the-signs-work" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<p>For <span class="math inline">\(P&#39;(t) = -3(t - 1)(t - 3)\)</span>:</p>
-<ol style="list-style-type: decimal">
-<li><strong>Evaluate each factor</strong> at the test point:
-<ul>
-<li>For example, at <span class="math inline">\(t = 0\)</span>, <span class="math inline">\(t - 1 = -1\)</span>, <span class="math inline">\(t - 3 = -3\)</span></li>
-</ul></li>
-<li><strong>Determine the sign</strong> of each factor:
-<ul>
-<li>Two negative numbers multiplied give a <strong>positive</strong></li>
-</ul></li>
-<li><strong>Include the leading coefficient</strong>:
-<ul>
-<li>We have a <strong>-3</strong> multiplied by the product of the factors.</li>
-<li>So, <span class="math inline">\(-3 \cdot (+) = -\)</span>, meaning the derivative is <strong>negative</strong></li>
-</ul></li>
-<li><strong>Interpret</strong>:
-<ul>
-<li>A <strong>negative derivative</strong> means the original function <span class="math inline">\(P(t)\)</span> is <strong>decreasing</strong></li>
-<li>A <strong>positive derivative</strong> means it is <strong>increasing</strong></li>
-</ul></li>
-</ol>
-</div>
-<div id="interpret-the-chart" class="section level4 hasAnchor" number="5.4.5.2">
-<h4><span class="header-section-number">5.4.5.2</span> Interpret the Chart<a href="under-construction-applications.html#interpret-the-chart" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<ul>
-<li><p><strong>At <span class="math inline">\(t = 1\)</span></strong>:<br />
-The function switches from <strong>decreasing to increasing</strong>, so this is a <strong>local minimum</strong>.</p></li>
-<li><p><strong>At <span class="math inline">\(t = 3\)</span></strong>:<br />
-The function switches from <strong>increasing to decreasing</strong>, so this is a <strong>local maximum</strong>.</p></li>
-</ul>
-<hr />
-</div>
-</div>
-<div id="step-4-evaluate-the-function" class="section level3 hasAnchor" number="5.4.6">
-<h3><span class="header-section-number">5.4.6</span> Step 4: Evaluate the Function<a href="under-construction-applications.html#step-4-evaluate-the-function" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Now that we’ve identified the critical points at <span class="math inline">\(t = 1\)</span> and <span class="math inline">\(t = 3\)</span>, we can find the population values at those times by plugging them into the original function:</p>
-<p><span class="math display">\[
-P(t) = -t^3 + 6t^2 - 9t + 20
-\]</span></p>
-<div id="at-t-1" class="section level4 hasAnchor" number="5.4.6.1">
-<h4><span class="header-section-number">5.4.6.1</span> At <span class="math inline">\(t = 1\)</span>:<a href="under-construction-applications.html#at-t-1" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<p><span class="math display">\[
-P(1) = -(1)^3 + 6(1)^2 - 9(1) + 20 = -1 + 6 - 9 + 20 = 16
-\]</span></p>
-</div>
-<div id="at-t-3" class="section level4 hasAnchor" number="5.4.6.2">
-<h4><span class="header-section-number">5.4.6.2</span> At <span class="math inline">\(t = 3\)</span>:<a href="under-construction-applications.html#at-t-3" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<p><span class="math display">\[
-P(3) = -(3)^3 + 6(3)^2 - 9(3) + 20 = -27 + 54 - 27 + 20 = 20
-\]</span></p>
-<hr />
-<p>So:</p>
-<ul>
-<li><span class="math inline">\((1, 16)\)</span> is a <strong>local minimum</strong><br />
-</li>
-<li><span class="math inline">\((3, 20)\)</span> is a <strong>local maximum</strong></li>
-</ul>
-<hr />
-<p>Now let’s update the plot to reflect this, with:</p>
-<ul>
-<li>Dashed <strong>horizontal lines</strong> showing the population value at each critical point<br />
-</li>
-<li><strong>Labels</strong> showing the full <span class="math inline">\((t, P(t))\)</span> coordinates</li>
-</ul>
-<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="under-construction-applications.html#cb4-1" tabindex="-1"></a>P <span class="ot">&lt;-</span> <span class="cf">function</span>(t) <span class="sc">-</span>t<span class="sc">^</span><span class="dv">3</span> <span class="sc">+</span> <span class="dv">6</span><span class="sc">*</span>t<span class="sc">^</span><span class="dv">2</span> <span class="sc">-</span> <span class="dv">9</span><span class="sc">*</span>t <span class="sc">+</span> <span class="dv">20</span></span>
-<span id="cb4-2"><a href="under-construction-applications.html#cb4-2" tabindex="-1"></a></span>
-<span id="cb4-3"><a href="under-construction-applications.html#cb4-3" tabindex="-1"></a><span class="fu">curve</span>(<span class="fu">P</span>(x), <span class="at">from =</span> <span class="dv">0</span>, <span class="at">to =</span> <span class="dv">5</span>, <span class="at">ylim =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">25</span>), <span class="at">col =</span> <span class="st">&quot;forestgreen&quot;</span>, <span class="at">lwd =</span> <span class="dv">2</span>,</span>
-<span id="cb4-4"><a href="under-construction-applications.html#cb4-4" tabindex="-1"></a>      <span class="at">xlab =</span> <span class="st">&quot;Time (t)&quot;</span>, <span class="at">ylab =</span> <span class="st">&quot;Population P(t)&quot;</span>,</span>
-<span id="cb4-5"><a href="under-construction-applications.html#cb4-5" tabindex="-1"></a>      <span class="at">main =</span> <span class="st">&quot;Cubic Model with Extrema&quot;</span>)</span>
-<span id="cb4-6"><a href="under-construction-applications.html#cb4-6" tabindex="-1"></a></span>
-<span id="cb4-7"><a href="under-construction-applications.html#cb4-7" tabindex="-1"></a><span class="co"># Critical point coordinates</span></span>
-<span id="cb4-8"><a href="under-construction-applications.html#cb4-8" tabindex="-1"></a>t1 <span class="ot">&lt;-</span> <span class="dv">1</span></span>
-<span id="cb4-9"><a href="under-construction-applications.html#cb4-9" tabindex="-1"></a>t2 <span class="ot">&lt;-</span> <span class="dv">3</span></span>
-<span id="cb4-10"><a href="under-construction-applications.html#cb4-10" tabindex="-1"></a>P1 <span class="ot">&lt;-</span> <span class="fu">P</span>(t1)</span>
-<span id="cb4-11"><a href="under-construction-applications.html#cb4-11" tabindex="-1"></a>P2 <span class="ot">&lt;-</span> <span class="fu">P</span>(t2)</span>
-<span id="cb4-12"><a href="under-construction-applications.html#cb4-12" tabindex="-1"></a></span>
-<span id="cb4-13"><a href="under-construction-applications.html#cb4-13" tabindex="-1"></a><span class="co"># Mark critical points</span></span>
-<span id="cb4-14"><a href="under-construction-applications.html#cb4-14" tabindex="-1"></a><span class="fu">points</span>(t1, P1, <span class="at">pch =</span> <span class="dv">19</span>, <span class="at">col =</span> <span class="st">&quot;blue&quot;</span>)</span>
-<span id="cb4-15"><a href="under-construction-applications.html#cb4-15" tabindex="-1"></a><span class="fu">points</span>(t2, P2, <span class="at">pch =</span> <span class="dv">19</span>, <span class="at">col =</span> <span class="st">&quot;red&quot;</span>)</span>
-<span id="cb4-16"><a href="under-construction-applications.html#cb4-16" tabindex="-1"></a></span>
-<span id="cb4-17"><a href="under-construction-applications.html#cb4-17" tabindex="-1"></a><span class="co"># Dashed horizontal lines at population values</span></span>
-<span id="cb4-18"><a href="under-construction-applications.html#cb4-18" tabindex="-1"></a><span class="fu">abline</span>(<span class="at">h =</span> <span class="fu">c</span>(P1, P2), <span class="at">lty =</span> <span class="dv">2</span>, <span class="at">col =</span> <span class="st">&quot;gray60&quot;</span>)</span>
-<span id="cb4-19"><a href="under-construction-applications.html#cb4-19" tabindex="-1"></a></span>
-<span id="cb4-20"><a href="under-construction-applications.html#cb4-20" tabindex="-1"></a><span class="co"># Dashed vertical lines at t-values</span></span>
-<span id="cb4-21"><a href="under-construction-applications.html#cb4-21" tabindex="-1"></a><span class="fu">abline</span>(<span class="at">v =</span> <span class="fu">c</span>(t1, t2), <span class="at">lty =</span> <span class="dv">2</span>, <span class="at">col =</span> <span class="st">&quot;gray70&quot;</span>)</span>
-<span id="cb4-22"><a href="under-construction-applications.html#cb4-22" tabindex="-1"></a></span>
-<span id="cb4-23"><a href="under-construction-applications.html#cb4-23" tabindex="-1"></a><span class="co"># Labels</span></span>
-<span id="cb4-24"><a href="under-construction-applications.html#cb4-24" tabindex="-1"></a><span class="fu">text</span>(t1, P1 <span class="sc">+</span> <span class="fl">1.5</span>, <span class="at">labels =</span> <span class="st">&quot;Local Min</span><span class="sc">\n</span><span class="st">(1, 16)&quot;</span>, <span class="at">col =</span> <span class="st">&quot;blue&quot;</span>, <span class="at">pos =</span> <span class="dv">3</span>)</span>
-<span id="cb4-25"><a href="under-construction-applications.html#cb4-25" tabindex="-1"></a><span class="fu">text</span>(t2, P2 , <span class="at">labels =</span> <span class="st">&quot;Local Max</span><span class="sc">\n</span><span class="st">(3, 20)&quot;</span>, <span class="at">col =</span> <span class="st">&quot;red&quot;</span>, <span class="at">pos =</span> <span class="dv">3</span>)</span></code></pre></div>
-<p><img src="bookdown-demo_files/figure-html/cubic-extrema-plot-1.png" width="80%" style="display: block; margin: auto;" /></p>
-</div>
-</div>
-<div id="final-takeaways" class="section level3 hasAnchor" number="5.4.7">
-<h3><span class="header-section-number">5.4.7</span> Final Takeaways<a href="under-construction-applications.html#final-takeaways" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<ul>
-<li><strong>Use the factored form</strong> of the derivative—it makes sign analysis much easier.</li>
-<li><strong>Pick one value per interval</strong> to test—this is enough to determine the sign throughout that interval.</li>
-<li><strong>Include the leading coefficient</strong> in your sign analysis—it can flip the sign of the whole expression!</li>
-<li>The sign of <span class="math inline">\(P&#39;(t)\)</span> tells you whether the original function <span class="math inline">\(P(t)\)</span> is increasing or decreasing in that interval.</li>
-</ul>
-<p>The first derivative sign chart helps us identify what type of a extreme value (max or min) we have at the critical points.</p>
-<hr />
-<p>##Second Derivative Sign Charts: Understanding Concavity</p>
-<p>Just like the <strong>first derivative</strong> tells us whether a function is increasing or decreasing, the <strong>second derivative</strong> tells us about the <em>curvature</em> of the function—also known as <strong>concavity</strong>.</p>
-<hr />
-</div>
-<div id="what-does-the-second-derivative-tell-us" class="section level3 hasAnchor" number="5.4.8">
-<h3><span class="header-section-number">5.4.8</span> What Does the Second Derivative Tell Us?<a href="under-construction-applications.html#what-does-the-second-derivative-tell-us" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>If we think of the graph of a function as a hilly landscape:</p>
-<ul>
-<li><p><strong>Concave Up</strong>: Looks like a valley (opens upward)<br />
-→ The slope is increasing<br />
-→ The second derivative is <strong>positive</strong></p></li>
-<li><p><strong>Concave Down</strong>: Looks like a hill (opens downward)<br />
-→ The slope is decreasing<br />
-→ The second derivative is <strong>negative</strong></p></li>
-</ul>
-<p>The second derivative tells us how the <strong>rate of change is changing</strong>.</p>
-<hr />
-</div>
-<div id="how-to-use-a-second-derivative-sign-chart" class="section level3 hasAnchor" number="5.4.9">
-<h3><span class="header-section-number">5.4.9</span> How to Use a Second Derivative Sign Chart<a href="under-construction-applications.html#how-to-use-a-second-derivative-sign-chart" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>We follow similar steps as the first derivative sign chart, but with <span class="math inline">\(f&#39;&#39;(x)\)</span>:</p>
-<ol style="list-style-type: decimal">
-<li><strong>Take the second derivative</strong> of the function: <span class="math inline">\(f&#39;&#39;(x)\)</span></li>
-<li><strong>Set <span class="math inline">\(f&#39;&#39;(x) = 0\)</span></strong> and solve to find <strong>possible inflection points</strong></li>
-<li><strong>Plot those values</strong> on a number line</li>
-<li><strong>Pick test points</strong> in each interval to determine the sign of <span class="math inline">\(f&#39;&#39;(x)\)</span></li>
-<li>Use the sign chart to determine <strong>concavity</strong>:
-<ul>
-<li><span class="math inline">\(f&#39;&#39;(x) &gt; 0\)</span>: concave up</li>
-<li><span class="math inline">\(f&#39;&#39;(x) &lt; 0\)</span>: concave down</li>
-</ul></li>
-</ol>
-</div>
-</div>
-<div id="the-procedure-is-identical-to-that-of-the-first-derivative-sign-chart.-the-difference-is-in-the-interpreation-of-the-signs.-the-second-derivative-sign-chart-helps-us-determine-information-about-the-functions-convavity." class="section level2 hasAnchor" number="5.5">
-<h2><span class="header-section-number">5.5</span> The procedure is identical to that of the first derivative sign chart. The difference is in the interpreation of the signs. The second derivative sign chart helps us determine information about the functions convavity.<a href="under-construction-applications.html#the-procedure-is-identical-to-that-of-the-first-derivative-sign-chart.-the-difference-is-in-the-interpreation-of-the-signs.-the-second-derivative-sign-chart-helps-us-determine-information-about-the-functions-convavity." class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<div id="what-are-inflection-points" class="section level3 hasAnchor" number="5.5.1">
-<h3><span class="header-section-number">5.5.1</span> What Are Inflection Points?<a href="under-construction-applications.html#what-are-inflection-points" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>An <strong>inflection point</strong> is where the function changes concavity—from concave up to concave down or vice versa.<br />
-These occur where the second derivative <strong>changes sign</strong>.</p>
-<blockquote>
-<p>Note: Not every point where <span class="math inline">\(f&#39;&#39;(x) = 0\)</span> is an inflection point. The sign must actually <strong>change</strong> on either side.</p>
-</blockquote>
-<hr />
-<p>####What Can We Learn?</p>
-<ul>
-<li><strong>Where the function bends up or down</strong></li>
-<li><strong>Where the graph changes shape</strong> (inflection points)</li>
-<li><strong>How curvature affects the behavior of the system</strong></li>
-</ul>
-<p>In environmental modeling, this helps us:</p>
-<ul>
-<li>Understand when population growth is <strong>accelerating or decelerating</strong></li>
-<li>Detect <strong>turning points in resource usage</strong></li>
-<li>Identify <strong>shifts in environmental trends</strong></li>
-</ul>
-<hr />
-<div id="summary-5" class="section level4 hasAnchor" number="5.5.1.1">
-<h4><span class="header-section-number">5.5.1.1</span> Summary<a href="under-construction-applications.html#summary-5" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<table>
-<colgroup>
-<col width="13%" />
-<col width="24%" />
-<col width="20%" />
-<col width="42%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>Interval</th>
-<th><span class="math inline">\(f&#39;&#39;(x)\)</span> Sign</th>
-<th>Concavity</th>
-<th>Interpretation</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><span class="math inline">\(x &lt; a\)</span></td>
-<td><span class="math inline">\(&gt; 0\)</span></td>
-<td>Concave Up</td>
-<td>Slope is increasing</td>
-</tr>
-<tr class="even">
-<td><span class="math inline">\(x = a\)</span></td>
-<td>0 (possible IP)</td>
-<td>—</td>
-<td>Candidate for inflection point</td>
-</tr>
-<tr class="odd">
-<td><span class="math inline">\(x &gt; a\)</span></td>
-<td><span class="math inline">\(&lt; 0\)</span></td>
-<td>Concave Down</td>
-<td>Slope is decreasing</td>
-</tr>
-</tbody>
-</table>
-<p>Use this analysis to <strong>combine with the first derivative</strong> for a complete picture of the function’s behavior.</p>
-<hr />
-</div>
-</div>
-</div>
-<div id="optimizaiton" class="section level2 hasAnchor" number="5.6">
-<h2><span class="header-section-number">5.6</span> Optimizaiton<a href="under-construction-applications.html#optimizaiton" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="applications-of-derivatives---workbook" class="section level1 hasAnchor" number="10">
+<h1><span class="header-section-number">Chapter 10</span> Applications of Derivatives - Workbook<a href="applications-of-derivatives---workbook.html#applications-of-derivatives---workbook" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 
-</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="derivative-rules.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="calculus-i-equation-sheet.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="derivative-rules---workbook.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -1575,7 +969,7 @@ gitbook.start({
     "size": 2
   },
   "edit": {
-    "link": "https://github.com/rstudio/bookdown-demo/edit/master/08-application.Rmd",
+    "link": "https://github.com/rstudio/bookdown-demo/edit/master/105-Applications_WB.Rmd",
     "text": "Edit"
   },
   "history": {

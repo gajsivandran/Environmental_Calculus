@@ -2170,3 +2170,240 @@ F'(x)=\frac{f'g-fg'}{g^{2}}
 \]
 
 </details>
+
+# More Mixed-Rule Derivative Practice {-}
+
+**Instructions.** For each function, find \(f'(x)\) **without simplifying**.  
+Assume \(y=y(x)\) (implicit differentiation when needed).  
+Click to reveal each step of the structured solution.
+
+---
+
+### Challenge Q1 {-}
+\[
+f_1(x)=\frac{(x+y^2)\,e^{\cos(xy)}}{1+x^2}.
+\]
+
+<details>
+<summary><strong>Step 1</strong></summary>
+
+\[
+N(x)=(x+y^2)e^{\cos(xy)},\qquad D(x)=1+x^2.
+\]
+\[
+f_1'(x)=\frac{D(x)N'(x)-N(x)D'(x)}{[D(x)]^2}.
+\]
+</details>
+
+<details>
+<summary><strong>Step 2</strong></summary>
+
+\[
+A(x)=x+y^2,\quad A'(x)=1+2y\,y',\qquad
+B(x)=e^{\cos(xy)},\quad B'(x)=e^{\cos(xy)}(-\sin(xy))(y+x\,y').
+\]
+\[
+N'(x)=(1+2y\,y')e^{\cos(xy)}+(x+y^2)e^{\cos(xy)}[-\sin(xy)](y+x\,y').
+\]
+</details>
+
+<details>
+<summary><strong>Step 3</strong></summary>
+
+\[
+D'(x)=2x.
+\]
+</details>
+
+<details>
+<summary><strong>Step 4</strong></summary>
+
+\[
+\boxed{f_1'(x)=
+\frac{(1+x^2)\!\left[(1+2y\,y')e^{\cos(xy)}+(x+y^2)e^{\cos(xy)}[-\sin(xy)](y+x\,y')\right]
+-2x(x+y^2)e^{\cos(xy)}}{(1+x^2)^2}}.
+\]
+</details>
+
+---
+
+### Challenge Q2 {-}
+\[
+f_2(x)=(x^2+y)\,\sin(\ln(1+xy)).
+\]
+
+<details>
+<summary><strong>Step 1</strong></summary>
+
+\[
+f_2(x)=A(x)\,B(x),\quad A(x)=x^2+y,\; B(x)=\sin(\ln(1+xy)).
+\]
+\[
+f_2'(x)=A'(x)B(x)+A(x)B'(x).
+\]
+</details>
+
+<details>
+<summary><strong>Step 2</strong></summary>
+
+\[
+A'(x)=2x+y'.
+\]
+\[
+B'(x)=\cos(\ln(1+xy))\cdot\frac{1}{1+xy}\cdot(y+x\,y')
+=\frac{\cos(\ln(1+xy))(y+x\,y')}{1+xy}.
+\]
+</details>
+
+<details>
+<summary><strong>Step 3</strong></summary>
+
+\[
+\boxed{f_2'(x)=(2x+y')\sin(\ln(1+xy))
++(x^2+y)\frac{\cos(\ln(1+xy))(y+x\,y')}{1+xy}}.
+\]
+</details>
+
+---
+
+### Challenge Q3 {-}
+\[
+f_3(x)=\frac{\ln(x+y)\,e^{xy}}{\cos y}.
+\]
+
+<details>
+<summary><strong>Step 1</strong></summary>
+
+\[
+N(x)=\ln(x+y)e^{xy},\quad D(x)=\cos y.
+\]
+\[
+f_3'(x)=\frac{D(x)N'(x)-N(x)D'(x)}{[D(x)]^2}.
+\]
+</details>
+
+<details>
+<summary><strong>Step 2</strong></summary>
+
+\[
+A(x)=\ln(x+y),\; A'(x)=\frac{1+y'}{x+y},\quad
+B(x)=e^{xy},\; B'(x)=e^{xy}(y+x\,y').
+\]
+\[
+N'(x)=A'(x)B(x)+A(x)B'(x)
+=\frac{1+y'}{x+y}e^{xy}+\ln(x+y)e^{xy}(y+x\,y').
+\]
+</details>
+
+<details>
+<summary><strong>Step 3</strong></summary>
+
+\[
+D'(x)=-\sin y\,y'.
+\]
+</details>
+
+<details>
+<summary><strong>Step 4</strong></summary>
+
+\[
+\boxed{f_3'(x)=
+\frac{\cos y\!\left[\frac{1+y'}{x+y}e^{xy}+\ln(x+y)e^{xy}(y+x\,y')\right]
++\sin y\,y'\ln(x+y)e^{xy}}{(\cos y)^2}}.
+\]
+</details>
+
+---
+
+### Challenge Q4 {-}
+\[
+f_4(x)=e^{y}\cdot\frac{x+\sin(xy)}{1+y^2}.
+\]
+
+<details>
+<summary><strong>Step 1</strong></summary>
+
+\[
+f_4(x)=P(x)\,Q(x),\quad P(x)=e^{y},\quad Q(x)=\frac{x+\sin(xy)}{1+y^2}.
+\]
+\[
+f_4'(x)=P'(x)Q(x)+P(x)Q'(x).
+\]
+</details>
+
+<details>
+<summary><strong>Step 2</strong></summary>
+
+\[
+P'(x)=e^{y}y'.
+\]
+\[
+Q(x)=\frac{R(x)}{S(x)},\quad R(x)=x+\sin(xy),\; S(x)=1+y^2.
+\]
+\[
+R'(x)=1+\cos(xy)(y+x\,y'),\quad S'(x)=2y\,y'.
+\]
+\[
+Q'(x)=\frac{R'S-RS'}{S^2}
+=\frac{(1+\cos(xy)(y+x\,y'))(1+y^2)-(x+\sin(xy))(2y\,y')}{(1+y^2)^2}.
+\]
+</details>
+
+<details>
+<summary><strong>Step 3</strong></summary>
+
+\[
+\boxed{f_4'(x)=
+e^{y}y'\frac{x+\sin(xy)}{1+y^2}
++e^{y}\frac{(1+\cos(xy)(y+x\,y'))(1+y^2)-(x+\sin(xy))(2y\,y')}{(1+y^2)^2}}.
+\]
+</details>
+
+---
+
+### Challenge Q5 {-}
+\[
+f_5(x)=\frac{(x^2+1)\tan(xy)}{e^{x+y}}.
+\]
+
+<details>
+<summary><strong>Step 1</strong></summary>
+
+\[
+N(x)=(x^2+1)\tan(xy),\quad D(x)=e^{x+y}.
+\]
+\[
+f_5'(x)=\frac{D(x)N'(x)-N(x)D'(x)}{[D(x)]^2}.
+\]
+</details>
+
+<details>
+<summary><strong>Step 2</strong></summary>
+
+\[
+A(x)=x^2+1,\; A'(x)=2x,\quad
+B(x)=\tan(xy),\; B'(x)=\sec^2(xy)(y+x\,y').
+\]
+\[
+N'(x)=2x\tan(xy)+(x^2+1)\sec^2(xy)(y+x\,y').
+\]
+</details>
+
+<details>
+<summary><strong>Step 3</strong></summary>
+
+\[
+D'(x)=e^{x+y}(1+y').
+\]
+</details>
+
+<details>
+<summary><strong>Step 4</strong></summary>
+
+\[
+\boxed{f_5'(x)=
+\frac{e^{x+y}\!\left[2x\tan(xy)+(x^2+1)\sec^2(xy)(y+x\,y')\right]
+-(x^2+1)\tan(xy)e^{x+y}(1+y')}{(e^{x+y})^2}}.
+\]
+</details>
+
