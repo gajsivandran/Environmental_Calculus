@@ -349,9 +349,124 @@ Use this table to connect the **sign of \( P''(t) \)** with system behavior.
    - Where might you expect **maxima**, **minima**, and **inflection points** to occur?  
    - What could each tell you about system resilience or change?  
 
-> **Big Takeaway:**  
+> **Big Takeaway:**   
 > - \( f'(x) \) shows **how fast** something changes.  
 > - \( f''(x) \) shows **how that rate** itself changes.  
 > - Together, they reveal whether a system is **accelerating, stabilizing, or reversing** — the mathematical fingerprints of environmental balance.
 
 :::
+
+
+\newpage
+
+## Sign Chart Practice Worksheet  
+**Goal:** Practice creating **first** and **second derivative sign charts** for both original functions and their derivatives — learning to infer how a system behaves from either starting point.
+
+Each part contains **two examples**: 
+
+- One where you start from the **original function \( f(x) \)**.  
+- One where you start directly from the **derivative \( f'(x) \)**.
+
+---
+
+\newpage
+
+### Part 1 — Polynomial Patterns
+
+#### A. Start from \( f(x) \){-}
+Given \( f(x) = x^3 - 3x^2 \):  
+1. Compute \( f'(x) \) and \( f''(x) \).  
+2. Construct **first** and **second derivative sign charts**.  
+3. Identify intervals of increase/decrease and concave up/down.  
+4. Sketch \( f(x) \) using your charts — label local extrema and inflection points.
+
+\newpage
+
+#### B. Start from \( f'(x) \){-}
+Given \( f'(x) = 2x(3-x) \):  
+1. Identify critical points where \( f'(x) = 0 \).  
+2. Construct **first** and **second derivative sign charts**.  
+3. Identify intervals of increase/decrease and concave up/down.  
+4. Sketch \( f(x) \) using your charts — label local extrema and inflection points.
+
+**Reflection:**  
+How do the two examples connect?  
+If you only know \( f'(x) \), what key features of \( f(x) \) can you still determine?
+
+---
+
+\newpage
+
+### Part 2 — Factored Derivatives and Flat Points
+
+#### A. Start from \( f(x) \) {-}
+Given \( f(x) = -x^3 + 3x^2 + 4x \):  
+1. Compute \( f'(x) \) and factor it.  
+2. Build a **first derivative sign chart** and find where slope changes sign.  
+3. Compute \( f''(x) \) to locate concavity changes.  
+4. Identify local maxima, minima, and inflection points.
+
+\newpage
+
+#### B. Start from \( f'(x) \) {-}
+Given \( f'(x) = -3(x - 1)(x + 2)^2 \):  
+1. Create a **sign chart** for \( f'(x) \).  
+2. Build a **first derivative sign chart** and find where slope changes sign.  
+3. Compute \( f''(x) \) to locate concavity changes.  
+4. Identify local maxima, minima, and inflection points.
+
+**Think about it:**  
+How does a **repeated factor** like \((x+2)^2\) affect whether \( f(x) \) actually rises or falls around that point?
+
+---
+
+\newpage
+
+### Part 3 — Exponential Behavior
+
+#### A. Start from \( f(x) \){-}
+Given \( f(x) = e^x(x - 2) \):  
+1. Compute \( f'(x) \) and \( f''(x) \).  
+2. Use **sign charts** to find where the function is increasing, decreasing, concave up, or concave down.  
+3. Sketch the overall shape of \( f(x) \) and describe its long-term trend.
+
+
+---
+
+\newpage
+
+### Part 4 — Undefined Derivatives and Asymptotes
+
+#### A. Start from \( f(x) \){-}
+Given \( f(x) = \frac{x}{x - 1} \):  
+1. Compute \( f'(x) \) and \( f''(x) \).  
+2. Identify points where the derivative is **undefined** or changes sign.  
+3. Construct **sign charts** for both derivatives.  
+4. Sketch \( f(x) \), marking asymptotes and concavity regions.
+
+\newpage
+
+#### B. Start from \( f'(x) \){-}
+Given \( f'(x) = \frac{e^x(x^2 - 4)}{x - 2} \):  
+1. Find critical and undefined points.  
+2. Build a **first derivative sign chart** showing slope behavior.  
+3. Sketch a possible \( f(x) \) consistent with that derivative’s pattern.
+
+**Questions to guide you:**  
+
+- How does an **undefined derivative** signal a boundary or asymptote?  
+- Can \( f(x) \) still have a local extremum near such a point?
+    
+---
+
+\newpage
+
+### Reflection — From Slopes to Shapes
+
+1. How does starting from \( f(x) \) vs. \( f'(x) \) change your reasoning process?  
+2. Which features can you reliably infer from \( f'(x) \) alone — and which require \( f''(x) \)?  
+3. In environmental contexts, what might local maxima, minima, and inflection points represent ?  
+
+
+---
+

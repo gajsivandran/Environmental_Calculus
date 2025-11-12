@@ -1348,40 +1348,37 @@ Examples:
 - The **second derivative** tells us how that rising or falling **bends** — whether it’s speeding up or slowing down.  
 - Together, they give a **complete picture** of a system’s behavior: when it’s growing, when it’s stabilizing, and when it’s beginning to turn.
 
+
 ## Checking Asymptotes: Interpreting Limits and Long-Term Behavior
 
-As we’ve seen, derivatives help us understand how a function **changes** — when it rises or falls, where it bends, and how quickly those changes happen.  
-But some of the most important insights come from asking what happens **beyond** the range of normal behavior — as \( x \) becomes very large, very small, or approaches values where the function might “blow up.”  
+Derivatives tell us how a function **changes** — where it rises, falls, or bends.  
+But to understand the **boundaries** of a system — what happens far into the future, or near values where behavior “blows up” — we turn to **asymptotes** and **limits**.
 
-These features, called **asymptotes**, describe how a system behaves at its **boundaries** — either far into the future, under extreme conditions, or near critical thresholds where the function is undefined.
+Asymptotes describe how a system behaves at its **edges**: under extreme conditions or near critical thresholds where the function becomes undefined.
 
 ---
 
 ### Why Asymptotes Matter in Environmental Systems
 
 In environmental modeling, asymptotes often represent **natural limits** or **steady states** — the values that processes approach but never quite reach.  
-They can also signal **thresholds** where a variable diverges or becomes undefined, such as at a vertical boundary.
+They can also signal **thresholds** where a process diverges or becomes undefined.
 
 Examples:
 
 - **Logistic population models** approach a **horizontal asymptote** at the **carrying capacity** — growth slows but never exceeds it.  
-- **Pollution concentration** may approach zero over time after cleanup, modeling a **decay asymptote**.  
-- **Runoff models** or **rational functions** can have **vertical asymptotes** representing physical or mathematical boundaries, like when infiltration becomes undefined.  
-- **Temperature–altitude relationships** may level off at high altitudes, showing an **approaching limit** rather than a constant slope.
+- **Pollutant concentration** decays toward zero, forming a horizontal asymptote.  
+- **Runoff models** or rational functions can have **vertical asymptotes** where the model becomes undefined — such as a saturation or overflow threshold.
 
-In short: asymptotes describe the **long-term behavior** or **boundary conditions** of change.
+In short: asymptotes describe the **long-term limits** and **critical boundaries** of change.
 
 ---
 
-### The Three Types of Asymptotes
+### The Two Types of Asymptotes
 
 | Type | Description | How to Check |
-|------|--------------|---------------|
-| **Vertical Asymptote** | Function value grows toward \( \pm\infty \) near some \( x = a \) | Examine denominator → does \( f(x) \to \infty \) or \( -\infty \) as \( x \to a \)? |
+|------|--------------|--------------|
+| **Vertical Asymptote** | Function value grows toward \( \pm\infty \) near some \( x = a \) | Examine the denominator → does \( f(x) \to \infty \) or \( -\infty \) as \( x \to a \)? |
 | **Horizontal Asymptote** | Function approaches a constant value as \( x \to \pm\infty \) | Take the **limit** of \( f(x) \) as \( x \to \infty \) and \( x \to -\infty \) |
-| **Oblique (Slant) Asymptote** | Function approaches a **line** (not horizontal) as \( x \to \pm\infty \) | Divide numerator by denominator → remainder becomes small |
-
-Each type tells us how a curve behaves at the “edges” — near undefined points or far from the origin.
 
 ---
 
@@ -1389,8 +1386,8 @@ Each type tells us how a curve behaves at the “edges” — near undefined poi
 
 #### **1. Vertical Asymptotes**
 
-Look for where the function is **undefined** (typically where the denominator equals zero).  
-Then check the **limit** as \( x \) approaches that point from both sides.
+Look for where the function is **undefined** (usually where the denominator = 0).  
+Then check the **limit** from both sides.
 
 \[
 \text{If } \lim_{x \to a^+} f(x) = \pm\infty \text{ or } \lim_{x \to a^-} f(x) = \pm\infty,
@@ -1407,7 +1404,7 @@ Then check the **limit** as \( x \) approaches that point from both sides.
 
 #### **2. Horizontal Asymptotes**
 
-These describe the **end behavior** of the function — what happens as \( x \to \infty \) or \( x \to -\infty \).
+These describe the **end behavior** — what happens as \( x \to \infty \) or \( x \to -\infty \).
 
 \[
 \text{If } \lim_{x \to \infty} f(x) = L \text{ or } \lim_{x \to -\infty} f(x) = L,
@@ -1416,124 +1413,120 @@ These describe the **end behavior** of the function — what happens as \( x \to
 
 > **Example:**  
 > \( f(x) = \dfrac{3x^2 + 5}{x^2 + 1} \)  
-> As \( x \to \infty \), the leading terms dominate →  
-> \( \dfrac{3x^2}{x^2} = 3 \)  
+> As \( x \to \infty \), leading terms dominate → \( \dfrac{3x^2}{x^2} = 3 \).  
 > So \( y = 3 \) is a **horizontal asymptote**.
 
-In environmental terms, this could model a pollutant concentration that rises quickly, then stabilizes at a long-term plateau.
+In environmental terms, this might describe a pollutant concentration that rises and then stabilizes at a long-term equilibrium.
 
 ---
 
-#### **3. Oblique (Slant) Asymptotes**
+### Using L’Hôpital’s Rule to Evaluate Asymptotic Limits
 
-If the degree of the numerator is **one higher** than the denominator, the function approaches a **slanted line** as \( x \to \infty \).
+Sometimes, when finding asymptotes, direct substitution gives an **indeterminate form** such as  
+\[
+\frac{0}{0} \quad \text{or} \quad \frac{\infty}{\infty}.
+\]  
+In these cases, **L’Hôpital’s Rule** allows us to use derivatives to evaluate the limit and confirm the asymptotic behavior.
 
-To find it, use **long division** or **polynomial division**:
+---
+
+#### The Rule
+
+If both the numerator and denominator approach **0** or **∞**,  
+then:
 
 \[
-f(x) = \frac{N(x)}{D(x)} = Q(x) + \frac{R(x)}{D(x)}
+\lim_{x \to a} \frac{f(x)}{g(x)} =
+\lim_{x \to a} \frac{f'(x)}{g'(x)},
 \]
-As \( x \to \infty \), \( \frac{R(x)}{D(x)} \to 0 \),  
-so \( y = Q(x) \) is the **oblique asymptote**.
-
-> **Example:**  
-> \( f(x) = \dfrac{x^2 + x + 1}{x + 1} = x + 0 + \dfrac{1}{x + 1} \)  
-> As \( x \to \infty \), \( \dfrac{1}{x + 1} \to 0 \) → \( y = x \) is the **slant asymptote**.
+provided \( f \) and \( g \) are differentiable near \( a \) and the new limit exists.
 
 ---
 
-### Visualizing the Three Asymptote Types
+#### Step-by-Step
 
-```{r asymptote-types, echo=FALSE, message=FALSE, warning=FALSE, fig.width=9, fig.height=8}
-library(ggplot2)
-library(patchwork)
-
-# 1. Vertical asymptote
-f1 <- function(x) 1 / (x - 2)
-x1 <- seq(0.5, 3.5, length.out = 400)
-df1 <- data.frame(x = x1, y = f1(x1))
-p1 <- ggplot(df1, aes(x, y)) +
-  geom_line(color = "steelblue", linewidth = 1.2) +
-  geom_vline(xintercept = 2, linetype = "dashed", color = "gray50") +
-  labs(title = "A. Vertical Asymptote at x = 2", subtitle = expression(f(x) == 1 / (x - 2))) +
-  theme_minimal(base_size = 12)
-
-# 2. Horizontal asymptote
-f2 <- function(x) (3*x^2 + 5) / (x^2 + 1)
-x2 <- seq(-5, 5, length.out = 400)
-df2 <- data.frame(x = x2, y = f2(x2))
-p2 <- ggplot(df2, aes(x, y)) +
-  geom_line(color = "darkgreen", linewidth = 1.2) +
-  geom_hline(yintercept = 3, linetype = "dashed", color = "gray50") +
-  labs(title = "B. Horizontal Asymptote y = 3", subtitle = expression(f(x) == (3*x^2 + 5) / (x^2 + 1))) +
-  theme_minimal(base_size = 12)
-
-# 3. Slant asymptote
-f3 <- function(x) (x^2 + x + 1) / (x + 1)
-x3 <- seq(-6, 6, length.out = 400)
-df3 <- data.frame(x = x3, y = f3(x3))
-p3 <- ggplot(df3, aes(x, y)) +
-  geom_line(color = "purple", linewidth = 1.2) +
-  geom_abline(slope = 1, intercept = 0, linetype = "dashed", color = "gray50") +
-  labs(title = "C. Oblique Asymptote y = x", subtitle = expression(f(x) == (x^2 + x + 1) / (x + 1))) +
-  theme_minimal(base_size = 12)
-
-(p1 | p2) / p3
-```
-
-
-Each panel highlights a different kind of boundary behavior:
-
-- **A.** The curve shoots to infinity near \( x = 2 \) — a **vertical asymptote**, representing a boundary or threshold.  
-- **B.** The curve flattens toward a stable value (\( y = 3 \)) — a **horizontal asymptote**, showing a long-term limit.  
-- **C.** The curve approaches a tilted line (\( y = x \)) — an **oblique asymptote**, showing a directional trend that continues indefinitely.
+1. **Check the form.** Confirm it’s \( 0/0 \) or \( ∞/∞ \).  
+2. **Differentiate numerator and denominator separately.**  
+3. **Re-evaluate the limit.** If it’s still indeterminate, apply the rule again.
 
 ---
 
-### Environmental Interpretation
+#### Example 1 — Exponential Decay
 
-Asymptotes reveal *how a process behaves at its edges* — whether it stabilizes, diverges, or trends indefinitely.
+\[
+\lim_{x \to \infty} \frac{x}{e^x}.
+\]
 
-| Type | Example | Environmental Meaning |
-|------|----------|------------------------|
-| **Vertical** | \( f(x) = \frac{1}{x-2} \): undefined at \( x=2 \) | A **threshold** or boundary where a system variable becomes infinite or undefined (e.g., pollutant concentration diverging near saturation). |
-| **Horizontal** | \( f(x) = \frac{3x^2+5}{x^2+1} \): \( y \to 3 \) | A **steady-state limit** — like population or CO₂ levels approaching equilibrium. |
-| **Oblique** | \( f(x) = \frac{x^2+x+1}{x+1} \): \( y \to x \) | A **trend-driven process**, such as temperature anomaly rising along a consistent long-term slope. |
+Both → \( \infty \). Apply L’Hôpital’s Rule:
 
----
+\[
+\lim_{x \to \infty} \frac{1}{e^x} = 0.
+\]
 
-### How This Complements Derivatives
-
-- The **first derivative** shows **where change stops or reverses** (extrema).  
-- The **second derivative** shows **how change bends** (concavity).  
-- **Asymptotes** show **what happens at the limits** — far beyond the local details.
-
-Together, they create a full picture of system behavior:
-- Near critical points → we study slope and curvature.  
-- At long-term or extreme values → we study asymptotes.  
-
-This combination helps us model systems that are both **bounded** (limited by resources) and **unbounded** (driven by ongoing forces).
+So \( y = 0 \) is a **horizontal asymptote**.  
+In context, this could describe a population or pollutant diminishing toward zero over time.
 
 ---
 
-### Quick Practice — Reading Asymptotes from a Function
+#### Example 2 — Sine Ratio
 
-For each function below, identify any asymptotes and classify their type.
+\[
+\lim_{x \to 0} \frac{\sin x}{x}.
+\]
+
+Both → 0. Differentiate:
+
+\[
+\lim_{x \to 0} \frac{\cos x}{1} = 1.
+\]
+
+The ratio stabilizes to 1 — showing smooth near-zero behavior, not a blow-up.
+
+---
+
+#### Example 3 — Environmental Ratio
+
+\[
+\lim_{t \to \infty} \frac{e^{-0.1t}}{e^{-0.3t}}.
+\]
+
+Both → 0. Apply the rule:
+
+\[
+\lim_{t \to \infty} \frac{-0.1e^{-0.1t}}{-0.3e^{-0.3t}}
+= \frac{0.1}{0.3} e^{0.2t} \to \infty.
+\]
+
+No horizontal asymptote — uptake dominates decay as time grows.
+
+---
+
+### Key Takeaways
+
+- **Vertical asymptotes** show where functions become undefined or diverge — often thresholds or physical limits.  
+- **Horizontal asymptotes** show long-term limits — steady states or equilibrium conditions.  
+- **L’Hôpital’s Rule** helps confirm these limits when algebra gives indeterminate forms.
+
+---
+
+### Quick Practice — Asymptotes & Limits
+
+Find horizontal and vertical asymptotes (if any):
 
 1. \( f(x) = \dfrac{2x^2 - 1}{x^2 + 1} \)  
 2. \( f(x) = \dfrac{1}{x - 4} \)  
-3. \( f(x) = \dfrac{x^2 + 2x + 1}{x + 1} \)  
-4. \( f(x) = 5 - e^{-x} \)
+3. \( f(x) = \dfrac{x}{e^x} \)  
+4. \( f(x) = \dfrac{e^x - 1}{x} \)
 
 <details>
 <summary><strong>Show Example Answers</strong></summary>
 
-| Function | Asymptotes | Type |
-|-----------|-------------|------|
-| \( \dfrac{2x^2 - 1}{x^2 + 1} \) | \( y = 2 \) | Horizontal (approaches a limit at infinity) |
-| \( \dfrac{1}{x - 4} \) | \( x = 4 \) | Vertical (undefined at boundary) |
-| \( \dfrac{x^2 + 2x + 1}{x + 1} = x + 1 + \dfrac{0}{x+1} \) | \( y = x + 1 \) | Oblique (approaches a slant line) |
-| \( 5 - e^{-x} \) | \( y = 5 \) as \( x \to \infty \) | Horizontal (approaches equilibrium) |
+| Function | Asymptote | Type | How Found |
+|-----------|------------|------|-----------|
+| \( \dfrac{2x^2 - 1}{x^2 + 1} \) | \( y = 2 \) | Horizontal | Leading term ratio |
+| \( \dfrac{1}{x - 4} \) | \( x = 4 \) | Vertical | Denominator → 0 |
+| \( \dfrac{x}{e^x} \) | \( y = 0 \) | Horizontal | L’Hôpital’s Rule |
+| \( \dfrac{e^x - 1}{x} \) | none | – | Limit \( \to \infty \) as \( x \to \infty \) |
 
 </details>
 
@@ -1541,15 +1534,13 @@ For each function below, identify any asymptotes and classify their type.
 
 ### Reflection
 
-1. How do asymptotes help you anticipate long-term or extreme behavior in environmental models?  
-2. Why might a **horizontal asymptote** represent stability, while a **vertical asymptote** represents a system boundary or breakdown?  
-3. How does combining **derivatives** and **asymptotes** create a richer understanding of environmental change?
+1. How does L’Hôpital’s Rule connect **derivatives** to **asymptotic limits**?  
+2. Why might a **horizontal asymptote** represent equilibrium, while a **vertical asymptote** represents system failure or a boundary?  
+3. How can evaluating these limits guide environmental interpretations — like steady-state pollution, population plateaus, or saturation thresholds?
 
 > **Big Idea:**  
-> Derivatives describe how systems **change** in the short term.  
-> Asymptotes describe where those systems are **headed** in the long term — the limits, thresholds, and steady states that define environmental balance.
-
-
+> Derivatives describe **how** systems change.  
+> Asymptotes and limits reveal **where** those systems are headed.
 
 
 
