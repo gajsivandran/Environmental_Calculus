@@ -23,7 +23,7 @@
 <meta name="author" content="Gaj Sivandran" />
 
 
-<meta name="date" content="2025-11-13" />
+<meta name="date" content="2025-11-14" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -1202,6 +1202,71 @@ It increases gradually with no peaks or sharp transitions. Examples include slow
 The system approaches a stable upper limit, such as a carrying capacity, saturation level, or maximum equilibrium value.
 </details>
 <hr />
+<ol start="21" style="list-style-type: decimal">
+<li>A function has<br />
+<span class="math display">\[
+\lim_{x\to\infty} f(x)=8.
+\]</span><br />
+What does this horizontal asymptote tell you about the long-term behavior of the system being modeled?</li>
+</ol>
+<details>
+<summary>
+<strong>Suggested Answer</strong>
+</summary>
+The system approaches and stabilizes around 8 as the input variable becomes very large. This represents a long-term equilibrium such as a carrying capacity, saturation point, or thermal equilibrium.
+</details>
+<hr />
+<ol start="22" style="list-style-type: decimal">
+<li>Given<br />
+<span class="math display">\[
+f(x)=\frac{5x}{x-4},
+\]</span><br />
+identify the vertical asymptote and describe the behavior of the function as <span class="math inline">\(x\)</span> approaches that asymptote from the left and from the right.</li>
+</ol>
+<details>
+<summary>
+<strong>Suggested Answer</strong>
+</summary>
+The vertical asymptote is at <span class="math inline">\(x=4\)</span>.<br />
+As <span class="math inline">\(x\to 4^-\)</span>, the denominator is negative and very small, so <span class="math inline">\(f(x)\to -\infty\)</span>.<br />
+As <span class="math inline">\(x\to 4^+\)</span>, the denominator is positive and very small, so <span class="math inline">\(f(x)\to +\infty\)</span>.
+</details>
+<hr />
+<ol start="23" style="list-style-type: decimal">
+<li>Explain the difference between approaching a horizontal asymptote from above vs. approaching it from below.<br />
+What does each imply about the sign of the derivative for large <span class="math inline">\(x\)</span>?</li>
+</ol>
+<details>
+<summary>
+<strong>Suggested Answer</strong>
+</summary>
+Approaching from above means the function is decreasing toward the asymptote, so <span class="math inline">\(f&#39;(x) &lt; 0\)</span> for large <span class="math inline">\(x\)</span>.<br />
+Approaching from below means the function is increasing toward the asymptote, so <span class="math inline">\(f&#39;(x) &gt; 0\)</span> for large <span class="math inline">\(x\)</span>.
+</details>
+<hr />
+<ol start="24" style="list-style-type: decimal">
+<li>A function has two vertical asymptotes at <span class="math inline">\(x=-1\)</span> and <span class="math inline">\(x=3\)</span>.<br />
+What does this imply about the domain and structure of the graph?</li>
+</ol>
+<details>
+<summary>
+<strong>Suggested Answer</strong>
+</summary>
+The domain excludes <span class="math inline">\(x=-1\)</span> and <span class="math inline">\(x=3\)</span>.<br />
+The graph is broken into three disconnected pieces, each with potentially different behavior (increasing/decreasing, concavity, extrema), since the function cannot cross those asymptotes.
+</details>
+<hr />
+<ol start="25" style="list-style-type: decimal">
+<li>A rational function approaches the horizontal asymptote <span class="math inline">\(y=0\)</span> as <span class="math inline">\(x\to\pm\infty\)</span>.<br />
+Give a real-world environmental process that might behave this way.</li>
+</ol>
+<details>
+<summary>
+<strong>Suggested Answer</strong>
+</summary>
+Examples include pollutant concentration decaying toward zero, cooling curves approaching ambient temperature, radioactive decay processes, or stream velocity decreasing to near zero as flood waters recede.
+</details>
+<hr />
 </div>
 <div id="practice-problems-3" class="section level2 unnumbered hasAnchor">
 <h2>Practice Problems<a href="test-3-review-material.html#practice-problems-3" class="anchor-section" aria-label="Anchor link to header"></a></h2>
@@ -1301,7 +1366,7 @@ f&#39;&#39;(x)=6x.
 </li>
 <li>Inflection at <span class="math inline">\(x=0\)</span></li>
 </ul>
-<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-57-1.png" width="80%" style="display: block; margin: auto;" /></p>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-11-1.png" width="80%" style="display: block; margin: auto;" /></p>
 </details>
 </div>
 <div id="problem-2-symmetric-quartic" class="section level3 unnumbered hasAnchor">
@@ -1379,7 +1444,7 @@ f&#39;&#39;(x)=12x^2 - 8 = 4(3x^2 - 2).
 <p>Concavity:
 - <strong>Down</strong> for <span class="math inline">\(|x| &lt; \sqrt{2/3}\)</span><br />
 - <strong>Up</strong> for <span class="math inline">\(|x| &gt; \sqrt{2/3}\)</span></p>
-<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-58-1.png" width="80%" style="display: block; margin: auto;" /></p>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-12-1.png" width="80%" style="display: block; margin: auto;" /></p>
 </details>
 </div>
 <div id="problem-3-rational-function-with-simple-roots" class="section level3 unnumbered hasAnchor">
@@ -1473,7 +1538,7 @@ is the only inflection point.</p>
 <li><span class="math inline">\(x &gt; 0\)</span>: <span class="math inline">\(f&#39;&#39;(x) &lt; 0\)</span> → concave down</li>
 </ul>
 <hr />
-<img src="bookdown-demo_files/figure-html/unnamed-chunk-59-1.png" width="80%" style="display: block; margin: auto;" />
+<img src="bookdown-demo_files/figure-html/unnamed-chunk-13-1.png" width="80%" style="display: block; margin: auto;" />
 </details>
 </div>
 <div id="problem-4-exponential-product-with-clean-factors" class="section level3 unnumbered hasAnchor">
@@ -1578,7 +1643,7 @@ x = 2 \pm \sqrt{2}.
 <li><strong>Up</strong> on <span class="math inline">\((2+\sqrt{2},\,\infty)\)</span></li>
 </ul>
 <hr />
-<img src="bookdown-demo_files/figure-html/unnamed-chunk-60-1.png" width="80%" style="display: block; margin: auto;" />
+<img src="bookdown-demo_files/figure-html/unnamed-chunk-14-1.png" width="80%" style="display: block; margin: auto;" />
 </details>
 </div>
 <div id="problem-5-logarithm-with-symmetry" class="section level3 unnumbered hasAnchor">
@@ -1666,7 +1731,7 @@ f&#39;&#39;(x)=\frac{2(x^2+1) - 2x(2x)}{(x^2+1)^2}
 - For <span class="math inline">\(|x|&gt;1\)</span>: <span class="math inline">\(1-x^2&lt;0\)</span> → concave down</p>
 <p>Thus <span class="math inline">\(x=\pm 1\)</span> are <strong>inflection points</strong>.</p>
 <hr />
-<img src="bookdown-demo_files/figure-html/unnamed-chunk-61-1.png" width="80%" style="display: block; margin: auto;" />
+<img src="bookdown-demo_files/figure-html/unnamed-chunk-15-1.png" width="80%" style="display: block; margin: auto;" />
 </details>
 </div>
 <div id="problem-6-rational-function-with-a-vertical-asymptote" class="section level3 unnumbered hasAnchor">
@@ -1784,7 +1849,7 @@ x=2-\sqrt{3},\quad x=2+\sqrt{3}.
 </ul></li>
 </ul>
 <hr />
-<img src="bookdown-demo_files/figure-html/unnamed-chunk-62-1.png" width="80%" style="display: block; margin: auto;" />
+<img src="bookdown-demo_files/figure-html/unnamed-chunk-16-1.png" width="80%" style="display: block; margin: auto;" />
 </details>
 </div>
 <div id="problem-7-rational-function-with-two-vertical-asymptotes" class="section level3 unnumbered hasAnchor">
@@ -1920,7 +1985,7 @@ y=0.
 </li>
 <li>Concavity changes only across asymptotes, due to the denominator’s sign.</li>
 </ul>
-<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-63-1.png" width="80%" style="display: block; margin: auto;" /></p>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-17-1.png" width="80%" style="display: block; margin: auto;" /></p>
 </details>
 </div>
 <div id="problem-8-logistic-style-function-with-two-horizontal-asymptotes" class="section level3 unnumbered hasAnchor">
@@ -2041,7 +2106,7 @@ f(x)\to 80.
 \]</span></li>
 </ul>
 <p>Thus the function is an increasing logistic curve with a lower horizontal asymptote at <span class="math inline">\(y=0\)</span> and an upper horizontal asymptote at <span class="math inline">\(y=80\)</span>, switching concavity at the point <span class="math inline">\(x = 2\ln 3\)</span>.</p>
-<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-64-1.png" width="80%" style="display: block; margin: auto;" /></p>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-18-1.png" width="80%" style="display: block; margin: auto;" /></p>
 </details>
 </div>
 <div id="challenge-1-rational-function" class="section level3 unnumbered hasAnchor">
@@ -2187,7 +2252,7 @@ f&#39;&#39;(x)=\frac{6}{(x-2)^3}.
 </li>
 <li>Behavior flips dramatically across the asymptote</li>
 </ul>
-<img src="bookdown-demo_files/figure-html/unnamed-chunk-65-1.png" width="80%" style="display: block; margin: auto;" />
+<img src="bookdown-demo_files/figure-html/unnamed-chunk-19-1.png" width="80%" style="display: block; margin: auto;" />
 </details>
 
 </div>

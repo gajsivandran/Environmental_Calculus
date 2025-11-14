@@ -202,6 +202,65 @@ The system approaches a stable upper limit, such as a carrying capacity, saturat
 
 ---
 
+21.  
+A function has  
+\[
+\lim_{x\to\infty} f(x)=8.
+\]  
+What does this horizontal asymptote tell you about the long-term behavior of the system being modeled?
+
+<details><summary><strong>Suggested Answer</strong></summary>
+The system approaches and stabilizes around 8 as the input variable becomes very large. This represents a long-term equilibrium such as a carrying capacity, saturation point, or thermal equilibrium.
+</details>
+
+---
+
+22.  
+Given  
+\[
+f(x)=\frac{5x}{x-4},
+\]  
+identify the vertical asymptote and describe the behavior of the function as \(x\) approaches that asymptote from the left and from the right.
+
+<details><summary><strong>Suggested Answer</strong></summary>
+The vertical asymptote is at \(x=4\).  
+As \(x\to 4^-\), the denominator is negative and very small, so \(f(x)\to -\infty\).  
+As \(x\to 4^+\), the denominator is positive and very small, so \(f(x)\to +\infty\).
+</details>
+
+---
+
+23.  
+Explain the difference between approaching a horizontal asymptote from above vs. approaching it from below.  
+What does each imply about the sign of the derivative for large \(x\)?
+
+<details><summary><strong>Suggested Answer</strong></summary>
+Approaching from above means the function is decreasing toward the asymptote, so \(f'(x) < 0\) for large \(x\).  
+Approaching from below means the function is increasing toward the asymptote, so \(f'(x) > 0\) for large \(x\).
+</details>
+
+---
+
+24.  
+A function has two vertical asymptotes at \(x=-1\) and \(x=3\).  
+What does this imply about the domain and structure of the graph?
+
+<details><summary><strong>Suggested Answer</strong></summary>
+The domain excludes \(x=-1\) and \(x=3\).  
+The graph is broken into three disconnected pieces, each with potentially different behavior (increasing/decreasing, concavity, extrema), since the function cannot cross those asymptotes.
+</details>
+
+---
+
+25.  
+A rational function approaches the horizontal asymptote \(y=0\) as \(x\to\pm\infty\).  
+Give a real-world environmental process that might behave this way.
+
+<details><summary><strong>Suggested Answer</strong></summary>
+Examples include pollutant concentration decaying toward zero, cooling curves approaching ambient temperature, radioactive decay processes, or stream velocity decreasing to near zero as flood waters recede.
+</details>
+
+---
 
 
 
