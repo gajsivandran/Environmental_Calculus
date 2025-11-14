@@ -556,6 +556,13 @@ adding-the-second-derivative
 sign-chart-practice-worksheet
 part-1-polynomial-patterns
 part-2-factored-derivatives-and-flat-points
+a.-start-from-fx-1
+b.-start-from-fx-1
 part-3-exponential-behavior
+a.-start-from-fx-2
 part-4-undefined-derivatives-and-asymptotes
+a.-start-from-fx-3
+b.-start-from-fx-2
 reflection-from-slopes-to-shapes
+challenge-problems-sign-charts-shape-analysis
+solution-to-challenge-problems
