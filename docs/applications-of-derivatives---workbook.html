@@ -1720,32 +1720,36 @@ x = 2 \pm \sqrt{6}
 <div id="challenge-2-rational-function-with-two-asymptotes" class="section level3 unnumbered hasAnchor">
 <h3><strong>Challenge 2 — Rational Function With Two Asymptotes</strong><a href="applications-of-derivatives---workbook.html#challenge-2-rational-function-with-two-asymptotes" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p><span class="math display">\[
-f(x)=\frac{x^2+1}{x(x-3)}
+f(x)=\frac{1}{x^2 - 1}
 \]</span></p>
 <details>
 <summary>
 <strong>Check 1st derivative</strong>
 </summary>
-<p>Differentiate using quotient rule:</p>
+<p>Differentiate using the chain rule:</p>
 <p><span class="math display">\[
-f&#39;(x)=\frac{-3x^2 - 2x + 3}{[x(x-3)]^2}
+f&#39;(x)=\frac{-2x}{(x^2 - 1)^2}.
 \]</span></p>
-<p>Critical points come from the numerator:</p>
+<p>Critical point comes from the numerator:</p>
 <p><span class="math display">\[
--3x^2 - 2x + 3 = 0
+-2x = 0
 \quad\Longrightarrow\quad
-x = -1,\;1.
+x = 0.
 \]</span></p>
 <p>Derivative is <strong>undefined</strong> at:</p>
 <p><span class="math display">\[
-x = 0, \qquad x = 3
+x = -1,\qquad x = 1
 \]</span></p>
-<p>These are vertical asymptote candidates.</p>
-<p>Sign chart:</p>
+<p>These are vertical asymptotes.</p>
+<p><strong>Sign chart:</strong></p>
 <ul>
-<li>Increasing on <span class="math inline">\((-∞,-1)\)</span> and <span class="math inline">\((1,3)\)</span></li>
-<li>Decreasing on <span class="math inline">\((-1,0)\)</span>, <span class="math inline">\((0,1)\)</span>, and <span class="math inline">\((3,∞)\)</span></li>
+<li>Increasing on <span class="math inline">\((-\infty,-1)\)</span> and <span class="math inline">\((-1,0)\)</span></li>
+<li>Decreasing on <span class="math inline">\((0,1)\)</span> and <span class="math inline">\((1,\infty)\)</span></li>
 </ul>
+<p>Thus the function has a <strong>local maximum</strong> at:</p>
+<p><span class="math display">\[
+f(0) = -1.
+\]</span></p>
 </details>
 <details>
 <summary>
@@ -1753,25 +1757,14 @@ x = 0, \qquad x = 3
 </summary>
 <p>After simplification, the second derivative is:</p>
 <p><span class="math display">\[
-f&#39;&#39;(x)=
-\frac{
-6(x^3 + x^2 - 3x + 3)
-}{
-x^3 (x-3)^3
-}
+f&#39;&#39;(x)=\frac{6x^2 + 2}{(x^2 - 1)^3}.
 \]</span></p>
-<p>The numerator has <strong>one real root</strong>, found numerically:</p>
-<p><span class="math display">\[
-x \approx -2.599
-\]</span></p>
-<p>This is the <strong>only inflection point</strong>.</p>
+<p>The numerator is always positive, so concavity is determined by the denominator.</p>
 <p>Breakpoints for concavity:</p>
 <ul>
-<li><span class="math inline">\(x = -2.599\)</span><br />
-</li>
-<li><span class="math inline">\(x = 0\)</span>, <span class="math inline">\(x = 3\)</span> (asymptotes)</li>
+<li><span class="math inline">\(x = -1,\; x = 1\)</span> (vertical asymptotes)</li>
 </ul>
-<p>Test intervals:</p>
+<p><strong>Test intervals:</strong></p>
 <table>
 <thead>
 <tr class="header">
@@ -1782,33 +1775,24 @@ x \approx -2.599
 </thead>
 <tbody>
 <tr class="odd">
-<td><span class="math inline">\((-\infty, -2.599)\)</span></td>
-<td>–</td>
-<td><strong>Concave down</strong></td>
-</tr>
-<tr class="even">
-<td><span class="math inline">\((-2.599, 0)\)</span></td>
+<td><span class="math inline">\((-\infty, -1)\)</span></td>
 <td>+</td>
 <td><strong>Concave up</strong></td>
 </tr>
-<tr class="odd">
-<td><span class="math inline">\((0, 3)\)</span></td>
+<tr class="even">
+<td><span class="math inline">\((-1, 1)\)</span></td>
 <td>–</td>
 <td><strong>Concave down</strong></td>
 </tr>
-<tr class="even">
-<td><span class="math inline">\((3, \infty)\)</span></td>
+<tr class="odd">
+<td><span class="math inline">\((1, \infty)\)</span></td>
 <td>+</td>
 <td><strong>Concave up</strong></td>
 </tr>
 </tbody>
 </table>
-<p>Thus concavity alternates:
-<span class="math display">\[
-\text{down → up → down → up}
-\]</span></p>
+<p>There is <strong>no inflection point</strong>, because concavity changes only across discontinuities.</p>
 </details>
-<hr />
 </div>
 <div id="challenge-3-repeated-critical-point-multiple-inflection-points" class="section level3 unnumbered hasAnchor">
 <h3><strong>Challenge 3 — Repeated Critical Point + Multiple Inflection Points </strong><a href="applications-of-derivatives---workbook.html#challenge-3-repeated-critical-point-multiple-inflection-points" class="anchor-section" aria-label="Anchor link to header"></a></h3>
@@ -2046,67 +2030,67 @@ x = 2 + \sqrt6 \approx 4.449.
 <p><strong>CHALLEGE 2 Solution</strong></p>
 <p><strong>1. First derivative analysis</strong></p>
 <p><span class="math display">\[
-f&#39;(x)=\frac{-3x^2 - 2x + 3}{[x(x-3)]^2}
+f&#39;(x)=\frac{-2x}{(x^2 - 1)^2}
 \]</span></p>
-<p>Critical points:
+<p>Critical point:
 <span class="math display">\[
-x=-1,\quad x=1.
+x = 0.
 \]</span></p>
 <p>Increasing on:
 <span class="math display">\[
-(-∞,-1),\quad (1,3)
+(-\infty,-1),\qquad (-1,0)
 \]</span></p>
 <p>Decreasing on:
 <span class="math display">\[
-(-1,0),\quad (0,1),\quad (3,∞)
+(0,1),\qquad (1,\infty)
 \]</span></p>
+<p>So the function has a <strong>local maximum</strong> at:
+<span class="math display">\[
+f(0) = -1.
+\]</span></p>
+<hr />
 <p><strong>2. Asymptote analysis (limits)</strong></p>
 <p>The function is undefined at:
 <span class="math display">\[
-x=0,\qquad x=3
+x=-1,\qquad x=1
 \]</span></p>
-<p><strong>Asymptote at <span class="math inline">\(x=0\)</span></strong></p>
+<p><strong>Asymptote at <span class="math inline">\(x=-1\)</span></strong></p>
 <p><span class="math display">\[
-\lim_{x\to 0^-} f(x) = +\infty,
+\lim_{x\to -1^-} f(x) = +\infty,
 \qquad
-\lim_{x\to 0^+} f(x) = -\infty
+\lim_{x\to -1^+} f(x) = -\infty
 \]</span></p>
-<p>So <span class="math inline">\(x=0\)</span> is a <strong>vertical asymptote</strong>.</p>
-<p><strong>Asymptote at <span class="math inline">\(x=3\)</span></strong></p>
+<p>So <span class="math inline">\(x=-1\)</span> is a <strong>vertical asymptote</strong>.</p>
+<p><strong>Asymptote at <span class="math inline">\(x=1\)</span></strong></p>
 <p><span class="math display">\[
-\lim_{x\to 3^-} f(x) = -\infty,
+\lim_{x\to 1^-} f(x) = -\infty,
 \qquad
-\lim_{x\to 3^+} f(x) = +\infty
+\lim_{x\to 1^+} f(x) = +\infty
 \]</span></p>
-<p>So <span class="math inline">\(x=3\)</span> is also a <strong>vertical asymptote</strong>.</p>
+<p>So <span class="math inline">\(x=1\)</span> is also a <strong>vertical asymptote</strong>.</p>
+<hr />
 <p><strong>3. Second derivative and concavity</strong></p>
 <p><span class="math display">\[
-f&#39;&#39;(x)=\frac{6(x^3 + x^2 - 3x + 3)}{x^3 (x-3)^3}
+f&#39;&#39;(x)=\frac{6x^2 + 2}{(x^2 - 1)^3}
 \]</span></p>
-<p>Only one real root:</p>
-<p><span class="math display">\[
-x\approx -2.599
-\]</span></p>
+<p>The numerator <span class="math inline">\(6x^2+2\)</span> is <strong>always positive</strong>, so concavity is determined entirely by the denominator.</p>
 <p>Concavity pattern:
-- <strong>Concave down</strong> on <span class="math inline">\((-\infty,-2.599)\)</span>
-- <strong>Concave up</strong> on <span class="math inline">\((-2.599,0)\)</span>
-- <strong>Concave down</strong> on <span class="math inline">\((0,3)\)</span>
-- <strong>Concave up</strong> on <span class="math inline">\((3,\infty)\)</span></p>
-<p>This alternating pattern reflects the influence of both asymptotes.</p>
+- <strong>Concave up</strong> on <span class="math inline">\((-\infty,-1)\)</span>
+- <strong>Concave down</strong> on <span class="math inline">\((-1,1)\)</span>
+- <strong>Concave up</strong> on <span class="math inline">\((1,\infty)\)</span></p>
+<p>There are <strong>no inflection points</strong>, because the concavity change occurs at vertical asymptotes.</p>
+<hr />
 <p><strong>4. Complete shape</strong></p>
 <ul>
-<li>Local max at <span class="math inline">\(x=-1\)</span>, local min at <span class="math inline">\(x=1\)</span><br />
+<li>One critical point → <strong>local max at <span class="math inline">\(x=0\)</span></strong><br />
 </li>
-<li>Vertical asymptotes at <span class="math inline">\(x=0\)</span> and <span class="math inline">\(x=3\)</span><br />
+<li>Vertical asymptotes at <span class="math inline">\(x=-1\)</span> and <span class="math inline">\(x=1\)</span><br />
 </li>
-<li>One inflection point near <span class="math inline">\(x=-2.599\)</span><br />
+<li>Concavity: up → down → up<br />
 </li>
-<li>Concave down → up → down → up pattern<br />
-</li>
-<li>Curve breaks naturally into three disconnected pieces</li>
+<li>Function breaks naturally into <strong>three separate branches</strong></li>
 </ul>
 <p><img src="bookdown-demo_files/figure-html/unnamed-chunk-34-1.png" width="80%" style="display: block; margin: auto;" /></p>
-<hr />
 <p><strong>CHALLEGE 3 Solution</strong></p>
 <p><strong>1. First derivative and monotonicity</strong></p>
 <p><span class="math display">\[

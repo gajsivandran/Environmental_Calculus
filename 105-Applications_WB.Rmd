@@ -727,41 +727,46 @@ Concavity:
 ### **Challenge 2 — Rational Function With Two Asymptotes**{-}
 
 \[
-f(x)=\frac{x^2+1}{x(x-3)}
+f(x)=\frac{1}{x^2 - 1}
 \]
 
 <details>
 <summary><strong>Check 1st derivative</strong></summary>
 
-Differentiate using quotient rule:
+Differentiate using the chain rule:
 
 \[
-f'(x)=\frac{-3x^2 - 2x + 3}{[x(x-3)]^2}
+f'(x)=\frac{-2x}{(x^2 - 1)^2}.
 \]
 
-Critical points come from the numerator:
+Critical point comes from the numerator:
 
 \[
--3x^2 - 2x + 3 = 0
+-2x = 0
 \quad\Longrightarrow\quad
-x = -1,\;1.
+x = 0.
 \]
 
 Derivative is **undefined** at:
 
 \[
-x = 0, \qquad x = 3
+x = -1,\qquad x = 1
 \]
 
-These are vertical asymptote candidates.
+These are vertical asymptotes.
 
-Sign chart:
+**Sign chart:**
 
-- Increasing on \((-∞,-1)\) and \((1,3)\)
-- Decreasing on \((-1,0)\), \((0,1)\), and \((3,∞)\)
+- Increasing on \((-\infty,-1)\) and \((-1,0)\)
+- Decreasing on \((0,1)\) and \((1,\infty)\)
+
+Thus the function has a **local maximum** at:
+
+\[
+f(0) = -1.
+\]
 
 </details>
-
 
 <details>
 <summary><strong>Check 2nd derivative</strong></summary>
@@ -769,45 +774,27 @@ Sign chart:
 After simplification, the second derivative is:
 
 \[
-f''(x)=
-\frac{
-6(x^3 + x^2 - 3x + 3)
-}{
-x^3 (x-3)^3
-}
+f''(x)=\frac{6x^2 + 2}{(x^2 - 1)^3}.
 \]
 
-The numerator has **one real root**, found numerically:
-
-\[
-x \approx -2.599
-\]
-
-This is the **only inflection point**.
+The numerator is always positive, so concavity is determined by the denominator.
 
 Breakpoints for concavity:
 
-- \(x = -2.599\)  
-- \(x = 0\), \(x = 3\) (asymptotes)
+- \(x = -1,\; x = 1\) (vertical asymptotes)
 
-Test intervals:
+**Test intervals:**
 
 | Interval | Sign of \(f''(x)\) | Concavity |
-|----------|------------------|-----------|
-| \((-\infty, -2.599)\) | – | **Concave down** |
-| \((-2.599, 0)\) | + | **Concave up** |
-| \((0, 3)\) | – | **Concave down** |
-| \((3, \infty)\) | + | **Concave up** |
+|----------|---------------------|-----------|
+| \((-\infty, -1)\) | + | **Concave up** |
+| \((-1, 1)\) | – | **Concave down** |
+| \((1, \infty)\) | + | **Concave up** |
 
-Thus concavity alternates:
-\[
-\text{down → up → down → up}
-\]
+There is **no inflection point**, because concavity changes only across discontinuities.
 
 </details>
 
-
----
 
 ### **Challenge 3 — Repeated Critical Point + Multiple Inflection Points **{-}
 
@@ -1157,101 +1144,98 @@ ggplot(df, aes(x, y)) +
 **1. First derivative analysis**
 
 \[
-f'(x)=\frac{-3x^2 - 2x + 3}{[x(x-3)]^2}
+f'(x)=\frac{-2x}{(x^2 - 1)^2}
 \]
 
-Critical points:
+Critical point:
 \[
-x=-1,\quad x=1.
+x = 0.
 \]
 
 Increasing on:
 \[
-(-∞,-1),\quad (1,3)
+(-\infty,-1),\qquad (-1,0)
 \]
 
 Decreasing on:
 \[
-(-1,0),\quad (0,1),\quad (3,∞)
+(0,1),\qquad (1,\infty)
 \]
+
+So the function has a **local maximum** at:
+\[
+f(0) = -1.
+\]
+
+---
 
 **2. Asymptote analysis (limits)**
 
 The function is undefined at:
 \[
-x=0,\qquad x=3
+x=-1,\qquad x=1
 \]
 
-**Asymptote at \(x=0\)**
+**Asymptote at \(x=-1\)**
 
 \[
-\lim_{x\to 0^-} f(x) = +\infty,
+\lim_{x\to -1^-} f(x) = +\infty,
 \qquad
-\lim_{x\to 0^+} f(x) = -\infty
+\lim_{x\to -1^+} f(x) = -\infty
 \]
 
-So \(x=0\) is a **vertical asymptote**.
+So \(x=-1\) is a **vertical asymptote**.
 
-**Asymptote at \(x=3\)**
+**Asymptote at \(x=1\)**
 
 \[
-\lim_{x\to 3^-} f(x) = -\infty,
+\lim_{x\to 1^-} f(x) = -\infty,
 \qquad
-\lim_{x\to 3^+} f(x) = +\infty
+\lim_{x\to 1^+} f(x) = +\infty
 \]
 
-So \(x=3\) is also a **vertical asymptote**.
+So \(x=1\) is also a **vertical asymptote**.
 
-
+---
 
 **3. Second derivative and concavity**
 
 \[
-f''(x)=\frac{6(x^3 + x^2 - 3x + 3)}{x^3 (x-3)^3}
+f''(x)=\frac{6x^2 + 2}{(x^2 - 1)^3}
 \]
 
-Only one real root:
-
-\[
-x\approx -2.599
-\]
+The numerator \(6x^2+2\) is **always positive**, so concavity is determined entirely by the denominator.
 
 Concavity pattern:
-- **Concave down** on \((-\infty,-2.599)\)
-- **Concave up** on \((-2.599,0)\)
-- **Concave down** on \((0,3)\)
-- **Concave up** on \((3,\infty)\)
+- **Concave up** on \((-\infty,-1)\)
+- **Concave down** on \((-1,1)\)
+- **Concave up** on \((1,\infty)\)
 
-This alternating pattern reflects the influence of both asymptotes.
+There are **no inflection points**, because the concavity change occurs at vertical asymptotes.
 
+---
 
 **4. Complete shape**
 
-- Local max at \(x=-1\), local min at \(x=1\)  
-- Vertical asymptotes at \(x=0\) and \(x=3\)  
-- One inflection point near \(x=-2.599\)  
-- Concave down → up → down → up pattern  
-- Curve breaks naturally into three disconnected pieces  
-
+- One critical point → **local max at \(x=0\)**  
+- Vertical asymptotes at \(x=-1\) and \(x=1\)  
+- Concavity: up → down → up  
+- Function breaks naturally into **three separate branches**  
 
 ```{r, echo=FALSE, message=FALSE, warning=FALSE}
 library(ggplot2)
 library(dplyr)
 
 # Function
-f <- function(x) (x^2 + 1) / (x * (x - 3))
+f <- function(x) 1/(x^2 - 1)
 
-# Critical points
-crit1 <- -1
-crit2 <- 1
+# Critical point
+crit <- 0
 
-# Real inflection point
-infl <- -2.599   # approx numeric root
-
-# Build 3 separate data frames to avoid connecting across asymptotes
-df1 <- data.frame(x = seq(-6, -0.01, length.out = 800))
-df2 <- data.frame(x = seq(0.01, 2.99, length.out = 800))
-df3 <- data.frame(x = seq(3.01, 6, length.out = 800))
+# Build separate data frames to avoid crossing asymptotes
+df1 <- data.frame(x = seq(-6, -1.01, length.out = 800))
+df2 <- data.frame(x = seq(-0.99, 0.99, length.out = 800))
+df3 <- data.frame(x = seq(1.01, 6, length.out = 800))
 
 df1$y <- f(df1$x)
 df2$y <- f(df2$x)
@@ -1259,15 +1243,14 @@ df3$y <- f(df3$x)
 
 # Concavity shading intervals
 shade <- data.frame(
-  xmin = c(-6, infl, 0, 3),
-  xmax = c(infl, 0, 3, 6),
-  concavity = c("down", "up", "down", "up")
+  xmin = c(-6, -1, 1),
+  xmax = c(-1, 1, 6),
+  concavity = c("up", "down", "up")
 )
 
 shade$fill <- ifelse(shade$concavity == "up", "lightblue", "moccasin")
 
 ggplot() +
-  
   # Concavity shading
   geom_rect(
     data = shade,
@@ -1278,39 +1261,29 @@ ggplot() +
   ) +
   scale_fill_identity() +
   
-  # Curve pieces plotted separately (NO connecting)
+  # Curve pieces
   geom_line(data = df1, aes(x, y), linewidth = 1.2, color = "steelblue") +
   geom_line(data = df2, aes(x, y), linewidth = 1.2, color = "steelblue") +
   geom_line(data = df3, aes(x, y), linewidth = 1.2, color = "steelblue") +
   
   # Vertical asymptotes
-  geom_vline(xintercept = 0, linetype = "dashed", color = "firebrick", linewidth = 1) +
-  geom_vline(xintercept = 3, linetype = "dashed", color = "firebrick", linewidth = 1) +
+  geom_vline(xintercept = -1, linetype = "dashed", color = "firebrick", linewidth = 1) +
+  geom_vline(xintercept = 1,  linetype = "dashed", color = "firebrick", linewidth = 1) +
   
-  # Critical points
-  geom_point(aes(x = crit1, y = f(crit1)), color = "darkgreen", size = 3) +
-  geom_point(aes(x = crit2, y = f(crit2)), color = "darkgreen", size = 3) +
-  annotate("text", x = crit1, y = f(crit1), label = "local max", vjust = -1) +
-  annotate("text", x = crit2, y = f(crit2), label = "local min", vjust = -1) +
-  
-  # Inflection point
-  geom_point(aes(x = infl, y = f(infl)), color="purple", size=3) +
-  annotate("text", x = infl, y = f(infl), label = "inflection", vjust = 1.5) +
+  # Critical point
+  geom_point(aes(x = crit, y = f(crit)), color = "darkgreen", size = 3) +
+  annotate("text", x = crit, y = f(crit), label = "local max", vjust = -1) +
   
   labs(
-    title = "Challenge 2:  f(x) = (x^2 + 1) / (x(x - 3))",
-    subtitle = "Concavity shading (blue = up, gold = down) with asymptotes at x=0 and x=3",
+    title = "Challenge 2:  f(x) = 1 / (x^2 - 1)",
+    subtitle = "Concavity shading (blue = up, gold = down) with asymptotes at x=-1 and x=1",
     x = "x",
     y = "f(x)"
   ) +
   
-  # Set your own y-limits here
   coord_cartesian(ylim = c(-10, 10)) +
-  
   theme_minimal(base_size = 14)
 ```
-
----
 
 **CHALLEGE 3 Solution**
 
