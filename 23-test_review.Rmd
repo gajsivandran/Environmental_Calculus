@@ -2424,7 +2424,7 @@ For each function:
 |:----------------------------:|:-----------:|
 | \(h_1''(x)=\dfrac{2e^{-x}(x^{2}-6x+11)}{(x-3)^{3}}\) | VA: \(x=3\) HA: \(y=1\) |
 | \(h_2''(x)=\dfrac{30x^{2}+40}{(x^{2}-4)^{3}}\) | VA: \(x=\pm 2\) HA: \(y=2\) |
-| \(h_3''(x)=\dfrac{e^{x}(x^{2}+x-1)}{(x+1)^{3}}\) | VA: \(x=-1\) HA: \(y=-4\) |
+| \(h_3''(x)=\dfrac{e^{x}(x^{2}+1)}{(x+1)^{3}}\) | VA: \(x=-1\) HA: \(y=-4\) |
 
 
 ---
@@ -2530,58 +2530,114 @@ Concavity:
 
 **✔ Function \(h_3(x)=\dfrac{e^{x}}{x+1}-4\)**
 
-**Vertical asymptote:**  
+---
+
+**1. Vertical Asymptote**
+
 \[
-x=-1
+x = -1
+\]
+
+---
+
+**2. Horizontal Asymptotes**
+
+As \(x\to -\infty\):
+\[
+\frac{e^x}{x+1} \to 0 \quad\Rightarrow\quad h_3(x)\to -4
 \]
 
 **Horizontal asymptote:**  
-As \(x\to -\infty\), the exponential dominates:
-
 \[
-\lim_{x\to -\infty} \frac{e^x}{x+1} -4 = -4
+y=-4
 \]
 
 As \(x\to +\infty\):
-
 \[
 \frac{e^x}{x+1} \to +\infty
 \]
 
-→ **No horizontal asymptote as \(x→+∞\)**  
-→ **HA: \(y=-4\)** on the left only
+**No right-side horizontal asymptote.**
 
-**First derivative:**
+---
+
+**3. First Derivative & Sign Chart**
 
 \[
 h_3'(x)=\frac{e^x x}{(x+1)^2}
 \]
 
-Critical point at \(x=0\).
+- Critical point where numerator = 0 → \(x=0\)  
+- Undefined at \(x=-1\)
 
-Sign chart:
+**Sign of \(h_3'(x)\):**
 
-- \(x<0\): negative → decreasing  
-- \(x>0\): positive → increasing  
-
-→ **Local minimum at \(x=0\)**
-
-Second derivative:
+- \(x<0\): \(x<0\Rightarrow h_3'<0\) → decreasing  
+- \(x>0\): \(x>0\Rightarrow h_3'>0\) → increasing  
 
 \[
-h_3''(x)=\frac{e^x(x^2+x-1)}{(x+1)^3}
+\boxed{\text{Local minimum at } x=0}
 \]
 
-Roots of numerator:
+---
+
+**4. Second Derivative & Concavity**
+
+Start with  
+\[
+h_3'(x)=e^x x(x+1)^{-2}
+\]
+
+Differentiate:
 
 \[
-x=\frac{-1\pm \sqrt{5}}{2} \approx -1.618,\; 0.618
+\boxed{
+h_3''(x)=\frac{e^x(x^2+1)}{(x+1)^3}
+}
 \]
 
-Concavity:
+**Concavity analysis**
 
-- Concavity flips at both points (where defined).  
-- Undefined at \(x=-1\).
+- Numerator \(e^x(x^2+1) > 0\) always  
+- Denominator sign depends on \((x+1)^3\)
+
+**For \(x < -1\):**
+\((x+1)^3<0\) → \(h_3''<0\)  
+\[
+\boxed{\text{Concave down on }(-\infty,-1)}
+\]
+
+**For \(x > -1\):**
+\((x+1)^3>0\) → \(h_3''>0\)  
+\[
+\boxed{\text{Concave up on }(-1,\infty)}
+\]
+
+---
+
+**5. Summary of Behavior**
+
+- **Vertical asymptote:** \(x=-1\)  
+- **Horizontal asymptote (left only):** \(y=-4\)  
+- **Increasing/decreasing:**  
+  - Decreasing on \((-\infty,0)\)  
+  - Increasing on \((0,\infty)\)  
+- **Local extremum:**  
+  - Local minimum at \(x=0\)  
+- **Concavity:**  
+  - Concave down on \((-\infty,-1)\)  
+  - Concave up on \((-1,\infty)\)
+
+---
+
+**6. Qualitative Sketch Description**
+
+- Approaches \(y=-4\) as \(x\to -\infty\)  
+- Falls toward \(-\infty\) near the vertical asymptote at \(x=-1\)  
+- Rises from \(-\infty\) after the asymptote  
+- Has a smooth, concave-up minimum at \(x=0\)  
+- Then increases without bound for large \(x\)
+
 
 ---
 
