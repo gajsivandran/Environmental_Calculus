@@ -2136,13 +2136,13 @@ p
 
 
 
-### Practice Test — Sign Charts & Applications {-}
+## Practice Test — Sign Charts & Applications {-}
 
 This practice set mirrors the structure of your problems on the test:
 
 1. **Section A** — Extrema from a factored first derivative  
 2. **Section B** — Sign charts + sketching using \(f'\) and \(f''\)  
-3. **Section C** — Asymptotes, extrema, concavity
+3. **Section C** — Asymptotes, extrema, concavity and sketching
 
 Work through each table as if each row were its own problem.
 
