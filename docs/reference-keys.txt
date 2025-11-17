@@ -1,3 +1,12 @@
+fig:lapse-rate-plot
+fig:apply-the-function-to-compute-temperature-405
+fig:temp-day-curve
+tab:derivative-terms-table2
+fig:practice-reading-graph
+fig:blank-axes
+fig:cubic-example-plot
+fig:function-type-blank-axes-clean2
+tab:derivative-terms-table
 why-calculus
 why-this-book
 what-is-calculus
@@ -324,6 +333,7 @@ rate-of-change---a-first-look
 pre-calculus-foundations-workbook
 learning-objectives-2
 reflection-prompt
+notes
 what-youre-expected-to-know-1
 self-check
 how-to-approach-calculus-problems-1
