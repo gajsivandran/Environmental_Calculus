@@ -2132,3 +2132,460 @@ if (!is.null(xlim) | !is.null(ylim)) {
 p
 ```
 </details>
+
+
+
+
+### Practice Test — Sign Charts & Applications {-}
+
+This practice set mirrors the structure of your problems on the test:
+
+1. **Section A** — Extrema from a factored first derivative  
+2. **Section B** — Sign charts + sketching using \(f'\) and \(f''\)  
+3. **Section C** — Asymptotes, extrema, concavity
+
+Work through each table as if each row were its own problem.
+
+---
+
+#### **Section A — Extrema from a Factored First Derivative (Practice)**{-}
+
+Use the provided factored derivative to:
+
+- Identify critical points  
+- Create a **first-derivative sign chart**  
+- Classify each critical point (local max/min/neither)
+
+| Function | Factored Derivative \(f'(x)\) |
+|---------|-------------------------------|
+| \(f_1(x)\) | \(f_1'(x)=e^{x}(x-1)(x+4)\) | 
+| \(f_2(x)\) | \(f_2'(x)=-(x+2)(x-5)(x-1)\) | 
+| \(f_3(x)\) | \(f_3'(x)=\dfrac{(x+3)(x-2)}{(x^2+1)}\) |
+
+---
+
+<details>
+<summary><strong>Solution Key Section A (click to expand)</strong></summary>
+
+<br>
+
+
+For each function we:
+
+- Identify critical points  
+- Build a sign chart  
+- Classify each point  
+
+---
+
+**✔ Function \(f_1(x)\)**  
+\[
+f_1'(x)=e^{x}(x-1)(x+4)
+\]
+
+**Critical points:**  
+\[
+x=-4,\qquad x=1
+\]
+
+**Sign chart:**
+
+| Interval | Sign of \(f_1'(x)\) | Behavior |
+|---------|----------------------|----------|
+| \(x<-4\) | \((-)(-)=+\) → \(+\) | Increasing |
+| \(-4<x<1\) | \((+)(-)= -\) | Decreasing |
+| \(x>1\) | \((+)(+)=+\) | Increasing |
+
+**Classification:**  
+- At \(x=-4\): **increasing → decreasing** → **local max**  
+- At \(x=1\): **decreasing → increasing** → **local min**
+
+---
+
+**✔ Function \(f_2(x)\)**  
+\[
+f_2'(x)=-(x+2)(x-5)(x-1)
+\]
+
+Critical points:  
+\[
+x=-2,\quad x=1,\quad x=5
+\]
+
+Sign chart (including the leading negative):
+
+| Interval | Sign of product | After negative sign | Behavior |
+|----------|-----------------|----------------------|----------|
+| \(x<-2\) | \((-)(-)(-)= -\) | \(+\) | Increasing |
+| \(-2<x<1\) | \((+)(-)(-)=+\) | \( -\) | Decreasing |
+| \(1<x<5\) | \((+)(-)(+)= -\) | \(+\) | Increasing |
+| \(x>5\) | \((+)(+)(+)=+\) | \(-\) | Decreasing |
+
+Classification:
+
+- \(x=-2\): **inc → dec** → **local max**  
+- \(x=1\): **dec → inc** → **local min**  
+- \(x=5\): **inc → dec** → **local max**
+
+---
+
+**✔ Function \(f_3(x)\)**  
+\[
+f_3'(x)=\frac{(x+3)(x-2)}{x^2+1}
+\]
+
+Denominator always positive → sign from numerator only.
+
+Critical points:
+\[
+x=-3,\qquad x=2
+\]
+
+Sign chart:
+
+| Interval | Sign of numerator | Behavior |
+|----------|-------------------|----------|
+| \(x<-3\) | \((-)(-)=+\) | Increasing |
+| \(-3<x<2\) | \((+)(-)= -\) | Decreasing |
+| \(x>2\) | \((+)(+)=+\) | Increasing |
+
+Classification:
+
+- \(x=-3\): **local max**  
+- \(x=2\): **local min**
+
+---
+
+</details>
+
+#### **Section B — Sign Charts & Sketching from \(f'\) and \(f''\)**{-}
+
+For each function, use the given derivatives to:
+
+- Find and classify critical points  
+- Determine intervals of increasing/decreasing  
+- Determine concavity  
+- Sketch a **possible** graph of the function  
+
+| Function | First Derivative \(f'(x)\) | Second Derivative \(f''(x)\) |
+|----------|-----------------------------|-------------------------------|
+| \(g_1(x)\) | \(g_1'(x)= (x-2)(x+1)\) | \(g_1''(x)=2x-3\) |
+| \(g_2(x)\) | \(g_2'(x)= x(x+5)\) | \(g_2''(x)=2x+5\) |
+| \(g_3(x)\) | \(g_3'(x)= (x-4)(x-1)(x+2)\) | \(g_3''(x)=3x^2-6\) |
+
+---
+
+<details>
+<summary><strong>Solution Key Section B (click to expand)</strong></summary>
+
+<br>
+
+**✔ Function \(g_1(x)\)**  
+\[
+g_1'(x)= (x-2)(x+1),\qquad g_1''(x)=2x-3
+\]
+
+**Critical points:**  
+\[
+x=-1,\quad x=2
+\]
+
+First derivative sign chart:
+
+- \(x<-1\): inc  
+- \(-1<x<2\): dec  
+- \(x>2\): inc
+
+→ **Local max at \(-1\)**  
+→ **Local min at \(2\)**  
+
+Second derivative:
+
+\[
+g_1''(x)=0 \Rightarrow x=\frac{3}{2}=1.5
+\]
+
+Concavity:
+
+- \(x<1.5\): \(g_1''<0\) → concave **down**  
+- \(x>1.5\): concave **up**
+
+Sketch structure:
+
+- Peak at \(-1\)  
+- Valley at \(2\)  
+- Concave down until \(1.5\), concave up afterward  
+
+---
+
+**✔ Function \(g_2(x)\)**  
+\[
+g_2'(x)= x(x+5),\qquad g_2''(x)=2x+5
+\]
+
+Critical points:  
+\[
+x=0,\quad x=-5
+\]
+
+Sign chart:
+
+- \(x<-5\): inc  
+- \(-5<x<0\): dec  
+- \(x>0\): inc  
+
+→ Local max at \(x=-5\)  
+→ Local min at \(x=0\)
+
+Second derivative:
+
+\[
+g_2''(x)=0 \Rightarrow x=-\frac52=-2.5
+\]
+
+Concavity:
+
+- \(x<-2.5\): concave down  
+- \(x>-2.5\): concave up  
+
+Sketch:
+
+A classic peak → valley → rising curve.
+
+---
+
+**✔ Function \(g_3(x)\)**  
+\[
+g_3'(x)= (x-4)(x-1)(x+2),\qquad g_3''(x)=3x^2-6
+\]
+
+Critical points:  
+\[
+x=-2,\quad x=1,\quad x=4
+\]
+
+Sign chart:
+
+- \(x<-2\): decreasing  
+- \(-2<x<1\): increasing  
+- \(1<x<4\): decreasing  
+- \(x>4\): increasing  
+
+→ Local **min** at \(-2\)  
+→ Local **max** at \(1\)  
+→ Local **min** at \(4\)
+
+Second derivative:
+
+\[
+g_3''(x)=0 \Rightarrow 3x^2-6=0 \Rightarrow x=\pm \sqrt{2}
+\]
+
+Concavity:
+
+- \(x<-\sqrt2\): up  
+- \(-\sqrt2<x<\sqrt2\): down  
+- \(x>\sqrt2\): up  
+
+Sketch:
+
+Two valleys, one peak, with inflection points at \(\pm \sqrt{2}\).
+
+---
+
+</details>
+
+
+
+#### **Section C — Asymptotes, Extrema, and Concavity** {-}
+
+For each function:
+
+- Identify **vertical asymptotes**  
+- Identify **horizontal asymptotes** using limits  
+- Use the provided first derivative to make a **first-derivative sign chart**  
+- Use the second derivative to determine concavity  
+- Describe end behavior  
+- Sketch the qualitative shape  
+
+**Table C1 — Functions & First Derivatives**
+
+| Function | First Derivative \(h'(x)\) |
+|:--------:|:---------------------------:|
+| \(h_1(x)=\dfrac{2e^{-x}}{x-3}+1\) | \(h_1'(x)=\dfrac{-2e^{-x}(x-3)-2e^{-x}}{(x-3)^2}\) |
+| \(h_2(x)=\dfrac{5}{x^{2}-4}+2\) | \(h_2'(x)=\dfrac{-10x}{(x^{2}-4)^{2}}\) |
+| \(h_3(x)=\dfrac{e^{x}}{x+1}-4\) | \(h_3'(x)=\dfrac{e^{x}(x+1)-e^{x}}{(x+1)^2}=\dfrac{e^{x}x}{(x+1)^2}\) |
+
+---
+
+**Table C2 — Second Derivatives & Asymptotes**
+
+| Second Derivative \(h''(x)\) | Asymptotes |
+|:----------------------------:|:-----------:|
+| \(h_1''(x)=\dfrac{2e^{-x}(x^{2}-6x+11)}{(x-3)^{3}}\) | VA: \(x=3\) HA: \(y=1\) |
+| \(h_2''(x)=\dfrac{30x^{2}+40}{(x^{2}-4)^{3}}\) | VA: \(x=\pm 2\) HA: \(y=2\) |
+| \(h_3''(x)=\dfrac{e^{x}(x^{2}+x-1)}{(x+1)^{3}}\) | VA: \(x=-1\) HA: \(y=-4\) |
+
+
+---
+
+
+
+
+<details>
+<summary><strong>Solution Key Section C (click to expand)</strong></summary>
+
+<br>
+
+
+We use both C1 and C2 tables.
+
+---
+
+**✔ Function \(h_1(x)=\dfrac{2e^{-x}}{x-3}+1\)**
+
+**Vertical asymptote:**  
+\[
+x=3
+\]
+
+**Horizontal asymptote:**  
+\[
+\lim_{x\to\infty} 1 = 1,\qquad 
+\lim_{x\to -\infty} 1 = 1
+\]
+→ **HA: \(y=1\)**
+
+**First derivative sign:**
+
+\[
+h_1'(x)=\frac{-2e^{-x}(x-3)-2e^{-x}}{(x-3)^2}
+\]
+
+Since denominator >0, sign depends on numerator:
+
+\[
+-2e^{-x}(x-3)-2e^{-x}
+= -2e^{-x}(x-2)
+\]
+
+→ critical point at \(x=2\)
+
+Sign chart:
+
+- \(x<2\): \(h_1'<0\) → decreasing  
+- \(x>2\): \(h_1'>0\) → increasing  
+
+→ **Local minimum at \(x=2\)**
+
+Second derivative:
+
+Denominator sign gives:
+
+- Concave **down** on \((3,\infty)\)  
+- Concave **up** on \((-\infty,3)\)  
+
+---
+
+**✔ Function \(h_2(x)=\dfrac{5}{x^{2}-4}+2\)**
+
+**Vertical asymptotes:**  
+\[
+x=-2,\quad x=2
+\]
+
+**Horizontal asymptote:**  
+\[
+\lim_{x\to\pm\infty}2 = 2
+\]
+
+**First derivative:**
+
+\[
+h_2'(x)=\frac{-10x}{(x^{2}-4)^2}
+\]
+
+Critical point at \(x=0\).
+
+Sign chart:
+
+- \(x<0\): \(h_2'(x)>0\) → increasing  
+- \(x>0\): decreasing  
+
+→ **Local max at \(x=0\)**
+
+Second derivative:
+
+\[
+h_2''(x)=\frac{30x^2+40}{(x^2-4)^3}
+\]
+
+Concavity:
+
+- \(x<-2\): concave **up**  
+- \(-2<x<2\): concave **down**  
+- \(x>2\): concave **up**  
+
+---
+
+**✔ Function \(h_3(x)=\dfrac{e^{x}}{x+1}-4\)**
+
+**Vertical asymptote:**  
+\[
+x=-1
+\]
+
+**Horizontal asymptote:**  
+As \(x\to -\infty\), the exponential dominates:
+
+\[
+\lim_{x\to -\infty} \frac{e^x}{x+1} -4 = -4
+\]
+
+As \(x\to +\infty\):
+
+\[
+\frac{e^x}{x+1} \to +\infty
+\]
+
+→ **No horizontal asymptote as \(x→+∞\)**  
+→ **HA: \(y=-4\)** on the left only
+
+**First derivative:**
+
+\[
+h_3'(x)=\frac{e^x x}{(x+1)^2}
+\]
+
+Critical point at \(x=0\).
+
+Sign chart:
+
+- \(x<0\): negative → decreasing  
+- \(x>0\): positive → increasing  
+
+→ **Local minimum at \(x=0\)**
+
+Second derivative:
+
+\[
+h_3''(x)=\frac{e^x(x^2+x-1)}{(x+1)^3}
+\]
+
+Roots of numerator:
+
+\[
+x=\frac{-1\pm \sqrt{5}}{2} \approx -1.618,\; 0.618
+\]
+
+Concavity:
+
+- Concavity flips at both points (where defined).  
+- Undefined at \(x=-1\).
+
+---
+
+</details>
+
+
+

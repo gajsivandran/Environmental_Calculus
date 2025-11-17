@@ -23,7 +23,7 @@
 <meta name="author" content="Gaj Sivandran" />
 
 
-<meta name="date" content="2025-11-14" />
+<meta name="date" content="2025-11-17" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -618,6 +618,7 @@
 <li class="chapter" data-level="" data-path="test-3-review-material.html"><a href="test-3-review-material.html#problem-7-rational-function-with-two-vertical-asymptotes"><i class="fa fa-check"></i><strong>Problem 7 — Rational Function With Two Vertical Asymptotes</strong></a></li>
 <li class="chapter" data-level="" data-path="test-3-review-material.html"><a href="test-3-review-material.html#problem-8-logistic-style-function-with-two-horizontal-asymptotes"><i class="fa fa-check"></i><strong>Problem 8 — Logistic-Style Function With Two Horizontal Asymptotes</strong></a></li>
 <li class="chapter" data-level="" data-path="test-3-review-material.html"><a href="test-3-review-material.html#challenge-1-rational-function"><i class="fa fa-check"></i><strong>Challenge 1 — Rational Function </strong></a></li>
+<li class="chapter" data-level="" data-path="test-3-review-material.html"><a href="test-3-review-material.html#practice-test-sign-charts-applications"><i class="fa fa-check"></i>Practice Test — Sign Charts &amp; Applications</a></li>
 </ul></li>
 </ul></li>
 <li class="part"><span><b>I Workbook Chapters</b></span></li>
@@ -1857,6 +1858,20 @@ x = 0, \quad x = 2
 <p><span class="math display">\[
 f(x)=\frac{e^{x}}{x^{2}+1}
 \]</span></p>
+<p>NOTE: Factoring the second derivative is beyond the scope of this class so use this as the second derivative and its critical points to construct a sign chart.</p>
+<p>Thus the real solutions of <span class="math inline">\(f&#39;&#39;(x)=0\)</span> occur at</p>
+<p><span class="math display">\[
+f&#39;&#39;(x)=
+\frac{
+e^{x}\left(x^{4}-4x^{3}+8x^{2}-4x-1\right)
+}{
+(x^{2}+1)^{3}
+}.
+\]</span></p>
+<p><span class="math display">\[
+x \approx -0.18, \qquad x = 1.
+\]</span></p>
+<hr />
 <details>
 <summary>
 <strong>Check 1st derivative</strong>
@@ -1865,47 +1880,50 @@ f(x)=\frac{e^{x}}{x^{2}+1}
 <p><span class="math display">\[
 f&#39;(x)
 = \frac{e^x(x^2+1) - e^x(2x)}{(x^2+1)^2}
-= \frac{e^x(x^2 - 2x + 1)}{(x^2+1)^2}
+= \frac{e^x(x^2 - 2x + 1)}{(x^2+1)^2}.
 \]</span></p>
 <p>Factor the numerator:</p>
 <p><span class="math display">\[
-f&#39;(x)=\frac{e^x (x-1)^2}{(x^2+1)^2}
+f&#39;(x)=\frac{e^x (x-1)^2}{(x^2+1)^2}.
 \]</span></p>
 <p>All factors are nonnegative, and the derivative is zero only when <span class="math inline">\(x=1\)</span>.<br />
-The function is therefore increasing for all real <span class="math inline">\(x\)</span>, with a horizontal tangent at <span class="math inline">\(x=1\)</span> but no local extremum there.</p>
+The function is therefore <strong>increasing for all real <span class="math inline">\(x\)</span></strong>, with a horizontal tangent at <span class="math inline">\(x=1\)</span> but no local extremum there.</p>
 </details>
+<hr />
 <details>
 <summary>
 <strong>Check 2nd derivative</strong>
 </summary>
-<p>Differentiating again gives the simplified form</p>
+<p>Differentiate <span class="math inline">\(f&#39;(x)=e^x(x-1)^2(x^2+1)^{-2}\)</span>:</p>
 <p><span class="math display">\[
 f&#39;&#39;(x)=
 \frac{
-e^{x}(x-1)(x^{2} - 4x + 1)
+e^{x}\left(x^{4}-4x^{3}+8x^{2}-4x-1\right)
 }{
 (x^{2}+1)^{3}
-}
+}.
 \]</span></p>
-<p>The denominator is always positive, so the sign depends on <span class="math inline">\((x-1)(x^2 - 4x + 1)\)</span>.</p>
-<p>The quadratic has roots at</p>
+<p>The denominator is always positive, so the sign depends on the numerator<br />
+<span class="math display">\[
+x^{4}-4x^{3}+8x^{2}-4x-1.
+\]</span></p>
+<p>Factoring shows it equals<br />
+<span class="math display">\[
+(x-1)\bigl(x^{3}-3x^{2}+5x+1\bigr).
+\]</span></p>
+<p>Thus the real solutions of <span class="math inline">\(f&#39;&#39;(x)=0\)</span> occur at</p>
 <p><span class="math display">\[
-x = 2 \pm \sqrt{3}
+x \approx -0.18, \qquad x = 1.
 \]</span></p>
-<p>so together with <span class="math inline">\(x=1\)</span>, the inflection points occur at</p>
-<p><span class="math display">\[
-x = 2 - \sqrt{3}, \quad x = 1, \quad x = 2 + \sqrt{3}.
-\]</span></p>
-<p>Testing each interval shows the concavity pattern:</p>
+<p>Testing each interval gives the concavity pattern:</p>
 <ul>
-<li>down on <span class="math inline">\((-\infty,\; 2 - \sqrt{3})\)</span><br />
+<li>up on <span class="math inline">\((-\infty,\; -0.18)\)</span><br />
 </li>
-<li>up on <span class="math inline">\((2 - \sqrt{3},\; 1)\)</span><br />
+<li>down on <span class="math inline">\((-0.18,\; 1)\)</span><br />
 </li>
-<li>down on <span class="math inline">\((1,\; 2 + \sqrt{3})\)</span><br />
-</li>
-<li>up on <span class="math inline">\((2 + \sqrt{3},\; \infty)\)</span></li>
+<li>up on <span class="math inline">\((1,\; \infty)\)</span></li>
 </ul>
+<p>So the function has <strong>two inflection points</strong> and remains <strong>always increasing</strong>.</p>
 </details>
 <hr />
 </div>
@@ -2157,29 +2175,38 @@ x = 0, \qquad x = 2
 <p><strong>CHALLEGE 4 Solution</strong></p>
 <p>The first derivative is</p>
 <p><span class="math display">\[
-f&#39;(x)=\frac{e^x (x-1)^2}{(x^2+1)^2}
+f&#39;(x)=\frac{e^x (x-1)^2}{(x^2+1)^2},
 \]</span></p>
-<p>which is never negative, and equals zero only at <span class="math inline">\(x=1\)</span>.<br />
-This means the function is increasing everywhere with a horizontal tangent at <span class="math inline">\(x=1\)</span> but no local maximum or minimum there.</p>
-<p>For concavity, the relevant expression is</p>
+<p>which is never negative and equals zero only at <span class="math inline">\(x=1\)</span>.<br />
+Thus the function is <strong>increasing everywhere</strong>, with a horizontal tangent at <span class="math inline">\(x=1\)</span> but <strong>no local maximum or minimum</strong>.</p>
+<p>For concavity, the correct second derivative is</p>
 <p><span class="math display">\[
 f&#39;&#39;(x)=
 \frac{
-e^{x}(x-1)(x^{2} - 4x + 1)
+e^{x}\left(x^{4}-4x^{3}+8x^{2}-4x-1\right)
 }{
 (x^{2}+1)^{3}
-}
+},
 \]</span></p>
-<p>and the sign depends on <span class="math inline">\((x-1)(x^{2}-4x+1)\)</span>.<br />
-The quadratic gives two roots, <span class="math inline">\(2-\sqrt{3}\)</span> and <span class="math inline">\(2+\sqrt{3}\)</span>, and together with <span class="math inline">\(x=1\)</span> these produce three inflection points.<br />
-The concavity alternates through these intervals:</p>
+<p>and the sign depends on the numerator</p>
+<p><span class="math display">\[
+x^{4}-4x^{3}+8x^{2}-4x-1
+= (x-1)\bigl(x^{3}-3x^{2}+5x+1\bigr).
+\]</span></p>
+<p>The cubic has one real root (the other two are complex), located at</p>
+<p><span class="math display">\[
+x \approx -0.18,
+\]</span></p>
+<p>along with the linear-factor root at <span class="math inline">\(x=1\)</span>.<br />
+These give the <strong>two real inflection points</strong> of the function.</p>
+<p>Testing each interval shows the concavity pattern:</p>
 <ul>
-<li>concave down on <span class="math inline">\((-\infty, 2-\sqrt{3})\)</span></li>
-<li>concave up on <span class="math inline">\((2-\sqrt{3}, 1)\)</span></li>
-<li>concave down on <span class="math inline">\((1, 2+\sqrt{3})\)</span></li>
-<li>concave up on <span class="math inline">\((2+\sqrt{3}, \infty)\)</span></li>
+<li>concave up on <span class="math inline">\((-\infty,\,-0.18)\)</span></li>
+<li>concave down on <span class="math inline">\((-0.18,\;1)\)</span></li>
+<li>concave up on <span class="math inline">\((1,\;\infty)\)</span></li>
 </ul>
-<p>The complete behavior is that the function rises smoothly for all <span class="math inline">\(x\)</span>, flattens at <span class="math inline">\(x=1\)</span> without forming an extremum, and shifts concavity three times as it rises.</p>
+<p><strong>Summary:</strong><br />
+The function rises smoothly for all <span class="math inline">\(x\)</span>, flattens at <span class="math inline">\(x=1\)</span> without forming an extremum, and changes concavity <strong>twice</strong>, creating two inflection points while remaining always increasing.</p>
 <p><img src="bookdown-demo_files/figure-html/unnamed-chunk-36-1.png" width="80%" style="display: block; margin: auto;" /></p>
 <hr />
 <p><strong>CHALLEGE 5 Solution</strong></p>
