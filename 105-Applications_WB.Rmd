@@ -449,41 +449,106 @@ A sketch follows a decrease → increase → decrease pattern with concave up be
 
 \newpage
 
-### Part 2 — Factored Derivatives and Flat Points
+### Part 2 — Factored Derivatives and Flat Points (Corrected)
 
 #### A. Start from \( f(x) \)
 
 \[
-f(x)=-x^3 + 3x^2 + 4x
+f(x) = -x^3 + 3x^2 + 4x
 \]
+
+---
 
 <details>
 <summary><strong>Solution</strong></summary>
+✔️ Corrected Solution
 
-Differentiate:
+**1. First and second derivatives**
+
 \[
-f'(x)=-3x^2+6x+4=-3(x-3)\left(x+\frac23\right),\qquad 
-f''(x)=-6x+6.
+f'(x) = -3x^2 + 6x + 4
 \]
 
-Critical points happen at \(x=-\tfrac23\) and \(x=3\).
-
-Testing the derivative:
-
-- Left of \(-\tfrac23\), the product \((x-3)(x+2/3)\) is positive, and the leading \(-3\) flips it negative-to-positive, so the function increases.  
-- Between \(-\tfrac23\) and \(3\), the sign becomes negative, so the function decreases.  
-- After \(3\), the expression is positive again after the flip, so the function increases.
-
-Thus there is a local max at \(x=-\tfrac23\) and a local min at \(x=3\).
-
-For concavity,  
 \[
-f''(x)= -6(x-1),
+f''(x) = -6x + 6 = -6(x-1)
 \]
-so concavity changes at \(x=1\): concave down before, concave up after.  
-An inflection occurs at \(x=1\).
 
-Together: increase → decrease → increase, with concavity switching at \(x=1\).
+---
+
+**2. Critical points and monotonicity**
+
+Solve \( f'(x) = 0 \):
+
+\[
+-3x^2 + 6x + 4 = 0
+\]
+
+\[
+3x^2 - 6x - 4 = 0
+\]
+
+\[
+x = \frac{6 \pm \sqrt{36 + 48}}{6}
+  = \frac{6 \pm \sqrt{84}}{6}
+  = 1 \pm \frac{\sqrt{21}}{3}
+\]
+
+So the critical points are:
+
+\[
+x_1 = 1 - \frac{\sqrt{21}}{3} \approx -0.53
+\]
+\[
+x_2 = 1 + \frac{\sqrt{21}}{3} \approx 2.53
+\]
+
+**Sign of \(f'(x)\):**
+
+- \(x=-1\): \(f'(-1) = -5 < 0\) → decreasing  
+- \(x=0\): \(f'(0) = 4 > 0\) → increasing  
+- \(x=3\): \(f'(3) = -5 < 0\) → decreasing  
+
+Thus:
+
+- **Decreasing** on \((-\infty,\;1-\tfrac{\sqrt{21}}{3})\)
+- **Increasing** on \(\left(1-\tfrac{\sqrt{21}}{3},\;1+\tfrac{\sqrt{21}}{3}\right)\)
+- **Decreasing** on \(\left(1+\tfrac{\sqrt{21}}{3},\;\infty\right)\)
+
+**Critical point classification:**
+
+- At \(x_1\): negative → positive ⇒ **local minimum**  
+- At \(x_2\): positive → negative ⇒ **local maximum**
+
+---
+
+**3. Concavity and inflection point**
+
+\[
+f''(x) = -6(x-1)
+\]
+
+- If \(x < 1\): \(f''(x) > 0\) ⇒ **concave up**  
+- If \(x > 1\): \(f''(x) < 0\) ⇒ **concave down**
+
+So:
+
+- Concave **up** on \((-\infty, 1)\)
+- Concave **down** on \((1, \infty)\)
+
+Inflection point at:
+
+\[
+x = 1
+\]
+
+---
+
+**4. Overall behavior**
+
+- Decreasing → **local minimum** at \(x = 1 - \frac{\sqrt{21}}{3}\)  
+- Increasing → **local maximum** at \(x = 1 + \frac{\sqrt{21}}{3}\)  
+- Decreasing again  
+- Concave up for \(x<1\), concave down for \(x>1\), with an inflection at \(x=1\)
 
 </details>
 

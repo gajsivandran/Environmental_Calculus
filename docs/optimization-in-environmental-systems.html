@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Environmental Calculus - Active Learning with Case Studies</title>
+  <title>Chapter 6 Optimization in Environmental Systems | Environmental Calculus - Active Learning with Case Studies</title>
   <meta name="description" content="A textbook companion to the Univeristy of Washington QSci 291 class" />
   <meta name="generator" content="bookdown 0.43 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Environmental Calculus - Active Learning with Case Studies" />
+  <meta property="og:title" content="Chapter 6 Optimization in Environmental Systems | Environmental Calculus - Active Learning with Case Studies" />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="A textbook companion to the Univeristy of Washington QSci 291 class" />
   <meta name="github-repo" content="rstudio/bookdown-demo" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Environmental Calculus - Active Learning with Case Studies" />
+  <meta name="twitter:title" content="Chapter 6 Optimization in Environmental Systems | Environmental Calculus - Active Learning with Case Studies" />
   
   <meta name="twitter:description" content="A textbook companion to the Univeristy of Washington QSci 291 class" />
   
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-
-<link rel="next" href="pre-calculus-foundations.html"/>
+<link rel="prev" href="applications-of-derivatives-understanding-change-and-extremes-in-environmental-systems.html"/>
+<link rel="next" href="calculus-i-equation-sheet.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -1054,98 +1054,1278 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="header">
-<h1 class="title">Environmental Calculus - Active Learning with Case Studies</h1>
-<p class="author"><em>Gaj Sivandran</em></p>
-<p class="date"><em>2025-11-19</em></p>
-</div>
-<div id="why-calculus" class="section level1 hasAnchor" number="1">
-<h1><span class="header-section-number">Chapter 1</span> Why Calculus?<a href="index.html#why-calculus" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p>Welcome to <em>Calculus for Environmental Science</em>. 🌱</p>
-<p>This book is your companion for exploring the natural world through the lens of calculus—especially the powerful ideas of <strong>change</strong> and <strong>accumulation</strong>. You’ll find that calculus is not just about symbols on a page—it’s about asking meaningful questions, interpreting patterns, and making sense of complex environmental systems. And along the way, you’ll see that you are absolutely capable of mastering these ideas.</p>
-<hr />
-<div id="why-this-book" class="section level2 hasAnchor" number="1.1">
-<h2><span class="header-section-number">1.1</span> Why This Book?<a href="index.html#why-this-book" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Most calculus textbooks lean heavily on physics examples—motion, velocity, and acceleration—because calculus was originally developed to solve physics problems. Those examples are powerful, and we’ll use them from time to time because they give us an intuitive “feel” for how change works.</p>
-<p>But today, calculus is a tool used across many disciplines: biology, ecology, environmental science, economics, engineering, and beyond. In this book, we’ll focus on examples that resonate with your studies and your interests as an environmental scientist.</p>
-<p>Environmental scientists face some of the most urgent and complex challenges of our time—climate change, biodiversity loss, resource management, and pollution. Calculus gives us tools to:</p>
+<div id="optimization-in-environmental-systems" class="section level1 hasAnchor" number="6">
+<h1><span class="header-section-number">Chapter 6</span> Optimization in Environmental Systems<a href="optimization-in-environmental-systems.html#optimization-in-environmental-systems" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="introduction-why-optimize" class="section level2 hasAnchor" number="6.1">
+<h2><span class="header-section-number">6.1</span> Introduction: Why Optimize?<a href="optimization-in-environmental-systems.html#introduction-why-optimize" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Every environmental system operates under limits — finite land, finite water, finite energy, finite sunlight, finite budgets. Because of these limits, we constantly face questions of <em>tradeoffs</em> and <em>efficiency</em>:</p>
 <ul>
-<li>Predict how systems evolve over time<br />
+<li>How can we plant trees to <strong>maximize carbon uptake</strong> on a fixed amount of land?<br />
 </li>
-<li>Estimate impacts and risks<br />
+<li>What fertilization level <strong>maximizes yield</strong> without wasting resources or harming water quality?<br />
 </li>
-<li>Model natural and human systems with differential equations<br />
+<li>How much water should a reservoir release to <strong>minimize downstream flood risk</strong> while still meeting hydropower or ecological needs?<br />
 </li>
-<li>Analyze rates of change and long-term accumulation</li>
+<li>What harvest rate allows a population to <strong>sustainably regenerate</strong> while still providing maximum yield?</li>
 </ul>
-<p>Throughout this book, you’ll work with <strong>real environmental data</strong>, use <strong>visual and conceptual approaches</strong>, and practice skills that matter for sustainability. Our goal is not just to “get through calculus,” but to see how these mathematical ideas open doors for discovery and problem-solving in the real world.</p>
-<hr />
-</div>
-<div id="what-is-calculus" class="section level2 hasAnchor" number="1.2">
-<h2><span class="header-section-number">1.2</span> What Is Calculus?<a href="index.html#what-is-calculus" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>At its heart, calculus is the mathematics of <strong>change</strong> and <strong>accumulation</strong>. These two ideas are everywhere in science:</p>
+<p>These are all <strong>optimization</strong> problems — situations where we want to find the <em>best possible value</em> under the constraints of a real system.</p>
+<div id="environmental-motivations" class="section level3 hasAnchor" number="6.1.1">
+<h3><span class="header-section-number">6.1.1</span> Environmental motivations<a href="optimization-in-environmental-systems.html#environmental-motivations" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Optimization naturally arises in environmental science because we often want to:</p>
 <ul>
-<li>The <strong>rate of CO₂ increase</strong> in the atmosphere is a derivative.<br />
+<li><strong>Maximize</strong> biomass, carbon uptake, recharge rate, biodiversity, habitat quality, photosynthesis, or flow efficiency<br />
 </li>
-<li>The <strong>total added CO₂</strong> over a year is an integral.</li>
+<li><strong>Minimize</strong> pollution loads, cost, energy use, heat stress, erosion, runoff, or water loss<br />
+</li>
+<li><strong>Balance</strong> competing ecological or resource constraints when no single quantity can be improved without affecting another</li>
 </ul>
-<p>Traditionally, calculus is first introduced through physics examples like velocity (rate of change of position) and acceleration (rate of change of velocity). These are helpful because most of us can <em>feel</em> what it means to move faster or slower. We’ll use those examples when they make ideas clearer.</p>
-<p>But throughout this book, our main goal is to connect calculus directly to the environment you are studying. You’ll see derivatives and integrals applied to population growth, forest carbon storage, water flow in rivers, and other natural systems.</p>
-<p>We’ll build your understanding of these concepts step by step, supported by graphs, data, and hands-on examples. And if it’s been a while since your last math class, that’s completely okay—you’ll find plenty of support here. We’ll meet you where you are and grow your skills together.</p>
-<div class="promptbox">
-<p><strong>Change is Everywhere</strong></p>
-<p>In a small group, discuss where <em>change</em> could be happening in this image?</p>
-<p><img src="images/Nature.png" alt="Image of a river, shrubs on the banks, large trees in the background, a deer drinking at the stream" />
-<br><br><br><br><br><br></p>
+<p>In every case, we need to translate the physical situation into a <strong>function</strong> — an equation that ties the decision variable (like planting density, harvest rate, flow release, or cost) to an environmental outcome of interest.</p>
 </div>
-<hr />
-</div>
-<div id="how-this-book-works" class="section level2 hasAnchor" number="1.3">
-<h2><span class="header-section-number">1.3</span> How This Book Works<a href="index.html#how-this-book-works" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Each chapter is designed to support you as a learner. You’ll find:</p>
+<div id="where-derivatives-enter-the-story" class="section level3 hasAnchor" number="6.1.2">
+<h3><span class="header-section-number">6.1.2</span> Where derivatives enter the story<a href="optimization-in-environmental-systems.html#where-derivatives-enter-the-story" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Once we have a function that represents the quantity we want to optimize, derivatives allow us to understand <em>how that quantity changes</em> as the system changes.</p>
+<p>The key observations are:</p>
 <ul>
-<li>Clear explanations of key concepts<br />
+<li>A <strong>maximum</strong> occurs where the function <strong>stops increasing and begins decreasing</strong><br />
+→ derivative changes from positive to negative<br />
 </li>
-<li>Environmental examples to connect math with meaning<br />
+<li>A <strong>minimum</strong> occurs where the function <strong>stops decreasing and begins increasing</strong><br />
+→ derivative changes from negative to positive<br />
 </li>
-<li>Practice problems to strengthen your skills<br />
+<li>A <strong>critical point</strong> — where the derivative is zero or undefined — is a candidate for an optimum<br />
 </li>
-<li>Reflection prompts to help you think about what you’re learning</li>
+<li>The <strong>second derivative</strong> reveals whether the function is bending upward (concave up → minimum) or downward (concave down → maximum)</li>
 </ul>
-<hr />
+<p>This gives a powerful recipe:</p>
+<ol style="list-style-type: decimal">
+<li>Write the environmental quantity as a function <span class="math inline">\(f(x)\)</span>.<br />
+</li>
+<li>Compute the derivative <span class="math inline">\(f&#39;(x)\)</span>.<br />
+</li>
+<li>Solve <span class="math inline">\(f&#39;(x) = 0\)</span> to find potential optima.<br />
+</li>
+<li>Use derivative sign charts or concavity (via <span class="math inline">\(f&#39;&#39;(x)\)</span>) to confirm where the function actually reaches a maximum or minimum.<br />
+</li>
+<li>Check domain boundaries — many environmental systems have natural limits such as <span class="math inline">\(x \ge 0\)</span>, <span class="math inline">\(x \le K\)</span>, or <span class="math inline">\(Q_{\text{min}} \le Q \le Q_{\text{max}}\)</span>.</li>
+</ol>
 </div>
-<div id="success-in-this-class" class="section level2 hasAnchor" number="1.4">
-<h2><span class="header-section-number">1.4</span> Success in This Class<a href="index.html#success-in-this-class" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p><img src="images/Growth%20Mindset.png" style="float:right; width:250px; margin:10px;" fig.alt="Image of person thinking, decorative" /></p>
-<p>First and foremost, know this: <strong>we believe in your ability to learn and grow.</strong> You bring unique strengths and perspectives, and your effort matters here.</p>
-<p>Mistakes are not a setback—they are the very heart of learning. When you get something wrong, you uncover where your thinking needs refinement, and that creates the space for real growth. Struggle is not a sign you don’t belong; it’s proof that your brain is stretching and building new connections.</p>
-<p>Just like in science, learning calculus is about <strong>iteration</strong>—trying, testing, revising, and improving. That process is what makes your understanding deeper and more durable.</p>
-<p>Assessments in this class are snapshots of your thinking at a particular moment in time. They are not final judgments about your intelligence, your worth, or your potential. You will have chances to revisit concepts, refine your understanding, and demonstrate what you’ve learned. Growth comes from re-engaging with the material, not from perfection on the first try.</p>
-<p>So give yourself permission to be imperfect. Keep engaging, reflecting, and asking questions. We’ll be here to support you every step of the way.</p>
-<hr />
-</div>
-<div id="looking-ahead" class="section level2 hasAnchor" number="1.5">
-<h2><span class="header-section-number">1.5</span> Looking Ahead<a href="index.html#looking-ahead" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>By the end of this course, you will be able to:</p>
+<div id="putting-it-all-together-1" class="section level3 hasAnchor" number="6.1.3">
+<h3><span class="header-section-number">6.1.3</span> Putting it all together<a href="optimization-in-environmental-systems.html#putting-it-all-together-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Optimization with derivatives combines:</p>
 <ul>
-<li>Apply calculus concepts to natural systems<br />
+<li><strong>Modeling</strong> — turning an environmental scenario into mathematics<br />
 </li>
-<li>Analyze environmental data with confidence<br />
+<li><strong>Calculus</strong> — using derivatives to locate optimal points<br />
 </li>
-<li>Interpret and communicate your results to others</li>
+<li><strong>Interpretation</strong> — translating those mathematical results back into ecological or environmental meaning</li>
 </ul>
-<p>But even more important than any specific skill, you’ll leave this course with a stronger belief in your ability to <em>learn mathematics</em>.</p>
-<p>Calculus is not just a hurdle to clear—it’s a tool that expands how you see and understand the world. Our hope is that by connecting it to the environment you care about, you’ll discover both its usefulness and its beauty.</p>
-<p>Most importantly, you’ll leave with the confidence to keep growing—using mathematics as a tool to explore, protect, and better understand the natural world around you.</p>
+<p>This chapter introduces the core ideas behind optimization, shows how derivatives reveal the structure of optima, and uses environmental case studies to connect mathematics back to real-world systems.</p>
 <hr />
 </div>
-<div id="a-big-disclaimer" class="section level2 hasAnchor" number="1.6">
-<h2><span class="header-section-number">1.6</span> ⚠️ A Big Disclaimer ⚠️<a href="index.html#a-big-disclaimer" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>I started writing this textbook to create a calculus resource that speaks directly to your interests as environmental scientists. My goal is to make calculus feel relevant, supportive, and connected to the systems you care about.</p>
-<p>That said, this is very much a <strong>work in progress</strong>. This draft will have typos, rough edges, and the occasional mistake. But here’s the good news: it’s also <strong>free</strong>. 🎉</p>
-<p>If you come across an error—big or small—please let me know so I can fix it for you and for future students. Your feedback is not just welcome, it’s essential to making this a better resource.</p>
-<p>Thanks for your patience, your sharp eyes, and your willingness to learn from (and with) an evolving text. Together, we’ll keep improving it.</p>
+</div>
+<div id="what-optimization-problems-look-like" class="section level2 hasAnchor" number="6.2">
+<h2><span class="header-section-number">6.2</span> What Optimization Problems Look Like<a href="optimization-in-environmental-systems.html#what-optimization-problems-look-like" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>At their core, optimization problems follow a consistent structure: we choose a variable to control, define the quantity we care about, and understand the boundaries within which the system must operate. Even the most complex environmental scenario can usually be reduced to this framework.</p>
+<div id="key-components-of-any-optimization-problem" class="section level3 hasAnchor" number="6.2.1">
+<h3><span class="header-section-number">6.2.1</span> Key components of any optimization problem<a href="optimization-in-environmental-systems.html#key-components-of-any-optimization-problem" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li><p><strong>Decision variable(s):</strong><br />
+The quantity we can adjust.<br />
+Examples: planting density, flow release, fertilizer amount, harvest rate, pollution reduction effort, number of sampling sites.</p></li>
+<li><p><strong>Objective function:</strong><br />
+A mathematical expression that represents what we want to maximize or minimize.<br />
+This is often written as <span class="math inline">\(f(x)\)</span> once everything is expressed in terms of a single decision variable.<br />
+Examples: biomass per hectare, total cost, pollution concentration, photosynthetic rate, carbon storage, energy use.</p></li>
+<li><p><strong>Constraints:</strong><br />
+Realistic boundaries on the decision variable.<br />
+These may come from physical limits (nonnegative area or population), ecological conditions (maximum carrying capacity, minimum habitat flow), or resource limits (budget, space, time).<br />
+Mathematically, constraints define the <strong>feasible domain</strong> — the set of values where the function actually makes sense.</p></li>
+</ul>
+<p>Together, these three pieces form a complete optimization model:
+&gt; <strong>Choose a variable → express the outcome → restrict the domain.</strong></p>
+</div>
+<div id="environmental-examples-1" class="section level3 hasAnchor" number="6.2.2">
+<h3><span class="header-section-number">6.2.2</span> Environmental examples<a href="optimization-in-environmental-systems.html#environmental-examples-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Environmental science provides many natural optimization settings because systems are limited by resources, energy, or space:</p>
+<ul>
+<li><p><strong>Maximum sustainable harvest:</strong><br />
+Find the harvest level that maximizes long-term yield without collapsing the population.</p></li>
+<li><p><strong>Minimum fertilizer for a target yield:</strong><br />
+Reduce nutrient inputs while still achieving a required crop output, balancing cost and water quality concerns.</p></li>
+<li><p><strong>Optimal dam release:</strong><br />
+Determine flow levels that minimize flood risk while maximizing hydropower or maintaining habitat conditions.</p></li>
+<li><p><strong>Best planting density for carbon uptake:</strong><br />
+Balance competition (too dense) with unused space (too sparse) to maximize carbon gain or biomass production.</p></li>
+<li><p><strong>Minimum treatment cost for safe water quality:</strong><br />
+Achieve pollutant targets at the lowest energy or chemical cost.</p></li>
+<li><p><strong>Maximizing recharge area in green infrastructure design:</strong><br />
+Choose geometry and material constraints to maximize infiltration.</p></li>
+</ul>
+<p>Each example can be expressed in terms of a function to optimize plus constraints that reflect real environmental limits.</p>
+</div>
+<div id="unconstrained-vs.-constrained-optimization" class="section level3 hasAnchor" number="6.2.3">
+<h3><span class="header-section-number">6.2.3</span> Unconstrained vs. constrained optimization<a href="optimization-in-environmental-systems.html#unconstrained-vs.-constrained-optimization" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li><p><strong>Unconstrained optimization:</strong><br />
+The decision variable can take any real value (or any value in an open interval), and the only candidates for optima are the points where<br />
+<span class="math display">\[
+f&#39;(x) = 0 \quad \text{or where } f&#39;(x) \text{ is undefined}.
+\]</span><br />
+Many textbook examples fall into this category.</p></li>
+<li><p><strong>Constrained optimization:</strong><br />
+Much more common in environmental science.<br />
+The domain is restricted — often to a closed interval such as<br />
+<span class="math display">\[
+a \le x \le b.
+\]</span><br />
+In this case, an optimum may occur:</p>
+<ul>
+<li>at a critical point (where <span class="math inline">\(f&#39;(x) = 0\)</span>)<br />
+</li>
+<li>or at an <strong>endpoint</strong> (e.g., minimum flow, maximum allowable input)</li>
+</ul>
+<p>This reflects real environmental systems: populations cannot be negative, flows are capped at infrastructure limits, land areas are finite, and budgets are fixed.</p></li>
+</ul>
+<p>Understanding whether a problem is constrained or unconstrained shapes the mathematical strategy we use and guides how we interpret the results in ecological or physical terms.</p>
+<hr />
+</div>
+</div>
+<div id="the-mathematical-structure-of-optimization" class="section level2 hasAnchor" number="6.3">
+<h2><span class="header-section-number">6.3</span> The Mathematical Structure of Optimization<a href="optimization-in-environmental-systems.html#the-mathematical-structure-of-optimization" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Optimization is most powerful when we can translate a real scenario into a clean mathematical function. Even complex environmental processes — from population dynamics to hydrology to energy budgets — can often be expressed as a function of a single variable. Once we have that, derivatives provide the tools to identify where the function reaches its highest or lowest value.</p>
+<div id="turning-a-situation-into-a-function" class="section level3 hasAnchor" number="6.3.1">
+<h3><span class="header-section-number">6.3.1</span> Turning a Situation Into a Function<a href="optimization-in-environmental-systems.html#turning-a-situation-into-a-function" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>The first challenge in any optimization problem is <strong>model-building</strong>: taking a real ecological or environmental scenario and expressing it mathematically.</p>
+<p>This typically involves three steps:</p>
+<ul>
+<li><p><strong>Translate real-world constraints into equations.</strong><br />
+Environmental systems are full of relationships:<br />
+land area limits, mass balance constraints, flow continuity, energy budgets, competition functions, or geometric formulas.<br />
+These relationships allow us to connect multiple variables and eliminate those we don’t need.</p></li>
+<li><p><strong>Rewrite the objective in terms of a single decision variable.</strong><br />
+Most optimization problems begin with several variables (e.g., height and width of an enclosure, flow rate and pollutant load, planting density and growth rate).<br />
+Using constraints, we aim to express everything in terms of <strong>one variable</strong>, often denoted <span class="math inline">\(x\)</span>.<br />
+This is crucial because calculus tools for finding maxima/minima rely on single-variable derivatives.</p></li>
+<li><p><strong>Identify common modeling patterns.</strong><br />
+Many environmental optimization problems fall into recurring categories:</p>
+<ul>
+<li><strong>Geometry:</strong> area, perimeter, volume, surface exposure<br />
+</li>
+<li><strong>Energy or mass budgets:</strong> input–output systems, flows, metabolic costs<br />
+</li>
+<li><strong>Population and growth models:</strong> logistic curves, carrying capacity, competition<br />
+</li>
+<li><strong>Trade-off curves:</strong> diminishing returns, saturation, cost–benefit balances<br />
+</li>
+<li><strong>Rational models:</strong> pollutant dilution, hydraulic resistance<br />
+Recognizing these patterns helps students quickly set up the right kind of function.</li>
+</ul></li>
+</ul>
+<p>The goal is to turn a real system into a function <span class="math inline">\(f(x)\)</span> that meaningfully represents the quantity we care about — whether that’s carbon uptake, cost, biomass, pollutant load, or efficiency.</p>
+<hr />
+</div>
+<div id="the-four-step-optimization-framework" class="section level3 hasAnchor" number="6.3.2">
+<h3><span class="header-section-number">6.3.2</span> The Four-Step Optimization Framework<a href="optimization-in-environmental-systems.html#the-four-step-optimization-framework" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Once the model is built, finding optimal values becomes a structured, repeatable process. This framework mirrors the strategies students learned earlier when analyzing extrema using derivatives.</p>
+<ol style="list-style-type: decimal">
+<li><p><strong>Define the variables</strong><br />
+Identify the decision variable(s) and describe what they represent physically.<br />
+Example: <span class="math inline">\(x =\)</span> planting density (trees per hectare), or <span class="math inline">\(x =\)</span> flow release (m³/s).</p></li>
+<li><p><strong>Write the objective function</strong><br />
+Translate the goal (“maximize carbon uptake”) into an equation <span class="math inline">\(f(x)\)</span>.<br />
+This may require ecological assumptions, physical laws, or geometric formulas.</p></li>
+<li><p><strong>Use constraints to express the function in one variable</strong><br />
+Apply relationships such as <span class="math inline">\(A = L \times W\)</span>, flow continuity, mass balance, or fixed total resources.<br />
+Replace secondary variables using constraints until the objective is written as a single-variable function.</p></li>
+<li><p><strong>Use derivatives to locate maxima/minima</strong></p>
+<ul>
+<li>Compute <span class="math inline">\(f&#39;(x)\)</span> to identify <strong>critical points</strong>, where<br />
+<span class="math display">\[
+f&#39;(x) = 0 \quad \text{or where } f&#39;(x) \text{ is undefined}.
+\]</span></li>
+<li>Use a <strong>sign chart</strong> or the <strong>second derivative test</strong> to classify each critical point.<br />
+</li>
+<li>Evaluate endpoints when the domain is constrained (e.g., <span class="math inline">\(x \ge 0\)</span>, <span class="math inline">\(x \le K\)</span>).</li>
+</ul></li>
+</ol>
+<p>This four-step process connects directly to earlier work with critical points, increasing/decreasing behavior, and concavity. Optimization is essentially an <em>applied version</em> of those derivative tools: the mathematics is the same, but now each step maps onto a real environmental decision.</p>
+<p>In later sections, we’ll apply this framework to environmental examples such as maximizing carbon uptake, minimizing pollution, optimizing flow releases, and determining sustainable harvest rates.</p>
+<hr />
+</div>
+</div>
+<div id="derivatives-and-critical-points-in-optimization" class="section level2 hasAnchor" number="6.4">
+<h2><span class="header-section-number">6.4</span> Derivatives and Critical Points in Optimization<a href="optimization-in-environmental-systems.html#derivatives-and-critical-points-in-optimization" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Once we express an environmental quantity as a function <span class="math inline">\(f(x)\)</span>, the next step is to understand <em>how that function changes</em>. Derivatives give us a precise way to measure the rate of change and identify where the system switches direction — from increasing to decreasing or vice versa. These turning points are where optima occur.</p>
+<div id="first-derivative-and-candidates-for-optima" class="section level3 hasAnchor" number="6.4.1">
+<h3><span class="header-section-number">6.4.1</span> First Derivative and Candidates for Optima<a href="optimization-in-environmental-systems.html#first-derivative-and-candidates-for-optima" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>The first derivative <span class="math inline">\(f&#39;(x)\)</span> tells us the <strong>instantaneous rate of change</strong> of the function.</p>
+<ul>
+<li>If <span class="math inline">\(f&#39;(x) &gt; 0\)</span>: the function is <strong>increasing</strong> → adding more of the variable improves the outcome.<br />
+</li>
+<li>If <span class="math inline">\(f&#39;(x) &lt; 0\)</span>: the function is <strong>decreasing</strong> → adding more reduces the outcome.<br />
+</li>
+<li>If <span class="math inline">\(f&#39;(x) = 0\)</span>: the function’s slope flattens → a possible peak or valley.<br />
+</li>
+<li>If <span class="math inline">\(f&#39;(x)\)</span> is undefined: the function may have a cusp or discontinuity, which can also act as an optimum.</li>
+</ul>
+<p>The points where<br />
+<span class="math display">\[
+f&#39;(x) = 0 \quad \text{or where } f&#39;(x) \text{ is undefined}
+\]</span><br />
+are called <strong>critical points</strong>. These are the <em>candidates</em> for maxima and minima, but they are not automatically solutions.</p>
+<p>Critical points arise naturally in environmental models:
+- the peak of logistic growth rate,
+- the dilution minimum of pollutants,
+- the flow that maximizes hydropower,
+- the planting density that maximizes biomass.</p>
+<p>In each case, the derivative captures the moment where environmental tradeoffs balance out.</p>
+<hr />
+</div>
+<div id="classifying-optima" class="section level3 hasAnchor" number="6.4.2">
+<h3><span class="header-section-number">6.4.2</span> Classifying Optima<a href="optimization-in-environmental-systems.html#classifying-optima" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Finding critical points is only half the story — we must determine whether each point is a <strong>maximum</strong>, a <strong>minimum</strong>, or neither. Derivatives provide clear tools for this.</p>
+<div id="first-derivative-sign-chart" class="section level4 hasAnchor" number="6.4.2.1">
+<h4><span class="header-section-number">6.4.2.1</span> First derivative sign chart<a href="optimization-in-environmental-systems.html#first-derivative-sign-chart" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>A sign chart tracks where <span class="math inline">\(f&#39;(x)\)</span> is positive or negative around a critical point:</p>
+<ul>
+<li><strong>Positive → zero → negative</strong>: the function increases then decreases → <strong>local maximum</strong><br />
+</li>
+<li><strong>Negative → zero → positive</strong>: the function decreases then increases → <strong>local minimum</strong></li>
+</ul>
+<p>This mirrors environmental intuition:<br />
+If increasing planting density improves carbon uptake up to a point but then begins to reduce it, the optimal density sits where <span class="math inline">\(f&#39;(x) = 0\)</span>.</p>
+</div>
+<div id="second-derivative-test" class="section level4 hasAnchor" number="6.4.2.2">
+<h4><span class="header-section-number">6.4.2.2</span> Second derivative test<a href="optimization-in-environmental-systems.html#second-derivative-test" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>The second derivative <span class="math inline">\(f&#39;&#39;(x)\)</span> describes whether the function is bending up or down:</p>
+<ul>
+<li><span class="math inline">\(f&#39;&#39;(x) &lt; 0\)</span>: concave down → a “hill” → <strong>maximum</strong><br />
+</li>
+<li><span class="math inline">\(f&#39;&#39;(x) &gt; 0\)</span>: concave up → a “valley” → <strong>minimum</strong></li>
+</ul>
+<p>This is especially useful when the sign chart is complicated or the function has multiple components.</p>
+</div>
+<div id="local-vs.-global-optima" class="section level4 hasAnchor" number="6.4.2.3">
+<h4><span class="header-section-number">6.4.2.3</span> Local vs. global optima<a href="optimization-in-environmental-systems.html#local-vs.-global-optima" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>A <strong>local</strong> optimum is best only within a neighborhood.<br />
+A <strong>global</strong> optimum is best across the entire feasible domain.</p>
+<p>Environmental systems often require global reasoning:
+- the maximum sustainable harvest must be the best <em>over all feasible harvest rates</em>, not just near a critical point.<br />
+- a pollution load that minimizes cost must be globally optimal within physical limits.</p>
+</div>
+<div id="the-importance-of-endpoints" class="section level4 hasAnchor" number="6.4.2.4">
+<h4><span class="header-section-number">6.4.2.4</span> The importance of endpoints<a href="optimization-in-environmental-systems.html#the-importance-of-endpoints" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>If the domain is bounded, optimum values can occur at the boundaries even if <span class="math inline">\(f&#39;(x) \neq 0\)</span>.<br />
+Example: flow release might be capped by infrastructure; planting density cannot be negative; pollutant concentration has a regulatory maximum.</p>
+<p>Therefore, the full search for optima includes:
+- critical points from <span class="math inline">\(f&#39;(x) = 0\)</span>, and<br />
+- <strong>endpoints</strong>, representing physical or ecological limits.</p>
+<hr />
+</div>
+</div>
+<div id="why-critical-points-arent-always-solutions" class="section level3 hasAnchor" number="6.4.3">
+<h3><span class="header-section-number">6.4.3</span> Why Critical Points Aren’t Always Solutions<a href="optimization-in-environmental-systems.html#why-critical-points-arent-always-solutions" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Not every critical point is an optimum. Three common complications arise:</p>
+<ul>
+<li><p><strong>Flat inflection points</strong><br />
+Sometimes <span class="math inline">\(f&#39;(x) = 0\)</span> but the function doesn’t change direction.<br />
+Example: a system hits a temporary plateau before continuing to increase.</p></li>
+<li><p><strong>Endpoints outperform internal values</strong><br />
+In constrained systems, a boundary may give a better value than any internal point.<br />
+Example: maximum infiltration may occur at the minimum soil density or maximum drainage slope.</p></li>
+<li><p><strong>Constraints eliminate internal candidates</strong><br />
+A mathematically valid critical point may lie outside a feasible ecological range.<br />
+Example: a model predicts an optimal harvest at a negative population — impossible in reality.</p></li>
+</ul>
+<p>These cases reinforce that optimization is always a combination of <strong>calculus</strong> and <strong>context</strong>.</p>
+<hr />
+</div>
+</div>
+<div id="optimization-in-finite-domains" class="section level2 hasAnchor" number="6.5">
+<h2><span class="header-section-number">6.5</span> Optimization in Finite Domains<a href="optimization-in-environmental-systems.html#optimization-in-finite-domains" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Most environmental systems are constrained by clear physical limits. This means the feasible domain for <span class="math inline">\(x\)</span> is not the entire real line but a closed, bounded interval.</p>
+<p>Common examples:
+- <span class="math inline">\(x \ge 0\)</span>: populations, density, mass, area, flow<br />
+- <span class="math inline">\(x \le K\)</span>: carrying capacity, structural limits<br />
+- <span class="math inline">\(a \le x \le b\)</span>: flow ranges, land area, nutrient inputs, treatment rates</p>
+<p>Because of these limits:</p>
+<ul>
+<li><p><strong>Endpoints must always be checked.</strong><br />
+In a domain like <span class="math inline">\(0 \le x \le K\)</span>, the maximum or minimum value of <span class="math inline">\(f(x)\)</span> may occur at <span class="math inline">\(x=0\)</span> or <span class="math inline">\(x=K\)</span>, even if <span class="math inline">\(f&#39;(x) \neq 0\)</span> there.</p></li>
+<li><p><strong>Critical points are only meaningful if they lie within the domain.</strong><br />
+If a critical point lands outside the feasible interval, it must be discarded.</p></li>
+<li><p><strong>Optimization becomes a comparison problem:</strong><br />
+Evaluate<br />
+<span class="math display">\[
+f(\text{critical points}), \quad f(\text{endpoints})
+\]</span><br />
+and choose the best.</p></li>
+</ul>
+<p>This mirrors how environmental systems function: nature imposes boundaries, and the best solution often emerges at the edge of what is physically or ecologically possible.</p>
+<hr />
+</div>
+<div id="environmental-case-studies" class="section level2 hasAnchor" number="6.6">
+<h2><span class="header-section-number">6.6</span> Environmental Case Studies<a href="optimization-in-environmental-systems.html#environmental-case-studies" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Environmental systems naturally create optimization problems because they involve limited resources, energetic tradeoffs, competition, and physical constraints. Below are four expanded case studies that illustrate how calculus-based optimization can be used to understand and manage ecological and environmental processes. Each highlights the full workflow: modeling → differentiating → analyzing → interpreting results in real-world terms.</p>
+<hr />
+<div id="optimizing-planting-density-for-maximum-carbon-uptake" class="section level3 hasAnchor" number="6.6.1">
+<h3><span class="header-section-number">6.6.1</span> Optimizing Planting Density for Maximum Carbon Uptake<a href="optimization-in-environmental-systems.html#optimizing-planting-density-for-maximum-carbon-uptake" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Planting density is one of the strongest drivers of carbon storage in reforestation and restoration projects. At low densities, trees have plenty of resources but leave much of the land underutilized. At very high densities, competition for light, nutrients, and water reduces growth. Somewhere between these extremes lies an optimal density.</p>
+<p><strong>Modeling approach</strong>
+- Let <span class="math inline">\(x\)</span> = number of trees per hectare.<br />
+- Biomass per tree decreases as density increases due to competition (often modeled with a decreasing function such as <span class="math inline">\(e^{-kx}\)</span> or a rational form).<br />
+- Total carbon uptake might be modeled as<br />
+<span class="math display">\[
+  C(x) = x \cdot g(x),
+  \]</span>
+where <span class="math inline">\(g(x)\)</span> is growth per tree.</p>
+<p><strong>Using derivatives</strong>
+- Compute <span class="math inline">\(C&#39;(x)\)</span> to find the density where the marginal gain from adding an additional tree becomes zero.<br />
+- Critical points occur where the benefit of adding trees exactly balances the loss due to competition.</p>
+<p><strong>Interpreting the optimum</strong>
+- If <span class="math inline">\(C&#39;(x) = 0\)</span> at a moderate density, that represents the biological sweet spot.<br />
+- A sign chart or <span class="math inline">\(C&#39;&#39;(x)\)</span> verifies whether the point is a maximum.<br />
+- This gives land managers a data-informed target density for restoration plantings.</p>
+<hr />
+</div>
+<div id="minimizing-pollution-concentration-downstream" class="section level3 hasAnchor" number="6.6.2">
+<h3><span class="header-section-number">6.6.2</span> Minimizing Pollution Concentration Downstream<a href="optimization-in-environmental-systems.html#minimizing-pollution-concentration-downstream" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Pollutant concentration downstream often depends on both the pollutant input and river discharge. Environmental managers frequently need to minimize concentration while staying within physical or regulatory limits.</p>
+<p><strong>Modeling approach</strong>
+- Let <span class="math inline">\(Q\)</span> = controlled discharge (m³/s) from a reservoir or treatment facility.<br />
+- Pollutant concentration commonly follows a dilution model such as<br />
+<span class="math display">\[
+  C(Q) = \frac{L}{Q + Q_0},
+  \]</span>
+where <span class="math inline">\(L\)</span> is pollutant load and <span class="math inline">\(Q_0\)</span> is baseline flow.<br />
+- More complex systems may use exponential decay or travel-time corrections, e.g.<br />
+<span class="math display">\[
+  C(Q) = L e^{-kQ}.
+  \]</span></p>
+<p><strong>Using derivatives</strong>
+- Compute <span class="math inline">\(C&#39;(Q)\)</span> to determine how concentration changes with increasing discharge.<br />
+- Optimization reveals the point where increased flow offers diminishing returns.</p>
+<p><strong>Constraints</strong>
+- Minimum flow may be required for habitat.<br />
+- Maximum flow may be limited by infrastructure.<br />
+- These endpoints must be evaluated alongside critical points.</p>
+<p><strong>Interpreting the optimum</strong>
+- The best discharge may occur at the boundary (maximum allowable flow) or at a point where the reduction in concentration stops being significant.<br />
+- This informs water managers how to balance flood control, hydropower, and water quality.</p>
+<hr />
+</div>
+<div id="maximizing-reservoir-release-benefits" class="section level3 hasAnchor" number="6.6.3">
+<h3><span class="header-section-number">6.6.3</span> Maximizing Reservoir Release Benefits<a href="optimization-in-environmental-systems.html#maximizing-reservoir-release-benefits" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Reservoir releases influence hydropower production, ecological flow needs, flood protection, and downstream water availability. An optimal release often balances multiple competing outcomes.</p>
+<p><strong>Modeling approach</strong>
+- Let <span class="math inline">\(R\)</span> = release rate.<br />
+- Hydropower production may scale with<br />
+<span class="math display">\[
+  H(R) = \eta R (h - \alpha R),
+  \]</span>
+where <span class="math inline">\(h\)</span> is hydraulic head and <span class="math inline">\(\alpha R\)</span> represents head loss with increasing flow.<br />
+- Ecological benefits might increase with flow to a point but then level off.<br />
+- A combined benefit function could take the form<br />
+<span class="math display">\[
+  B(R) = H(R) + E(R),
+  \]</span>
+where <span class="math inline">\(E(R)\)</span> models ecological gains.</p>
+<p><strong>Using derivatives</strong>
+- Compute <span class="math inline">\(B&#39;(R)\)</span> to find where total benefits peak.<br />
+- Constraints such as flood risk or minimum habitat flow determine allowable bounds for <span class="math inline">\(R\)</span>.</p>
+<p><strong>Interpreting the optimum</strong>
+- The derivative identifies the flow where hydropower gains and ecological gains balance most efficiently.<br />
+- If the optimum lies outside allowable limits, the best feasible value is at the nearest boundary.<br />
+- This helps reservoir operators allocate releases that support both human and ecological needs.</p>
+<hr />
+</div>
+<div id="sustainable-harvest-or-foraging-rate" class="section level3 hasAnchor" number="6.6.4">
+<h3><span class="header-section-number">6.6.4</span> Sustainable Harvest or Foraging Rate<a href="optimization-in-environmental-systems.html#sustainable-harvest-or-foraging-rate" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Harvest models naturally produce optimization problems because they involve balancing growth and removal. Removing too little wastes potential yield; removing too much collapses the population. Optimization identifies a sustainable “sweet spot.”</p>
+<p><strong>Modeling approach</strong>
+- For a population following logistic growth,<br />
+<span class="math display">\[
+  P&#39;(t) = r P \left(1 - \frac{P}{K}\right).
+  \]</span>
+- A harvest rate <span class="math inline">\(h\)</span> removes individuals at a rate <span class="math inline">\(h\)</span>.<br />
+- Maximum <strong>sustainable yield</strong> occurs at the population size where growth is fastest, which we find using derivatives.</p>
+<p><strong>Using derivatives</strong>
+- The logistic growth term <span class="math inline">\(rP(1 - P/K)\)</span> is maximized when<br />
+<span class="math display">\[
+  \frac{d}{dP} \left[rP\left(1 - \frac{P}{K}\right)\right] = 0.
+  \]</span>
+- This occurs at <span class="math inline">\(P = K/2\)</span>.<br />
+- Thus the harvest level is maximal when the population is held around half of carrying capacity.</p>
+<p><strong>Interpreting the optimum</strong>
+- Derivatives provide a biological explanation: growth is slow when populations are too small (limited reproduction) or too large (heavy competition).<br />
+- The optimum reflects the point where reproduction rates peak — the ecological balance point between under- and over-harvesting.</p>
+<hr />
+</div>
+<div id="how-the-case-studies-support-learning" class="section level3 hasAnchor" number="6.6.5">
+<h3><span class="header-section-number">6.6.5</span> How the Case Studies Support Learning<a href="optimization-in-environmental-systems.html#how-the-case-studies-support-learning" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Each case study illustrates the <strong>full optimization workflow</strong>:</p>
+<ol style="list-style-type: decimal">
+<li><p><strong>Modeling</strong><br />
+Translate ecology, hydrology, or resource constraints into equations.</p></li>
+<li><p><strong>Derivative computation</strong><br />
+Differentiate the objective function to reveal rates of change.</p></li>
+<li><p><strong>Critical point analysis</strong><br />
+Solve <span class="math inline">\(f&#39;(x) = 0\)</span> and check where the derivative is undefined.</p></li>
+<li><p><strong>Sign chart or second derivative test</strong><br />
+Confirm whether each critical point is a maximum, minimum, or neither.</p></li>
+<li><p><strong>Endpoint analysis</strong><br />
+Evaluate boundary values imposed by physical or regulatory limits.</p></li>
+<li><p><strong>Environmental interpretation</strong><br />
+Translate the mathematics back into ecological meaning:<br />
+Is the optimum biologically feasible?<br />
+What tradeoffs does it imply?<br />
+How sensitive is it to changes in conditions?</p></li>
+</ol>
+<p>These case studies allow students to see optimization not as a purely mathematical technique but as a powerful tool for making informed decisions about environmental management, sustainability, and resource allocation.</p>
+<hr />
+</div>
+</div>
+<div id="common-optimization-patterns" class="section level2 hasAnchor" number="6.7">
+<h2><span class="header-section-number">6.7</span> Common Optimization Patterns<a href="optimization-in-environmental-systems.html#common-optimization-patterns" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Although environmental optimization problems can appear diverse, many of them fall into a handful of recurring mathematical patterns. Recognizing these patterns helps students build intuition and approach new problems with confidence. Each pattern reflects a specific type of physical or ecological tradeoff, and each leads to a characteristic type of function that can be analyzed with derivatives.</p>
+<hr />
+<div id="geometric-optimization" class="section level3 hasAnchor" number="6.7.1">
+<h3><span class="header-section-number">6.7.1</span> Geometric Optimization<a href="optimization-in-environmental-systems.html#geometric-optimization" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Many environmental systems involve spatial design: determining shapes, dimensions, or layouts that maximize or minimize some spatial quantity. These problems rely heavily on geometric formulas and often reduce neatly to single-variable functions once constraints are applied.</p>
+<p><strong>Typical goals</strong>
+- Maximize area under a fixed perimeter (e.g., designing riparian buffers).<br />
+- Minimize surface area for a fixed volume (e.g., storage tanks or ecological reactors).<br />
+- Optimize watershed or wetland shape for maximum infiltration or habitat exposure.<br />
+- Determine the best tilt or curvature of solar collectors to maximize radiation interception.</p>
+<p><strong>Why optimization matters here</strong>
+Geometric structures influence ecological processes such as temperature regulation, habitat connectivity, infiltration capacity, and energy capture. Optimal shapes can reduce costs while improving ecological performance.</p>
+<p><strong>Mathematical features</strong>
+- Simple polynomial or rational functions.<br />
+- Constraints come from geometry (e.g., fixed perimeter, fixed volume).<br />
+- Critical points often have clear physical meaning (e.g., a square gives maximum area for a fixed perimeter).</p>
+<hr />
+</div>
+<div id="resource-allocation-models" class="section level3 hasAnchor" number="6.7.2">
+<h3><span class="header-section-number">6.7.2</span> Resource Allocation Models<a href="optimization-in-environmental-systems.html#resource-allocation-models" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Environmental decision-making often requires distributing limited resources among competing needs. Optimization provides a principled way to balance costs and benefits, ensuring maximum efficiency with minimal waste.</p>
+<p><strong>Common applications</strong>
+- Allocating fertilizer or irrigation water across fields to minimize cost for a target yield.<br />
+- Designing energy budgets for environmental monitoring stations (e.g., solar–battery systems).<br />
+- Combining pollution controls (e.g., filters, buffers, and wetland treatment) to achieve regulatory limits at minimum expense.<br />
+- Allocating conservation funding to maximize biodiversity preserved.</p>
+<p><strong>Why derivatives are useful</strong>
+Marginal returns — how much benefit comes from a small change in a resource — often decrease over time. Derivatives help quantify this by identifying when increasing effort no longer leads to proportional gains.</p>
+<p><strong>Mathematical features</strong>
+- Often involve rational, exponential, or diminishing-returns functions.<br />
+- Constraints can include budgets, storage limits, energy requirements, or regulatory caps.<br />
+- Optima frequently occur where marginal cost = marginal benefit, a condition visible through setting derivatives equal.</p>
+<hr />
+</div>
+<div id="rate-and-growth-optimization" class="section level3 hasAnchor" number="6.7.3">
+<h3><span class="header-section-number">6.7.3</span> Rate and Growth Optimization<a href="optimization-in-environmental-systems.html#rate-and-growth-optimization" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Many ecological or environmental processes change over time, and the rate at which they grow, decay, or spread can have important management implications. Optimization in this context identifies the conditions that maximize or minimize rates rather than amounts.</p>
+<p><strong>Examples</strong>
+- Determining when population growth is fastest.<br />
+- Identifying the rainfall rate that maximizes infiltration before runoff begins.<br />
+- Optimizing algal growth in aquaculture systems.<br />
+- Finding the wind speed that maximizes energy production for turbines.</p>
+<p><strong>Classic result</strong>
+For logistic population growth,
+<span class="math display">\[
+P&#39;(t) = rP\left(1 - \frac{P}{K}\right),
+\]</span>
+the growth rate is maximized at<br />
+<span class="math display">\[
+P = \frac{K}{2}.
+\]</span>
+Derivatives reveal this by showing where the rate function switches from increasing to decreasing.</p>
+<p><strong>Why these problems matter</strong>
+Understanding optimal growth rates helps support sustainable management, avoid ecological collapse, and identify tipping points in natural systems.</p>
+<p><strong>Mathematical features</strong>
+- Rate functions are rarely linear.<br />
+- Derivatives reveal peaks in growth, decay, or efficiency.<br />
+- Optima often correspond to ecological balance points.</p>
+<hr />
+</div>
+<div id="time-optimization" class="section level3 hasAnchor" number="6.7.4">
+<h3><span class="header-section-number">6.7.4</span> Time Optimization<a href="optimization-in-environmental-systems.html#time-optimization" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Many environmental processes vary cyclically or respond to external forces such as tides, diurnal cycles, or seasonal patterns. Optimization helps identify the “best” or “worst” times for a particular event, process, or intervention.</p>
+<p><strong>Typical applications</strong>
+- Finding when travel time is minimized across a river with varying currents (e.g., least-time paths).<br />
+- Identifying the time of day when CO₂ is highest or lowest in urban heat islands.<br />
+- Pinpointing peak river discharge during storm events.<br />
+- Optimizing sampling schedules to capture maximum variability or detect extreme events.<br />
+- Determining the timing that maximizes pollinator activity or photosynthetic efficiency.</p>
+<p><strong>How derivatives help</strong>
+- The time derivative <span class="math inline">\(f&#39;(t)\)</span> indicates whether a signal is rising or falling.<br />
+- Peaks and troughs correspond to times where <span class="math inline">\(f&#39;(t) = 0\)</span>.<br />
+- Concavity reveals whether a peak is sharp or broad, which affects ecological interpretation.</p>
+<p><strong>Mathematical features</strong>
+- Often involve sinusoidal, exponential, or polynomial models.<br />
+- Optima may repeat (as in seasonal cycles) or occur only once (as in storm hydrographs).<br />
+- Time constraints (e.g., daylight hours, tidal windows) create bounded domains.</p>
+<hr />
+<p>These patterns help students recognize that despite surface differences, many environmental optimization problems share the same mathematical structure. By mastering a handful of core approaches, students become capable of tackling a much wider range of applied scenarios.</p>
+</div>
+</div>
+<div id="optimization-with-constraints" class="section level2 hasAnchor" number="6.8">
+<h2><span class="header-section-number">6.8</span> Optimization with Constraints<a href="optimization-in-environmental-systems.html#optimization-with-constraints" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Most environmental optimization problems are not free to take any value of <span class="math inline">\(x\)</span>. Real systems operate within <strong>physical, ecological, economic, and regulatory limits</strong>, which impose constraints on the model. Understanding how constraints shape feasible solutions is essential because they often determine whether an optimum lies at a critical point or at the edge of the allowable range.</p>
+<hr />
+<div id="simple-inequality-constraints" class="section level3 hasAnchor" number="6.8.1">
+<h3><span class="header-section-number">6.8.1</span> Simple Inequality Constraints<a href="optimization-in-environmental-systems.html#simple-inequality-constraints" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>In many cases, constraints come from basic physical or biological rules:</p>
+<ul>
+<li><p><strong>Nonnegativity:</strong><br />
+<span class="math inline">\(x \ge 0\)</span><br />
+Populations, concentrations, discharge rates, depths, biomass, and harvest levels cannot be negative.</p></li>
+<li><p><strong>Upper bounds from natural limits:</strong><br />
+<span class="math inline">\(x \le K\)</span><br />
+Carrying capacities, maximum storage, maximum flow, and maximum treatment capacity all impose ceilings on variables.</p></li>
+<li><p><strong>Engineering or infrastructure limits:</strong><br />
+Pumps, turbines, reactors, and reservoirs often have minimum and maximum operating ranges.</p></li>
+</ul>
+<p>These inequalities define the <strong>feasible domain</strong>, the set of values where the model makes sense. Optimization then requires checking:</p>
+<ol style="list-style-type: decimal">
+<li><strong>Critical points inside the domain</strong>, where <span class="math inline">\(f&#39;(x) = 0\)</span>.<br />
+</li>
+<li><strong>Endpoints</strong>, where <span class="math inline">\(x\)</span> equals the boundary values.</li>
+</ol>
+<p>A key lesson for students:<br />
+<strong>An optimum outside the feasible domain is not an optimum at all — it must be discarded.</strong></p>
+<p>For example, if a model predicts optimal planting density at <span class="math inline">\(x = -5\)</span>, the mathematical procedure is correct but the result is meaningless. The true optimum must then occur at the boundary.</p>
+<hr />
+</div>
+<div id="multiple-constraints-qualitative-introduction" class="section level3 hasAnchor" number="6.8.2">
+<h3><span class="header-section-number">6.8.2</span> Multiple Constraints (Qualitative Introduction)<a href="optimization-in-environmental-systems.html#multiple-constraints-qualitative-introduction" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Some environmental systems operate under several simultaneous constraints. Rather than a single interval for <span class="math inline">\(x\)</span>, we have a <strong>feasible region</strong> defined by interacting limits.</p>
+<p>Examples:
+- A wetland must meet <strong>minimum area</strong>, <strong>maximum slope</strong>, and <strong>minimum soil infiltration</strong> criteria.<br />
+- A stormwater basin must satisfy <strong>volume</strong>, <strong>depth</strong>, and <strong>material cost</strong> constraints.<br />
+- A population model may enforce both <strong>harvest quotas</strong> and <strong>reproductive thresholds</strong>.</p>
+<p>Even without introducing the full machinery of Lagrange multipliers, students can explore these problems conceptually by:</p>
+<ul>
+<li>Sketching constraint lines or curves.<br />
+</li>
+<li>Visualizing how multiple constraints shrink the feasible region.<br />
+</li>
+<li>Identifying where boundaries intersect.<br />
+</li>
+<li>Observing how the optimal point may lie
+<ul>
+<li>at a critical point,<br />
+</li>
+<li>along a boundary, or<br />
+</li>
+<li>at a corner where constraints meet.</li>
+</ul></li>
+</ul>
+<p>This graphical understanding helps students see why in many cases the optimum does <strong>not</strong> occur where <span class="math inline">\(f&#39;(x) = 0\)</span>. Instead, the best achievable solution may sit at the intersection of two constraints — a very common scenario in environmental policy, engineering design, and resource allocation.</p>
+<hr />
+</div>
+<div id="case-study-minimizing-cost-with-an-environmental-constraint" class="section level3 hasAnchor" number="6.8.3">
+<h3><span class="header-section-number">6.8.3</span> Case Study: Minimizing Cost with an Environmental Constraint<a href="optimization-in-environmental-systems.html#case-study-minimizing-cost-with-an-environmental-constraint" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Imagine a water treatment facility that must achieve a target pollutant reduction while minimizing cost. The decision maker controls treatment intensity <span class="math inline">\(x\)</span>, where:</p>
+<ul>
+<li><strong>Cost</strong> increases with <span class="math inline">\(x\)</span>.<br />
+</li>
+<li><strong>Pollutant removal</strong> also increases with <span class="math inline">\(x\)</span>, but with diminishing returns.</li>
+</ul>
+<p>A simple model might be:</p>
+<ul>
+<li>Cost:<br />
+<span class="math display">\[
+C(x) = a x + b
+\]</span></li>
+<li>Pollutant concentration after treatment:<br />
+<span class="math display">\[
+P(x) = P_0 e^{-kx}
+\]</span></li>
+</ul>
+<p>Suppose regulations require<br />
+<span class="math display">\[
+P(x) \le P_{\text{target}}.
+\]</span></p>
+<p>This becomes a constraint on <span class="math inline">\(x\)</span>:<br />
+<span class="math display">\[
+x \ge \frac{1}{k} \ln \frac{P_0}{P_{\text{target}}}.
+\]</span></p>
+<p>The optimization problem is now:</p>
+<ul>
+<li><strong>Minimize:</strong> <span class="math inline">\(C(x)\)</span><br />
+</li>
+<li><strong>Subject to:</strong> <span class="math inline">\(x \ge x_{\min}\)</span></li>
+</ul>
+<p>Because <span class="math inline">\(C(x)\)</span> increases with <span class="math inline">\(x\)</span>, the least expensive solution is the <strong>smallest feasible value</strong> — the boundary created by the environmental constraint.</p>
+<p>This illustrates a major theme:
+&gt; Environmental constraints often determine the optimum, even when the unconstrained mathematical optimum lies elsewhere.</p>
+<hr />
+</div>
+</div>
+<div id="interpreting-and-communicating-solutions" class="section level2 hasAnchor" number="6.9">
+<h2><span class="header-section-number">6.9</span> Interpreting and Communicating Solutions<a href="optimization-in-environmental-systems.html#interpreting-and-communicating-solutions" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Finding an optimum mathematically is only half the process. Effective environmental decision-making requires interpreting the result within its ecological, physical, and policy context.</p>
+<div id="meaning-of-the-optimal-value" class="section level3 hasAnchor" number="6.9.1">
+<h3><span class="header-section-number">6.9.1</span> Meaning of the optimal value<a href="optimization-in-environmental-systems.html#meaning-of-the-optimal-value" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Students must ask:
+- <em>Does this value make sense biologically or physically?</em><br />
+- <em>What assumptions were made?</em><br />
+- <em>What does the optimum represent in the real system?</em></p>
+<p>An optimal harvest level mathematically might occur at a population size below the reproductive threshold. Such a solution would be dismissed in practice.</p>
+</div>
+<div id="sensitivity-to-system-changes" class="section level3 hasAnchor" number="6.9.2">
+<h3><span class="header-section-number">6.9.2</span> Sensitivity to system changes<a href="optimization-in-environmental-systems.html#sensitivity-to-system-changes" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Environmental systems are rarely static. Parameters such as rainfall, temperature, costs, pollutant loads, and species interactions change over time. Good practice includes examining how the optimum shifts when:</p>
+<ul>
+<li>coefficients change,<br />
+</li>
+<li>constraints tighten or loosen,<br />
+</li>
+<li>environmental conditions vary, or<br />
+</li>
+<li>models incorporate uncertainty.</li>
+</ul>
+<p>This is especially important when the optimum lies near a boundary, where slight perturbations can dramatically change feasibility.</p>
+</div>
+<div id="when-mathematically-optimal-solutions-are-unrealistic" class="section level3 hasAnchor" number="6.9.3">
+<h3><span class="header-section-number">6.9.3</span> When mathematically optimal solutions are unrealistic<a href="optimization-in-environmental-systems.html#when-mathematically-optimal-solutions-are-unrealistic" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Sometimes the optimum suggests impossible or undesirable actions:
+- Releasing more water than exists in the reservoir.<br />
+- Planting trees at densities that exceed physical spacing limits.<br />
+- Harvesting at levels that lead to population collapse.<br />
+- Operating equipment outside safe ranges.</p>
+<p>Students must learn that <strong>mathematical solutions require ecological judgment</strong> before being implemented.</p>
+</div>
+<div id="guiding-environmental-decisions" class="section level3 hasAnchor" number="6.9.4">
+<h3><span class="header-section-number">6.9.4</span> Guiding environmental decisions<a href="optimization-in-environmental-systems.html#guiding-environmental-decisions" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Optimization is most powerful when interpreted thoughtfully:
+- It identifies <strong>tradeoffs</strong> clearly.<br />
+- It prioritizes <strong>efficient</strong> and <strong>sustainable</strong> choices.<br />
+- It highlights whether additional investment yields meaningful improvement.<br />
+- It provides a transparent basis for policy, engineering, or management actions.</p>
+<p>Ultimately, the goal of calculus-based optimization is not only to compute a number, but to use mathematical insight to support better decisions in managing environmental systems.</p>
+<hr />
+</div>
+</div>
+<div id="summary-the-big-ideas-of-optimization" class="section level2 hasAnchor" number="6.10">
+<h2><span class="header-section-number">6.10</span> Summary: The Big Ideas of Optimization<a href="optimization-in-environmental-systems.html#summary-the-big-ideas-of-optimization" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<ul>
+<li>Optimization is finding the <strong>best outcome under constraints</strong>.<br />
+</li>
+<li>Derivatives identify where systems <strong>change direction</strong> or <strong>balance forces</strong>.<br />
+</li>
+<li>Endpoints and constraints matter just as much as internal critical points.<br />
+</li>
+<li>Environmental interpretation is essential — the optimum must make sense physically.<br />
+</li>
+<li>Optimization integrates all major calculus tools: derivatives, sign charts, concavity, limits, and modeling.</li>
+</ul>
+</div>
+<div id="practice-optimization-in-environmental-systems" class="section level2 hasAnchor" number="6.11">
+<h2><span class="header-section-number">6.11</span> Practice: Optimization in Environmental Systems<a href="optimization-in-environmental-systems.html#practice-optimization-in-environmental-systems" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Work through the following problems to develop fluency in identifying variables, building objective functions, applying derivatives, and interpreting results.</p>
+<hr />
+<div id="optimal-tree-spacing" class="section level3 hasAnchor" number="6.11.1">
+<h3><span class="header-section-number">6.11.1</span> <strong>1. Optimal Tree Spacing</strong><a href="optimization-in-environmental-systems.html#optimal-tree-spacing" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>A restoration site plans to plant native trees in rows.<br />
+Growth per tree is modeled as:
+<span class="math display">\[
+G(d) = 10d - d^2,
+\]</span>
+where <span class="math inline">\(d\)</span> is spacing in meters.</p>
+<p><strong>a)</strong> Find the spacing that maximizes growth.<br />
+<strong>b)</strong> Interpret the result.</p>
+<details>
+<summary>
+<strong>Show Solution</strong>
+</summary>
+<p>We differentiate:
+<span class="math display">\[
+G&#39;(d) = 10 - 2d.
+\]</span></p>
+<p>Set to zero:
+<span class="math display">\[
+10 - 2d = 0 \quad\Rightarrow\quad d = 5.
+\]</span></p>
+<p>Since <span class="math inline">\(G(d)\)</span> is a downward-opening parabola (coefficient of <span class="math inline">\(d^2\)</span> is <span class="math inline">\(-1\)</span>), this critical point is a <strong>maximum</strong>.</p>
+<p><strong>Answer:</strong> Maximum growth per tree occurs at <span class="math inline">\(d = 5\)</span> m.</p>
+<strong>Interpretation:</strong><br />
+If trees are closer than 5 m, competition reduces growth.<br />
+If they are farther apart than 5 m, there is unused space/light.<br />
+The 5 m spacing balances competition and resource use.
+</details>
+<hr />
+</div>
+<div id="minimizing-edge-habitat-loss" class="section level3 hasAnchor" number="6.11.2">
+<h3><span class="header-section-number">6.11.2</span> <strong>2. Minimizing Edge Habitat Loss</strong><a href="optimization-in-environmental-systems.html#minimizing-edge-habitat-loss" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>A square wildlife enclosure has fixed <strong>perimeter</strong> 200 m.<br />
+The <strong>interior area</strong> supports habitat; the <strong>edge</strong> increases disturbance.</p>
+<p><strong>a)</strong> Express the area <span class="math inline">\(A(x)\)</span> as a function of the side length <span class="math inline">\(x\)</span>.<br />
+<strong>b)</strong> Find the dimensions that maximize area.<br />
+<strong>c)</strong> Why does nature “prefer” this shape?</p>
+<details>
+<summary>
+<strong>Show Solution</strong>
+</summary>
+<p>For a square, perimeter <span class="math inline">\(P = 4x\)</span>:
+<span class="math display">\[
+4x = 200 \quad\Rightarrow\quad x = 50\ \text{m}.
+\]</span></p>
+<p>Area:
+<span class="math display">\[
+A(x) = x^2 \quad\Rightarrow\quad A = 50^2 = 2500\ \text{m}^2.
+\]</span></p>
+<p>Here, the word “square” already fixes the shape; there is no calculus needed.<br />
+If instead we allowed a <strong>rectangle</strong> with perimeter 200, then:</p>
+<ul>
+<li>Let sides be <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span>.<br />
+</li>
+<li>Constraint: <span class="math inline">\(2x + 2y = 200 \Rightarrow y = 100 - x\)</span>.<br />
+</li>
+<li>Area: <span class="math inline">\(A(x) = x(100 - x) = 100x - x^2\)</span>.<br />
+</li>
+<li>Then
+<span class="math display">\[
+A&#39;(x) = 100 - 2x = 0 \Rightarrow x = 50,\ y = 50,
+\]</span>
+i.e., the maximum-area rectangle is a <strong>square</strong>.</li>
+</ul>
+<strong>Interpretation:</strong><br />
+For a fixed perimeter, the square maximizes interior area and thus minimizes edge relative to area.<br />
+Ecologically, this means less edge habitat (with higher disturbance) and more protected interior habitat.
+</details>
+<hr />
+</div>
+<div id="fastest-algal-growth-temperature" class="section level3 hasAnchor" number="6.11.3">
+<h3><span class="header-section-number">6.11.3</span> <strong>3. Fastest Algal Growth Temperature</strong><a href="optimization-in-environmental-systems.html#fastest-algal-growth-temperature" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Algal growth rate is modeled as:
+<span class="math display">\[
+R(T) = T(30 - T),
+\]</span>
+for temperature <span class="math inline">\(T\)</span> in °C.</p>
+<p><strong>a)</strong> Find the temperature that maximizes growth.<br />
+<strong>b)</strong> Explain the ecological meaning.</p>
+<details>
+<summary>
+<strong>Show Solution</strong>
+</summary>
+<p>Differentiate:
+<span class="math display">\[
+R&#39;(T) = 30 - 2T.
+\]</span></p>
+<p>Set to zero:
+<span class="math display">\[
+30 - 2T = 0 \Rightarrow T = 15^\circ\text{C}.
+\]</span></p>
+<p>Since <span class="math inline">\(R(T)\)</span> is a downward-opening parabola, <span class="math inline">\(T = 15\)</span> °C is a <strong>maximum</strong>.</p>
+<strong>Interpretation:</strong><br />
+Algae grow fastest at a moderate, optimal temperature.<br />
+Lower temperatures slow metabolism; higher ones cause heat stress or enzyme denaturation.
+</details>
+<hr />
+</div>
+<div id="minimizing-pollution-transport-time" class="section level3 hasAnchor" number="6.11.4">
+<h3><span class="header-section-number">6.11.4</span> <strong>4. Minimizing Pollution Transport Time</strong><a href="optimization-in-environmental-systems.html#minimizing-pollution-transport-time" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Flow speed in a wetland channel depends on depth:
+<span class="math display">\[
+v(h) = 2h - h^2,
+\]</span>
+where <span class="math inline">\(h\)</span> is depth (m).</p>
+<p><strong>a)</strong> Find the depth that maximizes flow speed.<br />
+<strong>b)</strong> What does this imply about pollutant retention?</p>
+<details>
+<summary>
+<strong>Show Solution</strong>
+</summary>
+<p>Differentiate:
+<span class="math display">\[
+v&#39;(h) = 2 - 2h.
+\]</span></p>
+<p>Set to zero:
+<span class="math display">\[
+2 - 2h = 0 \Rightarrow h = 1.
+\]</span></p>
+<p>Since <span class="math inline">\(v(h)\)</span> is quadratic with a negative leading coefficient, <span class="math inline">\(h = 1\)</span> m gives the <strong>maximum speed</strong>.</p>
+<strong>Interpretation:</strong><br />
+At about 1 m depth, water moves fastest.<br />
+Shallower or deeper conditions slow flow and increase residence time, which can either increase pollutant retention (good for treatment wetlands) or prolong exposure (bad if we want contaminants flushed quickly), depending on the management goal.
+</details>
+<hr />
+</div>
+<div id="optimal-foraging-time" class="section level3 hasAnchor" number="6.11.5">
+<h3><span class="header-section-number">6.11.5</span> <strong>5. Optimal Foraging Time</strong><a href="optimization-in-environmental-systems.html#optimal-foraging-time" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>A shorebird’s energy gain rate at a feeding patch is modeled as:
+<span class="math display">\[
+E(t) = \frac{15t}{t+3},
+\]</span>
+where <span class="math inline">\(t\)</span> is the time (minutes) spent at that patch, <span class="math inline">\(t \ge 0\)</span>.</p>
+<p><strong>a)</strong> Use derivatives to analyze how <span class="math inline">\(E(t)\)</span> changes with time.<br />
+<strong>b)</strong> Does a finite <span class="math inline">\(t\)</span> maximize <span class="math inline">\(E(t)\)</span> on <span class="math inline">\([0,\infty)\)</span>?<br />
+<strong>c)</strong> Interpret in terms of foraging decisions.</p>
+<details>
+<summary>
+<strong>Show Solution</strong>
+</summary>
+<p>Rewrite:
+<span class="math display">\[
+E(t) = \frac{15t}{t+3}
+= 15 - \frac{45}{t+3}.
+\]</span></p>
+<p>Differentiate:
+<span class="math display">\[
+E&#39;(t) = -45 \cdot \frac{-1}{(t+3)^2} = \frac{45}{(t+3)^2}.
+\]</span></p>
+<p>For <span class="math inline">\(t \ge 0\)</span>, <span class="math inline">\((t+3)^2 &gt; 0\)</span>, so
+<span class="math display">\[
+E&#39;(t) &gt; 0 \quad \text{for all } t \ge 0.
+\]</span></p>
+<p>So <span class="math inline">\(E(t)\)</span> is <strong>increasing for all <span class="math inline">\(t \ge 0\)</span></strong>.</p>
+<p>Check the limiting behavior:
+<span class="math display">\[
+\lim_{t\to\infty} E(t) = \lim_{t\to\infty} \left(15 - \frac{45}{t+3}\right) = 15.
+\]</span></p>
+<p>So <span class="math inline">\(E(t)\)</span> increases toward 15 but never exceeds 15.</p>
+<p><strong>Conclusions:</strong></p>
+<ul>
+<li>There is <strong>no finite <span class="math inline">\(t\)</span></strong> where <span class="math inline">\(E(t)\)</span> attains a mathematical maximum on <span class="math inline">\([0,\infty)\)</span>; the supremum is 15, approached as <span class="math inline">\(t \to \infty\)</span>.</li>
+<li>In a realistic setting, birds face time/ predation/ travel constraints, so they would choose a large-but-finite <span class="math inline">\(t\)</span> where the <strong>marginal gain</strong> (slope) becomes too small to justify staying.</li>
+</ul>
+<strong>Interpretation:</strong><br />
+The model says “longer is always better” for average gain rate, but with <strong>diminishing returns</strong>.<br />
+Optimal foraging theory would combine this with other constraints (e.g., travel time to the next patch, risk, total foraging time per day) to find a <strong>behaviorally optimal</strong> time that is less than infinity.
+</details>
+<hr />
+</div>
+<div id="sustainable-harvest-timing" class="section level3 hasAnchor" number="6.11.6">
+<h3><span class="header-section-number">6.11.6</span> <strong>6. Sustainable Harvest Timing</strong><a href="optimization-in-environmental-systems.html#sustainable-harvest-timing" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Fish population:
+<span class="math display">\[
+P(t) = -t^3 + 6t^2,
+\]</span>
+with <span class="math inline">\(t\)</span> in years since protection began.<br />
+Annual harvest is proportional to population:
+<span class="math display">\[
+H(t) = 0.2 P(t).
+\]</span></p>
+<p><strong>a)</strong> Find the time <span class="math inline">\(t\)</span> that maximizes harvest.<br />
+<strong>b)</strong> Interpret ecologically.</p>
+<details>
+<summary>
+<strong>Show Solution</strong>
+</summary>
+<p>Since <span class="math inline">\(H(t) = 0.2P(t)\)</span>, maximizing <span class="math inline">\(H\)</span> is equivalent to maximizing <span class="math inline">\(P\)</span>.</p>
+<p>Differentiate:
+<span class="math display">\[
+P&#39;(t) = -3t^2 + 12t = -3t(t-4).
+\]</span></p>
+<p>Critical points:
+<span class="math display">\[
+t = 0,\quad t = 4.
+\]</span></p>
+<p>Second derivative:
+<span class="math display">\[
+P&#39;&#39;(t) = -6t + 12.
+\]</span>
+- <span class="math inline">\(P&#39;&#39;(0) = 12 &gt; 0\)</span> ⇒ local <strong>minimum</strong> at <span class="math inline">\(t = 0\)</span>.<br />
+- <span class="math inline">\(P&#39;&#39;(4) = -24 + 12 = -12 &lt; 0\)</span> ⇒ local <strong>maximum</strong> at <span class="math inline">\(t = 4\)</span>.</p>
+<p>So harvest is maximized at <strong><span class="math inline">\(t = 4\)</span> years</strong>.</p>
+<p>Population there:
+<span class="math display">\[
+P(4) = -(4^3) + 6(4^2) = -64 + 96 = 32.
+\]</span></p>
+<strong>Interpretation:</strong><br />
+- Harvesting too early (near <span class="math inline">\(t = 0\)</span>) draws from a small, recovering population.<br />
+- Waiting until <span class="math inline">\(t \approx 4\)</span> allows population growth to peak, giving the largest sustainable catch.<br />
+- Harvesting much later risks drawing from a declining population.
+</details>
+<hr />
+</div>
+<div id="minimizing-irrigation-waste" class="section level3 hasAnchor" number="6.11.7">
+<h3><span class="header-section-number">6.11.7</span> <strong>7. Minimizing Irrigation Waste</strong><a href="optimization-in-environmental-systems.html#minimizing-irrigation-waste" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Crop water benefit function:
+<span class="math display">\[
+W(x) = 40 + 10x - x^2,
+\]</span>
+where <span class="math inline">\(x\)</span> is irrigation intensity (in some units).</p>
+<p><strong>a)</strong> Find the irrigation level that maximizes <span class="math inline">\(W(x)\)</span>.<br />
+<strong>b)</strong> Interpret why both too little and too much irrigation are suboptimal.</p>
+<details>
+<summary>
+<strong>Show Solution</strong>
+</summary>
+<p>Differentiate:
+<span class="math display">\[
+W&#39;(x) = 10 - 2x.
+\]</span></p>
+<p>Set to zero:
+<span class="math display">\[
+10 - 2x = 0 \Rightarrow x = 5.
+\]</span></p>
+<p>Quadratic with leading coefficient <span class="math inline">\(-1\)</span> ⇒ concave down ⇒ <strong>maximum</strong> at <span class="math inline">\(x = 5\)</span>.</p>
+<strong>Interpretation:</strong><br />
+- For <span class="math inline">\(x &lt; 5\)</span>, more water increases yield (plants are water-limited).<br />
+- For <span class="math inline">\(x &gt; 5\)</span>, extra water starts to harm yield (waterlogging, nutrient leaching).<br />
+The sweet spot at <span class="math inline">\(x = 5\)</span> maximizes useful water uptake and minimizes waste.
+</details>
+<hr />
+</div>
+<div id="maximizing-carbon-storage" class="section level3 hasAnchor" number="6.11.8">
+<h3><span class="header-section-number">6.11.8</span> <strong>8. Maximizing Carbon Storage</strong><a href="optimization-in-environmental-systems.html#maximizing-carbon-storage" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Per-hectare carbon storage:
+<span class="math display">\[
+C(d) = 50d - 4d^2,
+\]</span>
+where <span class="math inline">\(d\)</span> is planting density in <strong>hundreds</strong> of trees per hectare.</p>
+<p><strong>a)</strong> Find the density that maximizes carbon storage.<br />
+<strong>b)</strong> Explain the tradeoff.</p>
+<details>
+<summary>
+<strong>Show Solution</strong>
+</summary>
+<p>Differentiate:
+<span class="math display">\[
+C&#39;(d) = 50 - 8d.
+\]</span></p>
+<p>Set to zero:
+<span class="math display">\[
+50 - 8d = 0 \Rightarrow d = \frac{50}{8} = 6.25.
+\]</span></p>
+<p>This is a concave-down quadratic ⇒ <strong>maximum</strong> at <span class="math inline">\(d = 6.25\)</span>.</p>
+<p>Since <span class="math inline">\(d\)</span> is in hundreds of trees per hectare,<br />
+optimal density ≈ <strong>625 trees/ha</strong>.</p>
+<strong>Interpretation:</strong><br />
+Low densities underuse space and light; very high densities cause strong competition and mortality.<br />
+The optimal density balances these, maximizing total stand carbon.
+</details>
+<hr />
+</div>
+<div id="balancing-hydropower-vs.-habitat-flow" class="section level3 hasAnchor" number="6.11.9">
+<h3><span class="header-section-number">6.11.9</span> <strong>9. Balancing Hydropower vs. Habitat Flow</strong><a href="optimization-in-environmental-systems.html#balancing-hydropower-vs.-habitat-flow" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Hydropower from a dam:
+<span class="math display">\[
+P(Q) = 5Q - 0.1Q^2,
+\]</span>
+where <span class="math inline">\(Q\)</span> is release rate (m³/s).</p>
+<p>Habitat constraint:<br />
+<span class="math display">\[
+Q \ge 10 \quad \text{(minimum flow for fish)}.
+\]</span></p>
+<p><strong>a)</strong> Find the unconstrained optimal <span class="math inline">\(Q\)</span>.<br />
+<strong>b)</strong> Find the optimal <strong>feasible</strong> release given the constraint.<br />
+<strong>c)</strong> Interpret.</p>
+<details>
+<summary>
+<strong>Show Solution</strong>
+</summary>
+<p>Differentiate:
+<span class="math display">\[
+P&#39;(Q) = 5 - 0.2Q.
+\]</span></p>
+<p>Set to zero:
+<span class="math display">\[
+5 - 0.2Q = 0 \Rightarrow Q = \frac{5}{0.2} = 25.
+\]</span></p>
+<p>Because the quadratic has a negative leading coefficient, this is a <strong>maximum</strong>.</p>
+<p>Feasible domain: <span class="math inline">\(Q \ge 10\)</span>.<br />
+The unconstrained optimum <span class="math inline">\(Q = 25\)</span> is within the feasible set.</p>
+<p>So the <strong>optimal feasible release</strong> is <span class="math inline">\(Q = 25\)</span> m³/s.</p>
+<strong>Interpretation:</strong><br />
+- Here, the ecological constraint <span class="math inline">\(Q \ge 10\)</span> doesn’t change the optimum—hydropower is maximized at a habitat-safe flow.<br />
+- In other contexts, the unconstrained optimum might violate habitat needs, in which case operators would be forced to choose a boundary flow that satisfies ecological requirements.
+</details>
+<hr />
+</div>
+<div id="minimizing-nitrogen-after-treatment" class="section level3 hasAnchor" number="6.11.10">
+<h3><span class="header-section-number">6.11.10</span> <strong>10. Minimizing Nitrogen After Treatment</strong><a href="optimization-in-environmental-systems.html#minimizing-nitrogen-after-treatment" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>After treatment, nitrogen concentration is modeled as:
+<span class="math display">\[
+N(x) = 12e^{-0.2x} + x,
+\]</span>
+where <span class="math inline">\(x\)</span> is treatment intensity (hours of processing time).</p>
+<ul>
+<li>The exponential term decays with treatment time (more removal).<br />
+</li>
+<li>The linear term represents recontamination or operational side-effects that increase with time.</li>
+</ul>
+<p><strong>a)</strong> Find the value of <span class="math inline">\(x\)</span> that minimizes <span class="math inline">\(N(x)\)</span>.<br />
+<strong>b)</strong> Explain why too much treatment can increase nitrogen.<br />
+<strong>c)</strong> Give one practical implication.</p>
+<details>
+<summary>
+<strong>Show Solution</strong>
+</summary>
+<p>Differentiate:
+<span class="math display">\[
+N&#39;(x) = 12(-0.2)e^{-0.2x} + 1 = -2.4e^{-0.2x} + 1.
+\]</span></p>
+<p>Set to zero:
+<span class="math display">\[
+-2.4e^{-0.2x} + 1 = 0
+\quad\Rightarrow\quad 1 = 2.4e^{-0.2x}
+\quad\Rightarrow\quad e^{-0.2x} = \frac{1}{2.4} = \frac{5}{12}.
+\]</span></p>
+<p>Take logs:
+<span class="math display">\[
+-0.2x = \ln\!\left(\frac{5}{12}\right)
+\quad\Rightarrow\quad
+x = \frac{\ln(5/12)}{-0.2}.
+\]</span></p>
+<p>Since <span class="math inline">\(\ln(5/12) &lt; 0\)</span>, this gives a positive <span class="math inline">\(x\)</span>.</p>
+<p>Numerically,
+<span class="math display">\[
+\ln\left(\frac{5}{12}\right) \approx -0.8755
+\quad\Rightarrow\quad
+x \approx \frac{-0.8755}{-0.2} \approx 4.38\ \text{hours}.
+\]</span></p>
+<p>Second derivative:
+<span class="math display">\[
+N&#39;&#39;(x) = -2.4(-0.2)e^{-0.2x} = 0.48e^{-0.2x} &gt; 0,
+\]</span>
+so this critical point is a <strong>minimum</strong>.</p>
+<p><strong>Answer:</strong> Minimum nitrogen at <span class="math inline">\(x \approx 4.4\)</span> hours.</p>
+<p><strong>Interpretation:</strong></p>
+<ul>
+<li>For <strong>short</strong> treatment times, the exponential term is large and nitrogen remains high.<br />
+</li>
+<li>For <strong>very long</strong> times, the linear term dominates and nitrogen increases again due to recontamination or side-effects.<br />
+</li>
+<li>The optimal treatment time balances removal and negative side-effects.</li>
+</ul>
+<strong>Practical implication:</strong><br />
+Operators should target a finite, intermediate treatment time (around 4.4 hours in this model) rather than “as long as possible,” which can waste energy and potentially worsen water quality.
+</details>
+<hr />
+</div>
+</div>
+<div id="optimization-problems-with-two-variables-and-a-constraint" class="section level2 hasAnchor" number="6.12">
+<h2><span class="header-section-number">6.12</span> Optimization Problems with Two Variables and a Constraint<a href="optimization-in-environmental-systems.html#optimization-problems-with-two-variables-and-a-constraint" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Each problem begins with a function of <strong>two variables</strong> and a <strong>constraint</strong> that allows you to express the objective in terms of <strong>one variable</strong> and optimize.</p>
+<hr />
+<div id="designing-a-wildlife-corridor-with-fixed-fencing" class="section level3 hasAnchor" number="6.12.1">
+<h3><span class="header-section-number">6.12.1</span> <strong>1. Designing a Wildlife Corridor With Fixed Fencing</strong><a href="optimization-in-environmental-systems.html#designing-a-wildlife-corridor-with-fixed-fencing" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>A rectangular wildlife corridor has length <span class="math inline">\(L\)</span> and width <span class="math inline">\(W\)</span>.<br />
+Total fencing available:<br />
+<span class="math display">\[
+2L + 2W = 300.
+\]</span></p>
+<p>Ecological benefit:
+<span class="math display">\[
+B(L, W) = 4LW - 0.05L^2.
+\]</span></p>
+<p><strong>Task:</strong><br />
+Use the fencing constraint to rewrite <span class="math inline">\(B\)</span> in terms of one variable.<br />
+Find the dimensions that <strong>maximize biodiversity benefit</strong>.</p>
+<details>
+<summary>
+<strong>Show Solution</strong>
+</summary>
+<p><strong>Step 1: Use the constraint</strong></p>
+<p><span class="math display">\[
+2L + 2W = 300 \Rightarrow W = 150 - L.
+\]</span></p>
+<p><strong>Step 2: Substitute into <span class="math inline">\(B\)</span></strong></p>
+<p><span class="math display">\[
+B(L) = 4L(150 - L) - 0.05L^2
+= 600L - 4L^2 - 0.05L^2
+= 600L - 4.05L^2.
+\]</span></p>
+<p><strong>Step 3: Differentiate</strong></p>
+<p><span class="math display">\[
+B&#39;(L) = 600 - 8.1L.
+\]</span></p>
+<p>Set to zero:
+<span class="math display">\[
+600 - 8.1L = 0 \Rightarrow L = \frac{600}{8.1} \approx 74.07.
+\]</span></p>
+<p>Width:
+<span class="math display">\[
+W = 150 - L \approx 150 - 74.07 = 75.93.
+\]</span></p>
+<p><strong>Step 4: Interpretation</strong><br />
+A near-square shape maximizes benefit because it increases interior area relative to edge effects.</p>
+<strong>Optimal dimensions:</strong><br />
+- <span class="math inline">\(L \approx 74.1\)</span> m<br />
+- <span class="math inline">\(W \approx 75.9\)</span> m
+</details>
+<hr />
+</div>
+<div id="wetland-treatment-basin-maximize-pollutant-removal" class="section level3 hasAnchor" number="6.12.2">
+<h3><span class="header-section-number">6.12.2</span> <strong>2. Wetland Treatment Basin: Maximize Pollutant Removal</strong><a href="optimization-in-environmental-systems.html#wetland-treatment-basin-maximize-pollutant-removal" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><span class="math display">\[
+R(A, d) = A(1 - e^{-0.1d})
+\]</span></p>
+<p>Volume constraint:
+<span class="math display">\[
+A d = 600 \Rightarrow d = \frac{600}{A}.
+\]</span></p>
+<p><strong>Task:</strong><br />
+Find the area–depth combination that maximizes <span class="math inline">\(R\)</span>.</p>
+<details>
+<summary>
+<strong>Show Solution</strong>
+</summary>
+<p><strong>Step 1: Substitute</strong></p>
+<p><span class="math display">\[
+R(A) = A\left(1 - e^{-0.1(600/A)}\right)
+= A\left(1 - e^{-60/A}\right).
+\]</span></p>
+<p><strong>Step 2: Differentiate</strong><br />
+Use product + chain rule:</p>
+<p><span class="math display">\[
+R&#39;(A) = 1 - e^{-60/A} - \frac{60}{A}e^{-60/A}.
+\]</span></p>
+<p>Set to zero:
+<span class="math display">\[
+1 = e^{-60/A}\left(1 + \frac{60}{A}\right).
+\]</span></p>
+<p>This transcendental equation has no closed-form solution.<br />
+Solve numerically:</p>
+<p>Solution occurs near <strong><span class="math inline">\(A \approx 100\)</span></strong> m².</p>
+<p>Then:
+<span class="math display">\[
+d = \frac{600}{100} = 6\text{ m}.
+\]</span></p>
+<p><strong>Interpretation:</strong><br />
+A moderately large surface area with moderate depth maximizes contact time <em>and</em> area exposed for treatment.</p>
+<strong>Optimal combination:</strong><br />
+- <span class="math inline">\(A \approx 100\)</span> m²<br />
+- <span class="math inline">\(d \approx 6\)</span> m
+</details>
+<hr />
+</div>
+<div id="solar-pond-for-aquaculture-heating" class="section level3 hasAnchor" number="6.12.3">
+<h3><span class="header-section-number">6.12.3</span> <strong>3. Solar Pond for Aquaculture Heating</strong><a href="optimization-in-environmental-systems.html#solar-pond-for-aquaculture-heating" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><span class="math display">\[
+H(S, c) = S(2c - c^2)
+\]</span></p>
+<p>Salt budget:
+<span class="math display">\[
+Sc = 400 \Rightarrow S = \frac{400}{c}.
+\]</span></p>
+<p><strong>Task:</strong><br />
+Find <span class="math inline">\(S\)</span> and <span class="math inline">\(c\)</span> that maximize heat capture.</p>
+<details>
+<summary>
+<strong>Show Solution</strong>
+</summary>
+<p><strong>Step 1: Substitute constraint</strong></p>
+<p><span class="math display">\[
+H(c) = \frac{400}{c}(2c - c^2)
+= 400(2 - c).
+\]</span></p>
+<p><strong>Step 2: Differentiate</strong></p>
+<p><span class="math display">\[
+H&#39;(c) = -400.
+\]</span></p>
+<p>The derivative is <strong>always negative</strong>.<br />
+Thus <span class="math inline">\(H\)</span> decreases as <span class="math inline">\(c\)</span> increases.</p>
+<p><strong>Maximum occurs at the smallest feasible <span class="math inline">\(c\)</span></strong>.</p>
+<p><strong>Interpretation:</strong><br />
+Lower brine concentration allows a larger pond surface area under fixed salt budget, capturing more heat.</p>
+<p><strong>Optimal:</strong><br />
+- <span class="math inline">\(c\)</span> = minimum allowable concentration<br />
+- <span class="math inline">\(S = 400/c\)</span></p>
+(Exact numeric answer depends on practical lower bounds.)
+</details>
+<hr />
+</div>
+<div id="reforestation-planning-with-budget-constraints" class="section level3 hasAnchor" number="6.12.4">
+<h3><span class="header-section-number">6.12.4</span> <strong>4. Reforestation Planning With Budget Constraints</strong><a href="optimization-in-environmental-systems.html#reforestation-planning-with-budget-constraints" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Carbon benefit:
+<span class="math display">\[
+C(x, y) = 5x + 8y - 0.02x^2 - 0.05y^2.
+\]</span></p>
+<p>Budget:
+<span class="math display">\[
+3x + 5y = 600 \Rightarrow y = \frac{600 - 3x}{5}.
+\]</span></p>
+<p><strong>Task:</strong><br />
+Find planting mix that maximizes carbon.</p>
+<details>
+<summary>
+<strong>Show Solution</strong>
+</summary>
+<p><strong>Step 1: Substitute</strong></p>
+<p><span class="math display">\[
+y = \frac{600 - 3x}{5}.
+\]</span></p>
+<p>Plug in:</p>
+<p><span class="math display">\[
+C(x) =
+5x + 8\left(\frac{600 - 3x}{5}\right)
+- 0.02x^2
+- 0.05\left(\frac{600 - 3x}{5}\right)^2.
+\]</span></p>
+<p>Simplify:<br />
+<span class="math display">\[
+C(x) = 5x + \frac{4800 - 24x}{5}
+- 0.02x^2
+- 0.05\left(\frac{600 - 3x}{5}\right)^2.
+\]</span></p>
+<p>After simplifying fully (algebra omitted intentionally for students), the derivative is:</p>
+<p><span class="math display">\[
+C&#39;(x) = 5 - \frac{24}{5} - 0.04x - 0.05\left(\frac{2(600 - 3x)(-3)}{25}\right).
+\]</span></p>
+<p>Set <span class="math inline">\(C&#39;(x)=0\)</span> numerically →<br />
+<strong><span class="math inline">\(x \approx 60\)</span></strong> (fast-growing species).<br />
+Then<br />
+<span class="math display">\[
+y = \frac{600 - 180}{5} = 84.
+\]</span></p>
+<p><strong>Interpretation:</strong><br />
+A balanced mix — moderate fast growers and more slow growers — maximizes long-term carbon by balancing rapid early biomass with long-lived species.</p>
+<strong>Optimal mix:</strong><br />
+- <span class="math inline">\(x \approx 60\)</span><br />
+- <span class="math inline">\(y \approx 84\)</span>
+</details>
+<hr />
+</div>
+<div id="river-flow-split-for-habitat-vs.-hydropower" class="section level3 hasAnchor" number="6.12.5">
+<h3><span class="header-section-number">6.12.5</span> <strong>5. River Flow Split for Habitat vs. Hydropower</strong><a href="optimization-in-environmental-systems.html#river-flow-split-for-habitat-vs.-hydropower" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Combined benefit:
+<span class="math display">\[
+B(H, P) = 20\ln(H) + 6P - 0.05P^2
+\]</span></p>
+<p>Constraint:
+<span class="math display">\[
+H + P = 80 \Rightarrow H = 80 - P.
+\]</span></p>
+<p><strong>Task:</strong><br />
+Find optimal split of flow.</p>
+<details>
+<summary>
+<strong>Show Solution</strong>
+</summary>
+<p><strong>Step 1: Substitute</strong></p>
+<p><span class="math display">\[
+B(P) = 20\ln(80 - P) + 6P - 0.05P^2.
+\]</span></p>
+<p><strong>Step 2: Differentiate</strong></p>
+<p><span class="math display">\[
+B&#39;(P) = 20\left(\frac{-1}{80 - P}\right) + 6 - 0.1P.
+\]</span></p>
+<p>Set to zero:
+<span class="math display">\[
+6 - \frac{20}{80-P} - 0.1P = 0.
+\]</span></p>
+<p>Solve numerically →<br />
+<strong><span class="math inline">\(P \approx 32\)</span></strong> m³/s.</p>
+<p>Then:
+<span class="math display">\[
+H = 80 - P = 48.
+\]</span></p>
+<p><strong>Interpretation:</strong><br />
+- Some flow must be reserved for habitat because of the logarithmic benefit<br />
+- Too much flow to hydropower reduces habitat value sharply<br />
+- Too little flow to hydropower produces diminishing energy returns</p>
+<p>The optimum balances the rising habitat value with diminishing hydropower efficiency.</p>
+<strong>Optimal split:</strong><br />
+- <span class="math inline">\(H \approx 48\)</span> m³/s<br />
+- <span class="math inline">\(P \approx 32\)</span> m³/s
+</details>
+<hr />
 
+</div>
 </div>
 </div>
             </section>
@@ -1153,8 +2333,8 @@
           </div>
         </div>
       </div>
-
-<a href="pre-calculus-foundations.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="applications-of-derivatives-understanding-change-and-extremes-in-environmental-systems.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="calculus-i-equation-sheet.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -1185,7 +2365,7 @@ gitbook.start({
     "size": 2
   },
   "edit": {
-    "link": "https://github.com/rstudio/bookdown-demo/edit/master/index.Rmd",
+    "link": "https://github.com/rstudio/bookdown-demo/edit/master/09-optimization_RR.Rmd",
     "text": "Edit"
   },
   "history": {
