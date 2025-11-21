@@ -1,0 +1,40 @@
+# Optimization Workbook
+
+## **What Is Optimization?**
+
+Optimization is the process of finding the **best possible outcome** in a system with limits or tradeoffs. In environmental science, we often want to maximize something beneficial or minimize something harmful, all while respecting ecological, physical, or budget constraints.
+
+### **Key Ideas**
+
+- **A decision variable:**  
+  The thing we can change (e.g., planting density, harvest rate, flow release, fertilizer amount).
+
+- **An objective function \( f(x) \):**  
+  A mathematical expression that links our decision variable \( x \) to the environmental outcome we care about.
+
+- **A goal:**  
+  Either to *maximize* (e.g., carbon uptake, yield, biodiversity) or *minimize* (e.g., pollution, cost, heat stress).
+
+- **Constraints:**  
+  The natural or practical limits that shape the feasible range of \( x \).
+
+- **Tradeoffs:**  
+  Improving one outcome often reduces another; optimization finds the most effective balance.
+
+- **Derivatives as tools:**  
+  - \( f'(x) \) shows where the function is increasing or decreasing.  
+  - Critical points (where \( f'(x)=0 \)) are candidates for max/min.  
+  - \( f''(x) \) helps determine whether those points are peaks or valleys.
+
+- **Interpretation in context:**  
+  The mathematical optimum must be evaluated in ecological, ethical, and practical terms.
+
+### **Why It Matters in Environmental Science**
+
+Optimization helps us answer questions like:
+
+- What management strategy gives the highest benefit with the lowest impact?  
+- How do we use limited resources most efficiently?  
+- Where is the “sweet spot” that balances productivity, cost, and sustainability?
+
+In short, optimization allows us to make informed, mathematically justified decisions in complex environmental systems.

@@ -23,7 +23,7 @@
 <meta name="author" content="Gaj Sivandran" />
 
 
-<meta name="date" content="2025-11-19" />
+<meta name="date" content="2025-11-20" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -619,7 +619,10 @@
 <li class="chapter" data-level="" data-path="test-3-review-material.html"><a href="test-3-review-material.html#problem-8-logistic-style-function-with-two-horizontal-asymptotes"><i class="fa fa-check"></i><strong>Problem 8 — Logistic-Style Function With Two Horizontal Asymptotes</strong></a></li>
 <li class="chapter" data-level="" data-path="test-3-review-material.html"><a href="test-3-review-material.html#challenge-1-rational-function"><i class="fa fa-check"></i><strong>Challenge 1 — Rational Function </strong></a></li>
 </ul></li>
-<li class="chapter" data-level="" data-path="test-3-review-material.html"><a href="test-3-review-material.html#practice-test-sign-charts-applications"><i class="fa fa-check"></i>Practice Test — Sign Charts &amp; Applications</a></li>
+<li class="chapter" data-level="" data-path="test-3-review-material.html"><a href="test-3-review-material.html#practice-test-sign-charts-applications"><i class="fa fa-check"></i>Practice Test — Sign Charts &amp; Applications</a>
+<ul>
+<li class="chapter" data-level="5.12.2" data-path="test-3-review-material.html"><a href="test-3-review-material.html#conclusion"><i class="fa fa-check"></i><b>5.12.2</b> <strong>Conclusion</strong></a></li>
+</ul></li>
 </ul></li>
 <li class="part"><span><b>I Workbook Chapters</b></span></li>
 <li class="chapter" data-level="6" data-path="why-calculus-workbook.html"><a href="why-calculus-workbook.html"><i class="fa fa-check"></i><b>6</b> Why Calculus Workbook</a>
@@ -2688,40 +2691,96 @@ g_3&#39;&#39;(x)=0 \Rightarrow 3x^2-6=0 \Rightarrow x=\pm \sqrt{2}
 <p><br></p>
 <p>We use both C1 and C2 tables.</p>
 <hr />
-<p><strong>✔ Function <span class="math inline">\(h_1(x)=\dfrac{2e^{-x}}{x-3}+1\)</span></strong></p>
-<p><strong>Vertical asymptote:</strong><br />
-<span class="math display">\[
-x=3
+<p>✔ Solution: Function <span class="math inline">\(h_1(x)=\dfrac{2e^{-x}}{x-3}+1\)</span></p>
+<p><strong>1. Vertical Asymptote</strong></p>
+<p>The denominator is zero at <span class="math inline">\(x=3\)</span>:</p>
+<p><span class="math display">\[
+\text{Vertical asymptote: } x=3
 \]</span></p>
-<p><strong>Horizontal asymptote:</strong><br />
-<span class="math display">\[
-\lim_{x\to\infty} 1 = 1,\qquad
-\lim_{x\to -\infty} 1 = 1
-\]</span>
-→ <strong>HA: <span class="math inline">\(y=1\)</span></strong></p>
-<p><strong>First derivative sign:</strong></p>
+<hr />
+<p><strong>2. Horizontal Asymptote</strong></p>
+<p>As <span class="math inline">\(x\to\pm\infty\)</span>, the exponential term dies out:</p>
+<p><span class="math display">\[
+\lim_{x\to\infty} h_1(x)=1, \qquad
+\lim_{x\to -\infty} h_1(x)=1
+\]</span></p>
+<p><span class="math display">\[
+\text{Horizontal asymptote: } y=1
+\]</span></p>
+<hr />
+<p><strong>3. First Derivative and Extrema</strong></p>
+<p>Given:</p>
 <p><span class="math display">\[
 h_1&#39;(x)=\frac{-2e^{-x}(x-3)-2e^{-x}}{(x-3)^2}
 \]</span></p>
-<p>Since denominator &gt;0, sign depends on numerator:</p>
+<p>Factor the numerator:</p>
 <p><span class="math display">\[
 -2e^{-x}(x-3)-2e^{-x}
 = -2e^{-x}(x-2)
 \]</span></p>
-<p>→ critical point at <span class="math inline">\(x=2\)</span></p>
-<p>Sign chart:</p>
+<p>Since<br />
+- <span class="math inline">\(e^{-x} &gt; 0\)</span><br />
+- <span class="math inline">\((x-3)^2 &gt; 0\)</span></p>
+<p>the sign of <span class="math inline">\(h_1&#39;(x)\)</span> is determined by <span class="math inline">\(-(x-2)\)</span>.</p>
+<p><strong>Sign analysis</strong>
+- For <span class="math inline">\(x &lt; 2\)</span>: <span class="math inline">\(x-2&lt;0\)</span> ⇒ numerator <span class="math inline">\(&gt;0\)</span> ⇒ <strong>increasing</strong>
+- For <span class="math inline">\(x &gt; 2\)</span>: <span class="math inline">\(x-2&gt;0\)</span> ⇒ numerator <span class="math inline">\(&lt;0\)</span> ⇒ <strong>decreasing</strong></p>
+</div>
+<div id="conclusion" class="section level3 hasAnchor" number="5.12.2">
+<h3><span class="header-section-number">5.12.2</span> <strong>Conclusion</strong><a href="test-3-review-material.html#conclusion" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><span class="math display">\[
+\text{Local maximum at } x = 2
+\]</span></p>
+<hr />
+<p><strong>4. Second Derivative and Concavity</strong></p>
+<p>Start from:</p>
+<p><span class="math display">\[
+h_1&#39;(x)=\frac{-2e^{-x}(x-2)}{(x-3)^2}
+\]</span></p>
+<p>Let<br />
+<span class="math inline">\(N(x) = -2e^{-x}(x-2)\)</span>,<br />
+<span class="math inline">\(D(x) = (x-3)^2\)</span>.</p>
+<p>Compute:</p>
+<p><span class="math display">\[
+N&#39;(x) = 2e^{-x}(x-3)
+\]</span>
+<span class="math display">\[
+D&#39;(x) = 2(x-3)
+\]</span></p>
+<p>Apply the quotient rule:</p>
+<p><span class="math display">\[
+h_1&#39;&#39;(x)=\frac{2e^{-x}(x-3)(x-3)^2 + 2e^{-x}(x-2)\cdot 2(x-3)}{(x-3)^4}
+\]</span></p>
+<p>Factor and simplify:</p>
+<p><span class="math display">\[
+h_1&#39;&#39;(x)= \frac{2e^{-x}\left[(x-3)^2 + 2(x-2)\right]}{(x-3)^3}
+\]</span></p>
+<p>Simplify numerator:</p>
+<p><span class="math display">\[
+(x-3)^2 + 2(x-2)
+= x^2 -4x +5
+= (x-2)^2 + 1 &gt; 0
+\]</span></p>
+<p>Since the numerator is always positive, the sign of <span class="math inline">\(h_1&#39;&#39;(x)\)</span> is controlled by the denominator <span class="math inline">\((x-3)^3\)</span>.</p>
+<p><strong>Concavity</strong>
+- For <span class="math inline">\(x&lt;3\)</span>: <span class="math inline">\((x-3)^3 &lt; 0\)</span> ⇒ <span class="math inline">\(h_1&#39;&#39;(x)&lt;0\)</span> ⇒ <strong>concave down</strong>
+- For <span class="math inline">\(x&gt;3\)</span>: <span class="math inline">\((x-3)^3 &gt; 0\)</span> ⇒ <span class="math inline">\(h_1&#39;&#39;(x)&gt;0\)</span> ⇒ <strong>concave up</strong></p>
+<hr />
+<p><strong>Final Summary</strong></p>
 <ul>
-<li><span class="math inline">\(x&lt;2\)</span>: <span class="math inline">\(h_1&#39;&lt;0\)</span> → decreasing<br />
+<li><strong>Vertical asymptote:</strong> <span class="math inline">\(x=3\)</span><br />
 </li>
-<li><span class="math inline">\(x&gt;2\)</span>: <span class="math inline">\(h_1&#39;&gt;0\)</span> → increasing</li>
-</ul>
-<p>→ <strong>Local minimum at <span class="math inline">\(x=2\)</span></strong></p>
-<p>Second derivative:</p>
-<p>Denominator sign gives:</p>
-<ul>
-<li>Concave <strong>down</strong> on <span class="math inline">\((3,\infty)\)</span><br />
+<li><strong>Horizontal asymptote:</strong> <span class="math inline">\(y=1\)</span><br />
 </li>
-<li>Concave <strong>up</strong> on <span class="math inline">\((-\infty,3)\)</span></li>
+<li><strong>Increasing:</strong> <span class="math inline">\((-\infty, 2)\)</span><br />
+</li>
+<li><strong>Decreasing:</strong> <span class="math inline">\((2, \infty)\)</span><br />
+</li>
+<li><strong>Local max:</strong> at <span class="math inline">\(x=2\)</span><br />
+</li>
+<li><strong>Concave down:</strong> <span class="math inline">\((-\infty, 3)\)</span><br />
+</li>
+<li><strong>Concave up:</strong> <span class="math inline">\((3, \infty)\)</span></li>
 </ul>
 <hr />
 <p><strong>✔ Function <span class="math inline">\(h_2(x)=\dfrac{5}{x^{2}-4}+2\)</span></strong></p>
