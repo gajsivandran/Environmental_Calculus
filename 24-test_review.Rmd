@@ -1,0 +1,1124 @@
+# Test 4 Review Material {-}
+
+Below are resources to help you practice and prepare for the test 4 in this course.
+
+Test 3 will cover the material covered in Chapter 6 of this textbook:
+
+- understanding the process of optimizaiton
+- findind opimal solutions in constrained problems
+- identifying feasible regions for solutions given question context
+
+The test will include:
+
+- 5 short answer (5pts)
+- 3 optimization problems (45pts)
+
+## Test Instructions {-}
+Below are the general instructions for all tests
+
+- You will get a chance to **retake** this. Your **highest** score counts toward your final grade.  
+- Follow the guidance for each part and **show all work** for full credit.  
+- **Non-graphical calculators** are allowed.  
+- **One page (two sides)** of handwritten (or font size 8) notes are allowed.
+- The equation sheet from the textbook is included as part of the test pack (it doesn't count as note pages)
+
+## Short-Answer Optimization Questions (25 Total)
+
+---
+
+1. **What is the “objective function” in an optimization problem?**  
+<details><summary><strong>Solution</strong></summary>
+It is the function you want to maximize or minimize—e.g., growth, cost, carbon storage, habitat value.
+</details>
+
+---
+
+2. **Why is defining the objective function often the hardest step in real environmental problems?**  
+<details><summary><strong>Solution</strong></summary>
+Because you must decide exactly what you are optimizing and how competing processes (benefits vs. penalties, diminishing returns, constraints) interact mathematically.
+</details>
+
+---
+
+3. **How do you find critical points of a differentiable function?**  
+<details><summary><strong>Solution</strong></summary>
+Differentiate the objective function and set the derivative equal to zero; solve for the variable(s).
+</details>
+
+---
+
+4. **What does the second derivative tell you about a critical point?**  
+<details><summary><strong>Solution</strong></summary>
+If \(f''(x)>0\): local minimum.  
+If \(f''(x)<0\): local maximum.  
+If \(f''(x)=0\): inconclusive.
+</details>
+
+---
+
+5. **What should you do if the derivative never equals zero on the domain?**  
+<details><summary><strong>Solution</strong></summary>
+There are no interior critical points; the optimum must occur at a boundary or the function is monotonic.
+</details>
+
+---
+
+6. **What if the derivative equals zero only at a point outside the feasible domain?**  
+<details><summary><strong>Solution</strong></summary>
+The critical point is thrown out. The optimum must lie at a domain boundary or another feasible critical point.
+</details>
+
+---
+
+7. **What should you always check when a problem includes a constraint?**  
+<details><summary><strong>Solution</strong></summary>
+Check whether the unconstrained optimum is feasible. If not, the optimum lies on the boundary.
+</details>
+
+---
+
+8. **Why do constrained optimization problems often require evaluating endpoints?**  
+<details><summary><strong>Solution</strong></summary>
+Because constraints restrict the domain; global optima often occur at boundaries, not at interior points.
+</details>
+
+---
+
+9. **Why must you convert multivariable problems (with a constraint) into one variable before differentiating?**  
+<details><summary><strong>Solution</strong></summary>
+Because the variables are not independent; substituting the constraint ensures the derivative respects the relationship between variables.
+</details>
+
+---
+
+10. **What does it mean if a critical point yields a negative value for a physical quantity (e.g., width, depth)?**  
+<details><summary><strong>Solution</strong></summary>
+It is physically impossible and must be rejected.
+</details>
+
+---
+
+11. **Why can a function have a local maximum that is not the global maximum?**  
+<details><summary><strong>Solution</strong></summary>
+Local maxima only beat nearby values; global maxima require comparing all feasible values, including boundaries.
+</details>
+
+---
+
+12. **Give one reason why the optimum might occur at the minimum allowed value of the variable.**  
+<details><summary><strong>Solution</strong></summary>
+If the objective decreases as the variable increases, the smallest allowed value gives the best outcome.
+</details>
+
+---
+
+13. **Give one reason why the optimum might occur at the maximum allowed value.**  
+<details><summary><strong>Solution</summary></summary>
+If the objective increases with the variable and there is no interior critical point, the endpoint yields the maximum.
+</details>
+
+---
+
+14. **A function is always increasing over the domain. Where is the maximum?**  
+<details><summary><strong>Solution</strong></summary>
+At the right endpoint.
+</details>
+
+---
+
+15. **A function is always decreasing over the domain. Where is the minimum?**  
+<details><summary><strong>Solution</strong></summary>
+At the right endpoint (and maximum at the left endpoint).
+</details>
+
+---
+
+16. **Why does concavity simplify optimization?**  
+<details><summary><strong>Solution</strong></summary>
+If concave down everywhere → any critical point is a global maximum.  
+If concave up everywhere → any critical point is a global minimum.
+</details>
+
+---
+
+17. **What should you do if the second derivative at a critical point is zero?**  
+<details><summary><strong>Solution</strong></summary>
+Use a first derivative sign chart, higher derivatives, or direct function comparison. The point may be max, min, or neither.
+</details>
+
+---
+
+18. **Why must physical context be checked even after math gives a critical point?**  
+<details><summary><strong>Solution</strong></summary>
+Because the mathematically correct point may be unrealistic (negative depth, unsafe height, impossible density, etc.).
+</details>
+
+---
+
+19. **How can you tell if the objective function incorrectly models the system?**  
+<details><summary><strong>Solution</strong></summary>
+If the model predicts impossible or nonsensical optimum values (infinite spacing, negative biomass), the formulation is wrong.
+</details>
+
+---
+
+20. **What does it mean if two designs give nearly identical objective values?**  
+<details><summary><strong>Solution</strong></summary>
+The exact optimum may not matter; choose based on cost, practicality, or robustness. Sensitivity trumps precision.
+</details>
+
+---
+
+21. **Why can a local maximum be ecologically meaningless?**  
+<details><summary><strong>Solution</strong></summary>
+If a larger feasible value exists elsewhere or if the local maximum lies in a biologically irrelevant part of the domain.
+</details>
+
+---
+
+22. **In a constrained pond-design problem, why is the shallowest allowed depth sometimes optimal?**  
+<details><summary><strong>Solution</strong></summary>
+Because some models reward surface area more than depth, so minimum depth maximizes habitat or productivity.
+</details>
+
+---
+
+23. **Why might an interior critical point be a minimum rather than a maximum?**  
+<details><summary><strong>Solution</strong></summary>
+Because the second derivative is positive (concave up). The global maximum might lie at a boundary.
+</details>
+
+---
+
+24. **Why should you verify your derivative before solving the optimization problem?**  
+<details><summary><strong>Solution</strong></summary>
+A single differentiation error leads to entirely incorrect critical points and interpretations.
+</details>
+
+---
+
+25. **What are the three steps for finding a global maximum on a closed interval?**  
+
+<details><summary><strong>Solution</strong></summary>
+
+- Find interior critical points.  
+- Evaluate the objective at all critical points.  
+- Evaluate endpoints and compare all values.
+
+</details>
+
+---
+
+
+
+
+## Practice: Optimization in Environmental Systems  
+Work through the following 10 new problems to deepen your fluency with applied optimization, constraints, and interpretation.
+
+---
+
+### **1. Optimizing Leaf Nitrogen for Maximum Photosynthesis** {-}
+
+Leaf nitrogen concentration \(N\) strongly influences photosynthetic rate, but only up to a point.  
+A simplified model:
+
+\[
+P(N) = 12N - N^2
+\]
+
+where:
+
+- \(N\) = leaf nitrogen (% of dry mass)  
+- \(P(N)\) = relative photosynthetic rate  
+
+**Your Task**
+
+1. Find the nitrogen level that maximizes photosynthesis.  
+2. Confirm with the second derivative.  
+3. Explain why both low and high nitrogen can be suboptimal.
+
+<details>
+<summary><strong>Show Solution</strong></summary>
+
+Differentiate:
+
+\[
+P'(N) = 12 - 2N.
+\]
+
+Set to zero:
+
+\[
+12 - 2N = 0 \Rightarrow N = 6.
+\]
+
+Second derivative:
+
+\[
+P''(N) = -2 < 0.
+\]
+
+Thus \(N = 6\%\) maximizes photosynthesis.
+
+**Interpretation:**  
+Low nitrogen limits pigment formation; excess nitrogen leads to costly maintenance respiration.  
+The model identifies the efficient “sweet spot.”
+</details>
+
+---
+
+### **2. Designing a Riparian Buffer Strip for Maximum Nitrate Removal** {-}
+
+A riparian buffer is planted along a stream to reduce nutrient runoff.  
+Nitrate removal per meter of stream is modeled as:
+
+\[
+R(w) = 20w - 0.4w^2
+\]
+
+where \(w\) = buffer width (m).
+
+**Your Task**
+
+1. Find width maximizing nitrate removal.  
+2. Confirm it with the second derivative.  
+3. Interpret ecologically.
+
+<details>
+<summary><strong>Show Solution</strong></summary>
+
+\[
+R'(w) = 20 - 0.8w.
+\]
+
+Set to zero:
+
+\[
+20 - 0.8w = 0 \Rightarrow w = 25.
+\]
+
+Second derivative:
+
+\[
+R''(w) = -0.8 < 0 \Rightarrow \text{maximum.}
+\]
+
+**Interpretation:**  
+Buffers too narrow miss pollutants; buffers too wide add little new plant/soil interface.  
+Twenty-five meters maximizes filtration performance.
+</details>
+
+---
+
+### **3. Optimizing Grazing Intensity for Meadow Restoration** {-}
+
+Meadow biomass under light grazing increases, but declines under heavy grazing.  
+A restoration team models biomass as:
+
+\[
+B(g) = 80g - 5g^2,
+\]
+
+where \(g\) is grazing intensity (sheep per hectare).
+
+**Your Task**
+
+1. Find the optimal grazing intensity.  
+2. Confirm with the second derivative.  
+3. Explain how this relates to “intermediate disturbance.”
+
+<details>
+<summary><strong>Show Solution</strong></summary>
+
+\[
+B'(g) = 80 - 10g.
+\]
+
+Set to zero:
+
+\[
+80 - 10g = 0 \Rightarrow g = 8.
+\]
+
+Second derivative:
+
+\[
+B''(g) = -10 < 0.
+\]
+
+**Interpretation:**  
+Very low grazing allows dominance by tall competitors; very high grazing suppresses all vegetation.  
+An intermediate level (8 animals/ha) maximizes overall biomass.
+</details>
+
+---
+
+### **4. Sizing a Biochar Kiln to Maximize Net Carbon Benefit** {-}
+
+A small biochar kiln processes biomass at rate:
+
+\[
+C(s) = 50s - 0.5s^2,
+\]
+
+where \(s\) is kiln size (m³) and \(C(s)\) is net carbon benefit per batch.
+
+**Your Task**
+
+1. Find the optimal kiln size.  
+2. Use second derivative to confirm.  
+3. Explain why both too small and too large kilns are problematic.
+
+<details>
+<summary><strong>Show Solution</strong></summary>
+
+\[
+C'(s) = 50 - s.
+\]
+
+Set to zero:
+
+\[
+50 - s = 0 \Rightarrow s = 50.
+\]
+
+Second derivative:
+
+\[
+C''(s) = -1 < 0.
+\]
+
+**Interpretation:**  
+Small kilns underutilize heat; very large kilns lose heat to inefficiency and incomplete pyrolysis.  
+A 50 m³ kiln balances throughput and efficiency.
+</details>
+
+---
+
+### **5. Solar Farm Layout: Maximize Energy per Unit Land Area** {-}
+
+Panel spacing \(d\) affects shading and reflection losses.  
+Energy per panel is modeled as:
+
+\[
+E(d) = 200d - 10d^2.
+\]
+
+**Your Task**
+
+1. Find spacing that maximizes energy production.  
+2. Check with second derivative.  
+3. Explain physically.
+
+<details>
+<summary><strong>Show Solution</strong></summary>
+
+\[
+E'(d) = 200 - 20d.
+\]
+
+Set to zero:
+
+\[
+200 - 20d = 0 \Rightarrow d = 10.
+\]
+
+\[
+E''(d) = -20 < 0.
+\]
+
+**Interpretation:**  
+Panels too close shade each other; too far wastes land.  
+Ten meters gives optimal solar spacing.
+</details>
+
+---
+
+### **6. Terraced Hillside Farming: Minimizing Soil Loss** {-}
+
+A farmer designs terrace spacing \(x\) to minimize yearly soil loss:
+
+\[
+L(x) = \frac{100}{x} + 0.5x,
+\]
+
+where:
+
+- \(\frac{100}{x}\): erosion reduced by closer spacing  
+- \(0.5x\): cost of constructing/maintaining terraces
+
+**Your Task**
+
+1. Find \(x\) minimizing soil loss.  
+2. Use the second derivative to confirm.  
+3. Interpret tradeoffs.
+
+<details>
+<summary><strong>Show Solution</strong></summary>
+
+\[
+L'(x) = -\frac{100}{x^2} + 0.5.
+\]
+
+Set to zero:
+
+\[
+0.5 = \frac{100}{x^2}
+\Rightarrow x^2 = 200
+\Rightarrow x = \sqrt{200} \approx 14.14.
+\]
+
+Second derivative:
+
+\[
+L''(x) = \frac{200}{x^3} > 0.
+\]
+
+Thus \(x \approx 14.14\) m minimizes soil loss.
+
+**Interpretation:**  
+Tight spacing reduces erosion but is expensive; wide spacing saves cost but erodes more.  
+The optimum balances erosion control and cost.
+</details>
+
+---
+
+### **7. Designing a Wildlife Pond: Maximizing Habitat With a Volume Constraint** {-}
+
+Restoration ecologists are designing a circular wildlife pond to support amphibians, birds, and aquatic plants.  
+A pond with a **wide surface** and **moderate depth** provides the best habitat:
+
+- A **larger radius** increases shoreline complexity and warm shallow zones.  
+- Excessive **depth** reduces habitat quality, especially for amphibians that rely on shallow, vegetated margins.
+
+Let:
+
+- \(r\): pond radius (m)  
+- \(h\): pond depth (m)  
+
+The pond must hold **200 m³** of water:
+
+\[
+\pi r^2 h = 200.
+\]
+
+Habitat quality is modeled as:
+
+\[
+H(r, h) = \pi r^2 - 4h,
+\]
+
+where:
+- \(\pi r^2\) = habitat value from area  
+- \(-4h\) = penalty for depth beyond ideal shallow conditions  
+
+However, ecologists require:
+
+\[
+h \ge 0.5 \quad\text{(minimum depth to avoid drying in summer)}.
+\]
+
+This creates a **feasible domain** so that a maximum can exist.
+
+---
+
+**Your Task**
+
+1. Use the volume constraint to rewrite \(H\) in one variable.  
+2. Find the critical point and classify it.  
+3. Determine whether the critical point lies in the feasible region.  
+4. Identify the habitat-maximizing radius and depth.  
+
+---
+
+<details>
+<summary><strong>Show Solution</strong></summary>
+
+**Step 1: Substitute the volume constraint**
+
+\[
+h = \frac{200}{\pi r^2}.
+\]
+
+\[
+H(r) = \pi r^2 - 4\left(\frac{200}{\pi r^2}\right)
+      = \pi r^2 - \frac{800}{\pi r^2}.
+\]
+
+---
+
+**Step 2: Differentiate**
+
+\[
+H'(r) = 2\pi r - \frac{1600}{\pi r^3}.
+\]
+
+Set \(H'(r) = 0\):
+
+\[
+2\pi r = \frac{1600}{\pi r^3}.
+\]
+
+Multiply both sides by \(\pi r^3\):
+
+\[
+2\pi^2 r^4 = 1600.
+\]
+
+\[
+r^4 = \frac{800}{\pi^2}.
+\]
+
+\[
+r^* = \left(\frac{800}{\pi^2}\right)^{1/4}.
+\]
+
+---
+
+**Step 3: Classify using the second derivative**
+
+Compute:
+
+\[
+H''(r) = 2\pi + \frac{4800}{\pi r^4}.
+\]
+
+Because both terms are **positive**, we have:
+
+\[
+H''(r) > 0 \quad\text{for all } r>0.
+\]
+
+Thus the critical point is a **minimum**, not a maximum**.
+
+So the interior point cannot give the maximum habitat.
+
+---
+
+**Step 4: Since interior point is a minimum, the maximum lies on the boundary**
+
+The feasible domain for depth is:
+
+\[
+h \ge 0.5.
+\]
+
+Use the shallowest allowable depth because shallow ponds maximize habitat:
+
+\[
+h^* = 0.5\ \text{m}.
+\]
+
+Now use volume constraint to find \(r\):
+
+\[
+\pi r^2 (0.5) = 200
+\]
+
+\[
+r^2 = \frac{400}{\pi}
+\]
+
+\[
+r^* = \sqrt{\frac{400}{\pi}}
+     = \frac{20}{\sqrt{\pi}}
+     \approx 11.28\ \text{m}.
+\]
+
+---
+
+**Final Optimal Pond Design**
+
+- **Depth:**  
+  \[
+  h^* = 0.5\ \text{m}
+  \]
+
+- **Radius:**  
+  \[
+  r^* \approx 11.28\ \text{m}
+  \]
+
+- **Habitat outcome:**  
+  The best pond is **as wide and shallow as permitted**, constrained only by the minimum ecological depth.
+
+---
+
+**Ecological Interpretation**
+
+- Habitat quality is maximized by **broad, shallow ponds**, which support warm littoral zones, high primary productivity, and diverse vegetation structure.  
+- The model penalizes depth and rewards area, so the optimum occurs at the **shallowest allowed depth**, not at an interior critical point.  
+- Adding the depth constraint makes the problem realistic and yields a true maximum.
+
+</details>
+
+---
+
+
+### **8. Wind Turbine Height for Maximum Power Output** {-}
+
+A wind turbine’s power output depends on height \(h\) (meters):
+
+\[
+P(h) = 20h - 0.2h^2.
+\]
+
+**Your Task**
+
+1. Find the optimal turbine height.  
+2. Confirm with second derivative.  
+3. Explain why turbines cannot just be infinitely tall.
+
+<details>
+<summary><strong>Show Solution</strong></summary>
+
+\[
+P'(h) = 20 - 0.4h.
+\]
+
+Set to zero:
+
+\[
+20 - 0.4h = 0 \Rightarrow h = 50 \text{ m}.
+\]
+
+Second derivative:
+
+\[
+P''(h) = -0.4 < 0.
+\]
+
+**Interpretation:**  
+Height increases wind speed, but increased tower mass, bending stresses, and inefficiencies reduce marginal gains.  
+Fifty meters is the balance point.
+</details>
+
+---
+
+### **9. Coral Reef Restoration: Optimizing Transplant Density** {-}
+
+Transplanted coral fragments grow and fuse into colonies, but overcrowding increases mortality.  
+Model:
+
+\[
+G(d) = 30d - d^2,
+\]
+
+where \(d\) is transplant density (fragments per m²).
+
+**Your Task**
+
+1. Find density maximizing growth.  
+2. Confirm with second derivative.  
+3. Interpret.
+
+<details>
+<summary><strong>Show Solution</strong></summary>
+
+\[
+G'(d) = 30 - 2d.
+\]
+
+Set to zero:
+
+\[
+30 - 2d = 0 \Rightarrow d = 15.
+\]
+
+Second derivative:
+
+\[
+G''(d) = -2 < 0.
+\]
+
+**Interpretation:**  
+Low densities slow reef formation; high densities cause shading and disease.  
+Fifteen fragments/m² is optimal.
+</details>
+
+---
+
+### **10. Urban Green Roof: Minimizing Stormwater Runoff** {-}
+
+Green roof substrate depth \(z\) affects stormwater retention:
+
+\[
+R(z) = 15\sqrt{z} - z.
+\]
+
+**Your Task**
+
+1. Find depth maximizing retention.  
+2. Use the second derivative test.  
+3. Explain sustainability implications.
+
+<details>
+<summary><strong>Show Solution</strong></summary>
+
+\[
+R'(z) = \frac{15}{2\sqrt{z}} - 1.
+\]
+
+Set to zero:
+
+\[
+\frac{15}{2\sqrt{z}} = 1
+\Rightarrow \sqrt{z} = \frac{15}{2}
+\Rightarrow z = \frac{225}{4} = 56.25.
+\]
+
+Second derivative:
+
+\[
+R''(z) = -\frac{15}{4}z^{-3/2} < 0.
+\]
+
+**Interpretation:**  
+Very shallow roofs store little water; very deep ones drain slowly and add weight.  
+A depth of 56 cm balances retention and structural load.
+</details>
+
+---
+
+### **11. Kelp Forest Restoration: Optimizing Mooring Spacing** {-}
+
+Kelp restoration teams anchor kelp seedlings on ropes suspended from floating buoys.  
+If buoys are too close, shading reduces kelp growth; if too far, total canopy area decreases.
+
+Let spacing between buoys be \(d\) meters.  
+Kelp canopy productivity per anchor rope is modeled as:
+
+\[
+P(d) = 80d - 4d^2.
+\]
+
+---
+
+**Your Task**
+
+1. Find the spacing \(d\) that maximizes kelp productivity.  
+2. Confirm the result using the second derivative.  
+3. Explain the ecological tradeoff shaping this optimum.
+
+<details>
+<summary><strong>Show Solution</strong></summary>
+
+Differentiate:
+
+\[
+P'(d) = 80 - 8d.
+\]
+
+Set to zero:
+
+\[
+80 - 8d = 0 \Rightarrow d = 10.
+\]
+
+Second derivative:
+
+\[
+P''(d) = -8 < 0,
+\]
+
+so **10 m** gives a maximum.
+
+**Interpretation:**  
+Very tight spacing creates shading and drag; very wide spacing limits canopy formation.  
+A 10-m spacing balances light availability with total canopy area.
+</details>
+
+---
+
+### **12. Oyster Reef Design: Maximize Filtration Surface** {-}
+
+A reef restoration team designs reef modules of radius \(r\) (m).  
+Surface area available for oyster attachment is:
+
+\[
+A(r) = 100r - 2r^2.
+\]
+
+This captures:
+
+- increasing habitat with module size, but  
+- diminishing efficiency as very large modules reduce water flow inside the reef.
+
+---
+
+**Your Task**
+
+1. Find radius \(r\) maximizing oyster habitat area.  
+2. Confirm with second derivative.  
+3. Explain why very large modules reduce effectiveness.
+
+<details>
+<summary><strong>Show Solution</strong></summary>
+
+Differentiate:
+
+\[
+A'(r) = 100 - 4r.
+\]
+
+Set to zero:
+
+\[
+100 - 4r = 0 \Rightarrow r = 25.
+\]
+
+Second derivative:
+
+\[
+A''(r) = -4 < 0.
+\]
+
+Thus the maximum occurs at **25 m**.
+
+**Interpretation:**  
+Large structures restrict internal circulation, reducing actual usable surface area.  
+The optimum balances habitat size with efficient water flow.
+</details>
+
+---
+
+### **13. Coral Nursery Lines: Optimizing Fragment Spacing** {-}
+
+Floating coral nurseries suspend corals along horizontal lines.  
+Growth per coral fragment is modeled by:
+
+\[
+G(s) = 60s - 3s^2,
+\]
+
+where \(s\) is spacing (cm).
+
+---
+
+**Your Task**
+
+1. Find the spacing that maximizes coral growth.  
+2. Use the second derivative test.  
+3. Explain the biological reasoning behind the shape of the model.
+
+<details>
+<summary><strong>Show Solution</strong></summary>
+
+Differentiate:
+
+\[
+G'(s) = 60 - 6s.
+\]
+
+Set to zero:
+
+\[
+60 - 6s = 0 \Rightarrow s = 10.
+\]
+
+Second derivative:
+
+\[
+G''(s) = -6 < 0.
+\]
+
+Thus coral growth is maximized at **10 cm** spacing.
+
+**Interpretation:**  
+Close spacing increases competition for light and water flow; wide spacing wastes nursery capacity.  
+Ten centimeters provides an efficient density for fragment growth.
+</details>
+
+---
+
+### **14. Marine Reserve Ranger Patrol: Minimizing Response Time** {-}
+
+A marine reserve uses a circular island of radius **4 km** as its monitoring base.  
+A patrol boat is docked somewhere along a radius, at a distance \(x\) from the center of the island.
+
+The **worst-case response distance** to any point on the circular reserve boundary is modeled by:
+
+\[
+T(x) = x + \sqrt{16 - x^2},
+\]
+
+where:
+
+- \(x\) = distance from the island center to the dock (km)  
+- the term \(\sqrt{16 - x^2}\) is the distance from the dock to the farthest point on the boundary  
+
+The management goal is to **minimize this worst-case response distance**.
+
+---
+
+**Your Task**
+
+1. Differentiate to find any interior critical points.  
+2. Classify the critical point using the second derivative.  
+3. Identify the dock location \(x\) that **minimizes** the response time.  
+4. Explain why boundary locations minimize the maximum distance.
+
+<details>
+<summary><strong>Show Solution</strong></summary>
+
+**Step 1: Differentiate**
+
+\[
+T(x) = x + \sqrt{16 - x^2}.
+\]
+
+\[
+T'(x) = 1 - \frac{x}{\sqrt{16 - x^2}}.
+\]
+
+Set \(T'(x) = 0\):
+
+\[
+1 = \frac{x}{\sqrt{16 - x^2}}.
+\]
+
+Square both sides:
+
+\[
+1 = \frac{x^2}{16 - x^2}.
+\]
+
+\[
+16 - x^2 = x^2
+\quad\Longrightarrow\quad
+x^2 = 8.
+\]
+
+\[
+x = \sqrt{8} = 2\sqrt{2}.
+\]
+
+This is the **only interior critical point**.
+
+---
+
+**Step 2: Second derivative**
+
+Compute carefully:
+
+\[
+T''(x)
+= -\frac{16}{(16 - x^2)^{3/2}}.
+\]
+
+Since the denominator is positive on \(0 < x < 4\):
+
+\[
+T''(x) < 0,
+\]
+
+so the critical point at \(x = 2\sqrt{2}\) is a **local maximum**, not a minimum.
+
+---
+
+**Step 3: Evaluate endpoints to find the minimum**
+
+Feasible domain: \(0 \le x \le 4\).
+
+\[
+T(0) = 0 + \sqrt{16} = 4.
+\]
+
+\[
+T(4) = 4 + 0 = 4.
+\]
+
+At the interior critical point:
+
+\[
+T(2\sqrt{2})
+= 2\sqrt{2} + \sqrt{16 - 8}
+= 2\sqrt{2} + 2\sqrt{2}
+= 4\sqrt{2} \approx 5.66.
+\]
+
+Thus:
+
+- **interior point gives a maximum**
+- **minimum occurs at the boundaries**
+
+---
+
+**Final Answer: Optimal Dock Locations**
+
+The worst-case response distance is minimized when the dock is placed at:
+
+- **\(x = 0\)** (island center), or  
+- **\(x = 4\)** (island edge)
+
+Both yield:
+
+\[
+T = 4\text{ km}.
+\]
+
+Any interior location gives a **longer** worst-case response distance.
+
+---
+
+**Interpretation**
+
+- Docking at **center** or **edge** minimizes the maximum distance the patrol boat may need to travel.  
+- Any dock placed partway along a radius increases the farthest possible distance, creating a **response-time bottleneck**.  
+- This problem illustrates that not all interior critical points are minima—sometimes the **optimal location lies on the boundary** of the feasible region.
+
+</details>
+
+---
+
+
+### **15. Hatchery Release Strategy: Optimal Smolt Size** {-}
+
+Fish survival after release increases with smolt size \(m\), but hatchery cost and predation during grow-out both increase with size.
+
+Survival benefit:
+
+\[
+S(m) = 200m - 5m^2.
+\]
+
+- First term: larger smolts survive ocean entry better  
+- Second term: diminishing returns and increased accumulation of hatchery cost/risk
+
+---
+
+**Your Task**
+
+1. Find the size \(m\) (grams) maximizing survival benefit.  
+2. Confirm with second derivative.  
+3. Provide ecological interpretation.
+
+<details>
+<summary><strong>Show Solution</strong></summary>
+
+Differentiate:
+
+\[
+S'(m) = 200 - 10m.
+\]
+
+Set to zero:
+
+\[
+200 - 10m = 0 \Rightarrow m = 20\ \text{g}.
+\]
+
+Second derivative:
+
+\[
+S''(m) = -10 < 0.
+\]
+
+Thus **20 g** maximizes survival benefit.
+
+**Interpretation:**  
+Fish released too small face marine predation; too large require costly rearing and encounter density-dependent issues in tanks.  
+The optimum balances hatchery cost with early marine survival probability.
+</details>
+
+---
