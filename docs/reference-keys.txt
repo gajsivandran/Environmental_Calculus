@@ -355,8 +355,6 @@ step-2-solve-for-dfracdydx
 step-1-differentiate-both-sides-1
 step-2-factor-out-fracdydx
 conclusion
-short-answer-optimization-questions-25-total
-practice-optimization-in-environmental-systems-1
 why-calculus-workbook
 teaching-team-introductions
 gaj-sivandran
@@ -614,4 +612,6 @@ solution-to-challenge-problems
 optimization-workbook
 what-is-optimization
 key-ideas
-why-it-matters-in-environmental-science
+why-it-matters-in-environmental-sciences
+qualitative-optimizating
+optimization-case-studies
