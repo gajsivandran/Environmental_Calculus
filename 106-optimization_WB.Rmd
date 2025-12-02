@@ -547,3 +547,175 @@ The lifeguard chooses a point **C**, located **\(x\) meters down the beach**, wh
 
 :::
 
+
+
+
+::: promptbox
+
+## Activity: Which Shape Maximizes Volume When Surface Area = 100? {-}
+
+You are designing a container for an environmental monitoring project.  
+You have exactly **100 units²** of construction material.  
+Your goal is to determine **which shape produces the maximum possible volume** using that fixed surface area.
+
+You will compare three shapes:
+
+1. **Sphere**  
+2. **Closed Cylinder** (top and bottom included)  
+3. **Rectangular Prism** with a **square base**
+
+Work through each part, then compare your results at the end.
+
+---
+
+### Part 1 — Sphere {-}
+
+A sphere of radius \(r\) has:
+
+\[
+A = 4\pi r^2 = 100,
+\qquad 
+V = \frac{4}{3}\pi r^3.
+\]
+
+**Tasks**
+
+1. Solve for \(r\).  
+2. Compute the volume.
+
+<details><summary><strong>Solution</strong></summary>
+
+**Surface area**
+
+\[
+4\pi r^2 = 100
+\Rightarrow
+r = \frac{5}{\sqrt{\pi}}.
+\]
+
+**Volume**
+
+\[
+V = \frac{4}{3}\pi \left(\frac{5}{\sqrt{\pi}}\right)^3
+= \frac{500}{3\sqrt{\pi}}
+\approx 94.1.
+\]
+
+</details>
+
+---
+
+### Part 2 — Cylinder {-}
+
+A cylinder with radius \(r\) and height \(h\) has:
+
+\[
+A = 2\pi r^2 + 2\pi r h = 100, 
+\qquad
+V = \pi r^2 h.
+\]
+
+**Tasks**
+
+1. Solve the surface-area constraint for \(h\).  
+2. Substitute into \(V\).  
+3. Optimize to find \(r\) and \(h\).  
+4. Compute the max volume.
+
+<details><summary><strong>Solution</strong></summary>
+
+**Constraint**
+
+\[
+h = \frac{100 - 2\pi r^2}{2\pi r}.
+\]
+
+**Volume**
+
+\[
+V(r)=50r - \pi r^3.
+\]
+
+**Derivative**
+
+\[
+V'(r)=50 - 3\pi r^2 = 0
+\Rightarrow
+r=\sqrt{\frac{50}{3\pi}}\approx 2.304.
+\]
+
+**Height**
+
+\[
+h=\frac{100}{3\pi r} \approx 4.61.
+\]
+
+**Volume**
+
+\[
+V \approx 76.9.
+\]
+
+</details>
+
+---
+
+### Part 3 — Rectangular Prism (s {-}
+
+Let the base be \(x \times x\) and the height be \(h\):
+
+\[
+A = 2x^2 + 4xh = 100,
+\qquad
+V = x^2 h.
+\]
+
+**Tasks**
+
+1. Solve the constraint for \(h\).  
+2. Substitute into \(V(x)\).  
+3. Optimize to find \(x\) and \(h\).  
+4. Compute the max volume.
+
+<details><summary><strong>Solution</strong></summary>
+
+\[
+h = \frac{100 - 2x^2}{4x}.
+\]
+
+\[
+V(x)=25x - \frac{1}{2}x^3.
+\]
+
+\[
+V'(x)=25 - \frac{3}{2}x^2 = 0
+\Rightarrow
+x=\sqrt{\frac{50}{3}}\approx 4.083.
+\]
+
+\[
+h \approx 4.08.
+\]
+
+\[
+V \approx 68.0.
+\]
+
+</details>
+
+---
+
+### Part 4 — Final Comparison {-}
+
+| Shape | Maximum Volume |
+|--------|----------------|
+| Sphere | **94.1** |
+| Cylinder | 76.9 |
+| Rectangular Prism | 68.0 |
+
+**Conclusion:**  
+The **sphere** gives the largest possible volume for a fixed surface area of 100. This matches the classical result that **a sphere minimizes surface area for a given volume**, or equivalently, **maximizes volume for a given surface area**.
+
+
+
+\newpage
