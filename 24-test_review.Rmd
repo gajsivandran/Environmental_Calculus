@@ -503,130 +503,95 @@ The optimum balances erosion control and cost.
 ### **7. Designing a Wildlife Pond: Maximizing Habitat With a Volume Constraint** {-}
 
 Restoration ecologists are designing a circular wildlife pond to support amphibians, birds, and aquatic plants.  
-A pond with a **wide surface** and **moderate depth** provides the best habitat:
-
-- A **larger radius** increases shoreline complexity and warm shallow zones.  
-- Excessive **depth** reduces habitat quality, especially for amphibians that rely on shallow, vegetated margins.
+Wide, shallow ponds offer the best habitat.
 
 Let:
 
 - \(r\): pond radius (m)  
-- \(h\): pond depth (m)  
+- \(h\): pond depth (m)
 
-The pond must hold **200 m³** of water:
+Volume requirement:
 
 \[
 \pi r^2 h = 200.
 \]
 
-Habitat quality is modeled as:
+Habitat quality:
 
 \[
-H(r, h) = \pi r^2 - 4h,
+H(r,h) = \pi r^2 - 4h.
 \]
 
-where:
-- \(\pi r^2\) = habitat value from area  
-- \(-4h\) = penalty for depth beyond ideal shallow conditions  
-
-However, ecologists require:
+Minimum ecological depth:
 
 \[
-h \ge 0.5 \quad\text{(minimum depth to avoid drying in summer)}.
+h \ge 0.5.
 \]
-
-This creates a **feasible domain** so that a maximum can exist.
-
----
-
-**Your Task**
-
-1. Use the volume constraint to rewrite \(H\) in one variable.  
-2. Find the critical point and classify it.  
-3. Determine whether the critical point lies in the feasible region.  
-4. Identify the habitat-maximizing radius and depth.  
-
----
 
 <details>
 <summary><strong>Show Solution</strong></summary>
 
-**Step 1: Substitute the volume constraint**
+**Step 1: Express \(H\) in terms of \(r\)**
+
+Use the volume constraint:
 
 \[
 h = \frac{200}{\pi r^2}.
 \]
 
+Substitute into \(H\):
+
 \[
 H(r) = \pi r^2 - 4\left(\frac{200}{\pi r^2}\right)
-      = \pi r^2 - \frac{800}{\pi r^2}.
+= \pi r^2 - \frac{800}{\pi r^2}.
 \]
 
 ---
 
 **Step 2: Differentiate**
 
+Rewrite to differentiate cleanly:
+
 \[
-H'(r) = 2\pi r - \frac{1600}{\pi r^3}.
+H(r) = \pi r^2 - \frac{800}{\pi} r^{-2}.
 \]
 
-Set \(H'(r) = 0\):
+Differentiate:
 
 \[
-2\pi r = \frac{1600}{\pi r^3}.
-\]
-
-Multiply both sides by \(\pi r^3\):
-
-\[
-2\pi^2 r^4 = 1600.
-\]
-
-\[
-r^4 = \frac{800}{\pi^2}.
-\]
-
-\[
-r^* = \left(\frac{800}{\pi^2}\right)^{1/4}.
+H'(r) = 2\pi r + \frac{1600}{\pi r^3}.
 \]
 
 ---
 
-**Step 3: Classify using the second derivative**
+**Step 3: Look for critical points**
 
-Compute:
-
-\[
-H''(r) = 2\pi + \frac{4800}{\pi r^4}.
-\]
-
-Because both terms are **positive**, we have:
+Set \(H'(r)=0\):
 
 \[
-H''(r) > 0 \quad\text{for all } r>0.
+2\pi r + \frac{1600}{\pi r^3} = 0.
 \]
 
-Thus the critical point is a **minimum**, not a maximum**.
+Both terms are **positive** for all \(r>0\).  
+Therefore, this equation has **no solution**.
 
-So the interior point cannot give the maximum habitat.
+**Conclusion:**  
+There is **no interior critical point**.  
+Habitat quality increases as radius increases.
+
+Thus the maximum must occur on the boundary of the feasible region.
 
 ---
 
-**Step 4: Since interior point is a minimum, the maximum lies on the boundary**
+**Step 4: Apply the depth constraint**
 
-The feasible domain for depth is:
-
-\[
-h \ge 0.5.
-\]
-
-Use the shallowest allowable depth because shallow ponds maximize habitat:
+Minimum allowable depth:
 
 \[
-h^* = 0.5\ \text{m}.
+h = 0.5.
 \]
 
-Now use volume constraint to find \(r\):
+Use the volume constraint to solve for \(r\):
 
 \[
 \pi r^2 (0.5) = 200
@@ -638,34 +603,52 @@ r^2 = \frac{400}{\pi}
 
 \[
 r^* = \sqrt{\frac{400}{\pi}}
-     = \frac{20}{\sqrt{\pi}}
-     \approx 11.28\ \text{m}.
+= \frac{20}{\sqrt{\pi}}
+\approx 11.28\ \text{m}.
 \]
 
 ---
 
 **Final Optimal Pond Design**
 
-- **Depth:**  
+- **Optimal depth:**  
   \[
   h^* = 0.5\ \text{m}
   \]
 
-- **Radius:**  
+- **Optimal radius:**  
   \[
   r^* \approx 11.28\ \text{m}
   \]
 
-- **Habitat outcome:**  
-  The best pond is **as wide and shallow as permitted**, constrained only by the minimum ecological depth.
 
----
+**Habitat Values for Different Depths**
 
-**Ecological Interpretation**
+Using the volume constraint  
+\[
+r = \sqrt{\frac{200}{\pi h}},
+\]
+we can compute the pond radius and the corresponding habitat value for several feasible depths.
 
-- Habitat quality is maximized by **broad, shallow ponds**, which support warm littoral zones, high primary productivity, and diverse vegetation structure.  
-- The model penalizes depth and rewards area, so the optimum occurs at the **shallowest allowed depth**, not at an interior critical point.  
-- Adding the depth constraint makes the problem realistic and yields a true maximum.
+| Depth \(h\) (m) | Radius \(r = \sqrt{200/(\pi h)}\) (m) | Habitat \(H = \pi r^2 - 4h\) |
+|-----------------|----------------------------------------|-------------------------------|
+| 0.5             | 11.28                                   | 398.0                         |
+| 1.0             | 7.98                                    | 196.0                         |
+| 2.0             | 5.64                                    | 92.0                          |
+| 3.0             | 4.61                                    | 54.67                         |
+| 4.0             | 3.99                                    | 34.0                          |
+
+**Interpretation of the Table**
+
+- As depth **increases**, radius must **decrease** to keep volume fixed.  
+- Because habitat value heavily rewards **surface area**, habitat declines rapidly with increasing depth.  
+- The **maximum habitat value** occurs at the **minimum feasible depth** \(h = 0.5\), consistent with the analytic solution.
+
+**Interpretation**
+
+- The model rewards **surface area** and penalizes **depth**, so making the pond as **wide and shallow** as allowed yields the highest habitat value.  
+- Without the minimum‐depth constraint, the model would push toward \(r \to \infty,\ h \to 0\).  
+- The ecological requirement \(h \ge 0.5\) creates a realistic maximum.
 
 </details>
 
