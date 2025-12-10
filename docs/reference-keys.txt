@@ -7,7 +7,7 @@ fig:blank-axes
 fig:cubic-example-plot
 fig:function-type-blank-axes-clean2
 tab:derivative-terms-table
-why-calculus
+why-calculus-292
 why-this-book
 what-is-calculus
 how-this-book-works
