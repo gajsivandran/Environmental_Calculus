@@ -516,7 +516,7 @@ In Panels 2–4 you see both the *curve* and the *tangent line* at the chosen po
 **Step 4: Generalize the Idea (5 minutes)**  
 Discuss in pairs or small groups:  
 
-- Do you think this would only work for this one curve, or for *any* smooth (continous) curve?  
+- Do you think this would only work for this one curve, or for *any* smooth (continuous) curve?  
 - What does this suggest about the nature of curves when we zoom in enough?  
 
 ---
@@ -774,7 +774,7 @@ $$
 
 This tells us how much the function changes over the interval — for example, how much sea level rose on average over a 10-year window.
 
-To find the function values in the numerator, we would subsitute $a$ and $b$ into the original function $f(t)$. The denominator is just the difference in time between $a$ and $b$, or the interval we are calculating this average.
+To find the function values in the numerator, we would substitute $a$ and $b$ into the original function $f(t)$. The denominator is just the difference in time between $a$ and $b$, or the interval we are calculating this average.
 
 Another form of this equation (which will be useful in a few sections) is achieved by doing a substitution. If we let $h$ be the interval of interest. Then $h=b-a$
 
@@ -998,7 +998,7 @@ text(x0, y0 + 1, labels = "(2, 4)", pos = 3)
 text(3, y0 - 1, labels = "Tangent at x = 2", pos = 3, col = "red")
 ```
 
-We are in search of the derative at $x=2$, this is the same as the slope of the tangent line at same point. The graph above has sketched in the tangent line. We can graphically calculate the slope of the line by looking at the *rise over the run*. From $x=1$ to $x=2$ we have a *run* of 1 and a *rise* of 4. Therefore the slope would be $\frac{4}{1}=4$. This is the derivative of this function at $x=2$.
+We are in search of the derivative at $x=2$, this is the same as the slope of the tangent line at same point. The graph above has sketched in the tangent line. We can graphically calculate the slope of the line by looking at the *rise over the run*. From $x=1$ to $x=2$ we have a *run* of 1 and a *rise* of 4. Therefore the slope would be $\frac{4}{1}=4$. This is the derivative of this function at $x=2$.
 
 We don't always have the ability to solve derivatives graphically, so now that we know the answer we are looking for lets see if we can use the limit definition to get to the same place.
 
@@ -1374,7 +1374,7 @@ The derivative exists at the endpoint if this **one-sided limit** exists and is 
 
 These questions will help you review and reinforce key ideas before we dive into graphs and calculations. You’ve already seen how derivatives appear across different fields, now let’s make sure you understand what they mean.
 
- 
+---
 
 **1. Match the Concept to the Context**
 
@@ -1389,19 +1389,41 @@ Match each mathematical concept with its real-world environmental interpretation
 
 **Your Answer**: A → ___, B → ___, C → ___, D → ___
 
- 
+<details>
+<summary><strong>Click to reveal solution</strong></summary>
 
-** 2.Which of the following situations describes an **instantaneous** rate of change?**
+- **A → 1**  
+- **B → 2**  
+- **C → 3**  
+- **D → 4**
+
+Instantaneous rates and tangent slopes describe behavior at a specific moment, while average rates summarize change over an interval. The derivative is the general mathematical tool for describing change.
+</details>
+
+---
+
+**2. Which of the following situations describes an _instantaneous_ rate of change?**  
 *(Select all that apply)*
 
-- [ ] A glacier retreats 10 meters per year between 2000 and 2010.
-- [ ] The temperature of a lake at exactly noon is rising at 0.2°C per hour.
-- [ ] Annual rainfall increased by 12 mm from 2015 to 2020.
+- [ ] A glacier retreats 10 meters per year between 2000 and 2010.  
+- [ ] The temperature of a lake at exactly noon is rising at 0.2°C per hour.  
+- [ ] Annual rainfall increased by 12 mm from 2015 to 2020.  
 - [ ] The rate of CO₂ uptake by a forest on July 4th at 2:00 PM.
 
- 
+<details>
+<summary><strong>Click to reveal solution</strong></summary>
 
-**3.True or False**
+Correct selections:
+
+- ✅ The temperature of a lake at exactly noon is rising at 0.2°C per hour.  
+- ✅ The rate of CO₂ uptake by a forest on July 4th at 2:00 PM.
+
+Instantaneous rates refer to change at a specific moment, not an average over many years.
+</details>
+
+---
+
+**3. True or False**
 
 The derivative of a function always tells us whether a quantity is increasing or decreasing.
 
@@ -1410,19 +1432,39 @@ The derivative of a function always tells us whether a quantity is increasing or
 
 *Explain:*
 
- 
+<details>
+<summary><strong>Click to reveal solution</strong></summary>
 
-**4.Fill in the Blank**
+**Correct answer:** False
+
+The derivative tells both the **direction** (increasing or decreasing) and the **rate** of change. A zero derivative indicates no change at that moment.
+</details>
+
+---
+
+**4. Fill in the Blank**
 
 A **derivative** is a measure of how a quantity changes with respect to **_______**.
 
- 
+<details>
+<summary><strong>Click to reveal solution</strong></summary>
 
-**5.Explain It Like You're Teaching a Friend**
+A derivative measures how a quantity changes with respect to **another variable** (often time or space).
+</details>
+
+---
+
+**5. Explain It Like You're Teaching a Friend**
 
 In your own words, explain the difference between **average** and **instantaneous** rate of change. Use an environmental example if you can.
 
- 
+<details>
+<summary><strong>Click to reveal solution</strong></summary>
+
+The average rate of change describes how much something changes over a time interval, like glacier loss over 10 years. The instantaneous rate of change describes how fast it’s changing at one exact moment, such as how quickly the glacier is retreating today.
+</details>
+
+---
 
 **6. Multiple Choice: What Does a Derivative Tell You?**
 
@@ -1433,7 +1475,15 @@ What does the derivative of a function represent?
 - [ ] The rate of change at a specific instant  
 - [ ] The area under the curve
 
- 
+<details>
+<summary><strong>Click to reveal solution</strong></summary>
+
+✅ **The rate of change at a specific instant**
+
+The derivative gives the slope of the tangent line, which represents instantaneous change.
+</details>
+
+---
 
 **7. Thinking Spatially**
 
@@ -1446,7 +1496,15 @@ Suppose the oxygen concentration in a lake decreases as depth increases. What wo
 
 *Explain your reasoning:*
 
- 
+<details>
+<summary><strong>Click to reveal solution</strong></summary>
+
+✅ **Negative**
+
+As depth increases (input increases), oxygen concentration decreases (output decreases), giving a negative derivative.
+</details>
+
+---
 
 **8. Choose the Best Description**
 
@@ -1457,7 +1515,15 @@ Which of the following best describes a **tangent line**?
 - [ ] A line that just touches the curve at one point and matches its slope there  
 - [ ] A line that’s always horizontal
 
- 
+<details>
+<summary><strong>Click to reveal solution</strong></summary>
+
+✅ **A line that just touches the curve at one point and matches its slope there**
+
+A tangent line represents the instantaneous rate of change at that point.
+</details>
+
+---
 
 **9. Real-World Framing**
 
@@ -1468,13 +1534,28 @@ Which of the following is **not** typically modeled with derivatives?
 - [ ] Change in ice thickness per day  
 - [ ] Speed of wind at a given moment
 
- 
+<details>
+<summary><strong>Click to reveal solution</strong></summary>
+
+✅ **Average fish population over a decade**
+
+Derivatives describe rates of change, not long-term averages.
+</details>
+
+---
 
 **10. Reflect**
 
 Describe a situation in your field (e.g., climate, marine, ecological, or urban systems) where understanding how fast something is changing could be important. What would the **derivative** tell you, and how might that help in decision making?
 
---- 
+<details>
+<summary><strong>Click to reveal solution</strong></summary>
+
+**Example response:**  
+In climate science, the derivative of atmospheric CO₂ concentration tells us how fast CO₂ levels are increasing at a given time. This helps identify acceleration and informs policy decisions about mitigation.
+</details>
+
+---
 
 ## Practice: Interpreting Derivatives from Graphs
 
@@ -1497,6 +1578,17 @@ grid()
 - Find the steepest positive tangent slope and negative tangent slope. Interpret what is physically happening at these moments.   
 - Where does the slope of the tangent line appear to be zero? Interpret what is physically happening at these moments.
 
+<details>
+<summary><strong>Solution to Question 1</strong></summary>
+
+- The function is **increasing** where the graph slopes upward from left to right (early times and again after the minimum).  
+- The function is **decreasing** where the graph slopes downward from left to right (between the peak and the trough).  
+- The **steepest positive tangent slope** occurs where the curve rises most sharply, representing the most rapid increase in streamflow (e.g., intense rainfall or snowmelt).  
+- The **steepest negative tangent slope** occurs where the curve falls most sharply, representing rapid recession or drainage of streamflow.  
+- The slope of the tangent line appears to be **zero** at the local maximum and local minimum, representing moments when streamflow briefly stops increasing or decreasing before changing direction.
+</details>
+
+---
  
 
 **2.Estimate the Sign of the Derivative**
@@ -1513,10 +1605,10 @@ Briefly explain why you came to your conclusion
 curve(-0.1*(x - 5)^3 + 2*(x - 5), from = 0, to = 10, 
       xlab = "Time (days)", ylab = "Streamflow (m³/s)", 
       main = "Sign of the Derivative at Key Points", col = "black", lwd = 2)
-points(c(2, 5, 7, 9), 
-       -0.1*(c(2, 5, 7, 9) - 5)^3 + 2*(c(2, 5, 7, 9) - 5), 
+points(c(1, 2.41801, 5, 9), 
+       -0.1*(c(1, 2.41801, 5, 9) - 5)^3 + 2*(c(1, 2.41801, 5, 9) - 5), 
        pch = 19, col = "red")
-text(c(2, 5, 7, 9), c(-3, 0, 2.2, 1.8), labels = c("A", "B", "C", "D"), pos = 3)
+text(c(1, 2.41801, 5, 9), c(-3, -3, 1, 1.8), labels = c("A", "B", "C", "D"), pos = 3)
 grid()
 ```
 
@@ -1529,7 +1621,25 @@ Complete the table:
 | C     |                             |                              |
 | D     |                             |                              |
 
- 
+ <details>
+<summary><strong>Solution to Question 2</strong></summary>
+
+| Point | Behavior of Function        | Estimated Sign of Derivative |
+|-------|-----------------------------|------------------------------|
+| A     | Decreasing                  | Negative                     |
+| B     | Flat / turning point        | Zero                         |
+| C     | Increasing                  | Positive                     |
+| D     | Decreasing                  | Negative                     |
+
+Explanation:  
+
+- At **A**, the curve slopes downward → negative derivative.  
+- At **B**, the curve is flat → derivative is zero.  
+- At **C**, the curve slopes upward → positive derivative.  
+- At **D**, the curve slopes downward again → negative derivative.
+</details>
+
+---
 
 **3.Sketch the Tangent Line**
 
@@ -1559,6 +1669,17 @@ Sketch 3 tangent lines at a point:
 Then, graphically estimate the slope of those tangent lines.
 What do the tangent line slopes mean with respect to the function?
 
+<details>
+<summary><strong>Solution to Question 3</strong></summary>
+
+- Where the function is **increasing slowly**, the tangent line has a small positive slope.  
+- Where the function is **increasing rapidly**, the tangent line has a large positive slope.  
+- At the **minimum**, the tangent line is horizontal, so the slope is zero.  
+
+The tangent line slope represents the **instantaneous rate of change** of the function at that point.
+</details>
+
+---
 
 **4.Connect Shape to Slope**
 
@@ -1566,12 +1687,24 @@ Match the shape of the function to the behavior of its derivative:
 
 | Function Behavior     | What Happens to the Derivative? |
 |-----------------------|---------------------------------|
-| Increasing            | A. Derivative is positive       |
-| Decreasing            | B. Derivative is negative       |
-| Flat / turning point  | C. Derivative is zero           |
+| Flattening            | A. Derivative is positive       |
+| Flat / turning point  | B. Derivative is negative       |
+| Decreasing            | C. Derivative is zero           |
 | Steepening            | D. Derivative is increasing     |
-| Flattening            | E. Derivative is decreasing     |
+| Increasing            | E. Derivative is decreasing     |
 
+
+<details>
+<summary><strong>Solution to Question 4</strong></summary>
+
+-  A. Derivative is positive  → Increasing
+-  B. Derivative is negative  → Decreasing
+-  C. Derivative is zero  → Flat
+-  D. Derivative is increasing  → Steepening
+-  E. Derivative is decreasing  → Flattening
+</details>
+
+---
 
 **5.Match the Graph to Its Derivative**
 
@@ -1597,6 +1730,19 @@ curve(f_prime(x), from = 0, to = 10,
       main = "Function: B", col = "red", lwd = 2)
 ```
 
+<details>
+<summary><strong>Solution to Question 5</strong></summary>
+
+**The function B is the first derivative of function A**
+
+Justification:  
+- Function A has peaks and troughs where the slope is zero, which correspond to where Function B crosses the horizontal axis.  
+- Where Function A is increasing, Function B is positive.  
+- Where Function A is decreasing, Function B is negative.  
+This matches the defining relationship between a function and its derivative.
+</details>
+
+---
 
 **6.Real-World Interpretation**
 
@@ -1636,6 +1782,16 @@ $H(t)$ is a graph representing the height (H in meters) of a tidal zone througho
 - When is the tide rising most rapidly?
 - When is the tide falling?
 - Identify all the points where the rate of change of tide height is zero, H'(t) = 0. What do these features represent?
+
+<details>
+<summary><strong>Solution to Question 6</strong></summary>
+
+- The tide is **rising most rapidly** at points where the graph is steepest upward, typically midway between low tide and high tide.  
+- The tide is **falling** where the graph slopes downward from left to right.  
+- Points where **H′(t) = 0** occur at local maxima and minima (high tides and low tides). These represent moments when the tide changes direction from rising to falling or vice versa.
+</details>
+
+---
 
 **7.Increasing or Decreasing?**
 
@@ -1699,15 +1855,49 @@ Consider a graph representing forest biomass over time.
 - In your own words, describe what these concavity means in relation to the derivative.
 - If the graph started to curve downward: What might that tell us about derivative.
 
+<details>
+<summary><strong>Solution to Question 7</strong></summary>
+
+- **Positive slope:** Most of the early years, when biomass is increasing.  
+- **Zero slope:** Near the end of the 50 years, where the curve flattens near carrying capacity.  
+- **Negative slope:** None shown; biomass does not decrease in this model.
+
+Rate of change description:
+
+- **Initially:** Growth is slow but accelerating.  
+- **Around year 25:** Growth is fastest.  
+- **Toward the end:** Growth slows and approaches zero.
+
+- The function is **concave up** early on and **concave down** after the inflection point.  
+- The **inflection point** occurs where growth switches from accelerating to decelerating.  
+- Concavity describes how the **derivative itself is changing**.  
+- If the graph curves downward, it tells us the derivative is decreasing over time.
+</details>
+
+---
+
 **8. Slope Sketch Challenge**
 
 Sketch a curve that satisfies all of the following:
 
 - Starts off increasing at $x=0$ 
 - Reaches a peak at $x =3$ and then decreases after that
-- Has a steepest decrease aorund $x=4$ and then decreases at a slower rate
+- Has a steepest decrease around $x=4$ and then decreases at a slower rate
 - Label one point where the derivative is positive, one where it is zero, and one where it is negative.
 
+<details>
+<summary><strong>Solution to Question 8</strong></summary>
+
+A correct sketch should show:
+
+- Positive slope at points before the peak (derivative > 0).  
+- Zero slope at the peak at \(x = 3\) (derivative = 0).  
+- Negative slope after the peak (derivative < 0).  
+
+The steepest decrease near \(x = 4\) indicates the most negative derivative there, followed by a smaller-magnitude negative slope afterward.
+</details>
+
+---
 
 **9.Which Graph Matches the Story?**
 
@@ -1751,6 +1941,23 @@ plot(time, growth_C, type = "l", lwd = 2, col = "firebrick",
 
 ```
 
+<details>
+<summary><strong>Solution to Question 9</strong></summary>
+
+**Graph B: S-curve (logistic growth)**
+
+Explanation:  
+- The story describes slow initial growth, followed by rapid acceleration, then leveling off — a hallmark of logistic growth.  
+
+Derivative behavior:  
+
+- Initially small and positive  
+- Increases to a maximum during rapid growth  
+- Decreases toward zero as growth levels off  
+
+The derivative would look like a single-peaked curve: positive everywhere, rising to a maximum, then falling back toward zero.
+</details>
+
 ---
 
 ## Practice: Average Rate of Change
@@ -1770,12 +1977,41 @@ Sketch a diagram, with a random function, and label the following:
 
 Now explain in your own words what each part of the average rate of change formula means.
 
+<details>
+<summary><strong>Solution to Question 1</strong></summary>
+
+The average rate of change of a function \( f(x) \) from \( x=a \) to \( x=b \) is
+\[
+\frac{f(b) - f(a)}{b - a}.
+\]
+
+- \(f(b) - f(a)\) represents the **change in the output** of the function.
+- \(b - a\) represents the **change in the input**.
+- The ratio tells us how much the output changes **per unit of input**.
+
+Graphically, this formula gives the **slope of the secant line** connecting the points \((a, f(a))\) and \((b, f(b))\).
+</details>
+
+---
+
 **2.Units Matter**
 
 If \( f(t) \) represents lake temperature in degrees Celsius and \( t \) is measured in months, what are the **units** of the average rate of change?
 
 Why are units important when interpreting your result?
 
+<details>
+<summary><strong>Solution to Question 2</strong></summary>
+
+The units of the average rate of change are:
+\[
+\text{degrees Celsius per month } (\degree\text{C/month}).
+\]
+
+Units matter because they tell us **what kind of change** we are measuring. Without units, a numerical rate has no physical meaning and cannot be interpreted correctly.
+</details>
+
+---
 
 **3.From a Table of Data**
 
@@ -1796,7 +2032,32 @@ Compute the average rate of change from:
 Write a statement interpret your result in context, including units. What conclusions can you make?
 *Note: Given the data is in periods of 5 years, no conclusions of what is happening at timescales below 5 years is possible.*
 
- 
+<details>
+<summary><strong>Solution to Question 3</strong></summary>
+
+Average rate of change calculations:
+
+- From 2000 to 2005:
+\[
+\frac{4.8 - 4.1}{2005 - 2000} = \frac{0.7}{5} = 0.14 \ \text{kg/m}^2/\text{year}
+\]
+
+- From 2005 to 2010:
+\[
+\frac{5.0 - 4.8}{5} = 0.04 \ \text{kg/m}^2/\text{year}
+\]
+
+- From 2000 to 2010:
+\[
+\frac{5.0 - 4.1}{10} = 0.09 \ \text{kg/m}^2/\text{year}
+\]
+
+Interpretation:  
+Soil carbon increased over time, but the **rate of increase slowed** in the later period. Because the data are spaced 5 years apart, we cannot infer short-term fluctuations.
+</details>
+
+---
+
 **4.Graph Interpretation**
 
 The graph below shows the area of a glacier over time.
@@ -1811,6 +2072,23 @@ grid()
 - Choose two points on the graph, estimate their coordinates, and calculate the average rate of change.
 - How can you visually determine if the glacier is shrinking at a constant, accelerating or decelerating rate?
 
+<details>
+<summary><strong>Solution to Question 4</strong></summary>
+
+Example choice of points (approximate):
+
+- At \(x = 5\): area \(\approx 87\) km²  
+- At \(x = 15\): area \(\approx 62\) km²  
+
+Average rate of change:
+\[
+\frac{62 - 87}{15 - 5} = \frac{-25}{10} = -2.5 \ \text{km}^2/\text{year}
+\]
+
+Visually, the curve bends downward and becomes steeper, indicating the glacier is shrinking at an **accelerating rate**, not a constant one.
+</details>
+
+---
 
 **5.Secant Line Visualization**
 
@@ -1829,6 +2107,21 @@ grid()
 
 - Estimate the slope of the secant line and interpret what it means in the context of glacier loss (with units).
 
+<details>
+<summary><strong>Solution to Question 5</strong></summary>
+
+Using the secant line from \(t=5\) to \(t=15\):
+
+\[
+\frac{f(15) - f(5)}{15 - 5} \approx \frac{62 - 87}{10} = -2.5 \ \text{km}^2/\text{year}
+\]
+
+Interpretation:  
+On average, the glacier lost about **2.5 km² per year** over this interval.
+</details>
+
+---
+
 **6.Environmental Model Application**
 
 Suppose sea level in a coastal region is modeled by:
@@ -1841,6 +2134,22 @@ where \( S(t) \) is in millimeters and \( t \) is years since 2000.
 - State the units of your answer.  
 - Interpret the result in the context of sea level trends.
 
+<details>
+<summary><strong>Solution to Question 6</strong></summary>
+
+The average rate of change from 2010 to 2020 is:
+\[
+\frac{S(20) - S(10)}{20 - 10} = \frac{(3.2\cdot20 + 45) - (3.2\cdot10 + 45)}{10} = 3.2
+\]
+
+Units: **mm/year**
+
+Interpretation:  
+Sea level is rising steadily by **3.2 mm per year**, indicating a consistent long-term increase.
+</details>
+
+---
+
 **7.Positive vs. Negative vs. Zero**
 
 Consider the **average rate of change** of an environmental quantity of your choice over a specified interval.
@@ -1850,7 +2159,19 @@ Consider the **average rate of change** of an environmental quantity of your cho
 - Give one example where it would be **approximately zero** (stable).  
 - For each example, write 1–2 sentences explaining the context and why the sign makes sense.
 
- 
+ <details>
+<summary><strong>Solution to Question 7</strong></summary>
+
+Examples:
+
+- **Positive:** Increasing atmospheric CO₂ concentration over 10 years → positive rate.
+- **Negative:** Declining glacier mass over a decade → negative rate.
+- **Zero:** Stable lake level during a dry season → approximately zero rate.
+
+The sign reflects whether the quantity is increasing, decreasing, or staying roughly constant.
+</details>
+
+---
 
 **8.Comparing Intervals**
 
@@ -1863,6 +2184,37 @@ Let \( f(t) = 100 + 2t - 0.1t^2 \) represent the area covered by an invasive wee
 - Explain what this comparison suggests about how the invasive weed’s rate changes over time.  
 - Bonus: Just by looking at the three terms in $f(t)$, can you explain what is happening. *Hint: ask your self what happens to each of the terms when t = 0, t is small, t is big* 
 
+<details>
+<summary><strong>Solution to Question 8</strong></summary>
+
+For \(f(t) = 100 + 2t - 0.1t^2\):
+
+- From \(t=0\) to \(t=5\):
+\[
+\frac{f(5)-f(0)}{5} = \frac{(100+10-2.5)-100}{5} = \frac{7.5}{5} = 1.5
+\]
+
+- From \(t=15\) to \(t=20\):
+\[
+\frac{f(20)-f(15)}{5} = \frac{(100+40-40)-(100+30-22.5)}{5} = \frac{-7.5}{5} = -1.5
+\]
+
+Comparison:
+
+- Magnitudes are equal.
+- Signs are opposite.
+
+Interpretation:  
+Growth initially increases, then later decreases at a similar rate.
+
+Bonus:  
+
+- The constant term dominates at \(t=0\).
+- The linear term dominates for small \(t\).
+- The negative quadratic term dominates for large \(t\), causing decline.
+</details>
+
+---
 
 **9.Storytelling with Data**
 
@@ -1872,7 +2224,24 @@ You are monitoring algae growth in a pond. Between week 2 and week 6, the averag
 - Briefly describe what additional information (e.g., baseline levels, thresholds, seasonality) would help interpret whether this rate is concerning.  
 - Suggest one management action that might follow from this information.
 
- 
+<details>
+<summary><strong>Solution to Question 9</strong></summary>
+
+Plain language:  
+“Between weeks 2 and 6, algae biomass increased by about half a gram per square meter each week.”
+
+Additional information needed:
+
+- Baseline biomass levels
+- Seasonal norms
+- Ecological thresholds
+
+Possible management action:
+
+- Increase nutrient monitoring or reduce runoff sources.
+</details>
+
+--- 
 
 **10.Reverse Engineering**
 
@@ -1882,6 +2251,15 @@ A study reports that the average rate of change of nitrogen concentration in a s
 - Provide one plausible environmental reason for this trend   
 - List one potential **confounding factor** that could make this average misleading.  
 - State one follow-up analysis you would perform to confirm the trend.
+
+<details>
+<summary><strong>Solution to Question 10</strong></summary>
+
+- The negative sign means nitrogen concentration **decreased over time**.
+- A plausible reason: improved wastewater treatment or reduced fertilizer runoff.
+- A confounding factor: changes in streamflow or sampling location.
+- Follow-up analysis: examine seasonal trends or compute instantaneous rates using higher-resolution data.
+</details>
 
 ---
 
@@ -1895,6 +2273,25 @@ In your own words, explain the difference between **average rate of change** and
 
 Give an environmental example where the two would be very different.
 
+<details>
+<summary><strong>Solution to Question 1</strong></summary>
+
+The **average rate of change** measures change over an interval and is given by
+\[
+\frac{f(b)-f(a)}{b-a}.
+\]
+It tells us how much the output changes *on average* per unit input.
+
+The **instantaneous rate of change** measures change at a single moment and is defined by
+\[
+\lim_{h\to 0}\frac{f(t+h)-f(t)}{h}.
+\]
+
+Environmental example:  
+The average rate of glacier melt over a decade may be moderate, but the instantaneous melt rate on an unusually warm afternoon could be much higher.
+</details>
+
+---
 
 **2.Tangent Line Meaning**
 
@@ -1903,6 +2300,16 @@ The slope of the tangent line at a point on a graph represents the **instantaneo
 - Draw a sketch of a random curve and label your axis with some environmental quantity.
 - Pick a point on your sketch and draw a tangent line.
 - Describe in words what the slope means in the context of an environmental scenario you created.
+
+<details>
+<summary><strong>Solution to Question 2</strong></summary>
+
+The slope of the tangent line represents how fast the environmental quantity is changing *right now*.
+
+For example, if the y-axis represents river discharge and the x-axis represents time, the tangent slope at a point shows how quickly river flow is increasing or decreasing at that exact moment, such as during peak rainfall.
+</details>
+
+---
 
 **3.Zooming In on a Graph**
 
@@ -1919,6 +2326,20 @@ grid()
 - Estimate the slope of that tangent line.  
 - State what your result means about the rate of temperature change at that moment.
 
+<details>
+<summary><strong>Solution to Question 3</strong></summary>
+
+At \(t = 4\), the curve is increasing but beginning to flatten.
+
+A reasonable estimate for the tangent slope is **positive**, approximately
+\[
+0.5\ \degree\text{C/day}.
+\]
+
+This means that at day 4, stream temperature is still increasing, but the rate of warming is slowing down.
+</details>
+
+---
 
 **4.Matching Slopes to Graphs**
 
@@ -1966,7 +2387,21 @@ par(mfrow = c(1,1))
 - Match each graph to the correct slope value from the list: \( -1.0 \), \( 4.0 \), \( -4.0 \), \( 0.5 \), \( -0.4 \).
 - Explain your reasoning for each match.
 
+<details>
+<summary><strong>Solution to Question 4</strong></summary>
 
+Matching slopes at \(x = 2\):
+
+- Graph A (\(x^2\)) → \(4.0\)  
+- Graph B (\(-x^2 + 6\)) → \(-4.0\)  
+- Graph C (\(\sin x\)) → \(-0.4\)  
+- Graph D (\(\cos x + 2\)) → \(-1.0\)  
+- Graph E (\(e^{0.3x}\)) → \(0.5\)
+
+These matches follow from whether the graph is increasing or decreasing and how steep it appears at the red point.
+</details>
+
+---
 
 **5.Instantaneous Rate from a Formula**
 
@@ -1976,7 +2411,7 @@ f(t) = 50 - 4t + 0.2t^2
 \]
 where \( t \) is in years and \( f(t) \) is the depth of a wetland pool (cm).
 
-In this problem, do not try to calculate the instananous rate of change, but rather lets estimate it from the definition of the derivative:
+In this problem, do not try to calculate the instantaneous rate of change, but rather lets estimate it from the definition of the derivative:
 $$
  f'(t) =\lim_{h \to 0}\frac{f(t+h) - f(t)}{h}
 $$
@@ -1988,6 +2423,24 @@ $$
 
 - Interpret the result in context, including units.
 - Try again using  \( h = 0.001 \), what do you notice about your estimate? Is it approaching a value?
+ 
+<details>
+<summary><strong>Solution to Question 5</strong></summary>
+
+Using \(h = 0.1\),
+\[
+f'(5) \approx \frac{f(5.1)-f(5)}{0.1} \approx -2.0.
+\]
+
+Units: **cm/year**.
+
+Using \(h = 0.001\) gives a very similar value, indicating the estimate is stabilizing and approaching a single value.
+
+Interpretation:  
+At \(t = 5\), the wetland pool depth is decreasing at about **2 cm per year**.
+</details>
+
+---
  
 
 **6.Biological Growth Example**
@@ -2001,6 +2454,19 @@ where \( t \) is in months and \( P(t) \) is the number of individuals.
 - **Estimate** \( P'(6) \) using the limit definition of a derivative.  
 - Interpret the meaning of your answer in terms of fish population growth.
 
+<details>
+<summary><strong>Solution to Question 6</strong></summary>
+
+Using a small \(h\), an estimate gives
+\[
+P'(6) \approx 70\ \text{fish/month}.
+\]
+
+Interpretation:  
+At month 6, the fish population is increasing at a rate of roughly **70 fish per month**.
+</details>
+
+---
 
 **7.Zero Instantaneous Rate**
 
@@ -2008,7 +2474,15 @@ where \( t \) is in months and \( P(t) \) is the number of individuals.
 - Sketch a graph of this situation.  
 - Explain why the slope is zero at that point.
 
- 
+<details>
+<summary><strong>Solution to Question 7</strong></summary>
+
+Example: **High tide**.
+
+At the exact moment of high tide, the water level stops rising before it begins to fall. The tangent line is horizontal, so the instantaneous rate of change (slope) is zero.
+</details>
+
+--- 
 
 **8.Comparing Instantaneous Rates**
 
@@ -2025,16 +2499,38 @@ grid()
 - Compare the magnitudes of the two slopes.  
 - Explain what this says about how quickly the soil is drying over time.
 
+<details>
+<summary><strong>Solution to Question 8</strong></summary>
+
+- At \(t = 1\), the slope is steep and negative, indicating rapid drying.  
+- At \(t = 5\), the slope is still negative but smaller in magnitude.
+
+This shows that soil moisture decreases fastest soon after rainfall, then dries more slowly over time.
+</details>
+
+---
+
 **9.From Instantaneous to Prediction**
 
 The temperature in a tide pool is changing at a rate given by:
 \[
 \frac{dT}{dt} = -0.3 \quad \text{(deg C per hour)}
 \]
-at \( t = 5 \) hours after sunrise, and the temperature at that time is 22.5 deg C.
+at \( t = 5 \) hours after sunset, and the temperature at that time is 22.5 deg C.
 
 - Use this instantaneous rate to predict the temperature one hour later, assuming the rate stays constant.  
 - Explain whether this is likely to be an overestimate or underestimate in a real tide pool system, and why.
+
+<details>
+<summary><strong>Solution to Question 9</strong></summary>
+
+Using the given rate:
+\[
+T(6) \approx 22.5 - 0.3 = 22.2^\circ\text{C}.
+\]
+
+This prediction is likely an **overestimate of cooling**, because in real tide pools the rate of temperature change often varies with sunlight, mixing, and environmental conditions.
+</details>
 
 ---
 
@@ -2050,7 +2546,28 @@ Use the limit definition of the derivative to compute \( f'(3) \) for:
 f(x) = x^2
 \]
 
- 
+<details>
+<summary><strong>Solution to Question 1</strong></summary>
+
+Using the limit definition,
+\[
+f'(a)=\lim_{h\to 0}\frac{f(a+h)-f(a)}{h}.
+\]
+
+For \(f(x)=x^2\) and \(a=3\):
+\[
+f(3+h)=(3+h)^2=9+6h+h^2,\quad f(3)=9.
+\]
+\[
+\frac{f(3+h)-f(3)}{h}=\frac{6h+h^2}{h}=6+h.
+\]
+Taking the limit:
+\[
+f'(3)=\lim_{h\to 0}(6+h)=6.
+\]
+</details>
+
+---
 
 **2.General Derivative from Limit Definition**
 
@@ -2059,7 +2576,29 @@ Using the limit definition, find the derivative function \( f'(x) \) for:
 f(x) = 5x - 7
 \]
 
- 
+<details>
+<summary><strong>Solution to Question 2</strong></summary>
+
+Using the limit definition,
+\[
+f'(x)=\lim_{h\to 0}\frac{f(x+h)-f(x)}{h}.
+\]
+
+For \(f(x)=5x-7\):
+\[
+f(x+h)=5(x+h)-7=5x+5h-7.
+\]
+\[
+\frac{f(x+h)-f(x)}{h}=\frac{5h}{h}=5.
+\]
+
+Thus,
+\[
+f'(x)=5.
+\]
+</details>
+
+---
 
 **3.Cubic Function at a Point**
 
@@ -2068,7 +2607,23 @@ Compute \( f'(2) \) using the limit definition for:
 f(x) = x^3
 \]
 
- 
+<details>
+<summary><strong>Solution to Question 3</strong></summary>
+
+For \(f(x)=x^3\) and \(a=2\):
+\[
+f(2+h)=(2+h)^3=8+12h+6h^2+h^3,\quad f(2)=8.
+\]
+\[
+\frac{f(2+h)-f(2)}{h}=12+6h+h^2.
+\]
+Taking the limit:
+\[
+f'(2)=\lim_{h\to 0}(12+6h+h^2)=12.
+\]
+</details>
+
+---
 
 **4.Estimate with Small \( h \)**
 
@@ -2083,7 +2638,27 @@ f(x) = \sqrt{x}
 \]
 Explain why this approximation works for smooth functions.
 
- 
+<details>
+<summary><strong>Solution to Question 4</strong></summary>
+
+Using
+\[
+f'(4)\approx \frac{f(4+h)-f(4)}{h},\quad h=0.001,
+\]
+with \(f(x)=\sqrt{x}\):
+
+\[
+f(4)=2,\quad f(4.001)\approx \sqrt{4.001}\approx 2.00025.
+\]
+\[
+f'(4)\approx \frac{2.00025-2}{0.001}\approx 0.25.
+\]
+
+This works because smooth functions behave nearly linearly over very small intervals.
+</details>
+
+---
+
 
 **5.Environmental Example: Tree Height Growth**
 
@@ -2092,6 +2667,32 @@ Let \( H(t) = 2.5\sqrt{t} \) represent the height (m) of a young tree after \( t
 - Use \( h = 0.0001 \) to estimate \( H'(1) \).
 - Estimate $H'(5)$
 - Interpret your answer in words, what is happening to the growth rate?
+
+<details>
+<summary><strong>Solution to Question 5</strong></summary>
+
+For \(H(t)=2.5\sqrt{t}\):
+
+At \(t=1\), using \(h=0.0001\):
+\[
+H(1)=2.5,\quad H(1.0001)\approx 2.500125.
+\]
+\[
+H'(1)\approx \frac{2.500125-2.5}{0.0001}\approx 1.25\text{ m/year}.
+\]
+
+At \(t=5\):
+\[
+H(5)=2.5\sqrt{5}\approx 5.59,\quad H(5.0001)\approx 5.59006.
+\]
+\[
+H'(5)\approx \frac{5.59006-5.59}{0.0001}\approx 0.56\text{ m/year}.
+\]
+
+The growth rate decreases over time: the tree grows quickly when young and slows as it ages.
+</details>
+
+---
 
 **6.When the Limit Fails to Exist: Corner**
 
@@ -2103,7 +2704,25 @@ f(x) = |x - 2|
 - Use the limit definition of a derivative from the left and right at \( x = 2 \).  
 - Explain why \( f'(2) \) does not exist.
 
- 
+<details>
+<summary><strong>Solution to Question 6</strong></summary>
+
+For \(f(x)=|x-2|\):
+
+Left-hand derivative at \(x=2\):
+\[
+\lim_{h\to 0^-}\frac{|2+h-2|-0}{h}=\lim_{h\to 0^-}\frac{|h|}{h}=-1.
+\]
+
+Right-hand derivative:
+\[
+\lim_{h\to 0^+}\frac{|h|}{h}=1.
+\]
+
+Because the one-sided limits are not equal, \(f'(2)\) does not exist.
+</details>
+
+---
 
 **7.When the Limit Fails to Exist: Jump**
 
@@ -2119,6 +2738,23 @@ x^2, & x \geq 1
 - Use the limit definition of the derivative from each side at \( x = 1 \).  
 - Explain why the derivative fails to exist at that point.
 
+<details>
+<summary><strong>Solution to Question 7</strong></summary>
+
+Left-hand derivative at \(x=1\):
+\[
+f(x)=3x+1 \Rightarrow f'(1^-)=3.
+\]
+
+Right-hand derivative:
+\[
+f(x)=x^2 \Rightarrow f'(1^+)=2.
+\]
+
+The slopes from the left and right are different, so the derivative does not exist at \(x=1\).
+</details>
+
+---
 
 **8.Estimate from Real Data**
 
@@ -2133,6 +2769,20 @@ The dissolved oxygen (DO) in a lake was measured over several days:
 - Use \( h = 0.1 \) and the limit definition of a derivative to estimate the instantaneous rate of change at \( t = 5.0 \).  
 - Include units in your answer.
 
+<details>
+<summary><strong>Solution to Question 8</strong></summary>
+
+Using \(h=0.1\):
+\[
+f'(5)\approx \frac{f(5.1)-f(5.0)}{0.1}
+=\frac{8.05-8.10}{0.1}=-0.5\text{ mg/L/day}.
+\]
+
+The dissolved oxygen is decreasing at about 0.5 mg/L per day at day 5.
+</details>
+
+---
+
 **9.Derivative of a Quadratic**
 
 For:
@@ -2141,6 +2791,21 @@ f(x) = 3x^2 - 4x + 5
 \]
 1. Derive \( f'(x) \) using the limit definition.  
 2. Now examine you answer, what happened to the $3x^2$ term? What about the $4x$ term? What about the $5$?
+
+<details>
+<summary><strong>Solution to Question 9</strong></summary>
+
+Using the limit definition, the derivative is:
+\[
+f'(x)=6x-4.
+\]
+
+- The \(3x^2\) term becomes \(6x\).
+- The \(-4x\) term becomes \(-4\).
+- The constant \(5\) disappears because constants have zero rate of change.
+</details>
+
+---
 
 **10.Challenge: Fractional Function**
 
@@ -2152,6 +2817,20 @@ f(x) = \frac{1}{x}
 - State the domain for which the derivative exists.  
 - Explain why \( x = 0 \) must be excluded.
 
+<details>
+<summary><strong>Solution to Question 10</strong></summary>
+
+Using the limit definition:
+\[
+f'(x)=\lim_{h\to 0}\frac{\frac{1}{x+h}-\frac{1}{x}}{h}
+=\lim_{h\to 0}\frac{-1}{x(x+h)}=-\frac{1}{x^2}.
+\]
+
+The derivative exists for all \(x\neq 0\).
+
+The value \(x=0\) must be excluded because the function itself is undefined there.
+</details>
+
 ---
 
 ## Practice: Environmental “Explain and Explore” Prompts
@@ -2159,6 +2838,8 @@ f(x) = \frac{1}{x}
 Having practiced the mechanics of the limit definition, you now have the tools to calculate derivatives from first principles. In the next section, we’ll step back from the algebra and focus on the bigger picture: **how rates of change help us interpret environmental systems and real-world data.**
 
 In this section, you’ll shift from practicing the mechanics of the limit definition to **exploring how derivatives help us understand real environmental systems**. The goal here is not to calculate every derivative by hand, but to think about what the *rate of change* means in context—whether it’s the growth of a fish population, the retreat of a glacier, or the decline of dissolved oxygen in a lake. You’ll connect mathematical concepts like slopes and instantaneous change to real-world data, scenarios, and management questions. By the end, you should be able to explain in your own words how derivatives provide insight into environmental patterns and processes, and why they are a powerful tool for interpreting change.  
+
+---
 
 
 
@@ -2168,7 +2849,13 @@ Describe a marine ecosystem where tracking a population.
 - What rates would be of interest?  
 - What kind of data would you need to compute it?
 
- 
+<details>
+<summary><strong>Solution to Question 1 (Marine Biology)</strong></summary>
+
+A coral reef fish population would be a useful system to track. Rates of interest include population growth rate or mortality rate. Data would include repeated population counts over time.
+</details>
+
+---
 
 **2.Forestry**
 Think of a forest growth or health measure.  
@@ -2176,7 +2863,13 @@ Think of a forest growth or health measure.
 - How would knowing the derivative help inform forest management decisions?  
 - What tools or data sets could you use to estimate it?
 
- 
+<details>
+<summary><strong>Solution to Question 2 (Forestry)</strong></summary>
+
+Derivatives of tree biomass or canopy cover can indicate periods of rapid growth or decline. These rates help guide thinning or harvesting decisions. Satellite imagery and long-term plot data could be used.
+</details> 
+
+---
 
 **3.Climate Science**
 Choose a climate-related variable.
@@ -2184,7 +2877,13 @@ Choose a climate-related variable.
 - What insight would the derivative give about changes in this variable?  
 - How might the time scale of measurement (daily vs. yearly) affect your interpretation?
 
- 
+<details>
+<summary><strong>Solution to Question 3 (Climate Science)</strong></summary>
+
+The derivative of atmospheric CO₂ concentration shows how fast emissions are increasing or slowing. Daily data reveals short-term variability, while yearly data highlights long-term trends.
+</details> 
+
+---
 
 **4.Freshwater Ecology**
 Identify a lake, river, or wetland variable that changes in response to seasonal cycles.
@@ -2192,7 +2891,13 @@ Identify a lake, river, or wetland variable that changes in response to seasonal
 - Describe a situation where you would want to know its rate of change.  
 - What measurement frequency would be needed to detect rapid changes?
 
- 
+<details>
+<summary><strong>Solution to Question 4 (Freshwater Ecology)</strong></summary>
+
+Stream temperature changes rapidly during snowmelt or heat waves. High-frequency (hourly) measurements are needed to detect rapid changes that daily averages would miss.
+</details> 
+
+---
 
 **5.Human–Environment Interaction**
 Pick a human activity that influences an environmental variable.  
@@ -2201,4 +2906,8 @@ Pick a human activity that influences an environmental variable.
 - What kinds of monitoring programs or data sets could provide the necessary data?
 
 
+<details>
+<summary><strong>Solution to Question 5 (Human–Environment Interaction)</strong></summary>
 
+Urban development affects runoff rates. Derivatives of streamflow after storms quantify impact. Monitoring networks and continuous sensors provide the necessary data.
+</details>

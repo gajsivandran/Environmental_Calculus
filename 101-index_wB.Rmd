@@ -46,10 +46,21 @@ In small groups:
 ![](images/declared_majors.png){fig.alt='Decorative' style="float:right; width:200px; margin:10px;"}
 
 
+
 - Introduce yourselves
 - Why are you all here?
 - What do you think this class could be useful for?
 - What do you notice about the declared majors in this class?
+
+
+Class Make Up
+
+- Freshman 25%
+- Sophomores 45%
+- Juniors 20%
+- Seniors 10%
+- Transfer Students 15% 
+
 
 
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
@@ -104,13 +115,17 @@ In a small group make 2 lists
 
 ### Assessments
 
-![](images/assessmentpie.png){fig.alt='Pie chart of assessment breakdown - percentages in text' style="float:right; width:300px; margin:10px;"}
+![](images/assessmentpie.png){fig.alt='Pie chart of assessment breakdown - percentages in text' style="float:right; width:400px; margin:10px;"}
 
-**Preparation and Participation** [20%]
+**Preparation** [10%]
 
 - Before class readings/questions
-- In-class activities
 - After-class self checks
+
+**Participation** [10%]
+
+- In-class activities
+- Polleverywhere
 
 **Homeworks** [10%]
 
@@ -190,8 +205,6 @@ Love calc so much you want to do more problems
 You can retake upto 2 tests. Your best score counts – so no risk
 
 ### Office Hours
-
-![](images/when2meet.png){fig.alt='Decorative cartoon of common excuses' style="float:left; width:100px; margin:10px;"}
 
 Please select ALL times that **could** work.
 

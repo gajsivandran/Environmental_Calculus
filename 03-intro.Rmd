@@ -1,11 +1,3 @@
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(
-  echo = TRUE, message = FALSE, warning = FALSE,
-  fig.align = 'center', fig.width = 7, out.width = '80%'
-)
-options(digits = 4)
-```
-
 # Pre-Calculus Foundations
 
 ## Learning Objectives
@@ -121,6 +113,8 @@ Trust your instincts. Don’t be afraid to commit to your approach. **Swing thro
 
 By thinking of functions as **input-output machines** and visualizing them on a graph, you'll be better equipped to interpret and model relationships in environmental systems and beyond.
 
+![input arrow, pointing to a box with the word function in it, with an arrow leaving the box labelled output](images/In_out.png)
+
 A function represents a relationship between two quantities: an **input** and an **output**. The way we represent and communicate this is through:
 
 -   Verbal descriptions
@@ -128,86 +122,8 @@ A function represents a relationship between two quantities: an **input** and an
 -   Tables of data
 -   Formulas that capture the relationship
 
-::: activity
-**Your Turn**
 
-In a small group describe how the air temperature has changed in the last 24 hours.
-
--   Write a statement describing the air temperature
--   Graphically represent your description
--   Create a table that represents your discussion
--   Attempt to write an equation
-
-Now discuss the pros and cons of each of the methods. Discuss what you can and can't do with each description of the temperature and time relationship.
-:::
-
-
-::: activity
-**Discussion Prompt**
-
-How does air temperature change with elevation as you hike up a mountain? Can we describe that change with a function?
-
-As you move upward through the atmosphere, the temperature typically drops at a fairly predictable rate. This is called the adiabatic lapse rate, which averages around 6.5°C per 1000 meters (or about 1°C per 154 meters).
-
-You’ll use this rule to model how the temperature changes from Seattle (sea level) to the summit of Mount Rainier (4392 m).
-
-Assume the temperature at sea level in Seattle is 18°C.
-
-Let's use our approach to problem solving:
-
-a)  **What is the ask?**
-
-b)  **What are we given?**
-
-c)  **Translate the Math & Work step-by-step**
-
-We can translate this word problem into a *table*.
-
-Use the lapse rate to compute the temperature at the following elevations:
-
-| Elevation (m) | Temperature (°C) |
-|:-------------:|------------------|
-|  0 (Seattle)  |                  |
-|     1000      |                  |
-|     2000      |                  |
-|     3000      |                  |
-|     4000      |                  |
-
-We could visualize this data by plotting these points on a *graph*
-
-Use R or graph paper to create a quick sketch of the temperature vs. elevation relationship.
-
-```{r lapse-rate-plot, echo=FALSE, fig.cap="Air temperature (degC) as a function of time (hours)", cache=FALSE}
-plot(0, 0, type = "n", 
-     xlim = c(0, 5000), ylim = c(-15, 20),
-     xlab = "Elevation (m)", ylab = "Temperature (degC)",
-     main = "Temperature vs Elevation")
-
-abline(v = 4392, col = "gray", lty = 2)
-text(4300, 18, "Mount Rainier\n(4392 m)", pos = 4, cex = 0.8)
-```
-
-Finally we could attempt to write a *function* Use the pattern in the data to define a linear function that models temperature as a function of elevation.
-
-Let:
-
--   $T(h)$ = temperature at elevation $h$ (in meters)
--   Assume $T(0) = 18$ and use the lapse rate to define the slope
-
-> $T(h) =$
-
-d)  **Reflect and Interpret**
-
--   Does you answer make sense? Does it pass the sniff test?
--   Is that what you observe when you go hiking?
--   What does the slope of your function represent?
--   What temperature do you predict at 4392 meters (Mount Rainier's summit)?
-:::
-
-## Functions and Their Representations
-In the last activity we wrote a simple function. Now let’s take a step back and make sure we understand what functions mean and how they work.
-
-### Understanding What \(f(x)\) Means
+## Understanding What \(f(x)\) Means
 
 You’ve probably seen the equation of a line written like this:
 
@@ -254,6 +170,13 @@ So the point \((4, 11)\) would appear on the graph.
 - Input: \(x = 4\)  
 - Rule: multiply by 2, then add 3  
 - Output: \(f(4) = 11\)  
+
+If into the same function we input 🐶 then we end up
+\[
+f(🐶) = 2🐶+3
+\]
+
+everywhere there was an x, we replaced it with the new input 🐶.
 
 ---
 
@@ -340,22 +263,29 @@ So the temperature as a function of both time t and elevation h is:
 
 -   $T(t, h) = 10 - 5 \cdot \cos\left(\frac{\pi t}{12}\right) - 0.0065 \cdot h$
 
-```{r, echo=FALSE}
-## Define a new function of two variables: time t (in hours) and elevation h (in meters)
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+library(knitr)
+
+## Define the temperature function
 T <- function(t, h) {
   10 - 5 * cos(pi * t / 12) - 0.0065 * h
 }
 
-## Create a data frame with sample times and elevations
+## Create the data frame
 temp_df <- data.frame(
-  time = c(6, 6, 6, 12, 12, 18, 18),
-  elevation = c(0, 500, 1500, 0, 1000, 2000, 5000)
+  Time_h = c(6, 6, 6, 12, 12, 18, 18),
+  Elevation_m = c(0, 500, 1500, 0, 1000, 2000, 5000)
 )
 
-## Apply the function to compute temperature
-temp_df$temperature <- T(temp_df$time, temp_df$elevation)
-temp_df$temperature <- T(temp_df$time, temp_df$elevation)
-temp_df
+## Compute temperature and round for presentation
+temp_df$Temperature_C <- round(T(temp_df$Time_h, temp_df$Elevation_m), 2)
+
+## Nicely formatted markdown table
+kable(
+  temp_df,
+  col.names = c("Time (hours)", "Elevation (m)", "Temperature (°C)"),
+  caption = "Modeled temperature as a function of time and elevation."
+)
 ```
 
 **Reflection:**
@@ -366,7 +296,7 @@ temp_df
 -   Stare at this equation T(t, h) = 10 - 5 \* cos(pi \* t / 12) - 0.0065 \* h, can you visualize the impact of t? what about h?
 -   The equation could have been written as f(x, y) = 10 - 5 \* cos(pi \* x / 12) - 0.0065 \* y, would this be harder to interpret?
 
-```{r apply-the-function-to-compute-temperature-405, fig.cap="Apply the function to compute temperature", cache=FALSE, echo=FALSE}
+```{r apply-the-function-to-compute-temperature-405, fig.cap="Apply the function to compute temperature", cache=FALSE, echo=FALSE, message=FALSE}
 library(ggplot2)
 library(dplyr)
 
@@ -389,7 +319,7 @@ ggplot(grid, aes(x = t, y = h, z = temp)) +
   theme_minimal()
 ```
 
-```{r, echo=FALSE}
+```{r, echo=FALSE, message=FALSE}
 library(plotly)
 library(dplyr)
 
@@ -435,7 +365,7 @@ Understanding the shape of a graph is crucial for interpreting real-world phenom
 
 Let's look at an example of a quadratic function, which is commonly used to model situations with a single peak or valley. This function is an increasing function for $x<2$ and decreasing for $x>2$. It has a maximum at $x=2$. We can also notice that the concavity of the function is concave down.
 
-We can also look at the how the function is **changing** as we move along the x axis. At $x=2$ the slope of the function is positive and steep. As we approach the maximum, the slope of the function is still positive, but its not increasing as fast. We could say its increasing at a decreasing rate. At the peak, the function is not longer changing. Now as we pass $x=2$ the function is decreasing slowly at first, but faster and faster as $x$ gets further away from the peak.
+We can also look at the how the function is **changing** as we move along the x axis. At $x=0$ the slope of the function is positive and steep. As we approach the maximum, the slope of the function is still positive, but its not increasing as fast. We could say its increasing at a decreasing rate. At the peak, the function is not longer changing. Now as we pass $x=2$ the function is decreasing slowly at first, but faster and faster as $x$ gets further away from the peak.
 
 You can think of this as a ball in your hand. You throw it up, initially its moving fast, but as gravity acts on the ball it slows. Then for an instance, the ball hangs in the air - this is where it reaches its peak. Then the ball starts to fall, slowly at first, but it then begins to fall faster and faster.
 
@@ -445,7 +375,7 @@ curve(f, from = 0, to = 6, main = "Quadratic Function", ylab = "f(x)", xlab = "x
 abline(h = 0, col = "gray", lty = 2)
 ```
 
-The calculus you will learn in this course will give you the tools needed to quatify these observations. Identify the rates of change at different point and find the maximas and minimas.
+The calculus you will learn in this course will give you the tools needed to quantify these observations. Identify the rates of change at different point and find the maximas and minimas.
 
 ## Key Function Types
 
@@ -518,9 +448,9 @@ Suppose atmospheric CO₂ increases from **400 ppm** to **420 ppm** over **5 yea
 
 Calculate the **average rate of change**
 
-Now repeat the procee but this time no numbers, run the same calculation with just the units. What do you end up with?
+Now repeat the process but this time no numbers, run the same calculation with just the units. What do you end up with?
 
-Now tell me the sotry of what your calculation means?
+Now tell me the story of what your calculation means?
 
 **Reflection Questions**
 
@@ -642,75 +572,260 @@ For any function, try answering these three questions:
 
 Try these on your own or with a partner. Don’t just plug in numbers — ask what the function is saying!
 
+---
+
 **🟢 Level 1: Getting Comfortable**
 
-**1.** Let $f(x) = 3x + 2$.\
-**a.** What is the input and what is the output?\
+**1.** Let \( f(x) = 3x + 2 \).  
+**a.** What is the input and what is the output?  
 **b.** What does the function do to each input?
 
+<details>
+<summary><strong>Click to reveal solution</strong></summary>
+
+**a.**
+
+- The **input** is \(x\).  
+- The **output** is \(f(x)\), the value produced by the function rule.
+
+**b.**  
+For each input \(x\), the function:
+
+1. multiplies \(x\) by 3  
+2. then adds 2  
+
+So the function scales each input and shifts it upward.
+
+</details>
+
 ------------------------------------------------------------------------
 
-**2.** Let $T(t) = 20 + 0.5t$, where $T(t)$ is temperature in °C and $t$ is time in hours since sunrise.\
-**a.** What is the temperature at sunrise?\
-**b.** What is the temperature 4 hours after sunrise?\
+**2.** Let \( T(t) = 20 + 0.5t \), where \(T(t)\) is temperature in °C and \(t\) is time in hours since sunrise.  
+**a.** What is the temperature at sunrise?  
+**b.** What is the temperature 4 hours after sunrise?  
 **c.** What does the 0.5 mean in this context?
 
+<details>
+<summary><strong>Click to reveal solution</strong></summary>
+
+**a.**  
+Sunrise corresponds to \(t = 0\):
+\[
+T(0) = 20 + 0.5(0) = 20^\circ\text{C}
+\]
+
+**b.**  
+Four hours after sunrise:
+\[
+T(4) = 20 + 0.5(4) = 22^\circ\text{C}
+\]
+
+**c.**  
+The 0.5 represents the **rate of change**: the temperature increases by **0.5°C per hour**.
+
+</details>
+
 ------------------------------------------------------------------------
 
-**3.** The function $P(n) = 100 \cdot (1.05)^n$ models the population of a fish species over time, where $n$ is years.\
-**a.** What does the 100 represent?\
-**b.** Is this population growing or shrinking?\
+**3.** The function \( P(n) = 100 \cdot (1.05)^n \) models the population of a fish species over time, where \(n\) is years.  
+**a.** What does the 100 represent?  
+**b.** Is this population growing or shrinking?  
 **c.** Calculate the population in 3 years.
+
+<details>
+<summary><strong>Click to reveal solution</strong></summary>
+
+**a.**  
+The 100 is the **initial population** at \(n = 0\).
+
+**b.**  
+Since \(1.05 > 1\), the population is **growing**.
+
+**c.**  
+\[
+P(3) = 100(1.05)^3 \approx 115.76
+\]
+So the population is about **116 fish** after 3 years.
+
+</details>
 
 ------------------------------------------------------------------------
 
 **🟡 Level 2: Adding Complexity**
 
-**4.** You’re given $C(d) = 50 + 10d$, where $C$ is the cost in dollars of transporting material and $d$ is the distance in kilometers.\
-**a.** What is the cost of transport if the distance is 0 km?\
-**b.** What is the marginal cost per kilometer?\
+**4.** You’re given \( C(d) = 50 + 10d \), where \(C\) is the cost in dollars of transporting material and \(d\) is the distance in kilometers.  
+**a.** What is the cost of transport if the distance is 0 km?  
+**b.** What is the marginal cost per kilometer?  
 **c.** What kind of functional relationship is this?
 
+<details>
+<summary><strong>Click to reveal solution</strong></summary>
+
+**a.**  
+\[
+C(0) = 50
+\]
+This is the fixed cost.
+
+**b.**  
+The marginal cost is **\$10 per kilometer**.
+
+**c.**  
+This is a **linear relationship**.
+
+</details>
+
 ------------------------------------------------------------------------
 
-**5.** Let $H(t) = 0.3t^2 - 1.2t + 2$, where $H(t)$ models the height (in meters) of a plant $t$ weeks after planting.\
-**a.** What kind of function is this?\
-**b.** What might the graph of this function look like?\
-**c.** What does it suggest about the plant’s growth? **d.** If you were to plug in a (very) large value for t what happens? Does the result make sense? How could you restrict this function?
+**5.** Let \( H(t) = 0.3t^2 - 1.2t + 2 \), where \(H(t)\) models the height (in meters) of a plant \(t\) weeks after planting.  
+**a.** What kind of function is this?  
+**b.** What might the graph of this function look like?  
+**c.** What does it suggest about the plant’s growth?  
+**d.** If you were to plug in a (very) large value for \(t\), what happens? Does the result make sense? How could you restrict this function?
+
+<details>
+<summary><strong>Click to reveal solution</strong></summary>
+
+**a.**  
+This is a **quadratic function**.
+
+**b.**  
+The graph is a **parabola opening upward**.
+
+**c.**  
+The model suggests growth that slows at first and then accelerates over time.
+
+**d.**  
+For very large \(t\), the height increases without bound, which is not realistic.  
+The function should be **restricted to a reasonable time interval**.
+
+</details>
 
 ------------------------------------------------------------------------
 
-**6.** A temperature function is defined as:\
-$T(h) = 15 - 0.0065h$, where $h$ is elevation in meters above sea level.\
-**a.** What is the temperature at sea level?\
-**b.** How much does the temperature drop every 1000 meters?\
+**6.** A temperature function is defined as:  
+\[
+T(h) = 15 - 0.0065h
+\]
+where \(h\) is elevation in meters above sea level.  
+**a.** What is the temperature at sea level?  
+**b.** How much does the temperature drop every 1000 meters?  
 **c.** At what elevation will the temperature be 0°C?
+
+<details>
+<summary><strong>Click to reveal solution</strong></summary>
+
+**a.**  
+\[
+T(0) = 15^\circ\text{C}
+\]
+
+**b.**  
+Every 1000 m:
+\[
+0.0065 \times 1000 = 6.5^\circ\text{C}
+\]
+
+**c.**  
+Set \(T(h)=0\):
+\[
+0 = 15 - 0.0065h \Rightarrow h \approx 2308\text{ m}
+\]
+
+</details>
 
 ------------------------------------------------------------------------
 
 **🔴 Level 3: Challenging Interpretation**
 
-**7.** A water tank is being filled and drained at the same time. The volume of water is modeled by:\
-$V(t) = 100 + 30t - 2t^2$, where $V$ is volume in liters and $t$ is time in minutes.\
-**a.** What kind of function is this?\
-**b.** Looking at the expressions, can you explain what each term might be doing?\
-**c.** Explain What happens to the volume over time? [Hint: You can always plug values into the function to give you points, eg t=0, t=100] **d.** Can you find where the function has as peak/valley? ---
+**7.** A water tank is being filled and drained at the same time. The volume of water is modeled by:  
+\[
+V(t) = 100 + 30t - 2t^2
+\]
+where \(V\) is volume in liters and \(t\) is time in minutes.  
+**a.** What kind of function is this?  
+**b.** Looking at the expressions, can you explain what each term might be doing?  
+**c.** Explain what happens to the volume over time.  
+**d.** Can you find where the function has a peak or valley?
+
+<details>
+<summary><strong>Click to reveal solution</strong></summary>
+
+**a.**  
+This is a **quadratic function**.
+
+**b.**  
+
+- 100: starting volume  
+- \(+30t\): water being added  
+- \(-2t^2\): draining increases over time  
+
+**c.**  
+The volume increases at first, reaches a maximum, then decreases.
+
+**d.**  
+The maximum occurs at:
+\[
+t = -\frac{b}{2a} = \frac{30}{4} = 7.5 \text{ minutes}
+\]
+
+</details>
+
+------------------------------------------------------------------------
+
+**8.** Let \( G(x) = \frac{200}{x+5} \), where \(G(x)\) is the growth rate of algae based on the addition of a chemical \(x\) (in mg/L).  
+**a.** What happens to the growth rate as chemical increases?  
+**b.** What happens when \(x = 0\)?  
+**c.** What happens as \(x \to \infty\)? What does that mean in context?
+
+<details>
+<summary><strong>Click to reveal solution</strong></summary>
+
+**a.**  
+As \(x\) increases, the growth rate decreases.
+
+**b.**  
+\[
+G(0) = \frac{200}{5} = 40
+\]
+
+**c.**  
+As \(x \to \infty\), \(G(x) \to 0\), meaning the chemical strongly suppresses growth.
+
+</details>
+
+------------------------------------------------------------------------
+
+**9.** The function  
+\[
+T(t,h) = 10 - 5 \cos\left(\frac{\pi t}{12}\right) - 0.0065h
+\]
+models temperature based on time of day \(t\) (hours) and elevation \(h\) (meters).  
+**a.** What is the warmest time of day?  
+**b.** How does elevation affect temperature?  
+**c.** Which variable has a stronger effect on temperature?
+
+<details>
+<summary><strong>Click to reveal solution</strong></summary>
+
+**a.**  
+The warmest time occurs when the cosine term is smallest:
+\[
+\cos\left(\frac{\pi t}{12}\right) = -1 \Rightarrow t = 12
+\]
+(midday).
+
+**b.**  
+Temperature decreases linearly as elevation increases.
+
+**c.**  
+Time causes a daily swing of up to 5°C, while elevation changes temperature more gradually.  
+Time has the stronger short-term effect.
+
+</details>
+
 
 ---
-
-**8.** Let $G(x) = \frac{200}{x+5}$, where $G(x)$ is the growth rate of algae based on a the addition of a chemical $x$ (in mg/L).\
-**a.** What happens to the growth rate as chemical increases?\
-**b.** What happens when $x = 0$?\
-**c.** What happens as $x \to \infty$? What does that mean in context?
-
-------------------------------------------------------------------------
-
-**9.** The function $T(t, h) = 10 - 5 \cos\left(\frac{\pi t}{12}\right) - 0.0065h$ models temperature based on time of day $t$ (in hours) and elevation $h$ (in meters).\
-**a.** What is the warmest time of day?\
-**b.** How does elevation affect temperature?\
-**c.** Which variable has a stronger effect on temperature: time or elevation? [Hint: try putting this into DESMOS to visualize]
-
-------------------------------------------------------------------------
 
 ## Practice: Reading Graphs & Tables
 
@@ -733,7 +848,7 @@ When working with graphs or tables, try answering:
 3.  **Can you predict values not directly shown?**\
     Can you estimate an in-between value? Can you guess the shape of the full function?
 
-------------------------------------------------------------------------
+---
 
 ### Practice Problems
 
@@ -751,12 +866,39 @@ Use reasoning and estimation to explore these problems. Think in terms of *shape
 |  3  |   25    |
 |  4  |   32    |
 
-**a.** Describe in words what you notice in the rate of increase.\
-**b.** Interpolate the number of insects at 0.5 days.\
-**c.** Extrapolate the number of insects on day 5.\
+**a.** Describe in words what you notice in the rate of increase.  
+**b.** Interpolate the number of insects at 0.5 days.  
+**c.** Extrapolate the number of insects on day 5.  
 **d.** What is the difference between interpolation and extrapolation?
 
-------------------------------------------------------------------------
+<details>
+<summary><strong>Click to reveal solution</strong></summary>
+
+**a.**  
+The number of insects is increasing, and the *amount added each day* is getting larger. This suggests the rate of increase itself is increasing.
+
+**b.**  
+Between day 0 and day 1, insects increase from 10 to 14.  
+Halfway (day 0.5), a reasonable estimate is:
+\[
+\frac{10 + 14}{2} = 12
+\]
+
+**c.**  
+From day 3 to day 4, the increase is \(32 - 25 = 7\).  
+If that trend continues, an estimate for day 5 is:
+\[
+32 + 7 = 39
+\]
+
+**d.**  
+
+- **Interpolation** estimates values *within* the data range.  
+- **Extrapolation** estimates values *outside* the data range and is more uncertain.
+
+</details>
+
+---
 
 **2.** The following graph shows temperature over a 24-hour period. Use the graph to answer the questions below.
 
@@ -778,15 +920,63 @@ abline(v = 12, lty = 2, col = "gray")  # peak at noon
 **c.** Describe the concavity of this graph.\
 **d.** What shape is this curve — linear, quadratic, exponential, or something else?
 
-------------------------------------------------------------------------
+<details>
+<summary><strong>Click to reveal solution</strong></summary>
+
+**a.**  
+The temperature is highest at about **12 hours (noon)**.
+
+**b.**  
+
+- It increases most rapidly in the **morning**, before noon.  
+- It decreases most rapidly in the **late afternoon**, after noon.
+
+**c.**  
+The graph is concave up during the early morning and evening, and concave down near midday.
+
+**d.**  
+This curve is **periodic (sinusoidal)** — not linear, quadratic, or exponential.
+
+</details>
+
+---
 
 **3.** You’re told that rainfall increases by 3 mm every hour during a storm. The storm lasts 4 hours.
 
-**a.** Make a table for hours 0 through 5.\
-**b.** What kind of graph would this make?\
-**c.** What is the slope? **d.** Write an equation for this rainfall event.
+**a.** Make a table for hours 0 through 5.  
+**b.** What kind of graph would this make?  
+**c.** What is the slope?  
+**d.** Write an equation for this rainfall event.
 
-------------------------------------------------------------------------
+<details>
+<summary><strong>Click to reveal solution</strong></summary>
+
+**a.**
+
+| Hour | Rainfall (mm) |
+|:----:|:-------------:|
+|  0   |      0        |
+|  1   |      3        |
+|  2   |      6        |
+|  3   |      9        |
+|  4   |     12        |
+|  5   |     15        |
+
+**b.**  
+This would form a **straight line**.
+
+**c.**  
+The slope is **3 mm per hour**.
+
+**d.**  
+An equation is:
+\[
+R(t) = 3t
+\]
+
+</details>
+
+---
 
 **🟡 Level 2: Adding Complexity**
 
@@ -799,52 +989,93 @@ abline(v = 12, lty = 2, col = "gray")  # peak at noon
 | 2010 |      120      |
 | 2015 |      105      |
 
-**a.** Describe the trend.\
-**b.** What’s the average rate of change per 5 years?\
+**a.** Describe the trend.  
+**b.** What’s the average rate of change per 5 years?  
 **c.** Is the rate increasing or decreasing over time?
 
-------------------------------------------------------------------------
+<details>
+<summary><strong>Click to reveal solution</strong></summary>
 
-**5.** The function $P(t) = 100 \cdot (1.05)^t$ models a growing population. Sketch a table for $t = 0$ to $t = 4$.
+**a.**  
+The glacier thickness is **decreasing over time**.
 
-**a.** Does this function show linear or exponential growth?\
-**b.** What would the graph look like?\
+**b.**  
+From 2000 to 2015:
+\[
+\frac{105 - 135}{15} = -2 \text{ m per year}
+\]
+That is about **–10 m every 5 years** on average.
+
+**c.**  
+The amount lost every 5 years increases, so the rate of thinning is **increasing**.
+
+</details>
+
+---
+
+**5.** The function \(P(t) = 100(1.05)^t\) models a growing population.
+
+**a.** Does this function show linear or exponential growth?  
+**b.** What would the graph look like?  
 **c.** How does the rate of growth change over time?
 
-------------------------------------------------------------------------
+<details>
+<summary><strong>Click to reveal solution</strong></summary>
 
-**6.** Match each table to the correct function
+**a.**  
+This is **exponential growth**.
 
-**Table A:**
+**b.**  
+The graph increases slowly at first and then becomes steeper over time.
 
-| $x$ | $y$ |
-|:---:|:---:|
-|  1  |  2  |
-|  2  |  4  |
-|  3  |  8  |
-|  4  | 16  |
+**c.**  
+The rate of growth increases as the population gets larger.
 
-**Table B:**
+</details>
 
-| $x$ | $y$ |
-|:---:|:---:|
-|  1  |  5  |
-|  2  |  7  |
-|  3  |  9  |
-|  4  | 11  |
+---
 
-**Functions:**
+**6.** Match each table to the correct function.
 
-1.  $y = 2^x$\
-2.  $y = 2x + 3$
+**Table A:** 
 
-**a.** How did you work it out??
+| $x$ | $y$ | 
+|:---:|:---:| 
+| 1 | 2 | 
+| 2 | 4 | 
+| 3 | 8 | 
+| 4 | 16 | 
 
-------------------------------------------------------------------------
+**Table B:** 
+
+| $x$ | $y$ | 
+|:---:|:---:| 
+| 1 | 5 | 
+| 2 | 7 | 
+| 3 | 9 | 
+| 4 | 11 | 
+
+**Functions:** 1. $y = 2^x$\ 2. $y = 2x + 3$
+
+Match the tabel to the equation.
+
+**a.** How did you work it out?
+
+<details>
+<summary><strong>Click to reveal solution</strong></summary>
+
+**a.**  
+
+- Table A doubles each time \(x\) increases by 1, which matches exponential growth.  
+- Table B increases by a constant amount (+2), which matches a linear function.
+
+</details>
+
+---
 
 **🔴 Level 3: Challenging Interpretation**
 
-**7.** Below are two graph showing CO₂ concentration over time.The black line represents the moving average (smooths out the variable) and the red line is the monthly averages.
+**7.** Below are two graphs showing CO₂ concentration over time.The black line represents the moving average (smooths out the variable) and the red line is the monthly averages.
 
 ![Line graph showing atmospheric CO₂ mole fraction (ppm) at Mauna Loa Observatory from 1958 to 2025. The red curve rises steadily from about 315 ppm in 1960 to over 420 ppm in 2025, with visible annual oscillations due to seasonal cycles. The overall trend is an accelerating increase in CO₂ concentration. Logos of Scripps Institution of Oceanography and NOAA are included.](images/co2_data_mlo.png)
 ![Line graph showing recent monthly mean CO₂ at Mauna Loa Observatory from 2020 to 2025. Black line shows the smoothed mean trend rising from ~414 ppm in 2020 to nearly 428 ppm in 2025. Red curve shows monthly values oscillating up and down around the mean, with peaks each spring and troughs each fall. The seasonal cycle is superimposed on a clear upward long-term trend. NOAA logo appears at the bottom.](images/co2_trend_mlo.png)
@@ -852,40 +1083,83 @@ abline(v = 12, lty = 2, col = "gray")  # peak at noon
 **b.** What underlying environmental process causes the ups and downs?\
 **c.** How could you approximate the average yearly increase?
 
-------------------------------------------------------------------------
+<details>
+<summary><strong>Click to reveal solution</strong></summary>
 
-**8.** This function models the speed of a river over time during a flood:
+**a.**  
+The red line looks like a **rising curve with a repeating oscillation**, similar to a linear or slightly exponential trend plus a sinusoidal pattern.
 
-| Time (hrs) | Speed (m/s) |
-|:----------:|:-----------:|
-|     0      |     1.0     |
-|     2      |     2.5     |
-|     4      |     4.0     |
-|     6      |     4.5     |
-|     8      |     3.8     |
-|     10     |     2.0     |
+**b.**  
+Seasonal plant growth and decay cause CO₂ to rise and fall each year.
 
-**a.** When is the river speed increasing fastest?\
-**b.** When does the speed peak?\
-**c.** Sketch or describe what the graph would look like.
+**c.**  
+Estimate the slope of the smoothed black line over several years (change in ppm divided by years).
 
-------------------------------------------------------------------------
+</details>
 
-**9.** A table shows the dissolved oxygen (DO) level in a lake throughout the day:
+---
 
-| Hour | DO (mg/L) |
-|:----:|:---------:|
-|  6   |    6.0    |
-|  9   |    6.5    |
-|  12  |    7.2    |
-|  15  |    6.4    |
-|  18  |    5.5    |
+**8.** This function models the speed of a river over time during a flood: 
 
-**a.** What time is the DO highest?\
-**b.** When is the DO increasing? Decreasing?\
-**c.** What might explain the rise and fall in DO over the day?
+| Time (hrs) | Speed (m/s) | 
+|:----------:|:-----------:| 
+| 0 | 1.0 | 
+| 2 | 2.5 | 
+| 4 | 4.0 | 
+| 6 | 4.5 | 
+| 8 | 3.8 | 
+| 10 | 2.0 |
 
-------------------------------------------------------------------------
+**a.** When is speed increasing fastest?  
+**b.** When does speed peak?  
+**c.** Describe the graph.
+
+<details>
+<summary><strong>Click to reveal solution</strong></summary>
+
+**a.**  
+Speed increases fastest early in the flood, between 0 and 4 hours.
+
+**b.**  
+The speed peaks around **6 hours**.
+
+**c.**  
+The graph rises quickly, flattens near the peak, then decreases gradually.
+
+</details>
+
+---
+
+**9.** A table shows the dissolved oxygen (DO) level in a lake throughout the day: 
+
+| Hour | DO (mg/L) | 
+|:----:|:---------:| 
+| 6 | 6.0 | 
+| 9 | 6.5 | 
+| 12 | 7.2 | 
+| 15 | 6.4 | 
+| 18 | 5.5 |
+
+**a.** When is DO highest?  
+**b.** When is DO increasing? Decreasing?  
+**c.** What explains this pattern?
+
+<details>
+<summary><strong>Click to reveal solution</strong></summary>
+
+**a.**  
+DO is highest at **midday (12:00)**.
+
+**b.**  
+- Increasing from morning to midday  
+- Decreasing from midday to evening
+
+**c.**  
+Photosynthesis during daylight increases oxygen, while respiration dominates later in the day.
+
+</details>
+
+---
 
 ## Practice: Building Functions from Context
 
@@ -949,75 +1223,247 @@ $$
 
 ------------------------------------------------------------------------
 
-### Practice Problems
-
-Start with simple cases, then move to more realistic modeling situations.
+## Practice Problems 
 
 **🟢 Level 1: Getting Comfortable**
 
-**1.** A tree grows at a steady rate of 0.8 meters per year. It is currently 2 meters tall.\
-**a.** Write a function $H(t)$ to model the tree height $t$ years from now.\
+**1.** A tree grows at a steady rate of 0.8 meters per year. It is currently 2 meters tall.  
+**a.** Write a function \(H(t)\) to model the tree height \(t\) years from now.  
 **b.** How tall will the tree be in 5 years?
 
+<details>
+<summary><strong>Click to reveal solution</strong></summary>
+
+**a.**  
+The tree starts at 2 meters and grows at 0.8 m/year:
+\[
+H(t) = 2 + 0.8t
+\]
+
+**b.**  
+After 5 years:
+\[
+H(5) = 2 + 0.8(5) = 6
+\]
+The tree will be **6 meters tall**.
+
+</details>
+
 ------------------------------------------------------------------------
 
-**2.** A small lake has 500 fish. Every year, 40 new fish are born and none die.\
-**a.** Define a function $P(t)$ for the population after $t$ years.\
+**2.** A small lake has 500 fish. Every year, 40 new fish are born and none die.  
+**a.** Define a function \(P(t)\) for the population after \(t\) years.  
 **b.** What is the population after 6 years?
 
+<details>
+<summary><strong>Click to reveal solution</strong></summary>
+
+**a.**  
+This is linear growth starting at 500 fish:
+\[
+P(t) = 500 + 40t
+\]
+
+**b.**  
+After 6 years:
+\[
+P(6) = 500 + 40(6) = 740
+\]
+The population will be **740 fish**.
+
+</details>
+
 ------------------------------------------------------------------------
 
-**3.** A weather balloon starts at 1000 meters and rises at 150 meters per minute.\
-**a.** Let $A(t)$ be the altitude in meters after $t$ minutes. Write the function.\
+**3.** A weather balloon starts at 1000 meters and rises at 150 meters per minute.  
+**a.** Let \(A(t)\) be the altitude in meters after \(t\) minutes. Write the function.  
 **b.** How high will the balloon be after 4 minutes?
+
+<details>
+<summary><strong>Click to reveal solution</strong></summary>
+
+**a.**  
+Starting altitude plus constant rate:
+\[
+A(t) = 1000 + 150t
+\]
+
+**b.**  
+After 4 minutes:
+\[
+A(4) = 1000 + 150(4) = 1600
+\]
+The balloon will be **1600 meters high**.
+
+</details>
 
 ------------------------------------------------------------------------
 
 **🟡 Level 2: Adding Complexity**
 
-**4.** Carbon dioxide levels in a closed chamber start at 400 ppm and rise 5 ppm per hour due to respiration.\
-**a.** Write a function $C(t)$ to model the CO₂ concentration after $t$ hours.\
-**b.** Graph the function from $t = 0$ to $t = 10$.\
+**4.** Carbon dioxide levels in a closed chamber start at 400 ppm and rise 5 ppm per hour due to respiration.  
+**a.** Write a function \(C(t)\) to model the CO₂ concentration after \(t\) hours.  
+**b.** Graph the function from \(t = 0\) to \(t = 10\).  
 **c.** What are the units of the slope?
 
+<details>
+<summary><strong>Click to reveal solution</strong></summary>
+
+**a.**  
+\[
+C(t) = 400 + 5t
+\]
+
+**b.**  
+The graph is a straight line starting at 400 ppm and increasing steadily to 450 ppm at \(t=10\).
+
+**c.**  
+The slope has units of **ppm per hour**.
+
+</details>
+
 ------------------------------------------------------------------------
 
-**5.** The temperature at the surface of a ocean is 20°C. It drops by 2.5°C for every 1000 meters of depth\
-**a.** Write a function $T(z)$ to model temperature as a function of depth $z$ in meters.\
-**b.** Use a table to show values at 0, 1000, 2000, 3000, and 4000 meters.\
+**5.** The temperature at the surface of a ocean is 20°C. It drops by 2.5°C for every 1000 meters of depth  
+**a.** Write a function \(T(z)\) to model temperature as a function of depth \(z\) in meters.  
+**b.** Use a table to show values at 0, 1000, 2000, 3000, and 4000 meters.  
 **c.** Graph the function.
 
+<details>
+<summary><strong>Click to reveal solution</strong></summary>
+
+**a.**  
+A drop of 2.5°C per 1000 m is:
+\[
+0.0025^\circ\text{C per meter}
+\]
+\[
+T(z) = 20 - 0.0025z
+\]
+
+**b.**
+
+| Depth (m) | Temperature (°C) |
+|----------:|------------------:|
+| 0         | 20.0 |
+| 1000      | 17.5 |
+| 2000      | 15.0 |
+| 3000      | 12.5 |
+| 4000      | 10.0 |
+
+**c.**  
+The graph is a straight line decreasing with depth.
+
+</details>
+
 ------------------------------------------------------------------------
 
-**6.** A city is losing wetland area due to urban development. The area declines by 3.2 hectares per year. Currently, 180 hectares remain.\
-**a.** Write a function $W(t)$ for wetland area after $t$ years.\
-**b.** Predict when only 100 hectares will remain.
+**6.** A city is losing wetland area due to urban development. The area declines by 3.2 hectares per year. Currently, 180 hectares remain.  
+**a.** Write a function \(W(t)\) for wetland area after \(t\) years.  
+**b.** Predict when only 100 hectares will remain.  
 **c.** How much wetland was there 10 years ago?
+
+<details>
+<summary><strong>Click to reveal solution</strong></summary>
+
+**a.**  
+\[
+W(t) = 180 - 3.2t
+\]
+
+**b.**  
+Set \(W(t)=100\):
+\[
+100 = 180 - 3.2t \Rightarrow t = 25
+\]
+It will take **25 years** to reach 100 hectares.
+
+**c.**  
+Ten years ago corresponds to \(t = -10\):
+\[
+W(-10) = 180 + 32 = 212
+\]
+There were **212 hectares** 10 years ago.
+
+</details>
 
 ------------------------------------------------------------------------
 
 **🔴 Level 3: Challenging Interpretation**
 
-**7.** A tank is filled at a rate of 10 L/min for 6 minutes, then drained at 4 L/min for the next 10 minutes.\
-**a.** Write a piecewise function $V(t)$ for volume over time.\
+**7.** A tank is filled at a rate of 10 L/min for 6 minutes, then drained at 4 L/min for the next 10 minutes.  
+**a.** Write a piecewise function \(V(t)\) for volume over time.  
 **b.** Sketch or describe the graph.
 
+<details>
+<summary><strong>Click to reveal solution</strong></summary>
+
+**a.**  
+Assuming the tank starts empty:
+\[
+V(t) =
+\begin{cases}
+10t, & 0 \le t \le 6 \\
+60 - 4(t-6), & 6 < t \le 16
+\end{cases}
+\]
+
+**b.**  
+The graph rises linearly for the first 6 minutes, reaches a maximum, then decreases linearly.
+
+</details>
+
 ------------------------------------------------------------------------
 
-**8.** An invasive plant spreads in a way that the area it covers doubles every week. At week 0, it covers 2 square meters.\
-**a.** Write a function $A(t)$ to model area in square meters over time.\
+**8.** An invasive plant spreads in a way that the area it covers doubles every week. At week 0, it covers 2 square meters.  
+**a.** Write a function \(A(t)\) to model area in square meters over time.  
 **b.** What type of function is this?
 
+<details>
+<summary><strong>Click to reveal solution</strong></summary>
+
+**a.**  
+Doubling each week gives:
+\[
+A(t) = 2(2^t)
+\]
+
+**b.**  
+This is an **exponential growth function**.
+
+</details>
+
 ------------------------------------------------------------------------
 
-**9.** The daily temperature at sea level is modeled by:\
-$$
+**9.** The daily temperature at sea level is modeled by:
+\[
 T(t) = 10 - 5 \cos\left(\frac{\pi t}{12}\right)
-$$
+\]
 
-**a.** Describe the starting temperature, peak, and cycle length.\
-**b.** Write a new function $T(t, h)$ that accounts for elevation, assuming a lapse rate of 0.0065°C/m.\
+**a.** Describe the starting temperature, peak, and cycle length.  
+**b.** Write a new function \(T(t, h)\) that accounts for elevation, assuming a lapse rate of 0.0065°C/m.  
 **c.** What is the temperature at 6 AM and 2000 m elevation?
+
+<details>
+<summary><strong>Click to reveal solution</strong></summary>
+
+**a.**  
+- Starting temperature at \(t=0\): 5°C  
+- Peak temperature: 15°C  
+- Cycle length: 24 hours
+
+**b.**  
+\[
+T(t,h) = 10 - 5 \cos\left(\frac{\pi t}{12}\right) - 0.0065h
+\]
+
+**c.**  
+At \(t=6\), \(h=2000\):
+\[
+T(6,2000) = 10 - 5(0) - 13 = -3^\circ\text{C}
+\]
+
+</details>
 
 ------------------------------------------------------------------------
 
@@ -1029,7 +1475,7 @@ You’ve seen all of these operations before — expanding algebraic expressions
 
 This section gives you a **high-repetition practice zone** to help wake up your math brain. Think of this like stretching before a run: each drill refreshes a skill you’ll use constantly in calculus.
 
-> **Goal:** Get faster and more confident with everyday math operations that form the foundation of this course.
+ **Goal:** Get faster and more confident with everyday math operations that form the foundation of this course.
 
 Don’t worry if you don’t remember everything right away. These are **review** skills — and the best way to remember them is to do them. A lot.
 
@@ -1037,30 +1483,100 @@ Don’t worry if you don’t remember everything right away. These are **review*
 
 ### Function Evaluation
 
-> **How-To Evaluate a Function**  
-> - To evaluate, substitute the input into the function rule.  
-> - Example: If $f(x) = x^2 + 1$, then $f(3) = 3^2 + 1 = 10$.  
-> - You can also evaluate at expressions: $f(a + h)$ means plug $(a+h)$ everywhere $x$ appears.  
+ **How-To Evaluate a Function**  
+
+ - To evaluate, substitute the input into the function rule.  
+ - Example: If $f(x) = x^2 + 1$, then $f(3) = 3^2 + 1 = 10$.  
+ - You can also evaluate at expressions: $f(a + h)$ means plug $(a+h)$ everywhere $x$ appears.  
 
 ---
 
 **🟢 Level 1: Recall**  
-Let $f(x) = x^2 + 1$.  
+Let $f(x) = x^2 + 1$. 
+
 1. Find $f(3)$  
 2. Find $f(a + h)$  
 
+<details>
+<summary><strong>Click to reveal solution</strong></summary>
+
+1.  
+\[
+f(3) = 3^2 + 1 = 10
+\]
+
+2.  
+\[
+f(a+h) = (a+h)^2 + 1 = a^2 + 2ah + h^2 + 1
+\]
+
+</details>
+
+---
+
 **🟡 Level 2: Apply Substitution**  
 Let $f(x) = x^3 + 2(x + 7)^2 + \tfrac{1}{2x}$.  
+
 3. Evaluate $f(2)$  
 4. Evaluate $f(t)$  
 
+<details>
+<summary><strong>Click to reveal solution</strong></summary>
+
+3.  
+\[
+f(2) = 2^3 + 2(2+7)^2 + \frac{1}{2(2)}
+= 8 + 2(81) + \frac14
+= 170.25
+\]
+
+4.  
+\[
+f(t) = t^3 + 2(t+7)^2 + \frac{1}{2t}
+\]
+
+</details>
+
+---
+
 **🔴 Level 3: Mixed Practice**  
 Let $f(x) = \frac {1}{x} + e^x$.  
+
 5. Evaluate $f(a^2)$  
 6. Evaluate $f(a + h)$  
 7. Evaluate $f(x^2 + 2x)$  
 8. Evaluate $f(\triangle)$  
 9. Evaluate $f(\blacksquare)$  
+
+<details>
+<summary><strong>Click to reveal solution</strong></summary>
+
+5.  
+\[
+f(a^2) = \frac{1}{a^2} + e^{a^2}
+\]
+
+6.  
+\[
+f(a+h) = \frac{1}{a+h} + e^{a+h}
+\]
+
+7.  
+\[
+f(x^2+2x) = \frac{1}{x^2+2x} + e^{x^2+2x}
+\]
+
+8.  
+\[
+f(\triangle) = \frac{1}{\triangle} + e^{\triangle}
+\]
+
+9.  
+\[
+f(\blacksquare) = \frac{1}{\blacksquare} + e^{\blacksquare}
+\]
+
+</details>
 
 ---
 
@@ -1072,34 +1588,115 @@ Let $f(x) = \frac {1}{x} + e^x$.
 2. The population of a species is modeled by $P(t) = 1000 e^{0.02t}$.  
    Evaluate $P(10)$ to find the population after 10 years.  
 
+<details>
+<summary><strong>Click to reveal solution</strong></summary>
+
+1.  
+\[
+C(100) = 5(100) + 200 = 700
+\]
+
+2.  
+\[
+P(10) = 1000e^{0.2} \approx 1221
+\]
+
+</details>
+
 ---
 
 ### Function Composition & Inverses
 
-> **How-To**  
-> - Composition: $f(g(x))$ means plug the entire rule of $g(x)$ into $f$.  
-> - Example: if $f(x) = 2x+1$ and $g(x) = x^2$, then  
->   $f(g(x)) = 2(x^2) + 1$.  
-> - Inverse Functions: An inverse "undoes" the original function.  
->   By definition, $f^{-1}(f(x)) = x$ (for $x$ in the domain).  
->
-> **Tip:** To find an inverse, swap $x$ and $y$, then solve for $y$.  
+ **How-To**  
+
+ - Composition: $f(g(x))$ means plug the entire rule of $g(x)$ into $f$.  
+ - Example: if $f(x) = 2x+1$ and $g(x) = x^2$, then  
+   $f(g(x)) = 2(x^2) + 1$.  
+ - Inverse Functions: An inverse "undoes" the original function.  
+   By definition, $f^{-1}(f(x)) = x$ (for $x$ in the domain).  
+
+ **Tip:** To find an inverse, swap $x$ and $y$, then solve for $y$.  
 
 ---
 
 **🟢 Level 1: Recall**  
 Let $f(x) = 2x + 1$, $g(x) = x^2$.  
+
 1. Find $f(g(x))$  
 2. Find $g(f(x))$  
 
+<details>
+<summary><strong>Click to reveal solution</strong></summary>
+
+1.  
+\[
+f(g(x)) = f(x^2) = 2x^2 + 1
+\]
+
+2.  
+\[
+g(f(x)) = g(2x+1) = (2x+1)^2
+\]
+
+</details>
+
+---
+
 **🟡 Level 2: Inverses**  
+
 3. Find the inverse of $f(x) = 2x + 1$  
 4. Check: $f(f^{-1}(x)) =$ ?  
 
+<details>
+<summary><strong>Click to reveal solution</strong></summary>
+
+3.  
+Start with \(y = 2x+1\).  
+Swap variables: \(x = 2y+1\).  
+Solve for \(y\):
+\[
+y = \frac{x-1}{2}
+\]
+So \(f^{-1}(x) = \frac{x-1}{2}\).
+
+4.  
+\[
+f\!\left(\frac{x-1}{2}\right) = 2\left(\frac{x-1}{2}\right) + 1 = x
+\]
+
+</details>
+
+---
+
 **🔴 Level 3: Mixed Practice**  
+
 5. If $h(x) = 3x - 4$, find $h^{-1}(x)$.  
 6. Verify $h(h^{-1}(x)) = x$.  
 7. If $f(x) = \tfrac{1}{x}$, find $f(f(x))$.  
+
+<details>
+<summary><strong>Click to reveal solution</strong></summary>
+
+5.  
+Start with \(y = 3x-4\).  
+Swap variables: \(x = 3y-4\).  
+Solve:
+\[
+y = \frac{x+4}{3}
+\]
+So \(h^{-1}(x) = \frac{x+4}{3}\).
+
+6.  
+\[
+h\!\left(\frac{x+4}{3}\right) = 3\left(\frac{x+4}{3}\right)-4 = x
+\]
+
+7.  
+\[
+f(f(x)) = f\!\left(\frac{1}{x}\right) = x \quad (x \neq 0)
+\]
+
+</details>
 
 ---
 
@@ -1111,35 +1708,124 @@ Let $f(x) = 2x + 1$, $g(x) = x^2$.
 2. A bacteria population is modeled by $P(t) = 100e^{0.2t}$.  
    Find the inverse function $t(P)$ that gives the time when the population reaches a given size $P$.  
 
+<details>
+<summary><strong>Click to reveal solution</strong></summary>
+
+1.  
+Start with \(y = \tfrac{9}{5}C + 32\).  
+Swap variables and solve for \(C\):
+\[
+C = \frac{5}{9}(F - 32)
+\]
+
+2.  
+\[
+P = 100e^{0.2t}
+\Rightarrow \frac{P}{100} = e^{0.2t}
+\Rightarrow \ln\!\left(\frac{P}{100}\right) = 0.2t
+\Rightarrow t(P) = \frac{1}{0.2}\ln\!\left(\frac{P}{100}\right)
+\]
+
+</details>
+
 ---
+
 
 ### Exponents
 
-> **How-To Use Exponent Rules**  
-> - Definition: $b^m \cdot b^n = b^{m+n}$  
-> - Quotient Rule: $\tfrac{b^m}{b^n} = b^{m-n}$  
-> - Power Rule: $(b^m)^n = b^{mn}$  
-> - Zero Exponent: $b^0 = 1 \;\;(b \neq 0)$  
-> - Negative Exponent: $b^{-n} = \tfrac{1}{b^n}$  
->
-> **Domain Reminder:** Exponents are defined for all real exponents if $b>0$.  
+ **How-To Use Exponent Rules**  
+
+ - Definition: $b^m \cdot b^n = b^{m+n}$  
+ - Quotient Rule: $\tfrac{b^m}{b^n} = b^{m-n}$  
+ - Power Rule: $(b^m)^n = b^{mn}$  
+ - Zero Exponent: $b^0 = 1 \;\;(b \neq 0)$  
+ - Negative Exponent: $b^{-n} = \tfrac{1}{b^n}$  
+
+ **Domain Reminder:** Exponents are defined for all real exponents if $b>0$.  
 
 ---
 
 **🟢 Level 1: Recall**  
+
 1. $2^3 =$  
 2. $5^0 =$  
 3. $10^{-2} =$  
 
+<details>
+<summary><strong>Click to reveal solution</strong></summary>
+
+1.  
+\[
+2^3 = 8
+\]
+
+2.  
+\[
+5^0 = 1
+\]
+
+3.  
+\[
+10^{-2} = \frac{1}{10^2} = 0.01
+\]
+
+</details>
+
+---
+
 **🟡 Level 2: Apply Properties**  
+
 4. Simplify: $2^3 \cdot 2^4$  
 5. Simplify: $\tfrac{3^5}{3^2}$  
 6. Simplify: $(x^2)^3$  
 
+<details>
+<summary><strong>Click to reveal solution</strong></summary>
+
+4.  
+\[
+2^3 \cdot 2^4 = 2^{3+4} = 2^7 = 128
+\]
+
+5.  
+\[
+\frac{3^5}{3^2} = 3^{5-2} = 3^3 = 27
+\]
+
+6.  
+\[
+(x^2)^3 = x^{2\cdot 3} = x^6
+\]
+
+</details>
+
+---
+
 **🔴 Level 3: Solve Equations**  
+
 7. Solve for $x$: $2^x = 32$  
 8. Solve for $x$: $5^{2x} = 125$  
 9. Solve for $x$: $10^{x-1} = 0.01$  
+
+<details>
+<summary><strong>Click to reveal solution</strong></summary>
+
+7.  
+\[
+32 = 2^5 \Rightarrow x = 5
+\]
+
+8.  
+\[
+125 = 5^3 \Rightarrow 2x = 3 \Rightarrow x = \frac{3}{2}
+\]
+
+9.  
+\[
+0.01 = 10^{-2} \Rightarrow x - 1 = -2 \Rightarrow x = -1
+\]
+
+</details>
 
 ---
 
@@ -1151,35 +1837,133 @@ Let $f(x) = 2x + 1$, $g(x) = x^2$.
 2. The half-life of carbon-14 is 5730 years.  
    Write an exponential decay model for the amount of carbon-14, and determine what fraction remains after 10,000 years.  
 
+<details>
+<summary><strong>Click to reveal solution</strong></summary>
+
+1.  
+Doubling every 4 hours gives:
+\[
+P(t) = 500 \cdot 2^{t/4}
+\]
+After 12 hours:
+\[
+P(12) = 500 \cdot 2^3 = 4000
+\]
+
+2.  
+An exponential decay model using half-life is:
+\[
+A(t) = A_0\left(\tfrac12\right)^{t/5730}
+\]
+The fraction remaining after 10,000 years is:
+\[
+\left(\tfrac12\right)^{10000/5730} \approx 0.29
+\]
+
+</details>
+
 ---
 
 ### Logarithms
 
-> **How-To Use Log Properties**  
-> - Definition: $\log_b x = y \;\;\Longleftrightarrow\;\; b^y = x$  
-> - Product Rule: $\log(ab) = \log a + \log b$  
-> - Quotient Rule: $\log\!\left(\tfrac{a}{b}\right) = \log a - \log b$  
-> - Power Rule: $\log(a^b) = b \log a$  
-> - Natural Log: $\ln x$ is shorthand for $\log_e x$  
->
-> **Domain Reminder:** Logarithms are only defined for positive inputs ($x > 0$).  
+ **How-To Use Log Properties**  
+
+ - Definition: $\log_b x = y \;\;\Longleftrightarrow\;\; b^y = x$  
+ - Product Rule: $\log(ab) = \log a + \log b$  
+ - Quotient Rule: $\log\!\left(\tfrac{a}{b}\right) = \log a - \log b$  
+ - Power Rule: $\log(a^b) = b \log a$  
+ - Natural Log: $\ln x$ is shorthand for $\log_e x$  
+
+ **Domain Reminder:** Logarithms are only defined for positive inputs ($x > 0$).  
 
 ---
 
 **🟢 Level 1: Recall**  
+
 1. $\log_{10} 10 =$  
 2. $\ln e =$  
 3. $\log_{2} 1 =$  
 
+<details>
+<summary><strong>Click to reveal solution</strong></summary>
+
+1.  
+\[
+\log_{10} 10 = 1
+\]
+
+2.  
+\[
+\ln e = 1
+\]
+
+3.  
+\[
+\log_2 1 = 0
+\]
+
+</details>
+
+---
+
 **🟡 Level 2: Apply Properties**  
+
 4. Simplify: $\log(100) - \log(10)$  
 5. Expand: $\log(3x)$  
 
+<details>
+<summary><strong>Click to reveal solution</strong></summary>
+
+4.  
+\[
+\log(100) - \log(10) = \log\!\left(\frac{100}{10}\right) = \log(10) = 1
+\]
+
+5.  
+\[
+\log(3x) = \log 3 + \log x
+\]
+
+</details>
+
+---
+
 **🔴 Level 3: Solve Equations**  
+
 6. Solve for $k$: $y = \ln k$  
 7. Solve for $k$: $y = 10^{kt + 1}$  
 8. Isolate $k$: $y = \tfrac{15}{10^{kt + 1}}$  
 9. Solve for $k$: $y = Ae^{-kt} + 5$  
+
+<details>
+<summary><strong>Click to reveal solution</strong></summary>
+
+6.  
+\[
+k = e^y
+\]
+
+7.  
+\[
+\log y = kt + 1 \Rightarrow k = \frac{\log y - 1}{t}
+\]
+
+8.  
+\[
+\frac{15}{y} = 10^{kt+1}
+\Rightarrow \log\!\left(\frac{15}{y}\right) = kt + 1
+\Rightarrow k = \frac{\log(15/y) - 1}{t}
+\]
+
+9.  
+\[
+y - 5 = Ae^{-kt}
+\Rightarrow \frac{y-5}{A} = e^{-kt}
+\Rightarrow \ln\!\left(\frac{y-5}{A}\right) = -kt
+\Rightarrow k = -\frac{1}{t}\ln\!\left(\frac{y-5}{A}\right)
+\]
+
+</details>
 
 ---
 
@@ -1193,138 +1977,108 @@ Let $f(x) = 2x + 1$, $g(x) = x^2$.
    where $I$ is the sound intensity and $I_0$ is the reference intensity.  
    If a sound measures $L = 70$ dB, find the ratio $\tfrac{I}{I_0}$.  
 
----
+<details>
+<summary><strong>Click to reveal solution</strong></summary>
 
-### Factoring
+1.  
+Tripling means \(P(t) = 300\):
+\[
+300 = 100e^{0.05t}
+\Rightarrow 3 = e^{0.05t}
+\Rightarrow \ln 3 = 0.05t
+\Rightarrow t = \frac{\ln 3}{0.05}
+\]
 
-> **How-To Use Factoring Rules**  
-> - Factoring means rewriting an expression as a product of simpler terms.  
-> - Always check for **common factors** first.  
-> - Difference of Squares: $a^2 - b^2 = (a - b)(a + b)$  
-> - Perfect Square Trinomial: $a^2 + 2ab + b^2 = (a + b)^2$  
-> - Quadratic Trinomials: $ax^2 + bx + c$ can sometimes be factored into $(mx + n)(px + q)$  
+2.  
+\[
+70 = 10\log\!\left(\frac{I}{I_0}\right)
+\Rightarrow 7 = \log\!\left(\frac{I}{I_0}\right)
+\Rightarrow \frac{I}{I_0} = 10^7
+\]
 
----
-
-**🟢 Level 1: Recall**  
-1. Factor $y = x^2 - 4$  
-2. Factor $y = x^3 - 4x$  
-
-**🟡 Level 2: Apply Patterns**  
-3. Factor $y = x^2 + 4$  
-4. Factor $y = x^2 + 2$  
-5. Factor $y = 4x^2 + 12x + 9$  
-
-**🔴 Level 3: Mixed Practice**  
-6. Factor $y = 9x^2 - 16$  
-7. Factor $y = x^2 + 5x + 6$  
-8. Factor $y = 2x^2 - 8x$  
-
----
-
-**Applications**  
-
-1. The height of a ball is given by $h(t) = -5t^2 + 20t$.  
-   Factor the expression to find when the ball hits the ground.  
-
-2. The area of a rectangle is $A = x^2 + 5x + 6$.  
-   Factor the expression to find possible integer side lengths.  
-
----
-
-### Expansion
-
-> **How-To Use Expansion Rules**  
-> - Distributive Property: $a(b + c) = ab + ac$  
-> - Multiply binomials using **FOIL** (First, Outer, Inner, Last).  
-> - Perfect Square: $(x + a)^2 = x^2 + 2ax + a^2$  
-> - Binomial Cube: $(x + a)^3 = x^3 + 3x^2a + 3xa^2 + a^3$  
-
----
-
-**🟢 Level 1: Recall**  
-1. Expand $y = (x + 2)^2$  
-2. Expand $y = (x - 3)(x + 3)$  
-
-**🟡 Level 2: Apply Properties**  
-3. Expand $y = 2(x + 1)^2 + 3x^2$  
-4. Expand $y = (3x - 3)^3 + x^2 + 7$  
-
-**🔴 Level 3: Mixed Practice**  
-5. Expand $y = (\sqrt{x} + 1)^2 + 3x^2$  
-6. Expand $y = 2\left(\tfrac{1}{x} + x\right)^2 + 3x^2$  
-7. Expand $y = (2x + 5)(x - 4)$  
-
----
-
-**Applications**  
-
-1. The area of a square with side length $(x + 2)$ is $A = (x+2)^2$.  
-   Expand the expression to find a formula for the area.  
-
-2. The revenue from selling $(p+3)$ units at a price of $(2p+1)$ dollars each is $R = (p+3)(2p+1)$.  
-   Expand to find a quadratic expression for revenue in terms of $p$.  
-
----
-
-### Simplifying Expressions
-
-> **How-To Simplify Expressions**  
-> - Cancel common factors when possible.  
-> - Combine like terms.  
-> - Reduce complex fractions by multiplying/dividing carefully.  
-> - Rationalize denominators when needed.  
-
----
-
-**🟢 Level 1: Recall**  
-1. Simplify $\dfrac{x^2 - 9}{x - 3}$  
-2. Simplify $\dfrac{2x + 4}{x^2 + 2x}$  
-
-**🟡 Level 2: Apply Properties**  
-3. Simplify $\dfrac{3x}{\tfrac{x}{2}}$  
-4. Combine: $2x^2 + 3x - x^2 + 5$  
-
-**🔴 Level 3: Mixed Practice**  
-5. Simplify: $\dfrac{1}{\sqrt{x}} \cdot \sqrt{x^3}$  
-6. Simplify: $\dfrac{x^2y}{xy^2}$  
-7. Simplify: $\dfrac{x^2 - 4}{x^2 - 2x}$  
-
----
-
-**Applications**  
-
-1. The velocity of a particle is given by  
-   $v(t) = \dfrac{2t^2 - 8}{t - 2}$.  
-   Simplify the expression to find a reduced formula for velocity.  
-
-2. The efficiency of a machine is modeled by  
-   $E(x) = \dfrac{50x + 100}{x^2 + 2x}$.  
-   Simplify the expression to better understand how efficiency changes with $x$.  
+</details>
 
 ---
 
 ### Unit Conversions
 
-> **How-To Convert Units**  
-> - Write conversion factors as fractions, e.g. $1 \text{ km} = 1000 \text{ m} \;\;\Longrightarrow\;\; \tfrac{1 \text{ km}}{1000 \text{ m}}$ or $\tfrac{1000 \text{ m}}{1 \text{ km}}$.  
-> - Multiply by the fraction that cancels the unwanted unit.  
-> - Cancel units just like algebraic variables.  
+ **How-To Convert Units**  
+
+ - Write conversion factors as fractions, e.g. $1 \text{ km} = 1000 \text{ m} \;\;\Longrightarrow\;\; \tfrac{1 \text{ km}}{1000 \text{ m}}$ or $\tfrac{1000 \text{ m}}{1 \text{ km}}$.  
+ - Multiply by the fraction that cancels the unwanted unit.  
+ - Cancel units just like algebraic variables.  
 
 ---
 
 **🟢 Level 1: Recall**  
+
 1. Convert $5000 \text{ mm}$ to meters.  
 2. Convert $45 \text{ km/h}$ to m/s.  
 
+<details>
+<summary><strong>Click to reveal solution</strong></summary>
+
+1.  
+\[
+5000 \text{ mm} = 5000 \times \frac{1 \text{ m}}{1000 \text{ mm}} = 5 \text{ m}
+\]
+
+2.  
+\[
+45 \text{ km/h} = 45 \times \frac{1000 \text{ m}}{3600 \text{ s}} = 12.5 \text{ m/s}
+\]
+
+</details>
+
+---
+
 **🟡 Level 2: Apply Conversions**  
+
 3. Convert $2.5 \text{ days}$ to seconds.  
 4. Convert $0.2\%$ to ppm.  
 
+<details>
+<summary><strong>Click to reveal solution</strong></summary>
+
+3.  
+\[
+2.5 \text{ days} = 2.5 \times 24 \times 3600 = 216000 \text{ s}
+\]
+
+4.  
+\[
+0.2\% = 0.002 = 2000 \text{ ppm}
+\]
+
+</details>
+
+---
+
 **🔴 Level 3: Mixed Practice**  
+
 5. Convert $72 \text{ km/h}$ to miles per hour (use $1 \text{ mile} \approx 1.609 \text{ km}$).  
 6. Convert $1500 \text{ J}$ to kJ.  
 7. Convert $3.2 \text{ L}$ to mL.  
+
+<details>
+<summary><strong>Click to reveal solution</strong></summary>
+
+5.  
+\[
+72 \text{ km/h} = \frac{72}{1.609} \approx 44.8 \text{ mph}
+\]
+
+6.  
+\[
+1500 \text{ J} = 1.5 \text{ kJ}
+\]
+
+7.  
+\[
+3.2 \text{ L} = 3200 \text{ mL}
+\]
+
+</details>
 
 ---
 
@@ -1336,33 +2090,106 @@ Let $f(x) = 2x + 1$, $g(x) = x^2$.
 2. A pollutant concentration is reported as $0.004 \text{ g/L}$.  
    Express this in mg/L (parts per million, ppm).  
 
+<details>
+<summary><strong>Click to reveal solution</strong></summary>
+
+1.  
+\[
+27 \text{ m/s} = 27 \times 3.6 = 97.2 \text{ km/h}
+\]
+
+2.  
+\[
+0.004 \text{ g/L} = 4 \text{ mg/L} = 4 \text{ ppm}
+\]
+
+</details>
+
 ---
 
 ### Solving Equations
 
-> **How-To Solve Equations**  
-> - Use **inverse operations** step by step to isolate the variable.  
-> - For quadratics:  
->   - Try **factoring** if possible.  
->   - If not, use **completing the square** or the **quadratic formula**:  
->     \[
->     x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}
->     \]  
+ **How-To Solve Equations**  
+
+ - Use **inverse operations** step by step to isolate the variable.  
+ - For quadratics:  
+   - Try **factoring** if possible.  
+   - If not, use **completing the square** or the **quadratic formula**:  
+     \[
+     x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}
+     \]  
 
 ---
 
 **🟢 Level 1: Recall**  
+
 1. Solve: $2x + 5 = 11$  
 2. Solve: $\dfrac{x}{3} + 2 = 5$  
 
+<details>
+<summary><strong>Click to reveal solution</strong></summary>
+
+1.  
+\[
+2x = 6 \Rightarrow x = 3
+\]
+
+2.  
+\[
+\frac{x}{3} = 3 \Rightarrow x = 9
+\]
+
+</details>
+
+---
+
 **🟡 Level 2: Quadratics**  
+
 3. Solve: $x^2 - 4 = 0$  
 4. Solve: $x^2 + 2x - 8 = 0$  
 
+<details>
+<summary><strong>Click to reveal solution</strong></summary>
+
+3.  
+\[
+(x-2)(x+2)=0 \Rightarrow x=\pm2
+\]
+
+4.  
+\[
+(x+4)(x-2)=0 \Rightarrow x=-4,\;2
+\]
+
+</details>
+
+---
+
 **🔴 Level 3: Mixed Practice**  
+
 5. Solve: $\sqrt{x + 1} = 3$  
 6. Solve: $3x^2 = 27$  
 7. Solve: $(x - 2)(x + 5) = 0$  
+
+<details>
+<summary><strong>Click to reveal solution</strong></summary>
+
+5.  
+\[
+x+1=9 \Rightarrow x=8
+\]
+
+6.  
+\[
+x^2=9 \Rightarrow x=\pm3
+\]
+
+7.  
+\[
+x=2,\;-5
+\]
+
+</details>
 
 ---
 
@@ -1374,40 +2201,108 @@ Let $f(x) = 2x + 1$, $g(x) = x^2$.
 2. A ball is launched from the ground with height $h(t) = -5t^2 + 20t$.  
    Solve for $t$ when the ball hits the ground.  
 
+<details>
+<summary><strong>Click to reveal solution</strong></summary>
+
+1.  
+\[
+x^2+3x-40=0 \Rightarrow (x+8)(x-5)=0 \Rightarrow x=5
+\]
+
+2.  
+\[
+-5t(t-4)=0 \Rightarrow t=0,\;4
+\]
+
+</details>
+
 ---
 
 ### Rates & Units
 
-> **How-To Calculate Rates**  
-> - Average Rate of Change:  
->   \[
->   \text{Rate} = \frac{\text{change in output}}{\text{change in input}}
->   \]  
-> - Always **include units** (e.g., ppm/year, m/year, km/h).  
-> - For cumulative change: multiply the rate by the time span.  
+ **How-To Calculate Rates**  
+
+ - Average Rate of Change:  
+   \[
+   \text{Rate} = \frac{\text{change in output}}{\text{change in input}}
+   \]  
+ - Always **include units** (e.g., ppm/year, m/year, km/h).  
+ - For cumulative change: multiply the rate by the time span.  
 
 ---
 
 **🟢 Level 1: Recall**  
+
 1. CO₂ rises from 400 ppm to 420 ppm over 5 years.  
    What is the average rate of change?  
 
 2. A glacier retreats from 180 m to 150 m over 6 years.  
    What is the average rate of change?  
 
+<details>
+<summary><strong>Click to reveal solution</strong></summary>
+
+1.  
+\[
+\frac{20}{5} = 4 \text{ ppm/year}
+\]
+
+2.  
+\[
+\frac{-30}{6} = -5 \text{ m/year}
+\]
+
+</details>
+
+---
+
 **🟡 Level 2: Apply Units**  
+
 3. A stream flows 15 km in 3 hours.  
    What’s the average speed (in km/h)?  
 
 4. Precipitation increases by 0.8 mm/day for 10 days.  
    What is the total change in precipitation?  
 
+<details>
+<summary><strong>Click to reveal solution</strong></summary>
+
+3.  
+\[
+\frac{15}{3} = 5 \text{ km/h}
+\]
+
+4.  
+\[
+0.8 \times 10 = 8 \text{ mm}
+\]
+
+</details>
+
+---
+
 **🔴 Level 3: Mixed Practice**  
+
 5. A city’s population grows from 2.1 million to 2.5 million in 8 years.  
    What is the average annual growth rate (in people per year)?  
 
 6. A tank drains from 120 L to 30 L in 15 minutes.  
    What is the average drainage rate (in L/min)?  
+
+<details>
+<summary><strong>Click to reveal solution</strong></summary>
+
+5.  
+\[
+\frac{0.4\times10^6}{8} = 50{,}000 \text{ people/year}
+\]
+
+6.  
+\[
+\frac{-90}{15} = -6 \text{ L/min}
+\]
+
+</details>
 
 ---
 
@@ -1419,5 +2314,19 @@ Let $f(x) = 2x + 1$, $g(x) = x^2$.
 2. A car travels 240 km in 4 hours.  
    Find the average speed in km/h, then convert it to m/s.  
 
----
+<details>
+<summary><strong>Click to reveal solution</strong></summary>
 
+1.  
+\[
+\frac{12}{6} = 2 \text{ °C/hour}
+\]
+
+2.  
+\[
+60 \text{ km/h} = 16.7 \text{ m/s}
+\]
+
+</details>
+
+---

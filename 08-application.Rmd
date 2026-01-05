@@ -25,6 +25,9 @@ In environmental systems, extrema are rarely just mathematical curiosities. They
 
 Understanding these points helps scientists **predict**, **manage**, and **mitigate** changes in ecosystems.
 
+
+![A cartoon split into two contrasting halves under the title “Why Extremes Matter.” The left side shows a lush green landscape with a large leafy tree, a flowing river, and three white rabbits sitting on grass. A wooden sign labeled “Maximum” stands near the tree. The right side depicts a barren, cracked landscape with a dead tree, a wilted plant, and dark storm clouds overhead. A wooden sign labeled “Minimum” stands near the dead tree. The center of the image forms a curved transition between the two environments, illustrating ecological extremes. Text below explains that maxima can indicate carrying capacity or peak pollution, while minima can represent nutrient scarcity or drought intensity, emphasizing the importance of understanding these points in ecosystems](images/extrema.png)
+
 ---
 
 ### The Mathematical Lens
@@ -258,7 +261,8 @@ For instance:
 
 ---
 
-> **In summary:**  
+> **In summary:**
+
 > - **Local extrema** describe *regional or temporary* highs and lows.  
 > - **Global extrema** describe the *overall* highest or lowest points in a dataset or model.  
 > - On a **finite domain**, global extrema can occur **at the endpoints** as well as where \( f'(x) = 0 \).  
@@ -675,7 +679,7 @@ P(t) = -t^3 + 6t^2 - 9t + 20
 Apply the **power rule** to each term:
 
 | Term | Derivative |
-|------|-------------|
+|:----:|:-----------:|
 | \( -t^3 \) | \( -3t^2 \) |
 | \( 6t^2 \) | \( 12t \) |
 | \( -9t \) | \( -9 \) |
@@ -831,8 +835,6 @@ Mark the **critical points** on a number line. These divide the domain into thre
 - Interval B: \( (1, 3) \)  
 - Interval C: \( (3, \infty) \)
 
-```{r, echo=FALSE}
-# Placeholder for number line plot code
 
 ```{r, echo=FALSE}
 library(ggplot2)
@@ -856,7 +858,7 @@ ggplot() +
   annotate("text", x = 2, y = -0.07, label = "B", color = "forestgreen") +
   annotate("text", x = 4, y = -0.07, label = "C", color = "red") +
    coord_cartesian(ylim = c(-1, 1))+
-  theme_void()
+  theme_void()+ ylim(-0.3,0.3)
 
 ```
                  
@@ -1384,7 +1386,7 @@ In short: asymptotes describe the **long-term limits** and **critical boundaries
 
 ### Step-by-Step: How to Check for Asymptotes
 
-#### **1. Vertical Asymptotes**
+#### **1. Vertical Asymptotes** {-}
 
 Look for where the function is **undefined** (usually where the denominator = 0).  
 Then check the **limit** from both sides.
@@ -1402,7 +1404,7 @@ Then check the **limit** from both sides.
 
 ---
 
-#### **2. Horizontal Asymptotes**
+#### **2. Horizontal Asymptotes** {-}
 
 These describe the **end behavior** — what happens as \( x \to \infty \) or \( x \to -\infty \).
 
@@ -1430,7 +1432,7 @@ In these cases, **L’Hôpital’s Rule** allows us to use derivatives to evalua
 
 ---
 
-#### The Rule
+#### The Rule {-}
 
 If both the numerator and denominator approach **0** or **∞**,  
 then:
@@ -1443,7 +1445,7 @@ provided \( f \) and \( g \) are differentiable near \( a \) and the new limit e
 
 ---
 
-#### Step-by-Step
+#### Step-by-Step {-}
 
 1. **Check the form.** Confirm it’s \( 0/0 \) or \( ∞/∞ \).  
 2. **Differentiate numerator and denominator separately.**  
@@ -1451,7 +1453,7 @@ provided \( f \) and \( g \) are differentiable near \( a \) and the new limit e
 
 ---
 
-#### Example 1 — Exponential Decay
+#### Example 1 — Exponential Decay {-}
 
 \[
 \lim_{x \to \infty} \frac{x}{e^x}.
@@ -1468,7 +1470,7 @@ In context, this could describe a population or pollutant diminishing toward zer
 
 ---
 
-#### Example 2 — Sine Ratio
+#### Example 2 — Sine Ratio {-}
 
 \[
 \lim_{x \to 0} \frac{\sin x}{x}.
@@ -1484,7 +1486,7 @@ The ratio stabilizes to 1 — showing smooth near-zero behavior, not a blow-up.
 
 ---
 
-#### Example 3 — Environmental Ratio
+#### Example 3 — Environmental Ratio {-}
 
 \[
 \lim_{t \to \infty} \frac{e^{-0.1t}}{e^{-0.3t}}.
@@ -2115,15 +2117,16 @@ For each function,
 3. Use test points to fill in a **second derivative sign chart**.  
 4. Identify **concavity regions** and **inflection points**.
 
-| Function | Second Derivative |
-|-----------|------------------|
-| \( f(x) = x^3 - 3x \) | \( f''(x) = 6x \) |
-| \( f(x) = \frac{x^3}{3} - x \) | \( f''(x) = 2x \) |
-| \( f(x) = 0.2x^5 - x^3 \) | \( f''(x) = 4x^3 - 6x \) |
+| Function | 
+|:---------:|
+| \( f(x) = x^3 - 3x \) |
+| \( f(x) = \frac{x^3}{3} - x \) | 
+| \( f(x) = 0.2x^5 - x^3 \) | 
 
-> **Interpretation:**  
-> Where does each function “switch curvature”?  
-> How might that correspond to a transition or tipping point in an environmental process (e.g., when growth stops accelerating)?
+**Interpretation:**  
+
+- Where does each function “switch curvature”?  
+- How might that correspond to a transition or tipping point in an environmental process (e.g., when growth stops accelerating)?
 
 ---
 

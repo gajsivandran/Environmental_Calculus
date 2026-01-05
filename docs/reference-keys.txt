@@ -1,4 +1,4 @@
-fig:lapse-rate-plot
+tab:unnamed-chunk-1
 fig:apply-the-function-to-compute-temperature-405
 fig:temp-day-curve
 tab:derivative-terms-table2
@@ -7,7 +7,7 @@ fig:blank-axes
 fig:cubic-example-plot
 fig:function-type-blank-axes-clean2
 tab:derivative-terms-table
-why-calculus-292
+why-calculus
 why-this-book
 what-is-calculus
 how-this-book-works
@@ -25,7 +25,6 @@ work-step-by-step
 reflect-and-interpret
 growth-mindset
 how-we-communicate-relationships
-functions-and-their-representations
 understanding-what-fx-means
 functions-dont-have-to-be-named-f
 why-meaningful-function-names-matter
@@ -58,9 +57,6 @@ function-evaluation
 function-composition-inverses
 exponents
 logarithms
-factoring
-expansion
-simplifying-expressions
 unit-conversions
 solving-equations
 rates-units
@@ -276,14 +272,7 @@ checking-asymptotes-interpreting-limits-and-long-term-behavior
 why-asymptotes-matter-in-environmental-systems
 the-two-types-of-asymptotes
 step-by-step-how-to-check-for-asymptotes
-vertical-asymptotes
-horizontal-asymptotes
 using-lhôpitals-rule-to-evaluate-asymptotic-limits
-the-rule
-step-by-step
-example-1-exponential-decay
-example-2-sine-ratio
-example-3-environmental-ratio
 key-takeaways-2
 quick-practice-asymptotes-limits
 reflection
@@ -390,7 +379,7 @@ growth-mindset-1
 how-we-communicate-relationships-1
 your-turn
 discussion-prompt
-functions-and-their-representations-1
+functions-and-their-representations
 understanding-fx
 meaningful-names
 multiple-inputs
@@ -421,10 +410,10 @@ build-your-own-word-problem
 skills-drills-1
 exponents-1
 logarithms-1
-factoring-1
-expansion-1
+factoring
+expansion
 function-evaluation-1
-simplifying-expressions-1
+simplifying-expressions
 unit-conversions-1
 solving-equations-1
 function-composition-inverses-1

@@ -12,7 +12,7 @@ github-repo: rstudio/bookdown-demo
 description: "A textbook companion to the Univeristy of Washington QSci 291 class"
 ---
 
-# Why Calculus? 292
+# Why Calculus?
 
 Welcome to *Calculus for Environmental Science*. 🌱  
 
