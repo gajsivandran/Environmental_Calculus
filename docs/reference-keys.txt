@@ -357,8 +357,8 @@ assessments
 acedemic-integrity
 late-assessment-missed-assessment-policy
 test-retakes-policy
-office-hours
 class-notes
+office-hours
 questions
 paper-planes
 rate-of-change---a-first-look
