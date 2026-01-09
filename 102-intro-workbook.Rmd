@@ -1270,7 +1270,7 @@ Let \(f(x) = 3x - 2\), \(g(x) = \sqrt{x}\).
 
 ---
 
-## Answer Key
+### Answer Key
 
 <details open>
 <summary><strong>Click to Unlock Solutions</strong></summary>
