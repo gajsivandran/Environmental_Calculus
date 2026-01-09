@@ -939,4 +939,459 @@ Find the average rate of change in ppm/year.
 :::
 
 
+\newpage
+
+## Skills Drills - In- Class
+
+### Getting Back in the Groove
+
+You’ve seen all of these operations before — expanding algebraic expressions, solving for variables, simplifying equations — but it’s totally normal if some of those steps feel rusty right now.
+
+This section gives you a **high-repetition practice zone** to help wake up your math brain. Think of this like stretching before a run: each drill refreshes a skill you’ll use constantly in calculus.
+
+**Goal:** Get faster and more confident with everyday math operations that form the foundation of this course.
+
+Don’t worry if you don’t remember everything right away. These are **review** skills — and the best way to remember them is to do them. A lot.
+
+---
+
+### Function Evaluation
+
+**How-To Evaluate a Function**
+
+- To evaluate, substitute the input into the function rule.  
+- Example: If \(f(x) = x^2 + 1\), then \(f(3) = 3^2 + 1 = 10\).  
+- You can also evaluate at expressions: \(f(a + h)\) means plug \((a+h)\) everywhere \(x\) appears.
+
+---
+
+**🟢 Level 1: Recall**  
+Let \(f(x) = 2x^2 - 3\).
+
+1. Find \(f(4)\)  
+2. Find \(f(a + h)\)
+
+---
+
+**🟡 Level 2: Apply Substitution**  
+Let \(f(x) = x^3 + 3(x - 2)^2 + \tfrac{1}{4x}\).
+
+3. Evaluate \(f(2)\)  
+4. Evaluate \(f(t)\)
+
+---
+
+**🔴 Level 3: Mixed Practice**  
+Let \(f(x) = \dfrac{2}{x} + e^{2x}\).
+
+5. Evaluate \(f(a^2)\)  
+6. Evaluate \(f(a + h)\)  
+7. Evaluate \(f(x^2 - x)\)  
+8. Evaluate \(f(\triangle)\)  
+9. Evaluate \(f(\blacksquare)\)
+
+---
+
+**Applications**
+
+1. The total carbon stored in a plot is modeled by \(C(x) = 12x + 150\).  
+   Find the carbon stored when \(x = 25\).
+
+2. The nitrate concentration (mg/L) in a river is modeled by \(N(t) = 8e^{-0.1t}\).  
+   Evaluate \(N(5)\).
+
+---
+
+### Function Composition & Inverses
+
+**How-To**
+
+- Composition: \(f(g(x))\) means plug the entire rule of \(g(x)\) into \(f\).  
+- Example: if \(f(x) = 2x+1\) and \(g(x) = x^2\), then \(f(g(x)) = 2(x^2) + 1\).  
+- Inverse Functions: An inverse "undoes" the original function.  
+  By definition, \(f^{-1}(f(x)) = x\) (for \(x\) in the domain).
+
+**Tip:** To find an inverse, swap \(x\) and \(y\), then solve for \(y\).
+
+---
+
+**🟢 Level 1: Recall**  
+Let \(f(x) = 3x - 2\), \(g(x) = \sqrt{x}\).
+
+1. Find \(f(g(x))\)  
+2. Find \(g(f(x))\)
+
+---
+
+**🟡 Level 2: Inverses**
+
+3. Find the inverse of \(f(x) = 3x - 2\)  
+4. Check: \(f(f^{-1}(x)) =\) ?
+
+---
+
+**🔴 Level 3: Mixed Practice**
+
+5. If \(h(x) = \dfrac{x-5}{2}\), find \(h^{-1}(x)\).  
+6. Verify \(h(h^{-1}(x)) = x\).  
+7. If \(f(x) = \dfrac{1}{x}\), find \(f(f(f(x)))\).
+
+---
+
+**Applications**
+
+1. A salinity conversion is given by \(S(P) = 0.8P + 2\).  
+   Find the inverse function \(P(S)\).
+
+2. A bacterial population is modeled by \(P(t) = 250e^{0.3t}\).  
+   Find the inverse function \(t(P)\) that gives time as a function of population \(P\).
+
+---
+
+### Exponents
+
+**How-To Use Exponent Rules**
+
+- Definition: \(b^m \cdot b^n = b^{m+n}\)  
+- Quotient Rule: \(\tfrac{b^m}{b^n} = b^{m-n}\)  
+- Power Rule: \((b^m)^n = b^{mn}\)  
+- Zero Exponent: \(b^0 = 1 \;\;(b \neq 0)\)  
+- Negative Exponent: \(b^{-n} = \tfrac{1}{b^n}\)
+
+**Domain Reminder:** Exponents are defined for all real exponents if \(b>0\).
+
+---
+
+**🟢 Level 1: Recall**
+
+1. \(3^2 =\)  
+2. \(7^0 =\)  
+3. \(10^{-3} =\)
+
+---
+
+**🟡 Level 2: Apply Properties**
+
+4. Simplify: \(5^2 \cdot 5^4\)  
+5. Simplify: \(\tfrac{2^7}{2^3}\)  
+6. Simplify: \((x^3)^2\)
+
+---
+
+**🔴 Level 3: Solve Equations**
+
+7. Solve for \(x\): \(3^x = 81\)  
+8. Solve for \(x\): \(2^{3x} = 32\)  
+9. Solve for \(x\): \(10^{x+2} = 1000\)
+
+---
+
+**Applications**
+
+1. A bacteria culture triples every 6 hours.  
+   If the initial population is 200, write an exponential model and find the population after 18 hours.
+
+2. A chemical has a half-life of 10 days.  
+   Write an exponential decay model for the fraction remaining and determine the fraction remaining after 25 days.
+
+---
+
+### Logarithms
+
+**How-To Use Log Properties**
+
+- Definition: \(\log_b x = y \;\Longleftrightarrow\; b^y = x\)  
+- Product Rule: \(\log(ab) = \log a + \log b\)  
+- Quotient Rule: \(\log\!\left(\tfrac{a}{b}\right) = \log a - \log b\)  
+- Power Rule: \(\log(a^b) = b \log a\)  
+- Natural Log: \(\ln x\) is shorthand for \(\log_e x\)
+
+**Domain Reminder:** Logarithms are only defined for positive inputs (\(x > 0\)).
+
+---
+
+**🟢 Level 1: Recall**
+
+1. \(\log_{10} 100 =\)  
+2. \(\ln(1) =\)  
+3. \(\log_{5} 5 =\)
+
+---
+
+**🟡 Level 2: Apply Properties**
+
+4. Simplify: \(\log(1000) - \log(10)\)  
+5. Expand: \(\ln(4x^2)\)
+
+---
+
+**🔴 Level 3: Solve / Isolate**
+
+6. Solve for \(k\): \(y = \ln(k)\)  
+7. Solve for \(k\): \(y = 10^{kt}\)  
+8. Isolate \(k\): \(y = \dfrac{20}{10^{kt}}\)  
+9. Solve for \(k\): \(y = Ae^{-kt}\)
+
+---
+
+**Applications**
+
+1. A population grows according to \(P(t) = 500 e^{0.04t}\).  
+   How long will it take for the population to **double**?
+
+2. Sound level is \(L = 10\log\!\left(\tfrac{I}{I_0}\right)\).  
+   If \(L = 50\) dB, find the ratio \(\tfrac{I}{I_0}\).
+
+---
+
+### Unit Conversions
+
+**How-To Convert Units**
+
+- Write conversion factors as fractions, e.g. \(1 \text{ km} = 1000 \text{ m}\Rightarrow \tfrac{1 \text{ km}}{1000 \text{ m}}\) or \(\tfrac{1000 \text{ m}}{1 \text{ km}}\).  
+- Multiply by the fraction that cancels the unwanted unit.  
+- Cancel units just like algebraic variables.
+
+---
+
+**🟢 Level 1: Recall**
+
+1. Convert \(7500 \text{ mm}\) to meters.  
+2. Convert \(36 \text{ km/h}\) to m/s.
+
+---
+
+**🟡 Level 2: Apply Conversions**
+
+3. Convert \(1.5 \text{ days}\) to seconds.  
+4. Convert \(0.05\%\) to ppm.
+
+---
+
+**🔴 Level 3: Mixed Practice**
+
+5. Convert \(96 \text{ km/h}\) to miles per hour (use \(1 \text{ mile} \approx 1.609 \text{ km}\)).  
+6. Convert \(2500 \text{ J}\) to kJ.  
+7. Convert \(1.8 \text{ L}\) to mL.
+
+---
+
+**Applications**
+
+1. A runner moves at \(5.5 \text{ m/s}\). Convert this speed to km/h.  
+2. A pollutant concentration is \(0.012 \text{ g/L}\). Express this in mg/L (ppm).
+
+---
+
+### Solving Equations
+
+**How-To Solve Equations**
+
+- Use **inverse operations** step by step to isolate the variable.  
+- For quadratics:  
+  - Try **factoring** if possible.  
+  - If not, use completing the square or the quadratic formula:
+    \[
+    x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}
+    \]
+
+---
+
+**🟢 Level 1: Recall**
+
+1. Solve: \(3x - 7 = 11\)  
+2. Solve: \(\dfrac{x}{4} - 1 = 6\)
+
+---
+
+**🟡 Level 2: Quadratics**
+
+3. Solve: \(x^2 - 9 = 0\)  
+4. Solve: \(x^2 - 5x - 24 = 0\)
+
+---
+
+**🔴 Level 3: Mixed Practice**
+
+5. Solve: \(\sqrt{x - 2} = 4\)  
+6. Solve: \(4x^2 = 64\)  
+7. Solve: \((x + 3)(x - 7) = 0\)
+
+---
+
+**Applications**
+
+1. The area of a rectangle is \(A = x(x+6)\). If \(A = 72\), solve for \(x\).  
+2. A projectile’s height is \(h(t) = -4t^2 + 16t\). Solve for \(t\) when it hits the ground.
+
+---
+
+### Rates & Units
+
+**How-To Calculate Rates**
+
+- Average Rate of Change:
+  \[
+  \text{Rate} = \frac{\text{change in output}}{\text{change in input}}
+  \]
+- Always **include units** (e.g., ppm/year, m/year, km/h).  
+- For cumulative change: multiply the rate by the time span.
+
+---
+
+**🟢 Level 1: Recall**
+
+1. CO\(_2\) rises from 410 ppm to 425 ppm over 3 years. What is the average rate of change?  
+2. A shoreline retreats from 92 m to 80 m over 4 years. What is the average rate of change?
+
+---
+
+**🟡 Level 2: Apply Units**
+
+3. A kayak travels 12 km in 2.5 hours. What’s the average speed (km/h)?  
+4. Sea level rises at 3.2 mm/year for 15 years. What is the total rise?
+
+---
+
+**🔴 Level 3: Mixed Practice**
+
+5. A city grows from 1.8 million to 2.0 million people in 5 years. What is the average growth rate (people/year)?  
+6. A tank fills from 40 L to 130 L in 18 minutes. What is the average filling rate (L/min)?
+
+---
+
+**Applications**
+
+1. Air temperature increases from \(8^\circ\text{C}\) at 6am to \(20^\circ\text{C}\) at noon.  
+   Find the average rate of change (°C per hour).
+
+2. A research boat travels 150 km in 3 hours.  
+   Find the average speed in km/h, then convert to m/s.
+
+---
+
+## Answer Key
+
+<details open>
+<summary><strong>Click to Unlock Solutions</strong></summary>
+
+<div id="sol_set1" hidden markdown="1" style="margin-top:0.75rem;">
+
+
+### Function Evaluation
+1. \(29\)  
+2. \(2(a+h)^2 - 3 = 2a^2 + 4ah + 2h^2 - 3\)  
+3. \(8 + 3(0)^2 + \tfrac{1}{8} = \tfrac{65}{8}\)  
+4. \(t^3 + 3(t-2)^2 + \tfrac{1}{4t}\)  
+5. \(\dfrac{2}{a^2} + e^{2a^2}\)  
+6. \(\dfrac{2}{a+h} + e^{2(a+h)}\)  
+7. \(\dfrac{2}{x^2-x} + e^{2(x^2-x)}\)  
+8. \(\dfrac{2}{\triangle} + e^{2\triangle}\)  
+9. \(\dfrac{2}{\blacksquare} + e^{2\blacksquare}\)  
+App 1. \(C(25)=450\)  
+App 2. \(N(5)=8e^{-0.5}\)
+
+### Function Composition & Inverses
+1. \(f(g(x)) = 3\sqrt{x} - 2\)  
+2. \(g(f(x)) = \sqrt{3x-2}\)  
+3. \(f^{-1}(x)=\dfrac{x+2}{3}\)  
+4. \(x\)  
+5. \(h^{-1}(x)=2x+5\)  
+6. \(h(h^{-1}(x))=x\)  
+7. \(f(f(f(x)))=\dfrac{1}{x}\) (for \(x\neq 0\))  
+App 1. \(P(S)=\dfrac{S-2}{0.8}=\dfrac{5}{4}(S-2)\)  
+App 2. \(t(P)=\dfrac{1}{0.3}\ln\!\left(\dfrac{P}{250}\right)\)
+
+### Exponents
+1. \(9\)  
+2. \(1\)  
+3. \(0.001\)  
+4. \(5^6\)  
+5. \(2^4=16\)  
+6. \(x^6\)  
+7. \(x=4\)  
+8. \(x=\dfrac{5}{3}\)  
+9. \(x=1\)  
+App 1. \(P(t)=200\cdot 3^{t/6}\), \(P(18)=200\cdot 3^3=5400\)  
+App 2. \(A(t)=\left(\tfrac12\right)^{t/10}\), fraction at 25 days \(=\left(\tfrac12\right)^{2.5}\)
+
+### Logarithms
+1. \(2\)  
+2. \(0\)  
+3. \(1\)  
+4. \(\log(100)=2\)  
+5. \(\ln 4 + 2\ln x\)  
+6. \(k=e^{y}\)  
+7. \(k=\dfrac{\log y}{t}\)  
+8. \(k=\dfrac{\log(20/y)}{t}\)  
+9. \(k=-\dfrac{1}{t}\ln\!\left(\dfrac{y}{A}\right)\)  
+App 1. \(t=\dfrac{\ln 2}{0.04}\)  
+App 2. \(\dfrac{I}{I_0}=10^{5}\)
+
+### Unit Conversions
+1. \(7.5\ \text{m}\)  
+2. \(10\ \text{m/s}\)  
+3. \(129{,}600\ \text{s}\)  
+4. \(500\ \text{ppm}\)  
+5. \(\dfrac{96}{1.609}\approx 59.7\ \text{mph}\)  
+6. \(2.5\ \text{kJ}\)  
+7. \(1800\ \text{mL}\)  
+App 1. \(5.5\times 3.6=19.8\ \text{km/h}\)  
+App 2. \(0.012\ \text{g/L}=12\ \text{mg/L}=12\ \text{ppm}\)
+
+### Solving Equations
+1. \(x=6\)  
+2. \(x=28\)  
+3. \(x=\pm 3\)  
+4. \(x=8,\ -3\)  
+5. \(x=18\)  
+6. \(x=\pm 4\)  
+7. \(x=-3,\ 7\)  
+App 1. \(x=6\) (reject \(x=-12\) if using a physical length interpretation)  
+App 2. \(t=0,\ 4\)
+
+### Rates & Units
+1. \(5\ \text{ppm/year}\)  
+2. \(-3\ \text{m/year}\)  
+3. \(4.8\ \text{km/h}\)  
+4. \(48\ \text{mm}\)  
+5. \(40{,}000\ \text{people/year}\)  
+6. \(5\ \text{L/min}\)  
+App 1. \(\dfrac{20-8}{6}=2\ ^\circ\text{C/hr}\)  
+App 2. \(50\ \text{km/h}\), which is \(\dfrac{50\,000}{3600}\approx 13.9\ \text{m/s}\)
+
+</div>
+
+<form onsubmit="unlock_set1(); return false;" id="gate_set1" style="margin-top:0.75rem;">
+  <input type="password" id="pwd_set1" placeholder="Enter password" aria-label="Answer key password">
+  <button type="submit">Unlock</button>
+  <span id="msg_set1" style="margin-left:0.5rem;" aria-live="polite"></span>
+</form>
+
+<script>
+function unlock_set1() {
+  var input = document.getElementById('pwd_set1');
+  var msg   = document.getElementById('msg_set1');
+  var sol   = document.getElementById('sol_set1');
+  var gate  = document.getElementById('gate_set1');
+  var pw    = (input.value || '').trim();
+  var det   = gate.closest('details'); if (det) det.open = true;
+
+  if (pw === 'dockers') {
+    sol.hidden = false;
+    gate.hidden = true;
+    input.value = '';
+    msg.textContent = '';
+  } else {
+    msg.textContent = 'Oi! Stop guessing :), if you are stuck ask a TA ';
+    input.value = '';
+    input.focus();
+  }
+}
+</script>
+
+<noscript>
+<p><em>Note:</em> JavaScript is required to unlock solutions.</p>
+</noscript>
+</details>
 
