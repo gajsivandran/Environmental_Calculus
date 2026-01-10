@@ -428,13 +428,6 @@ unit-conversions-2
 solving-equations-2
 rates-units-2
 answer-key
-function-evaluation-3
-function-composition-inverses-3
-exponents-3
-logarithms-3
-unit-conversions-3
-solving-equations-3
-rates-units-3
 introduction-to-derivatives-workbook
 learning-objectives-quick-self-check
 understanding-the-speed-of-change-1

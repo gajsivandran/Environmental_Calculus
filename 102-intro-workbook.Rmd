@@ -1272,13 +1272,10 @@ Let \(f(x) = 3x - 2\), \(g(x) = \sqrt{x}\).
 
 ### Answer Key
 
-<details open>
-<summary><strong>Click to Unlock Solutions</strong></summary>
+<details>
+<summary><strong>Click to reveal solution</strong></summary>
 
-<div id="sol_set1" hidden markdown="1" style="margin-top:0.75rem;">
-
-
-### Function Evaluation
+**Function Evaluation**
 1. \(29\)  
 2. \(2(a+h)^2 - 3 = 2a^2 + 4ah + 2h^2 - 3\)  
 3. \(8 + 3(0)^2 + \tfrac{1}{8} = \tfrac{65}{8}\)  
@@ -1291,7 +1288,7 @@ Let \(f(x) = 3x - 2\), \(g(x) = \sqrt{x}\).
 App 1. \(C(25)=450\)  
 App 2. \(N(5)=8e^{-0.5}\)
 
-### Function Composition & Inverses
+**Function Composition & Inverses**
 1. \(f(g(x)) = 3\sqrt{x} - 2\)  
 2. \(g(f(x)) = \sqrt{3x-2}\)  
 3. \(f^{-1}(x)=\dfrac{x+2}{3}\)  
@@ -1302,7 +1299,7 @@ App 2. \(N(5)=8e^{-0.5}\)
 App 1. \(P(S)=\dfrac{S-2}{0.8}=\dfrac{5}{4}(S-2)\)  
 App 2. \(t(P)=\dfrac{1}{0.3}\ln\!\left(\dfrac{P}{250}\right)\)
 
-### Exponents
+**Exponents**
 1. \(9\)  
 2. \(1\)  
 3. \(0.001\)  
@@ -1315,7 +1312,7 @@ App 2. \(t(P)=\dfrac{1}{0.3}\ln\!\left(\dfrac{P}{250}\right)\)
 App 1. \(P(t)=200\cdot 3^{t/6}\), \(P(18)=200\cdot 3^3=5400\)  
 App 2. \(A(t)=\left(\tfrac12\right)^{t/10}\), fraction at 25 days \(=\left(\tfrac12\right)^{2.5}\)
 
-### Logarithms
+**Logarithms**
 1. \(2\)  
 2. \(0\)  
 3. \(1\)  
@@ -1328,7 +1325,7 @@ App 2. \(A(t)=\left(\tfrac12\right)^{t/10}\), fraction at 25 days \(=\left(\tfra
 App 1. \(t=\dfrac{\ln 2}{0.04}\)  
 App 2. \(\dfrac{I}{I_0}=10^{5}\)
 
-### Unit Conversions
+**Unit Conversions**
 1. \(7.5\ \text{m}\)  
 2. \(10\ \text{m/s}\)  
 3. \(129{,}600\ \text{s}\)  
@@ -1339,7 +1336,7 @@ App 2. \(\dfrac{I}{I_0}=10^{5}\)
 App 1. \(5.5\times 3.6=19.8\ \text{km/h}\)  
 App 2. \(0.012\ \text{g/L}=12\ \text{mg/L}=12\ \text{ppm}\)
 
-### Solving Equations
+**Solving Equations**
 1. \(x=6\)  
 2. \(x=28\)  
 3. \(x=\pm 3\)  
@@ -1350,7 +1347,7 @@ App 2. \(0.012\ \text{g/L}=12\ \text{mg/L}=12\ \text{ppm}\)
 App 1. \(x=6\) (reject \(x=-12\) if using a physical length interpretation)  
 App 2. \(t=0,\ 4\)
 
-### Rates & Units
+**Rates & Units**
 1. \(5\ \text{ppm/year}\)  
 2. \(-3\ \text{m/year}\)  
 3. \(4.8\ \text{km/h}\)  
@@ -1360,38 +1357,5 @@ App 2. \(t=0,\ 4\)
 App 1. \(\dfrac{20-8}{6}=2\ ^\circ\text{C/hr}\)  
 App 2. \(50\ \text{km/h}\), which is \(\dfrac{50\,000}{3600}\approx 13.9\ \text{m/s}\)
 
-</div>
-
-<form onsubmit="unlock_set1(); return false;" id="gate_set1" style="margin-top:0.75rem;">
-  <input type="password" id="pwd_set1" placeholder="Enter password" aria-label="Answer key password">
-  <button type="submit">Unlock</button>
-  <span id="msg_set1" style="margin-left:0.5rem;" aria-live="polite"></span>
-</form>
-
-<script>
-function unlock_set1() {
-  var input = document.getElementById('pwd_set1');
-  var msg   = document.getElementById('msg_set1');
-  var sol   = document.getElementById('sol_set1');
-  var gate  = document.getElementById('gate_set1');
-  var pw    = (input.value || '').trim();
-  var det   = gate.closest('details'); if (det) det.open = true;
-
-  if (pw === 'dockers') {
-    sol.hidden = false;
-    gate.hidden = true;
-    input.value = '';
-    msg.textContent = '';
-  } else {
-    msg.textContent = 'Oi! Stop guessing :), if you are stuck ask a TA ';
-    input.value = '';
-    input.focus();
-  }
-}
-</script>
-
-<noscript>
-<p><em>Note:</em> JavaScript is required to unlock solutions.</p>
-</noscript>
 </details>
 
