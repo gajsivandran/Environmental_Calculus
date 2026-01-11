@@ -256,65 +256,7 @@ We’ve seen examples where snapshots (a single measurement) and speed (how fast
 
 ---
 
-### Spot the Derivative in Disguise
-
-::: promptbox
-**Activity (Pairs or Small Groups):**  
-Below are phrases from different fields. Circle or underline the ones that represent a rate of change — in other words, a derivative in disguise.  
-
-- A glacier loses 2 km² of area per year  
-- Dissolved oxygen drops by 1 mg/L per meter of depth  
-- Tree canopy cover increases by 5% per kilometer toward the city center  
-- The tide is rising at 5 cm per hour  
-- Soil carbon decreases by 0.3 g per kilogram of soil nitrogen  
-- Ocean salinity is 34 parts per million  
-- Ocean salinity increases by 0.2 ppt per 100 km toward the equator  
-- CO₂ levels are increasing by 2.5 ppm per year  
-- A lake is 12°C in July  
-- Mountain snowpack decreases by 10 cm per 100 m of elevation gain  
-- The pH of a stream is 6.5  
-- The pH of a stream drops by 0.1 units per kilometer downstream of a mine  
-- Forest biomass is 400 tons of carbon per hectare  
-- Forest biomass has been increasing by 3 tons per hectare per year  
-- Wind speed increases by 0.5 m/s per 10 m of height  
-- Annual rainfall totals 1200 mm  
-- Rainfall intensity rises by 2 mm per minute during a storm  
-- Nitrogen leaching is 4 kg/ha  
-- Nitrogen leaching rises by 0.1 kg per mm of irrigation applied  
-
----
-
-*Discuss:*  
-- Which are true derivatives?  
-- Which are just static descriptions or ratios?  
-- How can you tell the difference?  
-
-**Notes:**  
-<br><br><br><br><br><br>
-:::
-
----
-
-### Tell the Story of the Math
-::: promptbox
-**Activity (Whole Class):**  
-Consider the formula:  
-
-\[
-\frac{\Delta y}{\Delta x}
-\]
-
-- What do the symbols mean in plain language?  
-- How does this formula connect to “rise over run” from algebra?  
-- How could you explain this to a high school student using a real-world environmental example?  
-
-**Notes:**  
-<br><br><br><br><br><br>
-:::
-
----
-
-### Reflection
+sur### Reflection
 ::: promptbox
 **Prompt:**  
 Complete this thought:  
