@@ -442,6 +442,7 @@ derivative-notation-speaking-the-language-of-change-1
 common-derivative-notations-1
 the-derivative-as-an-operator-1
 snapshots-vs-speed-of-change
+reflection-2
 average-rate-of-change-1
 practice-secant-slope-on-a-graph
 practice-environmental-table
@@ -551,7 +552,7 @@ practice-problems-exponential-and-logarithmic-derivatives
 reading-math-self-check
 exponential-and-logarithmic-rules-general-form
 how-to-use-this-section
-reflection-2
+reflection-3
 derivative-rule-practice
 activity-reading-math-as-instructions-the-product-rule
 step-1-read-the-expression-aloud-4
