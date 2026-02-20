@@ -1,4 +1,4 @@
-tab:unnamed-chunk-1
+tab:unnamed-chunk-12
 fig:apply-the-function-to-compute-temperature-405
 fig:temp-day-curve
 tab:derivative-terms-table2
@@ -610,5 +610,6 @@ optimization-workbook
 what-is-optimization
 key-ideas
 why-it-matters-in-environmental-sciences
+optimization-around-us-under-us
 qualitative-optimizating
 optimization-case-studies

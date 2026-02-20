@@ -40,6 +40,27 @@ Optimization helps us answer questions like:
 In short, optimization allows us to make informed, mathematically justified decisions in complex environmental systems.
 
 
+## Optimization Around Us (under us)
+
+### Plants {-}
+
+This is an image of different rooting profiles of Prairie Plants
+
+What might these plants be optimizing?
+
+![root profile of plants](images/roots.jpg)
+
+### Structures {-}
+
+What do you notice about these structures?
+![historical housing structures](images/structures.png)
+
+### What is the Opimtal shape {-}
+Before we can answer this - we need to ask the question what are we optimizing for?
+
+
+
+
 ## Qualitative Optimizating
 
 ::: promptbox
