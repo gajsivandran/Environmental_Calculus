@@ -1,4 +1,4 @@
-tab:unnamed-chunk-12
+tab:unnamed-chunk-14
 fig:apply-the-function-to-compute-temperature-405
 fig:temp-day-curve
 tab:derivative-terms-table2
@@ -343,7 +343,6 @@ step-1-differentiate-both-sides
 step-2-solve-for-dfracdydx
 step-1-differentiate-both-sides-1
 step-2-factor-out-fracdydx
-conclusion
 why-calculus-workbook
 teaching-team-introductions
 gaj-sivandran

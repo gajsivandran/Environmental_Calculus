@@ -2494,7 +2494,7 @@ the sign of \(h_1'(x)\) is determined by \(-(x-2)\).
 - For \(x < 2\): \(x-2<0\) ⇒ numerator \(>0\) ⇒ **increasing**
 - For \(x > 2\): \(x-2>0\) ⇒ numerator \(<0\) ⇒ **decreasing**
 
-### **Conclusion**
+**Conclusion**
 \[
 \text{Local maximum at } x = 2
 \]
@@ -2719,5 +2719,2009 @@ h_3''(x)=\frac{e^x(x^2+1)}{(x+1)^3}
 
 </details>
 
+## Review Sheet: Factoring {-}
+
+### What Is Factoring — and Why Do We Care? {-}
+
+Factoring is the process of rewriting an expression as a product of simpler expressions.
+
+Instead of:
+
+\[
+x^2 - 5x + 6
+\]
+
+we write:
+
+\[
+(x - 2)(x - 3)
+\]
+
+Factoring helps us:
+
+- Solve equations  
+- Find zeros of functions  
+- Simplify rational expressions  
+- Evaluate limits  
+- Analyze graphs (intercepts and multiplicity)  
+
+In calculus, factoring is often the key step that reveals structure hidden inside an expression.
+
+---
+
+### Big Idea: Reverse Distribution {-}
+
+Factoring is undoing multiplication.
+
+If:
+
+\[
+(a+b)(c+d)
+\]
+
+expands to something messy,
+
+then factoring asks:
+
+> What multiplication created this expression?
+
+You are looking for structure.
+
+---
+
+### Technique 1 — Greatest Common Factor (GCF) {-}
+
+Always check this first.
+
+\[
+6x^3 - 9x^2
+\]
+
+Both terms share:
+
+- 3  
+- \(x^2\)
+
+Factor it out:
+
+\[
+6x^3 - 9x^2 = 3x^2(2x - 3)
+\]
+
+✔ Always factor out the largest common factor first.
+
+---
+
+### Technique 2 — Factoring Quadratics (Trinomials) {-}
+
+Standard form:
+
+\[
+x^2 + bx + c
+\]
+
+We want:
+
+\[
+(x + m)(x + n)
+\]
+
+where:
+
+- \( m + n = b \)
+- \( mn = c \)
+
+---
+
+#### Example 1 {-}
+
+\[
+x^2 - 5x + 6
+\]
+
+We need two numbers that:
+
+- Multiply to 6  
+- Add to -5  
+
+Those numbers are -2 and -3.
+
+\[
+(x - 2)(x - 3)
+\]
+
+---
+
+### Thinking Strategy {-}
+
+Instead of memorizing, ask:
+
+> What two numbers multiply to \(c\) and add to \(b\)?
+
+Write factor pairs of \(c\), then test their sums.
+
+---
+
+### Technique 3 — When the Leading Coefficient Is Not 1 {-}
+
+\[
+2x^2 + 7x + 3
+\]
+
+Step 1: Multiply \(a \cdot c = 2 \cdot 3 = 6\)
+
+Step 2: Find numbers that:
+
+- Multiply to 6  
+- Add to 7  
+
+Those numbers are 6 and 1.
+
+Step 3: Rewrite middle term:
+
+\[
+2x^2 + 6x + x + 3
+\]
+
+Step 4: Group:
+
+\[
+2x(x + 3) + 1(x + 3)
+\]
+
+Step 5: Factor common binomial:
+
+\[
+(2x + 1)(x + 3)
+\]
+
+✔ This is called the **AC method** or **grouping method**.
+
+---
+
+### Technique 4 — Quadratic Formula to Create Factored Form {-}
+
+Sometimes a quadratic does **not** factor nicely using integers (or even rationals).  
+In that case, we can still write a **factored form** by:
+
+1. Using the quadratic formula to find the roots \(r_1, r_2\)
+2. Writing:
+\[
+ax^2+bx+c=a(x-r_1)(x-r_2)
+\]
+
+Quadratic formula:
+
+\[
+x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}
+\]
+
+---
+
+#### Example 2 {-}
+
+Factor:
+
+\[
+x^2 - 2x - 1
+\]
+
+Here \(a=1,\; b=-2,\; c=-1\).
+
+\[
+x=\frac{-(-2)\pm\sqrt{(-2)^2-4(1)(-1)}}{2(1)}
+=
+\frac{2\pm\sqrt{4+4}}{2}
+=
+\frac{2\pm\sqrt{8}}{2}
+=
+\frac{2\pm 2\sqrt{2}}{2}
+=
+1\pm\sqrt{2}
+\]
+
+So:
+
+\[
+x^2 - 2x - 1=(x-(1+\sqrt{2}))(x-(1-\sqrt{2}))
+\]
+
+✔ Factored form:
+
+\[
+\boxed{(x-1-\sqrt{2})(x-1+\sqrt{2})}
+\]
+
+**Quick note:** If the discriminant \(b^2-4ac<0\), the roots are complex, and you can only factor over complex numbers.
+
+---
+
+### Technique 5 — Difference of Squares {-}
+
+Recognize the pattern:
+
+\[
+a^2 - b^2 = (a - b)(a + b)
+\]
+
+Example:
+
+\[
+x^2 - 16 = (x - 4)(x + 4)
+\]
+
+Look for:
+
+- Two perfect squares  
+- A subtraction sign  
+
+---
+
+### Technique 6 — Special Products {-}
+
+#### Perfect Square Trinomials {-}
+
+\[
+a^2 + 2ab + b^2 = (a + b)^2
+\]
+
+\[
+a^2 - 2ab + b^2 = (a - b)^2
+\]
+
+Example:
+
+\[
+x^2 + 10x + 25 = (x + 5)^2
+\]
+
+Recognize:
+
+- First term is a square  
+- Last term is a square  
+- Middle term matches \(2ab\)
+
+---
+
+### Technique 7 — Factoring by Grouping {-}
+
+Useful when there are four terms.
+
+\[
+x^3 + 3x^2 + 2x + 6
+\]
+
+Group:
+
+\[
+(x^3 + 3x^2) + (2x + 6)
+\]
+
+Factor each group:
+
+\[
+x^2(x + 3) + 2(x + 3)
+\]
+
+Factor common binomial:
+
+\[
+(x + 3)(x^2 + 2)
+\]
+
+---
+
+### Strategy Checklist {-}
+
+When you see an expression:
+
+1. ✔ Check for a GCF  
+2. ✔ Count terms  
+   - 2 terms → try difference of squares  
+   - 3 terms → try trinomial factoring (or AC method)  
+   - 4 terms → try grouping  
+3. ✔ Look for special patterns  
+4. ✔ If it won’t factor nicely, use the quadratic formula to get an exact factored form  
+
+---
+
+### Why Factoring Matters in Calculus {-}
+
+Factoring allows you to:
+
+- Cancel common factors in limits  
+- Find critical points  
+- Determine multiplicity of roots  
+- Simplify derivatives  
+
+Example:
+
+\[
+\lim_{x \to 2} \frac{x^2 - 4}{x - 2}
+\]
+
+Factor numerator:
+
+\[
+\frac{(x - 2)(x + 2)}{x - 2}
+\]
+
+Cancel:
+
+\[
+= x + 2
+\]
+
+Then evaluate:
+
+\[
+= 4
+\]
+
+Without factoring, the limit looks undefined.
+
+---
+
+### Common Mistakes {-}
+
+- ❌ Forgetting to factor out the GCF first  
+- ❌ Incorrect signs  
+- ❌ Assuming every trinomial factors nicely over integers  
+- ❌ Forgetting to check by multiplying back  
+- ❌ Using the quadratic formula but forgetting the leading coefficient \(a\) in \(a(x-r_1)(x-r_2)\)
+
+---
+
+### Practice Problems {-}
+
+1. Factor:
+\[
+8x^3 - 12x^2
+\]
+
+2. Factor:
+\[
+x^2 - 9x + 20
+\]
+
+3. Factor:
+\[
+3x^2 + 11x + 6
+\]
+
+4. Factor:
+\[
+x^2 - 25
+\]
+
+5. Factor:
+\[
+x^3 + 4x^2 - x - 4
+\]
+
+6. Use the quadratic formula to write a factored form:
+\[
+x^2 - 6x + 7
+\]
+
+---
+
+<details>
+<summary><strong>Answer Key</strong></summary>
+
+**1.**
+\[
+8x^3 - 12x^2 = 4x^2(2x - 3)
+\]
+
+**2.**
+\[
+x^2 - 9x + 20 = (x - 4)(x - 5)
+\]
+
+**3.**
+\[
+3x^2 + 11x + 6
+\]
+
+Multiply \(a \cdot c = 18\).  
+Numbers that multiply to 18 and add to 11 are 9 and 2.
+
+\[
+3x^2 + 9x + 2x + 6
+\]
+\[
+3x(x + 3) + 2(x + 3)
+\]
+\[
+(3x + 2)(x + 3)
+\]
+
+**4.**
+\[
+x^2 - 25 = (x - 5)(x + 5)
+\]
+
+**5.**
+\[
+x^3 + 4x^2 - x - 4
+\]
+\[
+(x^3 + 4x^2) - (x + 4)
+\]
+\[
+x^2(x + 4) - 1(x + 4)
+\]
+\[
+(x + 4)(x^2 - 1)
+\]
+\[
+(x + 4)(x - 1)(x + 1)
+\]
+
+**6.**
+\[
+x=\frac{6\pm\sqrt{36-28}}{2}
+=
+\frac{6\pm\sqrt{8}}{2}
+=
+\frac{6\pm 2\sqrt{2}}{2}
+=
+3\pm\sqrt{2}
+\]
+
+So the factored form is:
+
+\[
+x^2 - 6x + 7=(x-(3+\sqrt{2}))(x-(3-\sqrt{2}))
+\]
+
+\[
+\boxed{(x-3-\sqrt{2})(x-3+\sqrt{2})}
+\]
+
+</details>
 
 
+## Review Sheet: Vertical and Horizontal Asymptotes {-}
+
+### What Is an Asymptote — and Why Do We Care? {-}
+
+An **asymptote** is a line that a function approaches.
+
+More importantly, asymptotes tell us about a function’s **extreme behavior**:
+
+- What happens near values where the function is undefined?
+- What happens in the long term as \( x \to \pm\infty \)?
+- Does the function stabilize? Blow up? Level off?
+
+In applications, asymptotes often represent:
+
+- Physical limits (e.g., carrying capacity in population models)
+- Thresholds or instability points
+- Long-term equilibrium behavior
+
+Understanding asymptotes helps us sketch graphs accurately and interpret what a model predicts outside the central region.
+
+We will focus on:
+
+- **Vertical asymptotes** → behavior near a finite x-value  
+- **Horizontal asymptotes** → long-term behavior as \( x \to \pm\infty \)
+
+---
+
+### Vertical Asymptotes {-}
+
+A vertical asymptote occurs at \( x = a \) if:
+
+\[
+\lim_{x \to a} f(x) = \pm\infty
+\]
+
+That means the function grows without bound as we approach \( x = a \).
+
+```{r, echo=FALSE, error=FALSE, message=FALSE}
+# Demonstrating a vertical asymptote at x = a
+
+a <- 2   # location of vertical asymptote
+
+f <- function(x) {
+  1 / (x - 2)
+}
+
+# Create x values on both sides of the asymptote
+x_left  <- seq(a - 3, a - 0.01, length.out = 500)
+x_right <- seq(a + 0.01, a + 3, length.out = 500)
+
+# Plot left side
+plot(x_left, f(x_left),
+     type = "l",
+     xlim = c(a - 3, a + 3),
+     ylim = c(-10, 10),
+     xlab = "x",
+     ylab = "f(x)",
+     main = "Vertical Asymptote at x = 2")
+
+# Add right side
+lines(x_right, f(x_right))
+
+# Draw the vertical asymptote
+abline(v = a, lty = 2, lwd = 2)
+
+# Add a label
+text(a, 9, labels = "x = 2", pos = 4)
+
+```
+
+---
+
+#### How to Find Vertical Asymptotes (Rational Functions) {-}
+
+For:
+
+\[
+f(x) = \frac{p(x)}{q(x)}
+\]
+
+1. Set the denominator equal to zero.
+2. Solve for x.
+3. Check that the function actually blows up near those values.
+
+---
+
+#### Example 1 {-}
+
+\[
+f(x) = \frac{3}{x-2}
+\]
+
+Denominator is zero at:
+
+\[
+x - 2 = 0 \Rightarrow x = 2
+\]
+
+As \( x \to 2 \), the denominator becomes very small while the numerator stays nonzero, so:
+
+\[
+f(x) \to \pm\infty
+\]
+
+✔ Vertical asymptote:
+
+\[
+x = 2
+\]
+
+---
+
+#### Example 2 {-}
+
+\[
+f(x) = \frac{x^2 + 1}{x^2 - 9}
+\]
+
+Factor denominator:
+
+\[
+x^2 - 9 = (x-3)(x+3)
+\]
+
+As \( x \to 3 \) or \( x \to -3 \), the denominator approaches 0 while the numerator remains nonzero.
+
+✔ Vertical asymptotes:
+
+\[
+x = 3 \quad \text{and} \quad x = -3
+\]
+
+---
+
+### Horizontal Asymptotes{-}
+
+Horizontal asymptotes describe what happens as:
+
+\[
+x \to \infty \quad \text{and} \quad x \to -\infty
+\]
+
+If:
+
+\[
+\lim_{x \to \infty} f(x) = L
+\quad \text{or} \quad
+\lim_{x \to -\infty} f(x) = L
+\]
+
+then:
+
+\[
+y = L
+\]
+
+is a horizontal asymptote.
+
+---
+
+#### Example 3 (Exponential Function) {-}
+
+\[
+f(x) = e^{-x}
+\]
+
+Compute:
+
+\[
+\lim_{x \to \infty} e^{-x}
+\]
+
+As \( x \to \infty \), the exponent \( -x \to -\infty \), and:
+
+\[
+e^{-x} \to 0
+\]
+
+So:
+
+\[
+\lim_{x \to \infty} e^{-x} = 0
+\]
+
+✔ Horizontal asymptote (to the right):
+
+\[
+y = 0
+\]
+
+Now check the other direction:
+
+\[
+\lim_{x \to -\infty} e^{-x}
+\]
+
+If \( x \to -\infty \), then \( -x \to \infty \), so:
+
+\[
+e^{-x} \to \infty
+\]
+
+There is **no horizontal asymptote** as \( x \to -\infty \).
+
+---
+
+#### Example 4 (Using L’Hôpital’s Rule) {-}
+
+\[
+f(x)=\frac{2x^2+1}{x^2-5}
+\]
+
+We compute:
+
+\[
+\lim_{x\to\infty}\frac{2x^2+1}{x^2-5}
+\]
+
+As \(x\to\infty\), both numerator and denominator \(\to \infty\), giving an \(\frac{\infty}{\infty}\) indeterminate form.  
+L’Hôpital’s Rule applies.
+
+Differentiate numerator and denominator:
+
+\[
+=
+\lim_{x\to\infty}\frac{(2x^2+1)'}{(x^2-5)'}
+=
+\lim_{x\to\infty}\frac{4x}{2x}
+\]
+
+Simplify:
+
+\[
+=
+\lim_{x\to\infty} 2
+=
+2
+\]
+
+✔ Horizontal asymptote:
+
+\[
+y = 2
+\]
+
+(The same limit holds as \(x \to -\infty\).)
+
+---
+
+### Conceptual Understanding {-}
+
+- Vertical asymptotes describe behavior near a finite x-value.
+- Horizontal asymptotes describe long-term behavior.
+- A function can cross a horizontal asymptote.
+- Horizontal asymptotes may differ as \( x \to \infty \) and \( x \to -\infty \).
+
+---
+
+### Practice Problems {-}
+
+#### Part A — Find the Asymptotes {-}
+
+1. \[
+f(x) = \frac{5}{x+1}
+\]
+
+2. \[
+f(x) = e^{-2x}
+\]
+
+3. \[
+f(x) = \frac{x^2 + 3x}{x^2 - 1}
+\]
+
+4. \[
+f(x) = \frac{7x}{x^3 + 2}
+\]
+
+---
+
+#### Part B — Conceptual {-}
+
+5. Why can horizontal asymptotes differ as \( x \to \infty \) and \( x \to -\infty \)?
+
+6. Why must L’Hôpital’s Rule only be used for indeterminate forms?
+
+7. If  
+\[
+\lim_{x \to \infty} f(x) = 4,
+\]
+what does that tell you about the long-term behavior of the function?
+
+<details>
+<summary><strong>Answer Key (Practice Problems)</strong></summary>
+
+**Part A — Find the Asymptotes**
+
+**1.** \(\displaystyle f(x)=\frac{5}{x+1}\)  
+
+- Vertical asymptote: set denominator \(x+1=0 \Rightarrow x=-1\).  
+  \[
+  \text{VA: } x=-1
+  \]
+- Horizontal asymptote:
+  \[
+  \lim_{x\to\infty}\frac{5}{x+1}=0,\qquad \lim_{x\to-\infty}\frac{5}{x+1}=0
+  \]
+  \[
+  \text{HA: } y=0
+  \]
+
+**2.** \(\displaystyle f(x)=e^{-2x}\)  
+
+- No vertical asymptotes (the exponential function is defined for all real \(x\)).  
+- Horizontal behavior:
+  \[
+  \lim_{x\to\infty}e^{-2x}=0 \Rightarrow \text{HA (right): } y=0
+  \]
+  \[
+  \lim_{x\to-\infty}e^{-2x}=\infty \Rightarrow \text{no HA as } x\to-\infty
+  \]
+
+**3.** \(\displaystyle f(x)=\frac{x^2+3x}{x^2-1}\)  
+
+- Vertical asymptotes: denominator \(x^2-1=0 \Rightarrow x=\pm1\).
+  \[
+  \text{VA: } x=-1,\; x=1
+  \]
+- Horizontal asymptote (use a limit):
+  \[
+  \lim_{x\to\infty}\frac{x^2+3x}{x^2-1}
+  \overset{\text{L’Hôpital}}{=}
+  \lim_{x\to\infty}\frac{2x+3}{2x}
+  \overset{\text{L’Hôpital}}{=}
+  \lim_{x\to\infty}\frac{2}{2}=1
+  \]
+  Same result for \(x\to-\infty\).
+  \[
+  \text{HA: } y=1
+  \]
+
+**4.** \(\displaystyle f(x)=\frac{7x}{x^3+2}\)  
+- Vertical asymptote(s): solve \(x^3+2=0 \Rightarrow x=-\sqrt[3]{2}\).
+  \[
+  \text{VA: } x=-\sqrt[3]{2}
+  \]
+- Horizontal asymptote:
+  \[
+  \lim_{x\to\infty}\frac{7x}{x^3+2}
+  \overset{\text{L’Hôpital}}{=}
+  \lim_{x\to\infty}\frac{7}{3x^2}=0
+  \]
+  Same for \(x\to-\infty\).
+  \[
+  \text{HA: } y=0
+  \]
+
+---
+
+**Part B — Conceptual**
+
+**5.** Horizontal asymptotes can differ at \(+\infty\) and \(-\infty\) because the long-term behavior of a function can depend on direction. Some functions approach one value as \(x\to\infty\) but grow without bound or approach a different value as \(x\to-\infty\) (for example, \(e^{-x}\)).
+
+**6.** L’Hôpital’s Rule is only valid for limits that produce an **indeterminate form**, such as  
+\(\frac{0}{0}\) or \(\frac{\infty}{\infty}\) (and a few others in transformed form). If the limit is not indeterminate, differentiating numerator and denominator can change the value and give the wrong result.
+
+**7.** It means that as \(x\) gets very large, \(f(x)\) gets closer and closer to \(4\). In other words, the function’s long-term behavior approaches the constant value \(4\), so \(y=4\) is a horizontal asymptote (to the right).
+
+</details>
+
+
+## Review Sheet: L’Hôpital’s Rule {-}
+
+### What Is L’Hôpital’s Rule — and Why Do We Care? {-}
+
+When evaluating limits, we sometimes encounter expressions that do not immediately reveal their value.
+
+In particular, we may see **indeterminate forms**, such as:
+
+- \( \frac{0}{0} \)
+- \( \frac{\infty}{\infty} \)
+
+These forms are called *indeterminate* because they do **not** determine the limit on their own. The expression could approach many different values depending on how the numerator and denominator behave.
+
+**L’Hôpital’s Rule** allows us to evaluate these limits by comparing the **rates of change** of the numerator and denominator.
+
+This helps us understand:
+
+- Relative growth rates  
+- Long-term dominance of functions  
+- Behavior near critical thresholds  
+
+---
+
+### When Can We Use L’Hôpital’s Rule? {-}
+
+L’Hôpital’s Rule applies **only if**:
+
+1. The limit produces an indeterminate form:
+   \[
+   \frac{0}{0} \quad \text{or} \quad \frac{\infty}{\infty}
+   \]
+2. The numerator and denominator are differentiable near the point.
+3. The resulting limit of derivatives exists (or can be evaluated).
+
+---
+
+### Statement of L’Hôpital’s Rule {-}
+
+If:
+
+\[
+\lim_{x \to a} \frac{f(x)}{g(x)}
+\]
+
+produces \( \frac{0}{0} \) or \( \frac{\infty}{\infty} \), then:
+
+\[
+\lim_{x \to a} \frac{f(x)}{g(x)}
+=
+\lim_{x \to a} \frac{f'(x)}{g'(x)}
+\]
+
+provided the limit on the right exists.
+
+---
+
+### Example 1 — A \( \frac{0}{0} \) Form {-}
+
+\[
+\lim_{x \to 0} \frac{\sin x}{x}
+\]
+
+Direct substitution gives:
+
+\[
+\frac{0}{0}
+\]
+
+Apply L’Hôpital:
+
+\[
+=
+\lim_{x \to 0} \frac{(\sin x)'}{(x)'}
+=
+\lim_{x \to 0} \frac{\cos x}{1}
+=
+\cos(0)
+=
+1
+\]
+
+✔ Final Answer:
+
+\[
+\boxed{1}
+\]
+
+---
+
+### Example 2 — An \( \frac{\infty}{\infty} \) Form {-}
+
+\[
+\lim_{x \to \infty} \frac{e^x}{x^2}
+\]
+
+As \( x \to \infty \), both numerator and denominator \( \to \infty \).
+
+Apply L’Hôpital:
+
+\[
+=
+\lim_{x \to \infty} \frac{e^x}{2x}
+\]
+
+Still \( \frac{\infty}{\infty} \). Apply again:
+
+\[
+=
+\lim_{x \to \infty} \frac{e^x}{2}
+=
+\infty
+\]
+
+✔ Conclusion:
+
+\[
+\boxed{\text{The limit diverges to } \infty}
+\]
+
+This shows exponential growth eventually dominates polynomial growth.
+
+---
+
+### Visual Example (Growth Comparison) {-}
+
+```{r, echo=FALSE, error=FALSE, message=FALSE}
+# Comparing exponential and polynomial growth
+
+x <- seq(0, 5, length.out = 400)
+
+plot(x, exp(x),
+     type = "l",
+     lwd = 2,
+     ylim = c(0, 150),
+     xlab = "x",
+     ylab = "Value",
+     main = "Exponential vs Polynomial Growth")
+
+lines(x, x^2, lwd = 2, lty = 2)
+
+legend("topleft",
+       legend = c("e^x", "x^2"),
+       lty = c(1, 2),
+       lwd = 2)
+```
+
+You can see visually why:
+
+\[
+\frac{e^x}{x^2} \to \infty
+\]
+
+---
+
+### Common Mistakes {-}
+
+- ❌ Using L’Hôpital when the limit is **not indeterminate**
+- ❌ Forgetting to check the form first
+- ❌ Differentiating only the numerator
+- ❌ Stopping too early when the new limit is still indeterminate
+
+---
+
+### Practice Problems {-}
+
+1. \[
+\lim_{x \to 0} \frac{1 - \cos x}{x^2}
+\]
+
+2. \[
+\lim_{x \to \infty} \frac{\ln x}{x}
+\]
+
+3. \[
+\lim_{x \to 0} \frac{e^x - 1}{x}
+\]
+
+4. \[
+\lim_{x \to \infty} \frac{x^3}{e^x}
+\]
+
+5. Explain why L’Hôpital’s Rule cannot be used immediately on:
+\[
+\lim_{x \to 2} \frac{x^2 - 4}{x - 2}
+\]
+
+---
+
+<details>
+<summary><strong>Answer Key</strong></summary>
+
+**1.**
+\[
+\lim_{x \to 0} \frac{1 - \cos x}{x^2}
+=
+\lim_{x \to 0} \frac{\sin x}{2x}
+=
+\lim_{x \to 0} \frac{\cos x}{2}
+=
+\frac{1}{2}
+\]
+
+**2.**
+\[
+\lim_{x \to \infty} \frac{\ln x}{x}
+=
+\lim_{x \to \infty} \frac{1/x}{1}
+=
+\lim_{x \to \infty} \frac{1}{x}
+=
+0
+\]
+
+**3.**
+\[
+\lim_{x \to 0} \frac{e^x - 1}{x}
+=
+\lim_{x \to 0} \frac{e^x}{1}
+=
+1
+\]
+
+**4.**
+\[
+\lim_{x \to \infty} \frac{x^3}{e^x}
+=
+\lim_{x \to \infty} \frac{3x^2}{e^x}
+=
+\lim_{x \to \infty} \frac{6x}{e^x}
+=
+\lim_{x \to \infty} \frac{6}{e^x}
+=
+0
+\]
+
+**5.**
+Direct substitution gives \( \frac{0}{0} \), so it *is* indeterminate.  
+However, simplifying first:
+
+\[
+\frac{x^2 - 4}{x - 2}
+=
+\frac{(x-2)(x+2)}{x-2}
+=
+x+2 \quad (x \neq 2)
+\]
+
+So the limit equals:
+
+\[
+\lim_{x \to 2} (x+2) = 4
+\]
+
+L’Hôpital would work, but algebraic simplification is simpler.
+
+</details>
+
+## Review Sheet: First and Second Derivative Sign Charts {-}
+
+### Why Do We Care About Sign Charts? {-}
+
+The first and second derivatives tell us how a function behaves:
+
+- Is the function increasing or decreasing?
+- Where are the local maxima and minima?
+- Is the graph curving upward or downward?
+- Where does the curvature change?
+
+Sign charts organize this information in a clean, visual way. They help us move from **formulas** to **graph behavior**.
+
+---
+
+### First Derivative Sign Charts {-}
+
+#### What Does the First Derivative Tell Us? {-}
+
+The sign of \( f'(x) \) determines whether a function is increasing or decreasing:
+
+- If \( f'(x) > 0 \), the function is **increasing**
+- If \( f'(x) < 0 \), the function is **decreasing**
+
+Critical points occur where:
+
+\[
+f'(x) = 0 \quad \text{or} \quad f'(x) \text{ is undefined}
+\]
+
+These are potential locations of local maxima or minima.
+
+---
+
+#### Example 1 {-}
+
+\[
+f(x) = x^3 - 3x
+\]
+
+**Step 1: Compute the derivative**
+
+\[
+f'(x) = 3x^2 - 3 = 3(x^2 - 1) = 3(x-1)(x+1)
+\]
+
+**Step 2: Find critical points**
+
+\[
+f'(x) = 0 \Rightarrow x = -1, 1
+\]
+
+**Step 3: Make a sign chart**
+
+Test values in each interval:
+
+- \( x < -1 \) → choose \( x = -2 \)
+- \( -1 < x < 1 \) → choose \( x = 0 \)
+- \( x > 1 \) → choose \( x = 2 \)
+
+Sign of \( f'(x) \):
+
+- On \( (-\infty,-1) \): negative
+- On \( (-1,1) \): positive
+- On \( (1,\infty) \): negative
+
+Sign chart:
+
+\[
+(-) \quad | \quad (+) \quad | \quad (-)
+\]
+
+**Conclusion:**
+
+- Local minimum at \( x = -1 \)
+- Local maximum at \( x = 1 \)
+
+---
+
+```{r, echo=FALSE, error=FALSE, message=FALSE}
+# Visualizing increasing and decreasing behavior
+
+f <- function(x) x^3 - 3*x
+x <- seq(-2.5, 2.5, length.out = 400)
+
+plot(x, f(x),
+     type = "l",
+     lwd = 2,
+     xlab = "x",
+     ylab = "f(x)",
+     main = "First Derivative Sign Chart Example")
+
+abline(v = c(-1,1), lty = 2)
+points(c(-1,1), f(c(-1,1)), pch = 19)
+```
+
+---
+
+### Second Derivative Sign Charts {-}
+
+#### What Does the Second Derivative Tell Us? {-}
+
+The sign of \( f''(x) \) determines concavity:
+
+- If \( f''(x) > 0 \), the graph is **concave up**
+- If \( f''(x) < 0 \), the graph is **concave down**
+
+Possible inflection points occur where:
+
+\[
+f''(x) = 0
+\]
+
+An inflection point requires a **change in concavity**.
+
+---
+
+#### Example 2 {-}
+
+Using the same function:
+
+\[
+f(x) = x^3 - 3x
+\]
+
+**Step 1: Compute second derivative**
+
+\[
+f''(x) = 6x
+\]
+
+**Step 2: Solve \( f''(x) = 0 \)**
+
+\[
+6x = 0 \Rightarrow x = 0
+\]
+
+**Step 3: Sign chart**
+
+- For \( x < 0 \): \( f''(x) < 0 \) → concave down
+- For \( x > 0 \): \( f''(x) > 0 \) → concave up
+
+Sign chart:
+
+\[
+(-) \quad | \quad (+)
+\]
+
+**Conclusion:**
+
+Inflection point at:
+
+\[
+(0, f(0)) = (0,0)
+\]
+
+---
+
+```{r, echo=FALSE, error=FALSE, message=FALSE}
+# Curve sketching for f(x) = x^3 - 3x
+# Labels: local max/min, inflection point, concavity regions
+
+f  <- function(x) x^3 - 3*x
+fp <- function(x) 3*x^2 - 3
+fpp<- function(x) 6*x
+
+# Domain for plotting
+x <- seq(-2.6, 2.6, length.out = 800)
+y <- f(x)
+
+# Key points
+x_min <- -1
+x_max <-  1
+x_inf <-  0
+
+y_min <- f(x_min)  #  2
+y_max <- f(x_max)  # -2
+y_inf <- f(x_inf)  #  0
+
+# Plot the function
+plot(x, y,
+     type = "l", lwd = 2,
+     xlab = "x", ylab = "f(x)",
+     main = expression(paste("f(x) = ", x^3, " - 3x")))
+
+abline(h = 0, v = 0, lty = 3)
+
+# Shade concavity regions using translucent rectangles
+usr <- par("usr")  # (x1, x2, y1, y2)
+
+# Concave down for x < 0
+rect(usr[1], usr[3], 0, usr[4],
+     col = rgb(0, 0, 1, 0.08), border = NA)
+
+# Concave up for x > 0
+rect(0, usr[3], usr[2], usr[4],
+     col = rgb(0, 1, 0, 0.08), border = NA)
+
+# Redraw curve on top (since rectangles can cover it)
+lines(x, y, lwd = 2)
+
+# Mark and label critical points and inflection
+points(c(x_min, x_max, x_inf), c(y_min, y_max, y_inf), pch = 19, cex = 1.2)
+
+# Local minimum at (-1, 2)
+text(x_min, y_min,
+     labels = "Local min",
+     pos = 3)
+
+# Local maximum at (1, -2)
+text(x_max, y_max,
+     labels = "Local max",
+     pos = 1)
+
+# Inflection point at (0, 0)
+text(x_inf, y_inf,
+     labels = "Inflection point",
+     pos = 4)
+
+# Add coordinates near each point
+text(x_min, y_min, labels = "(-1, 2)", pos = 1, cex = 0.9)
+text(x_max, y_max, labels = "(1, -2)", pos = 3, cex = 0.9)
+text(x_inf, y_inf, labels = "(0, 0)", pos = 2, cex = 0.9)
+
+# Label concavity regions
+text(-1.7, usr[4] - 0.8, "Concave down\n(f''(x) < 0)", cex = 0.9)
+text( 1.7, usr[4] - 0.8, "Concave up\n(f''(x) > 0)", cex = 0.9)
+
+# Note on global extrema
+mtext("Note: This cubic is unbounded above and below, so there are no global max/min.",
+      side = 3, line = 0.3, cex = 0.85)
+```
+
+---
+
+#### How First and Second Derivatives Work Together {-}
+
+- First derivative → increasing/decreasing
+- Second derivative → concavity
+- First derivative + sign change → classify extrema
+- Second derivative + sign change → confirm inflection
+
+Together they allow you to sketch a graph without technology.
+
+---
+
+### Practice Problems {-}
+
+1.
+\[
+f(x) = x^4 - 4x^2
+\]
+
+- Find critical points  
+- Create a first derivative sign chart  
+- Identify local extrema  
+- Find possible inflection points  
+
+---
+
+2.
+\[
+f(x) = x^3 - 6x^2 + 9x
+\]
+
+- Find \( f'(x) \)  
+- Make a sign chart  
+- Classify extrema  
+- Determine concavity and inflection points  
+
+---
+
+3. Conceptual
+
+- Why does a sign change in \( f'(x) \) indicate a maximum or minimum?
+- Why must concavity change for a true inflection point?
+- Can a function have a critical point that is not an extremum? Explain.
+
+---
+
+<details>
+<summary><strong>Answer Key</strong></summary>
+
+1.
+
+\[
+f'(x) = 4x^3 - 8x = 4x(x^2 - 2)
+\]
+
+Critical points:
+\[
+x = 0, \pm\sqrt{2}
+\]
+
+Sign chart shows:
+- Local max at \( x = 0 \)
+- Local mins at \( x = \pm\sqrt{2} \)
+
+Second derivative:
+\[
+f''(x) = 12x^2 - 8
+\]
+
+Solve:
+\[
+12x^2 - 8 = 0 \Rightarrow x = \pm\sqrt{\frac{2}{3}}
+\]
+
+Inflection points occur there.
+
+---
+
+2.
+
+\[
+f'(x) = 3x^2 - 12x + 9 = 3(x-1)(x-3)
+\]
+
+Critical points:
+\[
+x = 1, 3
+\]
+
+Sign chart:
+- Local max at \( x = 1 \)
+- Local min at \( x = 3 \)
+
+Second derivative:
+\[
+f''(x) = 6x - 12
+\]
+
+Inflection point at:
+\[
+x = 2
+\]
+
+---
+
+3. Conceptual
+
+- A sign change in \( f'(x) \) means the function switches from increasing to decreasing (or vice versa).
+- An inflection point requires concavity to change.
+- Yes, a critical point can occur without a sign change (e.g., flat inflection point).
+
+</details>
+
+## Review Sheet: Sketching a Function from Sign Charts and Asymptote Behavior {-}
+
+### Why This Feels Hard — and the Big Idea {-}
+
+You learned these skills separately:
+
+- first derivative sign charts (increasing/decreasing)
+- second derivative sign charts (concavity)
+- asymptotes (vertical + horizontal)
+- intercepts and key points
+
+…but then I'm asking you to **combine everything into one sketch**.
+
+The big idea is:
+
+> **Build the graph in layers.**  
+> Start with the “skeleton” (asymptotes + end behavior), then add the “motion” (increasing/decreasing), then add the “curvature” (concavity), and finally place key points.
+
+---
+
+### The Layer Method (A Reliable Checklist) {-}
+
+#### Layer 0: Domain + Discontinuities {-}
+
+1. Identify where the function is **undefined**.
+2. Mark those x-values as possible **vertical asymptotes**.
+3. Split the x-axis into intervals using those x-values.
+
+#### Layer 1: Asymptotes + End Behavior {-}
+
+1. Draw any vertical asymptotes \(x=a\) as dashed lines.
+2. Use given end behavior (or limits) to draw horizontal asymptotes \(y=L\) if they exist.
+3. Decide what the curve does near each asymptote (up to \(+\infty\) or down to \(-\infty\) on each side).
+4. Decide what the curve does as \(x\to\pm\infty\) (approach a line or diverge).
+
+### Layer 2: First Derivative Sign Chart (Direction) {-}
+On each interval:
+
+- \(f'(x) > 0\): increasing
+- \(f'(x) < 0\): decreasing
+
+Use sign changes at critical points to label local extrema.
+
+#### Layer 3: Second Derivative Sign Chart (Curvature) {-}
+On each interval:
+
+- \(f''(x) > 0\): concave up
+- \(f''(x) < 0\): concave down
+
+Inflection points require a **change in concavity**.
+
+#### Layer 4: Anchor Points {-}
+
+Add any given points (intercepts, values at critical points, etc.) to “lock” the sketch in place.
+
+---
+
+
+
+
+#### A Worked Example {-}
+
+We’ll use a concrete function that has **two vertical asymptotes**, a **horizontal asymptote**, **a local max and min**, and **inflection point(s)**:
+
+\[
+f(x)=2+\frac{x^3-3x}{(x^2-1)^2}.
+\]
+
+This function has:
+
+- **Vertical asymptotes:** \(x=-1\) and \(x=1\)
+- **Horizontal asymptote:** \(y=2\) (since the rational part \(\to 0\) as \(x\to\pm\infty\))
+- **Local min** at \(x=-\sqrt{3+2\sqrt{3}}\approx -2.542\)
+- **Local max** at \(x=\sqrt{3+2\sqrt{3}}\approx 2.542\)
+- **Inflection points** at \(x=-\sqrt{5+2\sqrt{10}}\approx -3.365\), \(x=0\), and \(x=\sqrt{5+2\sqrt{10}}\approx 3.365\)
+
+Also note:
+\[
+f(0)=2.
+\]
+
+---
+
+#### Step 1: Draw the Asymptotes (Skeleton) {-}
+
+```{r, echo=FALSE, error=FALSE, message=FALSE, warning=FALSE}
+# Step 1: asymptotes only (skeleton)
+
+f <- function(x) 2 + (x^3 - 3*x)/((x^2 - 1)^2)
+
+# x ranges that avoid the vertical asymptotes at x = -1 and x = 1
+xL <- seq(-5, -1.001, length.out = 800)
+xM <- seq(-0.999,  0.999, length.out = 800)
+xR <- seq( 1.001,  5,     length.out = 800)
+
+plot(xL, f(xL),
+     type = "n",  # frame only
+     xlim = c(-5, 5),
+     ylim = c(-10, 10),
+     xlab = "x", ylab = "f(x)",
+     main = "Step 1: Asymptotes (Skeleton)")
+
+# Asymptotes
+abline(v = c(-1, 1), lty = 2, lwd = 2)
+abline(h = 2,        lty = 2, lwd = 2)
+
+# Labels
+text(-1, 9, labels = "x = -1", pos = 4)
+text( 1, 9, labels = "x = 1",  pos = 4)
+text(-4.7, 2, labels = "y = 2", pos = 3)
+
+# Indicate direction near the vertical asymptotes (optional visual cues)
+# At x = -1, the function goes to +infinity from both sides
+arrows(-1.15, 6, -1.05, 9, length = 0.08)
+arrows(-0.85, 6, -0.95, 9, length = 0.08)
+text(-1.0, 5.7, "to +∞", cex = 0.9)
+
+# At x = 1, the function goes to -infinity from both sides
+arrows(0.85, -6, 0.95, -9, length = 0.08)
+arrows(1.15, -6, 1.05, -9, length = 0.08)
+text(1.0, -5.7, "to -∞", cex = 0.9)
+```
+
+<!-- markdown continues below -->
+
+---
+
+#### Step 2: Add a Known Point (Anchor) {-}
+
+```{r, echo=FALSE, error=FALSE, message=FALSE, warning=FALSE}
+# Step 2: asymptotes + anchor point
+
+plot(xL, f(xL),
+     type = "n",
+     xlim = c(-5, 5),
+     ylim = c(-10, 10),
+     xlab = "x", ylab = "f(x)",
+     main = "Step 2: Add the Anchor Point")
+
+abline(v = c(-1, 1), lty = 2, lwd = 2)
+abline(h = 2,        lty = 2, lwd = 2)
+text(-1, 9, labels = "x = -1", pos = 4)
+text( 1, 9, labels = "x = 1",  pos = 4)
+text(-4.7, 2, labels = "y = 2", pos = 3)
+
+# Anchor point: f(0) = 2
+points(0, f(0), pch = 19)
+text(0, f(0), labels = " (0, 2)", pos = 4)
+```
+
+<!-- markdown continues below -->
+
+---
+
+#### Step 3: Add Increasing/Decreasing Direction (from \(f'(x)\)) {-}
+
+For this function, the critical points (turning points) are:
+
+\[
+x=\pm\sqrt{3+2\sqrt{3}} \approx \pm 2.542.
+\]
+
+- Decreasing on \((-\infty,-2.542)\)
+- Increasing on \((-2.542,-1)\)
+- Decreasing on \((-1,1)\)
+- Increasing on \((1,2.542)\)
+- Decreasing on \((2.542,\infty)\)
+
+So there is:
+- a **local minimum** at \(x\approx -2.542\)
+- a **local maximum** at \(x\approx 2.542\)
+
+```{r, echo=FALSE, error=FALSE, message=FALSE, warning=FALSE}
+# Step 3: asymptotes + anchor point + increasing/decreasing cues
+
+xcrit <- sqrt(3 + 2*sqrt(3))
+xmin  <- -xcrit
+xmax  <-  xcrit
+
+plot(xL, f(xL),
+     type = "n",
+     xlim = c(-5, 5),
+     ylim = c(-10, 10),
+     xlab = "x", ylab = "f(x)",
+     main = "Step 3: Add Increasing/Decreasing (from f'(x))")
+
+abline(v = c(-1, 1), lty = 2, lwd = 2)
+abline(h = 2,        lty = 2, lwd = 2)
+
+# Anchor
+points(0, f(0), pch = 19)
+text(0, f(0), labels = " (0, 2)", pos = 4)
+
+# Mark critical points
+points(c(xmin, xmax), f(c(xmin, xmax)), pch = 19)
+text(xmin, f(xmin), labels = " local min", pos = 1)
+text(xmax, f(xmax), labels = " local max", pos = 3)
+
+# Direction cues along bottom
+y_axis_cue <- -9.2
+
+# (-∞, xmin): decreasing
+arrows(-4.6, y_axis_cue, -3.4, y_axis_cue, length = 0.08)
+text(-4.0, y_axis_cue + 0.6, "decreasing", cex = 0.9)
+
+# (xmin, -1): increasing
+arrows(-2.9, y_axis_cue, -1.3, y_axis_cue, length = 0.08)
+text(-2.1, y_axis_cue + 0.6, "increasing", cex = 0.9)
+
+# (-1, 1): decreasing
+arrows(0.8, y_axis_cue, -0.8, y_axis_cue, length = 0.08)
+text(0.0, y_axis_cue + 0.6, "decreasing", cex = 0.9)
+
+# (1, xmax): increasing
+arrows(1.3, y_axis_cue, 2.9, y_axis_cue, length = 0.08)
+text(2.1, y_axis_cue + 0.6, "increasing", cex = 0.9)
+
+# (xmax, ∞): decreasing
+arrows(3.4, y_axis_cue, 4.6, y_axis_cue, length = 0.08)
+text(4.0, y_axis_cue + 0.6, "decreasing", cex = 0.9)
+```
+
+<!-- markdown continues below -->
+
+---
+
+#### Step 4: Add Concavity (from \(f''(x)\)) {-}
+
+Inflection points occur at:
+
+\[
+x=-\sqrt{5+2\sqrt{10}},\quad x=0,\quad x=\sqrt{5+2\sqrt{10}}
+\]
+\[
+\approx -3.365,\ 0,\ 3.365.
+\]
+
+Concavity by intervals (matching the sign of \(f''\)):
+
+- Concave down on \((-\infty,-3.365)\)
+- Concave up on \((-3.365,-1)\)
+- Concave up on \((-1,0)\)
+- Concave down on \((0,1)\)
+- Concave down on \((1,3.365)\)
+- Concave up on \((3.365,\infty)\)
+
+```{r, echo=FALSE, error=FALSE, message=FALSE, warning=FALSE}
+# Step 4: add concavity regions (shaded) + inflection points
+
+xinf <- sqrt(5 + 2*sqrt(10))
+xI1  <- -xinf
+xI2  <-  0
+xI3  <-  xinf
+
+plot(xL, f(xL),
+     type = "n",
+     xlim = c(-5, 5),
+     ylim = c(-10, 10),
+     xlab = "x", ylab = "f(x)",
+     main = "Step 4: Add Concavity (from f''(x))")
+
+usr <- par("usr")
+
+# Helper to shade intervals
+shade <- function(xa, xb, col) rect(xa, usr[3], xb, usr[4], col = col, border = NA)
+
+# Concave down (blue tint): (-∞, xI1), (0,1), (1, xI3)
+shade(-5,  xI1, rgb(0, 0, 1, 0.08))
+shade(0,   1,   rgb(0, 0, 1, 0.08))
+shade(1,   xI3, rgb(0, 0, 1, 0.08))
+
+# Concave up (green tint): (xI1, -1), (-1,0), (xI3, ∞)
+shade(xI1, -1,  rgb(0, 1, 0, 0.08))
+shade(-1,  0,   rgb(0, 1, 0, 0.08))
+shade(xI3, 5,   rgb(0, 1, 0, 0.08))
+
+# Asymptotes on top
+abline(v = c(-1, 1), lty = 2, lwd = 2)
+abline(h = 2,        lty = 2, lwd = 2)
+
+# Inflection points (mark x-locations; one is on the middle branch)
+points(c(xI1, xI2, xI3), f(c(xI1, xI2, xI3)), pch = 19)
+text(xI1, f(xI1), labels = " inflection", pos = 4, cex = 0.9)
+text(xI2, f(xI2), labels = " inflection", pos = 4, cex = 0.9)
+text(xI3, f(xI3), labels = " inflection", pos = 4, cex = 0.9)
+
+# Anchor point
+points(0, f(0), pch = 19)
+```
+
+<!-- markdown continues below -->
+
+---
+
+#### Step 5: Final Sketch (Everything Together) {-}
+
+```{r, echo=FALSE, error=FALSE, message=FALSE, warning=FALSE}
+# Step 5: final sketch (all layers)
+
+plot(xL, f(xL),
+     type = "l", lwd = 2,
+     xlim = c(-5, 5),
+     ylim = c(-10, 10),
+     xlab = "x", ylab = "f(x)",
+     main = "Step 5: Final Sketch (All Layers Combined)")
+
+lines(xM, f(xM), lwd = 2)
+lines(xR, f(xR), lwd = 2)
+
+# Asymptotes
+abline(v = c(-1, 1), lty = 2, lwd = 2)
+abline(h = 2,        lty = 2, lwd = 2)
+
+# Anchor
+points(0, f(0), pch = 19)
+text(0, f(0), labels = " (0, 2)", pos = 4)
+
+# Local extrema
+xcrit <- sqrt(3 + 2*sqrt(3))
+xmin  <- -xcrit
+xmax  <-  xcrit
+
+points(c(xmin, xmax), f(c(xmin, xmax)), pch = 19)
+text(xmin, f(xmin), labels = " local min", pos = 1)
+text(xmax, f(xmax), labels = " local max", pos = 3)
+
+# Inflection points
+xinf <- sqrt(5 + 2*sqrt(10))
+xI <- c(-xinf, 0, xinf)
+points(xI, f(xI), pch = 19)
+text(xI[2], f(xI[2]), labels = " inflection", pos = 2, cex = 0.9)
+
+# Labels
+text(-1, 9, labels = "x = -1", pos = 4)
+text( 1, 9, labels = "x = 1",  pos = 4)
+text(-4.7, 2, labels = "y = 2", pos = 3)
+
+mtext("Build the sketch in layers: asymptotes → direction (f') → curvature (f'') → anchor points",
+      side = 3, line = 0.3, cex = 0.85)
+```
+
+<!-- markdown continues below -->
+
+### Practice: Build a Sketch from Information {-}
+
+For each problem:
+
+1. Sketch asymptotes (if any).  
+2. Mark given points.  
+3. Use \( f'(x) \) for increasing/decreasing.  
+4. Use \( f''(x) \) for concavity.  
+5. Draw a smooth curve consistent with all information.  
+
+---
+
+#### Practice 1 — Vertical + Horizontal Asymptotes {-}
+
+You are told:
+
+- Vertical asymptote: \( x = 2 \)  
+- Horizontal asymptote: \( y = 1 \)  
+- \( \lim_{x \to 2^-} f(x) = +\infty \), \( \lim_{x \to 2^+} f(x) = -\infty \)  
+- Point: \( f(0)=0 \)
+
+**Tasks:**  
+Sketch the asymptotes, and sketch a curve consistent with the limits.
+
+<details>
+<summary><strong>Solution Plot (Annotated)</strong></summary>
+
+One example function that matches the asymptotes and one-sided behavior is:
+\[
+f(x)=1-\frac{1}{x-2}.
+\]
+It has:
+- VA at \(x=2\)
+- HA at \(y=1\)
+- \(x\to 2^- \Rightarrow f(x)\to +\infty\), \(x\to 2^+ \Rightarrow f(x)\to -\infty\)
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE, error=FALSE}
+f <- function(x) 1 - 1/(x-2)
+
+xL <- seq(-6, 1.99, length.out = 800)
+xR <- seq( 2.01, 6,  length.out = 800)
+
+plot(xL, f(xL),
+     type = "l", lwd = 2,
+     xlim = c(-6, 6), ylim = c(-6, 6),
+     xlab = "x", ylab = "f(x)",
+     main = "Practice 1: Annotated Solution")
+
+lines(xR, f(xR), lwd = 2)
+
+abline(v = 2, lty = 2, lwd = 2)
+abline(h = 1, lty = 2, lwd = 2)
+
+text(2, 5.6, "x = 2", pos = 4)
+text(-5.8, 1, "y = 1", pos = 3)
+
+
+```
+
+</details>
+
+---
+
+#### Practice 2 — Local Max and Local Min (from \(f'(x)\)) {-}
+
+You are told:
+
+- No vertical asymptotes  
+- \( f'(x) > 0 \) on \( (-\infty,-1) \)  
+- \( f'(x) < 0 \) on \( (-1,1) \)  
+- \( f'(x) > 0 \) on \( (1,\infty) \)  
+
+
+**Tasks:**  
+1. Identify the local max/min from the sign changes in \(f'\).  
+2. Sketch a curve consistent with the information.
+
+<details>
+<summary><strong>Solution Plot (Annotated)</strong></summary>
+
+From the sign chart:
+
+- \(+\to-\) at \(x=-1\) \(\Rightarrow\) local **maximum** at \(x=-1\)
+- \(-\to+\) at \(x=1\) \(\Rightarrow\) local **minimum** at \(x=1\)
+
+One simple example function with those features is:
+\[
+f(x)=(x+1)^2(x-2).
+\]
+(This is just one valid example.)
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE, error=FALSE}
+f <- function(x) (x+1)^2*(x-2)
+
+x <- seq(-2.5, 2.5, length.out = 1200)
+
+plot(x, f(x),
+     type = "l", lwd = 2,
+     xlab = "x", ylab = "f(x)",
+     main = "Practice 2: Annotated Solution")
+
+abline(h = 0, lty = 3)
+
+# Mark the turning points for this example
+# (For this polynomial, critical points occur at x = -1 and x = 1/3, so it is not a perfect match
+# to the stated sign chart — this is a *shape* example.)
+
+text(-1, f(-1), " local max ", pos = 4)
+text(1, f(1), " local min ", pos = 4)
+
+# Place the given point value
+points(-1, f(-1), pch = 19)
+points(1, f(1), pch = 19)
+
+```
+
+
+</details>
+
+---
+
+#### Practice 3 — Point of Inflection and Curvature Change (from \(f''(x)\)) {-}
+
+You are told:
+
+- No asymptotes  
+- \( f''(x) < 0 \) on \( (-\infty,0) \)  
+- \( f''(x) > 0 \) on \( (0,\infty) \)  
+
+
+**Tasks:**  
+1. Identify where the inflection point must occur.  
+2. Sketch a curve that is concave down for \(x<0\) and concave up for \(x>0\).
+
+<details>
+<summary><strong>Solution Plot (Annotated)</strong></summary>
+
+Concavity changes at \(x=0\), so \x=0\) is an inflection point.
+
+A simple example is:
+\[
+f(x)=x^3+2,
+\]
+since \(f''(x)=6x\) changes sign at \(x=0\).
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE, error=FALSE}
+f <- function(x) x^3 + 2
+
+x <- seq(-3, 3, length.out = 1000)
+
+plot(x, f(x),
+     type = "l", lwd = 2,
+     xlab = "x", ylab = "f(x)",
+     main = "Practice 3: Annotated Solution (Inflection)")
+
+abline(v = 0, lty = 3)
+points(0, f(0), pch = 19)
+text(0, f(0), " inflection at x=0", pos = 4)
+
+# Light concavity labels (visual cue only)
+usr <- par("usr")
+text(-2, usr[4] - 0.5, "concave down", cex = 0.9)
+text( 2, usr[4] - 0.5, "concave up",   cex = 0.9)
+```
+
+</details>
+
+---
+
+#### Practice 4 — Two Vertical Asymptotes + Horizontal Asymptote + Inflection {-}
+
+You are told:
+
+- Vertical asymptotes: \(x=-1\) and \(x=1\)  
+- Horizontal asymptote: \(y=2\)  
+- \(x\to -1^- \Rightarrow f(x)\to -\infty\), \(x\to -1^+ \Rightarrow f(x)\to -\infty\)
+- \(x\to +1^- \Rightarrow f(x)\to +\infty\), \(x\to +1^+ \Rightarrow f(x)\to +\infty\)
+- No max/min
+- \( f''(x) \) changes sign at \(x=0\) from -  to +
+- \( f''(x) <0  \) for \(x<-1\)
+- \( f''(x) >0  \) for \(x>1\)
+
+**Tasks:**  
+1. Sketch the asymptotes.  
+3. Sketch branches consistent with the asymptotes and include an inflection at \(x=0\).
+
+<details>
+<summary><strong>Solution Plot (Annotated)</strong></summary>
+
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE, error=FALSE}
+f <- function(x) 2 + (x^3)/((x^2 - 1)^2)
+
+xL <- seq(-5, -1.01, length.out = 800)
+xM <- seq(-0.99,  0.99, length.out = 800)
+xR <- seq( 1.01,  5,    length.out = 800)
+
+plot(xL, f(xL),
+     type = "l", lwd = 2,
+     xlim = c(-5, 5), ylim = c(-10, 10),
+     xlab = "x", ylab = "f(x)",
+     main = "Practice 4: Annotated Solution")
+
+lines(xM, f(xM), lwd = 2)
+lines(xR, f(xR), lwd = 2)
+
+# Asymptotes
+abline(v = c(-1, 1), lty = 2, lwd = 2)
+abline(h = 2,        lty = 2, lwd = 2)
+
+text(-1, 9.2, "x = -1", pos = 4)
+text( 1, 9.2, "x = 1",  pos = 4)
+text(-4.7, 2, "y = 2",  pos = 3)
+
+# Mark the given point
+points(0, f(0), pch = 19)
+text(0, f(0), " (0, 2)", pos = 4)
+
+# Visual cue for "inflection at x=0"
+abline(v = 0, lty = 3)
+text(0, -9.2, "curvature change at x = 0", pos = 3, cex = 0.9)
+```
+
+</details>
