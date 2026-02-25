@@ -2460,12 +2460,15 @@ As \(x\to\pm\infty\), the exponential term dies out:
 
 \[
 \lim_{x\to\infty} h_1(x)=1, \qquad 
-\lim_{x\to -\infty} h_1(x)=1
+\lim_{x\to -\infty} h_1(x)= -\infty
 \]
 
+Heading to the right of the function we have the asymptote:
 \[
 \text{Horizontal asymptote: } y=1
 \]
+
+However, when we go to the left, towards -\infty, we need to use L'Hopital's
 
 ---
 
