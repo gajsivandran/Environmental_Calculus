@@ -612,3 +612,6 @@ why-it-matters-in-environmental-sciences
 optimization-around-us-under-us
 qualitative-optimizating
 optimization-case-studies
+optimization-problem-open-top-box
+logistic-growth-harvesting-optimization
+discussion-1

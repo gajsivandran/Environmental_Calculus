@@ -737,6 +737,324 @@ V \approx 68.0.
 **Conclusion:**  
 The **sphere** gives the largest possible volume for a fixed surface area of 100. This matches the classical result that **a sphere minimizes surface area for a given volume**, or equivalently, **maximizes volume for a given surface area**.
 
+:::
 
 
 \newpage
+
+## Optimization Problem: Open-Top Box
+
+An open box is to be made from a **10-inch by 8-inch** piece of cardboard.
+
+Squares of equal side length are cut from each of the four corners, and the sides are folded up to form the box.
+
+What is the largest volume box you can make?
+
+
+
+
+\newpage
+
+## Logistic Growth, Harvesting & Optimization
+
+
+> How much can we harvest from a renewable population without causing collapse?
+
+Today you will:
+
+1. Understand the logistic growth model  
+2. Reinterpret it as a function to optimize  
+3. Add harvesting  
+4. Define sustainability  
+5. Connect equilibrium and optimization  
+
+Work in groups of 3–4.  
+Explain reasoning clearly. Include units when appropriate.
+
+---
+
+### Part 1 — Understanding Logistic Growth {-}
+
+We begin with the logistic differential equation:
+
+\[
+\frac{dP}{dt} = rP\left(1 - \frac{P}{K}\right)
+\]
+
+Where:
+
+- \(P(t)\) = population  
+- \(r\) = intrinsic growth rate  
+- \(K\) = carrying capacity  
+
+---
+
+### 1. Behavior of the Model {-}
+
+### (a) Small Population  {-}
+
+If \(P\) is much smaller than \(K\), approximate:
+
+\[
+\frac{dP}{dt} \approx ?
+\]
+
+What type of growth does this resemble?
+
+---
+
+### (b) Near Carrying Capacity  {-}
+
+What happens when:
+
+- \(P = K\)?  
+- \(P > K\)?  
+
+Explain using the structure of the equation.
+
+---
+
+### (c) Equilibria  {-}
+
+Set:
+
+\[
+\frac{dP}{dt} = 0
+\]
+
+Find the equilibrium solutions.
+
+Determine which are stable using sign analysis.
+
+---
+
+### Part 2 — Viewing Growth as a Function of Population  {-}
+
+Notice:
+
+The right-hand side depends only on \(P\).
+
+Define:
+
+\[
+G(P) = rP\left(1 - \frac{P}{K}\right)
+\]
+
+This represents:
+
+> The natural growth rate of the population as a function of population size.
+
+So we now write:
+
+\[
+\frac{dP}{dt} = G(P)
+\]
+
+---
+
+### 2a. Rewrite the Function  {-}
+
+Expand:
+
+\[
+G(P) = rP - \frac{r}{K}P^2
+\]
+
+### Questions  {-}
+
+1. What type of function is this?  
+2. What shape does its graph have?  
+3. Where is \(G(P) = 0\)?  
+4. What do those zeros represent biologically?  
+
+---
+
+### 2b. Maximizing Natural Growth {-}
+
+We now ask:
+
+> For which population size is natural growth largest?
+
+Take the derivative:
+
+\[
+G'(P) = r - \frac{2r}{K}P
+\]
+
+Set:
+
+\[
+G'(P) = 0
+\]
+
+Solve for \(P\).
+
+---
+
+### Interpretation  {-}
+
+You should find:
+
+\[
+P = \frac{K}{2}
+\]
+
+Why does maximum growth occur at half the carrying capacity?
+
+---
+
+### Part 3 — Adding Harvesting {-}
+
+Suppose individuals are removed at a constant rate \(H\).
+
+The model becomes:
+
+\[
+\frac{dP}{dt} = rP\left(1 - \frac{P}{K}\right) - H
+\]
+
+or
+
+\[
+\frac{dP}{dt} = G(P) - H
+\]
+
+---
+
+### 3a. Equilibrium Under Harvesting {-}
+
+An equilibrium occurs when:
+
+\[
+\frac{dP}{dt} = 0
+\]
+
+So:
+
+\[
+rP\left(1 - \frac{P}{K}\right) = H
+\]
+
+At equilibrium:
+
+> Natural growth equals harvest.
+
+---
+
+### Method to Find Equilibria {-}
+
+1. Expand the logistic term.  
+2. Rearrange into a quadratic in \(P\).  
+3. Apply the quadratic formula.
+
+This leads to:
+
+\[
+rP^2 - rKP + HK = 0
+\]
+
+Using the quadratic formula gives:
+
+\[
+P = \frac{K}{2} \left(1 \pm \sqrt{1 - \frac{4H}{rK}}\right)
+\]
+
+---
+
+### 3b. What This Expression Reveals {-}
+
+Focus on the square root:
+
+\[
+\sqrt{1 - \frac{4H}{rK}}
+\]
+
+For real equilibria to exist:
+
+\[
+1 - \frac{4H}{rK} \ge 0
+\]
+
+So:
+
+\[
+H \le \frac{rK}{4}
+\]
+
+---
+
+### Discussion
+
+- If \(H < \frac{rK}{4}\): how many equilibria exist?  
+- If \(H = \frac{rK}{4}\): what happens?  
+- If \(H > \frac{rK}{4}\): what happens biologically?  
+
+---
+
+### Part 4 — Sustainable Harvest {-}
+
+We define **sustainable harvesting** as:
+
+> A harvest rate \(H\) for which a positive equilibrium exists.
+
+From the algebra:
+
+\[
+H \le \frac{rK}{4}
+\]
+
+So the largest sustainable harvest is:
+
+\[
+H_{\text{max}} = \frac{rK}{4}
+\]
+
+---
+
+### Part 5 — Connecting Optimization and Sustainability {-}
+
+Recall:
+
+- Maximum natural growth occurs at \(P = \frac{K}{2}\).  
+- The maximum value of \(G(P)\) is:
+
+\[
+G\!\left(\frac{K}{2}\right) = \frac{rK}{4}
+\]
+
+Notice:
+
+The maximum sustainable harvest equals the maximum natural growth rate.
+
+So:
+
+- Optimization of growth  
+- Existence of equilibrium  
+- Sustainability condition  
+
+are all describing the same mathematical structure.
+
+---
+
+### Part 6 — Reflection {-}
+
+Discuss in your group:
+
+1. Why is harvesting at exactly \(H_{\text{max}}\) risky in real systems?  
+2. What assumptions in this model make it fragile?  
+3. If climate change reduces \(K\), what happens to sustainable harvest?  
+4. If environmental stress reduces \(r\), what happens?  
+
+---
+
+### Big Takeaway {-}
+
+This investigation shows how:
+
+- A differential equation describes dynamics.  
+- Rewriting it as a function reveals structure.  
+- Optimization determines limits.  
+- Sustainability emerges from calculus.  
+
+This is mathematical modeling as decision-making.
+

@@ -23,7 +23,7 @@
 <meta name="author" content="Gaj Sivandran" />
 
 
-<meta name="date" content="2026-02-25" />
+<meta name="date" content="2026-03-02" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -1144,6 +1144,29 @@
 <li class="chapter" data-level="" data-path="optimization-workbook.html"><a href="optimization-workbook.html#part-3-rectangular-prism-s"><i class="fa fa-check"></i>Part 3 — Rectangular Prism (s</a></li>
 <li class="chapter" data-level="" data-path="optimization-workbook.html"><a href="optimization-workbook.html#part-4-final-comparison"><i class="fa fa-check"></i>Part 4 — Final Comparison</a></li>
 </ul></li>
+<li class="chapter" data-level="12.5" data-path="optimization-workbook.html"><a href="optimization-workbook.html#optimization-problem-open-top-box"><i class="fa fa-check"></i><b>12.5</b> Optimization Problem: Open-Top Box</a></li>
+<li class="chapter" data-level="12.6" data-path="optimization-workbook.html"><a href="optimization-workbook.html#logistic-growth-harvesting-optimization"><i class="fa fa-check"></i><b>12.6</b> Logistic Growth, Harvesting &amp; Optimization</a>
+<ul>
+<li class="chapter" data-level="" data-path="optimization-workbook.html"><a href="optimization-workbook.html#part-1-understanding-logistic-growth"><i class="fa fa-check"></i>Part 1 — Understanding Logistic Growth</a></li>
+<li class="chapter" data-level="" data-path="optimization-workbook.html"><a href="optimization-workbook.html#behavior-of-the-model"><i class="fa fa-check"></i>1. Behavior of the Model</a></li>
+<li class="chapter" data-level="" data-path="optimization-workbook.html"><a href="optimization-workbook.html#a-small-population"><i class="fa fa-check"></i>(a) Small Population</a></li>
+<li class="chapter" data-level="" data-path="optimization-workbook.html"><a href="optimization-workbook.html#b-near-carrying-capacity"><i class="fa fa-check"></i>(b) Near Carrying Capacity</a></li>
+<li class="chapter" data-level="" data-path="optimization-workbook.html"><a href="optimization-workbook.html#c-equilibria"><i class="fa fa-check"></i>(c) Equilibria</a></li>
+<li class="chapter" data-level="" data-path="optimization-workbook.html"><a href="optimization-workbook.html#part-2-viewing-growth-as-a-function-of-population"><i class="fa fa-check"></i>Part 2 — Viewing Growth as a Function of Population</a></li>
+<li class="chapter" data-level="" data-path="optimization-workbook.html"><a href="optimization-workbook.html#a.-rewrite-the-function"><i class="fa fa-check"></i>2a. Rewrite the Function</a></li>
+<li class="chapter" data-level="" data-path="optimization-workbook.html"><a href="optimization-workbook.html#questions-1"><i class="fa fa-check"></i>Questions</a></li>
+<li class="chapter" data-level="" data-path="optimization-workbook.html"><a href="optimization-workbook.html#b.-maximizing-natural-growth"><i class="fa fa-check"></i>2b. Maximizing Natural Growth</a></li>
+<li class="chapter" data-level="" data-path="optimization-workbook.html"><a href="optimization-workbook.html#interpretation-8"><i class="fa fa-check"></i>Interpretation</a></li>
+<li class="chapter" data-level="" data-path="optimization-workbook.html"><a href="optimization-workbook.html#part-3-adding-harvesting"><i class="fa fa-check"></i>Part 3 — Adding Harvesting</a></li>
+<li class="chapter" data-level="" data-path="optimization-workbook.html"><a href="optimization-workbook.html#a.-equilibrium-under-harvesting"><i class="fa fa-check"></i>3a. Equilibrium Under Harvesting</a></li>
+<li class="chapter" data-level="" data-path="optimization-workbook.html"><a href="optimization-workbook.html#method-to-find-equilibria"><i class="fa fa-check"></i>Method to Find Equilibria</a></li>
+<li class="chapter" data-level="" data-path="optimization-workbook.html"><a href="optimization-workbook.html#b.-what-this-expression-reveals"><i class="fa fa-check"></i>3b. What This Expression Reveals</a></li>
+<li class="chapter" data-level="12.6.1" data-path="optimization-workbook.html"><a href="optimization-workbook.html#discussion-1"><i class="fa fa-check"></i><b>12.6.1</b> Discussion</a></li>
+<li class="chapter" data-level="" data-path="optimization-workbook.html"><a href="optimization-workbook.html#part-4-sustainable-harvest"><i class="fa fa-check"></i>Part 4 — Sustainable Harvest</a></li>
+<li class="chapter" data-level="" data-path="optimization-workbook.html"><a href="optimization-workbook.html#part-5-connecting-optimization-and-sustainability"><i class="fa fa-check"></i>Part 5 — Connecting Optimization and Sustainability</a></li>
+<li class="chapter" data-level="" data-path="optimization-workbook.html"><a href="optimization-workbook.html#part-6-reflection"><i class="fa fa-check"></i>Part 6 — Reflection</a></li>
+<li class="chapter" data-level="" data-path="optimization-workbook.html"><a href="optimization-workbook.html#big-takeaway"><i class="fa fa-check"></i>Big Takeaway</a></li>
+</ul></li>
 </ul></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -1792,7 +1815,291 @@ V \approx 68.0.
 </table>
 <p><strong>Conclusion:</strong><br />
 The <strong>sphere</strong> gives the largest possible volume for a fixed surface area of 100. This matches the classical result that <strong>a sphere minimizes surface area for a given volume</strong>, or equivalently, <strong>maximizes volume for a given surface area</strong>.</p>
+</div>
+</div>
 <div style="page-break-after: always;"></div>
+<div id="optimization-problem-open-top-box" class="section level2 hasAnchor" number="12.5">
+<h2><span class="header-section-number">12.5</span> Optimization Problem: Open-Top Box<a href="optimization-workbook.html#optimization-problem-open-top-box" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>An open box is to be made from a <strong>10-inch by 8-inch</strong> piece of cardboard.</p>
+<p>Squares of equal side length are cut from each of the four corners, and the sides are folded up to form the box.</p>
+<p>What is the largest volume box you can make?</p>
+<div style="page-break-after: always;"></div>
+</div>
+<div id="logistic-growth-harvesting-optimization" class="section level2 hasAnchor" number="12.6">
+<h2><span class="header-section-number">12.6</span> Logistic Growth, Harvesting &amp; Optimization<a href="optimization-workbook.html#logistic-growth-harvesting-optimization" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<blockquote>
+<p>How much can we harvest from a renewable population without causing collapse?</p>
+</blockquote>
+<p>Today you will:</p>
+<ol style="list-style-type: decimal">
+<li>Understand the logistic growth model<br />
+</li>
+<li>Reinterpret it as a function to optimize<br />
+</li>
+<li>Add harvesting<br />
+</li>
+<li>Define sustainability<br />
+</li>
+<li>Connect equilibrium and optimization</li>
+</ol>
+<p>Work in groups of 3–4.<br />
+Explain reasoning clearly. Include units when appropriate.</p>
+<hr />
+<div id="part-1-understanding-logistic-growth" class="section level3 unnumbered hasAnchor">
+<h3>Part 1 — Understanding Logistic Growth<a href="optimization-workbook.html#part-1-understanding-logistic-growth" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>We begin with the logistic differential equation:</p>
+<p><span class="math display">\[
+\frac{dP}{dt} = rP\left(1 - \frac{P}{K}\right)
+\]</span></p>
+<p>Where:</p>
+<ul>
+<li><span class="math inline">\(P(t)\)</span> = population<br />
+</li>
+<li><span class="math inline">\(r\)</span> = intrinsic growth rate<br />
+</li>
+<li><span class="math inline">\(K\)</span> = carrying capacity</li>
+</ul>
+<hr />
+</div>
+<div id="behavior-of-the-model" class="section level3 unnumbered hasAnchor">
+<h3>1. Behavior of the Model<a href="optimization-workbook.html#behavior-of-the-model" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+</div>
+<div id="a-small-population" class="section level3 unnumbered hasAnchor">
+<h3>(a) Small Population<a href="optimization-workbook.html#a-small-population" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>If <span class="math inline">\(P\)</span> is much smaller than <span class="math inline">\(K\)</span>, approximate:</p>
+<p><span class="math display">\[
+\frac{dP}{dt} \approx ?
+\]</span></p>
+<p>What type of growth does this resemble?</p>
+<hr />
+</div>
+<div id="b-near-carrying-capacity" class="section level3 unnumbered hasAnchor">
+<h3>(b) Near Carrying Capacity<a href="optimization-workbook.html#b-near-carrying-capacity" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>What happens when:</p>
+<ul>
+<li><span class="math inline">\(P = K\)</span>?<br />
+</li>
+<li><span class="math inline">\(P &gt; K\)</span>?</li>
+</ul>
+<p>Explain using the structure of the equation.</p>
+<hr />
+</div>
+<div id="c-equilibria" class="section level3 unnumbered hasAnchor">
+<h3>(c) Equilibria<a href="optimization-workbook.html#c-equilibria" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Set:</p>
+<p><span class="math display">\[
+\frac{dP}{dt} = 0
+\]</span></p>
+<p>Find the equilibrium solutions.</p>
+<p>Determine which are stable using sign analysis.</p>
+<hr />
+</div>
+<div id="part-2-viewing-growth-as-a-function-of-population" class="section level3 unnumbered hasAnchor">
+<h3>Part 2 — Viewing Growth as a Function of Population<a href="optimization-workbook.html#part-2-viewing-growth-as-a-function-of-population" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Notice:</p>
+<p>The right-hand side depends only on <span class="math inline">\(P\)</span>.</p>
+<p>Define:</p>
+<p><span class="math display">\[
+G(P) = rP\left(1 - \frac{P}{K}\right)
+\]</span></p>
+<p>This represents:</p>
+<blockquote>
+<p>The natural growth rate of the population as a function of population size.</p>
+</blockquote>
+<p>So we now write:</p>
+<p><span class="math display">\[
+\frac{dP}{dt} = G(P)
+\]</span></p>
+<hr />
+</div>
+<div id="a.-rewrite-the-function" class="section level3 unnumbered hasAnchor">
+<h3>2a. Rewrite the Function<a href="optimization-workbook.html#a.-rewrite-the-function" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Expand:</p>
+<p><span class="math display">\[
+G(P) = rP - \frac{r}{K}P^2
+\]</span></p>
+</div>
+<div id="questions-1" class="section level3 unnumbered hasAnchor">
+<h3>Questions<a href="optimization-workbook.html#questions-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ol style="list-style-type: decimal">
+<li>What type of function is this?<br />
+</li>
+<li>What shape does its graph have?<br />
+</li>
+<li>Where is <span class="math inline">\(G(P) = 0\)</span>?<br />
+</li>
+<li>What do those zeros represent biologically?</li>
+</ol>
+<hr />
+</div>
+<div id="b.-maximizing-natural-growth" class="section level3 unnumbered hasAnchor">
+<h3>2b. Maximizing Natural Growth<a href="optimization-workbook.html#b.-maximizing-natural-growth" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>We now ask:</p>
+<blockquote>
+<p>For which population size is natural growth largest?</p>
+</blockquote>
+<p>Take the derivative:</p>
+<p><span class="math display">\[
+G&#39;(P) = r - \frac{2r}{K}P
+\]</span></p>
+<p>Set:</p>
+<p><span class="math display">\[
+G&#39;(P) = 0
+\]</span></p>
+<p>Solve for <span class="math inline">\(P\)</span>.</p>
+<hr />
+</div>
+<div id="interpretation-8" class="section level3 unnumbered hasAnchor">
+<h3>Interpretation<a href="optimization-workbook.html#interpretation-8" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>You should find:</p>
+<p><span class="math display">\[
+P = \frac{K}{2}
+\]</span></p>
+<p>Why does maximum growth occur at half the carrying capacity?</p>
+<hr />
+</div>
+<div id="part-3-adding-harvesting" class="section level3 unnumbered hasAnchor">
+<h3>Part 3 — Adding Harvesting<a href="optimization-workbook.html#part-3-adding-harvesting" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Suppose individuals are removed at a constant rate <span class="math inline">\(H\)</span>.</p>
+<p>The model becomes:</p>
+<p><span class="math display">\[
+\frac{dP}{dt} = rP\left(1 - \frac{P}{K}\right) - H
+\]</span></p>
+<p>or</p>
+<p><span class="math display">\[
+\frac{dP}{dt} = G(P) - H
+\]</span></p>
+<hr />
+</div>
+<div id="a.-equilibrium-under-harvesting" class="section level3 unnumbered hasAnchor">
+<h3>3a. Equilibrium Under Harvesting<a href="optimization-workbook.html#a.-equilibrium-under-harvesting" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>An equilibrium occurs when:</p>
+<p><span class="math display">\[
+\frac{dP}{dt} = 0
+\]</span></p>
+<p>So:</p>
+<p><span class="math display">\[
+rP\left(1 - \frac{P}{K}\right) = H
+\]</span></p>
+<p>At equilibrium:</p>
+<blockquote>
+<p>Natural growth equals harvest.</p>
+</blockquote>
+<hr />
+</div>
+<div id="method-to-find-equilibria" class="section level3 unnumbered hasAnchor">
+<h3>Method to Find Equilibria<a href="optimization-workbook.html#method-to-find-equilibria" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ol style="list-style-type: decimal">
+<li>Expand the logistic term.<br />
+</li>
+<li>Rearrange into a quadratic in <span class="math inline">\(P\)</span>.<br />
+</li>
+<li>Apply the quadratic formula.</li>
+</ol>
+<p>This leads to:</p>
+<p><span class="math display">\[
+rP^2 - rKP + HK = 0
+\]</span></p>
+<p>Using the quadratic formula gives:</p>
+<p><span class="math display">\[
+P = \frac{K}{2} \left(1 \pm \sqrt{1 - \frac{4H}{rK}}\right)
+\]</span></p>
+<hr />
+</div>
+<div id="b.-what-this-expression-reveals" class="section level3 unnumbered hasAnchor">
+<h3>3b. What This Expression Reveals<a href="optimization-workbook.html#b.-what-this-expression-reveals" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Focus on the square root:</p>
+<p><span class="math display">\[
+\sqrt{1 - \frac{4H}{rK}}
+\]</span></p>
+<p>For real equilibria to exist:</p>
+<p><span class="math display">\[
+1 - \frac{4H}{rK} \ge 0
+\]</span></p>
+<p>So:</p>
+<p><span class="math display">\[
+H \le \frac{rK}{4}
+\]</span></p>
+<hr />
+</div>
+<div id="discussion-1" class="section level3 hasAnchor" number="12.6.1">
+<h3><span class="header-section-number">12.6.1</span> Discussion<a href="optimization-workbook.html#discussion-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li>If <span class="math inline">\(H &lt; \frac{rK}{4}\)</span>: how many equilibria exist?<br />
+</li>
+<li>If <span class="math inline">\(H = \frac{rK}{4}\)</span>: what happens?<br />
+</li>
+<li>If <span class="math inline">\(H &gt; \frac{rK}{4}\)</span>: what happens biologically?</li>
+</ul>
+<hr />
+</div>
+<div id="part-4-sustainable-harvest" class="section level3 unnumbered hasAnchor">
+<h3>Part 4 — Sustainable Harvest<a href="optimization-workbook.html#part-4-sustainable-harvest" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>We define <strong>sustainable harvesting</strong> as:</p>
+<blockquote>
+<p>A harvest rate <span class="math inline">\(H\)</span> for which a positive equilibrium exists.</p>
+</blockquote>
+<p>From the algebra:</p>
+<p><span class="math display">\[
+H \le \frac{rK}{4}
+\]</span></p>
+<p>So the largest sustainable harvest is:</p>
+<p><span class="math display">\[
+H_{\text{max}} = \frac{rK}{4}
+\]</span></p>
+<hr />
+</div>
+<div id="part-5-connecting-optimization-and-sustainability" class="section level3 unnumbered hasAnchor">
+<h3>Part 5 — Connecting Optimization and Sustainability<a href="optimization-workbook.html#part-5-connecting-optimization-and-sustainability" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Recall:</p>
+<ul>
+<li>Maximum natural growth occurs at <span class="math inline">\(P = \frac{K}{2}\)</span>.<br />
+</li>
+<li>The maximum value of <span class="math inline">\(G(P)\)</span> is:</li>
+</ul>
+<p><span class="math display">\[
+G\!\left(\frac{K}{2}\right) = \frac{rK}{4}
+\]</span></p>
+<p>Notice:</p>
+<p>The maximum sustainable harvest equals the maximum natural growth rate.</p>
+<p>So:</p>
+<ul>
+<li>Optimization of growth<br />
+</li>
+<li>Existence of equilibrium<br />
+</li>
+<li>Sustainability condition</li>
+</ul>
+<p>are all describing the same mathematical structure.</p>
+<hr />
+</div>
+<div id="part-6-reflection" class="section level3 unnumbered hasAnchor">
+<h3>Part 6 — Reflection<a href="optimization-workbook.html#part-6-reflection" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Discuss in your group:</p>
+<ol style="list-style-type: decimal">
+<li>Why is harvesting at exactly <span class="math inline">\(H_{\text{max}}\)</span> risky in real systems?<br />
+</li>
+<li>What assumptions in this model make it fragile?<br />
+</li>
+<li>If climate change reduces <span class="math inline">\(K\)</span>, what happens to sustainable harvest?<br />
+</li>
+<li>If environmental stress reduces <span class="math inline">\(r\)</span>, what happens?</li>
+</ol>
+<hr />
+</div>
+<div id="big-takeaway" class="section level3 unnumbered hasAnchor">
+<h3>Big Takeaway<a href="optimization-workbook.html#big-takeaway" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>This investigation shows how:</p>
+<ul>
+<li>A differential equation describes dynamics.<br />
+</li>
+<li>Rewriting it as a function reveals structure.<br />
+</li>
+<li>Optimization determines limits.<br />
+</li>
+<li>Sustainability emerges from calculus.</li>
+</ul>
+<p>This is mathematical modeling as decision-making.</p>
 
 </div>
 </div>
