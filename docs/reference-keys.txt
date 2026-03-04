@@ -615,3 +615,4 @@ optimization-case-studies
 optimization-problem-open-top-box
 logistic-growth-harvesting-optimization
 discussion-1
+practice-optimization-in-environmental-systems-2

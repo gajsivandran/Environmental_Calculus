@@ -1058,3 +1058,792 @@ This investigation shows how:
 
 This is mathematical modeling as decision-making.
 
+
+\newpage
+
+## Practice: Optimization in Environmental Systems 
+
+Work through the following problems to build fluency in identifying variables, building objective functions, applying derivatives, and interpreting results.
+
+---
+
+### Optimization with no constraints {-}
+
+#### **1. Optimal Mangrove Spacing** {-}
+
+Mangrove biomass gain per tree is modeled by  
+
+\[
+B(d)=18d-1.5d^2
+\]
+
+where \(d\) is spacing (m).
+
+**a)** Find the spacing that maximizes biomass gain.  
+**b)** Interpret the result.
+
+---
+
+#### **2. Peak Pollinator Activity Temperature** {-}
+
+Daily pollinator visits to a meadow are modeled by  
+
+\[
+V(T)=-(T-22)^2+144
+\]
+
+where \(T\) is temperature (°C).
+
+**a)** Find the temperature that maximizes visits.  
+**b)** What is the maximum visit count predicted by the model?
+
+---
+
+#### **3. Optimal Fertilizer Dose** {-}
+
+Net crop benefit (yield gain minus nutrient-loss penalty) is  
+
+\[
+N(x)=30x-2x^2-10
+\]
+
+where \(x\) is fertilizer dose (arbitrary units).
+
+**a)** Find the dose that maximizes net benefit.  
+**b)** Interpret the “too little vs. too much” tradeoff.
+
+---
+
+#### **4. Maximum Wind Turbine Power (Simplified)** {-}
+
+A simplified model for turbine power output versus wind speed is  
+
+\[
+P(v)=6v-0.2v^2
+\]
+
+where \(v\) is wind speed (m/s).
+
+**a)** Find the wind speed that maximizes power in this model.  
+**b)** Interpret why the model peaks.
+
+---
+
+#### **5. Optimal Stream Restoration Flow** {-}
+
+Habitat suitability versus discharge is  
+
+\[
+H(Q)=50Q-2Q^2
+\]
+
+where \(Q\) is discharge (in consistent units).
+
+**a)** Find the discharge that maximizes suitability.  
+**b)** Interpret why suitability drops on either side of the optimum.
+
+---
+
+### Optimization with bounds {-}
+
+#### **6. Minimizing Sensor Error by Sampling Rate** {-}
+
+A sensor’s average error (lower is better) is modeled by  
+
+\[
+E(r)=\frac{20}{r+2}+0.1r
+\]
+
+where \(r\) is sampling rate (Hz), restricted to  
+
+\[
+0\le r\le 40
+\]
+
+**a)** Find the value of \(r\) that minimizes error on \([0,40]\).  
+**b)** Explain why you must check endpoints.
+
+---
+
+#### **7. Carbon Capture Depth Limit** {-}
+
+Carbon captured by a soil amendment increases with depth by  
+
+\[
+C(d)=12\sqrt{d}-d
+\]
+
+with a hard excavation limit  
+
+\[
+0\le d\le 25
+\]
+
+**a)** Find the depth that maximizes \(C(d)\) on \([0,25]\).  
+**b)** State whether the maximum occurs at an interior point or an endpoint.
+
+---
+
+#### **8. Best Compost Moisture Under Operating Range** {-}
+
+Compost processing rate is modeled by  
+
+\[
+R(m)=-(m-0.55)^2+0.40
+\]
+
+where \(m\) is moisture fraction, but operations allow only  
+
+\[
+0.20\le m\le 0.50
+\]
+
+**a)** Find the moisture level that maximizes \(R(m)\) on the allowed range.  
+**b)** Explain why the “true peak” might be infeasible.
+
+---
+
+#### **9. Minimizing Travel Time With Speed Limits** {-}
+
+Travel time to reach a remote field site is approximated by  
+
+\[
+T(v)=\frac{120}{v}
+\]
+
+where \(v\) is driving speed (mph) and regulations require  
+
+\[
+45\le v\le 65
+\]
+
+**a)** Minimize \(T(v)\) on \([45,65]\).  
+**b)** Interpret the answer.
+
+---
+
+#### **10. Minimizing Evaporation Loss With Allowed Water Level** {-}
+
+Evaporation loss from a reservoir edge is modeled by  
+
+\[
+L(h)=h^2-6h+20
+\]
+
+where \(h\) is water level (m) and operational limits require  
+
+\[
+0\le h\le 2
+\]
+
+**a)** Find the value of \(h\) that minimizes \(L(h)\) on \([0,2]\).  
+**b)** Explain why the unconstrained minimizer is not usable here.
+
+---
+
+### Optimizations with constraints {-}
+
+#### **11. Riverbank Fence: Maximize Area (3 Sides)** {-}
+
+A rectangular riparian buffer sits along a straight river, so fencing is needed on **three sides only**. You have **240 m** of fencing.
+
+Let \(x\) = width (perpendicular to river), \(y\) = length (along river).
+
+**a)** Write the constraint relating \(x\) and \(y\).  
+**b)** Maximize area \(A=xy\).  
+**c)** Give the optimal dimensions.
+
+---
+
+#### **12. Closed-Top Water Tank: Minimize Material** {-}
+
+A **closed** cylindrical storage tank must hold volume  
+
+\[
+V=\pi r^2h=300
+\]
+
+Surface area (material) is  
+
+\[
+S=2\pi r^2+2\pi rh
+\]
+
+**a)** Rewrite \(S\) as a function of \(r\) only.  
+**b)** Find the \(r\) minimizing \(S\), and the corresponding \(h\).
+
+---
+
+#### **13. Rectangle With Fixed Area: Minimize Perimeter** {-}
+
+A protected grassland plot must have fixed area  
+
+\[
+A=10{,}000\ \text{m}^2
+\]
+
+and is rectangular with sides \(x\) and \(y\).
+
+**a)** Write perimeter \(P(x,y)=2x+2y\).  
+**b)** Use the area constraint to express \(P\) in one variable.  
+**c)** Find the rectangle dimensions that minimize perimeter.
+
+---
+
+#### **14. Solar Farm: Land vs. Perimeter Cost** {-}
+
+A rectangular solar farm has fixed area  
+
+\[
+xy=50
+\]
+
+(in consistent units)
+
+Perimeter fencing cost:
+
+\[
+C=80(2x+2y)
+\]
+
+**a)** Minimize fencing cost \(C\) subject to the area constraint.  
+**b)** Give the optimal shape and interpret.
+
+---
+
+#### **15. Pond Design With Mixed Material Costs** {-}
+
+A rectangular pond must hold volume  
+
+\[
+LWD=1200
+\]
+
+The pond has **no lid**.
+
+Material costs:
+
+- Bottom: \$40 per m\(^2\)  
+- Sides: \$20 per m\(^2\)
+
+Assume the pond is **square in plan view**:
+
+\[
+L=W=x
+\]
+
+**a)** Write total cost \(C(x,d)\).  
+**b)** Use the constraint to rewrite \(C(x)\).  
+**c)** Find \(x\) minimizing cost and compute \(d\).
+
+---
+
+### Mixed practice — determine the appropriate optimization method {-}
+
+#### **16. Leaving a Foraging Patch** {-}
+
+Net energy gain is
+
+\[
+G(t)=\frac{30t}{t+5}-2t
+\]
+
+where \(t\ge0\) is time spent foraging.
+
+**a)** Determine whether there is an optimal finite time \(t^*\).  
+**b)** If so, compute it and interpret.
+
+---
+
+#### **17. Fish Passage Flow With Minimum Requirement** {-}
+
+Fish passage suitability:
+
+\[
+S(Q)=12Q-0.4Q^2
+\]
+
+Constraint:
+
+\[
+Q\ge20
+\]
+
+**a)** Find the unconstrained optimizer.  
+**b)** Determine the optimal feasible flow.  
+**c)** Interpret.
+
+---
+
+#### **18. Choosing Sampling Window Length** {-}
+
+Monitoring usefulness score:
+
+\[
+U(w)=50\ln(w+1)-w
+\]
+
+Feasible range:
+
+\[
+0\le w\le120
+\]
+
+**a)** Find critical points.  
+**b)** Determine the global maximum on the interval.  
+**c)** Interpret.
+
+---
+
+#### **19. Treatment Wetland Depth Decision** {-}
+
+Pollutant removal model:
+
+\[
+R(d)=600-8d+\frac{120}{\sqrt{d}}
+\]
+
+Feasible depths:
+
+\[
+1\le d\le25
+\]
+
+**a)** Find all critical points in the interval.  
+**b)** Identify the depth maximizing removal.
+
+---
+
+#### **20. Maximizing Net Carbon Benefit** {-}
+
+Net carbon benefit:
+
+\[
+B(x)=100(1-e^{-0.1x})-0.3x
+\]
+
+Feasible effort:
+
+\[
+0\le x\le80
+\]
+
+**a)** Find critical points.  
+**b)** Determine the global maximum on the interval.  
+**c)** Interpret the result.
+
+---
+
+### Solutions{-}
+
+<details open>
+<summary><strong>Click to Unlock Solutions</strong></summary>
+
+<div id="sol_set4" hidden markdown="1" style="margin-top:0.75rem;">
+
+
+**1**
+
+\[
+B'(d)=18-3d=0
+\]
+
+\[
+d=6
+\]
+
+\[
+B''(d)=-3<0
+\]
+
+Maximum at \(d=6\).
+
+---
+
+**2**
+
+Vertex occurs at  
+
+\[
+T=22
+\]
+
+Maximum value  
+
+\[
+V=144
+\]
+
+---
+
+**3**
+
+\[
+N'(x)=30-4x=0
+\]
+
+\[
+x=7.5
+\]
+
+Maximum since  
+
+\[
+N''(x)=-4<0
+\]
+
+---
+
+**4**
+
+\[
+P'(v)=6-0.4v=0
+\]
+
+\[
+v=15
+\]
+
+Maximum since  
+
+\[
+P''(v)=-0.4<0
+\]
+
+---
+
+**5**
+
+\[
+H'(Q)=50-4Q=0
+\]
+
+\[
+Q=12.5
+\]
+
+Maximum since  
+
+\[
+H''(Q)=-4<0
+\]
+
+---
+
+**6**
+
+\[
+E'(r)=-\frac{20}{(r+2)^2}+0.1
+\]
+
+Solve
+
+\[
+0.1=\frac{20}{(r+2)^2}
+\]
+
+\[
+(r+2)^2=200
+\]
+
+\[
+r\approx12.14
+\]
+
+Check endpoints to confirm global minimum.
+
+---
+
+**7**
+
+\[
+C'(d)=\frac{6}{\sqrt d}-1
+\]
+
+Critical point \(d=36\) is outside feasible range.
+
+Evaluate endpoints.
+
+Maximum occurs at  
+
+\[
+d=25
+\]
+
+---
+
+**8**
+
+Unconstrained maximum occurs at  
+
+\[
+m=0.55
+\]
+
+Not feasible.
+
+Best feasible value:
+
+\[
+m=0.50
+\]
+
+---
+
+**9**
+
+\[
+T(v)=120/v
+\]
+
+Function decreases as \(v\) increases.
+
+Minimum occurs at  
+
+\[
+v=65
+\]
+
+---
+
+**10**
+
+Unconstrained minimum:
+
+\[
+h=3
+\]
+
+Outside feasible interval.
+
+Evaluate endpoints.
+
+Minimum occurs at  
+
+\[
+h=2
+\]
+
+---
+
+**11**
+
+Constraint
+
+\[
+2x+y=240
+\]
+
+\[
+y=240-2x
+\]
+
+\[
+A(x)=240x-2x^2
+\]
+
+\[
+A'(x)=240-4x=0
+\]
+
+\[
+x=60,\quad y=120
+\]
+
+---
+
+**12**
+
+\[
+h=\frac{300}{\pi r^2}
+\]
+
+\[
+S(r)=2\pi r^2+\frac{600}{r}
+\]
+
+\[
+S'(r)=4\pi r-\frac{600}{r^2}=0
+\]
+
+\[
+r^3=\frac{150}{\pi}
+\]
+
+---
+
+**13**
+
+Area constraint
+
+\[
+y=\frac{10000}{x}
+\]
+
+\[
+P(x)=2x+\frac{20000}{x}
+\]
+
+\[
+P'(x)=2-\frac{20000}{x^2}=0
+\]
+
+\[
+x=y=100
+\]
+
+---
+
+**14**
+
+For fixed area, perimeter minimized by a **square**.
+
+\[
+x=y=\sqrt{50}
+\]
+
+---
+
+**15**
+
+Volume
+
+\[
+x^2 d=1200
+\]
+
+\[
+d=\frac{1200}{x^2}
+\]
+
+Cost
+
+\[
+C(x)=40x^2+\frac{96000}{x}
+\]
+
+\[
+C'(x)=80x-\frac{96000}{x^2}=0
+\]
+
+\[
+x^3=1200
+\]
+
+---
+
+**16**
+
+\[
+G'(t)=\frac{150}{(t+5)^2}-2
+\]
+
+Solve
+
+\[
+(t+5)^2=75
+\]
+
+\[
+t=\sqrt{75}-5
+\]
+
+---
+
+**17**
+
+\[
+S'(Q)=12-0.8Q=0
+\]
+
+\[
+Q=15
+\]
+
+Not feasible.
+
+Optimal feasible:
+
+\[
+Q=20
+\]
+
+---
+
+**18**
+
+\[
+U'(w)=\frac{50}{w+1}-1
+\]
+
+\[
+w=49
+\]
+
+Maximum.
+
+---
+
+**19**
+
+\[
+R'(d)=-8-\frac{60}{d^{3/2}}<0
+\]
+
+Function decreasing.
+
+Maximum at  
+
+\[
+d=1
+\]
+
+---
+
+**20**
+
+\[
+B'(x)=10e^{-0.1x}-0.3
+\]
+
+Solve
+
+\[
+e^{-0.1x}=0.03
+\]
+
+\[
+x=-10\ln(0.03)\approx35.1
+\]
+
+Maximum occurs at this value.
+
+</div>
+
+<form onsubmit="unlock_set4(); return false;" id="gate_set4" style="margin-top:0.75rem;">
+  <input type="password" id="pwd_set4" placeholder="Enter password" aria-label="Answer key password">
+  <button type="submit">Unlock</button>
+  <span id="msg_set4" style="margin-left:0.5rem;" aria-live="polite"></span>
+</form>
+
+<script>
+function unlock_set4() {
+  var input = document.getElementById('pwd_set4');
+  var msg   = document.getElementById('msg_set4');
+  var sol   = document.getElementById('sol_set4');
+  var gate  = document.getElementById('gate_set4');
+  var pw    = (input.value || '').trim();
+  var det   = gate.closest('details'); if (det) det.open = true;
+
+  if (pw === 'footy') {
+    sol.hidden = false;
+    gate.hidden = true;
+    input.value = '';
+    msg.textContent = '';
+  } else {
+    msg.textContent = 'Stop guessing :) Ask a TA';
+    input.value = '';
+    input.focus();
+  }
+}
+</script>

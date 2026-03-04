@@ -23,7 +23,7 @@
 <meta name="author" content="Gaj Sivandran" />
 
 
-<meta name="date" content="2026-03-02" />
+<meta name="date" content="2026-03-04" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -1167,6 +1167,14 @@
 <li class="chapter" data-level="" data-path="optimization-workbook.html"><a href="optimization-workbook.html#part-6-reflection"><i class="fa fa-check"></i>Part 6 — Reflection</a></li>
 <li class="chapter" data-level="" data-path="optimization-workbook.html"><a href="optimization-workbook.html#big-takeaway"><i class="fa fa-check"></i>Big Takeaway</a></li>
 </ul></li>
+<li class="chapter" data-level="12.7" data-path="optimization-workbook.html"><a href="optimization-workbook.html#practice-optimization-in-environmental-systems-2"><i class="fa fa-check"></i><b>12.7</b> Practice: Optimization in Environmental Systems</a>
+<ul>
+<li class="chapter" data-level="" data-path="optimization-workbook.html"><a href="optimization-workbook.html#optimization-with-no-constraints"><i class="fa fa-check"></i>Optimization with no constraints</a></li>
+<li class="chapter" data-level="" data-path="optimization-workbook.html"><a href="optimization-workbook.html#optimization-with-bounds"><i class="fa fa-check"></i>Optimization with bounds</a></li>
+<li class="chapter" data-level="" data-path="optimization-workbook.html"><a href="optimization-workbook.html#optimizations-with-constraints"><i class="fa fa-check"></i>Optimizations with constraints</a></li>
+<li class="chapter" data-level="" data-path="optimization-workbook.html"><a href="optimization-workbook.html#mixed-practice-determine-the-appropriate-optimization-method"><i class="fa fa-check"></i>Mixed practice — determine the appropriate optimization method</a></li>
+<li class="chapter" data-level="" data-path="optimization-workbook.html"><a href="optimization-workbook.html#solutions"><i class="fa fa-check"></i>Solutions</a></li>
+</ul></li>
 </ul></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -2100,6 +2108,572 @@ G\!\left(\frac{K}{2}\right) = \frac{rK}{4}
 <li>Sustainability emerges from calculus.</li>
 </ul>
 <p>This is mathematical modeling as decision-making.</p>
+<div style="page-break-after: always;"></div>
+</div>
+</div>
+<div id="practice-optimization-in-environmental-systems-2" class="section level2 hasAnchor" number="12.7">
+<h2><span class="header-section-number">12.7</span> Practice: Optimization in Environmental Systems<a href="optimization-workbook.html#practice-optimization-in-environmental-systems-2" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Work through the following problems to build fluency in identifying variables, building objective functions, applying derivatives, and interpreting results.</p>
+<hr />
+<div id="optimization-with-no-constraints" class="section level3 unnumbered hasAnchor">
+<h3>Optimization with no constraints<a href="optimization-workbook.html#optimization-with-no-constraints" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="optimal-mangrove-spacing" class="section level4 unnumbered hasAnchor">
+<h4><strong>1. Optimal Mangrove Spacing</strong><a href="optimization-workbook.html#optimal-mangrove-spacing" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Mangrove biomass gain per tree is modeled by</p>
+<p><span class="math display">\[
+B(d)=18d-1.5d^2
+\]</span></p>
+<p>where <span class="math inline">\(d\)</span> is spacing (m).</p>
+<p><strong>a)</strong> Find the spacing that maximizes biomass gain.<br />
+<strong>b)</strong> Interpret the result.</p>
+<hr />
+</div>
+<div id="peak-pollinator-activity-temperature" class="section level4 unnumbered hasAnchor">
+<h4><strong>2. Peak Pollinator Activity Temperature</strong><a href="optimization-workbook.html#peak-pollinator-activity-temperature" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Daily pollinator visits to a meadow are modeled by</p>
+<p><span class="math display">\[
+V(T)=-(T-22)^2+144
+\]</span></p>
+<p>where <span class="math inline">\(T\)</span> is temperature (°C).</p>
+<p><strong>a)</strong> Find the temperature that maximizes visits.<br />
+<strong>b)</strong> What is the maximum visit count predicted by the model?</p>
+<hr />
+</div>
+<div id="optimal-fertilizer-dose" class="section level4 unnumbered hasAnchor">
+<h4><strong>3. Optimal Fertilizer Dose</strong><a href="optimization-workbook.html#optimal-fertilizer-dose" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Net crop benefit (yield gain minus nutrient-loss penalty) is</p>
+<p><span class="math display">\[
+N(x)=30x-2x^2-10
+\]</span></p>
+<p>where <span class="math inline">\(x\)</span> is fertilizer dose (arbitrary units).</p>
+<p><strong>a)</strong> Find the dose that maximizes net benefit.<br />
+<strong>b)</strong> Interpret the “too little vs. too much” tradeoff.</p>
+<hr />
+</div>
+<div id="maximum-wind-turbine-power-simplified" class="section level4 unnumbered hasAnchor">
+<h4><strong>4. Maximum Wind Turbine Power (Simplified)</strong><a href="optimization-workbook.html#maximum-wind-turbine-power-simplified" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>A simplified model for turbine power output versus wind speed is</p>
+<p><span class="math display">\[
+P(v)=6v-0.2v^2
+\]</span></p>
+<p>where <span class="math inline">\(v\)</span> is wind speed (m/s).</p>
+<p><strong>a)</strong> Find the wind speed that maximizes power in this model.<br />
+<strong>b)</strong> Interpret why the model peaks.</p>
+<hr />
+</div>
+<div id="optimal-stream-restoration-flow" class="section level4 unnumbered hasAnchor">
+<h4><strong>5. Optimal Stream Restoration Flow</strong><a href="optimization-workbook.html#optimal-stream-restoration-flow" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Habitat suitability versus discharge is</p>
+<p><span class="math display">\[
+H(Q)=50Q-2Q^2
+\]</span></p>
+<p>where <span class="math inline">\(Q\)</span> is discharge (in consistent units).</p>
+<p><strong>a)</strong> Find the discharge that maximizes suitability.<br />
+<strong>b)</strong> Interpret why suitability drops on either side of the optimum.</p>
+<hr />
+</div>
+</div>
+<div id="optimization-with-bounds" class="section level3 unnumbered hasAnchor">
+<h3>Optimization with bounds<a href="optimization-workbook.html#optimization-with-bounds" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="minimizing-sensor-error-by-sampling-rate" class="section level4 unnumbered hasAnchor">
+<h4><strong>6. Minimizing Sensor Error by Sampling Rate</strong><a href="optimization-workbook.html#minimizing-sensor-error-by-sampling-rate" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>A sensor’s average error (lower is better) is modeled by</p>
+<p><span class="math display">\[
+E(r)=\frac{20}{r+2}+0.1r
+\]</span></p>
+<p>where <span class="math inline">\(r\)</span> is sampling rate (Hz), restricted to</p>
+<p><span class="math display">\[
+0\le r\le 40
+\]</span></p>
+<p><strong>a)</strong> Find the value of <span class="math inline">\(r\)</span> that minimizes error on <span class="math inline">\([0,40]\)</span>.<br />
+<strong>b)</strong> Explain why you must check endpoints.</p>
+<hr />
+</div>
+<div id="carbon-capture-depth-limit" class="section level4 unnumbered hasAnchor">
+<h4><strong>7. Carbon Capture Depth Limit</strong><a href="optimization-workbook.html#carbon-capture-depth-limit" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Carbon captured by a soil amendment increases with depth by</p>
+<p><span class="math display">\[
+C(d)=12\sqrt{d}-d
+\]</span></p>
+<p>with a hard excavation limit</p>
+<p><span class="math display">\[
+0\le d\le 25
+\]</span></p>
+<p><strong>a)</strong> Find the depth that maximizes <span class="math inline">\(C(d)\)</span> on <span class="math inline">\([0,25]\)</span>.<br />
+<strong>b)</strong> State whether the maximum occurs at an interior point or an endpoint.</p>
+<hr />
+</div>
+<div id="best-compost-moisture-under-operating-range" class="section level4 unnumbered hasAnchor">
+<h4><strong>8. Best Compost Moisture Under Operating Range</strong><a href="optimization-workbook.html#best-compost-moisture-under-operating-range" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Compost processing rate is modeled by</p>
+<p><span class="math display">\[
+R(m)=-(m-0.55)^2+0.40
+\]</span></p>
+<p>where <span class="math inline">\(m\)</span> is moisture fraction, but operations allow only</p>
+<p><span class="math display">\[
+0.20\le m\le 0.50
+\]</span></p>
+<p><strong>a)</strong> Find the moisture level that maximizes <span class="math inline">\(R(m)\)</span> on the allowed range.<br />
+<strong>b)</strong> Explain why the “true peak” might be infeasible.</p>
+<hr />
+</div>
+<div id="minimizing-travel-time-with-speed-limits" class="section level4 unnumbered hasAnchor">
+<h4><strong>9. Minimizing Travel Time With Speed Limits</strong><a href="optimization-workbook.html#minimizing-travel-time-with-speed-limits" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Travel time to reach a remote field site is approximated by</p>
+<p><span class="math display">\[
+T(v)=\frac{120}{v}
+\]</span></p>
+<p>where <span class="math inline">\(v\)</span> is driving speed (mph) and regulations require</p>
+<p><span class="math display">\[
+45\le v\le 65
+\]</span></p>
+<p><strong>a)</strong> Minimize <span class="math inline">\(T(v)\)</span> on <span class="math inline">\([45,65]\)</span>.<br />
+<strong>b)</strong> Interpret the answer.</p>
+<hr />
+</div>
+<div id="minimizing-evaporation-loss-with-allowed-water-level" class="section level4 unnumbered hasAnchor">
+<h4><strong>10. Minimizing Evaporation Loss With Allowed Water Level</strong><a href="optimization-workbook.html#minimizing-evaporation-loss-with-allowed-water-level" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Evaporation loss from a reservoir edge is modeled by</p>
+<p><span class="math display">\[
+L(h)=h^2-6h+20
+\]</span></p>
+<p>where <span class="math inline">\(h\)</span> is water level (m) and operational limits require</p>
+<p><span class="math display">\[
+0\le h\le 2
+\]</span></p>
+<p><strong>a)</strong> Find the value of <span class="math inline">\(h\)</span> that minimizes <span class="math inline">\(L(h)\)</span> on <span class="math inline">\([0,2]\)</span>.<br />
+<strong>b)</strong> Explain why the unconstrained minimizer is not usable here.</p>
+<hr />
+</div>
+</div>
+<div id="optimizations-with-constraints" class="section level3 unnumbered hasAnchor">
+<h3>Optimizations with constraints<a href="optimization-workbook.html#optimizations-with-constraints" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="riverbank-fence-maximize-area-3-sides" class="section level4 unnumbered hasAnchor">
+<h4><strong>11. Riverbank Fence: Maximize Area (3 Sides)</strong><a href="optimization-workbook.html#riverbank-fence-maximize-area-3-sides" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>A rectangular riparian buffer sits along a straight river, so fencing is needed on <strong>three sides only</strong>. You have <strong>240 m</strong> of fencing.</p>
+<p>Let <span class="math inline">\(x\)</span> = width (perpendicular to river), <span class="math inline">\(y\)</span> = length (along river).</p>
+<p><strong>a)</strong> Write the constraint relating <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span>.<br />
+<strong>b)</strong> Maximize area <span class="math inline">\(A=xy\)</span>.<br />
+<strong>c)</strong> Give the optimal dimensions.</p>
+<hr />
+</div>
+<div id="closed-top-water-tank-minimize-material" class="section level4 unnumbered hasAnchor">
+<h4><strong>12. Closed-Top Water Tank: Minimize Material</strong><a href="optimization-workbook.html#closed-top-water-tank-minimize-material" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>A <strong>closed</strong> cylindrical storage tank must hold volume</p>
+<p><span class="math display">\[
+V=\pi r^2h=300
+\]</span></p>
+<p>Surface area (material) is</p>
+<p><span class="math display">\[
+S=2\pi r^2+2\pi rh
+\]</span></p>
+<p><strong>a)</strong> Rewrite <span class="math inline">\(S\)</span> as a function of <span class="math inline">\(r\)</span> only.<br />
+<strong>b)</strong> Find the <span class="math inline">\(r\)</span> minimizing <span class="math inline">\(S\)</span>, and the corresponding <span class="math inline">\(h\)</span>.</p>
+<hr />
+</div>
+<div id="rectangle-with-fixed-area-minimize-perimeter" class="section level4 unnumbered hasAnchor">
+<h4><strong>13. Rectangle With Fixed Area: Minimize Perimeter</strong><a href="optimization-workbook.html#rectangle-with-fixed-area-minimize-perimeter" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>A protected grassland plot must have fixed area</p>
+<p><span class="math display">\[
+A=10{,}000\ \text{m}^2
+\]</span></p>
+<p>and is rectangular with sides <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span>.</p>
+<p><strong>a)</strong> Write perimeter <span class="math inline">\(P(x,y)=2x+2y\)</span>.<br />
+<strong>b)</strong> Use the area constraint to express <span class="math inline">\(P\)</span> in one variable.<br />
+<strong>c)</strong> Find the rectangle dimensions that minimize perimeter.</p>
+<hr />
+</div>
+<div id="solar-farm-land-vs.-perimeter-cost" class="section level4 unnumbered hasAnchor">
+<h4><strong>14. Solar Farm: Land vs. Perimeter Cost</strong><a href="optimization-workbook.html#solar-farm-land-vs.-perimeter-cost" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>A rectangular solar farm has fixed area</p>
+<p><span class="math display">\[
+xy=50
+\]</span></p>
+<p>(in consistent units)</p>
+<p>Perimeter fencing cost:</p>
+<p><span class="math display">\[
+C=80(2x+2y)
+\]</span></p>
+<p><strong>a)</strong> Minimize fencing cost <span class="math inline">\(C\)</span> subject to the area constraint.<br />
+<strong>b)</strong> Give the optimal shape and interpret.</p>
+<hr />
+</div>
+<div id="pond-design-with-mixed-material-costs" class="section level4 unnumbered hasAnchor">
+<h4><strong>15. Pond Design With Mixed Material Costs</strong><a href="optimization-workbook.html#pond-design-with-mixed-material-costs" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>A rectangular pond must hold volume</p>
+<p><span class="math display">\[
+LWD=1200
+\]</span></p>
+<p>The pond has <strong>no lid</strong>.</p>
+<p>Material costs:</p>
+<ul>
+<li>Bottom: $40 per m<span class="math inline">\(^2\)</span><br />
+</li>
+<li>Sides: $20 per m<span class="math inline">\(^2\)</span></li>
+</ul>
+<p>Assume the pond is <strong>square in plan view</strong>:</p>
+<p><span class="math display">\[
+L=W=x
+\]</span></p>
+<p><strong>a)</strong> Write total cost <span class="math inline">\(C(x,d)\)</span>.<br />
+<strong>b)</strong> Use the constraint to rewrite <span class="math inline">\(C(x)\)</span>.<br />
+<strong>c)</strong> Find <span class="math inline">\(x\)</span> minimizing cost and compute <span class="math inline">\(d\)</span>.</p>
+<hr />
+</div>
+</div>
+<div id="mixed-practice-determine-the-appropriate-optimization-method" class="section level3 unnumbered hasAnchor">
+<h3>Mixed practice — determine the appropriate optimization method<a href="optimization-workbook.html#mixed-practice-determine-the-appropriate-optimization-method" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="leaving-a-foraging-patch" class="section level4 unnumbered hasAnchor">
+<h4><strong>16. Leaving a Foraging Patch</strong><a href="optimization-workbook.html#leaving-a-foraging-patch" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Net energy gain is</p>
+<p><span class="math display">\[
+G(t)=\frac{30t}{t+5}-2t
+\]</span></p>
+<p>where <span class="math inline">\(t\ge0\)</span> is time spent foraging.</p>
+<p><strong>a)</strong> Determine whether there is an optimal finite time <span class="math inline">\(t^*\)</span>.<br />
+<strong>b)</strong> If so, compute it and interpret.</p>
+<hr />
+</div>
+<div id="fish-passage-flow-with-minimum-requirement" class="section level4 unnumbered hasAnchor">
+<h4><strong>17. Fish Passage Flow With Minimum Requirement</strong><a href="optimization-workbook.html#fish-passage-flow-with-minimum-requirement" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Fish passage suitability:</p>
+<p><span class="math display">\[
+S(Q)=12Q-0.4Q^2
+\]</span></p>
+<p>Constraint:</p>
+<p><span class="math display">\[
+Q\ge20
+\]</span></p>
+<p><strong>a)</strong> Find the unconstrained optimizer.<br />
+<strong>b)</strong> Determine the optimal feasible flow.<br />
+<strong>c)</strong> Interpret.</p>
+<hr />
+</div>
+<div id="choosing-sampling-window-length" class="section level4 unnumbered hasAnchor">
+<h4><strong>18. Choosing Sampling Window Length</strong><a href="optimization-workbook.html#choosing-sampling-window-length" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Monitoring usefulness score:</p>
+<p><span class="math display">\[
+U(w)=50\ln(w+1)-w
+\]</span></p>
+<p>Feasible range:</p>
+<p><span class="math display">\[
+0\le w\le120
+\]</span></p>
+<p><strong>a)</strong> Find critical points.<br />
+<strong>b)</strong> Determine the global maximum on the interval.<br />
+<strong>c)</strong> Interpret.</p>
+<hr />
+</div>
+<div id="treatment-wetland-depth-decision" class="section level4 unnumbered hasAnchor">
+<h4><strong>19. Treatment Wetland Depth Decision</strong><a href="optimization-workbook.html#treatment-wetland-depth-decision" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Pollutant removal model:</p>
+<p><span class="math display">\[
+R(d)=600-8d+\frac{120}{\sqrt{d}}
+\]</span></p>
+<p>Feasible depths:</p>
+<p><span class="math display">\[
+1\le d\le25
+\]</span></p>
+<p><strong>a)</strong> Find all critical points in the interval.<br />
+<strong>b)</strong> Identify the depth maximizing removal.</p>
+<hr />
+</div>
+<div id="maximizing-net-carbon-benefit" class="section level4 unnumbered hasAnchor">
+<h4><strong>20. Maximizing Net Carbon Benefit</strong><a href="optimization-workbook.html#maximizing-net-carbon-benefit" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Net carbon benefit:</p>
+<p><span class="math display">\[
+B(x)=100(1-e^{-0.1x})-0.3x
+\]</span></p>
+<p>Feasible effort:</p>
+<p><span class="math display">\[
+0\le x\le80
+\]</span></p>
+<p><strong>a)</strong> Find critical points.<br />
+<strong>b)</strong> Determine the global maximum on the interval.<br />
+<strong>c)</strong> Interpret the result.</p>
+<hr />
+</div>
+</div>
+<div id="solutions" class="section level3 unnumbered hasAnchor">
+<h3>Solutions<a href="optimization-workbook.html#solutions" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<details open>
+<summary>
+<strong>Click to Unlock Solutions</strong>
+</summary>
+<div id="sol_set4" hidden="" markdown="1" style="margin-top:0.75rem;">
+<p><strong>1</strong></p>
+<p><span class="math display">\[
+B&#39;(d)=18-3d=0
+\]</span></p>
+<p><span class="math display">\[
+d=6
+\]</span></p>
+<p><span class="math display">\[
+B&#39;&#39;(d)=-3&lt;0
+\]</span></p>
+<p>Maximum at <span class="math inline">\(d=6\)</span>.</p>
+<hr />
+<p><strong>2</strong></p>
+<p>Vertex occurs at</p>
+<p><span class="math display">\[
+T=22
+\]</span></p>
+<p>Maximum value</p>
+<p><span class="math display">\[
+V=144
+\]</span></p>
+<hr />
+<p><strong>3</strong></p>
+<p><span class="math display">\[
+N&#39;(x)=30-4x=0
+\]</span></p>
+<p><span class="math display">\[
+x=7.5
+\]</span></p>
+<p>Maximum since</p>
+<p><span class="math display">\[
+N&#39;&#39;(x)=-4&lt;0
+\]</span></p>
+<hr />
+<p><strong>4</strong></p>
+<p><span class="math display">\[
+P&#39;(v)=6-0.4v=0
+\]</span></p>
+<p><span class="math display">\[
+v=15
+\]</span></p>
+<p>Maximum since</p>
+<p><span class="math display">\[
+P&#39;&#39;(v)=-0.4&lt;0
+\]</span></p>
+<hr />
+<p><strong>5</strong></p>
+<p><span class="math display">\[
+H&#39;(Q)=50-4Q=0
+\]</span></p>
+<p><span class="math display">\[
+Q=12.5
+\]</span></p>
+<p>Maximum since</p>
+<p><span class="math display">\[
+H&#39;&#39;(Q)=-4&lt;0
+\]</span></p>
+<hr />
+<p><strong>6</strong></p>
+<p><span class="math display">\[
+E&#39;(r)=-\frac{20}{(r+2)^2}+0.1
+\]</span></p>
+<p>Solve</p>
+<p><span class="math display">\[
+0.1=\frac{20}{(r+2)^2}
+\]</span></p>
+<p><span class="math display">\[
+(r+2)^2=200
+\]</span></p>
+<p><span class="math display">\[
+r\approx12.14
+\]</span></p>
+<p>Check endpoints to confirm global minimum.</p>
+<hr />
+<p><strong>7</strong></p>
+<p><span class="math display">\[
+C&#39;(d)=\frac{6}{\sqrt d}-1
+\]</span></p>
+<p>Critical point <span class="math inline">\(d=36\)</span> is outside feasible range.</p>
+<p>Evaluate endpoints.</p>
+<p>Maximum occurs at</p>
+<p><span class="math display">\[
+d=25
+\]</span></p>
+<hr />
+<p><strong>8</strong></p>
+<p>Unconstrained maximum occurs at</p>
+<p><span class="math display">\[
+m=0.55
+\]</span></p>
+<p>Not feasible.</p>
+<p>Best feasible value:</p>
+<p><span class="math display">\[
+m=0.50
+\]</span></p>
+<hr />
+<p><strong>9</strong></p>
+<p><span class="math display">\[
+T(v)=120/v
+\]</span></p>
+<p>Function decreases as <span class="math inline">\(v\)</span> increases.</p>
+<p>Minimum occurs at</p>
+<p><span class="math display">\[
+v=65
+\]</span></p>
+<hr />
+<p><strong>10</strong></p>
+<p>Unconstrained minimum:</p>
+<p><span class="math display">\[
+h=3
+\]</span></p>
+<p>Outside feasible interval.</p>
+<p>Evaluate endpoints.</p>
+<p>Minimum occurs at</p>
+<p><span class="math display">\[
+h=2
+\]</span></p>
+<hr />
+<p><strong>11</strong></p>
+<p>Constraint</p>
+<p><span class="math display">\[
+2x+y=240
+\]</span></p>
+<p><span class="math display">\[
+y=240-2x
+\]</span></p>
+<p><span class="math display">\[
+A(x)=240x-2x^2
+\]</span></p>
+<p><span class="math display">\[
+A&#39;(x)=240-4x=0
+\]</span></p>
+<p><span class="math display">\[
+x=60,\quad y=120
+\]</span></p>
+<hr />
+<p><strong>12</strong></p>
+<p><span class="math display">\[
+h=\frac{300}{\pi r^2}
+\]</span></p>
+<p><span class="math display">\[
+S(r)=2\pi r^2+\frac{600}{r}
+\]</span></p>
+<p><span class="math display">\[
+S&#39;(r)=4\pi r-\frac{600}{r^2}=0
+\]</span></p>
+<p><span class="math display">\[
+r^3=\frac{150}{\pi}
+\]</span></p>
+<hr />
+<p><strong>13</strong></p>
+<p>Area constraint</p>
+<p><span class="math display">\[
+y=\frac{10000}{x}
+\]</span></p>
+<p><span class="math display">\[
+P(x)=2x+\frac{20000}{x}
+\]</span></p>
+<p><span class="math display">\[
+P&#39;(x)=2-\frac{20000}{x^2}=0
+\]</span></p>
+<p><span class="math display">\[
+x=y=100
+\]</span></p>
+<hr />
+<p><strong>14</strong></p>
+<p>For fixed area, perimeter minimized by a <strong>square</strong>.</p>
+<p><span class="math display">\[
+x=y=\sqrt{50}
+\]</span></p>
+<hr />
+<p><strong>15</strong></p>
+<p>Volume</p>
+<p><span class="math display">\[
+x^2 d=1200
+\]</span></p>
+<p><span class="math display">\[
+d=\frac{1200}{x^2}
+\]</span></p>
+<p>Cost</p>
+<p><span class="math display">\[
+C(x)=40x^2+\frac{96000}{x}
+\]</span></p>
+<p><span class="math display">\[
+C&#39;(x)=80x-\frac{96000}{x^2}=0
+\]</span></p>
+<p><span class="math display">\[
+x^3=1200
+\]</span></p>
+<hr />
+<p><strong>16</strong></p>
+<p><span class="math display">\[
+G&#39;(t)=\frac{150}{(t+5)^2}-2
+\]</span></p>
+<p>Solve</p>
+<p><span class="math display">\[
+(t+5)^2=75
+\]</span></p>
+<p><span class="math display">\[
+t=\sqrt{75}-5
+\]</span></p>
+<hr />
+<p><strong>17</strong></p>
+<p><span class="math display">\[
+S&#39;(Q)=12-0.8Q=0
+\]</span></p>
+<p><span class="math display">\[
+Q=15
+\]</span></p>
+<p>Not feasible.</p>
+<p>Optimal feasible:</p>
+<p><span class="math display">\[
+Q=20
+\]</span></p>
+<hr />
+<p><strong>18</strong></p>
+<p><span class="math display">\[
+U&#39;(w)=\frac{50}{w+1}-1
+\]</span></p>
+<p><span class="math display">\[
+w=49
+\]</span></p>
+<p>Maximum.</p>
+<hr />
+<p><strong>19</strong></p>
+<p><span class="math display">\[
+R&#39;(d)=-8-\frac{60}{d^{3/2}}&lt;0
+\]</span></p>
+<p>Function decreasing.</p>
+<p>Maximum at</p>
+<p><span class="math display">\[
+d=1
+\]</span></p>
+<hr />
+<p><strong>20</strong></p>
+<p><span class="math display">\[
+B&#39;(x)=10e^{-0.1x}-0.3
+\]</span></p>
+<p>Solve</p>
+<p><span class="math display">\[
+e^{-0.1x}=0.03
+\]</span></p>
+<p><span class="math display">\[
+x=-10\ln(0.03)\approx35.1
+\]</span></p>
+<p>Maximum occurs at this value.</p>
+</div>
+<form onsubmit="unlock_set4(); return false;" id="gate_set4" style="margin-top:0.75rem;">
+<input type="password" id="pwd_set4" placeholder="Enter password" aria-label="Answer key password">
+<button type="submit">Unlock</button>
+<span id="msg_set4" style="margin-left:0.5rem;" aria-live="polite"></span>
+</form>
+<script>
+function unlock_set4() {
+  var input = document.getElementById('pwd_set4');
+  var msg   = document.getElementById('msg_set4');
+  var sol   = document.getElementById('sol_set4');
+  var gate  = document.getElementById('gate_set4');
+  var pw    = (input.value || '').trim();
+  var det   = gate.closest('details'); if (det) det.open = true;
+
+  if (pw === 'footy') {
+    sol.hidden = false;
+    gate.hidden = true;
+    input.value = '';
+    msg.textContent = '';
+  } else {
+    msg.textContent = 'Stop guessing :) Ask a TA';
+    input.value = '';
+    input.focus();
+  }
+}
+</script>
 
 </div>
 </div>
