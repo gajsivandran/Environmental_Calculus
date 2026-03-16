@@ -223,7 +223,8 @@ Think about your major or area of interest. Write down *one rate of change* you 
 ::: activity
 **A Visual View**
 
-![](images/sea_level.png){fig.alt='Line graph showing changes in global mean sea level from 1993 to 2023. The black line (NASA) shows total sea level rise, increasing from near 0 mm in 1993 to over 110 mm in 2023. Two contributing factors are plotted: blue line (JPL) shows added ocean mass from mostly land ice melt, rising steadily from about 20 mm in 2003 to over 60 mm in 2023; red line (SIO) shows thermal expansion, rising from near 0 mm in 2003 to about 40 mm in 2023. The purple shaded region (Mass + steric) closely matches the black line. Together, the figure shows that sea level rise is explained by added water plus thermal expansion.'}
+![Global mean sea level rise and its components.](images/sea_level.png){fig.alt="Line graph showing changes in global mean sea level from 1993 to 2023. The black line shows total sea level rise from about 0 mm to over 110 mm. Blue shows added ocean mass from land ice melt, rising from about 20 mm in 2003 to over 60 mm in 2023. Red shows thermal expansion rising from near 0 mm to about 40 mm. The combined contributions closely match the total sea level rise."}
+
 
 **Discussion Questions**
 
