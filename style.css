@@ -1,16 +1,61 @@
+/* Base readable text tweaks */
+body {
+  color: #1f2937; /* dark slate */
+  background: #ffffff;
+}
+
 p.caption {
-  color: #777;
+  color: #4b5563; /* darker than #777 for better contrast */
   margin-top: 10px;
 }
+
 p code {
   white-space: inherit;
 }
+
 pre {
   word-break: normal;
   word-wrap: normal;
+  color: #111827;
+  background: #f3f4f6;
 }
+
 pre code {
   white-space: inherit;
+  color: #111827;
+  background: transparent;
+}
+
+code {
+  color: #111827;
+  background: #f3f4f6;
+}
+
+/* Links */
+a {
+  color: #0b57a3;
+}
+
+a:hover,
+a:focus {
+  color: #083b70;
+  text-decoration: underline;
+}
+
+/* Improve TOC/sidebar contrast in bookdown/gitbook */
+.book .book-summary ul.summary li a,
+.book .book-summary nav ul li a {
+  color: #1f2937;
+}
+
+.book .book-summary ul.summary li.active > a {
+  color: #083b70;
+  font-weight: 700;
+}
+
+.book .book-summary ul.summary li a:hover,
+.book .book-summary ul.summary li a:focus {
+  color: #083b70;
 }
 
 /* Remove the floating badge from theorem environments (like example) */
@@ -22,31 +67,36 @@ pre code {
   padding: 0;
   font-weight: bold;
   display: block;
+  color: #111827;
 }
 
 /* Style the example box */
 .example {
-  background-color: #f9f9f9;
-  border: 1px solid #ccc;
+  background-color: #f9fafb;
+  border: 1px solid #9ca3af;
   border-radius: 6px;
   padding: 1em;
   margin: 1.5em 0;
+  color: #111827;
 }
 
+/* Activity box */
 .activity {
-  background-color: #e0f7fa; /* light aqua */
-  border-left: 5px solid #00838f;
+  background-color: #e0f2f1;
+  border-left: 5px solid #0f766e;
+  border: 1px solid #94a3b8;
   padding: 1em;
   margin: 1.5em 0;
   border-radius: 6px;
   font-size: 1em;
+  color: #111827;
 }
 
 .activity strong {
   display: block;
   font-weight: 700;
   margin-bottom: 0.5em;
-  color: #006064;
+  color: #134e4a;
 }
 
 .activity strong,
@@ -55,52 +105,77 @@ pre code {
   font-weight: bold;
 }
 
+/* Activity outcome box */
 .activityoutcome {
-  background-color: #e8f5e9; /* light aqua */
-  border-left: 5px solid #00838f;
+  background-color: #ecfdf3;
+  border-left: 5px solid #166534;
+  border: 1px solid #94a3b8;
   padding: 1em;
   margin: 1.5em 0;
   border-radius: 6px;
   font-size: 1em;
+  color: #111827;
 }
 
 .activityoutcome strong {
   display: block;
   font-weight: 700;
   margin-bottom: 0.5em;
-  color: #006064;
+  color: #14532d;
 }
 
 /* Prompt boxes */
-.promptbox{
-  border: 2px solid #4b5563;            /* slate */
+.promptbox {
+  border: 2px solid #374151;
   border-radius: 12px;
   padding: 1rem 1.1rem;
   margin: 1rem 0;
-  background: #f8fafc;                  /* light gray */
+  background: #f8fafc;
+  color: #111827;
 }
+
 .promptbox .label {
   display: inline-block;
   font-weight: 700;
   margin-bottom: 0.35rem;
+  color: #111827;
 }
 
 /* Variants */
-.prompt--question  { border-color: #2563eb; background: #eff6ff; } /* blue */
-.prompt--activity  { border-color: #16a34a; background: #f0fdf4; } /* green */
-.prompt--reflect   { border-color: #d97706; background: #fffbeb; } /* amber */
-.prompt--note      { border-color: #6b7280; background: #f8fafc; } /* neutral */
+.prompt--question {
+  border-color: #1d4ed8;
+  background: #eff6ff;
+}
+
+.prompt--activity {
+  border-color: #15803d;
+  background: #f0fdf4;
+}
+
+.prompt--reflect {
+  border-color: #b45309;
+  background: #fffbeb;
+}
+
+.prompt--note {
+  border-color: #4b5563;
+  background: #f8fafc;
+}
 
 /* Write-in area (printable) */
 .writein {
-  border: 1px dashed #9ca3af;
+  border: 2px dashed #6b7280;
   border-radius: 8px;
   min-height: 120px;
   padding: 0.75rem;
   margin-top: 0.5rem;
   background: #ffffff;
+  color: #111827;
 }
-.writein.tall { min-height: 220px; }
+
+.writein.tall {
+  min-height: 220px;
+}
 
 /* Optional: two-column prompts on wide screens */
 @media (min-width: 900px) {
@@ -113,8 +188,13 @@ pre code {
 
 /* PDF friendliness */
 @media print {
-  .prompt-box { break-inside: avoid; }
-  .writein { min-height: 160px; }
+  .promptbox {
+    break-inside: avoid;
+  }
+
+  .writein {
+    min-height: 160px;
+  }
 }
 
 /* Remove the "Appendix A/B/C" prefix */
