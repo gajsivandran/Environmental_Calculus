@@ -278,7 +278,7 @@ Think about your major or area of interest. Write down *one rate of change* you 
 
 -   If this were a smooth function $S(t)$ representing sea level at year $t$, what would the *derivative* $S'(t)$ represent?
 -   What would a plot of the average rate of change look like?
--   What would happen if we looked at the average rate of change over shorter and shorter periods? How would this chang the way a plot of the rate of change look like?
+-   What would happen if we looked at the average rate of change over shorter and shorter periods? How would this change the way a plot of the rate of change look like?
 
 **Reflection Prompt**
 Describe a situation in your area of interest (marine biology, forestry, climate science, etc.) where an average rate of change is used. What does it tell you, and what might it leave out?
@@ -623,7 +623,7 @@ Graphically we can see the function doesn't exist at $x=1$, which we depict as a
 ### Estimating a limit
 In some cases it may not be possible to factor like the example above. So how could you get an idea of the limit. 
 
-Lets introduce the idea of **estimating** the limit. If we write the limit again adn ask ourselves what is this mathematical statement asking:
+Lets introduce the idea of **estimating** the limit. If we write the limit again and ask ourselves what is this mathematical statement asking:
 $$
 \lim_{x \to 1} \frac{x^2 - 1}{x - 1}
 $$
@@ -636,7 +636,7 @@ What is we get closer still to $x=1$. Let x= 0.99
 $$
 \lim_{x \to 1} \frac{x^2 - 1}{x - 1} \approx \frac{0.99^2-1}{0.99-1} \approx \frac{-0.0199}{-0.01} \approx 1.99 
 $$
-We seem to be getting closer and close to the the value we expect.
+We seem to be getting closer and close to the value we expect.
 
 Lets get really small now. Let x= 0.999999
 $$
@@ -646,7 +646,7 @@ Note: Be careful when doing this on your calculator, it is easy to forget a digi
 
 ### One-Sided Limits
 
-Sometimes, its helpful to examine what is happening as we approach a point fomr both directions directios. In the previous example we apprach from the left (or the negative) side of the point. 
+Sometimes, its helpful to examine what is happening as we approach a point form both directions directions. In the previous example we approach from the left (or the negative) side of the point. 
 
 -   Left-hand limit: $$
     \lim_{x \to a^-} f(x)
@@ -793,7 +793,7 @@ $$
 h=b-a \\
 b=a+h
 $$
-Substituting this expression for $b$ into the average equaiton gives us
+Substituting this expression for $b$ into the average equation gives us
 $$
 Ave = \frac{f(a+h) - f(a)}{h}
 $$
@@ -1019,9 +1019,9 @@ Let's practice letting the mathematical expression tell us what to do. We know w
 $$
 f'(2)=\lim_{h \to 0} \frac{f(2 + h) - f(2)}{h}
 $$
-Let's now look at the numerator the right hand side. It tells us we are looking for the difference between the function evaulated at $f(2+h)$ and $f(2)$. So lets find those expressions.
+Let's now look at the numerator the right hand side. It tells us we are looking for the difference between the function evaluated at $f(2+h)$ and $f(2)$. So lets find those expressions.
 
-We were given the function as $f(x)=x^2$. So to find $f(2+h)$ and $f(2)$ we subsitute the $x$ in the original function with the points we are interested in.
+We were given the function as $f(x)=x^2$. So to find $f(2+h)$ and $f(2)$ we substitute the $x$ in the original function with the points we are interested in.
 
 $f(2)$ becomes:
 $$
@@ -1083,7 +1083,7 @@ Let's redo the example but this time instead of $a=2$ let $a=x$.
 
 Let's now look at the numerator the right hand side. It tells us we are looking for the difference between the function evaluated at $f(x+h)$ and $f(x)$. So lets find those expressions.
 
-We were given the function as $f(x)=x^2$. So to find $f(x+h)$ and $f(x)$ we subsitute the $x$ in the original function with the points we are interested in.
+We were given the function as $f(x)=x^2$. So to find $f(x+h)$ and $f(x)$ we substitute the $x$ in the original function with the points we are interested in.
 
 $f(x)$ becomes:
 $$

@@ -1369,6 +1369,10 @@ T&#39;(t) = \frac{\pi}{6} \cos\left(\frac{\pi t}{12}\right)
 <li><span class="math inline">\(\frac{dT}{dt}\)</span> is the same thing, just written in a form that highlights that we’re differentiating temperature with respect to time.</li>
 </ul>
 <p><img src="bookdown-demo_files/figure-html/lake-temp-2panel-1.png" width="672" /></p>
+<div class="float">
+<img src="images/sea_level.png" fig.alt="Two stacked graphs show lake temperature and its rate of change over time in hours. The top graph shows temperature oscillating smoothly between about 16°C and 20°C in a repeating wave pattern over roughly 48 hours. The bottom graph shows the derivative, representing rate of change, also oscillating as a wave. When the temperature graph is increasing, the derivative is positive; when the temperature is decreasing, the derivative is negative; and when the temperature reaches peaks or troughs, the derivative crosses zero. The graphs illustrate the relationship between a function and its derivative." alt="Figure: Lake temperature and its derivative over time." />
+<div class="figcaption">Figure: Lake temperature and its derivative over time.</div>
+</div>
 <p>Reading the math:</p>
 <ul>
 <li>Try to explain in words what T(t) looks like, break the equation up and tell the story of temperature of this lake.</li>
@@ -1390,7 +1394,11 @@ T&#39;(t) = \frac{\pi}{6} \cos\left(\frac{\pi t}{12}\right)
 <li>Where is the derivative equal to zero? What feature do you see on the function at these points?</li>
 <li>The function changes concavity at some point, what do you see in the derivative at this point?</li>
 </ul>
-<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-10-1.png" width="672" /></p>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-12-1.png" width="672" /></p>
+<div class="float">
+<img src="images/sea_level.png" fig.alt="A graph shows two curves plotted together: a black curve representing f(x) and a red curve representing its derivative f&#39;(x). The black curve has a local maximum on the left and a local minimum on the right. The red curve crosses the horizontal axis at the x-values corresponding to these turning points. Where the black curve is increasing, the red curve is above zero; where the black curve is decreasing, the red curve is below zero. The graph illustrates the relationship between a function and its derivative." alt="Figure: Function and its derivative." />
+<div class="figcaption">Figure: Function and its derivative.</div>
+</div>
 </div>
 <hr />
 <div class="activity">
@@ -1505,6 +1513,10 @@ f&#39;(x) = 0
 <p>This rule may seem simple, but it matters in real-world modeling. For example, suppose you measure the background level of a pollutant in a lake that remains steady over time (say, <span class="math inline">\(2\)</span> parts per million). Because this concentration is constant, its rate of change with respect to time is zero. Similarly, a flat baseline temperature in a climate dataset or a fixed conservation quota can be represented as a constant function whose derivative is always zero.</p>
 <p>The Constant Rule reminds us that when nothing changes, the mathematics reflects that stillness directly: no change means no slope, and thus a derivative of zero.Graphically, we can see this by the fact than a tangent line anywhere on teh funtion would be ‘flat’ with a slope of zero.</p>
 <p><img src="bookdown-demo_files/figure-html/constant-rule-plot-fixed-1.png" width="576" /></p>
+<div class="float">
+<img src="images/sea_level.png" fig.alt="A graph shows two horizontal lines: a solid line at y = 4 representing the constant function f(x) = 4, and a dashed line at y = 0 representing its derivative f&#39;(x) = 0. Both lines extend across all x-values. The graph illustrates that the derivative of a constant function is zero everywhere." alt="Figure: Constant function and its derivative." />
+<div class="figcaption">Figure: Constant function and its derivative.</div>
+</div>
 <p>The <strong>Constant Rule</strong> tells us how to take the derivative of a constant. A constant doesn’t change, so its rate of change is zero.</p>
 <p><strong>Rule:</strong></p>
 <p>If<br />
@@ -1778,6 +1790,10 @@ g&#39;(x) = 3x^2
 f&#39;(x) = c \cdot g&#39;(x) = 7 \cdot (3x^2) = 21x^2
 \]</span></p>
 <p><img src="bookdown-demo_files/figure-html/constant-multiple-rule-plot-1.png" width="576" /></p>
+<div class="float">
+<img src="images/sea_level.png" fig.alt="A graph shows two curves: a blue curve representing the function f(x) = 7x cubed and a red dashed curve representing its derivative f&#39;(x) = 21x squared. The blue curve has an S-shape, decreasing for negative x and increasing for positive x, with a flat point at x = 0. The red dashed curve is a parabola opening upward, with its minimum at x = 0. The graph illustrates how the derivative of 7x cubed is 21x squared, demonstrating the constant multiple rule." alt="Figure: Constant multiple rule example with function and derivative." />
+<div class="figcaption">Figure: Constant multiple rule example with function and derivative.</div>
+</div>
 </div>
 <div id="key-idea-2" class="section level3 hasAnchor" number="4.2.12">
 <h3><span class="header-section-number">4.2.12</span> Key Idea<a href="derivative-rules.html#key-idea-2" class="anchor-section" aria-label="Anchor link to header"></a></h3>
@@ -1914,6 +1930,10 @@ f(x) = e^x
 </ul>
 <p>This is why <span class="math inline">\(e^x\)</span> is so central in calculus: it perfectly embodies the idea of <em>proportional change</em>.</p>
 <p><img src="bookdown-demo_files/figure-html/exp-clean-2point2s-1.png" width="672" /></p>
+<div class="float">
+<img src="images/sea_level.png" fig.alt="A graph shows the exponential function y = e to the x as a smooth increasing blue curve. Two points are highlighted: (0, 1) and (1, about 2.72). At each point, a dashed line segment represents the tangent line, showing the slope of the curve at that point. The tangent at x = 0 is less steep, while the tangent at x = 1 is steeper, illustrating how the rate of change increases as x increases. Labels indicate the function values at each point." alt="Figure: Exponential function with tangent lines at x = 0 and x = 1." />
+<div class="figcaption">Figure: Exponential function with tangent lines at x = 0 and x = 1.</div>
+</div>
 </div>
 <div id="environmental-interpretation-5" class="section level3 hasAnchor" number="4.2.19">
 <h3><span class="header-section-number">4.2.19</span> Environmental Interpretation<a href="derivative-rules.html#environmental-interpretation-5" class="anchor-section" aria-label="Anchor link to header"></a></h3>
@@ -2983,11 +3003,17 @@ If you take a small step eastward (a change in <span class="math inline">\(x\)</
 \]</span>
 measures.</p>
 <p>It tells you how <span class="math inline">\(y\)</span> must change when <span class="math inline">\(x\)</span> changes <strong>to keep the overall relationship <span class="math inline">\(E(x, y) = \text{constant}\)</span></strong> true.</p>
-<p>So, just like tracing a contour line:
-- <span class="math inline">\(E(x, y)\)</span> is the fixed relationship (like <span class="math inline">\(x^2 + y^2 = 25\)</span>).
-- As you move in <span class="math inline">\(x\)</span>, <span class="math inline">\(y\)</span> must adjust to stay on that curve.
-- The <strong>ratio</strong> of those small changes — <span class="math inline">\(\frac{dy}{dx}\)</span> — is what <strong>implicit differentiation</strong> gives you.</p>
-<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-11-1.png" width="672" /></p>
+<p>So, just like tracing a contour line:</p>
+<ul>
+<li><span class="math inline">\(E(x, y)\)</span> is the fixed relationship (like <span class="math inline">\(x^2 + y^2 = 25\)</span>).</li>
+<li>As you move in <span class="math inline">\(x\)</span>, <span class="math inline">\(y\)</span> must adjust to stay on that curve.</li>
+<li>The <strong>ratio</strong> of those small changes — <span class="math inline">\(\frac{dy}{dx}\)</span> — is what <strong>implicit differentiation</strong> gives you.</li>
+</ul>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-13-1.png" width="672" /></p>
+<div class="float">
+<img src="images/sea_level.png" fig.alt="A contour map shows level curves of the function E(x, y) = x squared plus y squared. The contours are concentric circles centered at the origin, with values increasing outward. Inner contours are labeled with smaller values such as 1 and 4, while outer contours are labeled with larger values such as 9, 16, and 25. A point on the outer contour is marked and labeled E = 25. The x-axis is labeled east-west and the y-axis north-south. The map illustrates that the function increases with distance from the center." alt="Figure: Contour map of E(x, y) = x^2 + y^2." />
+<div class="figcaption">Figure: Contour map of E(x, y) = x^2 + y^2.</div>
+</div>
 </div>
 <hr />
 <blockquote>

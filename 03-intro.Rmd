@@ -283,7 +283,7 @@ temp_df$Temperature_C <- round(T(temp_df$Time_h, temp_df$Elevation_m), 2)
 ## Nicely formatted markdown table
 kable(
   temp_df,
-  col.names = c("Time (hours)", "Elevation (m)", "Temperature (°C)"),
+  col.names = c("Time (hours)", "Elevation (m)", "Temperature (degC)"),
   caption = "Modeled temperature as a function of time and elevation."
 )
 ```
@@ -314,7 +314,7 @@ ggplot(grid, aes(x = t, y = h, z = temp)) +
     title = "Temperature as a Function of Time and Elevation",
     x = "Time of Day (hours)",
     y = "Elevation (m)",
-    fill = "Temperature (°C)"
+    fill = "Temperature (degC)"
   ) +
   theme_minimal()
 ```
@@ -349,7 +349,7 @@ plot_ly(temp_data, x = ~time, y = ~temp, color = ~elevation, type = 'scatter', m
   layout(
     title = "Temperature vs Time at Different Elevations",
     xaxis = list(title = "Time of Day (hours)"),
-    yaxis = list(title = "Temperature (°C)"),
+    yaxis = list(title = "Temperature (degC)"),
     legend = list(title = list(text = "Elevation"))
   )
 ```
@@ -374,6 +374,8 @@ f <- function(x) { -x^2 + 4*x + 5 }
 curve(f, from = 0, to = 6, main = "Quadratic Function", ylab = "f(x)", xlab = "x")
 abline(h = 0, col = "gray", lty = 2)
 ```
+
+![Figure: Quadratic function.](images/sea_level.png){fig.alt="A graph shows a downward-opening parabola representing a quadratic function. The curve rises to a maximum near x equals 2, then decreases as x increases. A dashed horizontal line marks the x-axis. The function is positive near the peak and becomes negative as it moves to the right, crossing the x-axis and continuing downward. The graph illustrates a quadratic with a single maximum point."}
 
 The calculus you will learn in this course will give you the tools needed to quantify these observations. Identify the rates of change at different point and find the maximas and minimas.
 

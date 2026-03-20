@@ -181,16 +181,17 @@ par(mfrow = c(2, 1), mar = c(4, 4, 2, 1))
 
 # Plot temperature
 plot(t_vals, temp_vals, type = "l", lwd = 2, col = "blue",
-     ylab = "Temperature (°C)", xlab = "Time (hours)",
+     ylab = "Temperature (degC)", xlab = "Time (hours)",
      main = "Lake Temperature T(t)")
 
 # Plot derivative
 plot(t_vals, deriv_vals, type = "l", lwd = 2, col = "red",
-     ylab = "Rate of Change (°C/hour)", xlab = "Time (hours)",
+     ylab = "Rate of Change (degC/hour)", xlab = "Time (hours)",
      main = "Derivative T'(t)")
 abline(h = 0, col = "gray", lty = 2)
 ```
 
+![Figure: Lake temperature and its derivative over time.](images/sea_level.png){fig.alt="Two stacked graphs show lake temperature and its rate of change over time in hours. The top graph shows temperature oscillating smoothly between about 16°C and 20°C in a repeating wave pattern over roughly 48 hours. The bottom graph shows the derivative, representing rate of change, also oscillating as a wave. When the temperature graph is increasing, the derivative is positive; when the temperature is decreasing, the derivative is negative; and when the temperature reaches peaks or troughs, the derivative crosses zero. The graphs illustrate the relationship between a function and its derivative."}
 
 Reading the math:
 
@@ -224,6 +225,8 @@ curve(f(x), from = -3, to = 3, lwd = 2,
 curve(f_prime(x), from = -3, to = 3, col = "red", lwd = 2, add = TRUE)
 legend("bottomright", legend = c("f(x)", "f'(x)"), col = c("black", "red"), lwd = 2)
 ```
+
+![Figure: Function and its derivative.](images/sea_level.png){fig.alt="A graph shows two curves plotted together: a black curve representing f(x) and a red curve representing its derivative f'(x). The black curve has a local maximum on the left and a local minimum on the right. The red curve crosses the horizontal axis at the x-values corresponding to these turning points. Where the black curve is increasing, the red curve is above zero; where the black curve is decreasing, the red curve is below zero. The graph illustrates the relationship between a function and its derivative."}
 
 :::
 
@@ -335,7 +338,7 @@ legend("topright",
 
 ```
 
-
+![Figure: Constant function and its derivative.](images/sea_level.png){fig.alt="A graph shows two horizontal lines: a solid line at y = 4 representing the constant function f(x) = 4, and a dashed line at y = 0 representing its derivative f'(x) = 0. Both lines extend across all x-values. The graph illustrates that the derivative of a constant function is zero everywhere."}
 
 The **Constant Rule** tells us how to take the derivative of a constant. A constant doesn't change, so its rate of change is zero.
 
@@ -625,6 +628,7 @@ legend("topleft",
        col = c("blue", "red"), lwd = 2, lty = c(1, 2))
 ```
 
+![Figure: Constant multiple rule example with function and derivative.](images/sea_level.png){fig.alt="A graph shows two curves: a blue curve representing the function f(x) = 7x cubed and a red dashed curve representing its derivative f'(x) = 21x squared. The blue curve has an S-shape, decreasing for negative x and increasing for positive x, with a flat point at x = 0. The red dashed curve is a parabola opening upward, with its minimum at x = 0. The graph illustrates how the derivative of 7x cubed is 21x squared, demonstrating the constant multiple rule."}
 
 ### Key Idea
 
@@ -843,7 +847,7 @@ legend("topleft",
        lty = c(1, 2), lwd = c(3, 2), bty = "n")
 ```
 
-
+![Figure: Exponential function with tangent lines at x = 0 and x = 1.](images/sea_level.png){fig.alt="A graph shows the exponential function y = e to the x as a smooth increasing blue curve. Two points are highlighted: (0, 1) and (1, about 2.72). At each point, a dashed line segment represents the tangent line, showing the slope of the curve at that point. The tangent at x = 0 is less steep, while the tangent at x = 1 is steeper, illustrating how the rate of change increases as x increases. Labels indicate the function values at each point."}
 
 
 
@@ -1928,6 +1932,7 @@ measures.
 It tells you how \(y\) must change when \(x\) changes **to keep the overall relationship \(E(x, y) = \text{constant}\)** true.
 
 So, just like tracing a contour line:
+
 - \(E(x, y)\) is the fixed relationship (like \(x^2 + y^2 = 25\)).
 - As you move in \(x\), \(y\) must adjust to stay on that curve.
 - The **ratio** of those small changes — \(\frac{dy}{dx}\) — is what **implicit differentiation** gives you.
@@ -1946,7 +1951,7 @@ contour(x, y, E_matrix,
         levels = c(1, 4, 9, 16, 25),
         col = "steelblue",
         lwd = 2,
-        main = "Contour Map of E(x, y) = x² + y²",
+        main = "Contour Map of E(x, y) = x^2 + y^2",
         xlab = "x (east-west)",
         ylab = "y (north-south)")
 points(3, 4, pch = 19, col = "tomato")
@@ -1954,6 +1959,7 @@ text(3, 4, "E = 25", pos = 4, col = "tomato")
 
 ```
 
+![Figure: Contour map of E(x, y) = x^2 + y^2.](images/sea_level.png){fig.alt="A contour map shows level curves of the function E(x, y) = x squared plus y squared. The contours are concentric circles centered at the origin, with values increasing outward. Inner contours are labeled with smaller values such as 1 and 4, while outer contours are labeled with larger values such as 9, 16, and 25. A point on the outer contour is marked and labeled E = 25. The x-axis is labeled east-west and the y-axis north-south. The map illustrates that the function increases with distance from the center."}
 
 :::
 
