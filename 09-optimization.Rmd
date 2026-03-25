@@ -3,11 +3,11 @@
 
 ## Introduction: Why Optimize?
 
-Every environmental system operates under limits — finite land, finite water, finite energy, finite sunlight, finite budgets. Because of these limits, we constantly face questions of *tradeoffs* and *efficiency*:  
+Every environmental system operates under limits — finite land, finite water, finite energy, finite sunlight, finite budgets. Because of these limits, we constantly face questions of *trade-offs* and *efficiency*:  
 
 - How can we plant trees to **maximize carbon uptake** on a fixed amount of land?  
 - What fertilization level **maximizes yield** without wasting resources or harming water quality?  
-- How much water should a reservoir release to **minimize downstream flood risk** while still meeting hydropower or ecological needs?  
+- How much water should a reservoir release to **minimize downstream flood risk** while still meeting hydro power or ecological needs?  
 - What harvest rate allows a population to **sustainably regenerate** while still providing maximum yield?  
 
 These are all **optimization** problems — situations where we want to find the *best possible value* under the constraints of a real system.
@@ -70,7 +70,7 @@ At their core, optimization problems follow a consistent structure: we choose a 
 
 - **Constraints:**  
   Realistic boundaries on the decision variable.  
-  These may come from physical limits (nonnegative area or population), ecological conditions (maximum carrying capacity, minimum habitat flow), or resource limits (budget, space, time).  
+  These may come from physical limits (non-negative area or population), ecological conditions (maximum carrying capacity, minimum habitat flow), or resource limits (budget, space, time).  
   Mathematically, constraints define the **feasible domain** — the set of values where the function actually makes sense.
 
 Together, these three pieces form a complete optimization model:
@@ -86,7 +86,7 @@ Environmental science provides many natural optimization settings because system
   Reduce nutrient inputs while still achieving a required crop output, balancing cost and water quality concerns.
 
 - **Optimal dam release:**  
-  Determine flow levels that minimize flood risk while maximizing hydropower or maintaining habitat conditions.
+  Determine flow levels that minimize flood risk while maximizing hydro power or maintaining habitat conditions.
 
 - **Best planting density for carbon uptake:**  
   Balance competition (too dense) with unused space (too sparse) to maximize carbon gain or biomass production.
@@ -212,10 +212,10 @@ Critical points arise naturally in environmental models:
 
 - the peak of logistic growth rate,
 - the dilution minimum of pollutants,
-- the flow that maximizes hydropower,
+- the flow that maximizes hydro power,
 - the planting density that maximizes biomass.
 
-In each case, the derivative captures the moment where environmental tradeoffs balance out.
+In each case, the derivative captures the moment where environmental trade-offs balance out.
 
 ---
 
@@ -260,7 +260,7 @@ Therefore, the full search for optima includes:
 
 ---
 
-```{r, echo=FALSE, warning=FALSE, message=FALSE}
+```{r classify-optima-critical-concavity-endpoints, fig.cap="Classifying optima using critical points, concavity, and endpoints.", fig.alt="Graph of a smooth function over a finite interval from x equals negative 2 to x equals 8. The curve has one local maximum and one local minimum at interior critical points, both marked in red. The local maximum occurs where the graph is concave down, and the local minimum occurs where the graph is concave up. The two endpoints of the interval are marked in green and labeled as the global minimum and global maximum. The figure illustrates that local extrema are identified at critical points using concavity, while absolute extrema on a closed interval can occur at endpoints.", echo=FALSE, warning=FALSE, message=FALSE}
 
 # Function with one local max and one local min
 f  <- function(x) (x+2)*(x-2)*(x-6) + 25
@@ -304,10 +304,9 @@ text(x_min, y_min + 25, "Local minimum\nf''>0 (concave up)", col="red", cex=0.9)
 
 text(x_left - .3, y_left - 15, "Endpoint\n(global min)", col="darkgreen", cex=0.9, pos=4)
 text(5.5, 125, "Endpoint\n(global max)", col="darkgreen", cex=0.9, pos=4)
-
 ```
 
-![Figure: Classifying extrema using critical points, concavity, and endpoints.](images/classifying_optima.png){fig.alt="Graph of a smooth function over a finite interval showing how to classify extrema. The curve starts at a left endpoint that is labeled as a global minimum, rises to a local maximum where the graph is concave down, then decreases to a local minimum where the graph is concave up, and finally increases to a right endpoint labeled as a global maximum. The figure highlights that local extrema occur at critical points and are classified using concavity, while global extrema can also occur at endpoints."}
+
 
 ### Why Critical Points Aren’t Always Solutions
 
@@ -330,7 +329,7 @@ These cases reinforce that optimization is always a combination of **calculus** 
 ---
 
 
-```{r, echo=FALSE, warning=FALSE, message=FALSE}
+```{r feasible-domain-critical-points, fig.cap="Why critical points are not always valid solutions.", fig.alt="Graph of a function over the interval from x equals negative 3 to x equals 8, with the feasible domain beginning at x equals 0. The region to the right of x equals 0 is shaded to indicate the feasible range, while the region with negative x-values is labeled as unfeasible. A red point at x equals negative 1 marks a critical point outside the feasible domain, showing that it is not a valid solution. An orange point at x equals 2 marks a flat inflection point where the derivative is zero but there is no maximum or minimum. A green point at the right endpoint x equals 8 is labeled as the global maximum. The figure illustrates that not every critical point is relevant in an applied problem, because feasibility and endpoints must also be considered.", echo=FALSE, warning=FALSE, message=FALSE}
 
 # Example function with:
 # - flat inflection at x = 2
@@ -386,7 +385,7 @@ text(0.2, 30, labels="Feasible\nrange", col="darkgreen", pos=4)
 text(-2, 50, labels="Unfeasible region \n(negative x)", col="red")
 ```
 
-![Figure: Why critical points alone may not determine optimal solutions.](images/feasible_domain_optima.png){fig.alt="Graph illustrating optimization with a restricted domain. The left side of the graph, where x is negative, is shaded and labeled as an infeasible region. A critical point in this region is marked but labeled as not feasible. The feasible region begins at x equals 0 and is shaded differently. Within the feasible region, there is a flat inflection point near x equals 2 where the slope is zero but there is no maximum or minimum. The graph continues upward to a right endpoint that is labeled as the global maximum. The figure emphasizes that only points within the feasible domain and endpoints should be considered when identifying optimal solutions."}
+
 
 
 ## Optimization in Finite Domains
@@ -421,7 +420,7 @@ This mirrors how environmental systems function: nature imposes boundaries, and 
 
 ## Environmental Case Studies
 
-Environmental systems naturally create optimization problems because they involve limited resources, energetic tradeoffs, competition, and physical constraints. Below are four expanded case studies that illustrate how calculus-based optimization can be used to understand and manage ecological and environmental processes. Each highlights the full workflow: modeling → differentiating → analyzing → interpreting results in real-world terms.
+Environmental systems naturally create optimization problems because they involve limited resources, energetic trade-offs, competition, and physical constraints. Below are four expanded case studies that illustrate how calculus-based optimization can be used to understand and manage ecological and environmental processes. Each highlights the full workflow: modeling → differentiating → analyzing → interpreting results in real-world terms.
 
 ---
 
@@ -567,7 +566,7 @@ The model predicts **maximum carbon uptake at approximately 50 trees per hectare
 
 ---
 
-```{r, warning=FALSE, message=FALSE, echo=FALSE}
+```{r planting-density-optimization-2panel, fig.cap="Optimizing planting density using a function and its derivative.", fig.alt="Two stacked graphs show carbon uptake as a function of planting density and its derivative. The top graph shows total carbon uptake increasing with planting density, reaching a maximum at 50 trees per hectare, and then decreasing for larger densities. The maximum point is marked with dashed horizontal and vertical guide lines. The bottom graph shows the derivative, representing the marginal change in carbon uptake. It is positive before 50 trees per hectare, zero at 50, and negative afterward. The figure illustrates that the maximum in the original function occurs where the derivative changes sign and equals zero.", warning=FALSE, message=FALSE, echo=FALSE}
 
 # Define functions
 C  <- function(x) 20 * x * exp(-0.02 * x)
@@ -633,10 +632,7 @@ text(
   labels = expression(C*"\u2032"*(x) == 20*e^{-0.02*x}*(1 - 0.02*x)),
   col = "steelblue", pos = 4, cex = 0.9
 )
-
 ```
-
-![Figure: Optimizing planting density using a function and its derivative.](images/planting_density_optimization.png){fig.alt="Two stacked graphs showing carbon uptake as a function of planting density and its derivative. The top graph shows total carbon uptake increasing with planting density, reaching a maximum at 50 trees per hectare, and then gradually decreasing. A point at x equals 50 is labeled as the maximum. The bottom graph shows the derivative, representing marginal change in carbon uptake, which decreases and crosses zero at x equals 50. This indicates that the maximum in the top graph occurs where the derivative equals zero. The horizontal axis represents planting density and the vertical axes represent carbon uptake and its rate of change."}
 
 :::
 
@@ -671,7 +667,7 @@ Pollutant concentration downstream often depends on both the pollutant input and
 **Interpreting the optimum**
 
 - The best discharge may occur at the boundary (maximum allowable flow) or at a point where the reduction in concentration stops being significant.  
-- This informs water managers how to balance flood control, hydropower, and water quality.
+- This informs water managers how to balance flood control, hydro power, and water quality.
 
 ---
 
@@ -679,7 +675,7 @@ Pollutant concentration downstream often depends on both the pollutant input and
 
 #### **Worked Example: Minimizing Pollution Concentration Downstream** {-}
 
-Pollutant concentration downstream depends on both pollutant load and streamflow. Increasing flow typically dilutes pollutants, but flow cannot exceed ecological or engineering limits. We seek the discharge rate that **minimizes** concentration within these constraints.
+Pollutant concentration downstream depends on both pollutant load and stream flow. Increasing flow typically dilutes pollutants, but flow cannot exceed ecological or engineering limits. We seek the discharge rate that **minimizes** concentration within these constraints.
 
 Let:
 
@@ -757,7 +753,7 @@ Thus:
 - This demonstrates an important optimization principle:  
   **When derivatives never change sign, endpoints determine the optimum.**
 
-Environmental managers must balance this with ecological flow requirements, hydropower operations, habitat needs, and infrastructure limits.
+Environmental managers must balance this with ecological flow requirements, hydro power operations, habitat needs, and infrastructure limits.
 
 **Conclusion:**  
 The model predicts a **minimum pollution concentration** at the **maximum feasible discharge**,  
@@ -767,7 +763,7 @@ Q = 50 \text{ m³/s}.
 
 ---
 
-```{r, warning=FALSE, message=FALSE, echo=FALSE}
+```{r pollution-dilution-endpoint-min, fig.cap="Minimizing pollution concentration through dilution.", fig.alt="Graph of pollution concentration C of Q as a function of discharge from 0 to 50 cubic meters per second. The curve decreases continuously as discharge increases, showing that concentration is highest at the left endpoint and lowest at the right endpoint. A point at zero discharge is labeled as the endpoint maximum concentration, and a point at 50 cubic meters per second is labeled as the endpoint minimum and best allowed flow. The figure indicates that the derivative is negative everywhere, so there are no internal critical points and the minimum occurs at an endpoint.", warning=FALSE, message=FALSE, echo=FALSE}
 
 # Dilution model
 Cfun <- function(Q) 100 / (Q + 20)
@@ -804,25 +800,21 @@ text(35, 2,
      labels = "Endpoint minimum\n(best allowed flow)",
      pos = 4, col = "red")
 
-
 text(25, 3,
      labels = "C'(Q) < 0 everywhere:\nno internal critical points",
      col = "gray40")
-
 ```
-
-![Figure: Minimizing pollution concentration through dilution.](images/pollution_dilution.png){fig.alt="Graph showing pollution concentration C(Q) decreasing as discharge Q increases from 0 to 50 cubic meters per second. The curve starts at a high concentration at low discharge, labeled as an endpoint maximum, and steadily declines without turning points. The derivative is indicated to be negative everywhere, meaning there are no internal critical points. The lowest concentration occurs at the right endpoint near Q equals 50, labeled as the endpoint minimum and best allowed flow. The horizontal axis represents discharge and the vertical axis represents pollution concentration."}
 
 :::
 
 ### Maximizing Reservoir Release Benefits
 
-Reservoir releases influence hydropower production, ecological flow needs, flood protection, and downstream water availability. An optimal release often balances multiple competing outcomes.
+Reservoir releases influence hydro power production, ecological flow needs, flood protection, and downstream water availability. An optimal release often balances multiple competing outcomes.
 
 **Modeling approach**
 
 - Let \( R \) = release rate.  
-- Hydropower production may scale with  
+- Hydro power production may scale with  
   \[
   H(R) = \eta R (h - \alpha R),
   \]
@@ -841,7 +833,7 @@ Reservoir releases influence hydropower production, ecological flow needs, flood
 
 **Interpreting the optimum**
 
-- The derivative identifies the flow where hydropower gains and ecological gains balance most efficiently.  
+- The derivative identifies the flow where hydro power gains and ecological gains balance most efficiently.  
 - If the optimum lies outside allowable limits, the best feasible value is at the nearest boundary.  
 - This helps reservoir operators allocate releases that support both human and ecological needs.
 
@@ -850,12 +842,12 @@ Reservoir releases influence hydropower production, ecological flow needs, flood
 ::: promptbox
 #### **Worked Example: Maximizing Reservoir Release Benefits** {-}
 
-Reservoir releases influence hydropower production, ecological flow needs, flood protection, and downstream water availability. An optimal release often balances multiple competing outcomes.
+Reservoir releases influence hydro power production, ecological flow needs, flood protection, and downstream water availability. An optimal release often balances multiple competing outcomes.
 
 Let:
 
 - \( R \) = release rate (m³/s)  
-- Hydropower benefits follow  
+- Hydro power benefits follow  
   \[
   H(R) = \eta R (h - \alpha R)
   \]
@@ -943,8 +935,8 @@ Therefore the critical point is **concave down** → a **maximum**.
 
 ##### **4. Interpretation** {-}
 
-- At low flows, hydropower and ecological benefits rise quickly.  
-- At high flows, hydropower suffers head losses and ecological gains level off.  
+- At low flows, hydro power and ecological benefits rise quickly.  
+- At high flows, hydro power suffers head losses and ecological gains level off.  
 - The best release occurs at the point where increasing flow yields no further net benefits.
 
 **Conclusion:**  
@@ -952,7 +944,7 @@ Total benefits peak at approximately **145 m³/s**, giving reservoir operators a
 
 ---
 
-```{r, warning=FALSE, message=FALSE, echo=FALSE}
+```{r reservoir-release-benefit-max, fig.cap="Maximizing total benefit from reservoir release.", fig.alt="Graph of total benefit B of R as a function of reservoir release from 0 to 200 cubic meters per second. The curve rises at first, then levels off and reaches a maximum at an interior point, after which it begins to decline. The maximum point is marked with a red dot and dashed horizontal and vertical guide lines. The figure illustrates an optimization problem in which the best reservoir release occurs at a critical point where total benefit is highest.", warning=FALSE, message=FALSE, echo=FALSE}
 
 # Benefit function and derivative
 B  <- function(R) 120*R - 0.4*R^2 + 50*(1 - exp(-0.05*R))
@@ -961,11 +953,10 @@ Bprime <- function(R) 120 - 0.8*R + 2.5*exp(-0.05*R)
 # Domain
 Rvals <- seq(0, 200, length.out = 400)
 
-# Numerical critical point (safe: no endpoint sign issues)
+# Numerical critical point
 crit <- Rvals[which.min(abs(Bprime(Rvals)))]
 
-
-### Panel 1: Benefit function
+# Plot benefit function
 plot(
   Rvals, B(Rvals), type = "l",
   lwd = 3, col = "purple4",
@@ -983,12 +974,7 @@ text(
   labels = paste0("Maximum at R ≈ ", round(crit)),
   col = "red", cex = 0.9
 )
-
-
-
 ```
-
-![Figure: Maximizing reservoir release benefits.](images/reservoir_release_benefit.png){fig.alt="Graph of total benefit B(R) versus reservoir release R from 0 to 200 cubic meters per second. The curve increases rapidly at first, then levels off and reaches a maximum near R equals 150, which is marked with a point and labeled as the maximum. After this point, the benefit slightly decreases as release continues to increase. The horizontal axis represents release and the vertical axis represents total benefit."}
 
 :::
 
@@ -1124,7 +1110,7 @@ This provides managers with a quantitative guideline for sustainable foraging, f
 
 ---
 
-```{r, echo=FALSE, message=FALSE, warning=FALSE}
+```{r logistic-yield-maximum, fig.cap="Maximum sustainable yield in a logistic growth model.", fig.alt="Graph of sustainable yield Y of P as a function of population size from 0 to the carrying capacity. The curve is hump-shaped, starting at zero when the population is zero, increasing to a maximum at half the carrying capacity, and then decreasing back to zero as the population approaches the carrying capacity. The maximum point at P equals K over 2 is marked with a red dot and dashed guide lines. The figure illustrates that the maximum sustainable yield occurs at an intermediate population size rather than at the largest population.", echo=FALSE, message=FALSE, warning=FALSE}
 
 # Logistic sustainable yield function
 r <- 1
@@ -1164,17 +1150,14 @@ text(
   labels = expression(Y(P) == r*P*(1 - P/K)),
   pos = 4, col = "darkgreen"
 )
-
 ```
-
-![Figure: Maximum sustainable yield in logistic growth.](images/logistic_yield.png){fig.alt="Graph of sustainable yield Y(P) versus population size P for a logistic growth model. The curve is a downward-opening parabola that starts at zero, rises to a maximum at P equals K over 2, and then decreases back to zero as P approaches the carrying capacity. The peak at P equals K over 2 is marked and labeled as the maximum sustainable yield. The horizontal axis represents population size and the vertical axis represents sustainable yield."}
 
 :::
 
 
 ## Common Optimization Patterns
 
-Although environmental optimization problems can appear diverse, many of them fall into a handful of recurring mathematical patterns. Recognizing these patterns helps build intuition and approach new problems with confidence. Each pattern reflects a specific type of physical or ecological tradeoff, and each leads to a characteristic type of function that can be analyzed with derivatives.
+Although environmental optimization problems can appear diverse, many of them fall into a handful of recurring mathematical patterns. Recognizing these patterns helps build intuition and approach new problems with confidence. Each pattern reflects a specific type of physical or ecological trade-off, and each leads to a characteristic type of function that can be analyzed with derivatives.
 
 ---
 
@@ -1295,7 +1278,7 @@ Most environmental optimization problems are not free to take any value of \( x 
 
 In many cases, constraints come from basic physical or biological rules:
 
-- **Nonnegativity:**  
+- **Non-negativity:**  
   \( x \ge 0 \)  
   Populations, concentrations, discharge rates, depths, biomass, and harvest levels cannot be negative.
 
@@ -1485,7 +1468,7 @@ This illustrates a central idea:
 
 ### **4. Visualization of the cost function and the constraint** {-}
 
-```{r, warning=FALSE, message=FALSE, echo=FALSE}
+```{r cost-minimization-constraint-2panel, fig.cap="Cost minimization subject to an environmental constraint.", fig.alt="Two stacked graphs show cost and pollutant concentration as functions of treatment intensity x. The top graph shows cost increasing linearly as treatment intensity increases. A vertical dashed line marks the smallest feasible treatment level, labeled as the feasible minimum, where cost is minimized while still satisfying the constraint. The bottom graph shows pollutant concentration decreasing as treatment intensity increases. A horizontal dashed line marks the target pollutant level, and the curve meets this target exactly at the same treatment value marked above. The figure illustrates that the lowest-cost feasible solution occurs where the pollutant curve first reaches the required target.", warning=FALSE, message=FALSE, echo=FALSE}
 
 # Numerical values
 a <- 40       # cost slope
@@ -1536,7 +1519,6 @@ points(xmin, Pollut(xmin), pch=19, col="red", cex=1.3)
 text(xmin + 0.3, Pollut(xmin) + 4,
      labels="Pollutant meets target\nat x = x_min",
      col="red", pos=4)
-
 ```
 
 ![Figure: Cost minimization subject to an environmental constraint.](images/cost_constraint.png){fig.alt="Two stacked graphs showing cost and pollutant levels as functions of treatment intensity x. The top graph shows cost increasing with treatment intensity, with a marked feasible minimum at a specific value x equals x minimum. The bottom graph shows pollutant concentration decreasing as treatment intensity increases, with a horizontal target line indicating the required maximum pollutant level. The point where the pollutant curve meets the target corresponds to x equals x minimum, showing that the lowest cost satisfying the environmental constraint occurs at the minimum treatment level that meets the pollutant target."}
@@ -1545,14 +1527,14 @@ text(xmin + 0.3, Pollut(xmin) + 4,
 
 ::: promptbox
 
-#### **Worked Example: Choosing an Energy-Efficient Building Temperature Setpoint** {-}
+#### **Worked Example: Choosing an Energy-Efficient Building Temperature Set-point** {-}
 
-Buildings consume energy for heating and cooling, and the optimal temperature setpoint balances **comfort** and **energy cost**.  
+Buildings consume energy for heating and cooling, and the optimal temperature set point balances **comfort** and **energy cost**.  
 Unlike the previous example (where a constraint determined the optimum), this scenario naturally produces an **interior optimum**: heating too much wastes energy, cooling too much wastes energy, and comfort losses also increase cost in both directions.
 
 Let:
 
-- \( T \) = indoor temperature setpoint (°C)  
+- \( T \) = indoor temperature set point (°C)  
 - Total “cost” includes **energy use** and **comfort penalties**:  
   \[
   C(T) = a(T - T_{\text{amb}})^2 + b(T - T_{\text{pref}})^2
@@ -1649,7 +1631,7 @@ This differs from the constrained-treatment example:
 
 The plot below shows the cost curve and the optimal set point.
 
-```{r, warning=FALSE, message=FALSE, echo=FALSE}
+```{r indoor-temperature-tradeoff, fig.cap="Optimal indoor temperature from an energy–comfort tradeoff.", fig.alt="Graph of total cost C of T as a function of indoor temperature from 8 to 26 degrees Celsius. The curve is U-shaped, with costs high at both low and high temperatures and a minimum near 19 degrees Celsius. A vertical dashed line and a red point mark the minimum cost. The figure illustrates that the optimal indoor temperature balances energy costs and comfort costs, producing the lowest total cost at an intermediate temperature.", warning=FALSE, message=FALSE, echo=FALSE}
 
 # Parameters
 a <- 1
@@ -1674,7 +1656,7 @@ par(mar = c(5,5,4,2))
 plot(
   Ts, Cost(Ts), type="l",
   lwd=3, col="darkblue",
-  xlab="Indoor Temperature T (°C)",
+  xlab="Indoor Temperature T (\u00B0C)",
   ylab="Total Cost C(T)",
   main="Optimal Indoor Temperature from Energy–Comfort Tradeoff",
   cex.main=1.1
@@ -1685,13 +1667,10 @@ points(T_opt, Cost(T_opt), pch=19, col="red", cex=1.3)
 
 text(
   T_opt + 0.5, Cost(T_opt) + 20,
-  labels = "Minimum cost at T = 19°C",
+  labels = "Minimum cost at T = 19\u00B0C",
   col="red", pos=4
 )
-
 ```
-
-![Figure: Optimal indoor temperature balancing energy and comfort costs.](images/temperature_optimization.png){fig.alt="Graph of total cost C(T) versus indoor temperature from about 8 to 26 degrees Celsius. The curve is U-shaped, with higher costs at both low and high temperatures and a minimum point near 19 degrees Celsius. A vertical dashed line and a point mark the minimum cost at T equals 19 degrees Celsius, indicating the optimal indoor temperature that balances energy use and comfort."}
 
 :::
 
@@ -2282,7 +2261,7 @@ C(d) = 50d - 4d^2,
 where \(d\) is planting density in **hundreds** of trees per hectare.
 
 **a)** Find the density that maximizes carbon storage.  
-**b)** Explain the tradeoff.
+**b)** Explain the trade-off.
 
 <details>
 <summary><strong>Show Solution</strong></summary>
@@ -2303,14 +2282,14 @@ Since \(d\) is in hundreds of trees per hectare,
 optimal density ≈ **625 trees/ha**.
 
 **Interpretation:**  
-Low densities underuse space and light; very high densities cause strong competition and mortality.  
+Low densities under use space and light; very high densities cause strong competition and mortality.  
 The optimal density balances these, maximizing total stand carbon.
 </details>
 
 ---
 
-### **9. Balancing Hydropower vs. Habitat Flow**{-}
-Hydropower from a dam:
+### **9. Balancing Hydro power vs. Habitat Flow**{-}
+Hydro power from a dam:
 \[
 P(Q) = 5Q - 0.1Q^2,
 \]
@@ -2347,7 +2326,7 @@ So the **optimal feasible release** is \(Q = 25\) m³/s.
 
 **Interpretation:**  
 
-- Here, the ecological constraint \(Q \ge 10\) doesn’t change the optimum—hydropower is maximized at a habitat-safe flow.  
+- Here, the ecological constraint \(Q \ge 10\) doesn’t change the optimum—hydro power is maximized at a habitat-safe flow.  
 - In other contexts, the unconstrained optimum might violate habitat needs, in which case operators would be forced to choose a boundary flow that satisfies ecological requirements.
 </details>
 
@@ -2952,7 +2931,7 @@ Since the area of the irrigated region is \(\pi r^2\), the total cost is:
 T(r) = (\pi r^2)(100 + 0.5r).
 \]
 
-This creates a tradeoff: a **larger radius** waters more land but has **much higher marginal cost**, while a smaller radius waters less land but is more efficient.
+This creates a trade off: a **larger radius** waters more land but has **much higher marginal cost**, while a smaller radius waters less land but is more efficient.
 
 ---
 
@@ -3047,28 +3026,28 @@ This aligns with the model: expanding irrigation radius increases cost at an acc
 
 
 
-### **6. Understory Light Optimization in a Forest Restoration Project** {-}
+### **6. Under story Light Optimization in a Forest Restoration Project** {-}
 
-In ecological restoration work, the spacing of canopy trees is crucial for determining the amount of **light that reaches the understory**.  
+In ecological restoration work, the spacing of canopy trees is crucial for determining the amount of **light that reaches the under story**.  
 If trees are planted too closely, the canopy closes too quickly and shades out young shrubs, forbs, and tree seedlings.  
 If spacing is too wide, the site may become dominated by invasive grasses, and the developing forest may lose structural complexity.
 
-To explore this tradeoff, a restoration team models the **percent of full sunlight** reaching the understory as a function of the distance \(d\) (in meters) between canopy trees:
+To explore this trade-off, a restoration team models the **percent of full sunlight** reaching the under-story as a function of the distance \(d\) (in meters) between canopy trees:
 
 \[
 L(d) = 60d - 3d^2.
 \]
 
 - The linear term \(60d\) reflects the increase in light availability as canopy trees are spaced further apart.
-- The quadratic term \(-3d^2\) captures the diminishing returns and eventual decline: if trees are *too far apart*, understory plants may be exposed to excessive light, drying out soil and harming shade-tolerant species.
+- The quadratic term \(-3d^2\) captures the diminishing returns and eventual decline: if trees are *too far apart*, under-story plants may be exposed to excessive light, drying out soil and harming shade-tolerant species.
 
-The goal is to find the **optimal spacing** for maximizing usable understory light.
+The goal is to find the **optimal spacing** for maximizing usable under-story light.
 
 ---
 
 **Your Task**
 
-1. Find the spacing \(d\) that **maximizes** understory light availability.  
+1. Find the spacing \(d\) that **maximizes** under-story light availability.  
 2. Confirm the result using the **second derivative test**.  
 3. Explain why this spacing makes ecological sense.
 
@@ -3113,15 +3092,15 @@ L''(10) = -6 < 0,
 \]
 
 the function is **concave down** at the critical point.  
-Therefore, \(d = 10\) meters gives a **local (and global) maximum** for understory light.
+Therefore, \(d = 10\) meters gives a **local (and global) maximum** for under-story light.
 
 ---
 
 **Step 3: Ecological Interpretation**
 
-- At **smaller spacings** (e.g., 4–6 m), canopy trees shade each other, reducing understory light.  
+- At **smaller spacings** (e.g., 4–6 m), canopy trees shade each other, reducing under-story light.  
 - At **larger spacings** (e.g., 14–18 m), the site becomes too exposed, drying soil and stressing shade-adapted forest species.  
-- The model suggests that **10 meters** strikes the best balance—enough canopy separation to let light penetrate, but not so much that understory vegetation becomes overexposed.
+- The model suggests that **10 meters** strikes the best balance—enough canopy separation to let light penetrate, but not so much that under-story vegetation becomes overexposed.
 
 This result aligns with many forest restoration guidelines, where **8–12 m spacing** is often recommended to maximize diversity of shade-tolerant plants, early successional shrubs, and tree seedlings.
 
@@ -3284,7 +3263,7 @@ The optimal point balances:
 - **more expensive base area** vs.  
 - **less expensive side area**.
 
-This tradeoff produces a bin that is slightly wider than it is tall, minimizing total material cost while still achieving the required volume.
+This trade-off produces a bin that is slightly wider than it is tall, minimizing total material cost while still achieving the required volume.
 
 </details>
 
@@ -3297,7 +3276,7 @@ This tradeoff produces a bin that is slightly wider than it is tall, minimizing 
 
 ### **8. Wetland Buffer Optimization With 3-Sided Fence** {-}
 
-Wetland buffers protect water quality, filter stormwater, provide habitat, and support nutrient cycling.  
+Wetland buffers protect water quality, filter storm water, provide habitat, and support nutrient cycling.  
 A conservation team is constructing a **rectangular wetland buffer** along a riverbank. Because the river forms one boundary, fencing is needed on **only three sides**:
 
 - one length (parallel to the river), and  

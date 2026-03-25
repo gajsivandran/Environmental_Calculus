@@ -36,6 +36,14 @@ fig:cubic-extrema-plot
 fig:concavity-visualization-smooth-2x2
 fig:inflection-types-panel-updated
 fig:extrema-2x2-panel
+fig:classify-optima-critical-concavity-endpoints
+fig:feasible-domain-critical-points
+fig:planting-density-optimization-2panel
+fig:pollution-dilution-endpoint-min
+fig:reservoir-release-benefit-max
+fig:logistic-yield-maximum
+fig:cost-minimization-constraint-2panel
+fig:indoor-temperature-tradeoff
 fig:practice-reading-graph
 fig:blank-axes
 fig:cubic-example-plot
