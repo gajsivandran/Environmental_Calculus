@@ -260,7 +260,8 @@ Therefore, the full search for optima includes:
 
 ---
 
-```{r classify-optima-critical-concavity-endpoints, fig.cap="Classifying optima using critical points, concavity, and endpoints.", fig.alt="Graph of a smooth function over a finite interval from x equals negative 2 to x equals 8. The curve has one local maximum and one local minimum at interior critical points, both marked in red. The local maximum occurs where the graph is concave down, and the local minimum occurs where the graph is concave up. The two endpoints of the interval are marked in green and labeled as the global minimum and global maximum. The figure illustrates that local extrema are identified at critical points using concavity, while absolute extrema on a closed interval can occur at endpoints.", echo=FALSE, warning=FALSE, message=FALSE}
+```{r classify-optima-critical-concavity-endpoints, fig.cap="Classifying optima using critical points, concavity, and endpoints.", fig.alt="Graph of a smooth function over a finite interval from x equals negative 3 to x equals 8. The curve has one local maximum and one local minimum at interior critical points, both marked in red. The local maximum occurs where the graph is concave down, and the local minimum occurs where the graph is concave up. The two endpoints of the interval are marked in green and labeled as the global minimum and global maximum. The figure illustrates that local extrema are identified at critical points using concavity, while absolute extrema on a closed interval can occur at endpoints.", echo=FALSE, warning=FALSE, message=FALSE}
+
 
 # Function with one local max and one local min
 f  <- function(x) (x+2)*(x-2)*(x-6) + 25
@@ -268,7 +269,7 @@ fp <- function(x) 3*x^2 - 12*x - 8     # derivative
 fpp<- function(x) 6*x - 12             # second derivative
 
 # Domain
-x_vals <- seq(-2, 8, length.out = 400)
+x_vals <- seq(-3, 8, length.out = 400)
 
 # Critical points (roots of fp)
 crit <- sort(Re(polyroot(c(-8, -12, 3))))  # quadratic roots
@@ -280,7 +281,7 @@ y_max <- f(x_max)
 y_min <- f(x_min)
 
 # Endpoint values (global optima)
-x_left  <- -2; y_left  <- f(x_left)
+x_left  <- -3; y_left  <- f(x_left)
 x_right <-  8; y_right <- f(x_right)
 
 # Plot
@@ -302,7 +303,7 @@ points(x_right,y_right,pch=19, col="darkgreen", cex=1.5)
 text(x_max, y_max + 15, "Local maximum\nf''<0 (concave down)", col="red", cex=0.9)
 text(x_min, y_min + 25, "Local minimum\nf''>0 (concave up)", col="red", cex=0.9)
 
-text(x_left - .3, y_left - 15, "Endpoint\n(global min)", col="darkgreen", cex=0.9, pos=4)
+text(x_left + .1, y_left + 4, "Endpoint\n(global min)", col="darkgreen", cex=0.9, pos=4)
 text(5.5, 125, "Endpoint\n(global max)", col="darkgreen", cex=0.9, pos=4)
 ```
 
