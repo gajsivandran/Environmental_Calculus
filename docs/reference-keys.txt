@@ -1,4 +1,4 @@
-tab:unnamed-chunk-3
+tab:unnamed-chunk-1
 fig:apply-the-function-to-compute-temperature-40
 fig:temperature-time-elevation-lines
 fig:graph-change-example
@@ -44,6 +44,19 @@ fig:reservoir-release-benefit-max
 fig:logistic-yield-maximum
 fig:cost-minimization-constraint-2panel
 fig:indoor-temperature-tradeoff
+fig:vertical-asymptote-plot
+fig:exp-vs-polynomial-growth
+fig:derivative-sign-chart-visual
+fig:curve-sketching-cubic-labeled
+fig:asymptote-skeleton-step1
+fig:asymptote-skeleton-step2
+fig:asymptote-skeleton-step3
+fig:asymptote-skeleton-step4
+fig:asymptote-skeleton-step5
+fig:rational-practice1-annotated
+fig:polynomial-practice2-annotated
+fig:polynomial-practice3-inflection
+fig:rational-practice4-annotated
 fig:practice-reading-graph
 fig:blank-axes
 fig:cubic-example-plot
