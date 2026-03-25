@@ -427,7 +427,8 @@ Look at the 4-panel figure:
 
 ---
 
-```{r zoom-panels-curve-to-line, echo=FALSE, fig.align='center', out.width='100%'}
+```{r zoom-panels-curve-to-line, fig.cap="Zooming from a curve to its tangent line.", fig.alt="Four side-by-side panels show a smooth curve of sea level versus year with increasing zoom. In the first panel, a wide view shows the curved shape over many years. A dashed box highlights a smaller region. In the second panel, the view zooms into that region and a straight tangent line is drawn at the year 2010. In the third and fourth panels, the zoom continues further, and the curve becomes increasingly indistinguishable from the tangent line near that point. The sequence illustrates how a curve appears locally linear when viewed at a small enough scale.", echo=FALSE, fig.align='center', out.width='100%'}
+
 # --- Setup a smooth "sea level" curve and its derivative (for the tangent) ---
 f      <- function(x) 0.02*(x - 2000)^2 + 5
 fprime <- function(x) 0.04*(x - 2000)
@@ -484,8 +485,6 @@ for (i in seq_along(wins)) {
   # Draw a "zoom box" pointing to the next panel's window (for panels 1-3)
   if (i < length(wins)) {
     next_xr <- wins[[i + 1]]
-    # Choose y-range of the box based on curve over the next x-range,
-    # but clamp to current panel's y-range
     xs_box <- seq(next_xr[1], next_xr[2], length.out = 200)
     ys_box <- f(xs_box)
     y_min <- max(min(ys_box), yr[1])
@@ -499,7 +498,6 @@ for (i in seq_along(wins)) {
 par(op)
 ```
 
-![Figure: Zoomed-in views illustrating how a curve approaches its tangent line.](images/sea_level.png){fig.alt="Four side-by-side panels labeled Zoom 0 through Zoom 3 show a blue curve of sea level versus year and a green tangent line at a specific point around 2010. In Zoom 0, the curve is visibly curved and the tangent line only touches at one point. A dashed box highlights a region for further zooming. In Zoom 1 and Zoom 2, progressively closer views show the curve and tangent line becoming more similar within the highlighted region. By Zoom 3, the curve and tangent line are nearly indistinguishable over the small interval, illustrating how a curve locally behaves like a straight line at a point."}
 
 **Step 2: Compare the Curve and the Line (5 minutes)**  
 In Panels 2–4 you see both the *curve* and the *tangent line* at the chosen point.  
@@ -591,7 +589,8 @@ $$
 
                         
 
-```{r limit-hole-plot, echo=FALSE, fig.height=5, fig.width=7}
+```{r limit-hole-plot, fig.cap="Removable discontinuity and limit at x = 1.", fig.alt="Graph of the function f(x) equals (x squared minus 1) divided by (x minus 1) over values of x near 1. The curve appears as a straight line with slope 1, matching the simplified function f(x) equals x plus 1, but there is an open circle at the point (1, 2) indicating the function is not defined there. A dashed horizontal line marks y equals 2, showing the limit of the function as x approaches 1. The figure illustrates a removable discontinuity where the limit exists even though the function value is missing.", echo=FALSE, fig.height=5, fig.width=7}
+
 # Define the function
 f <- function(x) {
   (x^2 - 1) / (x - 1)
@@ -616,7 +615,7 @@ abline(h = 2, col = "gray", lty = 2)
 points(1, 2, pch = 1, col = "red", cex = 1.5, lwd = 2)
 text(1, 2.2, labels = "Hole at x = 1", pos = 3, cex = 0.8)
 ```
-![Figure: Graph of a function with a removable discontinuity at x = 1.](images/sea_level.png){fig.alt="A plot of the function f(x) = (x^2 - 1) / (x - 1) shows a straight blue line increasing from left to right. At x = 1, there is an open red circle at the point (1, 2), indicating a hole in the graph. A dashed horizontal line marks the value y = 2. The graph illustrates that although the function is undefined at x = 1, the values of the function approach 2 from both sides, showing a removable discontinuity."}
+
 
 Graphically we can see the function doesn't exist at $x=1$, which we depict as an open circle. But we can still ask, what function value do we approach as we get close to 2.
 
@@ -742,9 +741,10 @@ This kind of jump is common in natural or engineered boundaries and reminds us t
 
 ### Plot the Discontinuity
 
-```{r dam-limit, echo=FALSE}
+```{r dam-limit, fig.cap="Temperature discontinuity at a dam outlet.", fig.alt="Graph showing water temperature as a function of distance from a dam, with a jump discontinuity at x equals 0. For distances less than 0, the temperature is constant at 15 degrees Celsius, shown as a horizontal blue line. For distances greater than 0, the temperature is constant at 10 degrees Celsius, shown as a horizontal green line. Open circles at x equals 0 indicate that neither value is included at that point. A vertical dashed line marks the dam location. The figure illustrates a discontinuity where the left-hand and right-hand limits are different.", echo=FALSE}
+
 plot(NULL, xlim = c(-5, 5), ylim = c(8, 17), 
-     xlab = "Distance from dam (km)", ylab = "Temperature (degC)", 
+     xlab = "Distance from dam (km)", ylab = "Temperature (\u00B0C)", 
      main = "Temperature Discontinuity at Dam Outlet")
 
 # Upstream: constant 15°C for x < 0
@@ -757,12 +757,11 @@ segments(0, 10, 5, 10, col = "forestgreen", lwd = 2)
 points(0, 15, pch = 1, cex = 1.5, col = "steelblue")
 points(0, 10, pch = 1, cex = 1.5, col = "forestgreen")
 
-text(-2.5, 15.5, "Upstream (15 degC)", col = "steelblue")
-text(2.5, 9.5, "Downstream (10 degC)", col = "forestgreen")
+text(-2.5, 15.5, "Upstream (15 \u00B0C)", col = "steelblue")
+text(2.5, 9.5, "Downstream (10 \u00B0C)", col = "forestgreen")
+
 abline(v = 0, col = "gray70", lty = 2)
 ```
-
-![Figure: Temperature discontinuity at a dam outlet.](images/sea_level.png){fig.alt="A graph shows temperature versus distance from a dam. To the left of the dam (negative distances), a horizontal blue line at 15°C represents upstream water temperature, ending with an open circle at the dam (x = 0). To the right of the dam (positive distances), a horizontal green line at 10°C represents downstream temperature, starting with an open circle at x = 0. A dashed vertical line marks the dam location. The graph illustrates a jump discontinuity, where temperature abruptly drops from 15°C upstream to 10°C downstream."}
 
 ## From Average to Instantaneous: The Role of Limits
 
@@ -847,7 +846,8 @@ Look at the three panels:
 - How does the red secant line change as the interval gets smaller?  
 - How does it compare to the green tangent line?  
 
-```{r forward-secant-3panels, echo=FALSE, fig.align='center', out.width='100%'}
+```{r forward-secant-approach, fig.cap="Forward secant lines approaching the tangent line.", fig.alt="Three side-by-side panels show a curved graph of lake level versus year with a tangent line at the year 2005 and forward secant lines using future points. In the first panel, the secant connects 2005 to 2015 and differs noticeably from the tangent. In the second panel, the secant connects 2005 to 2010 and is closer to the tangent. In the third panel, the secant connects 2005 to 2006 and nearly overlaps the tangent. The sequence illustrates how the forward secant line approaches the tangent line as the second point moves closer to 2005, representing the idea of a derivative as a limit of average rates of change.", echo=FALSE}
+
 # Smooth "Lake level" curve and derivative (for tangent)
 f      <- function(x) 0.02*(x - 2000)^2 + 5
 fprime <- function(x) 0.04*(x - 2000)  # derivative of f
@@ -891,7 +891,6 @@ for (i in seq_along(xR_list)) {
   # Mark points
   points(c(x0, xR), c(y0, yR), pch = 19)
 
-
   # Legend only on the first panel
   if (i == 1) {
     legend("topleft",
@@ -902,9 +901,6 @@ for (i in seq_along(xR_list)) {
 }
 par(op)
 ```
-
-![Figure: Forward secant lines approaching the tangent line.](images/sea_level.png){fig.alt="Three side-by-side panels show a curved blue graph of lake level versus year, with a green tangent line at the year 2005 and red dashed forward secant lines using different future points. In the first panel, the secant connects 2005 to 2015 and differs noticeably from the tangent. In the second panel, the secant connects 2005 to 2010 and is closer to the tangent. In the third panel, the secant connects 2005 to 2006 and nearly overlaps the tangent. The sequence illustrates how the forward secant line approaches the tangent line as the second point moves closer to 2005."}
-
 
 **Step 2: Recall the Equations (3 minutes)**
 
@@ -976,7 +972,8 @@ If you divide anything by zero, your calculator will give you an undefined error
 
 Let's consider the derivative of the function $f(x)=x^2$ and try to find the derivative at $x=2$.
 
-```{r tangent-example, echo=FALSE}
+```{r tangent-example, fig.cap="Tangent line to a quadratic function at a point.", fig.alt="Graph of the function f(x) equals x squared from x equals 0 to 4, shown as a curved line opening upward. A straight tangent line is drawn at x equals 2, touching the curve at the point (2, 4). The tangent line has slope 4 and closely matches the curve near this point but diverges as x moves away. The figure illustrates how the tangent line represents the instantaneous rate of change of the function at x equals 2.", echo=FALSE}
+
 # Define the function and its derivative
 f <- function(x) x^2
 f_prime <- function(x) 2 * x  # Derivative of f(x) = x^2
@@ -1006,7 +1003,7 @@ text(x0, y0 + 1, labels = "(2, 4)", pos = 3)
 text(3, y0 - 1, labels = "Tangent at x = 2", pos = 3, col = "red")
 ```
 
-![Figure: Tangent line to f(x) = x^2 at x = 2.](images/sea_level.png){fig.alt="A graph shows the function f(x) = x squared as a smooth black curve. A red straight line represents the tangent line at x = 2, touching the curve at the point (2, 4), which is marked with a black dot and labeled. The tangent line has the same slope as the curve at that point and lies just below the curve for larger x-values, illustrating the idea of a linear approximation at a point."}
+![Figure: Tangent line to f(x) = x^2 at x = 2.]{fig.alt="A graph shows the function f(x) = x squared as a smooth black curve. A red straight line represents the tangent line at x = 2, touching the curve at the point (2, 4), which is marked with a black dot and labeled. The tangent line has the same slope as the curve at that point and lies just below the curve for larger x-values, illustrating the idea of a linear approximation at a point."}
 
 We are in search of the derivative at $x=2$, this is the same as the slope of the tangent line at same point. The graph above has sketched in the tangent line. We can graphically calculate the slope of the line by looking at the *rise over the run*. From $x=1$ to $x=2$ we have a *run* of 1 and a *rise* of 4. Therefore the slope would be $\frac{4}{1}=4$. This is the derivative of this function at $x=2$.
 
@@ -1137,7 +1134,8 @@ f'(1)=2(1)=2
 $$
 Looking at the graph of the tangent at $x=1$ we can calculate the slope. Using rise over run be can see that the tangent goes from $(1,1)$ to $(3,5)$, this is a rise of $4$ over a run of $2$. Rise over run gives us a slope of $2$. 
 
-```{r tangent-example2, echo=FALSE}
+```{r tangent-example2, fig.cap="Tangent line to a quadratic function at x = 1.", fig.alt="Graph of the function f(x) equals x squared from x equals 0 to 4, shown as an upward-opening curve. A straight tangent line is drawn at x equals 1, touching the curve at the point (1, 1). The tangent line has slope 2 and passes through another labeled point (3, 5). The line closely matches the curve near x equals 1 but diverges as x moves away, illustrating how the tangent line represents the instantaneous rate of change at that point.", echo=FALSE}
+
 # Define the function and its derivative
 f <- function(x) x^2
 f_prime <- function(x) 2 * x  # Derivative of f(x) = x^2
@@ -1168,8 +1166,6 @@ points(3, 5, pch = 19)
 text(3, 5.5, labels = "(3, 5)", pos = 3)
 text(3, y0 - 1, labels = "Tangent at x = 1", pos = 3, col = "red")
 ```
-
-![Figure: Tangent line to f(x) = x^2 at x = 1.](images/sea_level.png){fig.alt="A graph shows the function f(x) = x squared as a smooth black curve. A red straight line represents the tangent line at x = 1, touching the curve at the point (1, 1), which is marked and labeled. Another point (3, 5) is shown on the tangent line. The tangent line lies below the curve for larger x-values, illustrating how the linear approximation at x = 1 underestimates the function as x increases."}
 
 
 ---
@@ -1579,13 +1575,14 @@ In this section, you'll strengthen your visual intuition about what derivatives 
 
 Below is a sketch of a function representing streamflow over time. Without doing any calculations, answer the following:
 
-```{r slope-behavior-curve, echo=FALSE, fig.width=6, fig.height=4}
+```{r slope-behavior-curve, fig.cap="Streamflow over time showing changes in slope.", fig.alt="Graph of streamflow as a function of time over 10 days, shown as a smooth curve. The curve initially decreases, then increases, and later decreases again, indicating changes in slope over time. Early in the graph the slope is negative, then becomes positive as the curve rises, and later becomes negative again after reaching a peak. The figure illustrates how the sign of the slope corresponds to decreasing and increasing behavior in the function.", echo=FALSE, fig.width=6, fig.height=4}
+
 curve(-0.1*(x - 5)^3 + 2*(x - 5), from = 0, to = 10, 
       xlab = "Time (days)", ylab = "Streamflow (m3/s)", 
       main = "Streamflow Over Time", col = "steelblue", lwd = 2)
+
 grid()
 ```
-![Figure: Streamflow over time.](images/sea_level.png){fig.alt="A line graph shows streamflow in cubic meters per second versus time in days. The curve starts at a positive value, decreases to a minimum below zero around day 2, then rises steadily to a peak above 3 around day 7 to 8, and finally declines again toward the end of the time period. The graph illustrates how streamflow varies over time with both decreasing and increasing trends."}
 
 
 - During which intervals is the function increasing?  
@@ -1616,18 +1613,21 @@ For each marked point on the graph below, estimate whether the derivative is:
 
 Briefly explain why you came to your conclusion
 
-```{r, echo=FALSE}
+```{r derivative-sign-points, fig.cap="Sign of the derivative at key points on a curve.", fig.alt="Graph of streamflow as a function of time over 10 days, shown as a smooth curve. Four points labeled A, B, C, and D are marked on the curve. Point A lies on a decreasing section where the slope is negative. Point B is at a local minimum where the slope is zero. Point C lies on an increasing section where the slope is positive. Point D lies on a decreasing section after a peak where the slope is negative. The figure illustrates how the sign of the derivative relates to increasing and decreasing behavior at specific points.", echo=FALSE}
+
 curve(-0.1*(x - 5)^3 + 2*(x - 5), from = 0, to = 10, 
       xlab = "Time (days)", ylab = "Streamflow (m3/s)", 
       main = "Sign of the Derivative at Key Points", col = "black", lwd = 2)
+
 points(c(1, 2.41801, 5, 9), 
        -0.1*(c(1, 2.41801, 5, 9) - 5)^3 + 2*(c(1, 2.41801, 5, 9) - 5), 
        pch = 19, col = "red")
-text(c(1, 2.41801, 5, 9), c(-3, -3, 1, 1.8), labels = c("A", "B", "C", "D"), pos = 3)
+
+text(c(1, 2.41801, 5, 9), c(-3, -3, 1, 1.8), 
+     labels = c("A", "B", "C", "D"), pos = 3)
+
 grid()
 ```
-
-![Figure: Sign of the derivative at key points.](images/sea_level.png){fig.alt="A smooth curve shows streamflow versus time with four labeled points A, B, C, and D marked on the graph. At point A, the curve is decreasing, indicating a negative slope. At point B, the curve reaches a minimum, where the slope is zero. At point C, the curve is increasing, indicating a positive slope. At point D, the curve is decreasing again, indicating a negative slope. The graph illustrates how the sign of the derivative changes at different points along the curve."}
 
 Complete the table:
 
@@ -1660,7 +1660,8 @@ Explanation:
 
 **3.Sketch the Tangent Line**
 
-```{r tangent-sketch-activity-blank, echo=FALSE, fig.align='center', out.width='80%'}
+```{r tangent-sketch-activity-blank, fig.cap="Function for sketching tangent lines at different points.", fig.alt="Graph of a smooth curve over the interval from x equals 0 to 20, representing a function with both oscillatory and curved behavior. The curve rises and falls gradually with gentle waves and overall curvature. No tangent lines are drawn. The figure is intended as a blank canvas for students to sketch tangent lines at selected points along the curve.", echo=FALSE, fig.align='center', out.width='80%'}
+
 # Define a more complex function
 f <- function(x) sin(x/2) + 0.05*(x - 5)^2
 
@@ -1674,11 +1675,9 @@ yr <- range(ys); pad <- 0.1*diff(yr); yr <- c(yr[1]-pad, yr[2]+pad)
 plot(xs, ys, type = "l", lwd = 2, col = "blue",
      xlab = "x", ylab = "f(x)",
      main = "Sketch Tangent Lines at Different Points")
+
 grid()
-
 ```
-
-![Figure: Sketch of a function for drawing tangent lines at different points.](images/sea_level.png){fig.alt="A smooth curve shows f(x) versus x over a range from about 0 to 20. The graph starts slightly above 1, decreases gradually to a minimum below zero around x = 8 to 9, and then increases steadily, becoming steeper as x increases toward 20. The curve changes from decreasing to increasing at the minimum, providing multiple locations where tangent lines could be drawn with negative, zero, and positive slopes."}
 
 Sketch 3 tangent lines at a point:
 
@@ -1736,8 +1735,10 @@ Which statement is true:
 
 - Justify your answer based on slope, curvature, or rate of change
 
-```{r, echo=FALSE}
+```{r function-derivative-comparison, fig.cap="Comparing a function and its derivative.", fig.alt="Two side-by-side graphs comparing a function and its derivative. The left panel shows a smooth curve labeled Function A, which decreases, then increases, and then decreases again over the interval from 0 to 10. The right panel shows its derivative labeled Function B, which is a downward-opening parabola. The derivative is positive where the original function is increasing, negative where it is decreasing, and equals zero at the turning points of the original function. The figure illustrates the relationship between a function and its derivative.", echo=FALSE}
+
 par(mfrow = c(1, 2))
+
 f <- function(x) -0.1*(x - 5)^3 + 2*(x - 5)
 f_prime <- function(x) -0.3*(x - 5)^2 + 2
 
@@ -1749,8 +1750,6 @@ curve(f_prime(x), from = 0, to = 10,
       xlab = "x", ylab = "f'(x)", 
       main = "Function: B", col = "red", lwd = 2)
 ```
-
-![Figure: Comparison of two functions A and B.](images/sea_level.png){fig.alt="Two side-by-side graphs labeled Function A and Function B show different shapes of f(x) versus x. Function A is a blue curve that decreases to a minimum below -3 around x = 2, then increases to a maximum above 3 around x = 7, and then decreases again. Function B is a red downward-opening parabola that rises to a maximum near x = 5 at about f(x) = 2, and then decreases symmetrically on both sides. The comparison highlights that Function A has multiple turning points while Function B has a single peak."}
 
 <details>
 <summary><strong>Solution to Question 5</strong></summary>
@@ -1768,7 +1767,8 @@ This matches the defining relationship between a function and its derivative.
 
 **6.Real-World Interpretation**
 
-```{r tide-24h-plot, echo=FALSE, fig.align='center', out.width='80%'}
+```{r tide-24h-plot, fig.cap="Tidal height over a 24-hour period.", fig.alt="Line graph showing tidal height as a function of time over 24 hours. The horizontal axis shows time from 0 to 24 hours, and the vertical axis shows tide height relative to mean sea level. The curve oscillates with two main peaks and two troughs, representing a semi-diurnal tide pattern, with slight asymmetry between successive highs and lows. Light vertical guide lines appear every 3 hours to help read timing. The figure illustrates how tidal height varies periodically throughout the day.", echo=FALSE, fig.align='center', out.width='80%'}
+
 # Tidal height model over 24 hours (semi-diurnal with a small inequality term)
 t <- seq(0, 24, length.out = 1000)  # time in hours
 
@@ -1790,6 +1790,7 @@ h <- H(t)
 plot(t, h, type = "l", lwd = 2, col = "blue",
      xlab = "Time (hours)", ylab = "Tide Height (m, relative)",
      main = "Tidal Height Over 24 Hours")
+
 grid()
 
 # Add light vertical guides every 3 hours for reading times
@@ -1798,8 +1799,6 @@ abline(v = seq(0, 24, by = 3), col = rgb(0,0,0,0.1), lty = 1)
 # Optional: uncomment to label hours on the x-axis at 0, 6, 12, 18, 24
 # axis(1, at = seq(0, 24, by = 6))
 ```
-
-![Figure: Tidal height over 24 hours.](images/sea_level.png){fig.alt="A smooth wave-like graph shows tidal height in meters versus time in hours over a 24-hour period. The curve rises from about 1.5 meters to a peak near 3.5 meters around hour 5, then falls to a low near 0.8 meters around hour 10. It rises again to a second peak near 3 meters around hour 17, and then falls to another low near 1 meter around hour 22 before slightly increasing again. The graph illustrates periodic tidal fluctuations with two high tides and two low tides within a day."}
 
 
 $H(t)$ is a graph representing the height (H in meters) of a tidal zone throughout a 24-hour period (t in hours). Based on the graph:
@@ -1820,7 +1819,8 @@ $H(t)$ is a graph representing the height (H in meters) of a tidal zone througho
 
 **7.Increasing or Decreasing?**
 
-```{r forest-biomass-plot, echo=FALSE, fig.align='center', out.width='80%'}
+```{r forest-biomass-plot, fig.cap="Forest biomass growth over time showing logistic behavior.", fig.alt="Line graph of forest biomass as a function of time over 50 years. The curve follows an S-shaped pattern, starting with slow growth, then increasing rapidly, and finally leveling off near a maximum value representing carrying capacity. The graph shows biomass rising over time, with the rate of increase first accelerating, then slowing after an inflection point around 20 years, and eventually approaching a plateau. The figure illustrates logistic growth and how the rate of change varies across different phases of development.", echo=FALSE, fig.align='center', out.width='80%'}
+
 # Forest biomass over time (arbitrary units)
 # Use a logistic curve (captures rising -> inflection -> flattening)
 K  <- 100        # carrying capacity (plateau biomass)
@@ -1837,6 +1837,7 @@ b <- B(t)
 plot(t, b, type = "l", lwd = 2, col = "forestgreen",
      xlab = "Time (years)", ylab = "Forest Biomass (Million tons of Carbon)",
      main = "Forest Biomass Over Time")
+
 grid()
 
 # Optional light guides to help discussion (toggle)
@@ -1868,7 +1869,6 @@ if (isTRUE(show_guides)) {
 }
 ```
 
-![Figure: Forest biomass over time.](images/sea_level.png){fig.alt="A smooth S-shaped curve shows forest biomass in millions of tons of carbon versus time in years. The curve starts near zero, increases slowly at first, then rises rapidly between about 15 and 30 years, and finally levels off near 100 as time approaches 50 years. The graph illustrates logistic growth, where biomass increases quickly before stabilizing at a maximum carrying capacity."}
 
 Consider a graph representing forest biomass over time.
 
@@ -1928,19 +1928,8 @@ The steepest decrease near \(x = 4\) indicates the most negative derivative ther
 
 **9.Which Graph Matches the Story?**
 
-Read the scenario below and choose which of the following graphs (A, B, or C) best fits the story.
+```{r invasive-growth-comparison, fig.cap="Comparing different models of population growth.", fig.alt="Three side-by-side graphs showing different patterns of population coverage over time. Graph A shows linear growth, where coverage increases steadily at a constant rate. Graph B shows logistic growth, where coverage starts slowly, increases rapidly, and then levels off as it approaches a maximum. Graph C shows rapid growth followed by a sharp decline, where coverage increases quickly and then decreases after a peak. The figure illustrates different possible growth behaviors and highlights logistic growth as a realistic model for many natural systems.", echo=FALSE}
 
-*A new invasive plant begins to spread. At first, growth is slow. Then it accelerates rapidly, and finally levels off as it reaches the edges of the available habitat.*
-
-- Graph A: Linear growth  
-- Graph B: S-curve (logistic growth)  
-- Graph C: Sharp increase followed by sudden drop
-
-**Why did you choose your answer?** 
-**What does the slope (derivative) of your choice look like over time?**
-**Sketch the derivative of the function you selected**
-
-```{r, echo=FALSE}
 # Create sequence
 time <- seq(0, 10, length.out = 200)
 
@@ -1964,11 +1953,21 @@ plot(time, growth_B, type = "l", lwd = 2, col = "forestgreen",
 
 plot(time, growth_C, type = "l", lwd = 2, col = "firebrick",
      xlab = "Time", ylab = "Coverage", main = "Graph C: Growth Then Drop")
-
-
 ```
 
-![Figure: Comparison of three growth patterns.](images/sea_level.png){fig.alt="Three side-by-side graphs labeled Graph A, Graph B, and Graph C show different patterns of coverage over time. Graph A is a straight line increasing steadily, representing linear growth. Graph B is an S-shaped curve that starts slowly, increases rapidly, and then levels off near a maximum, representing logistic growth. Graph C rises sharply to a peak around the midpoint and then decreases, representing growth followed by a decline. The comparison highlights different types of change over time."}
+Read the scenario below and choose which of the following graphs (A, B, or C) best fits the story.
+
+*A new invasive plant begins to spread. At first, growth is slow. Then it accelerates rapidly, and finally levels off as it reaches the edges of the available habitat.*
+
+- Graph A: Linear growth  
+- Graph B: S-curve (logistic growth)  
+- Graph C: Sharp increase followed by sudden drop
+
+**Why did you choose your answer?** 
+**What does the slope (derivative) of your choice look like over time?**
+**Sketch the derivative of the function you selected**
+
+
 
 <details>
 <summary><strong>Solution to Question 9</strong></summary>
@@ -2090,15 +2089,14 @@ Soil carbon increased over time, but the **rate of increase slowed** in the late
 **4.Graph Interpretation**
 
 The graph below shows the area of a glacier over time.
+```{r glacier-area, fig.cap="Glacier area decreasing over time.", fig.alt="Graph of glacier area as a function of time over 20 years since 2000. The curve slopes downward and becomes steeper over time, indicating that the glacier is shrinking and the rate of loss is increasing. The shape is concave down, showing that area decreases slowly at first and then more rapidly. The horizontal axis represents years since 2000, and the vertical axis represents glacier area in square kilometers.", echo=FALSE, fig.width=6, fig.height=4}
 
-```{r glacier-area, echo=FALSE, fig.width=6, fig.height=4}
 curve(100 - 2*x - 0.1*x^2, from = 0, to = 20,
       xlab = "Years since 2000", ylab = "Area (km\u00B2)",
       main = "Glacier Area Over Time", col = "steelblue", lwd = 2)
+
 grid()
 ```
-
-![Figure: Glacier area over time.](images/sea_level.png){fig.alt="A line graph shows glacier area in square kilometers versus years since 2000. The curve starts near 100 square kilometers at year 0 and steadily decreases over time, reaching about 20 square kilometers by year 20. The decline becomes slightly steeper as time progresses, indicating an accelerating loss of glacier area."}
 
 - Choose two points on the graph, estimate their coordinates, and calculate the average rate of change.
 - How can you visually determine if the glacier is shrinking at a constant, accelerating or decelerating rate?
@@ -2125,17 +2123,20 @@ Visually, the curve bends downward and becomes steeper, indicating the glacier i
 
 The graph below shows the glacier function with a secant line drawn between \( t = 5 \) and \( t = 15 \).
 
-```{r glacier-secant, echo=FALSE, fig.width=6, fig.height=4}
+```{r glacier-secant, fig.cap="Glacier area with a secant line showing average rate of change.", fig.alt="Graph of glacier area as a function of time over 20 years since 2000, shown as a decreasing curve. A dashed red secant line connects two points on the curve at 5 and 15 years, representing the average rate of change in glacier area over that interval. The two points are marked with red dots. The figure illustrates how a secant line approximates the average rate of glacier loss between two times.", echo=FALSE, fig.width=6, fig.height=4}
+
 f <- function(t) 100 - 2*t - 0.1*t^2
+
 curve(f(x), from = 0, to = 20,
       xlab = "Years since 2000", ylab = "Area (km\u00B2)",
       main = "Glacier Area with Secant Line", col = "steelblue", lwd = 2)
+
 segments(5, f(5), 15, f(15), col = "red", lwd = 2, lty = 2)
+
 points(c(5, 15), c(f(5), f(15)), pch = 19, col = "red")
+
 grid()
 ```
-
-![Figure: Glacier area with secant line.](images/sea_level.png){fig.alt="A graph shows glacier area in square kilometers versus years since 2000. A decreasing blue curve represents glacier area shrinking over time from about 100 to 20 square kilometers. Two points are highlighted around year 5 and year 15, and a dashed red line connects them, forming a secant line. The secant line represents the average rate of change in glacier area between those two years."}
 
 - Estimate the slope of the secant line and interpret what it means in the context of glacier loss (with units).
 
@@ -2347,14 +2348,14 @@ For example, if the y-axis represents river discharge and the x-axis represents 
 
 Below is a plot of stream temperature over time.
 
-```{r stream-temp, echo=FALSE, fig.width=6, fig.height=4}
+```{r stream-temp, fig.cap="Stream temperature varying over time.", fig.alt="Graph of stream temperature as a function of time over 10 days. The curve oscillates in a smooth wave pattern, showing periodic increases and decreases in temperature. The temperature fluctuates around an average value of about 15 degrees Celsius, with peaks and troughs indicating warmer and cooler periods. The figure illustrates periodic behavior in an environmental system.", echo=FALSE, fig.width=6, fig.height=4}
+
 curve(15 + 2*sin(0.5*x), from = 0, to = 10,
       xlab = "Days", ylab = "Temperature (\u00B0C)",
       main = "Stream Temperature Over Time", col = "steelblue", lwd = 2)
+
 grid()
 ```
-
-![Figure: Stream temperature over time.](images/sea_level.png){fig.alt="A smooth curve shows stream temperature in degrees Celsius versus time in days. The temperature starts around 15°C, rises to a peak near 17°C around day 3, then gradually decreases to a minimum near 13°C around day 9, and slightly increases again by day 10. The graph illustrates a cyclical pattern of warming and cooling over time."}
 
 - Approximate the instantaneous rate of change at \( t = 4 \) by drawing a tangent line.  
 - Estimate the slope of that tangent line.  
@@ -2379,7 +2380,8 @@ This means that at day 4, stream temperature is still increasing, but the rate o
 
 Five curves are shown below. Each red point has a different slope.
 
-```{r slope-matching, echo=FALSE, fig.width=7, fig.height=5}
+```{r slope-matching, fig.cap="Multiple graphs for matching each function to a slope at x = 2.", fig.alt="Five small graphs labeled A through E show different functions, each with a red point marking x equals 2. Graph A is an upward-opening parabola. Graph B is a downward-opening parabola. Graph C is a sine curve. Graph D is a cosine-based curve shifted upward. Graph E is an increasing exponential curve. A sixth panel contains the prompt to match each graph to a slope. The figure is designed as an activity in which students compare the steepness and direction of each graph at the marked point.", echo=FALSE, fig.width=7, fig.height=5}
+
 set.seed(123)
 par(mfrow = c(2,3), mar = c(4,4,2,1))
 
@@ -2415,10 +2417,7 @@ for (i in seq_along(funs)) {
 plot.new(); title(main = "Match each graph to a slope")
 
 par(mfrow = c(1,1))
-
 ```
-
-![Figure: Multiple graphs for matching slopes.](images/sea_level.png){fig.alt="Five small graphs labeled A through E show different curves of y versus x, each with a highlighted point. Graph A shows an increasing curve that is getting steeper, indicating a positive and increasing slope. Graph B shows a decreasing curve that becomes steeper downward, indicating a negative slope. Graph C shows a curve near a peak, where the slope is close to zero at the marked point. Graph D shows a curve decreasing toward a minimum, indicating a negative slope at the marked point. Graph E shows an increasing curve with a positive slope that is gradually increasing. A prompt asks to match each graph to a slope."}
 
 - Match each graph to the correct slope value from the list: \( -1.0 \), \( 4.0 \), \( -4.0 \), \( 0.5 \), \( -0.4 \).
 - Explain your reasoning for each match.
@@ -2524,14 +2523,14 @@ At the exact moment of high tide, the water level stops rising before it begins 
 
 Below is a plot of soil moisture over time after a rainstorm.
 
-```{r soil-moisture, echo=FALSE, fig.width=6, fig.height=4}
+```{r soil-moisture, fig.cap="Soil moisture decreasing over time after rainfall.", fig.alt="Graph of soil moisture as a function of time in days since rainfall. The curve decreases rapidly at first and then more gradually, forming a smooth downward curve that approaches zero. This shows exponential decay, where soil moisture drops quickly immediately after rainfall and then levels off as the rate of drying slows over time.", echo=FALSE, fig.width=6, fig.height=4}
+
 curve(30*exp(-0.3*x), from=0, to=10,
       xlab = "Days since rainfall", ylab = "Soil Moisture (%)",
       main = "Soil Moisture Decay", col = "saddlebrown", lwd = 2)
+
 grid()
 ```
-
-![Figure: Soil moisture decay over time.](images/sea_level.png){fig.alt="A smooth curve shows soil moisture percentage versus days since rainfall. The curve starts near 30 percent at day 0 and decreases rapidly at first, then more gradually over time, approaching about 2 to 3 percent by day 10. The graph illustrates exponential decay, where soil moisture declines quickly after rainfall and then levels off as it approaches a low value."}
 
 - Estimate the instantaneous rate of change at \( t = 1 \) and \( t = 5 \) by drawing tangent lines.  
 - Compare the magnitudes of the two slopes.  

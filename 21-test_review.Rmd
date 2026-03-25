@@ -1,7 +1,5 @@
-# Test1 Review Material {-}
+# Test Review Materials
 
-Below are resources to help you practice and prepare for the tests in this course
-Test 1 will cover the material covered in Chapter 3 of this textbook.
 
 ## Test Instructions {-}
 Below are the general instructions for all tests
@@ -12,6 +10,11 @@ Below are the general instructions for all tests
 - **One page (two sides)** of handwritten (or font size 8) notes are allowed.
 - The equation sheet from the textbook is included as part of the test pack (it doesn't count as note pages)
 
+
+# Test1 Review Material {-}
+
+Below are resources to help you practice and prepare for the tests in this course
+Test 1 will cover the material covered in Chapter 3 of this textbook.
 
 ##  Test 1 Spring 2025 {-}
 ### Short-Answer Questions (20 points) {-}
@@ -60,13 +63,15 @@ Using the **limit definition** of the derivative, let \( f(x)=x^{2}-4x \).
 ### Problem 3 {-}
 
 The **graph of a function** \(h(x)\) is shown below. Use it to answer the questions.
-![](images/test_1.png)
+
+![Figure: Piecewise function with discontinuities and mixed behavior.](images/test_1.png){fig.alt="Graph of a piecewise function showing multiple segments with both continuous curves and line segments. On the left, a horizontal segment transitions to a downward sloping line with open and closed circles indicating included and excluded endpoints. In the middle, a smooth curve forms a U-shaped section with a minimum near x equals 1 and an open circle at the right end of the segment. On the right, a separate increasing line segment begins at a filled point below the x-axis and rises to the right. The graph includes several discontinuities and changes in behavior across different intervals."}
 
 1. **(2 pts)** Identify all points where \(h(x)\) has **no limit**. Explain why.  
 2. **(2 pts)** Identify all points where \(h(x)\) is **not continuous**. Explain why.  
 3. **(2 pts)** Identify all points where \(h(x)\) is **not differentiable**. Explain why.  
 4. **(4 pts)** **Roughly sketch** the derivative \(h'(x)\).
-![](images/test_2.png)
+
+![Figure: Blank coordinate grid for graphing the derivative.](images/test_2.png){fig.alt="Empty coordinate plane labeled h prime of x, intended for sketching the derivative of a function. The grid includes both horizontal and vertical axes with evenly spaced tick marks and values ranging approximately from negative 5 to 5 on the x-axis and negative 4 to 4 on the y-axis. No function is drawn."}
 
 ---
 
@@ -128,7 +133,7 @@ The **graph of the function** \( r(x) \) is shown below.
 3. **(2 pts)** Identify all points where \(r(x)\) is **not differentiable**. Provide reasons.  
 4. **(4 pts)** Sketch a graph of the **derivative \(r'(x)\)**, based on the shape of \(r(x)\).
 
-![](images/test_3.png)
+![Figure: Piecewise function combining linear and curved segments.](images/test_3.png){fig.alt="Graph of a function with multiple pieces. On the left, a decreasing line segment transitions into a steeper downward segment, then connects to a smooth upward-opening parabola with a minimum near x equals 0. An open circle appears on the left side of the parabola indicating a hole in the graph. To the right, a separate horizontal line segment at about y equals 3 extends for a short interval, followed by a downward sloping line that decreases toward the right. The graph shows changes in slope, curvature, and continuity across different intervals."}
 
 ---
 
@@ -186,7 +191,8 @@ The **graph of a function** \( g(x) \) is shown below. Use it to answer the foll
 2. **(2 pts)** Identify all points where \( g(x) \) is **not continuous**. Explain why.  
 3. **(2 pts)** Identify all points where \( g(x) \) is **not differentiable**. Explain why.  
 4. **(4 pts)** **Roughly sketch** the **derivative** \( g'(x) \).
-![](images/test_4.png)
+
+![Figure: Piecewise function with discontinuities and varying behavior.](images/test_4.png){fig.alt="Graph of a piecewise function drawn in red on a coordinate grid. On the left, a horizontal segment transitions into a steep downward line that meets the x-axis, followed by a slanted segment ending with an open circle. Near x equals negative 1, a filled point begins a new piece that rises to a sharp peak near y equals 3, then descends steeply and continues into a smooth curve with a local minimum below the x-axis. The curve rises again to a local maximum marked with an open circle, then decreases and levels off into a short horizontal segment on the far right. The graph includes both open and closed circles indicating discontinuities and included endpoints."}
 
 ---
 

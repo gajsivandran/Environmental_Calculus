@@ -236,6 +236,8 @@ p4 <- ggplot(df4, aes(x, y)) +
 
 ```
 
+![Figure: Examples of local and global extrema across different types of functions.](images/extrema_examples.png){fig.alt="Four-panel figure showing different behaviors of extrema. Panel A shows a cubic function with one local maximum and one local minimum marked on the curve. Panel B shows a downward-opening parabola on a finite interval, with a global maximum at the peak and endpoint minima at both ends. Panel C shows a cubic function with a flat point at x = 0 where the slope is zero but there is no maximum or minimum. Panel D shows a sine wave over one full period from 0 to 2π, with a repeating local maximum near π/2 and a local minimum near 3π/2."}
+
 ### What each panel illustrates:
 
 | Panel | Function | Concept Highlighted |
@@ -261,12 +263,12 @@ For instance:
 
 ---
 
-> **In summary:**
+**In summary:**
 
-> - **Local extrema** describe *regional or temporary* highs and lows.  
-> - **Global extrema** describe the *overall* highest or lowest points in a dataset or model.  
-> - On a **finite domain**, global extrema can occur **at the endpoints** as well as where \( f'(x) = 0 \).  
->  
+- **Local extrema** describe *regional or temporary* highs and lows.  
+- **Global extrema** describe the *overall* highest or lowest points in a dataset or model.  
+- On a **finite domain**, global extrema can occur **at the endpoints** as well as where \( f'(x) = 0 \).  
+  
 > Both are found using the same calculus tools — derivatives — but interpreted in different ways depending on the system’s context.
 
 
@@ -377,6 +379,8 @@ p2 <- ggplot(data, aes(x, fpx)) +
 # Combine the two plots side by side
 p1 + p2
 ```
+
+![Figure: Relationship between a function and its derivative for a cubic function.](images/cubic_derivative_relationship.png){fig.alt="Two side-by-side graphs comparing a function and its derivative. The left graph shows f(x) = x cubed, an S-shaped curve that flattens near x = 0 and increases for all x. The right graph shows its derivative f prime of x equals 3x squared, a parabola opening upward with its minimum at x = 0. The derivative is zero at x = 0, corresponding to the flat point on the original function where the slope is zero but there is no maximum or minimum."}
 
 ---
 
@@ -663,6 +667,8 @@ curve(P(x), from = 0, to = 5,
 grid()
 ```
 
+![Figure: Population modeled by a cubic function over time.](images/population_cubic.png){fig.alt="Graph of population P(t) equals negative t cubed plus 6t squared minus 9t plus 20 plotted over time from t equals 0 to 5. The curve starts near 20 at t equals 0, decreases to a local minimum around t equals 1, then increases to a local maximum near t equals 3 close to 20, and finally declines steeply toward zero by t equals 5. The horizontal axis represents time and the vertical axis represents population."}
+
 ---
 
 ### Step 1: Find the First Derivative
@@ -861,6 +867,10 @@ ggplot() +
   theme_void()+ ylim(-0.3,0.3)
 
 ```
+
+![Figure: Number line showing critical points and intervals.](images/critical_points_numberline.png){fig.alt="A horizontal number line with arrows at both ends indicating it continues indefinitely. Two marked points at x equals 1 and x equals 3 are labeled as critical points. The intervals between and around these points are labeled A to the left of 1, B between 1 and 3, and C to the right of 3, indicating three regions for analysis around the critical points."}
+
+
                  
 ---
 
@@ -999,6 +1009,8 @@ text(t2, P2 , labels = "Local Max\n(3, 20)", col = "red", pos = 3)
 
 ```
 
+![Figure: Cubic model showing local minimum and maximum.](images/cubic_extrema_labeled.png){fig.alt="Graph of a cubic population model over time from 0 to 5. The curve starts near 20, decreases to a labeled local minimum at time t equals 1 with population 16, then rises to a labeled local maximum at time t equals 3 with population 20, and finally decreases steeply toward zero by time t equals 5. Dashed lines mark the x and y coordinates of the extrema. The horizontal axis represents time and the vertical axis represents population."}
+
 ### Final Takeaways
 
 - **Work with the factored form** of the derivative — it makes sign analysis quicker and more transparent.  
@@ -1104,7 +1116,9 @@ p4 <- plot_concavity(f4, f2_4, c(-2, 2), inf_pts,
 
 ```
 
-#### Understanding Concavity Through Visual Examples
+![Figure: Examples of concavity and inflection behavior for different functions.](images/concavity_examples.png){fig.alt="Four-panel figure illustrating concavity. Panel A shows f(x) equals x cubed with a change in concavity at x equals 0 marked as an inflection point, with the graph concave down for negative x and concave up for positive x. Panel B shows f(x) equals x squared, which is concave up for all x. Panel C shows f(x) equals negative x squared, which is concave down for all x. Panel D shows a higher-degree polynomial with multiple inflection points where the graph alternates between concave up and concave down across several intervals."}
+
+### Understanding Concavity Through Visual Examples
 
 This 2×2 panel shows how the **second derivative** helps us interpret the **shape** or **curvature** of a function.  
 While the **first derivative** tells us whether a function is increasing or decreasing,  
@@ -1260,6 +1274,8 @@ p4 <- plot_inflection(f5, f2_5, c(-4,4), 0,
 # Combine into 2×2 grid
 (p1 | p2) / (p3 | p4)
 ```
+
+![Figure: Different types of inflection points and concavity changes.](images/inflection_types.png){fig.alt="Four-panel figure showing different types of inflection points. Panel A shows f(x) equals x cubed with a standard inflection at x equals 0 where concavity changes and the slope is nonzero. Panel B shows f(x) equals x to the fifth with a flat inflection at x equals 0 where the slope is zero and the graph flattens before changing concavity. Panel C shows a shifted cubic with an inflection point near x equals 2 where the slope is nonzero. Panel D shows f(x) equals hyperbolic tangent of x with a steep inflection at x equals 0 where concavity changes rapidly. In each panel, the inflection point is marked and the graph changes color to indicate concavity on either side."}
 
 ---
 
@@ -1737,6 +1753,8 @@ p4 <- ggplot(df4, aes(x, y)) +
 
 ```
 
+![Figure: Examples of functions with different types of extrema and domains.](images/extrema_variety.png){fig.alt="Four-panel figure showing different functions and their extrema. Top left shows a cubic function f(x) equals x cubed minus 3x squared plus 2 with one local maximum near x equals 0 and one local minimum near x equals 2. Top right shows a downward-opening parabola f(x) equals negative x squared plus 4x on the interval from 0 to 5, with a maximum near x equals 2 and endpoints at x equals 0 and x equals 5. Bottom left shows f(x) equals sine of x over one full period from 0 to 2π with a maximum near π over 2 and a minimum near 3π over 2. Bottom right shows a quartic function f(x) equals x to the fourth minus 4x squared plus 2 with two local minima on either side of the origin and a local maximum at x equals 0."}
+
 Use the graphs to answer the questions below.  
 No calculations — just interpret visually.
 
@@ -1896,26 +1914,26 @@ o) \( f'(x)=\dfrac{e^{x}(x-1)}{(x+2)^4} \)
 <summary><strong>Show Solutions </strong></summary>
 
 **1) Polynomials**  
-a) \(x=0,\,2,\,-3\) (all mult. 1)  
-b) \(x=1\) (mult. 2), \(x=-4\) (mult. 1)  
-c) \(3x^3-12x^2+9x=3x(x-3)(x-1)\Rightarrow x=0,1,3\) (all mult. 1)  
+a) \(x=0,\,2,\,-3\)  
+b) \(x=1\) , \(x=-4\)  
+c) \(3x^3-12x^2+9x=3x(x-3)(x-1)\Rightarrow x=0,1,3\)
 d) \((x^2-1)(x+2)=(x-1)(x+1)(x+2)\Rightarrow x=-2,-1,1\)
 
 **2) Trig & Exponential**  
 e) \(e^x\neq 0\Rightarrow x^2-9=0 \Rightarrow x=\pm 3\)  
 f) \(\sin x=0\Rightarrow x=k\pi;\; 2\cos x-1=0\Rightarrow \cos x=\tfrac12 \Rightarrow x=\pm \tfrac{\pi}{3}+2k\pi\)  
-g) \(e^{2x}\neq 0\Rightarrow (x-5)^2(3-x)=0 \Rightarrow x=5\) (mult. 2), \(x=3\)  
+g) \(e^{2x}\neq 0\Rightarrow (x-5)^2(3-x)=0 \Rightarrow x=5\), \(x=3\)  
 h) \(\cos x=0\Rightarrow x=\tfrac{\pi}{2}+k\pi;\; 1-2\sin x=0\Rightarrow \sin x=\tfrac12 \Rightarrow x=\tfrac{\pi}{6}+2k\pi,\; \tfrac{5\pi}{6}+2k\pi;\; \sin x+1=0\Rightarrow x=\tfrac{3\pi}{2}+2k\pi\)
 
 **3) Mixed Product/Chain**  
-i) \(x=0\) (mult. 2), \(x=1\) (mult. 3), \(x=-\tfrac12\)  
-j) \(x=2\) (mult. 4), \(x=-\sqrt{3}\)  *(note: \(x^2+1\neq 0\))*  
-k) \(x=\tfrac13\) (mult. 2), \(x=\pm 2\), \(x=-1\)
+i) \(x=0\), \(x=1\), \(x=-\tfrac12\)  
+j) \(x=2\), \(x=-\sqrt{3}\)  *(note: \(x^2+1\neq 0\))*  
+k) \(x=\tfrac13\)), \(x=\pm 2\), \(x=-1\)
 
 **4) Quotients** *(zeros from numerator, exclude denominator zeros)*  
 l) Zeros: \(x=3,-2\); exclude \(x=1\) (denominator)  
 m) Zeros: \(2\sin x-1=0\Rightarrow \sin x=\tfrac12\) and/or \(\cos x+1=0\Rightarrow x=\pi+2k\pi\); denominator \(x^2+1>0\) always  
-n) Zeros: \(x=4\) (mult. 3), \(x=-5\); exclude \(x=\pm 3\) (denominator)  
+n) Zeros: \(x=4\), \(x=-5\); exclude \(x=\pm 3\) (denominator)  
 o) Zeros: \(x=1\); exclude \(x=-2\) (denominator)
 
 </details>

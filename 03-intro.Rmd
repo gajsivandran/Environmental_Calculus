@@ -296,45 +296,49 @@ kable(
 -   Stare at this equation T(t, h) = 10 - 5 \* cos(pi \* t / 12) - 0.0065 \* h, can you visualize the impact of t? what about h?
 -   The equation could have been written as f(x, y) = 10 - 5 \* cos(pi \* x / 12) - 0.0065 \* y, would this be harder to interpret?
 
-```{r apply-the-function-to-compute-temperature-405, fig.cap="Apply the function to compute temperature", cache=FALSE, echo=FALSE, message=FALSE}
+
+```{r apply-the-function-to-compute-temperature-40, fig.cap="Temperature as a function of time of day and elevation.", fig.alt="Filled contour plot showing temperature across time of day and elevation. The horizontal axis shows time from 0 to 24 hours, and the vertical axis shows elevation from 0 to 5000 meters. Colored contour bands represent temperature in degrees Celsius. Temperature varies smoothly across the surface, showing how it changes jointly with time and elevation.", cache=FALSE, echo=FALSE, message=FALSE}
+
 library(ggplot2)
 library(dplyr)
 
-## Create grid of values
+# Create grid of values
 t_vals <- seq(0, 24, by = 0.5)
 h_vals <- seq(0, 5000, by = 100)
 grid <- expand.grid(t = t_vals, h = h_vals)
 
 grid$temp <- with(grid, T(t, h))
 
-## Contour plot
+# Contour plot
 ggplot(grid, aes(x = t, y = h, z = temp)) +
   geom_contour_filled() +
   labs(
     title = "Temperature as a Function of Time and Elevation",
     x = "Time of Day (hours)",
     y = "Elevation (m)",
-    fill = "Temperature (degC)"
+    fill = "Temperature (\u00B0C)"
   ) +
   theme_minimal()
 ```
 
-```{r, echo=FALSE, message=FALSE}
+
+```{r temperature-time-elevation-lines, fig.cap="Temperature over time at multiple elevations.", fig.alt="Interactive line plot showing temperature as a function of time of day for several elevations. The horizontal axis shows time from 0 to 24 hours, and the vertical axis shows temperature in degrees Celsius. Multiple colored lines represent different elevations ranging from 0 meters to 4392 meters. Each curve shows a repeating daily temperature cycle, and higher elevations have consistently lower temperatures than lower elevations.", echo=FALSE, message=FALSE}
+
 library(plotly)
 library(dplyr)
 
-## Define temperature function
+# Define temperature function
 T_func <- function(t, h) {
   10 - 5 * cos(pi * t / 12) - 0.0065 * h
 }
 
-## Time sequence
+# Time sequence
 t_vals <- seq(0, 24, by = 0.1)
 
-## Elevations to plot
+# Elevations to plot
 elevations <- c(0, 1000, 2000, 3000, 4000, 4392)
 
-## Create a data frame for each elevation
+# Create a data frame for each elevation
 temp_data <- lapply(elevations, function(h) {
   data.frame(
     time = t_vals,
@@ -344,15 +348,16 @@ temp_data <- lapply(elevations, function(h) {
 }) %>%
   bind_rows()
 
-## Interactive plot
+# Interactive plot
 plot_ly(temp_data, x = ~time, y = ~temp, color = ~elevation, type = 'scatter', mode = 'lines') %>%
   layout(
     title = "Temperature vs Time at Different Elevations",
     xaxis = list(title = "Time of Day (hours)"),
-    yaxis = list(title = "Temperature (degC)"),
+    yaxis = list(title = "Temperature (\u00B0C)"),
     legend = list(title = list(text = "Elevation"))
   )
 ```
+
 :::
 
 ## Graphing and Interpreting Change
@@ -369,13 +374,17 @@ We can also look at the how the function is **changing** as we move along the x 
 
 You can think of this as a ball in your hand. You throw it up, initially its moving fast, but as gravity acts on the ball it slows. Then for an instance, the ball hangs in the air - this is where it reaches its peak. Then the ball starts to fall, slowly at first, but it then begins to fall faster and faster.
 
-```{r graph-change-example, echo=FALSE}
+```{r graph-change-example, fig.cap="Quadratic function showing a maximum.", fig.alt="Graph of a downward-opening parabola representing the function f(x) equals negative x squared plus 4x plus 5 over the interval from 0 to 6. The curve rises to a highest point near x equals 2 and then decreases. A dashed horizontal line marks y equals 0. The graph illustrates that the function increases up to the maximum and then decreases afterward.", echo=FALSE}
+
 f <- function(x) { -x^2 + 4*x + 5 }
-curve(f, from = 0, to = 6, main = "Quadratic Function", ylab = "f(x)", xlab = "x")
+
+curve(f, from = 0, to = 6,
+      main = "Quadratic Function",
+      ylab = "f(x)",
+      xlab = "x")
+
 abline(h = 0, col = "gray", lty = 2)
 ```
-
-![Figure: Quadratic function.](images/sea_level.png){fig.alt="A graph shows a downward-opening parabola representing a quadratic function. The curve rises to a maximum near x equals 2, then decreases as x increases. A dashed horizontal line marks the x-axis. The function is positive near the peak and becomes negative as it moves to the right, crossing the x-axis and continuing downward. The graph illustrates a quadratic with a single maximum point."}
 
 The calculus you will learn in this course will give you the tools needed to quantify these observations. Identify the rates of change at different point and find the maximas and minimas.
 
@@ -904,16 +913,18 @@ If that trend continues, an estimate for day 5 is:
 
 **2.** The following graph shows temperature over a 24-hour period. Use the graph to answer the questions below.
 
-```{r temp-day-curve, echo=FALSE, message=FALSE, warning=FALSE, fig.cap="Practice Problems", cache=FALSE}
-## Generate a smooth daily temperature curve
+```{r temp-day-curve, fig.cap="Air temperature over a 24-hour period.", fig.alt="Line graph showing temperature as a function of time over a 24-hour day. The horizontal axis shows time from 0 to 24 hours, and the vertical axis shows temperature in degrees Celsius. The curve follows a smooth repeating pattern, with a minimum temperature around early morning and a maximum near midday at 12 hours, marked by a vertical dashed line. The graph illustrates a typical daily temperature cycle.", echo=FALSE, message=FALSE, warning=FALSE, cache=FALSE}
+
+# Generate a smooth daily temperature curve
 time <- seq(0, 24, by = 0.1)
 temp <- 10 - 5 * cos(pi * time / 12)
 
 plot(time, temp, type = "l",
      main = "Air Temperature Over 24 Hours",
      xlab = "Time of Day (hours)",
-     ylab = "Temperature (°C)",
+     ylab = "Temperature (\u00B0C)",
      col = "steelblue", lwd = 2)
+
 abline(v = 12, lty = 2, col = "gray")  # peak at noon
 ```
 

@@ -76,7 +76,8 @@ Each chapter is designed to support you as a learner. You’ll find:
 ---
 
 ## Success in This Class
-![](images/Growth Mindset.png){fig.alt='Image of person thinking, decorative' style="float:right; width:250px; margin:10px;"}
+
+![Figure: Conceptual illustration of interconnected natural and cognitive systems.](images/Growth Mindset.png){fig.alt="Artistic illustration of a human head in profile with a glowing brain at the center. Branching connections extend outward from the brain to various environmental elements including trees, clouds, water, and landscapes, symbolizing connections between human thinking and natural systems. Additional icons such as graphs, waves, and molecules are faintly visible in the background, suggesting links between cognition, data, and environmental processes."}
 
 First and foremost, know this: **we believe in your ability to learn and grow.** You bring unique strengths and perspectives, and your effort matters here.  
 
