@@ -3223,13 +3223,13 @@ A vertical asymptote occurs at \( x = a \) if:
 
 That means the function grows without bound as we approach \( x = a \).
 
-```{r, echo=FALSE, error=FALSE, message=FALSE}
-# Demonstrating a vertical asymptote at x = a
+```{r vertical-asymptote-plot, fig.cap="Function with a vertical asymptote at x = 2.", fig.alt="Graph of the function f(x) equals 1 divided by the quantity x minus 2. The graph has two separate branches on either side of x equals 2 and a dashed vertical line marking the asymptote. As x approaches 2 from the left, the function decreases without bound, and as x approaches 2 from the right, the function increases without bound. The figure illustrates that the function is undefined at x equals 2 and has a vertical asymptote there.", echo=FALSE, message=FALSE, warning=FALSE}
 
+# Demonstrating a vertical asymptote at x = a
 a <- 2   # location of vertical asymptote
 
 f <- function(x) {
-  1 / (x - 2)
+  1 / (x - a)
 }
 
 # Create x values on both sides of the asymptote
@@ -3243,7 +3243,7 @@ plot(x_left, f(x_left),
      ylim = c(-10, 10),
      xlab = "x",
      ylab = "f(x)",
-     main = "Vertical Asymptote at x = 2")
+     main = paste("Vertical Asymptote at x =", a))
 
 # Add right side
 lines(x_right, f(x_right))
@@ -3252,8 +3252,7 @@ lines(x_right, f(x_right))
 abline(v = a, lty = 2, lwd = 2)
 
 # Add a label
-text(a, 9, labels = "x = 2", pos = 4)
-
+text(a, 9, labels = paste("x =", a), pos = 4)
 ```
 
 ---
@@ -3682,7 +3681,8 @@ This shows exponential growth eventually dominates polynomial growth.
 
 ### Visual Example (Growth Comparison) {-}
 
-```{r, echo=FALSE, error=FALSE, message=FALSE}
+```{r exp-vs-polynomial-growth, fig.cap="Comparison of exponential and polynomial growth.", fig.alt="Graph comparing two functions over the interval from x equals 0 to 5. The exponential function e to the x starts slowly and then increases rapidly, eventually rising much faster than the polynomial function x squared. The curve for x squared increases steadily but remains below the exponential curve for larger values of x. The figure illustrates that exponential growth eventually outpaces polynomial growth.", echo=FALSE, message=FALSE, warning=FALSE}
+
 # Comparing exponential and polynomial growth
 
 x <- seq(0, 5, length.out = 400)
@@ -3893,7 +3893,8 @@ Sign chart:
 
 ---
 
-```{r, echo=FALSE, error=FALSE, message=FALSE}
+```{r derivative-sign-chart-visual, fig.cap="Using critical points to determine increasing and decreasing behavior.", fig.alt="Graph of the function f(x) equals x cubed minus 3x over the interval from about negative 2.5 to 2.5. The curve has a local maximum at x equals negative 1 and a local minimum at x equals 1, both marked with points and vertical dashed lines. The function increases to the left of x equals negative 1, decreases between negative 1 and 1, and increases again to the right of x equals 1, illustrating how critical points divide the graph into intervals of increasing and decreasing behavior.", echo=FALSE, message=FALSE, warning=FALSE}
+
 # Visualizing increasing and decreasing behavior
 
 f <- function(x) x^3 - 3*x
@@ -3972,7 +3973,8 @@ Inflection point at:
 
 ---
 
-```{r, echo=FALSE, error=FALSE, message=FALSE}
+```{r curve-sketching-cubic-labeled, fig.cap="Curve sketch of a cubic showing extrema, inflection point, and concavity.", fig.alt="Graph of the function f(x) equals x cubed minus 3x over the interval from about negative 2.6 to 2.6. The curve has a local maximum at the point negative 1 comma 2 and a local minimum at the point 1 comma negative 2. An inflection point is marked at the origin, where the graph changes concavity. The left half of the graph is shaded to indicate concave down behavior for x less than 0, and the right half is shaded to indicate concave up behavior for x greater than 0. The figure illustrates how critical points and concavity together describe the overall shape of the curve, while also noting that the function has no global maximum or minimum because it is unbounded.", echo=FALSE, message=FALSE, warning=FALSE}
+
 # Curve sketching for f(x) = x^3 - 3x
 # Labels: local max/min, inflection point, concavity regions
 
@@ -4012,7 +4014,7 @@ rect(usr[1], usr[3], 0, usr[4],
 rect(0, usr[3], usr[2], usr[4],
      col = rgb(0, 1, 0, 0.08), border = NA)
 
-# Redraw curve on top (since rectangles can cover it)
+# Redraw curve on top
 lines(x, y, lwd = 2)
 
 # Mark and label critical points and inflection
@@ -4246,7 +4248,8 @@ f(0)=2.
 
 #### Step 1: Draw the Asymptotes (Skeleton) {-}
 
-```{r, echo=FALSE, error=FALSE, message=FALSE, warning=FALSE}
+```{r asymptote-skeleton-step1, fig.cap="Skeleton graph showing vertical and horizontal asymptotes.", fig.alt="Coordinate plane showing the asymptotes of a rational function before the full curve is drawn. Two dashed vertical lines mark vertical asymptotes at x equals negative 1 and x equals 1. A dashed horizontal line marks a horizontal asymptote at y equals 2. Arrows near x equals negative 1 indicate the function approaches positive infinity from both sides of that asymptote, while arrows near x equals 1 indicate the function approaches negative infinity from both sides. The figure provides the asymptotic structure used to sketch the full graph.", echo=FALSE, message=FALSE, warning=FALSE}
+
 # Step 1: asymptotes only (skeleton)
 
 f <- function(x) 2 + (x^3 - 3*x)/((x^2 - 1)^2)
@@ -4272,13 +4275,11 @@ text(-1, 9, labels = "x = -1", pos = 4)
 text( 1, 9, labels = "x = 1",  pos = 4)
 text(-4.7, 2, labels = "y = 2", pos = 3)
 
-# Indicate direction near the vertical asymptotes (optional visual cues)
-# At x = -1, the function goes to +infinity from both sides
+# Indicate direction near the vertical asymptotes
 arrows(-1.15, 6, -1.05, 9, length = 0.08)
 arrows(-0.85, 6, -0.95, 9, length = 0.08)
 text(-1.0, 5.7, "to +∞", cex = 0.9)
 
-# At x = 1, the function goes to -infinity from both sides
 arrows(0.85, -6, 0.95, -9, length = 0.08)
 arrows(1.15, -6, 1.05, -9, length = 0.08)
 text(1.0, -5.7, "to -∞", cex = 0.9)
@@ -4290,7 +4291,8 @@ text(1.0, -5.7, "to -∞", cex = 0.9)
 
 #### Step 2: Add a Known Point (Anchor) {-}
 
-```{r, echo=FALSE, error=FALSE, message=FALSE, warning=FALSE}
+```{r asymptote-skeleton-step2, fig.cap="Adding an anchor point to the asymptote skeleton.", fig.alt="Graph showing the same asymptotes as before, with dashed vertical lines at x equals negative 1 and x equals 1 and a dashed horizontal line at y equals 2. In addition, a point is marked at the coordinate 0 comma 2, labeled as an anchor point. This point lies on the horizontal asymptote and helps guide how the curve will be drawn relative to the asymptotes.", echo=FALSE, message=FALSE, warning=FALSE}
+
 # Step 2: asymptotes + anchor point
 
 plot(xL, f(xL),
@@ -4333,7 +4335,8 @@ So there is:
 - a **local minimum** at \(x\approx -2.542\)
 - a **local maximum** at \(x\approx 2.542\)
 
-```{r, echo=FALSE, error=FALSE, message=FALSE, warning=FALSE}
+```{r asymptote-skeleton-step3, fig.cap="Adding increasing and decreasing behavior to the asymptote skeleton.", fig.alt="Graph showing the asymptote skeleton of a rational function with dashed vertical lines at x equals negative 1 and x equals 1, a dashed horizontal line at y equals 2, and an anchor point at 0 comma 2. Two additional critical points are marked, one to the left of x equals negative 1 labeled local minimum and one to the right of x equals 1 labeled local maximum. Along the bottom of the graph, arrows and labels indicate intervals where the function is increasing or decreasing. The function decreases, then increases before the left asymptote, decreases between the asymptotes, increases just to the right of the right asymptote, and then decreases again. The figure shows how derivative information helps organize the overall shape before drawing the full curve.", echo=FALSE, message=FALSE, warning=FALSE}
+
 # Step 3: asymptotes + anchor point + increasing/decreasing cues
 
 xcrit <- sqrt(3 + 2*sqrt(3))
@@ -4383,7 +4386,7 @@ arrows(3.4, y_axis_cue, 4.6, y_axis_cue, length = 0.08)
 text(4.0, y_axis_cue + 0.6, "decreasing", cex = 0.9)
 ```
 
-<!-- markdown continues below -->
+
 
 ---
 
@@ -4407,7 +4410,8 @@ Concavity by intervals (matching the sign of \(f''\)):
 - Concave down on \((1,3.365)\)
 - Concave up on \((3.365,\infty)\)
 
-```{r, echo=FALSE, error=FALSE, message=FALSE, warning=FALSE}
+```{r asymptote-skeleton-step4, fig.cap="Adding concavity and inflection points to the asymptote skeleton.", fig.alt="Graph showing the asymptote skeleton of a rational function with dashed vertical lines at x equals negative 1 and x equals 1, a dashed horizontal line at y equals 2, and shaded regions indicating concavity. Blue-tinted regions mark intervals where the graph is concave down, and green-tinted regions mark intervals where the graph is concave up. Three inflection points are marked and labeled: one on the left branch, one at x equals 0 on the middle branch, and one on the right branch. The point at 0 comma 2 is also marked as an anchor point. The figure shows how second-derivative information identifies where the curve bends upward or downward and where concavity changes.", echo=FALSE, message=FALSE, warning=FALSE}
+
 # Step 4: add concavity regions (shaded) + inflection points
 
 xinf <- sqrt(5 + 2*sqrt(10))
@@ -4441,7 +4445,7 @@ shade(xI3, 5,   rgb(0, 1, 0, 0.08))
 abline(v = c(-1, 1), lty = 2, lwd = 2)
 abline(h = 2,        lty = 2, lwd = 2)
 
-# Inflection points (mark x-locations; one is on the middle branch)
+# Inflection points
 points(c(xI1, xI2, xI3), f(c(xI1, xI2, xI3)), pch = 19)
 text(xI1, f(xI1), labels = " inflection", pos = 4, cex = 0.9)
 text(xI2, f(xI2), labels = " inflection", pos = 4, cex = 0.9)
@@ -4451,13 +4455,14 @@ text(xI3, f(xI3), labels = " inflection", pos = 4, cex = 0.9)
 points(0, f(0), pch = 19)
 ```
 
-<!-- markdown continues below -->
+
 
 ---
 
 #### Step 5: Final Sketch (Everything Together) {-}
 
-```{r, echo=FALSE, error=FALSE, message=FALSE, warning=FALSE}
+```{r asymptote-skeleton-step5, fig.cap="Final sketch of the rational function using asymptotes, critical points, and concavity.", fig.alt="Graph of a rational function over the interval from negative 5 to 5 showing the completed sketch built from all earlier layers. The function has three branches separated by dashed vertical asymptotes at x equals negative 1 and x equals 1, and it approaches a dashed horizontal asymptote at y equals 2. A labeled anchor point is marked at 0 comma 2 on the middle branch. A local minimum is marked on the left branch and a local maximum is marked on the right branch. Inflection points are indicated at x equals 0 and at symmetric points on the left and right branches. The figure summarizes how asymptotes, first-derivative behavior, second-derivative behavior, and anchor points combine to produce the final graph.", echo=FALSE, message=FALSE, warning=FALSE}
+
 # Step 5: final sketch (all layers)
 
 plot(xL, f(xL),
@@ -4502,7 +4507,7 @@ mtext("Build the sketch in layers: asymptotes → direction (f') → curvature (
       side = 3, line = 0.3, cex = 0.85)
 ```
 
-<!-- markdown continues below -->
+
 
 ### Practice: Build a Sketch from Information {-}
 
@@ -4540,7 +4545,8 @@ It has:
 - HA at \(y=1\)
 - \(x\to 2^- \Rightarrow f(x)\to +\infty\), \(x\to 2^+ \Rightarrow f(x)\to -\infty\)
 
-```{r, echo=FALSE, message=FALSE, warning=FALSE, error=FALSE}
+```{r rational-practice1-annotated, fig.cap="Annotated graph of a rational function showing vertical and horizontal asymptotes.", fig.alt="Graph of the function f(x) equals 1 minus 1 divided by the quantity x minus 2. The graph has two branches separated by a vertical asymptote at x equals 2, shown as a dashed line. A horizontal asymptote at y equals 1 is also shown as a dashed line. The left branch lies below the horizontal asymptote and decreases toward negative infinity as x approaches 2 from the left. The right branch lies above the horizontal asymptote and decreases toward negative infinity as x approaches 2 from the right, while both branches approach y equals 1 as x moves away from the asymptote.", echo=FALSE, message=FALSE, warning=FALSE}
+
 f <- function(x) 1 - 1/(x-2)
 
 xL <- seq(-6, 1.99, length.out = 800)
@@ -4559,8 +4565,6 @@ abline(h = 1, lty = 2, lwd = 2)
 
 text(2, 5.6, "x = 2", pos = 4)
 text(-5.8, 1, "y = 1", pos = 3)
-
-
 ```
 
 </details>
@@ -4595,7 +4599,8 @@ f(x)=(x+1)^2(x-2).
 \]
 (This is just one valid example.)
 
-```{r, echo=FALSE, message=FALSE, warning=FALSE, error=FALSE}
+```{r polynomial-practice2-annotated, fig.cap="Annotated graph of a cubic polynomial showing turning points.", fig.alt="Graph of the function f(x) equals the quantity x plus 1 squared times the quantity x minus 2. The curve touches the x-axis at x equals negative 1 and crosses the x-axis at x equals 2. A local maximum is marked at x equals negative 1, where the graph flattens and turns downward, and a local minimum is marked near x equals 1, where the graph turns upward. A dashed horizontal line indicates the x-axis. The figure illustrates how critical points correspond to turning behavior in a cubic function.", echo=FALSE, message=FALSE, warning=FALSE}
+
 f <- function(x) (x+1)^2*(x-2)
 
 x <- seq(-2.5, 2.5, length.out = 1200)
@@ -4608,16 +4613,13 @@ plot(x, f(x),
 abline(h = 0, lty = 3)
 
 # Mark the turning points for this example
-# (For this polynomial, critical points occur at x = -1 and x = 1/3, so it is not a perfect match
-# to the stated sign chart — this is a *shape* example.)
+# (For this polynomial, critical points occur at x = -1 and x = 1/3)
 
-text(-1, f(-1), " local max ", pos = 4)
-text(1, f(1), " local min ", pos = 4)
-
-# Place the given point value
 points(-1, f(-1), pch = 19)
 points(1, f(1), pch = 19)
 
+text(-1, f(-1), " local max ", pos = 4)
+text(1, f(1), " local min ", pos = 4)
 ```
 
 
@@ -4649,7 +4651,8 @@ f(x)=x^3+2,
 \]
 since \(f''(x)=6x\) changes sign at \(x=0\).
 
-```{r, echo=FALSE, message=FALSE, warning=FALSE, error=FALSE}
+```{r polynomial-practice3-inflection, fig.cap="Annotated graph showing an inflection point and concavity change.", fig.alt="Graph of the function f(x) equals x cubed plus 2 over the interval from negative 3 to 3. The curve passes smoothly through the point 0 comma 2, which is marked and labeled as an inflection point. A dashed vertical line highlights x equals 0. To the left of this point the graph is concave down, and to the right it is concave up, showing a change in curvature without a local maximum or minimum.", echo=FALSE, message=FALSE, warning=FALSE}
+
 f <- function(x) x^3 + 2
 
 x <- seq(-3, 3, length.out = 1000)
@@ -4694,7 +4697,8 @@ You are told:
 <summary><strong>Solution Plot (Annotated)</strong></summary>
 
 
-```{r, echo=FALSE, message=FALSE, warning=FALSE, error=FALSE}
+```{r rational-practice4-annotated, fig.cap="Annotated graph of a rational function with asymptotes and curvature change.", fig.alt="Graph of the function f(x) equals 2 plus x cubed divided by the quantity x squared minus 1 squared. The graph has three branches separated by vertical asymptotes at x equals negative 1 and x equals 1, shown as dashed lines. A horizontal asymptote at y equals 2 is also shown. A point at 0 comma 2 is marked on the middle branch. A dashed vertical line at x equals 0 indicates a change in curvature, showing an inflection point on the central branch. The figure illustrates asymptotic behavior together with a curvature change in the interior of the domain.", echo=FALSE, message=FALSE, warning=FALSE}
+
 f <- function(x) 2 + (x^3)/((x^2 - 1)^2)
 
 xL <- seq(-5, -1.01, length.out = 800)
@@ -4722,7 +4726,7 @@ text(-4.7, 2, "y = 2",  pos = 3)
 points(0, f(0), pch = 19)
 text(0, f(0), " (0, 2)", pos = 4)
 
-# Visual cue for "inflection at x=0"
+# Visual cue for inflection at x = 0
 abline(v = 0, lty = 3)
 text(0, -9.2, "curvature change at x = 0", pos = 3, cex = 0.9)
 ```
