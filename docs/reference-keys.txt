@@ -1,4 +1,4 @@
-tab:unnamed-chunk-14
+tab:unnamed-chunk-1
 fig:apply-the-function-to-compute-temperature-40
 fig:temperature-time-elevation-lines
 fig:graph-change-example
@@ -22,6 +22,12 @@ fig:glacier-secant
 fig:stream-temp
 fig:slope-matching
 fig:soil-moisture
+fig:lake-temp-2panel
+fig:function-derivative-overlay
+fig:constant-rule-plot-fixed
+fig:constant-multiple-rule-plot-2
+fig:exp-clean-2point2s
+fig:contour-energy-map
 fig:practice-reading-graph
 fig:blank-axes
 fig:cubic-example-plot

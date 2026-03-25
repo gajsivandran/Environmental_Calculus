@@ -164,7 +164,8 @@ Then:
 - \( T'(t) \) tells you the rate of change in temperature at any moment.
 - \( \frac{dT}{dt} \) is the same thing, just written in a form that highlights that we're differentiating temperature with respect to time.
 
-```{r lake-temp-2panel, echo=FALSE, fig.width=7, fig.height=6}
+```{r lake-temp-2panel, fig.cap="Lake temperature and its rate of change over time.", fig.alt="Two stacked graphs show lake temperature and its derivative over a 48-hour period. The top graph shows temperature as a smooth oscillating curve with repeating peaks and troughs, indicating a daily cycle. The bottom graph shows the rate of change of temperature, which also oscillates and crosses zero at the times when the temperature reaches its maximum and minimum values. Positive values indicate the temperature is increasing, and negative values indicate it is decreasing. The figure illustrates the relationship between a function and its derivative in a periodic system.", echo=FALSE, fig.width=7, fig.height=6}
+
 # Define functions
 T <- function(t) 18 + 2 * sin(pi * t / 12)
 Tprime <- function(t) (pi / 6) * cos(pi * t / 12)
@@ -181,17 +182,16 @@ par(mfrow = c(2, 1), mar = c(4, 4, 2, 1))
 
 # Plot temperature
 plot(t_vals, temp_vals, type = "l", lwd = 2, col = "blue",
-     ylab = "Temperature (degC)", xlab = "Time (hours)",
+     ylab = "Temperature (\u00B0C)", xlab = "Time (hours)",
      main = "Lake Temperature T(t)")
 
 # Plot derivative
 plot(t_vals, deriv_vals, type = "l", lwd = 2, col = "red",
-     ylab = "Rate of Change (degC/hour)", xlab = "Time (hours)",
+     ylab = "Rate of Change (\u00B0C/hour)", xlab = "Time (hours)",
      main = "Derivative T'(t)")
+
 abline(h = 0, col = "gray", lty = 2)
 ```
-
-![Figure: Lake temperature and its derivative over time.](images/sea_level.png){fig.alt="Two stacked graphs show lake temperature and its rate of change over time in hours. The top graph shows temperature oscillating smoothly between about 16°C and 20°C in a repeating wave pattern over roughly 48 hours. The bottom graph shows the derivative, representing rate of change, also oscillating as a wave. When the temperature graph is increasing, the derivative is positive; when the temperature is decreasing, the derivative is negative; and when the temperature reaches peaks or troughs, the derivative crosses zero. The graphs illustrate the relationship between a function and its derivative."}
 
 Reading the math:
 
@@ -216,17 +216,20 @@ Examine the plots below.
 - Where is the derivative equal to zero? What feature do you see on the function at these points?
 - The function changes concavity at some point, what do you see in the derivative at this point?
 
-```{r, echo=FALSE}
+```{r function-derivative-overlay, fig.cap="A function and its derivative plotted together.", fig.alt="Graph showing a function f(x) equals x cubed minus 5x and its derivative f prime of x equals 3x squared minus 5 on the same axes over the interval from negative 3 to 3. The function is shown as a black curve with turning points, while the derivative is shown as a red parabola. The derivative crosses zero at the x-values where the original function has local maximum and minimum points. Positive values of the derivative correspond to where the function is increasing, and negative values correspond to where it is decreasing.", echo=FALSE}
+
 # Example of using the operator
 f <- function(x) x^3 - 5*x
 f_prime <- function(x) 3*x^2 - 5
+
 curve(f(x), from = -3, to = 3, lwd = 2,
       ylab = "f(x)", xlab = "x", main = "f(x) and its Derivative")
-curve(f_prime(x), from = -3, to = 3, col = "red", lwd = 2, add = TRUE)
-legend("bottomright", legend = c("f(x)", "f'(x)"), col = c("black", "red"), lwd = 2)
-```
 
-![Figure: Function and its derivative.](images/sea_level.png){fig.alt="A graph shows two curves plotted together: a black curve representing f(x) and a red curve representing its derivative f'(x). The black curve has a local maximum on the left and a local minimum on the right. The red curve crosses the horizontal axis at the x-values corresponding to these turning points. Where the black curve is increasing, the red curve is above zero; where the black curve is decreasing, the red curve is below zero. The graph illustrates the relationship between a function and its derivative."}
+curve(f_prime(x), from = -3, to = 3, col = "red", lwd = 2, add = TRUE)
+
+legend("bottomright", legend = c("f(x)", "f'(x)"),
+       col = c("black", "red"), lwd = 2)
+```
 
 :::
 
@@ -309,9 +312,10 @@ You can visualize this by graphing a constant function, such as \(f(x) = 4\). Th
 ### Environmental Interpretation 
 This rule may seem simple, but it matters in real-world modeling. For example, suppose you measure the background level of a pollutant in a lake that remains steady over time (say, \(2\) parts per million). Because this concentration is constant, its rate of change with respect to time is zero. Similarly, a flat baseline temperature in a climate dataset or a fixed conservation quota can be represented as a constant function whose derivative is always zero.  
 
-The Constant Rule reminds us that when nothing changes, the mathematics reflects that stillness directly: no change means no slope, and thus a derivative of zero.Graphically, we can see this by the fact than a tangent line anywhere on teh funtion would be 'flat' with a slope of zero.  
+The Constant Rule reminds us that when nothing changes, the mathematics reflects that stillness directly: no change means no slope, and thus a derivative of zero.Graphically, we can see this by the fact than a tangent line anywhere on the function would be 'flat' with a slope of zero.  
 
-```{r constant-rule-plot-fixed, echo=FALSE, fig.width=6, fig.height=4}
+```{r constant-rule-plot-fixed, fig.cap="Constant function and its derivative.", fig.alt="Graph showing a constant function f(x) equals 4 and its derivative f prime of x equals 0 over the interval from negative 5 to 5. The function is shown as a horizontal line at y equals 4. The derivative is shown as a dashed horizontal line at y equals 0. The figure illustrates that a constant function has zero rate of change everywhere.", echo=FALSE, fig.width=6, fig.height=4}
+
 # Define the constant function and its derivative to return vectors
 f <- function(x) rep(4, length(x))
 f_prime <- function(x) rep(0, length(x))
@@ -335,10 +339,7 @@ lines(x_vals, y_prime_vals, lwd = 2, lty = 2)
 legend("topright",
        legend = c("f(x) = 4", "f'(x) = 0"),
        lwd = 2, lty = c(1, 2))
-
 ```
-
-![Figure: Constant function and its derivative.](images/sea_level.png){fig.alt="A graph shows two horizontal lines: a solid line at y = 4 representing the constant function f(x) = 4, and a dashed line at y = 0 representing its derivative f'(x) = 0. Both lines extend across all x-values. The graph illustrates that the derivative of a constant function is zero everywhere."}
 
 The **Constant Rule** tells us how to take the derivative of a constant. A constant doesn't change, so its rate of change is zero.
 
@@ -602,7 +603,8 @@ f'(x) = c \cdot g'(x) = 7 \cdot (3x^2) = 21x^2
 \]
 
 
-```{r constant-multiple-rule-plot, echo=FALSE, fig.width=6, fig.height=4}
+```{r constant-multiple-rule-plot-2, fig.cap="Constant multiple rule illustrated with a cubic function.", fig.alt="Graph showing the function f(x) equals 7x cubed and its derivative f prime of x equals 21x squared over the interval from negative 3 to 3. The function is shown as a blue curve passing through the origin with increasing steepness. The derivative is shown as a red upward-opening parabola that is always nonnegative and equals zero at x equals 0. The figure illustrates that multiplying a function by a constant scales its derivative by the same constant, as seen in the relationship between 7x cubed and 21x squared.", echo=FALSE, fig.width=6, fig.height=4}
+
 # Define the function and its derivative
 f <- function(x) 7 * x^3
 f_prime <- function(x) 21 * x^2
@@ -627,8 +629,6 @@ legend("topleft",
        legend = c("f(x) = 7x^3", "f'(x) = 21x^2"),
        col = c("blue", "red"), lwd = 2, lty = c(1, 2))
 ```
-
-![Figure: Constant multiple rule example with function and derivative.](images/sea_level.png){fig.alt="A graph shows two curves: a blue curve representing the function f(x) = 7x cubed and a red dashed curve representing its derivative f'(x) = 21x squared. The blue curve has an S-shape, decreasing for negative x and increasing for positive x, with a flat point at x = 0. The red dashed curve is a parabola opening upward, with its minimum at x = 0. The graph illustrates how the derivative of 7x cubed is 21x squared, demonstrating the constant multiple rule."}
 
 ### Key Idea
 
@@ -702,7 +702,7 @@ $$
 U_T'(t) = \frac{d}{dt}(0.2t^2) + \frac{d}{dt}(0.5t) + \frac{d}{dt}(t^3) 
 $$
 
-One it is in this form we apply the rules we let he math tell us what to do. The above expression is saying "the rate of uptake is the sum of three derivatives". Remember $\frac{d}{dt}$ is an operatator telling us to 'take the derivative of' what ever comes next.
+One it is in this form we apply the rules we let he math tell us what to do. The above expression is saying "the rate of uptake is the sum of three derivatives". Remember $\frac{d}{dt}$ is an operator telling us to 'take the derivative of' what ever comes next.
 
 
 \begin{aligned}
@@ -789,7 +789,8 @@ This means that the tangent line at any point on the graph has a slope equal to 
 
 This is why \(e^x\) is so central in calculus: it perfectly embodies the idea of *proportional change*.  
 
-```{r exp-clean-2point2s, echo=FALSE, fig.width=7, fig.height=5}
+```{r exp-clean-2point2s, fig.cap="Exponential function with tangent lines at two points.", fig.alt="Graph of the exponential function y equals e to the x over the interval from negative 2 to 2. Two tangent line segments are drawn, one at x equals 0 and one at x equals 1. At each point, the tangent line touches the curve and has the same slope as the function. The labels show that the value of the function equals the value of its derivative at each point, illustrating that the derivative of e to the x is itself. The tangent lines closely match the curve near their points of contact but diverge as x moves away.", echo=FALSE, fig.width=7, fig.height=5}
+
 f       <- function(x) exp(x)
 fprime  <- function(x) exp(x)
 tangent <- function(x, x0) f(x0) + fprime(x0) * (x - x0)
@@ -805,14 +806,15 @@ plot(x, f(x), type = "l", lwd = 3, col = "dodgerblue3",
      xlim = xlim, ylim = ylim, xaxs = "i", yaxs = "i",
      xlab = "x", ylab = "y",
      main = "y = e^x with tangents at x = 0 and x = 1")
+
 grid(nx = NA, ny = NA, col = "gray90", lty = 1)
 
 # Two points & styling
 x0s   <- c(0, 1)
 cols  <- c("#009E73", "#7B61FF")
 span  <- 0.7
-labels_xy <- list(c(0.35-1, 2.0),  # label position for x0=0
-                  c(1.35-1, 4.0))  # label position for x0=1
+labels_xy <- list(c(0.35-1, 2.0),
+                  c(1.35-1, 4.0))
 
 for (i in seq_along(x0s)) {
   x0 <- x0s[i]; y0 <- f(x0)
@@ -837,6 +839,7 @@ for (i in seq_along(x0s)) {
        labels_xy[[i]][1] + strwidth(lab) + strwidth("M")*0.25,
        labels_xy[[i]][2] + strheight("M")*0.25,
        col = rgb(1,1,1,0.9), border = NA)
+
   text(labels_xy[[i]][1], labels_xy[[i]][2], lab,
        adj = c(0,0.9), col = cols[i], cex = 0.95)
 }
@@ -846,8 +849,6 @@ legend("topleft",
        col = c("dodgerblue3", "black"),
        lty = c(1, 2), lwd = c(3, 2), bty = "n")
 ```
-
-![Figure: Exponential function with tangent lines at x = 0 and x = 1.](images/sea_level.png){fig.alt="A graph shows the exponential function y = e to the x as a smooth increasing blue curve. Two points are highlighted: (0, 1) and (1, about 2.72). At each point, a dashed line segment represents the tangent line, showing the slope of the curve at that point. The tangent at x = 0 is less steep, while the tangent at x = 1 is steeper, illustrating how the rate of change increases as x increases. Labels indicate the function values at each point."}
 
 
 
@@ -1937,7 +1938,8 @@ So, just like tracing a contour line:
 - As you move in \(x\), \(y\) must adjust to stay on that curve.
 - The **ratio** of those small changes — \(\frac{dy}{dx}\) — is what **implicit differentiation** gives you.
 
-```{r, echo=FALSE}
+```{r contour-energy-map, fig.cap="Contour map of E(x, y) = x^2 + y^2.", fig.alt="Contour plot of the function E(x, y) equals x squared plus y squared over a square region from negative 5 to 5 in both directions. The contours are concentric circles centered at the origin, with increasing values moving outward. Labeled contour levels include 1, 4, 9, 16, and 25. A point at coordinates (3, 4) is marked and labeled E equals 25, showing that all points on the same circle have the same function value. The figure illustrates how contour lines represent constant values of a function in two variables.", echo=FALSE}
+
 # This R code generates the contour plot shown below
 # (Code is suppressed for students in the final version)
 
@@ -1954,12 +1956,10 @@ contour(x, y, E_matrix,
         main = "Contour Map of E(x, y) = x^2 + y^2",
         xlab = "x (east-west)",
         ylab = "y (north-south)")
+
 points(3, 4, pch = 19, col = "tomato")
 text(3, 4, "E = 25", pos = 4, col = "tomato")
-
 ```
-
-![Figure: Contour map of E(x, y) = x^2 + y^2.](images/sea_level.png){fig.alt="A contour map shows level curves of the function E(x, y) = x squared plus y squared. The contours are concentric circles centered at the origin, with values increasing outward. Inner contours are labeled with smaller values such as 1 and 4, while outer contours are labeled with larger values such as 9, 16, and 25. A point on the outer contour is marked and labeled E = 25. The x-axis is labeled east-west and the y-axis north-south. The map illustrates that the function increases with distance from the center."}
 
 :::
 
