@@ -20,7 +20,7 @@
 - Climate change
 - Active learning pedagogy
 - Simulation modeling
-- Decision support (socio-economic modelling) 
+- Decision support (socio-economic modeling) 
 
 **Random Facts**
 
@@ -30,7 +30,7 @@
 
 ## Classroom Etiquette
 
-![](images/hands.png){fig.alt='Decorative' style="float:right; width:250px; margin:10px;"}
+![](images/hands.png){fig.alt="Illustration of multiple raised hands in different skin tones reaching upward. Colorful question marks appear above the hands, representing curiosity, participation, and questions from a diverse group of people." style="float:right; width:250px; margin:10px;"}
 
 - Please feel free to bring your breakfast/lunch to class – just be sure to clean up before you leave
 - Bring whatever tech you need to take notes and engage. We will be using Poll everywhere 
@@ -43,7 +43,7 @@
 **Discussion**
 In small groups:
 
-![](images/declared_majors.png){fig.alt='Decorative' style="float:right; width:200px; margin:10px;"}
+![](images/declared_majors.png){fig.alt="Chart titled 'Declared Majors' showing the distribution of student majors. The largest group is marine biology at about 31 percent, followed by civil and environmental resource management at 26 percent, and pre-science at 16 percent. Smaller groups include pre-environment, environmental studies, pre-social science, and oceanography, each under 5 percent. Several additional majors such as wildlife conservation, biology, anthropology, and earth and space sciences each make up about 1 percent." style="float:right; width:200px; margin:10px;"}
 
 
 
@@ -68,8 +68,8 @@ Class Make Up
 
 ## What is Calculus?
 
-![](images/change1.png){fig.alt='Change is the only constant in life - Heraclitus' style="float:right; width:300px; margin:10px;"}
-![](images/change2.png){fig.alt='Charles Darwin Quote - It is not the strongest of the species that survives, nor the most intelligent that survives. It is the one that is most adaptable to change' style="width:400px; margin:10px;"}
+![](images/change1.png){fig.alt="Graphic with a framed quote that reads, 'Change is the only constant in life.' attributed to Heraclitus. The design features stylized quotation marks and a simple, muted background." style="float:right; width:300px; margin:10px;"}
+![](images/change2.png){fig.alt="Image of Charles Darwin alongside a quote that reads, 'It is not the strongest of the species that survives, nor the most intelligent that survives. It is the one that is most adaptable to change.' The quote is displayed next to a portrait of Darwin against a muted green background." style="width:400px; margin:10px;"}
 
 
 ::: promptbox
@@ -78,14 +78,14 @@ Class Make Up
 
 What do you see in this graph?
 
-![](images/change3.png){fig.alt='Bar graph of 10 hottest years in the US - from hottest down - 2024, 2012, 2016, 2017, 2021,2015, 2020, 2023,2006,1998' style="float:center; width:800px; margin:10px;"}
+![](images/change3.png){fig.alt="Bar chart titled '10 Hottest U.S. Years on Record' showing increasing temperature anomalies. The bars represent years from 1998 to 2024, with the most recent years generally being the warmest. The tallest bar corresponds to 2024, indicating it is the hottest year on record, with several other recent years such as 2012, 2016, 2020, 2021, and 2023 also among the hottest." style="float:center; width:800px; margin:10px;"}
 <br><br><br><br>
 
 :::
 
 ## My Expectations of You
 
-![](images/endure.png){fig.alt='Cover of the book Endure' style="float:right; width:100px; margin:10px;"}
+![](images/endure.png){fig.alt="Book cover of 'Endure' by Alex Hutchinson, featuring a runner on a track beneath a dark background with the title prominently displayed." style="float:right; width:100px; margin:10px;"}
 
 **Objective 1** : The ability to apply calculus to the natural system
 
@@ -115,15 +115,12 @@ In a small group make 2 lists
 
 ### Assessments
 
-![](images/assessmentpie.png){fig.alt='Pie chart of assessment breakdown - percentages in text' style="float:right; width:400px; margin:10px;"}
+![](images/assessmentpie.png){fig.alt="Pie chart titled 'Course Grading Breakdown' showing that tests make up 70 percent of the grade, while participation, homework, and project each contribute 10 percent." style="float:right; width:400px; margin:10px;"}
 
-**Preparation** [10%]
+**Preparation & Participation** [10%]
 
 - Before class readings/questions
 - After-class self checks
-
-**Participation** [10%]
-
 - In-class activities
 - Polleverywhere
 
@@ -133,7 +130,7 @@ In a small group make 2 lists
 - Revise and resubmit
 - Grade on accuracy and effort
 
-**Tests** [60%]
+**Tests** [70%]
 
 - 4 Tests over the term 
 - 2 can be re-taken during finals week
@@ -159,9 +156,9 @@ Tests will be relatively straightforward if you make the effort on the in-class 
 
 Using these resources will only make studying for tests harder. Many of these resources give you the *illusion* of understanding - but the reality is quite different.
 
-![](images/milkcrate.png){fig.alt='A picture of a person trying to climb a pyramid made up of milk crates' style="float:right; width:300px; margin:10px;"}
+![](images/milkcrate.png){fig.alt="Image of a pyramid stack of black milk crates arranged on grass, with a person standing nearby preparing to climb it. The structure resembles a stepped pyramid used in a balance or climbing challenge." style="float:right; width:300px; margin:10px;"}
 
-![](images/chegg.png){fig.alt='Pie chart of assessment breakdown - percentages in text' style="width:300px; margin:10px;"}
+![](images/chegg.png){fig.alt="Logos of Chegg, YouTube, and ChatGPT displayed side by side, representing different online platforms used for learning and information access." style="width:300px; margin:10px;"}
 
 
 
@@ -186,12 +183,12 @@ To accommodate for this, 5% of the total preparation and participation assessmen
 
 What do we consider **exceptional circumstances**?
 
-![](images/excuses.png){fig.alt='Decorative cartoon of common excuses' style="left; width:300px; margin:10px;"}
+![](images/excuses.png){fig.alt="Cartoon of a student surrounded by exaggerated excuses for not doing homework, including a computer showing '404 homework not found,' an alarm clock, a tangled mess, a UFO, an alien, and a calendar with homework crossed out. A dog sits at the desk with tissues while the student looks overwhelmed, suggesting avoidance and distraction." style="float:left; width:300px; margin:10px;"}
 :::
 
 ### Test Retakes Policy
 
-There is no Final in this class – BUT – I will use the finals timeslot for the retakes. So don't plan an early break if you think you might be doing a retake.
+There is no Final in this class – BUT – I will use the finals time slot for the retakes. So don't plan an early break if you think you might be doing a retake.
 
 If you miss a test during the term for a valid reason (health, emergency etc) and inform me in a timely manner, I’ll schedule a time during office hours for you to take the test. This flexibility is only good for a couple of days as I want to get the graded tests back to the rest of the class.
 
@@ -200,13 +197,13 @@ If you miss a test for another reason (slept in, went to a wedding etc) you can 
 Reasons to retake
 Missed a test
 Want to try for a better grade
-Love calc so much you want to do more problems
+Love calculus so much you want to do more problems
 
-You can retake upto 2 tests. Your best score counts – so no risk
+You can retake up to 2 tests. Your best score counts – so no risk
 
 ### Class notes
 
-All notes that I take in class are available on the onenote notebook link on Canvas
+All notes that I take in class are available on the OneNote notebook link on Canvas
 All lectures will be recorded - these will also be made available on Canvas
 
 From time to time the technology will fail us. Remember these are being provided as a *bonus*. There is no substitute for attending class and taking your own notes.
@@ -279,7 +276,7 @@ Why did we make paper planes in calc?
 **Class Discussion**
 
 
-![](images/Bolt.png){fig.alt='Picture of Usain Bolt winning a 100m race' style="float:right; width:300px; margin:10px;"}
+![](images/Bolt.png){fig.alt="Photo of a men's sprint race on a track with several runners competing at full speed. One runner is clearly ahead of the others as they approach the finish line." style="float:right; width:300px; margin:10px;"}
 
 When we try to understand derivatives, the most common place to start is Position->Velocity->Acceleration and how they are linked.
 
@@ -300,7 +297,7 @@ When do you think this happened?
 
 3)The time it took him to get to 10m markers was measured, and the plot is below. What does this tell us about how fast he ran?
 
-![](images/Bolt2.png){fig.alt='Position vs time graph, showing ten segments, each with slightly different slopes, the first segment took 1.83s, a segment in the middle of the race took 0.82s' style="width:500px; margin:10px;"}
+![](images/Bolt2.png){fig.alt="Position versus time graph for a 100 meter race, showing distance increasing from 0 to 100 meters over about 10 seconds. The graph is divided into segments with changing slopes, indicating changes in speed. Early segments are steeper at first, with one labeled about 1.83 seconds, while a middle segment is labeled about 0.82 seconds, showing faster movement later in the race." style="width:500px; margin:10px;"}
 <br><br><br><br><br><br><br>
 
 
@@ -308,14 +305,14 @@ When do you think this happened?
 
 Note: The reason the curve needs to be smooth will be covered later - this is all just a preview
 
-![](images/Bolt3.png){fig.alt='Position vs time grpah, but instead of straight line segments, it is one smooth line through the points' style="width:500px; margin:10px;"}
+![](images/Bolt3.png){fig.alt="Position versus time graph for a 100 meter race, showing distance increasing from 0 to 100 meters over about 10 seconds. Unlike a piecewise linear graph, the data points are connected by a smooth curve, representing continuous changes in speed throughout the race." style="width:500px; margin:10px;"}
 <br><br><br><br><br><br><br>
 
 5) No if we calculate the instantaneous rate of change and plot it against time - we get the velocity vs time relationship.
 
 Using this - try to describe how is velocity (speed) varied during the race.
 
-![](images/Bolt4.png){fig.alt='Velocity vs time grpah, shows the velocity increase at the start of the race, then level out, before decreasing at the end of the race. In the video the decrease was associated with Usain Bolt celebrating early' style="width:500px; margin:10px;"}
+![](images/Bolt4.png){fig.alt="Velocity versus time graph for a 100 meter race. The curve shows velocity increasing rapidly at the start, leveling off near a maximum speed, and then decreasing slightly toward the end of the race. An inset image shows runners sprinting on a track." style="width:500px; margin:10px;"}
 <br><br><br><br><br><br><br>
 
 6) The world wondered how fast he could actually run the 100m. A year later at the world championships sensors were places along the tract to capture in high resolution his position with time.
@@ -323,7 +320,7 @@ Using this - try to describe how is velocity (speed) varied during the race.
 - What do you notice this time?
 - What is causing the oscillating in the red line?
 
-![](images/Bolt5.png){fig.alt='Velocity vs time grpah, black line shows increasing velcity and then levels out at 12m/s, the red line shows the instantaneous velocity whcih oscilates around the average through the race' style="width:500px; margin:10px;"}
+![](images/Bolt5.png){fig.alt="Velocity versus distance graph for a sprint. A smooth black curve shows average speed increasing quickly at the start and then leveling off near 12 meters per second. A red line oscillates around the black curve, representing instantaneous speed that fluctuates slightly above and below the average throughout the race." style="width:500px; margin:10px;"}
 <br><br><br><br><br><br><br>
 
 

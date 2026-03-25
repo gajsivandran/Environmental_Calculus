@@ -7,7 +7,7 @@ Test 3 will cover the material covered in Chapter 5 of this textbook:
 - understanding what sign charts tell us about the function
 - ability to identify local and global extrema, points of inflection and curvature
 - ability to use a sign chart to find extrema
-- ablity to plot a function based on information from the first and second derivative sign charts
+- abliity to plot a function based on information from the first and second derivative sign charts
 
 
 ## Test Instructions {-}
