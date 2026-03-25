@@ -1527,8 +1527,13 @@ Mathematically, it’s the slope of a secant line connecting two points on a fun
 <div class="promptbox">
 <p><strong>Activity (Individual or Pairs):</strong>
 Look at the quadratic function below.</p>
-<p><span class="math display">\[f(x) = -x^2 + 4x + 5\]</span>
-<img src="bookdown-demo_files/figure-html/avg-rate-quad-1.png" width="576" /></p>
+<span class="math display">\[f(x) = -x^2 + 4x + 5\]</span>
+<div class="figure"><span style="display:block;" id="fig:avg-rate-quad"></span>
+<img src="bookdown-demo_files/figure-html/avg-rate-quad-1.png" alt="Graph of a downward-opening quadratic function f(x) equals negative x squared plus 4x plus 5 over the interval from 0 to 6. The curve rises to a maximum and then decreases, forming a smooth parabola. The figure provides a visual context for analyzing average rate of change over different intervals." width="576" />
+<p class="caption">
+Figure 10.1: Quadratic function used to explore average rate of change.
+</p>
+</div>
 <ul>
 <li>Pick two points on the curve.</li>
 <li>Estimate their coordinates.</li>
@@ -1718,7 +1723,12 @@ Describe a situation in your area of interest (marine biology, forestry, climate
 <div class="promptbox">
 <p><strong>Activity (Whole Class Demonstration):</strong>
 Look at the function below.</p>
-<p><img src="bookdown-demo_files/figure-html/zoom-demo-1.png" width="576" /></p>
+<div class="figure"><span style="display:block;" id="fig:zoom-demo"></span>
+<img src="bookdown-demo_files/figure-html/zoom-demo-1.png" alt="Graph of a smooth upward-opening curve representing sea level over time from about 1995 to 2025. A red point is marked at the year 2010 on the curve. The figure illustrates how focusing on a small region around a point helps analyze local behavior, such as estimating the slope or rate of change near that point." width="576" />
+<p class="caption">
+Figure 10.2: Zooming in on a point to study local behavior of a curve.
+</p>
+</div>
 <ul>
 <li>As a class, discuss: What does the slope of the curve at 2010 represent?</li>
 <li>Imagine drawing a tangent line right at that point. How is this different from a secant line?</li>
@@ -1733,7 +1743,12 @@ Look at the function below.</p>
 <div class="promptbox">
 <p><strong>Activity (Pairs):</strong>
 On the curve below:</p>
-<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-11-1.png" width="672" /></p>
+<div class="figure"><span style="display:block;" id="fig:slope-types-tangent-demo"></span>
+<img src="bookdown-demo_files/figure-html/slope-types-tangent-demo-1.png" alt="Graph of a smooth curve over the interval from 0 to 10 showing an environmental quantity over time. Three points are highlighted on the curve. At one point, a dashed tangent line slopes upward, indicating a positive slope. At another point, the tangent line is horizontal, indicating zero slope. At a third point, the tangent line slopes downward, indicating a negative slope. The figure demonstrates how the sign of the derivative corresponds to increasing, constant, or decreasing behavior of the function." width="672" />
+<p class="caption">
+Figure 10.3: Identifying positive, zero, and negative tangent slopes on a curve.
+</p>
+</div>
 <ul>
 <li>Mark one point where the tangent slope is clearly <strong>positive</strong>.</li>
 <li>Mark one point where the tangent slope is clearly <strong>negative</strong>.</li>
@@ -1743,8 +1758,13 @@ On the curve below:</p>
 </ul>
 <p><em>Discuss:</em> What does each slope mean in an environmental context (e.g., population peak, fastest growth, fastest decline)? Break up the function into regions and tell a story.</p>
 <p><strong>Notes:</strong> <br><br><br><br><br><br><br><br><br><br><br><br></p>
-<p><strong>Challenge</strong>: Can you sketch the derivative - dont worry about getting the right magnitudes, just the right shape. [Hint: start with some points you know for sure, then ask yourself as you move left to right what is happening to the slope]</p>
-<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-12-1.png" width="672" /></p>
+<p><strong>Challenge</strong>: Can you sketch the derivative - don’t worry about getting the right magnitudes, just the right shape. [Hint: start with some points you know for sure, then ask yourself as you move left to right what is happening to the slope]</p>
+<div class="figure"><span style="display:block;" id="fig:tangent-slope-and-blank-derivative"></span>
+<img src="bookdown-demo_files/figure-html/tangent-slope-and-blank-derivative-1.png" alt="Two stacked panels show a function and a blank coordinate grid for its derivative. The top panel shows a smooth curve over the interval from 0 to 10 with three marked points. Dashed tangent lines at those points show one positive slope, one zero slope, and one negative slope, illustrating how the sign of the derivative depends on local behavior of the function. The bottom panel is a blank graph labeled f prime of x with horizontal and vertical reference lines, intended for sketching the derivative based on the slope information from the top panel." width="672" />
+<p class="caption">
+Figure 10.4: Using tangent slopes to sketch the derivative.
+</p>
+</div>
 </div>
 <hr />
 </div>
@@ -2030,7 +2050,7 @@ D&#39;(a) \;=\; \lim_{h \to 0} \frac{D(a+h) - D(a)}{h}
 </table>
 <p><br><br><br><br><br><br></p>
 <blockquote>
-<p>Technically what have found here is an <strong>estimate</strong> for the instantanous rate of change at a point</p>
+<p>Technically what have found here is an <strong>estimate</strong> for the instantaneous rate of change at a point</p>
 </blockquote>
 </div>
 <hr />
@@ -2047,7 +2067,12 @@ D&#39;(a) \;=\; \lim_{h \to 0} \frac{D(a+h) - D(a)}{h}
 <blockquote>
 <p>Remember the average rate of change equation is just <em>rise over run</em> or the slope of the secant lines, so the slopes of the lines are what tell us the rate of change</p>
 </blockquote>
-<p><img src="bookdown-demo_files/figure-html/daylight-secant-to-tangent-1.png" width="90%" style="display: block; margin: auto;" /></p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:daylight-secant-to-tangent"></span>
+<img src="bookdown-demo_files/figure-html/daylight-secant-to-tangent-1.png" alt="Graph of daylight hours over time modeled by a smooth periodic curve across two years. A point at a chosen day a is marked on the curve. Several secant lines connect this point to nearby points at increasing proximity, showing how the slope of the secant lines approaches the slope of the tangent line at that point. The figure illustrates how average rates of change approach the instantaneous rate of change as the interval shrinks." width="90%" />
+<p class="caption">
+Figure 10.5: Secant lines approaching a tangent line for a daylight model.
+</p>
+</div>
 </div>
 <div id="read-what-the-slope-means" class="section level3 hasAnchor" number="10.7.5">
 <h3><span class="header-section-number">10.7.5</span> Read What the Slope Means<a href="introduction-to-derivatives-workbook.html#read-what-the-slope-means" class="anchor-section" aria-label="Anchor link to header"></a></h3>
@@ -2119,7 +2144,7 @@ Explain—in your own words—why the <strong>limit</strong> is essential for de
 <h3><span class="header-section-number">10.8.3</span> Why Not Just Plug In?<a href="introduction-to-derivatives-workbook.html#why-not-just-plug-in" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <div class="promptbox">
 <p><strong>Discussion Prompt:</strong></p>
-<p>Sometimes <span class="math inline">\(f(a)\)</span> is undefined (like dividing by zero). In fact - when we look at the limit defintion of a derivative, this is the problem we encounter.</p>
+<p>Sometimes <span class="math inline">\(f(a)\)</span> is undefined (like dividing by zero). In fact - when we look at the limit definition of a derivative, this is the problem we encounter.</p>
 <p><span class="math display">\[
 f&#39;(a) \;=\; \lim_{h \to 0} \frac{f(a+h) - f(a)}{h}
 \]</span>
@@ -2720,7 +2745,12 @@ Explain briefly why.</p>
 </tbody>
 </table>
 <p><strong>Extension:</strong> For any discontinuity you labeled <strong>removable</strong>, propose a value for <span class="math inline">\(f(a)\)</span> that would make the function continuous at that point, and justify it.</p>
-<p><img src="bookdown-demo_files/figure-html/continuity-3x3-1.png" width="960" /></p>
+<div class="figure"><span style="display:block;" id="fig:continuity-3x3"></span>
+<img src="bookdown-demo_files/figure-html/continuity-3x3-1.png" alt="Nine-panel figure illustrating continuity and discontinuity. Panel 1 shows a smooth parabola that is continuous everywhere. Panel 2 shows an absolute value graph with a corner but no break, so it is continuous. Panel 3 shows a removable discontinuity, with an open circle at one point on the curve and a filled point at a different height for the same x-value. Panel 4 shows a jump discontinuity, where the left and right sides approach different values. Panel 5 shows an infinite discontinuity for the function one over x, with a vertical asymptote at x equals 0. Panel 6 shows oscillation near x equals 0 for sine of 1 over x, where the function keeps oscillating and does not settle to a limit. Panel 7 shows a repaired hole, where the missing point has been filled so the graph is continuous. Panel 8 shows a jump discontinuity together with a mismatched defined value at the jump point. Panel 9 shows both a removable discontinuity at one x-value and a vertical asymptote at another. The figure compares different ways a function can be continuous or fail to be continuous." width="960" />
+<p class="caption">
+Figure 10.6: Examples of continuous functions and different types of discontinuities.
+</p>
+</div>
 <p><strong>Notes:</strong><br />
 <br><br><br><br></p>
 </div>
@@ -2789,8 +2819,13 @@ List or sketch examples of what <em>fails</em> to be smooth.</p>
 <p><strong>Prompt 6:</strong><br />
 Identify which of the following functions are smooth at <span class="math inline">\(x=0\)</span>:<br />
 Explain your reasoning.</p>
-<p><img src="bookdown-demo_files/figure-html/smoothness-4panels-1.png" width="960" />
-<strong>Notes:</strong><br />
+<div class="figure"><span style="display:block;" id="fig:smoothness-4panels"></span>
+<img src="bookdown-demo_files/figure-html/smoothness-4panels-1.png" alt="Four-panel figure comparing functions with different local behaviors at x equals 0. Panel A shows the parabola x squared, which is smooth and differentiable at the origin. Panel B shows the absolute value function, which has a sharp corner at the origin and is not differentiable there. Panel C shows the cube root function, which passes through the origin with a vertical tangent and is not differentiable there. Panel D shows the function x times sine of 1 over x with f of 0 defined as 0; the graph is continuous at the origin but oscillates rapidly nearby, illustrating complicated local behavior. In each panel, the point at x equals 0 is highlighted to compare how continuity does not always imply smoothness." width="960" />
+<p class="caption">
+Figure 10.7: Examples showing different kinds of smoothness and non-smooth behavior.
+</p>
+</div>
+<p><strong>Notes:</strong><br />
 <br><br><br><br></p>
 </div>
 <hr />
@@ -2988,7 +3023,12 @@ What feature prevents the derivative from existing?</p>
 </tr>
 </tbody>
 </table>
-<p><img src="bookdown-demo_files/figure-html/differentiability-new-4panels-1.png" width="960" /></p>
+<div class="figure"><span style="display:block;" id="fig:differentiability-new-4panels"></span>
+<img src="bookdown-demo_files/figure-html/differentiability-new-4panels-1.png" alt="Four-panel figure comparing functions at x equals 0. Panel 1 shows the function e to the negative x squared, which is smooth and differentiable at x equals 0. Panel 2 shows the function square root of the absolute value of x, which has a sharp vertical cusp at x equals 0 and is not differentiable there. Panel 3 shows the function x plus the absolute value of x, which has a corner at x equals 0 and is not differentiable there. Panel 4 shows the function sine of x squared, which is smooth and differentiable at x equals 0. In each panel, the point at x equals 0 is highlighted to compare how some continuous functions are differentiable while others are not." width="960" />
+<p class="caption">
+Figure 10.8: Examples of differentiable and non-differentiable behavior at a point.
+</p>
+</div>
 </div>
 <hr />
 </div>
@@ -3043,11 +3083,36 @@ Focus on identifying:</p>
 <li>points of non-differentiability or smooth transitions.</li>
 </ul>
 <hr />
-<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-13-1.png" width="672" />
-<img src="bookdown-demo_files/figure-html/unnamed-chunk-14-1.png" width="672" /></p>
-<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-15-1.png" width="672" /></p>
-<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-16-1.png" width="672" /></p>
-<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-17-1.png" width="672" /></p>
+<div class="figure"><span style="display:block;" id="fig:piecewise-linear-discontinuous"></span>
+<img src="bookdown-demo_files/figure-html/piecewise-linear-discontinuous-1.png" alt="Graph of a piecewise linear function made of three line segments over the interval from negative 5 to 5. The left segment decreases and ends with a closed point at x equals negative 2. The middle segment increases gently and begins with an open circle at x equals negative 2, then ends with a closed point at x equals 1. The right segment decreases and begins with an open circle at x equals 1. The open and closed circles show jump discontinuities at the transition points." width="672" />
+<p class="caption">
+Figure 10.9: Piecewise linear function with discontinuities at junctions.
+</p>
+</div>
+<div class="figure"><span style="display:block;" id="fig:wavy-function-continuous"></span>
+<img src="bookdown-demo_files/figure-html/wavy-function-continuous-1.png" alt="Graph of a smooth continuous function over the interval from negative 5 to 5. The curve rises and falls multiple times, showing regions of increasing and decreasing behavior and changing concavity. There are no breaks, holes, or jumps in the graph, illustrating a function that is continuous everywhere on the interval." width="672" />
+<p class="caption">
+Figure 10.10: Smooth continuous function with changing slope and curvature.
+</p>
+</div>
+<div class="figure"><span style="display:block;" id="fig:sine-function-basic"></span>
+<img src="bookdown-demo_files/figure-html/sine-function-basic-1.png" alt="Graph of the sine function from x equals 0 to x equals 4 pi. The curve oscillates smoothly above and below the x-axis, forming repeating peaks and troughs. The function crosses the x-axis at regular intervals, illustrating its periodic nature." width="672" />
+<p class="caption">
+Figure 10.11: Sine function over multiple periods showing periodic behavior.
+</p>
+</div>
+<div class="figure"><span style="display:block;" id="fig:mixed-function-smooth-transition"></span>
+<img src="bookdown-demo_files/figure-html/mixed-function-smooth-transition-1.png" alt="Graph of a piecewise function from negative 4 to 4 composed of three types of behavior. A decreasing line segment ends at x equals negative 2 with a closed point, while a horizontal segment begins there with an open circle, indicating a jump discontinuity. At x equals 0, the constant segment ends with a closed point and a quadratic curve begins with an open circle, showing another discontinuity. At x equals 2, the quadratic curve transitions smoothly into an increasing line with a shared closed point, indicating continuity and matching slope at that junction." width="672" />
+<p class="caption">
+Figure 10.12: Piecewise function showing both discontinuities and a smooth transition.
+</p>
+</div>
+<div class="figure"><span style="display:block;" id="fig:complex-smooth-piecewise"></span>
+<img src="bookdown-demo_files/figure-html/complex-smooth-piecewise-1.png" alt="Graph of a piecewise function over the interval from negative 4 to 4 with three curved sections. The left section is a downward-opening quadratic that ends at x equals negative 1 with a closed point. The middle section is a smooth oscillating curve that begins at x equals negative 1 with an open circle and ends at x equals 1.5 with a closed point. The right section is a cubic curve that begins at x equals 1.5 with an open circle. Open and closed circles indicate jump discontinuities at the transition points." width="672" />
+<p class="caption">
+Figure 10.13: Piecewise function combining multiple smooth curve types with discontinuities at transitions.
+</p>
+</div>
 <div class="promptbox">
 <p><strong>Recipe of Plotting Derivatives</strong></p>
 <ul>

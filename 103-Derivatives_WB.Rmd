@@ -281,7 +281,8 @@ Mathematically, it’s the slope of a secant line connecting two points on a fun
 Look at the quadratic function below.
 
 $$f(x) = -x^2 + 4x + 5$$
-```{r avg-rate-quad, echo=FALSE, fig.width=6, fig.height=4}
+```{r avg-rate-quad, fig.cap="Quadratic function used to explore average rate of change.", fig.alt="Graph of a downward-opening quadratic function f(x) equals negative x squared plus 4x plus 5 over the interval from 0 to 6. The curve rises to a maximum and then decreases, forming a smooth parabola. The figure provides a visual context for analyzing average rate of change over different intervals.", echo=FALSE, message=FALSE, warning=FALSE, fig.width=6, fig.height=4}
+
 f <- function(x) -x^2 + 4*x + 5
 curve(f(x), from = 0, to = 6,
       xlab = "x", ylab = "f(x)",
@@ -425,7 +426,8 @@ The instantaneous rate of change tells us how fast something is changing at a *s
 **Activity (Whole Class Demonstration):**
 Look at the function below.
 
-```{r zoom-demo, echo=FALSE, fig.width=6, fig.height=4}
+```{r zoom-demo, fig.cap="Zooming in on a point to study local behavior of a curve.", fig.alt="Graph of a smooth upward-opening curve representing sea level over time from about 1995 to 2025. A red point is marked at the year 2010 on the curve. The figure illustrates how focusing on a small region around a point helps analyze local behavior, such as estimating the slope or rate of change near that point.", echo=FALSE, message=FALSE, warning=FALSE, fig.width=6, fig.height=4}
+
 f <- function(x) 0.02*(x - 2000)^2 + 5
 curve(f(x), from = 1995, to = 2025,
       xlab = "Year", ylab = "Sea Level (mm)",
@@ -449,7 +451,8 @@ points(2010, f(2010), pch = 19, col = "red")
 **Activity (Pairs):**
 On the curve below:
 
-```{r, echo=FALSE}
+```{r slope-types-tangent-demo, fig.cap="Identifying positive, zero, and negative tangent slopes on a curve.", fig.alt="Graph of a smooth curve over the interval from 0 to 10 showing an environmental quantity over time. Three points are highlighted on the curve. At one point, a dashed tangent line slopes upward, indicating a positive slope. At another point, the tangent line is horizontal, indicating zero slope. At a third point, the tangent line slopes downward, indicating a negative slope. The figure demonstrates how the sign of the derivative corresponds to increasing, constant, or decreasing behavior of the function.", echo=FALSE, message=FALSE, warning=FALSE}
+
 # An interesting curve with varied behavior
 f <- function(x) {
   0.04*(x - 5)^3 - 0.9*(x - 5) + 0.8*sin(1.2*x) + 8
@@ -487,7 +490,13 @@ draw_tangent <- function(x0, y0, m, col) {
   lines(xline, yline, col = col, lwd = 2, lty = 2)
 }
 
-
+# Draw tangents
+cols <- c("darkgreen", "black", "firebrick")
+for (i in 1:3) {
+  draw_tangent(pts$x[i], pts$y[i], pts$m[i], cols[i])
+  points(pts$x[i], pts$y[i], pch = 19, col = cols[i])
+  text(pts$x[i], pts$y[i], paste(" ", pts$lab[i]), pos = 4, col = cols[i])
+}
 ```
 
 * Mark one point where the tangent slope is clearly **positive**.
@@ -501,9 +510,10 @@ draw_tangent <- function(x0, y0, m, col) {
 **Notes:** <br><br><br><br><br><br><br><br><br><br><br><br>
 
 
-**Challenge**: Can you sketch the derivative - dont worry about getting the right magnitudes, just the right shape. [Hint: start with some points you know for sure, then ask yourself as you move left to right what is happening to the slope]
+**Challenge**: Can you sketch the derivative - don't worry about getting the right magnitudes, just the right shape. [Hint: start with some points you know for sure, then ask yourself as you move left to right what is happening to the slope]
 
-```{r, echo=FALSE}
+```{r tangent-slope-and-blank-derivative, fig.cap="Using tangent slopes to sketch the derivative.", fig.alt="Two stacked panels show a function and a blank coordinate grid for its derivative. The top panel shows a smooth curve over the interval from 0 to 10 with three marked points. Dashed tangent lines at those points show one positive slope, one zero slope, and one negative slope, illustrating how the sign of the derivative depends on local behavior of the function. The bottom panel is a blank graph labeled f prime of x with horizontal and vertical reference lines, intended for sketching the derivative based on the slope information from the top panel.", echo=FALSE, message=FALSE, warning=FALSE}
+
 # An interesting curve with varied behavior
 f <- function(x) {
   0.04*(x - 5)^3 - 0.9*(x - 5) + 0.8*sin(1.2*x) + 8
@@ -544,12 +554,18 @@ draw_tangent <- function(x0, y0, m, col) {
   lines(xline, yline, col = col, lwd = 2, lty = 2)
 }
 
-
+# Draw tangents and labels
+cols <- c("darkgreen", "black", "firebrick")
+for (i in 1:3) {
+  draw_tangent(pts$x[i], pts$y[i], pts$m[i], cols[i])
+  points(pts$x[i], pts$y[i], pch = 19, col = cols[i])
+  text(pts$x[i], pts$y[i], paste(" ", pts$lab[i]), pos = 4, col = cols[i])
+}
 
 # --- Bottom: Blank axis for derivative sketch ---
 plot(NA, xlim = c(0, 10), ylim = c(-5, 5),
      xlab = "x", ylab = "f'(x)", main = "Derivative Graph", yaxt = "n")
-abline(h=0, v=0, col="gray70", lty=2)  # add axes through origin
+abline(h=0, v=0, col="gray70", lty=2)
 grid()
 ```
 
@@ -776,7 +792,7 @@ What if we shrink the interval even further and make $h=0.01$
 
 <br><br><br><br><br><br>
 
->Technically what have found here is an **estimate** for the instantanous rate of change at a point
+>Technically what have found here is an **estimate** for the instantaneous rate of change at a point
 
 :::
 
@@ -795,12 +811,13 @@ Using the plot below, sketch:
 
 
 
-```{r daylight-secant-to-tangent, echo=FALSE, fig.align='center', fig.height=5, fig.width=8, out.width='90%'}
+```{r daylight-secant-to-tangent, fig.cap="Secant lines approaching a tangent line for a daylight model.", fig.alt="Graph of daylight hours over time modeled by a smooth periodic curve across two years. A point at a chosen day a is marked on the curve. Several secant lines connect this point to nearby points at increasing proximity, showing how the slope of the secant lines approaches the slope of the tangent line at that point. The figure illustrates how average rates of change approach the instantaneous rate of change as the interval shrinks.", echo=FALSE, message=FALSE, warning=FALSE, fig.align='center', fig.height=5, fig.width=8, out.width='90%'}
+
 # Daylight model for Seattle (simple sinusoid with correct phase)
 omega <- 2*pi/365
 D <- function(t) 12.25 + 3.75*cos(omega*(t - 172))
 
-# Choose the focal day 'a' (try a = 80 ~ Mar 21; change as needed)
+# Choose the focal day 'a'
 a <- 250
 h_vals <- c(30, 10, 3, 1, 0.2)  # shrinking intervals
 
@@ -815,7 +832,23 @@ grid()
 points(a, D(a), pch = 19, col = "black")
 text(a+50, D(a), labels = paste0("a = ", a), cex = 0.9, pos = 3)
 
+# Draw secant lines
+cols <- c("#999999", "#777777", "#555555", "#333333", "#000000")
 
+for (i in seq_along(h_vals)) {
+  h <- h_vals[i]
+  x0 <- a
+  x1 <- a + h
+  y0 <- D(x0)
+  y1 <- D(x1)
+  
+  slope <- (y1 - y0)/(x1 - x0)
+  
+  xline <- seq(x0 - 50, x0 + 50, length.out = 200)
+  yline <- y0 + slope*(xline - x0)
+  
+  lines(xline, yline, col = cols[i], lwd = 1.5, lty = 2)
+}
 ```
 
 ### Read What the Slope Means
@@ -891,7 +924,7 @@ The formal symbol is:
 ::: promptbox
 **Discussion Prompt:**  
 
-Sometimes \(f(a)\) is undefined (like dividing by zero). In fact - when we look at the limit defintion of a derivative, this is the problem we encounter.
+Sometimes \(f(a)\) is undefined (like dividing by zero). In fact - when we look at the limit definition of a derivative, this is the problem we encounter.
 
 $$
 f'(a) \;=\; \lim_{h \to 0} \frac{f(a+h) - f(a)}{h}
@@ -1433,7 +1466,8 @@ Explain briefly why.
 
 **Extension:** For any discontinuity you labeled **removable**, propose a value for \( f(a) \) that would make the function continuous at that point, and justify it.
 
-```{r continuity-3x3, echo=FALSE, fig.width=10, fig.height=10}
+```{r continuity-3x3, fig.cap="Examples of continuous functions and different types of discontinuities.", fig.alt="Nine-panel figure illustrating continuity and discontinuity. Panel 1 shows a smooth parabola that is continuous everywhere. Panel 2 shows an absolute value graph with a corner but no break, so it is continuous. Panel 3 shows a removable discontinuity, with an open circle at one point on the curve and a filled point at a different height for the same x-value. Panel 4 shows a jump discontinuity, where the left and right sides approach different values. Panel 5 shows an infinite discontinuity for the function one over x, with a vertical asymptote at x equals 0. Panel 6 shows oscillation near x equals 0 for sine of 1 over x, where the function keeps oscillating and does not settle to a limit. Panel 7 shows a repaired hole, where the missing point has been filled so the graph is continuous. Panel 8 shows a jump discontinuity together with a mismatched defined value at the jump point. Panel 9 shows both a removable discontinuity at one x-value and a vertical asymptote at another. The figure compares different ways a function can be continuous or fail to be continuous.", echo=FALSE, message=FALSE, warning=FALSE, fig.width=10, fig.height=10}
+
 op <- par(mfrow = c(3,3), mar = c(3.2,3.2,2.4,0.8))
 
 # 1) Continuous (polynomial)
@@ -1519,7 +1553,6 @@ points(1,0,pch=19,cex=2.8,col="firebrick")
 abline(v=2,lty=2,col="gray50")
 
 par(op)
-
 ```
 
 
@@ -1596,7 +1629,8 @@ To check whether a function is smooth at \(x = a\):
 Identify which of the following functions are smooth at \(x=0\):  
 Explain your reasoning.
 
-```{r smoothness-4panels, echo=FALSE, fig.width=10, fig.height=7}
+```{r smoothness-4panels, fig.cap="Examples showing different kinds of smoothness and non-smooth behavior.", fig.alt="Four-panel figure comparing functions with different local behaviors at x equals 0. Panel A shows the parabola x squared, which is smooth and differentiable at the origin. Panel B shows the absolute value function, which has a sharp corner at the origin and is not differentiable there. Panel C shows the cube root function, which passes through the origin with a vertical tangent and is not differentiable there. Panel D shows the function x times sine of 1 over x with f of 0 defined as 0; the graph is continuous at the origin but oscillates rapidly nearby, illustrating complicated local behavior. In each panel, the point at x equals 0 is highlighted to compare how continuity does not always imply smoothness.", echo=FALSE, message=FALSE, warning=FALSE, fig.width=10, fig.height=7}
+
 op <- par(mfrow = c(2,2), mar = c(4,4,2,1))
 
 # Helper: real cube root for negative x
@@ -1733,7 +1767,8 @@ Use the following **criteria** to test:
 | 3 | \(f(x)=x+|x|\) |  |  |  |  |
 | 4 | \(f(x)=\sin(x^2)\) |  |  |  |  |
 
-```{r differentiability-new-4panels, echo=FALSE, fig.width=10, fig.height=7}
+```{r differentiability-new-4panels, fig.cap="Examples of differentiable and non-differentiable behavior at a point.", fig.alt="Four-panel figure comparing functions at x equals 0. Panel 1 shows the function e to the negative x squared, which is smooth and differentiable at x equals 0. Panel 2 shows the function square root of the absolute value of x, which has a sharp vertical cusp at x equals 0 and is not differentiable there. Panel 3 shows the function x plus the absolute value of x, which has a corner at x equals 0 and is not differentiable there. Panel 4 shows the function sine of x squared, which is smooth and differentiable at x equals 0. In each panel, the point at x equals 0 is highlighted to compare how some continuous functions are differentiable while others are not.", echo=FALSE, message=FALSE, warning=FALSE, fig.width=10, fig.height=7}
+
 op <- par(mfrow = c(2,2), mar = c(4,4,2,1))
 
 # 1. f(x) = e^{-x^2}
@@ -1794,8 +1829,7 @@ Focus on identifying:
 
 ---
 
-
-```{r, echo=FALSE}
+```{r piecewise-linear-discontinuous, fig.cap="Piecewise linear function with discontinuities at junctions.", fig.alt="Graph of a piecewise linear function made of three line segments over the interval from negative 5 to 5. The left segment decreases and ends with a closed point at x equals negative 2. The middle segment increases gently and begins with an open circle at x equals negative 2, then ends with a closed point at x equals 1. The right segment decreases and begins with an open circle at x equals 1. The open and closed circles show jump discontinuities at the transition points.", echo=FALSE, message=FALSE, warning=FALSE}
 x1 <- seq(-5, -2, length.out = 50)
 x2 <- seq(-2, 1, length.out = 50)
 x3 <- seq(1, 5, length.out = 50)
@@ -1818,8 +1852,7 @@ points(1, 0.5*1+0.5, pch=16, col="steelblue")     # closed
 points(1, -1+2, pch=1, col="steelblue")           # open
 
 ```
-```{r, echo=FALSE}
-
+```{r wavy-function-continuous, fig.cap="Smooth continuous function with changing slope and curvature.", fig.alt="Graph of a smooth continuous function over the interval from negative 5 to 5. The curve rises and falls multiple times, showing regions of increasing and decreasing behavior and changing concavity. There are no breaks, holes, or jumps in the graph, illustrating a function that is continuous everywhere on the interval.", echo=FALSE, message=FALSE, warning=FALSE}
 x <- seq(-5,5,length.out=300)
 y <- 0.3*x^3 - x^2 + 2*sin(x)
 plot(x, y, type="l", lwd=2, col="darkorange",
@@ -1827,23 +1860,18 @@ plot(x, y, type="l", lwd=2, col="darkorange",
      xlab="x", ylab="f(x)")
 abline(h=0, v=0, col="gray80")
 
-
-
 ```
 
-
-```{r, echo=FALSE}
+```{r sine-function-basic, fig.cap="Sine function over multiple periods showing periodic behavior.", fig.alt="Graph of the sine function from x equals 0 to x equals 4 pi. The curve oscillates smoothly above and below the x-axis, forming repeating peaks and troughs. The function crosses the x-axis at regular intervals, illustrating its periodic nature.", echo=FALSE, message=FALSE, warning=FALSE}
 x <- seq(0, 4*pi, length.out=300)
 y <- sin(x)
 plot(x, y, type="l", lwd=2, col="seagreen",
      main="f(x) = sin(x)",
      xlab="x", ylab="f(x)")
 abline(h=0, v=0, col="gray80")
-
 ```
 
-```{r, echo=FALSE}
-
+```{r mixed-function-smooth-transition, fig.cap="Piecewise function showing both discontinuities and a smooth transition.", fig.alt="Graph of a piecewise function from negative 4 to 4 composed of three types of behavior. A decreasing line segment ends at x equals negative 2 with a closed point, while a horizontal segment begins there with an open circle, indicating a jump discontinuity. At x equals 0, the constant segment ends with a closed point and a quadratic curve begins with an open circle, showing another discontinuity. At x equals 2, the quadratic curve transitions smoothly into an increasing line with a shared closed point, indicating continuity and matching slope at that junction.", echo=FALSE, message=FALSE, warning=FALSE}
 # Regions
 x0 <- seq(-4, -2, length.out=100)
 x1 <- seq(-2, 0, length.out=100)
@@ -1867,23 +1895,17 @@ lines(x2, y2, lwd=2, col="purple")
 lines(x3, y3, lwd=2, col="purple")
 abline(h=0,v=0,col="gray80")
 
-# --- Junction markers (open/closed circles) ---
-
-# Between x0 (-4,-2) and x1 (-2,0)
-points(-2, 2*(-2)+6, pch=16, col="purple")   # closed (end of first segment)
-points(-2, 2, pch=1, col="purple")           # open (start of constant)
-
-# Between x1 (constant) and x2 (quadratic)
-points(0, 2, pch=16, col="purple")           # closed (end of constant)
-points(0, 0^2, pch=1, col="purple")          # open (start of quadratic)
-
-# Between x2 (quadratic) and x3 (linear)
-points(2, y2_end, pch=16, col="purple")      # closed both sides (smooth join)
+# Junction markers
+points(-2, 2*(-2)+6, pch=16, col="purple")   # closed
+points(-2, 2, pch=1, col="purple")           # open
+points(0, 2, pch=16, col="purple")           # closed
+points(0, 0^2, pch=1, col="purple")          # open
+points(2, y2_end, pch=16, col="purple")      # smooth join
 
 ```
 
 
-```{r, echo=FALSE}
+```{r complex-smooth-piecewise, fig.cap="Piecewise function combining multiple smooth curve types with discontinuities at transitions.", fig.alt="Graph of a piecewise function over the interval from negative 4 to 4 with three curved sections. The left section is a downward-opening quadratic that ends at x equals negative 1 with a closed point. The middle section is a smooth oscillating curve that begins at x equals negative 1 with an open circle and ends at x equals 1.5 with a closed point. The right section is a cubic curve that begins at x equals 1.5 with an open circle. Open and closed circles indicate jump discontinuities at the transition points.", echo=FALSE, message=FALSE, warning=FALSE}
 
 x1 <- seq(-4,-1,length.out=100)
 x2 <- seq(-1,1.5,length.out=100)
@@ -1901,10 +1923,10 @@ lines(x3,y3,lwd=2,col="darkred")
 abline(h=0,v=0,col="gray80")
 
 # Open/closed markers for transitions
-points(-1, -0.5*(-1+4)^2 + 1, pch=16, col="darkred")   # closed
-points(-1, sin(1.5*(-1)) + 0.5*(-1), pch=1, col="darkred")  # open
-points(1.5, sin(1.5*1.5) + 0.5*1.5, pch=16, col="darkred")  # closed
-points(1.5, 0.1*(1.5-1.5)^3 - 0.4*(1.5-1.5)^2 + 2, pch=1, col="darkred") # open
+points(-1, -0.5*(-1+4)^2 + 1, pch=16, col="darkred")
+points(-1, sin(1.5*(-1)) + 0.5*(-1), pch=1, col="darkred")
+points(1.5, sin(1.5*1.5) + 0.5*1.5, pch=16, col="darkred")
+points(1.5, 0.1*(1.5-1.5)^3 - 0.4*(1.5-1.5)^2 + 2, pch=1, col="darkred")
 
 ```
 

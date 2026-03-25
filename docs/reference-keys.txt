@@ -1,4 +1,4 @@
-tab:unnamed-chunk-1
+tab:unnamed-chunk-2
 fig:apply-the-function-to-compute-temperature-40
 fig:temperature-time-elevation-lines
 fig:graph-change-example
@@ -62,6 +62,19 @@ fig:blank-axes
 fig:cubic-example-plot
 fig:function-type-blank-axes-clean2
 tab:derivative-terms-table
+fig:avg-rate-quad
+fig:zoom-demo
+fig:slope-types-tangent-demo
+fig:tangent-slope-and-blank-derivative
+fig:daylight-secant-to-tangent
+fig:continuity-3x3
+fig:smoothness-4panels
+fig:differentiability-new-4panels
+fig:piecewise-linear-discontinuous
+fig:wavy-function-continuous
+fig:sine-function-basic
+fig:mixed-function-smooth-transition
+fig:complex-smooth-piecewise
 why-calculus
 why-this-book
 what-is-calculus
