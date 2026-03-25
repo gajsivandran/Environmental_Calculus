@@ -1347,10 +1347,11 @@ the <strong>minimum</strong> radiation occurs <strong>at sunrise and sunset</str
 </li>
 <li>If your hike starts and ends in a valley, those <strong>endpoints</strong> might also mark global extrema — even if no peak lies between.</li>
 </ul>
-<p><img src="bookdown-demo_files/figure-html/four-extrema-types-1.png" width="960" /></p>
-<div class="float">
-<img src="images/extrema_examples.png" fig.alt="Four-panel figure showing different behaviors of extrema. Panel A shows a cubic function with one local maximum and one local minimum marked on the curve. Panel B shows a downward-opening parabola on a finite interval, with a global maximum at the peak and endpoint minima at both ends. Panel C shows a cubic function with a flat point at x = 0 where the slope is zero but there is no maximum or minimum. Panel D shows a sine wave over one full period from 0 to 2π, with a repeating local maximum near π/2 and a local minimum near 3π/2." alt="Figure: Examples of local and global extrema across different types of functions." />
-<div class="figcaption">Figure: Examples of local and global extrema across different types of functions.</div>
+<div class="figure"><span style="display:block;" id="fig:four-extrema-types"></span>
+<img src="bookdown-demo_files/figure-html/four-extrema-types-1.png" alt="Four-panel figure showing different behaviors of extrema and critical points. Panel A shows a cubic function with one local maximum and one local minimum marked on the curve. Panel B shows a downward-opening parabola on the finite interval from 0 to 6, with a global maximum at the vertex and endpoint minima at both ends of the interval. Panel C shows the function x cubed with a flat point at x equals 0 where the derivative is zero but there is no maximum or minimum. Panel D shows a sine curve over one full cycle from 0 to 2 pi, with a local maximum at pi over 2 and a local minimum at 3 pi over 2. The figure illustrates that derivative zero can indicate different behaviors depending on the shape of the function and the domain." width="960" />
+<p class="caption">
+Figure 5.1: Examples of different types of extrema and critical points.
+</p>
 </div>
 </div>
 <div id="what-each-panel-illustrates" class="section level3 hasAnchor" number="5.2.5">
@@ -1476,10 +1477,11 @@ f&#39;(x) = 3x^2
 <p>Here, <span class="math inline">\(f&#39;(0) = 0\)</span>, so <span class="math inline">\(x = 0\)</span> is a <strong>critical point</strong>.<br />
 But if you graph <span class="math inline">\(f(x) = x^3\)</span>, you’ll see that the curve flattens briefly at the origin, then continues increasing.<br />
 There’s <strong>no maximum or minimum</strong> — the function simply changes <strong>concavity</strong> (the direction it bends).</p>
-<p><img src="bookdown-demo_files/figure-html/x3-derivative-side-by-side-1.png" width="768" /></p>
-<div class="float">
-<img src="images/cubic_derivative_relationship.png" fig.alt="Two side-by-side graphs comparing a function and its derivative. The left graph shows f(x) = x cubed, an S-shaped curve that flattens near x = 0 and increases for all x. The right graph shows its derivative f prime of x equals 3x squared, a parabola opening upward with its minimum at x = 0. The derivative is zero at x = 0, corresponding to the flat point on the original function where the slope is zero but there is no maximum or minimum." alt="Figure: Relationship between a function and its derivative for a cubic function." />
-<div class="figcaption">Figure: Relationship between a function and its derivative for a cubic function.</div>
+<div class="figure"><span style="display:block;" id="fig:x3-derivative-side-by-side"></span>
+<img src="bookdown-demo_files/figure-html/x3-derivative-side-by-side-1.png" alt="Two side-by-side graphs comparing a function and its derivative. The left panel shows f(x) equals x cubed, an S-shaped curve that decreases for negative x, increases for positive x, and has a flat point at x equals 0. The right panel shows its derivative f prime of x equals 3x squared, a U-shaped parabola that is always nonnegative and touches zero only at x equals 0. The figure illustrates that the derivative is zero where the original function has a horizontal tangent and that the function is increasing everywhere except at that flat point." width="768" />
+<p class="caption">
+Figure 5.2: A function and its derivative shown side by side.
+</p>
 </div>
 <hr />
 </div>
@@ -1861,10 +1863,11 @@ P(t) = -t^3 + 6t^2 - 9t + 20
 <li>The negative cubic term (<span class="math inline">\(-t^3\)</span>) eventually causes decline — simulating limits like <strong>competition, disease, or limited resources</strong></li>
 <li>The middle terms model an initial <strong>growth phase</strong> before the downturn</li>
 </ul>
-<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
-<div class="float">
-<img src="images/population_cubic.png" fig.alt="Graph of population P(t) equals negative t cubed plus 6t squared minus 9t plus 20 plotted over time from t equals 0 to 5. The curve starts near 20 at t equals 0, decreases to a local minimum around t equals 1, then increases to a local maximum near t equals 3 close to 20, and finally declines steeply toward zero by t equals 5. The horizontal axis represents time and the vertical axis represents population." alt="Figure: Population modeled by a cubic function over time." />
-<div class="figcaption">Figure: Population modeled by a cubic function over time.</div>
+<div class="figure"><span style="display:block;" id="fig:population-cubic-plot"></span>
+<img src="bookdown-demo_files/figure-html/population-cubic-plot-1.png" alt="Graph of a cubic population function P(t) equals negative t cubed plus 6t squared minus 9t plus 20 over the interval from 0 to 5. The curve starts at a higher value, initially increases slightly, then decreases, showing a turning point where the population reaches a maximum and later declines. The shape illustrates how population can grow and then decrease over time due to changing conditions." width="672" />
+<p class="caption">
+Figure 5.3: Population modeled as a function of time.
+</p>
 </div>
 <hr />
 </div>
@@ -2030,10 +2033,11 @@ P&#39;(t) = -3(t - 1)(t - 3)
 </li>
 <li>Interval C: <span class="math inline">\((3, \infty)\)</span></li>
 </ul>
-<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
-<div class="float">
-<img src="images/critical_points_numberline.png" fig.alt="A horizontal number line with arrows at both ends indicating it continues indefinitely. Two marked points at x equals 1 and x equals 3 are labeled as critical points. The intervals between and around these points are labeled A to the left of 1, B between 1 and 3, and C to the right of 3, indicating three regions for analysis around the critical points." alt="Figure: Number line showing critical points and intervals." />
-<div class="figcaption">Figure: Number line showing critical points and intervals.</div>
+<div class="figure"><span style="display:block;" id="fig:critical-points-number-line"></span>
+<img src="bookdown-demo_files/figure-html/critical-points-number-line-1.png" alt="A horizontal number line from 0 to 5 with arrowheads on both ends. Two critical points are marked at x equals 1 and x equals 3 with labeled points above the line. The line is divided into three intervals labeled A, B, and C below the line. Interval A covers values less than 1, interval B covers values between 1 and 3, and interval C covers values greater than 3. The diagram is used to organize analysis of a function across intervals separated by critical points." width="672" />
+<p class="caption">
+Figure 5.4: Number line showing critical points and intervals.
+</p>
 </div>
 <hr />
 </div>
@@ -2234,10 +2238,11 @@ P(3) = -27 + 54 - 27 + 20 = 20
 <li><strong>At <span class="math inline">\(t = 3\)</span>:</strong> Population = 20 → local <strong>maximum</strong></li>
 </ul>
 <p>Between these points, the population decreases, then grows to a peak, and finally begins to decline — a pattern that mirrors how populations often respond to shifting environmental conditions.</p>
-<p><img src="bookdown-demo_files/figure-html/cubic-extrema-plot-1.png" width="672" /></p>
-<div class="float">
-<img src="images/cubic_extrema_labeled.png" fig.alt="Graph of a cubic population model over time from 0 to 5. The curve starts near 20, decreases to a labeled local minimum at time t equals 1 with population 16, then rises to a labeled local maximum at time t equals 3 with population 20, and finally decreases steeply toward zero by time t equals 5. Dashed lines mark the x and y coordinates of the extrema. The horizontal axis represents time and the vertical axis represents population." alt="Figure: Cubic model showing local minimum and maximum." />
-<div class="figcaption">Figure: Cubic model showing local minimum and maximum.</div>
+<div class="figure"><span style="display:block;" id="fig:cubic-extrema-plot"></span>
+<img src="bookdown-demo_files/figure-html/cubic-extrema-plot-1.png" alt="Graph of a cubic population function over time from 0 to 5. The curve shows a decrease to a local minimum at time t equals 1 with population 16, followed by an increase to a local maximum at time t equals 3 with population 20, and then a decrease afterward. The minimum point is marked in blue and the maximum point is marked in red. Dashed vertical and horizontal lines indicate the coordinates of these critical points. The figure illustrates how local minima and maxima represent changes in the direction of the population over time." width="672" />
+<p class="caption">
+Figure 5.5: Cubic population model with local extrema highlighted.
+</p>
 </div>
 </div>
 <div id="final-takeaways" class="section level3 hasAnchor" number="5.9.17">
@@ -2260,10 +2265,11 @@ P(3) = -27 + 54 - 27 + 20 = 20
 <p>The <strong>first derivative</strong> tells us whether a function is increasing or decreasing.<br />
 The <strong>second derivative</strong> goes one level deeper — it tells us how that rate of change itself is changing.<br />
 In other words, it describes the <strong>curvature</strong> or <strong>shape</strong> of the function’s graph, also known as <strong>concavity</strong>.</p>
-<p><img src="bookdown-demo_files/figure-html/concavity-visualization-smooth-2x2-1.png" width="864" /></p>
-<div class="float">
-<img src="images/concavity_examples.png" fig.alt="Four-panel figure illustrating concavity. Panel A shows f(x) equals x cubed with a change in concavity at x equals 0 marked as an inflection point, with the graph concave down for negative x and concave up for positive x. Panel B shows f(x) equals x squared, which is concave up for all x. Panel C shows f(x) equals negative x squared, which is concave down for all x. Panel D shows a higher-degree polynomial with multiple inflection points where the graph alternates between concave up and concave down across several intervals." alt="Figure: Examples of concavity and inflection behavior for different functions." />
-<div class="figcaption">Figure: Examples of concavity and inflection behavior for different functions.</div>
+<div class="figure"><span style="display:block;" id="fig:concavity-visualization-smooth-2x2"></span>
+<img src="bookdown-demo_files/figure-html/concavity-visualization-smooth-2x2-1.png" alt="Four-panel figure illustrating different types of concavity. Panel A shows the function x cubed, which changes concavity at x equals 0, marked as an inflection point where the curve switches from concave down to concave up. Panel B shows x squared, which is concave up everywhere with no inflection point. Panel C shows negative x squared, which is concave down everywhere with no inflection point. Panel D shows a higher-degree polynomial with multiple inflection points, where the curve alternates between concave up and concave down regions. Background shading highlights concavity, with one color indicating concave up and another indicating concave down. The figure demonstrates that concavity depends on the sign of the second derivative and that inflection points occur where concavity changes." width="864" />
+<p class="caption">
+Figure 5.6: Examples of concavity and inflection behavior across different functions.
+</p>
 </div>
 <div id="understanding-concavity-through-visual-examples" class="section level3 hasAnchor" number="5.10.1">
 <h3><span class="header-section-number">5.10.1</span> Understanding Concavity Through Visual Examples<a href="applications-of-derivatives-understanding-change-and-extremes-in-environmental-systems.html#understanding-concavity-through-visual-examples" class="anchor-section" aria-label="Anchor link to header"></a></h3>
@@ -2371,10 +2377,11 @@ while the second derivative shows how the <em>slope itself</em> is bending.</p>
 <p>An <strong>inflection point</strong> is where the graph changes concavity — from <strong>concave up</strong> to <strong>concave down</strong>, or vice versa.<br />
 It’s a “bend change” in the curve.</p>
 <p>These occur where the <strong>second derivative changes sign</strong>.</p>
-<p><img src="bookdown-demo_files/figure-html/inflection-types-panel-updated-1.png" width="864" /></p>
-<div class="float">
-<img src="images/inflection_types.png" fig.alt="Four-panel figure showing different types of inflection points. Panel A shows f(x) equals x cubed with a standard inflection at x equals 0 where concavity changes and the slope is nonzero. Panel B shows f(x) equals x to the fifth with a flat inflection at x equals 0 where the slope is zero and the graph flattens before changing concavity. Panel C shows a shifted cubic with an inflection point near x equals 2 where the slope is nonzero. Panel D shows f(x) equals hyperbolic tangent of x with a steep inflection at x equals 0 where concavity changes rapidly. In each panel, the inflection point is marked and the graph changes color to indicate concavity on either side." alt="Figure: Different types of inflection points and concavity changes." />
-<div class="figcaption">Figure: Different types of inflection points and concavity changes.</div>
+<div class="figure"><span style="display:block;" id="fig:inflection-types-panel-updated"></span>
+<img src="bookdown-demo_files/figure-html/inflection-types-panel-updated-1.png" alt="Four-panel figure showing different types of inflection behavior. Panel A shows the function x cubed with a smooth S-shaped curve and an inflection point at x equals 0 where concavity changes. Panel B shows x to the fifth power with a flat inflection point at x equals 0 where the slope is zero but concavity still changes. Panel C shows a shifted cubic function with an inflection point at x equals 2 where the curve passes through with a nonzero slope. Panel D shows the hyperbolic tangent function with a steep inflection point at x equals 0 where concavity changes rapidly. In each panel, the curve is colored to indicate concave up and concave down regions, and inflection points are marked with vertical dashed lines and labeled points. The figure illustrates that inflection points occur where concavity changes, regardless of whether the slope is zero or nonzero." width="864" />
+<p class="caption">
+Figure 5.7: Different types of inflection points and how concavity changes.
+</p>
 </div>
 <hr />
 <div id="summary-understanding-different-types-of-inflection-points" class="section level4 hasAnchor" number="5.10.4.1">
@@ -2948,10 +2955,11 @@ You don’t need perfect scaling — focus on capturing shape and turning points
 <div id="visual-interpretation-reading-extrema-from-a-graph" class="section level4 unnumbered hasAnchor">
 <h4>4. Visual Interpretation: Reading Extrema from a Graph<a href="applications-of-derivatives-understanding-change-and-extremes-in-environmental-systems.html#visual-interpretation-reading-extrema-from-a-graph" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>Look at the following function graphs (a smooth curve representing <span class="math inline">\(f(x)\)</span>):</p>
-<p><img src="bookdown-demo_files/figure-html/extrema-2x2-panel-1.png" width="864" /></p>
-<div class="float">
-<img src="images/extrema_variety.png" fig.alt="Four-panel figure showing different functions and their extrema. Top left shows a cubic function f(x) equals x cubed minus 3x squared plus 2 with one local maximum near x equals 0 and one local minimum near x equals 2. Top right shows a downward-opening parabola f(x) equals negative x squared plus 4x on the interval from 0 to 5, with a maximum near x equals 2 and endpoints at x equals 0 and x equals 5. Bottom left shows f(x) equals sine of x over one full period from 0 to 2π with a maximum near π over 2 and a minimum near 3π over 2. Bottom right shows a quartic function f(x) equals x to the fourth minus 4x squared plus 2 with two local minima on either side of the origin and a local maximum at x equals 0." alt="Figure: Examples of functions with different types of extrema and domains." />
-<div class="figcaption">Figure: Examples of functions with different types of extrema and domains.</div>
+<div class="figure"><span style="display:block;" id="fig:extrema-2x2-panel"></span>
+<img src="bookdown-demo_files/figure-html/extrema-2x2-panel-1.png" alt="Four-panel figure showing different behaviors of extrema across functions. Panel one shows a cubic function with one local maximum and one local minimum but no global extrema. Panel two shows a downward-opening parabola restricted to the interval from 0 to 5, where the endpoints are highlighted as important for determining global extrema. Panel three shows a sine function over one full cycle from 0 to 2 pi, with repeating local maxima and minima. Panel four shows a quartic function with both local extrema and a global minimum. The figure highlights how extrema depend on both the shape of the function and the domain over which it is considered." width="864" />
+<p class="caption">
+Figure 5.8: Examples of functions illustrating different types of extrema.
+</p>
 </div>
 <p>Use the graphs to answer the questions below.<br />
 No calculations — just interpret visually.</p>

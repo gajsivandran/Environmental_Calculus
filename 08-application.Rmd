@@ -143,7 +143,8 @@ Imagine hiking through a mountain range:
 - The **deepest valley** overall is the **global minimum**.  
 - If your hike starts and ends in a valley, those **endpoints** might also mark global extrema — even if no peak lies between.
 
-```{r four-extrema-types, echo=FALSE, fig.width=10, fig.height=8}
+```{r four-extrema-types, fig.cap="Examples of different types of extrema and critical points.", fig.alt="Four-panel figure showing different behaviors of extrema and critical points. Panel A shows a cubic function with one local maximum and one local minimum marked on the curve. Panel B shows a downward-opening parabola on the finite interval from 0 to 6, with a global maximum at the vertex and endpoint minima at both ends of the interval. Panel C shows the function x cubed with a flat point at x equals 0 where the derivative is zero but there is no maximum or minimum. Panel D shows a sine curve over one full cycle from 0 to 2 pi, with a local maximum at pi over 2 and a local minimum at 3 pi over 2. The figure illustrates that derivative zero can indicate different behaviors depending on the shape of the function and the domain.", echo=FALSE, fig.width=10, fig.height=8}
+
 library(ggplot2)
 library(patchwork)
 
@@ -233,10 +234,7 @@ p4 <- ggplot(df4, aes(x, y)) +
 # Combine all four panels into a 2x2 grid
 # ==========================================================
 (p1 | p2) / (p3 | p4)
-
 ```
-
-![Figure: Examples of local and global extrema across different types of functions.](images/extrema_examples.png){fig.alt="Four-panel figure showing different behaviors of extrema. Panel A shows a cubic function with one local maximum and one local minimum marked on the curve. Panel B shows a downward-opening parabola on a finite interval, with a global maximum at the peak and endpoint minima at both ends. Panel C shows a cubic function with a flat point at x = 0 where the slope is zero but there is no maximum or minimum. Panel D shows a sine wave over one full period from 0 to 2π, with a repeating local maximum near π/2 and a local minimum near 3π/2."}
 
 ### What each panel illustrates:
 
@@ -340,9 +338,10 @@ But if you graph \( f(x) = x^3 \), you’ll see that the curve flattens briefly 
 There’s **no maximum or minimum** — the function simply changes **concavity** (the direction it bends).
 
 
-```{r x3-derivative-side-by-side, echo=FALSE, fig.width=8, fig.height=4}
+```{r x3-derivative-side-by-side, fig.cap="A function and its derivative shown side by side.", fig.alt="Two side-by-side graphs comparing a function and its derivative. The left panel shows f(x) equals x cubed, an S-shaped curve that decreases for negative x, increases for positive x, and has a flat point at x equals 0. The right panel shows its derivative f prime of x equals 3x squared, a U-shaped parabola that is always nonnegative and touches zero only at x equals 0. The figure illustrates that the derivative is zero where the original function has a horizontal tangent and that the function is increasing everywhere except at that flat point.", echo=FALSE, fig.width=8, fig.height=4}
+
 library(ggplot2)
-library(patchwork)  # for side-by-side plots
+library(patchwork)
 
 # Define the function and its derivative
 f <- function(x) x^3
@@ -379,8 +378,6 @@ p2 <- ggplot(data, aes(x, fpx)) +
 # Combine the two plots side by side
 p1 + p2
 ```
-
-![Figure: Relationship between a function and its derivative for a cubic function.](images/cubic_derivative_relationship.png){fig.alt="Two side-by-side graphs comparing a function and its derivative. The left graph shows f(x) = x cubed, an S-shaped curve that flattens near x = 0 and increases for all x. The right graph shows its derivative f prime of x equals 3x squared, a parabola opening upward with its minimum at x = 0. The derivative is zero at x = 0, corresponding to the flat point on the original function where the slope is zero but there is no maximum or minimum."}
 
 ---
 
@@ -657,17 +654,18 @@ Here:
 - The negative cubic term (\(-t^3\)) eventually causes decline — simulating limits like **competition, disease, or limited resources**
 - The middle terms model an initial **growth phase** before the downturn
 
-```{r, echo=FALSE}
+```{r population-cubic-plot, fig.cap="Population modeled as a function of time.", fig.alt="Graph of a cubic population function P(t) equals negative t cubed plus 6t squared minus 9t plus 20 over the interval from 0 to 5. The curve starts at a higher value, initially increases slightly, then decreases, showing a turning point where the population reaches a maximum and later declines. The shape illustrates how population can grow and then decrease over time due to changing conditions.", echo=FALSE}
+
 P <- function(t) -t^3 + 6*t^2 - 9*t + 20
+
 curve(P(x), from = 0, to = 5, 
       xlab = "Time (t)", 
       ylab = "Population P(t)", 
       main = expression(P(t) == -t^3 + 6*t^2 - 9*t + 20),
       col = "forestgreen", lwd = 2)
+
 grid()
 ```
-
-![Figure: Population modeled by a cubic function over time.](images/population_cubic.png){fig.alt="Graph of population P(t) equals negative t cubed plus 6t squared minus 9t plus 20 plotted over time from t equals 0 to 5. The curve starts near 20 at t equals 0, decreases to a local minimum around t equals 1, then increases to a local maximum near t equals 3 close to 20, and finally declines steeply toward zero by t equals 5. The horizontal axis represents time and the vertical axis represents population."}
 
 ---
 
@@ -842,12 +840,13 @@ Mark the **critical points** on a number line. These divide the domain into thre
 - Interval C: \( (3, \infty) \)
 
 
-```{r, echo=FALSE}
+```{r critical-points-number-line, fig.cap="Number line showing critical points and intervals.", fig.alt="A horizontal number line from 0 to 5 with arrowheads on both ends. Two critical points are marked at x equals 1 and x equals 3 with labeled points above the line. The line is divided into three intervals labeled A, B, and C below the line. Interval A covers values less than 1, interval B covers values between 1 and 3, and interval C covers values greater than 3. The diagram is used to organize analysis of a function across intervals separated by critical points.", echo=FALSE}
+
 library(ggplot2)
 
 ggplot() +
   # Number line with arrowheads
-  geom_segment(aes(x = 0, xend = 5, y = -0, yend = 0),
+  geom_segment(aes(x = 0, xend = 5, y = 0, yend = 0),
                arrow = arrow(type = "closed", ends = "both", length = unit(0.15, "inches")),
                linewidth = 1.2) +
   
@@ -855,20 +854,18 @@ ggplot() +
   geom_point(aes(x = 1, y = 0), size = 3) +
   geom_point(aes(x = 3, y = 0), size = 3) +
   
-  # Labels just above the line
+  # Labels above the line
   annotate("text", x = 1, y = 0.07, label = "1 (critical point)", hjust = 0.5) +
   annotate("text", x = 3, y = 0.07, label = "3 (critical point)", hjust = 0.5) +
   
-  # Interval labels just below the line
+  # Interval labels below the line
   annotate("text", x = 0.5, y = -0.07, label = "A", color = "blue") +
   annotate("text", x = 2, y = -0.07, label = "B", color = "forestgreen") +
   annotate("text", x = 4, y = -0.07, label = "C", color = "red") +
-   coord_cartesian(ylim = c(-1, 1))+
-  theme_void()+ ylim(-0.3,0.3)
-
+  
+  coord_cartesian(ylim = c(-0.3, 0.3)) +
+  theme_void()
 ```
-
-![Figure: Number line showing critical points and intervals.](images/critical_points_numberline.png){fig.alt="A horizontal number line with arrows at both ends indicating it continues indefinitely. Two marked points at x equals 1 and x equals 3 are labeled as critical points. The intervals between and around these points are labeled A to the left of 1, B between 1 and 3, and C to the right of 3, indicating three regions for analysis around the critical points."}
 
 
                  
@@ -978,9 +975,8 @@ So we can write our extrema as:
 
 Between these points, the population decreases, then grows to a peak, and finally begins to decline — a pattern that mirrors how populations often respond to shifting environmental conditions.
 
+```{r cubic-extrema-plot, fig.cap="Cubic population model with local extrema highlighted.", fig.alt="Graph of a cubic population function over time from 0 to 5. The curve shows a decrease to a local minimum at time t equals 1 with population 16, followed by an increase to a local maximum at time t equals 3 with population 20, and then a decrease afterward. The minimum point is marked in blue and the maximum point is marked in red. Dashed vertical and horizontal lines indicate the coordinates of these critical points. The figure illustrates how local minima and maxima represent changes in the direction of the population over time.", echo=FALSE, fig.height=4}
 
-
-```{r cubic-extrema-plot, echo=FALSE, fig.height=4}
 P <- function(t) -t^3 + 6*t^2 - 9*t + 20
 
 curve(P(x), from = 0, to = 5, ylim = c(0, 25), col = "forestgreen", lwd = 2,
@@ -1006,10 +1002,8 @@ abline(v = c(t1, t2), lty = 2, col = "gray70")
 # Labels
 text(t1, P1 + 1.5, labels = "Local Min\n(1, 16)", col = "blue", pos = 3)
 text(t2, P2 , labels = "Local Max\n(3, 20)", col = "red", pos = 3)
-
 ```
 
-![Figure: Cubic model showing local minimum and maximum.](images/cubic_extrema_labeled.png){fig.alt="Graph of a cubic population model over time from 0 to 5. The curve starts near 20, decreases to a labeled local minimum at time t equals 1 with population 16, then rises to a labeled local maximum at time t equals 3 with population 20, and finally decreases steeply toward zero by time t equals 5. Dashed lines mark the x and y coordinates of the extrema. The horizontal axis represents time and the vertical axis represents population."}
 
 ### Final Takeaways
 
@@ -1029,7 +1023,8 @@ The **first derivative** tells us whether a function is increasing or decreasing
 The **second derivative** goes one level deeper — it tells us how that rate of change itself is changing.  
 In other words, it describes the **curvature** or **shape** of the function’s graph, also known as **concavity**.
 
-```{r concavity-visualization-smooth-2x2, message=FALSE, echo=FALSE, warning=FALSE, fig.width=9, fig.height=8}
+```{r concavity-visualization-smooth-2x2, fig.cap="Examples of concavity and inflection behavior across different functions.", fig.alt="Four-panel figure illustrating different types of concavity. Panel A shows the function x cubed, which changes concavity at x equals 0, marked as an inflection point where the curve switches from concave down to concave up. Panel B shows x squared, which is concave up everywhere with no inflection point. Panel C shows negative x squared, which is concave down everywhere with no inflection point. Panel D shows a higher-degree polynomial with multiple inflection points, where the curve alternates between concave up and concave down regions. Background shading highlights concavity, with one color indicating concave up and another indicating concave down. The figure demonstrates that concavity depends on the sign of the second derivative and that inflection points occur where concavity changes.", message=FALSE, echo=FALSE, warning=FALSE, fig.width=9, fig.height=8}
+
 library(ggplot2)
 library(patchwork)
 library(dplyr)
@@ -1048,7 +1043,6 @@ plot_concavity <- function(f, f2, range = c(-2, 2), inf_pts = NULL, title, subti
   
   # Add background shading for concavity regions
   if (!is.null(inf_pts)) {
-    # Determine region bounds for shading
     region_bounds <- c(range[1], inf_pts, range[2])
     for (i in seq_along(region_bounds[-1])) {
       region_fill <- if (mean(df$f2[df$x >= region_bounds[i] & df$x <= region_bounds[i + 1]]) > 0) "blue" else "red"
@@ -1059,14 +1053,12 @@ plot_concavity <- function(f, f2, range = c(-2, 2), inf_pts = NULL, title, subti
                  alpha = 0.08,
                  fill = region_fill)
     }
-    # Add inflection points
     p <- p +
       geom_vline(xintercept = inf_pts, linetype = "dashed", color = "gray50") +
       geom_point(data = inf_df, aes(x, y), color = "purple", size = 3) +
       geom_text(data = inf_df, aes(x, y + 0.4, label = "Inflection"),
                 color = "purple", vjust = -0.3, size = 3.5)
   } else {
-    # For always up/down curves, just shade entire background
     fill_color <- if (mean(df$f2) > 0) "blue" else "red"
     p <- p +
       annotate("rect", xmin = range[1], xmax = range[2],
@@ -1076,7 +1068,6 @@ plot_concavity <- function(f, f2, range = c(-2, 2), inf_pts = NULL, title, subti
   return(p)
 }
 
-# ----------------------------------------------------------
 # A. Standard concavity change (x³)
 f1  <- function(x) x^3
 f2_1 <- function(x) 6*x
@@ -1084,7 +1075,6 @@ p1 <- plot_concavity(f1, f2_1, c(-2, 2), 0,
                      "A. Standard Concavity Change",
                      expression(f(x) == x^3))
 
-# ----------------------------------------------------------
 # B. Always concave up (x²)
 f2  <- function(x) x^2
 f2_2 <- function(x) 2
@@ -1092,7 +1082,6 @@ p2 <- plot_concavity(f2, f2_2, c(-2, 2), NULL,
                      "B. Always Concave Up",
                      expression(f(x) == x^2))
 
-# ----------------------------------------------------------
 # C. Always concave down (−x²)
 f3  <- function(x) -x^2
 f2_3 <- function(x) -2
@@ -1100,8 +1089,7 @@ p3 <- plot_concavity(f3, f2_3, c(-2, 2), NULL,
                      "C. Always Concave Down",
                      expression(f(x) == -x^2))
 
-# ----------------------------------------------------------
-# D. Multiple inflection points (0.2x⁵ − x³)
+# D. Multiple inflection points
 f4  <- function(x) 0.2*x^5 - x^3
 f2_4 <- function(x) 4*x^3 - 6*x
 inf_pts <- c(-sqrt(1.5), 0, sqrt(1.5))
@@ -1111,12 +1099,9 @@ p4 <- plot_concavity(f4, f2_4, c(-2, 2), inf_pts,
 
 # Combine into 2×2 panel
 (p1 | p2) / (p3 | p4)
-
-
-
 ```
 
-![Figure: Examples of concavity and inflection behavior for different functions.](images/concavity_examples.png){fig.alt="Four-panel figure illustrating concavity. Panel A shows f(x) equals x cubed with a change in concavity at x equals 0 marked as an inflection point, with the graph concave down for negative x and concave up for positive x. Panel B shows f(x) equals x squared, which is concave up for all x. Panel C shows f(x) equals negative x squared, which is concave down for all x. Panel D shows a higher-degree polynomial with multiple inflection points where the graph alternates between concave up and concave down across several intervals."}
+
 
 ### Understanding Concavity Through Visual Examples
 
@@ -1214,7 +1199,8 @@ It’s a “bend change” in the curve.
 
 These occur where the **second derivative changes sign**.  
 
-```{r inflection-types-panel-updated, echo=FALSE, warning=FALSE, fig.width=9, fig.height=8}
+```{r inflection-types-panel-updated, fig.cap="Different types of inflection points and how concavity changes.", fig.alt="Four-panel figure showing different types of inflection behavior. Panel A shows the function x cubed with a smooth S-shaped curve and an inflection point at x equals 0 where concavity changes. Panel B shows x to the fifth power with a flat inflection point at x equals 0 where the slope is zero but concavity still changes. Panel C shows a shifted cubic function with an inflection point at x equals 2 where the curve passes through with a nonzero slope. Panel D shows the hyperbolic tangent function with a steep inflection point at x equals 0 where concavity changes rapidly. In each panel, the curve is colored to indicate concave up and concave down regions, and inflection points are marked with vertical dashed lines and labeled points. The figure illustrates that inflection points occur where concavity changes, regardless of whether the slope is zero or nonzero.", echo=FALSE, warning=FALSE, fig.width=9, fig.height=8}
+
 library(ggplot2)
 library(patchwork)
 library(dplyr)
@@ -1239,32 +1225,28 @@ plot_inflection <- function(f, f2, range, inf_pts, title, subtitle) {
     theme(legend.position = "none")
 }
 
-# ----------------------------------------------------------
-# A. Standard smooth S-shape  f(x) = x^3
+# A. Standard smooth S-shape
 f1  <- function(x) x^3
 f2_1 <- function(x) 6*x
 p1 <- plot_inflection(f1, f2_1, c(-3,3), 0,
                       "A. Standard Inflection",
                       expression(f(x) == x^3))
 
-# ----------------------------------------------------------
-# B. Flat inflection  f(x) = x^5
+# B. Flat inflection
 f2  <- function(x) x^5
 f2_2 <- function(x) 20*x^3
 p2 <- plot_inflection(f2, f2_2, c(-2,2), 0,
                       "B. Flat Inflection (Slope = 0 at Inflection)",
                       expression(f(x) == x^5))
 
-# ----------------------------------------------------------
-# C. Steep / nonzero-slope inflection  f(x) = (x-2)^3 + (x-2)
+# C. Inflection with nonzero slope
 f3  <- function(x) (x-2)^3 + (x-2)
 f2_3 <- function(x) 6*(x-2)
 p3 <- plot_inflection(f3, f2_3, c(0,4), 2,
                       "C. Inflection with Nonzero Slope",
                       expression(f(x) == (x-2)^3 + (x-2)))
 
-# ----------------------------------------------------------
-# E. Steep inflection (tanh)
+# D. Steep inflection
 f5  <- function(x) tanh(x)
 f2_5 <- function(x) -2 * tanh(x) / (cosh(x)^2)
 p4 <- plot_inflection(f5, f2_5, c(-4,4), 0,
@@ -1274,8 +1256,6 @@ p4 <- plot_inflection(f5, f2_5, c(-4,4), 0,
 # Combine into 2×2 grid
 (p1 | p2) / (p3 | p4)
 ```
-
-![Figure: Different types of inflection points and concavity changes.](images/inflection_types.png){fig.alt="Four-panel figure showing different types of inflection points. Panel A shows f(x) equals x cubed with a standard inflection at x equals 0 where concavity changes and the slope is nonzero. Panel B shows f(x) equals x to the fifth with a flat inflection at x equals 0 where the slope is zero and the graph flattens before changing concavity. Panel C shows a shifted cubic with an inflection point near x equals 2 where the slope is nonzero. Panel D shows f(x) equals hyperbolic tangent of x with a steep inflection at x equals 0 where concavity changes rapidly. In each panel, the inflection point is marked and the graph changes color to indicate concavity on either side."}
 
 ---
 
@@ -1706,7 +1686,8 @@ You don’t need perfect scaling — focus on capturing shape and turning points
 
 Look at the following function graphs (a smooth curve representing \( f(x) \)):  
 
-```{r extrema-2x2-panel, echo=FALSE, message=FALSE, warning=FALSE, fig.width=9, fig.height=8}
+```{r extrema-2x2-panel, fig.cap="Examples of functions illustrating different types of extrema.", fig.alt="Four-panel figure showing different behaviors of extrema across functions. Panel one shows a cubic function with one local maximum and one local minimum but no global extrema. Panel two shows a downward-opening parabola restricted to the interval from 0 to 5, where the endpoints are highlighted as important for determining global extrema. Panel three shows a sine function over one full cycle from 0 to 2 pi, with repeating local maxima and minima. Panel four shows a quartic function with both local extrema and a global minimum. The figure highlights how extrema depend on both the shape of the function and the domain over which it is considered.", echo=FALSE, message=FALSE, warning=FALSE, fig.width=9, fig.height=8}
+
 library(ggplot2)
 library(patchwork)
 
@@ -1749,11 +1730,7 @@ p4 <- ggplot(df4, aes(x, y)) +
 
 # Combine into 2x2 panel
 (p1 + p2) / (p3 + p4)
-
-
 ```
-
-![Figure: Examples of functions with different types of extrema and domains.](images/extrema_variety.png){fig.alt="Four-panel figure showing different functions and their extrema. Top left shows a cubic function f(x) equals x cubed minus 3x squared plus 2 with one local maximum near x equals 0 and one local minimum near x equals 2. Top right shows a downward-opening parabola f(x) equals negative x squared plus 4x on the interval from 0 to 5, with a maximum near x equals 2 and endpoints at x equals 0 and x equals 5. Bottom left shows f(x) equals sine of x over one full period from 0 to 2π with a maximum near π over 2 and a minimum near 3π over 2. Bottom right shows a quartic function f(x) equals x to the fourth minus 4x squared plus 2 with two local minima on either side of the origin and a local maximum at x equals 0."}
 
 Use the graphs to answer the questions below.  
 No calculations — just interpret visually.

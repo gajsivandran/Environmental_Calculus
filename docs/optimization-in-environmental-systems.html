@@ -1475,7 +1475,7 @@ Example: flow release might be capped by infrastructure; planting density cannot
 <li><strong>endpoints</strong>, representing physical or ecological limits.</li>
 </ul>
 <hr />
-<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
 <div class="float">
 <img src="images/classifying_optima.png" fig.alt="Graph of a smooth function over a finite interval showing how to classify extrema. The curve starts at a left endpoint that is labeled as a global minimum, rises to a local maximum where the graph is concave down, then decreases to a local minimum where the graph is concave up, and finally increases to a right endpoint labeled as a global maximum. The figure highlights that local extrema occur at critical points and are classified using concavity, while global extrema can also occur at endpoints." alt="Figure: Classifying extrema using critical points, concavity, and endpoints." />
 <div class="figcaption">Figure: Classifying extrema using critical points, concavity, and endpoints.</div>
@@ -1498,7 +1498,7 @@ Example: a model predicts an optimal harvest at a negative population — imposs
 </ul>
 <p>These cases reinforce that optimization is always a combination of <strong>calculus</strong> and <strong>context</strong>.</p>
 <hr />
-<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-5-1.png" width="672" /></p>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
 <div class="float">
 <img src="images/feasible_domain_optima.png" fig.alt="Graph illustrating optimization with a restricted domain. The left side of the graph, where x is negative, is shaded and labeled as an infeasible region. A critical point in this region is marked but labeled as not feasible. The feasible region begins at x equals 0 and is shaded differently. Within the feasible region, there is a flat inflection point near x equals 2 where the slope is zero but there is no maximum or minimum. The graph continues upward to a right endpoint that is labeled as the global maximum. The figure emphasizes that only points within the feasible domain and endpoints should be considered when identifying optimal solutions." alt="Figure: Why critical points alone may not determine optimal solutions." />
 <div class="figcaption">Figure: Why critical points alone may not determine optimal solutions.</div>
@@ -1658,7 +1658,7 @@ C&#39;&#39;(50)
 <p><strong>Conclusion:</strong><br />
 The model predicts <strong>maximum carbon uptake at approximately 50 trees per hectare</strong>, giving land managers a data-informed restoration target.</p>
 <hr />
-<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-6-1.png" width="672" /></p>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
 <div class="float">
 <img src="images/planting_density_optimization.png" fig.alt="Two stacked graphs showing carbon uptake as a function of planting density and its derivative. The top graph shows total carbon uptake increasing with planting density, reaching a maximum at 50 trees per hectare, and then gradually decreasing. A point at x equals 50 is labeled as the maximum. The bottom graph shows the derivative, representing marginal change in carbon uptake, which decreases and crosses zero at x equals 50. This indicates that the maximum in the top graph occurs where the derivative equals zero. The horizontal axis represents planting density and the vertical axes represent carbon uptake and its rate of change." alt="Figure: Optimizing planting density using a function and its derivative." />
 <div class="figcaption">Figure: Optimizing planting density using a function and its derivative.</div>
@@ -1786,7 +1786,7 @@ The model predicts a <strong>minimum pollution concentration</strong> at the <st
 Q = 50 \text{ m³/s}.
 \]</span></p>
 <hr />
-<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-7-1.png" width="672" /></p>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-5-1.png" width="672" /></p>
 <div class="float">
 <img src="images/pollution_dilution.png" fig.alt="Graph showing pollution concentration C(Q) decreasing as discharge Q increases from 0 to 50 cubic meters per second. The curve starts at a high concentration at low discharge, labeled as an endpoint maximum, and steadily declines without turning points. The derivative is indicated to be negative everywhere, meaning there are no internal critical points. The lowest concentration occurs at the right endpoint near Q equals 50, labeled as the endpoint minimum and best allowed flow. The horizontal axis represents discharge and the vertical axis represents pollution concentration." alt="Figure: Minimizing pollution concentration through dilution." />
 <div class="figcaption">Figure: Minimizing pollution concentration through dilution.</div>
@@ -1917,7 +1917,7 @@ B&#39;&#39;(R) = -0.8 - 0.125 e^{-0.05R}
 <p><strong>Conclusion:</strong><br />
 Total benefits peak at approximately <strong>145 m³/s</strong>, giving reservoir operators a data-informed release target—unless infrastructure or ecological constraints limit allowable flows, in which case the optimum occurs at the nearest boundary.</p>
 <hr />
-<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-8-1.png" width="672" /></p>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-6-1.png" width="672" /></p>
 <div class="float">
 <img src="images/reservoir_release_benefit.png" fig.alt="Graph of total benefit B(R) versus reservoir release R from 0 to 200 cubic meters per second. The curve increases rapidly at first, then levels off and reaches a maximum near R equals 150, which is marked with a point and labeled as the maximum. After this point, the benefit slightly decreases as release continues to increase. The horizontal axis represents release and the vertical axis represents total benefit." alt="Figure: Maximizing reservoir release benefits." />
 <div class="figcaption">Figure: Maximizing reservoir release benefits.</div>
@@ -2038,7 +2038,7 @@ The derivative reveals a fundamental biological principle:<br />
 \]</span></p>
 <p>This provides managers with a quantitative guideline for sustainable foraging, fishing, or wildlife harvest policies.</p>
 <hr />
-<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-9-1.png" width="672" /></p>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-7-1.png" width="672" /></p>
 <div class="float">
 <img src="images/logistic_yield.png" fig.alt="Graph of sustainable yield Y(P) versus population size P for a logistic growth model. The curve is a downward-opening parabola that starts at zero, rises to a maximum at P equals K over 2, and then decreases back to zero as P approaches the carrying capacity. The peak at P equals K over 2 is marked and labeled as the maximum sustainable yield. The horizontal axis represents population size and the vertical axis represents sustainable yield." alt="Figure: Maximum sustainable yield in logistic growth." />
 <div class="figcaption">Figure: Maximum sustainable yield in logistic growth.</div>
@@ -2340,7 +2340,7 @@ C(x^*) = 40(5.545) + 150 = 372 \text{ (approximately)}.
 </div>
 <div id="visualization-of-the-cost-function-and-the-constraint" class="section level3 unnumbered hasAnchor">
 <h3><strong>4. Visualization of the cost function and the constraint</strong><a href="optimization-in-environmental-systems.html#visualization-of-the-cost-function-and-the-constraint" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-10-1.png" width="672" /></p>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-8-1.png" width="672" /></p>
 <div class="float">
 <img src="images/cost_constraint.png" fig.alt="Two stacked graphs showing cost and pollutant levels as functions of treatment intensity x. The top graph shows cost increasing with treatment intensity, with a marked feasible minimum at a specific value x equals x minimum. The bottom graph shows pollutant concentration decreasing as treatment intensity increases, with a horizontal target line indicating the required maximum pollutant level. The point where the pollutant curve meets the target corresponds to x equals x minimum, showing that the lowest cost satisfying the environmental constraint occurs at the minimum treatment level that meets the pollutant target." alt="Figure: Cost minimization subject to an environmental constraint." />
 <div class="figcaption">Figure: Cost minimization subject to an environmental constraint.</div>
@@ -2447,7 +2447,7 @@ C&#39;&#39;(T) = 8.
 <div id="visualization" class="section level3 unnumbered hasAnchor">
 <h3><strong>6. Visualization</strong><a href="optimization-in-environmental-systems.html#visualization" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>The plot below shows the cost curve and the optimal set point.</p>
-<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-11-1.png" width="672" /></p>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-9-1.png" width="672" /></p>
 <div class="float">
 <img src="images/temperature_optimization.png" fig.alt="Graph of total cost C(T) versus indoor temperature from about 8 to 26 degrees Celsius. The curve is U-shaped, with higher costs at both low and high temperatures and a minimum point near 19 degrees Celsius. A vertical dashed line and a point mark the minimum cost at T equals 19 degrees Celsius, indicating the optimal indoor temperature that balances energy use and comfort." alt="Figure: Optimal indoor temperature balancing energy and comfort costs." />
 <div class="figcaption">Figure: Optimal indoor temperature balancing energy and comfort costs.</div>

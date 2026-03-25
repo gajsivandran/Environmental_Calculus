@@ -28,6 +28,14 @@ fig:constant-rule-plot-fixed
 fig:constant-multiple-rule-plot-2
 fig:exp-clean-2point2s
 fig:contour-energy-map
+fig:four-extrema-types
+fig:x3-derivative-side-by-side
+fig:population-cubic-plot
+fig:critical-points-number-line
+fig:cubic-extrema-plot
+fig:concavity-visualization-smooth-2x2
+fig:inflection-types-panel-updated
+fig:extrema-2x2-panel
 fig:practice-reading-graph
 fig:blank-axes
 fig:cubic-example-plot
