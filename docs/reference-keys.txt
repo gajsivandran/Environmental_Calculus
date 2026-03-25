@@ -1,4 +1,4 @@
-tab:unnamed-chunk-2
+tab:unnamed-chunk-1
 fig:apply-the-function-to-compute-temperature-40
 fig:temperature-time-elevation-lines
 fig:graph-change-example
@@ -75,6 +75,18 @@ fig:wavy-function-continuous
 fig:sine-function-basic
 fig:mixed-function-smooth-transition
 fig:complex-smooth-piecewise
+fig:sum-rule-components
+fig:trig-derivative-sketch-grid
+fig:exp-log-derivative-sketch-grid
+fig:four-extrema-types-wb
+fig:population-model-curve
+fig:population-derivative-curve
+fig:population-second-derivative-curve
+fig:challenge-1-concavity
+fig:challenge-2-rational-function
+fig:challenge-3-polynomial
+fig:challenge-4-exponential-rational
+fig:challenge-5-logistic-function
 why-calculus
 why-this-book
 what-is-calculus

@@ -41,52 +41,64 @@ When might that slope be **zero**?
 
 In this section we will interpret these functions and points of interest.
 
-```{r four-extrema-types-wb, echo=FALSE, fig.width=10, fig.height=8}
+```{r four-extrema-types-wb, echo=FALSE, message=FALSE, warning=FALSE, fig.width=10, fig.height=8, fig.align='center', out.width='95%', fig.cap="Four example graphs illustrating different extrema behaviors: a cubic with a local maximum and minimum, a downward-opening parabola on a finite interval, a cubic with a horizontal tangent but no extremum, and a sine curve with repeating maxima and minima.", fig.alt="A four-panel figure showing four types of extrema behavior. Panel A shows the cubic function f(x)=x^3-3x^2+2 on an interval from about -1 to 3.5. The curve rises to a local maximum near x=0, then falls to a local minimum near x=2, and then rises again. Panel B shows the parabola f(x)=-(x-3)^2+5 on the interval [0,6]. The graph is symmetric about x=3, reaches its highest point at the center, and decreases toward both endpoints. Panel C shows the cubic function f(x)=x^3 from about -2 to 2. The graph flattens at x=0 with a horizontal tangent but continues increasing through that point, so there is no local maximum or minimum. Panel D shows the sine function f(x)=sin(x) on [0, 2pi]. The curve starts at 0, rises to a maximum near pi over 2, falls through 0 at pi, reaches a minimum near 3pi over 2, and returns to 0 at 2pi."}
 library(ggplot2)
 library(patchwork)
 
-# A. Local Max and Min
+# A. Local maximum and minimum
 f1 <- function(x) x^3 - 3*x^2 + 2
 x1 <- seq(-1, 3.5, length.out = 400)
 df1 <- data.frame(x = x1, y = f1(x1))
 p1 <- ggplot(df1, aes(x, y)) +
-  geom_line(color = "steelblue", linewidth = 1.2) +
-  labs(title = "A. Local Max and Min (Cubic Function)",
-       subtitle = expression(f(x) == x^3 - 3*x^2 + 2),
-       x = "x", y = "f(x)") +
+  geom_line(linewidth = 1.2) +
+  labs(
+    title = "A. Local Maximum and Minimum",
+    subtitle = "f(x) = x^3 - 3x^2 + 2",
+    x = "x",
+    y = "f(x)"
+  ) +
   theme_minimal(base_size = 12)
 
-# B. Global Extrema at Endpoints
+# B. Global maximum on a finite domain
 f2 <- function(x) -(x - 3)^2 + 5
 x2 <- seq(0, 6, length.out = 400)
 df2 <- data.frame(x = x2, y = f2(x2))
 p2 <- ggplot(df2, aes(x, y)) +
-  geom_line(color = "darkgreen", linewidth = 1.2) +
-  labs(title = "B. Global Extrema at Endpoints (Finite Domain)",
-       subtitle = expression(f(x) == -~(x-3)^2 + 5~~" over [0,6]"),
-       x = "x", y = "f(x)") +
+  geom_line(linewidth = 1.2) +
+  labs(
+    title = "B. Global Maximum on a Finite Domain",
+    subtitle = "f(x) = -(x - 3)^2 + 5 on [0, 6]",
+    x = "x",
+    y = "f(x)"
+  ) +
   theme_minimal(base_size = 12)
 
-# C. Flat Region (No Extremum)
+# C. Horizontal tangent but no extremum
 f3 <- function(x) x^3
 x3 <- seq(-2, 2, length.out = 400)
 df3 <- data.frame(x = x3, y = f3(x3))
 p3 <- ggplot(df3, aes(x, y)) +
-  geom_line(color = "orange", linewidth = 1.2) +
-  labs(title = "C. Flat Region — No Extrema",
-       subtitle = expression(f(x) == x^3),
-       x = "x", y = "f(x)") +
+  geom_line(linewidth = 1.2) +
+  labs(
+    title = "C. Horizontal Tangent but No Extremum",
+    subtitle = "f(x) = x^3",
+    x = "x",
+    y = "f(x)"
+  ) +
   theme_minimal(base_size = 12)
 
-# D. Periodic Function
+# D. Periodic function with repeating extrema
 f4 <- function(x) sin(x)
 x4 <- seq(0, 2*pi, length.out = 400)
 df4 <- data.frame(x = x4, y = f4(x4))
 p4 <- ggplot(df4, aes(x, y)) +
-  geom_line(color = "purple", linewidth = 1.2) +
-  labs(title = "D. Periodic Function with Repeating Extrema",
-       subtitle = expression(f(x) == sin(x)~~" over [0,2π]"),
-       x = "x", y = "f(x)") +
+  geom_line(linewidth = 1.2) +
+  labs(
+    title = "D. Periodic Function with Repeating Extrema",
+    subtitle = "f(x) = sin(x) on [0, 2π]",
+    x = "x",
+    y = "f(x)"
+  ) +
   theme_minimal(base_size = 12)
 
 (p1 | p2) / (p3 | p4)
@@ -236,12 +248,13 @@ Let’s model population dynamics of bears:
 P(t) = -t^3 + 6t^2 - 9t + 20
 \]
 
-```{r, echo=FALSE}
+```{r population-model-curve, echo=FALSE, message=FALSE, warning=FALSE, fig.width=7, fig.height=5, fig.align='center', out.width='85%', fig.cap="Graph of a population model over time showing how the population changes according to a cubic function.", fig.alt="A graph of the function P(t) = -t^3 + 6t^2 - 9t + 20 for t between 0 and 5. The horizontal axis represents time t, and the vertical axis represents population P(t). The curve starts near a population of about 20 at t = 0, increases to a peak around t = 2, and then decreases steadily toward lower values by t = 5. The overall shape is a smooth curve that rises to a maximum and then falls."}
 P <- function(t) -t^3 + 6*t^2 - 9*t + 20
+
 curve(P(x), from = 0, to = 5,
-col = "forestgreen", lwd = 2,
-xlab = "t", ylab = "P(t)",
-main = "Population Model P(t)")
+      col = "forestgreen", lwd = 2,
+      xlab = "Time (t)", ylab = "Population P(t)",
+      main = "Population Model Over Time")
 ```
 
 
@@ -265,11 +278,15 @@ Now that you’ve visualized the population curve, let’s explore how its **rat
 
 We’ll look at the derivative \( P'(t) \), which tells us whether the population is growing or shrinking at any moment.
 
-```{r, echo=FALSE}
+```{r population-derivative-curve, echo=FALSE, message=FALSE, warning=FALSE, fig.width=7, fig.height=5, fig.align='center', out.width='85%', fig.cap="Graph of the derivative of the population model, showing how the rate of change of the population varies over time.", fig.alt="A graph of the derivative function P'(t) = -3t^2 + 12t - 9 for t between 0 and 5. The horizontal axis represents time t and the vertical axis represents the rate of change of the population. The curve is a downward-opening parabola. It starts below zero, rises and crosses the horizontal axis near t = 1, reaches a maximum around t = 2, then decreases and crosses the horizontal axis again near t = 3, continuing downward afterward. A dashed horizontal line at zero highlights where the rate of change switches from negative to positive and back to negative."}
 P_prime <- function(t) -3*t^2 + 12*t - 9
-curve(P_prime(x), from = 0, to = 5, col = "steelblue", lwd = 2,
-      ylab = "P'(t)", xlab = "t",
-      main = "Derivative of the Population Model")
+
+curve(P_prime(x), from = 0, to = 5,
+      col = "steelblue", lwd = 2,
+      ylab = "Rate of Change of Population P'(t)",
+      xlab = "Time (t)",
+      main = "Rate of Change of the Population Model")
+
 abline(h = 0, lty = 2, col = "gray50")
 ```
 
@@ -304,11 +321,15 @@ Next, explore the **curvature** of population change — whether the growth rate
 
 We’ll look at the second derivative \( P''(t) \).
 
-```{r, echo=FALSE}
+```{r population-second-derivative-curve, echo=FALSE, message=FALSE, warning=FALSE, fig.width=7, fig.height=5, fig.align='center', out.width='85%', fig.cap="Graph of the second derivative of the population model, showing how the curvature and acceleration of population change vary over time.", fig.alt="A graph of the second derivative function P''(t) = -6t + 12 for t between 0 and 5. The horizontal axis represents time t and the vertical axis represents the rate at which the population's rate of change is increasing or decreasing. The graph is a straight line with negative slope. It starts above zero at t = 0, crosses the horizontal axis at t = 2, and continues below zero afterward. The positive values indicate the population growth is accelerating, while negative values indicate the growth is decelerating. A dashed horizontal line at zero highlights the point where the concavity changes."}
 P_doubleprime <- function(t) -6*t + 12
-curve(P_doubleprime(x), from = 0, to = 5, col = "darkorange", lwd = 2,
-      ylab = "P''(t)", xlab = "t",
-      main = "Second Derivative — Curvature of Population Change")
+
+curve(P_doubleprime(x), from = 0, to = 5,
+      col = "darkorange", lwd = 2,
+      ylab = "Acceleration of Population Change P''(t)",
+      xlab = "Time (t)",
+      main = "Acceleration and Curvature of the Population Model")
+
 abline(h = 0, lty = 2, col = "gray50")
 ```
 
@@ -713,7 +734,7 @@ In environmental contexts, maxima might represent carrying capacities or peak re
 Each problem includes three reveal options:  
 - **Check 1st derivative**  
 - **Check 2nd derivative**  
-- **Full solution** at the end password will be shared at the end of clas
+- **Full solution** at the end password will be shared at the end of class
 
 ---
 
@@ -1153,11 +1174,11 @@ The complete shape:
 - Inflection → concave down → inflection  
 - Exponential factor affects magnitude but not sign behavior  
 
-```{r, echo=FALSE, message=FALSE, warning=FALSE}
+```{r challenge-1-concavity, echo=FALSE, message=FALSE, warning=FALSE, fig.width=9, fig.height=6, fig.align='center', out.width='90%', fig.cap="Graph of the function f(x) = (x^2 - 4)e^{-x} with local extrema, inflection points, and shaded intervals showing where the graph is concave up or concave down.", fig.alt="A graph of the function f(x) = (x^2 - 4)e to the power negative x over an interval from about negative 2.1 to 8. The curve begins high on the left, decreases to a local minimum near x = -1.24, then rises and changes concavity near x = -0.45. It continues upward to a local maximum near x = 3.24, then bends downward and changes concavity again near x = 4.45 before decreasing toward zero as x increases. Two critical points are marked and labeled: a local minimum at x = 1 minus square root of 5 and a local maximum at x = 1 plus square root of 5. Two inflection points are also marked and labeled at x = 2 minus square root of 6 and x = 2 plus square root of 6. Background shading indicates concavity: the graph is concave up to the left of the first inflection point, concave down between the inflection points, and concave up again to the right of the second inflection point."}
 library(ggplot2)
 library(dplyr)
 
-# Challenge 1 function
+# Function
 f <- function(x) (x^2 - 4) * exp(-x)
 
 # Critical points
@@ -1165,33 +1186,26 @@ crit1 <- 1 - sqrt(5)
 crit2 <- 1 + sqrt(5)
 
 # Inflection points
-infl1 <- 2 - sqrt(6)   # approx -0.449
-infl2 <- 2 + sqrt(6)   # approx 4.449
+infl1 <- 2 - sqrt(6)
+infl2 <- 2 + sqrt(6)
 
-# Build data for the plot
+# Data for the curve
 x_vals <- seq(-2.1, 8, length.out = 2000)
 df <- data.frame(
   x = x_vals,
   y = f(x_vals)
 )
 
-# Concavity shading:
-# f''(x) = e^{-x}(x^2 - 4x - 2)
-# Since e^{-x} > 0 always, sign comes from q(x) = x^2 - 4x - 2
-# Quadratic opens upward ⇒ concave UP outside roots and concave DOWN between roots
-
+# Concavity regions
 shade <- data.frame(
-  xmin = c(-6, infl1, infl2),
+  xmin = c(-2.1, infl1, infl2),
   xmax = c(infl1, infl2, 8),
-  concavity = c("up", "down", "up")
+  concavity = c("Concave up", "Concave down", "Concave up")
 )
 
-shade$fill <- ifelse(shade$concavity == "up", "lightblue", "moccasin")
+shade$fill <- ifelse(shade$concavity == "Concave up", "lightblue", "moccasin")
 
-# Plot with shading
 ggplot(df, aes(x, y)) +
-  
-  # Concavity shading
   geom_rect(
     data = shade,
     inherit.aes = FALSE,
@@ -1199,25 +1213,18 @@ ggplot(df, aes(x, y)) +
     alpha = 0.25
   ) +
   scale_fill_identity() +
-  
-  # Function curve
-  geom_line(color = "steelblue", linewidth = 1.2) +
-  
-  # Critical points
+  geom_line(linewidth = 1.2) +
   geom_point(aes(x = crit1, y = f(crit1)), color = "firebrick", size = 3) +
   geom_point(aes(x = crit2, y = f(crit2)), color = "firebrick", size = 3) +
-  annotate("text", x = crit1, y = f(crit1), label = "local min", vjust = -1) +
-  annotate("text", x = crit2, y = f(crit2), label = "local mmax", vjust = -1) +
-  
-  # Inflection point labels
+  annotate("text", x = crit1, y = f(crit1), label = "local minimum", vjust = -1) +
+  annotate("text", x = crit2, y = f(crit2), label = "local maximum", vjust = -1) +
   geom_point(aes(x = infl1, y = f(infl1)), color = "darkgreen", size = 3) +
   geom_point(aes(x = infl2, y = f(infl2)), color = "darkgreen", size = 3) +
-  annotate("text", x = infl1, y = f(infl1), label = "inflection", vjust = 1.5) +
-  annotate("text", x = infl2, y = f(infl2), label = "inflection", vjust = 1.5) +
-  
+  annotate("text", x = infl1, y = f(infl1), label = "inflection point", vjust = 1.5) +
+  annotate("text", x = infl2, y = f(infl2), label = "inflection point", vjust = 1.5) +
   labs(
-    title = "Challenge 1:  f(x) = (x^2 - 4)e^{-x}",
-    subtitle = "Shaded regions show concavity (blue = up, gold = down)",
+    title = "Challenge 1: Function with Extrema and Inflection Points",
+    subtitle = "f(x) = (x^2 - 4)e^{-x}; shaded regions indicate concavity",
     x = "x",
     y = "f(x)"
   ) +
@@ -1310,17 +1317,17 @@ There are **no inflection points**, because the concavity change occurs at verti
 - Concavity: up → down → up  
 - Function breaks naturally into **three separate branches**  
 
-```{r, echo=FALSE, message=FALSE, warning=FALSE}
+```{r challenge-2-rational-function, echo=FALSE, message=FALSE, warning=FALSE, fig.width=9, fig.height=6, fig.align='center', out.width='90%', fig.cap="Graph of the rational function f(x) = 1/(x^2 - 1) showing its local maximum, vertical asymptotes, and intervals of concavity.", fig.alt="A graph of the function f(x) = 1 divided by the quantity x squared minus 1, shown from about x = negative 6 to x = 6. The graph has three separate branches because the function is undefined at x = negative 1 and x = 1. Dashed vertical lines mark these asymptotes. On the middle interval between negative 1 and 1, the curve stays below the x-axis, reaches a local maximum at x = 0 with value negative 1, and decreases sharply toward negative infinity as it approaches each asymptote. On the outer intervals, the left and right branches are above the x-axis, approach positive infinity near the asymptotes, and approach 0 from above as x moves farther from the origin. Background shading indicates concavity: the graph is concave up for x less than negative 1, concave down between negative 1 and 1, and concave up for x greater than 1."}
 library(ggplot2)
 library(dplyr)
 
 # Function
-f <- function(x) 1/(x^2 - 1)
+f <- function(x) 1 / (x^2 - 1)
 
 # Critical point
 crit <- 0
 
-# Build separate data frames to avoid crossing asymptotes
+# Separate data frames so the graph does not connect across asymptotes
 df1 <- data.frame(x = seq(-6, -1.01, length.out = 800))
 df2 <- data.frame(x = seq(-0.99, 0.99, length.out = 800))
 df3 <- data.frame(x = seq(1.01, 6, length.out = 800))
@@ -1329,46 +1336,35 @@ df1$y <- f(df1$x)
 df2$y <- f(df2$x)
 df3$y <- f(df3$x)
 
-# Concavity shading intervals
+# Concavity intervals
 shade <- data.frame(
   xmin = c(-6, -1, 1),
   xmax = c(-1, 1, 6),
-  concavity = c("up", "down", "up")
+  concavity = c("Concave up", "Concave down", "Concave up")
 )
 
-shade$fill <- ifelse(shade$concavity == "up", "lightblue", "moccasin")
+shade$fill <- ifelse(shade$concavity == "Concave up", "lightblue", "moccasin")
 
 ggplot() +
-  # Concavity shading
   geom_rect(
     data = shade,
-    aes(xmin = xmin, xmax = xmax,
-        ymin = -Inf, ymax = Inf,
-        fill = fill),
+    aes(xmin = xmin, xmax = xmax, ymin = -Inf, ymax = Inf, fill = fill),
     alpha = 0.25
   ) +
   scale_fill_identity() +
-  
-  # Curve pieces
   geom_line(data = df1, aes(x, y), linewidth = 1.2, color = "steelblue") +
   geom_line(data = df2, aes(x, y), linewidth = 1.2, color = "steelblue") +
   geom_line(data = df3, aes(x, y), linewidth = 1.2, color = "steelblue") +
-  
-  # Vertical asymptotes
   geom_vline(xintercept = -1, linetype = "dashed", color = "firebrick", linewidth = 1) +
-  geom_vline(xintercept = 1,  linetype = "dashed", color = "firebrick", linewidth = 1) +
-  
-  # Critical point
+  geom_vline(xintercept = 1, linetype = "dashed", color = "firebrick", linewidth = 1) +
   geom_point(aes(x = crit, y = f(crit)), color = "darkgreen", size = 3) +
-  annotate("text", x = crit, y = f(crit), label = "local max", vjust = -1) +
-  
+  annotate("text", x = crit, y = f(crit), label = "local maximum", vjust = -1) +
   labs(
-    title = "Challenge 2:  f(x) = 1 / (x^2 - 1)",
-    subtitle = "Concavity shading (blue = up, gold = down) with asymptotes at x=-1 and x=1",
+    title = "Challenge 2: Rational Function with Asymptotes and Concavity",
+    subtitle = "f(x) = 1 / (x^2 - 1); shaded regions indicate concavity",
     x = "x",
     y = "f(x)"
   ) +
-  
   coord_cartesian(ylim = c(-10, 10)) +
   theme_minimal(base_size = 14)
 ```
@@ -1439,84 +1435,61 @@ x = 0, \qquad x = 2
 This gives the characteristic “flatten → dip → rise” shape typical of a quartic with asymmetric coefficients.
 
 
-```{r, echo=FALSE, message=FALSE, warning=FALSE}
+```{r challenge-3-polynomial, echo=FALSE, message=FALSE, warning=FALSE, fig.width=9, fig.height=6, fig.align='center', out.width='90%', fig.cap="Graph of the polynomial function f(x) = x^4 - 4x^3 showing a flat critical point, a local minimum, inflection points, and shaded intervals of concavity.", fig.alt="A graph of the function f(x) = x to the fourth minus 4x cubed, shown from about x = negative 4 to x = 6. The curve passes through the origin with a flat horizontal tangent, but this point is not a maximum or minimum. After x = 0, the graph bends downward, then changes concavity again near x = 2, continues falling to a local minimum at x = 3, and then rises sharply for larger x. Two critical points are marked: a flat point at x = 0 and a local minimum at x = 3. Two inflection points are marked at x = 0 and x = 2, where the graph changes concavity. Background shading indicates concavity: the graph is concave up for x less than 0, concave down between x = 0 and x = 2, and concave up again for x greater than 2."}
 library(ggplot2)
 library(dplyr)
 
-# Challenge 3 function
+# Function
 f <- function(x) x^4 - 4*x^3
 
 # Critical points
-crit_flat <- 0      # flat point (no extremum)
-crit_min  <- 3      # local minimum
+crit_flat <- 0
+crit_min  <- 3
 
 # Inflection points
 infl1 <- 0
 infl2 <- 2
 
-# Build data for the curve
+# Data for the curve
 x_vals <- seq(-4, 6, length.out = 2000)
 df <- data.frame(
   x = x_vals,
   y = f(x_vals)
 )
 
-# Concavity shading:
-# f''(x) = 12x(x-2)
-# concave up on (-inf, 0) and (2, inf)
-# concave down on (0, 2)
+# Concavity intervals
 shade <- data.frame(
-  xmin = c(-4,   0,    2),
-  xmax = c(0,    2,    6),
-  concavity = c("up", "down", "up")
+  xmin = c(-4, 0, 2),
+  xmax = c(0, 2, 6),
+  concavity = c("Concave up", "Concave down", "Concave up")
 )
 
-shade$fill <- ifelse(shade$concavity == "up", "lightblue", "moccasin")
+shade$fill <- ifelse(shade$concavity == "Concave up", "lightblue", "moccasin")
 
-# Plot
 ggplot(df, aes(x, y)) +
-  
-  # Concavity shading
   geom_rect(
     data = shade,
     inherit.aes = FALSE,
-    aes(xmin = xmin, xmax = xmax,
-        ymin = -Inf, ymax = Inf, fill = fill),
+    aes(xmin = xmin, xmax = xmax, ymin = -Inf, ymax = Inf, fill = fill),
     alpha = 0.25
   ) +
   scale_fill_identity() +
-  
-  # Function curve
-  geom_line(color = "steelblue", linewidth = 1.2) +
-  
-  # Critical points
+  geom_line(linewidth = 1.2, color = "steelblue") +
   geom_point(aes(x = crit_flat, y = f(crit_flat)), color = "firebrick", size = 3) +
-  geom_point(aes(x = crit_min,  y = f(crit_min)),  color = "firebrick", size = 3) +
-  
-  annotate("text", x = crit_flat, y = f(crit_flat),
-           label = "flat point", vjust = -1) +
-  annotate("text", x = crit_min, y = f(crit_min),
-           label = "local min", vjust = -1) +
-  
-  # Inflection points
+  geom_point(aes(x = crit_min, y = f(crit_min)), color = "firebrick", size = 3) +
+  annotate("text", x = crit_flat, y = f(crit_flat), label = "flat point", vjust = -1) +
+  annotate("text", x = crit_min, y = f(crit_min), label = "local minimum", vjust = -1) +
   geom_point(aes(x = infl1, y = f(infl1)), color = "darkgreen", size = 3) +
   geom_point(aes(x = infl2, y = f(infl2)), color = "darkgreen", size = 3) +
-  
-  annotate("text", x = infl1, y = f(infl1),
-           label = "inflection", vjust = 1.5) +
-  annotate("text", x = infl2, y = f(infl2),
-           label = "inflection", vjust = 1.5) +
-  
+  annotate("text", x = infl1, y = f(infl1), label = "inflection point", vjust = 1.5) +
+  annotate("text", x = infl2, y = f(infl2), label = "inflection point", vjust = 1.5) +
   labs(
-    title = "Challenge 3:  f(x) = x^4 - 4x^3",
-    subtitle = "Shaded regions show concavity (blue = up, gold = down)",
+    title = "Challenge 3: Polynomial with a Flat Point, Local Minimum, and Inflection Points",
+    subtitle = "f(x) = x^4 - 4x^3; shaded regions indicate concavity",
     x = "x",
     y = "f(x)"
   ) +
-  
-  # Set y-axis limits here
   coord_cartesian(ylim = c(-30, 30)) +
-  
   theme_minimal(base_size = 14)
 ```
 
@@ -1569,68 +1542,55 @@ Testing each interval shows the concavity pattern:
 **Summary:**  
 The function rises smoothly for all \(x\), flattens at \(x=1\) without forming an extremum, and changes concavity **twice**, creating two inflection points while remaining always increasing.
 
-```{r, echo=FALSE, message=FALSE, warning=FALSE}
+```{r challenge-4-exponential-rational, echo=FALSE, message=FALSE, warning=FALSE, fig.width=9, fig.height=6, fig.align='center', out.width='90%', fig.cap="Graph of the function f(x) = e^x / (x^2 + 1) showing inflection points, a flat point, and shaded intervals of concavity.", fig.alt="A graph of the function f(x) = e to the power x divided by the quantity x squared plus 1, shown from about x = negative 2 to x = 5. The curve stays above the x-axis and generally increases as x increases. It changes concavity near x = negative 0.18, becoming concave down, and then changes concavity again at x = 1, where there is also a flat point with a horizontal tangent. After x = 1, the graph becomes concave up again and rises steeply to the right. Two inflection points are marked: one near x = negative 0.18 and one at x = 1. The point at x = 1 is also marked as a flat point. Background shading indicates concavity: the graph is concave up to the left of the first inflection point, concave down between the two inflection points, and concave up again to the right of x = 1."}
 library(ggplot2)
 library(dplyr)
 
-# Challenge 4 function
+# Function
 f <- function(x) exp(x) / (x^2 + 1)
 
-# Correct inflection points
-infl1 <- uniroot(function(x) x^3 - 3*x^2 + 5*x + 1, c(-1, 0))$root   # ≈ -0.18
-infl2 <- 1                                                          # flat point + inflection
+# Inflection points
+infl1 <- uniroot(function(x) x^3 - 3*x^2 + 5*x + 1, c(-1, 0))$root
+infl2 <- 1
 
-# Build data for the curve
+# Data for the curve
 x_vals <- seq(-2, 5, length.out = 2000)
 df <- data.frame(
   x = x_vals,
   y = f(x_vals)
 )
 
-# Concavity shading: up → down → up
+# Concavity intervals
 shade <- data.frame(
-  xmin = c(-2,     infl1, infl2),
-  xmax = c(infl1,  infl2, 5),
-  concavity = c("up", "down", "up")
+  xmin = c(-2, infl1, infl2),
+  xmax = c(infl1, infl2, 5),
+  concavity = c("Concave up", "Concave down", "Concave up")
 )
 
-shade$fill <- ifelse(shade$concavity == "up", "lightblue", "moccasin")
+shade$fill <- ifelse(shade$concavity == "Concave up", "lightblue", "moccasin")
 
-# Plot
 ggplot(df, aes(x, y)) +
-  
   geom_rect(
     data = shade,
     inherit.aes = FALSE,
-    aes(xmin = xmin, xmax = xmax,
-        ymin = -Inf, ymax = Inf,
-        fill = fill),
+    aes(xmin = xmin, xmax = xmax, ymin = -Inf, ymax = Inf, fill = fill),
     alpha = 0.25
   ) +
   scale_fill_identity() +
-  
   geom_line(color = "steelblue", linewidth = 1.2) +
-  
-  # Inflection points
   geom_point(aes(x = infl1, y = f(infl1)), color = "darkgreen", size = 3) +
   geom_point(aes(x = infl2, y = f(infl2)), color = "darkgreen", size = 3) +
-  
-  annotate("text", x = infl1, y = f(infl1), label = "inflection", vjust = 1.5) +
-  annotate("text", x = infl2, y = f(infl2), label = "inflection", vjust = 1.5) +
-  
-  # Flat point at x = 1
+  annotate("text", x = infl1, y = f(infl1), label = "inflection point", vjust = 1.5) +
+  annotate("text", x = infl2, y = f(infl2), label = "inflection point", vjust = 1.5) +
   geom_point(aes(x = 1, y = f(1)), color = "firebrick", size = 3) +
   annotate("text", x = 1, y = f(1), label = "flat point", vjust = -1) +
-  
   labs(
-    title = "Challenge 4:  f(x) = e^x / (x^2 + 1)",
-    subtitle = "Concavity shading (blue = up, gold = down)",
+    title = "Challenge 4: Exponential-Rational Function with a Flat Point and Inflection Points",
+    subtitle = "f(x) = e^x / (x^2 + 1); shaded regions indicate concavity",
     x = "x",
     y = "f(x)"
   ) +
-  
   coord_cartesian(xlim = c(-2, 5), ylim = c(-0.5, 7)) +
-  
   theme_minimal(base_size = 14)
 ```
 
@@ -1671,60 +1631,50 @@ As \(x\to +\infty\), \(e^{-x}\to 0\), so the denominator approaches \(1\) and
 The resulting graph has a smooth S-shape, increases for all \(x\), and levels off near these two horizontal limits.
 
 
-```{r, echo=FALSE, message=FALSE, warning=FALSE}
+```{r challenge-5-logistic-function, echo=FALSE, message=FALSE, warning=FALSE, fig.width=9, fig.height=6, fig.align='center', out.width='90%', fig.cap="Graph of the function f(x) = 50 / (1 + 2e^{-x}) showing its S-shaped growth, inflection point, and shaded intervals of concavity.", fig.alt="A graph of the function f(x) = 50 divided by the quantity 1 plus 2e to the power negative x, shown from about x = negative 6 to x = 6. The curve is an increasing S-shaped logistic graph. It starts near 0 on the left, rises gradually at first, then more steeply through the middle, and levels off near 50 on the right. A single inflection point is marked at x = ln(2), where the graph changes from concave up to concave down. Background shading indicates concavity: the graph is concave up for x less than ln(2) and concave down for x greater than ln(2)."}
 library(ggplot2)
 library(dplyr)
 
 # Function
 f <- function(x) 50 / (1 + 2 * exp(-x))
 
-# Inflection point at x = ln(2)
+# Inflection point
 infl <- log(2)
 
-# Build data
+# Data for the curve
 x_vals <- seq(-6, 6, length.out = 2000)
 df <- data.frame(
   x = x_vals,
   y = f(x_vals)
 )
 
-# Concavity shading: up for x < ln2, down for x > ln2
+# Concavity intervals
 shade <- data.frame(
   xmin = c(-6, infl),
   xmax = c(infl, 6),
-  concavity = c("up", "down")
+  concavity = c("Concave up", "Concave down")
 )
 
-shade$fill <- ifelse(shade$concavity == "up", "lightblue", "moccasin")
+shade$fill <- ifelse(shade$concavity == "Concave up", "lightblue", "moccasin")
 
-# Plot
 ggplot(df, aes(x, y)) +
-  
   geom_rect(
     data = shade,
     inherit.aes = FALSE,
-    aes(xmin = xmin, xmax = xmax,
-        ymin = -Inf, ymax = Inf,
-        fill = fill),
+    aes(xmin = xmin, xmax = xmax, ymin = -Inf, ymax = Inf, fill = fill),
     alpha = 0.25
   ) +
   scale_fill_identity() +
-  
   geom_line(color = "steelblue", linewidth = 1.2) +
-  
-  # Inflection point
   geom_point(aes(x = infl, y = f(infl)), color = "darkgreen", size = 3) +
-  annotate("text", x = infl, y = f(infl), label = "inflection", vjust = 1.5) +
-  
+  annotate("text", x = infl, y = f(infl), label = "inflection point", vjust = 1.5) +
   labs(
-    title = "Challenge 5:  f(x) = 50 / (1 + 2 e^{-x})",
-    subtitle = "Concavity shading (blue = up, gold = down)",
+    title = "Challenge 5: Logistic Function with an Inflection Point",
+    subtitle = "f(x) = 50 / (1 + 2e^{-x}); shaded regions indicate concavity",
     x = "x",
     y = "f(x)"
   ) +
-  
   coord_cartesian(xlim = c(-6, 6), ylim = c(-2, 55)) +
-  
   theme_minimal(base_size = 14)
 ```
 

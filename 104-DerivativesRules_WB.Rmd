@@ -502,9 +502,9 @@ Examine the graphs of \( f(x) = x^2 \) and \( g(x) = x \).
 Their sum \( f(x) + g(x) \) combines both shapes —  
 the derivative \( f'(x) + g'(x) \) describes how *both rates of change* add together at each point.
 
-```{r, echo=FALSE,fig.width=7, fig.height=10}
+```{r sum-rule-components, fig.cap="A function and its derivative shown together with their component parts.", fig.alt="Two stacked graphs compare the function f(x) equals x squared plus x with its component functions and compare its derivative with the derivatives of those components. The top graph shows the combined function x squared plus x as a parabola, along with the parabola x squared and the line x. The bottom graph shows the derivative 2x plus 1 as a line, along with the line 2x and the constant function 1. The figure illustrates the sum rule by showing that the derivative of x squared plus x is the sum of the derivatives of x squared and x.", echo=FALSE, message=FALSE, warning=FALSE, fig.width=7, fig.height=10}
+
 # Clean, proportional plots for f(x) = x^2 + x and f'(x) = 2x + 1
-# x-axis from -5 to 5; square-looking panels; clear component comparison
 
 # ----- Functions -----
 f1 <- function(x) x^2
@@ -559,7 +559,6 @@ legend("topleft",
        lwd = c(3,2,2), bty = "n")
 
 par(op)
-
 
 ```
 
@@ -808,7 +807,7 @@ f(x) = x^{3/2}
 - For each top plot, sketch the derivative on the corresponding blank axes below.  
 - Where is the slope positive/negative/zero? Mark a few key points (e.g., where slope is zero or maximally positive/negative).
 
-```{r, message=FALSE, warning=FALSE, echo=FALSE, fig.width=8, fig.height=8}
+```{r trig-derivative-sketch-grid, fig.cap="Trig functions paired with blank axes for sketching their derivatives.", fig.alt="Six-panel figure arranged in three columns and two rows. The top row shows graphs of sine, cosine, and tangent over the interval from negative 2 pi to 2 pi. The sine and cosine graphs oscillate smoothly, while the tangent graph is broken near its vertical asymptotes and is clipped to keep values between negative 3 and 3. The bottom row contains blank coordinate axes aligned beneath each trig graph, labeled for sketching the derivative of the corresponding function. The figure is designed as an activity to help students infer derivative graphs from the shapes of the original trigonometric functions.", message=FALSE, warning=FALSE, echo=FALSE, fig.width=8, fig.height=8}
 library(tidyverse)
 library(patchwork)
 
@@ -847,7 +846,7 @@ p_tan <- ggplot(df_tan, aes(x, y)) +
   labs(title = "f(x) = tan(x)", y = NULL, x = NULL) +
   base_theme
 
-# Blank "derivative sketch" axes (matching x & y ranges)
+# Blank derivative sketch axes
 blank_sin <- ggplot() +
   coord_cartesian(xlim = c(-2*pi, 2*pi), ylim = c(-1.5, 1.5)) +
   labs(title = "Sketch f′(x) here (for sin)", x = "x", y = NULL) +
@@ -863,7 +862,7 @@ blank_tan <- ggplot() +
   labs(title = "Sketch f′(x) here (for tan)", x = "x", y = NULL) +
   base_theme
 
-# Arrange as a 3x2 grid: function on top, blank axis below
+# Arrange as a 3x2 grid
 (p_sin / blank_sin) | (p_cos / blank_cos) | (p_tan / blank_tan)
 
 ```
@@ -994,7 +993,7 @@ f'(x) = 4\sec^2(x) - 2[-\csc(x)\cot(x)] = 4\sec^2(x) + 2\csc(x)\cot(x)
 - How does the derivative compare to the original function?  
 - Where is the rate of change the greatest?
 
-```{r, message=FALSE, warning=FALSE, echo=FALSE, fig.width=8, fig.height=8}
+```{r exp-log-derivative-sketch-grid, fig.cap="Exponential and logarithmic functions paired with blank axes for sketching their derivatives.", fig.alt="Six-panel figure arranged in three columns and two rows. The top row shows graphs of the exponential functions e to the x and 2 to the x, and the logarithmic function natural log of x. Both exponential functions increase rapidly, while the logarithmic function increases more slowly and is only shown for positive x-values. The bottom row contains blank coordinate axes aligned beneath each graph, labeled for sketching the derivative of the corresponding function. The figure is designed as an activity to help students infer derivative graphs from the shapes of exponential and logarithmic functions.", message=FALSE, warning=FALSE, echo=FALSE, fig.width=8, fig.height=8}
 library(tidyverse)
 library(patchwork)
 
@@ -1301,7 +1300,7 @@ Being able to “read” and interpret symbolic rules like these is a core mathe
 
 There are 4 sets of 5 questions.
 Each question has a function for which you must find the derivative.
-There is also a followup questions for each questions
+There is also a follow up questions for each questions
 
 Solutions for these five are hidden behind a password at the bottom (once you are done - ask one of us)
 
@@ -2867,7 +2866,7 @@ Instead:
 
 - Keep parentheses intact.  
 - Factor only if it clarifies a repeated term.  
-- Box your final unsimplified result, *then* simplify only if needed.
+- Box your final un-simplified result, *then* simplify only if needed.
 
 ---
 
@@ -3220,7 +3219,7 @@ After finishing, discuss with your group:
 
 <div id="sol_frank" hidden markdown="1" style="margin-top:0.75rem;">
 
-#### Step-by-Step Solution (unsimplified) {-}
+#### Step-by-Step Solution (un-simplified) {-}
 
 We start with  
 \[
@@ -3326,7 +3325,7 @@ No simplification required.
 
 ---
 
-This is the **unsimplified, fully expanded derivative** showing all applications of:
+This is the **un-simplified, fully expanded derivative** showing all applications of:
 
 - Quotient rule (outermost)
 - Product rule (numerator)

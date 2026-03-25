@@ -350,9 +350,9 @@ where $S(t)$ is in millimeters and $t$ is years since 2000.
 ---
 
 ::: promptbox
-**Environmentla Application - A Visual View**
+**Environmental Application - A Visual View**
 
-![](images/sea_level.png){fig.alt='Line graph showing changes in global mean sea level from 1993 to 2023. The black line (NASA) shows total sea level rise, increasing from near 0 mm in 1993 to over 110 mm in 2023. Two contributing factors are plotted: blue line (JPL) shows added ocean mass from mostly land ice melt, rising steadily from about 20 mm in 2003 to over 60 mm in 2023; red line (SIO) shows thermal expansion, rising from near 0 mm in 2003 to about 40 mm in 2023. The purple shaded region (Mass + steric) closely matches the black line. Together, the figure shows that sea level rise is explained by added water plus thermal expansion.'}
+![Figure: Sea Level Rise](images/sea_level.png){fig.alt='Line graph showing changes in global mean sea level from 1993 to 2023. The black line (NASA) shows total sea level rise, increasing from near 0 mm in 1993 to over 110 mm in 2023. Two contributing factors are plotted: blue line (JPL) shows added ocean mass from mostly land ice melt, rising steadily from about 20 mm in 2003 to over 60 mm in 2023; red line (SIO) shows thermal expansion, rising from near 0 mm in 2003 to about 40 mm in 2023. The purple shaded region (Mass + steric) closely matches the black line. Together, the figure shows that sea level rise is explained by added water plus thermal expansion.'}
 
 **Discussion Questions**
 
@@ -634,7 +634,7 @@ with $h = 1$.
 
 * Interpret your result in context, including units.
 * Was it possible to calculate the instantaneous rate of change at day 6?
-* How would a higher-resolution dataset (more frequent measurements) improve your estimate?
+* How would a higher-resolution data set (more frequent measurements) improve your estimate?
 
 **Notes:** <br><br><br><br><br><br><br><br><br><br><br><br>
 

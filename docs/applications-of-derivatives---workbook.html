@@ -1266,7 +1266,12 @@ When might that slope be <strong>zero</strong>?</p>
 <div id="visualizing-local-and-global-extrema" class="section level3 hasAnchor" number="12.2.2">
 <h3><span class="header-section-number">12.2.2</span> Visualizing Local and Global Extrema<a href="applications-of-derivatives---workbook.html#visualizing-local-and-global-extrema" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>In this section we will interpret these functions and points of interest.</p>
-<p><img src="bookdown-demo_files/figure-html/four-extrema-types-wb-1.png" width="960" /></p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:four-extrema-types-wb"></span>
+<img src="bookdown-demo_files/figure-html/four-extrema-types-wb-1.png" alt="A four-panel figure showing four types of extrema behavior. Panel A shows the cubic function f(x)=x^3-3x^2+2 on an interval from about -1 to 3.5. The curve rises to a local maximum near x=0, then falls to a local minimum near x=2, and then rises again. Panel B shows the parabola f(x)=-(x-3)^2+5 on the interval [0,6]. The graph is symmetric about x=3, reaches its highest point at the center, and decreases toward both endpoints. Panel C shows the cubic function f(x)=x^3 from about -2 to 2. The graph flattens at x=0 with a horizontal tangent but continues increasing through that point, so there is no local maximum or minimum. Panel D shows the sine function f(x)=sin(x) on [0, 2pi]. The curve starts at 0, rises to a maximum near pi over 2, falls through 0 at pi, reaches a minimum near 3pi over 2, and returns to 0 at 2pi." width="95%" />
+<p class="caption">
+Figure 12.1: Four example graphs illustrating different extrema behaviors: a cubic with a local maximum and minimum, a downward-opening parabola on a finite interval, a cubic with a horizontal tangent but no extremum, and a sine curve with repeating maxima and minima.
+</p>
+</div>
 <div id="visual-observations" class="section level4 unnumbered hasAnchor promptbox">
 <h4>Visual Observations<a href="applications-of-derivatives---workbook.html#visual-observations" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <table>
@@ -1461,7 +1466,12 @@ x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}
 <span class="math display">\[
 P(t) = -t^3 + 6t^2 - 9t + 20
 \]</span></p>
-<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-15-1.png" width="672" /></p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:population-model-curve"></span>
+<img src="bookdown-demo_files/figure-html/population-model-curve-1.png" alt="A graph of the function P(t) = -t^3 + 6t^2 - 9t + 20 for t between 0 and 5. The horizontal axis represents time t, and the vertical axis represents population P(t). The curve starts near a population of about 20 at t = 0, increases to a peak around t = 2, and then decreases steadily toward lower values by t = 5. The overall shape is a smooth curve that rises to a maximum and then falls." width="85%" />
+<p class="caption">
+Figure 12.2: Graph of a population model over time showing how the population changes according to a cubic function.
+</p>
+</div>
 <div id="prompts" class="section level4 unnumbered hasAnchor promptbox">
 <h4>Prompts<a href="applications-of-derivatives---workbook.html#prompts" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <ul>
@@ -1482,7 +1492,12 @@ P(t) = -t^3 + 6t^2 - 9t + 20
 <h3><span class="header-section-number">12.2.7</span> Investigating the Derivative<a href="applications-of-derivatives---workbook.html#investigating-the-derivative" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Now that you’ve visualized the population curve, let’s explore how its <strong>rate of change</strong> behaves.</p>
 <p>We’ll look at the derivative <span class="math inline">\(P&#39;(t)\)</span>, which tells us whether the population is growing or shrinking at any moment.</p>
-<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-16-1.png" width="672" /></p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:population-derivative-curve"></span>
+<img src="bookdown-demo_files/figure-html/population-derivative-curve-1.png" alt="A graph of the derivative function P'(t) = -3t^2 + 12t - 9 for t between 0 and 5. The horizontal axis represents time t and the vertical axis represents the rate of change of the population. The curve is a downward-opening parabola. It starts below zero, rises and crosses the horizontal axis near t = 1, reaches a maximum around t = 2, then decreases and crosses the horizontal axis again near t = 3, continuing downward afterward. A dashed horizontal line at zero highlights where the rate of change switches from negative to positive and back to negative." width="85%" />
+<p class="caption">
+Figure 12.3: Graph of the derivative of the population model, showing how the rate of change of the population varies over time.
+</p>
+</div>
 <div id="prompts-1" class="section level4 unnumbered hasAnchor promptbox">
 <h4>Prompts<a href="applications-of-derivatives---workbook.html#prompts-1" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <ul>
@@ -1544,7 +1559,12 @@ P(t) = -t^3 + 6t^2 - 9t + 20
 <h3><span class="header-section-number">12.2.9</span> Adding the Second Derivative<a href="applications-of-derivatives---workbook.html#adding-the-second-derivative" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Next, explore the <strong>curvature</strong> of population change — whether the growth rate itself is speeding up or slowing down.</p>
 <p>We’ll look at the second derivative <span class="math inline">\(P&#39;&#39;(t)\)</span>.</p>
-<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-17-1.png" width="672" /></p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:population-second-derivative-curve"></span>
+<img src="bookdown-demo_files/figure-html/population-second-derivative-curve-1.png" alt="A graph of the second derivative function P''(t) = -6t + 12 for t between 0 and 5. The horizontal axis represents time t and the vertical axis represents the rate at which the population's rate of change is increasing or decreasing. The graph is a straight line with negative slope. It starts above zero at t = 0, crosses the horizontal axis at t = 2, and continues below zero afterward. The positive values indicate the population growth is accelerating, while negative values indicate the growth is decelerating. A dashed horizontal line at zero highlights the point where the concavity changes." width="85%" />
+<p class="caption">
+Figure 12.4: Graph of the second derivative of the population model, showing how the curvature and acceleration of population change vary over time.
+</p>
+</div>
 <div id="prompts-2" class="section level4 unnumbered hasAnchor promptbox">
 <h4>Prompts<a href="applications-of-derivatives---workbook.html#prompts-2" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <ul>
@@ -1939,7 +1959,7 @@ To know concavity or inflection points, though, you need <span class="math inlin
 <p>Each problem includes three reveal options:<br />
 - <strong>Check 1st derivative</strong><br />
 - <strong>Check 2nd derivative</strong><br />
-- <strong>Full solution</strong> at the end password will be shared at the end of clas</p>
+- <strong>Full solution</strong> at the end password will be shared at the end of class</p>
 <hr />
 <div id="challenge-1-hidden-factor-structure" class="section level3 unnumbered hasAnchor">
 <h3><strong>Challenge 1 — Hidden Factor Structure</strong><a href="applications-of-derivatives---workbook.html#challenge-1-hidden-factor-structure" class="anchor-section" aria-label="Anchor link to header"></a></h3>
@@ -2324,7 +2344,12 @@ x = 2 + \sqrt6 \approx 4.449.
 - Decreasing → increasing → decreasing<br />
 - Inflection → concave down → inflection<br />
 - Exponential factor affects magnitude but not sign behavior</p>
-<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-18-1.png" width="672" /></p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:challenge-1-concavity"></span>
+<img src="bookdown-demo_files/figure-html/challenge-1-concavity-1.png" alt="A graph of the function f(x) = (x^2 - 4)e to the power negative x over an interval from about negative 2.1 to 8. The curve begins high on the left, decreases to a local minimum near x = -1.24, then rises and changes concavity near x = -0.45. It continues upward to a local maximum near x = 3.24, then bends downward and changes concavity again near x = 4.45 before decreasing toward zero as x increases. Two critical points are marked and labeled: a local minimum at x = 1 minus square root of 5 and a local maximum at x = 1 plus square root of 5. Two inflection points are also marked and labeled at x = 2 minus square root of 6 and x = 2 plus square root of 6. Background shading indicates concavity: the graph is concave up to the left of the first inflection point, concave down between the inflection points, and concave up again to the right of the second inflection point." width="90%" />
+<p class="caption">
+Figure 12.5: Graph of the function f(x) = (x^2 - 4)e^{-x} with local extrema, inflection points, and shaded intervals showing where the graph is concave up or concave down.
+</p>
+</div>
 <hr />
 <p><strong>CHALLEGE 2 Solution</strong></p>
 <p><strong>1. First derivative analysis</strong></p>
@@ -2389,7 +2414,12 @@ f&#39;&#39;(x)=\frac{6x^2 + 2}{(x^2 - 1)^3}
 </li>
 <li>Function breaks naturally into <strong>three separate branches</strong></li>
 </ul>
-<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-19-1.png" width="672" /></p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:challenge-2-rational-function"></span>
+<img src="bookdown-demo_files/figure-html/challenge-2-rational-function-1.png" alt="A graph of the function f(x) = 1 divided by the quantity x squared minus 1, shown from about x = negative 6 to x = 6. The graph has three separate branches because the function is undefined at x = negative 1 and x = 1. Dashed vertical lines mark these asymptotes. On the middle interval between negative 1 and 1, the curve stays below the x-axis, reaches a local maximum at x = 0 with value negative 1, and decreases sharply toward negative infinity as it approaches each asymptote. On the outer intervals, the left and right branches are above the x-axis, approach positive infinity near the asymptotes, and approach 0 from above as x moves farther from the origin. Background shading indicates concavity: the graph is concave up for x less than negative 1, concave down between negative 1 and 1, and concave up for x greater than 1." width="90%" />
+<p class="caption">
+Figure 12.6: Graph of the rational function f(x) = 1/(x^2 - 1) showing its local maximum, vertical asymptotes, and intervals of concavity.
+</p>
+</div>
 <p><strong>CHALLEGE 3 Solution</strong></p>
 <p><strong>1. First derivative and monotonicity</strong></p>
 <p><span class="math display">\[
@@ -2451,7 +2481,12 @@ x = 0, \qquad x = 2
 <li>The point <span class="math inline">\(x = 0\)</span> is especially interesting: the slope is zero there but the graph is still decreasing.</li>
 </ul>
 <p>This gives the characteristic “flatten → dip → rise” shape typical of a quartic with asymmetric coefficients.</p>
-<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-20-1.png" width="672" /></p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:challenge-3-polynomial"></span>
+<img src="bookdown-demo_files/figure-html/challenge-3-polynomial-1.png" alt="A graph of the function f(x) = x to the fourth minus 4x cubed, shown from about x = negative 4 to x = 6. The curve passes through the origin with a flat horizontal tangent, but this point is not a maximum or minimum. After x = 0, the graph bends downward, then changes concavity again near x = 2, continues falling to a local minimum at x = 3, and then rises sharply for larger x. Two critical points are marked: a flat point at x = 0 and a local minimum at x = 3. Two inflection points are marked at x = 0 and x = 2, where the graph changes concavity. Background shading indicates concavity: the graph is concave up for x less than 0, concave down between x = 0 and x = 2, and concave up again for x greater than 2." width="90%" />
+<p class="caption">
+Figure 12.7: Graph of the polynomial function f(x) = x^4 - 4x^3 showing a flat critical point, a local minimum, inflection points, and shaded intervals of concavity.
+</p>
+</div>
 <hr />
 <p><strong>CHALLEGE 4 Solution</strong></p>
 <p>The first derivative is</p>
@@ -2488,7 +2523,12 @@ These give the <strong>two real inflection points</strong> of the function.</p>
 </ul>
 <p><strong>Summary:</strong><br />
 The function rises smoothly for all <span class="math inline">\(x\)</span>, flattens at <span class="math inline">\(x=1\)</span> without forming an extremum, and changes concavity <strong>twice</strong>, creating two inflection points while remaining always increasing.</p>
-<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-21-1.png" width="672" /></p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:challenge-4-exponential-rational"></span>
+<img src="bookdown-demo_files/figure-html/challenge-4-exponential-rational-1.png" alt="A graph of the function f(x) = e to the power x divided by the quantity x squared plus 1, shown from about x = negative 2 to x = 5. The curve stays above the x-axis and generally increases as x increases. It changes concavity near x = negative 0.18, becoming concave down, and then changes concavity again at x = 1, where there is also a flat point with a horizontal tangent. After x = 1, the graph becomes concave up again and rises steeply to the right. Two inflection points are marked: one near x = negative 0.18 and one at x = 1. The point at x = 1 is also marked as a flat point. Background shading indicates concavity: the graph is concave up to the left of the first inflection point, concave down between the two inflection points, and concave up again to the right of x = 1." width="90%" />
+<p class="caption">
+Figure 12.8: Graph of the function f(x) = e^x / (x^2 + 1) showing inflection points, a flat point, and shaded intervals of concavity.
+</p>
+</div>
 <hr />
 <p><strong>CHALLEGE 5 Solution</strong></p>
 <p>The derivative<br />
@@ -2518,7 +2558,12 @@ This occurs at <span class="math inline">\(x=\ln 2\)</span>, which is an inflect
 \lim_{x\to +\infty} f(x)=50.
 \]</span></p>
 <p>The resulting graph has a smooth S-shape, increases for all <span class="math inline">\(x\)</span>, and levels off near these two horizontal limits.</p>
-<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-22-1.png" width="672" /></p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:challenge-5-logistic-function"></span>
+<img src="bookdown-demo_files/figure-html/challenge-5-logistic-function-1.png" alt="A graph of the function f(x) = 50 divided by the quantity 1 plus 2e to the power negative x, shown from about x = negative 6 to x = 6. The curve is an increasing S-shaped logistic graph. It starts near 0 on the left, rises gradually at first, then more steeply through the middle, and levels off near 50 on the right. A single inflection point is marked at x = ln(2), where the graph changes from concave up to concave down. Background shading indicates concavity: the graph is concave up for x less than ln(2) and concave down for x greater than ln(2)." width="90%" />
+<p class="caption">
+Figure 12.9: Graph of the function f(x) = 50 / (1 + 2e^{-x}) showing its S-shaped growth, inflection point, and shaded intervals of concavity.
+</p>
+</div>
 </div>
 <!-- Password gate -->
 <form onsubmit="unlock_solutions(); return false;" id="gate_block" style="margin-top:0.75rem;">
