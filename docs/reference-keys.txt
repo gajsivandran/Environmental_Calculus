@@ -411,6 +411,7 @@ your-expectations-of-me
 syllabus-highlights
 assessments
 acedemic-integrity
+ai-in-this-class
 late-assessment-missed-assessment-policy
 test-retakes-policy
 class-notes

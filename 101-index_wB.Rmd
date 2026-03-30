@@ -43,7 +43,7 @@
 **Discussion**
 In small groups:
 
-![Figure: Declared Majorsw](images/declared_majors.png){fig.alt="Chart titled 'Declared Majors' showing the distribution of student majors. The largest group is marine biology at about 31 percent, followed by civil and environmental resource management at 26 percent, and pre-science at 16 percent. Smaller groups include pre-environment, environmental studies, pre-social science, and oceanography, each under 5 percent. Several additional majors such as wildlife conservation, biology, anthropology, and earth and space sciences each make up about 1 percent." style="float:right; width:200px; margin:10px;"}
+![Figure: Declared Majors](images/declared_majors.png){fig.alt="Chart titled 'Declared Majors' showing the distribution of student majors. The largest group is marine biology at about 31 percent, followed by civil and environmental resource management at 26 percent, and pre-science at 16 percent. Smaller groups include pre-environment, environmental studies, pre-social science, and oceanography, each under 5 percent. Several additional majors such as wildlife conservation, biology, anthropology, and earth and space sciences each make up about 1 percent." style="float:right; width:200px; margin:10px;"}
 
 
 
@@ -55,11 +55,11 @@ In small groups:
 
 Class Make Up
 
-- Freshman 25%
-- Sophomores 45%
-- Juniors 20%
-- Seniors 10%
-- Transfer Students 15% 
+- Freshman 15%
+- Sophomores 50%
+- Juniors 30%
+- Seniors 5%
+- Transfer Students 10% 
 
 
 
@@ -86,6 +86,7 @@ What do you see in this graph?
 ## My Expectations of You
 
 ![Figure: Endure](images/endure.png){fig.alt="Book cover of 'Endure' by Alex Hutchinson, featuring a runner on a track beneath a dark background with the title prominently displayed." style="float:right; width:100px; margin:10px;"}
+\newline
 
 **Objective 1** : The ability to apply calculus to the natural system
 
@@ -116,6 +117,8 @@ In a small group make 2 lists
 ### Assessments
 
 ![Figure: Course Grading Breakdown](images/assessmentpie.png){fig.alt="Pie chart titled 'Course Grading Breakdown' showing that tests make up 70 percent of the grade, while participation, homework, and project each contribute 10 percent." style="float:right; width:400px; margin:10px;"}
+
+<br>
 
 **Preparation & Participation** [10%]
 
@@ -151,7 +154,8 @@ Why do you think there is so much weight on tests and participation?
 
 ### Acedemic Integrity
 
-This class has been designed to reward you for doing your **own** work
+This class has been designed to reward you for doing your **own** work.
+
 Tests will be relatively straightforward if you make the effort on the in-class and homework assessments
 
 Using these resources will only make studying for tests harder. Many of these resources give you the *illusion* of understanding - but the reality is quite different.
@@ -160,7 +164,14 @@ Using these resources will only make studying for tests harder. Many of these re
 
 ![Figure: Academic integrity](images/chegg.png){fig.alt="Logos of Chegg, YouTube, and ChatGPT displayed side by side, representing different online platforms used for learning and information access." style="width:300px; margin:10px;"}
 
+### AI in this class
+::: promptbox
 
+**Class discussion**
+
+<br><br><br><br><br><br><br><br><br>
+
+:::
 
 
 ### Late Assessment / Missed Assessment Policy
@@ -184,6 +195,8 @@ To accommodate for this, 5% of the total preparation and participation assessmen
 What do we consider **exceptional circumstances**?
 
 ![Figure: Dog ate my homework](images/excuses.png){fig.alt="Cartoon of a student surrounded by exaggerated excuses for not doing homework, including a computer showing '404 homework not found,' an alarm clock, a tangled mess, a UFO, an alien, and a calendar with homework crossed out. A dog sits at the desk with tissues while the student looks overwhelmed, suggesting avoidance and distraction." style="float:left; width:300px; margin:10px;"}
+<br><br><br><br><br><br><br><br><br><br><br><br>
+
 :::
 
 ### Test Retakes Policy
@@ -218,6 +231,7 @@ I will always try to hang around for 30mins or so after class to answer any ques
 Office hours will be posted on Canvas as soon as they are set.
 
 <br><br><br>
+
 
 
 ## Questions?
