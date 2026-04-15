@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>More Mixed-Rule Derivative Practice | Environmental Calculus - Active Learning with Case Studies</title>
+  <title>Chapter 14 Bonus Applications | Environmental Calculus - Active Learning with Case Studies</title>
   <meta name="description" content="A textbook companion to the Univeristy of Washington QSci 291 class" />
   <meta name="generator" content="bookdown 0.43 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="More Mixed-Rule Derivative Practice | Environmental Calculus - Active Learning with Case Studies" />
+  <meta property="og:title" content="Chapter 14 Bonus Applications | Environmental Calculus - Active Learning with Case Studies" />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="A textbook companion to the Univeristy of Washington QSci 291 class" />
   <meta name="github-repo" content="rstudio/bookdown-demo" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="More Mixed-Rule Derivative Practice | Environmental Calculus - Active Learning with Case Studies" />
+  <meta name="twitter:title" content="Chapter 14 Bonus Applications | Environmental Calculus - Active Learning with Case Studies" />
   
   <meta name="twitter:description" content="A textbook companion to the Univeristy of Washington QSci 291 class" />
   
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="test-2-review-material.html"/>
-<link rel="next" href="test-3-review-material.html"/>
+<link rel="prev" href="test-4-review-material.html"/>
+
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -1212,241 +1212,401 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="more-mixed-rule-derivative-practice" class="section level1 unnumbered hasAnchor">
-<h1>More Mixed-Rule Derivative Practice<a href="more-mixed-rule-derivative-practice.html#more-mixed-rule-derivative-practice" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p><strong>Instructions.</strong> For each function, find <span class="math inline">\(f&#39;(x)\)</span> <strong>without simplifying</strong>.<br />
-Assume <span class="math inline">\(y=y(x)\)</span> (implicit differentiation when needed).<br />
-Click to reveal each step of the structured solution.</p>
-<hr />
-<div id="challenge-q1-1" class="section level3 unnumbered hasAnchor">
-<h3>Challenge Q1<a href="more-mixed-rule-derivative-practice.html#challenge-q1-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p><span class="math display">\[
-f_1(x)=\frac{(x+y^2)\,e^{\cos(xy)}}{1+x^2}.
-\]</span></p>
-<details>
-<summary>
-<strong>Step 1</strong>
-</summary>
-<span class="math display">\[
-N(x)=(x+y^2)e^{\cos(xy)},\qquad D(x)=1+x^2.
-\]</span>
-<span class="math display">\[
-f_1&#39;(x)=\frac{D(x)N&#39;(x)-N(x)D&#39;(x)}{[D(x)]^2}.
-\]</span>
-</details>
-<details>
-<summary>
-<strong>Step 2</strong>
-</summary>
-<span class="math display">\[
-A(x)=x+y^2,\quad A&#39;(x)=1+2y\,y&#39;,\qquad
-B(x)=e^{\cos(xy)},\quad B&#39;(x)=e^{\cos(xy)}(-\sin(xy))(y+x\,y&#39;).
-\]</span>
-<span class="math display">\[
-N&#39;(x)=(1+2y\,y&#39;)e^{\cos(xy)}+(x+y^2)e^{\cos(xy)}[-\sin(xy)](y+x\,y&#39;).
-\]</span>
-</details>
-<details>
-<summary>
-<strong>Step 3</strong>
-</summary>
-<span class="math display">\[
-D&#39;(x)=2x.
-\]</span>
-</details>
-<details>
-<summary>
-<strong>Step 4</strong>
-</summary>
-<span class="math display">\[
-\boxed{f_1&#39;(x)=
-\frac{(1+x^2)\!\left[(1+2y\,y&#39;)e^{\cos(xy)}+(x+y^2)e^{\cos(xy)}[-\sin(xy)](y+x\,y&#39;)\right]
--2x(x+y^2)e^{\cos(xy)}}{(1+x^2)^2}}.
-\]</span>
-</details>
+<div id="bonus-applications" class="section level1 hasAnchor" number="14">
+<h1><span class="header-section-number">Chapter 14</span> Bonus Applications<a href="bonus-applications.html#bonus-applications" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>With Artemis 11 landing last week - I wanted to use the flight as a way to apply some of the concepts we have been covering in class.</p>
+<p>I know I promised no (low) physics in this class. But I think we can all agree that going to the moon and back is a special case.</p>
+<div id="section-1-artemis-takeoff-simplified-model" class="section level2 hasAnchor" number="14.1">
+<h2><span class="header-section-number">14.1</span> Section 1: Artemis Takeoff 🚀 (Simplified Model)<a href="#section-1-artemis-takeoff-simplified-model" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="context" class="section level3 hasAnchor" number="14.1.1">
+<h3><span class="header-section-number">14.1.1</span> Context<a href="bonus-applications.html#context" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>During the first two minutes of the Artemis II launch, the rocket accelerates upward and reaches tens of kilometers above Earth.</p>
+<p>To study this motion, we’ll use a simplified model for the rocket’s height.</p>
 <hr />
 </div>
-<div id="challenge-q2-1" class="section level3 unnumbered hasAnchor">
-<h3>Challenge Q2<a href="more-mixed-rule-derivative-practice.html#challenge-q2-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="model" class="section level3 hasAnchor" number="14.1.2">
+<h3><span class="header-section-number">14.1.2</span> Model<a href="bonus-applications.html#model" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p><span class="math display">\[
-f_2(x)=(x^2+y)\,\sin(\ln(1+xy)).
+h(t) = 0.00333\, t^2
 \]</span></p>
-<details>
-<summary>
-<strong>Step 1</strong>
-</summary>
-<span class="math display">\[
-f_2(x)=A(x)\,B(x),\quad A(x)=x^2+y,\; B(x)=\sin(\ln(1+xy)).
-\]</span>
-<span class="math display">\[
-f_2&#39;(x)=A&#39;(x)B(x)+A(x)B&#39;(x).
-\]</span>
-</details>
-<details>
-<summary>
-<strong>Step 2</strong>
-</summary>
-<span class="math display">\[
-A&#39;(x)=2x+y&#39;.
-\]</span>
-<span class="math display">\[
-B&#39;(x)=\cos(\ln(1+xy))\cdot\frac{1}{1+xy}\cdot(y+x\,y&#39;)
-=\frac{\cos(\ln(1+xy))(y+x\,y&#39;)}{1+xy}.
-\]</span>
-</details>
-<details>
-<summary>
-<strong>Step 3</strong>
-</summary>
-<span class="math display">\[
-\boxed{f_2&#39;(x)=(2x+y&#39;)\sin(\ln(1+xy))
-+(x^2+y)\frac{\cos(\ln(1+xy))(y+x\,y&#39;)}{1+xy}}.
-\]</span>
-</details>
+<p>where:</p>
+<ul>
+<li><span class="math inline">\(t\)</span> = time (seconds after liftoff)<br />
+</li>
+<li><span class="math inline">\(h(t)\)</span> = height (kilometers)<br />
+</li>
+<li><span class="math inline">\(0 \le t \le 120\)</span></li>
+</ul>
 <hr />
 </div>
-<div id="challenge-q3-1" class="section level3 unnumbered hasAnchor">
-<h3>Challenge Q3<a href="more-mixed-rule-derivative-practice.html#challenge-q3-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p><span class="math display">\[
-f_3(x)=\frac{\ln(x+y)\,e^{xy}}{\cos y}.
-\]</span></p>
-<details>
-<summary>
-<strong>Step 1</strong>
-</summary>
-<span class="math display">\[
-N(x)=\ln(x+y)e^{xy},\quad D(x)=\cos y.
-\]</span>
-<span class="math display">\[
-f_3&#39;(x)=\frac{D(x)N&#39;(x)-N(x)D&#39;(x)}{[D(x)]^2}.
-\]</span>
-</details>
-<details>
-<summary>
-<strong>Step 2</strong>
-</summary>
-<span class="math display">\[
-A(x)=\ln(x+y),\; A&#39;(x)=\frac{1+y&#39;}{x+y},\quad
-B(x)=e^{xy},\; B&#39;(x)=e^{xy}(y+x\,y&#39;).
-\]</span>
-<span class="math display">\[
-N&#39;(x)=A&#39;(x)B(x)+A(x)B&#39;(x)
-=\frac{1+y&#39;}{x+y}e^{xy}+\ln(x+y)e^{xy}(y+x\,y&#39;).
-\]</span>
-</details>
-<details>
-<summary>
-<strong>Step 3</strong>
-</summary>
-<span class="math display">\[
-D&#39;(x)=-\sin y\,y&#39;.
-\]</span>
-</details>
-<details>
-<summary>
-<strong>Step 4</strong>
-</summary>
-<span class="math display">\[
-\boxed{f_3&#39;(x)=
-\frac{\cos y\!\left[\frac{1+y&#39;}{x+y}e^{xy}+\ln(x+y)e^{xy}(y+x\,y&#39;)\right]
-+\sin y\,y&#39;\ln(x+y)e^{xy}}{(\cos y)^2}}.
-\]</span>
-</details>
+<div id="part-a-understanding-the-function" class="section level3 hasAnchor" number="14.1.3">
+<h3><span class="header-section-number">14.1.3</span> Part A: Understanding the Function<a href="bonus-applications.html#part-a-understanding-the-function" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ol style="list-style-type: decimal">
+<li><p>What does <span class="math inline">\(h(0)\)</span> represent in this context?</p></li>
+<li><p>Compute:</p>
+<ul>
+<li><span class="math inline">\(h(60)\)</span></li>
+<li><span class="math inline">\(h(120)\)</span></li>
+</ul></li>
+<li><p>What are the <strong>units</strong> of:</p>
+<ul>
+<li><span class="math inline">\(h(t)\)</span>?</li>
+<li><span class="math inline">\(t\)</span>?</li>
+</ul></li>
+</ol>
 <hr />
 </div>
-<div id="challenge-q4-1" class="section level3 unnumbered hasAnchor">
-<h3>Challenge Q4<a href="more-mixed-rule-derivative-practice.html#challenge-q4-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p><span class="math display">\[
-f_4(x)=e^{y}\cdot\frac{x+\sin(xy)}{1+y^2}.
-\]</span></p>
-<details>
-<summary>
-<strong>Step 1</strong>
-</summary>
-<span class="math display">\[
-f_4(x)=P(x)\,Q(x),\quad P(x)=e^{y},\quad Q(x)=\frac{x+\sin(xy)}{1+y^2}.
-\]</span>
-<span class="math display">\[
-f_4&#39;(x)=P&#39;(x)Q(x)+P(x)Q&#39;(x).
-\]</span>
-</details>
-<details>
-<summary>
-<strong>Step 2</strong>
-</summary>
-<span class="math display">\[
-P&#39;(x)=e^{y}y&#39;.
-\]</span>
-<span class="math display">\[
-Q(x)=\frac{R(x)}{S(x)},\quad R(x)=x+\sin(xy),\; S(x)=1+y^2.
-\]</span>
-<span class="math display">\[
-R&#39;(x)=1+\cos(xy)(y+x\,y&#39;),\quad S&#39;(x)=2y\,y&#39;.
-\]</span>
-<span class="math display">\[
-Q&#39;(x)=\frac{R&#39;S-RS&#39;}{S^2}
-=\frac{(1+\cos(xy)(y+x\,y&#39;))(1+y^2)-(x+\sin(xy))(2y\,y&#39;)}{(1+y^2)^2}.
-\]</span>
-</details>
-<details>
-<summary>
-<strong>Step 3</strong>
-</summary>
-<span class="math display">\[
-\boxed{f_4&#39;(x)=
-e^{y}y&#39;\frac{x+\sin(xy)}{1+y^2}
-+e^{y}\frac{(1+\cos(xy)(y+x\,y&#39;))(1+y^2)-(x+\sin(xy))(2y\,y&#39;)}{(1+y^2)^2}}.
-\]</span>
-</details>
+<div id="part-b-average-rate-of-change-aroc" class="section level3 hasAnchor" number="14.1.4">
+<h3><span class="header-section-number">14.1.4</span> Part B: Average Rate of Change (AROC)<a href="bonus-applications.html#part-b-average-rate-of-change-aroc" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ol start="4" style="list-style-type: decimal">
+<li>Compute the average rate of change of height:</li>
+</ol>
+<ol style="list-style-type: lower-alpha">
+<li>From <span class="math inline">\(t=0\)</span> to <span class="math inline">\(t=60\)</span><br />
+</li>
+<li>From <span class="math inline">\(t=60\)</span> to <span class="math inline">\(t=120\)</span></li>
+</ol>
+<hr />
+<ol start="5" style="list-style-type: decimal">
+<li>Interpretation:</li>
+</ol>
+<ul>
+<li>What does the average rate of change represent physically?<br />
+</li>
+<li>Is the rocket moving at constant speed or speeding up? Explain.</li>
+</ul>
 <hr />
 </div>
-<div id="challenge-q5-1" class="section level3 unnumbered hasAnchor">
-<h3>Challenge Q5<a href="more-mixed-rule-derivative-practice.html#challenge-q5-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="part-c-zooming-in-toward-instantaneous-velocity" class="section level3 hasAnchor" number="14.1.5">
+<h3><span class="header-section-number">14.1.5</span> Part C: Zooming In (Toward Instantaneous Velocity)<a href="bonus-applications.html#part-c-zooming-in-toward-instantaneous-velocity" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ol start="6" style="list-style-type: decimal">
+<li>Estimate the velocity at <span class="math inline">\(t=60\)</span> using smaller intervals:</li>
+</ol>
+<ul>
+<li>From <span class="math inline">\(t=60\)</span> to <span class="math inline">\(t=61\)</span><br />
+</li>
+<li>From <span class="math inline">\(t=60\)</span> to <span class="math inline">\(t=60.5\)</span></li>
+</ul>
+<hr />
+<ol start="7" style="list-style-type: decimal">
+<li>What value are these results approaching?</li>
+</ol>
+<p>👉 What does this represent physically?</p>
+<hr />
+</div>
+<div id="part-d-derivative-velocity-function" class="section level3 hasAnchor" number="14.1.6">
+<h3><span class="header-section-number">14.1.6</span> Part D: Derivative (Velocity Function)<a href="bonus-applications.html#part-d-derivative-velocity-function" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ol start="8" style="list-style-type: decimal">
+<li>The derivative of a function can be defined using limits:</li>
+</ol>
 <p><span class="math display">\[
-f_5(x)=\frac{(x^2+1)\tan(xy)}{e^{x+y}}.
+f&#39;(x)=\lim_{h\to 0}\frac{f(x+h)-f(x)}{h}
 \]</span></p>
+<p>Use this definition to find <span class="math inline">\(h&#39;(t)\)</span> for:</p>
+<p><span class="math display">\[
+h(t) = 0.00333\, t^2
+\]</span></p>
+<ul>
+<li>First compute <span class="math inline">\(h(t+h)\)</span><br />
+</li>
+<li>Form the difference quotient<br />
+</li>
+<li>Simplify<br />
+</li>
+<li>Take the limit as <span class="math inline">\(h \to 0\)</span></li>
+</ul>
+<hr />
+<ol start="9" style="list-style-type: decimal">
+<li>Write your final expression for <span class="math inline">\(h&#39;(t)\)</span>.</li>
+</ol>
+<hr />
+<ol start="10" style="list-style-type: decimal">
+<li>Now compute:</li>
+</ol>
+<ul>
+<li><span class="math inline">\(h&#39;(60)\)</span><br />
+</li>
+<li><span class="math inline">\(h&#39;(120)\)</span></li>
+</ul>
+<hr />
+<ol start="11" style="list-style-type: decimal">
+<li>Interpretation:</li>
+</ol>
+<ul>
+<li>What does <span class="math inline">\(h&#39;(t)\)</span> represent in this context?<br />
+</li>
+<li>How is the rocket’s velocity changing over time?</li>
+</ul>
+<hr />
+</div>
+<div id="part-e-acceleration-second-derivative" class="section level3 hasAnchor" number="14.1.7">
+<h3><span class="header-section-number">14.1.7</span> Part E: Acceleration (Second Derivative)<a href="bonus-applications.html#part-e-acceleration-second-derivative" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ol start="12" style="list-style-type: decimal">
+<li>The second derivative can also be defined using limits:</li>
+</ol>
+<p><span class="math display">\[
+f&#39;&#39;(x)=\lim_{h\to 0}\frac{f&#39;(x+h)-f&#39;(x)}{h}
+\]</span></p>
+<p>Use this definition to find <span class="math inline">\(h&#39;&#39;(t)\)</span>.</p>
+<hr />
+<ol start="13" style="list-style-type: decimal">
+<li>Write your final expression for <span class="math inline">\(h&#39;&#39;(t)\)</span>.</li>
+</ol>
+<hr />
+<ol start="14" style="list-style-type: decimal">
+<li>What does this value represent physically?</li>
+</ol>
+<hr />
+<ol start="15" style="list-style-type: decimal">
+<li>Is the acceleration increasing, decreasing, or constant?</li>
+</ol>
+<hr />
+</div>
+<div id="part-f-graphical-thinking" class="section level3 hasAnchor" number="14.1.8">
+<h3><span class="header-section-number">14.1.8</span> Part F: Graphical Thinking<a href="bonus-applications.html#part-f-graphical-thinking" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-13-1.png" width="672" /></p>
+<ol start="16" style="list-style-type: decimal">
+<li>On your graph:</li>
+</ol>
+<ul>
+<li>Draw a <strong>secant line</strong> from <span class="math inline">\(t=0\)</span> to <span class="math inline">\(t=120\)</span>
+<ul>
+<li>What does that line represent?</li>
+</ul></li>
+<li>Draw a <strong>tangent line</strong> at <span class="math inline">\(t=25\)</span> and <span class="math inline">\(t=125\)</span>
+<ul>
+<li>What do those lines represent?</li>
+</ul></li>
+</ul>
+<hr />
+<ol start="17" style="list-style-type: decimal">
+<li>Describe:</li>
+</ol>
+<ul>
+<li>How the slope changes over time<br />
+</li>
+<li>Whether the graph is concave up or down</li>
+</ul>
+<hr />
+<p>18.Below is an image of g forcing testing that measured the actual g-forces felt by astronauts during the first 10mins of a mission.</p>
+<p><img src="images/pilot_gs.png" fig.alt="line graph showing acceleration (in meters per second squared) versus mission elapsed time (in seconds) for a rocket launch. The x-axis runs from 0 to about 540 seconds, and the y-axis ranges from 0 to about 35 m/s². The acceleration starts around 10 m/s² at launch (P1), increases with small fluctuations to about 18 m/s², then dips slightly (P2). It rises sharply to a peak near 24 m/s² before dropping suddenly to around 9 m/s² at about 120 seconds (P3). After this drop, acceleration gradually increases over time, forming a smooth upward curve, reaching about 29–30 m/s² near 450–480 seconds. It then levels off briefly before dropping abruptly to near 0 m/s² around 520 seconds (P5). Several vertical dashed lines mark key time points labeled A through G along the timeline, and specific points on the curve are labeled P1 through P5." alt="Figure: Acceleration forces felt by astronauts during takeoff." />
+Describe:</p>
+<ul>
+<li>Describe the concavity of this plot/</li>
+</ul>
+<p>Sketch the derivative of this graph.
+Challenge:</p>
+<ul>
+<li>Can you take a guess at which might be happening at P2 and P3?</li>
+<li>At P5, why does the acceleration the astronauts feel drop to zero? Any idea why?</li>
+</ul>
+<ol start="19" style="list-style-type: decimal">
+<li></li>
+</ol>
+<p>Below is the height above the earth’s surface of the re-entry vehicle over time.</p>
+<p><img src="images/entry-sequence.jpg" fig.alt="A diagram showing a spacecraft’s descent profile over time, with altitude (in feet) on the vertical axis up to 400,000 feet and elapsed time (in minutes) on the horizontal axis from 0 to about 13 minutes. The trajectory begins at high altitude (around 400,000 feet) and descends steeply. Early in the descent, the spacecraft enters an “exo-atmospheric 3-axis control” phase, followed by a curved “loft” maneuver near 200,000 feet, where peak heating of about 5000°F occurs. The path then flattens briefly during “atmospheric flight” before continuing downward more gradually. Around 8–9 minutes, the spacecraft enters the “subsonic region.” Near 10 minutes, parachutes deploy in stages: first drogue chutes, then main chutes, slowing the descent significantly.In the final phase, labeled “touchdown roll control,” the spacecraft reorients before landing. The trajectory ends at ground level around 12–13 minutes with “touchdown,” shown with parachutes still attached.Several key phases are labeled along the path, and small capsule icons mark the vehicle’s position at different times." alt="Figure: Re-entry ." />
+- Sketch the derivative of this function
+- What does this derivative represent?
+-Sketch the second derivative?
+- What does this derivative represent?</p>
+</div>
+<div id="part-g-reflection" class="section level3 hasAnchor" number="14.1.9">
+<h3><span class="header-section-number">14.1.9</span> Part G: Reflection<a href="bonus-applications.html#part-g-reflection" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ol start="20" style="list-style-type: decimal">
+<li>In your own words:</li>
+</ol>
+<ul>
+<li>What is the difference between <strong>average rate of change</strong> and <strong>instantaneous rate of change</strong>?</li>
+</ul>
 <details>
 <summary>
-<strong>Step 1</strong>
+<strong>Solution</strong>
 </summary>
-<span class="math display">\[
-N(x)=(x^2+1)\tan(xy),\quad D(x)=e^{x+y}.
-\]</span>
-<span class="math display">\[
-f_5&#39;(x)=\frac{D(x)N&#39;(x)-N(x)D&#39;(x)}{[D(x)]^2}.
-\]</span>
-</details>
-<details>
-<summary>
-<strong>Step 2</strong>
-</summary>
-<span class="math display">\[
-A(x)=x^2+1,\; A&#39;(x)=2x,\quad
-B(x)=\tan(xy),\; B&#39;(x)=\sec^2(xy)(y+x\,y&#39;).
-\]</span>
-<span class="math display">\[
-N&#39;(x)=2x\tan(xy)+(x^2+1)\sec^2(xy)(y+x\,y&#39;).
-\]</span>
-</details>
-<details>
-<summary>
-<strong>Step 3</strong>
-</summary>
-<span class="math display">\[
-D&#39;(x)=e^{x+y}(1+y&#39;).
-\]</span>
-</details>
-<details>
-<summary>
-<strong>Step 4</strong>
-</summary>
-<span class="math display">\[
-\boxed{f_5&#39;(x)=
-\frac{e^{x+y}\!\left[2x\tan(xy)+(x^2+1)\sec^2(xy)(y+x\,y&#39;)\right]
--(x^2+1)\tan(xy)e^{x+y}(1+y&#39;)}{(e^{x+y})^2}}.
-\]</span>
+<p><strong>Answer Key: Bonus Applications — Artemis Takeoff</strong></p>
+<p>Given</p>
+<p><span class="math display">\[
+h(t)=0.00333t^2
+\]</span></p>
+<p>where <span class="math inline">\(t\)</span> is in seconds and <span class="math inline">\(h(t)\)</span> is in kilometers.</p>
+<hr />
+<p><strong>Part A: Understanding the Function</strong></p>
+<p><strong>1.</strong></p>
+<p><span class="math display">\[
+h(0)=0
+\]</span></p>
+<p>Interpretation: The rocket is on the launch pad at <span class="math inline">\(t=0\)</span>.</p>
+<hr />
+<p><strong>2.</strong></p>
+<p><span class="math display">\[
+h(60)=0.00333(3600)=11.988 \approx 11.99 \text{ km}
+\]</span></p>
+<p><span class="math display">\[
+h(120)=0.00333(14400)=47.952 \approx 47.95 \text{ km}
+\]</span></p>
+<hr />
+<p><strong>3.</strong></p>
+<ul>
+<li><span class="math inline">\(h(t)\)</span>: kilometers<br />
+</li>
+<li><span class="math inline">\(t\)</span>: seconds</li>
+</ul>
+<hr />
+<p><strong>Part B: Average Rate of Change (AROC)</strong></p>
+<p><strong>4a.</strong></p>
+<p><span class="math display">\[
+\frac{11.988-0}{60}=0.1998 \text{ km/s}
+\]</span></p>
+<p><strong>4b.</strong></p>
+<p><span class="math display">\[
+\frac{47.952-11.988}{60}=0.5994 \text{ km/s}
+\]</span></p>
+<hr />
+<p><strong>5.</strong></p>
+<p>Represents <strong>average velocity</strong>.</p>
+<p>Since the value increases, the rocket is <strong>speeding up</strong>.</p>
+<hr />
+<p><strong>Part C: Zooming In (Toward Instantaneous Velocity)</strong></p>
+<p><strong>6a.</strong></p>
+<p><span class="math display">\[
+h(61)=12.39093
+\]</span></p>
+<p><span class="math display">\[
+\frac{12.39093-11.988}{1}=0.40293 \text{ km/s}
+\]</span></p>
+<hr />
+<p><strong>6b.</strong></p>
+<p><span class="math display">\[
+h(60.5)=12.1886325
+\]</span></p>
+<p><span class="math display">\[
+\frac{12.1886325-11.988}{0.5}=0.401265 \text{ km/s}
+\]</span></p>
+<hr />
+<p><strong>7.</strong></p>
+<p>Approaching:</p>
+<p><span class="math display">\[
+0.3996 \text{ km/s}
+\]</span></p>
+<p>Interpretation: <strong>instantaneous velocity at <span class="math inline">\(t=60\)</span></strong>.</p>
+<hr />
+<p><strong>Part D: Derivative (Velocity Function)</strong></p>
+<p><strong>8.</strong></p>
+<p><span class="math display">\[
+h(t)=0.00333t^2
+\]</span></p>
+<p><span class="math display">\[
+h(t+h)=0.00333(t+h)^2
+\]</span></p>
+<p><span class="math display">\[
+=0.00333t^2+0.00666th+0.00333h^2
+\]</span></p>
+<p><span class="math display">\[
+\frac{h(t+h)-h(t)}{h}
+=\frac{0.00666th+0.00333h^2}{h}
+=0.00666t+0.00333h
+\]</span></p>
+<p><span class="math display">\[
+h&#39;(t)=\lim_{h\to 0}(0.00666t+0.00333h)
+=0.00666t
+\]</span></p>
+<hr />
+<p><strong>9.</strong></p>
+<p><span class="math display">\[
+h&#39;(t)=0.00666t
+\]</span></p>
+<hr />
+<p><strong>10.</strong></p>
+<p><span class="math display">\[
+h&#39;(60)=0.3996 \text{ km/s}
+\]</span></p>
+<p><span class="math display">\[
+h&#39;(120)=0.7992 \text{ km/s}
+\]</span></p>
+<hr />
+<p><strong>11.</strong></p>
+<p>Represents <strong>instantaneous velocity</strong>.</p>
+<p>Velocity increases over time → rocket is accelerating.</p>
+<hr />
+<p><strong>Part E: Acceleration (Second Derivative)</strong></p>
+<p><strong>12.</strong></p>
+<p><span class="math display">\[
+h&#39;(t)=0.00666t
+\]</span></p>
+<p><span class="math display">\[
+h&#39;(t+h)=0.00666t+0.00666h
+\]</span></p>
+<p><span class="math display">\[
+\frac{h&#39;(t+h)-h&#39;(t)}{h}
+=\frac{0.00666h}{h}=0.00666
+\]</span></p>
+<p><span class="math display">\[
+h&#39;&#39;(t)=0.00666
+\]</span></p>
+<hr />
+<p><strong>13.</strong></p>
+<p><span class="math display">\[
+h&#39;&#39;(t)=0.00666
+\]</span></p>
+<hr />
+<p><strong>14.</strong></p>
+<p>Represents <strong>acceleration</strong>.</p>
+<hr />
+<p><strong>15.</strong></p>
+<p>Acceleration is <strong>constant</strong>.</p>
+<hr />
+<p><strong>Part F: Graphical Thinking</strong></p>
+<p><strong>16.</strong></p>
+<ul>
+<li>Secant line → <strong>average velocity</strong> over the interval<br />
+</li>
+<li>Tangent line → <strong>instantaneous velocity</strong> at a point</li>
+</ul>
+<p><span class="math display">\[
+h&#39;(25)=0.1665 \text{ km/s}
+\]</span></p>
+<p><span class="math display">\[
+h&#39;(125)=0.8325 \text{ km/s}
+\]</span></p>
+<hr />
+<p><strong>17.</strong></p>
+<ul>
+<li>Slope increases over time<br />
+</li>
+<li>Graph is <strong>concave up</strong></li>
+</ul>
+<hr />
+<p><strong>18. G-force graph</strong></p>
+<ul>
+<li>Concavity changes throughout<br />
+</li>
+<li>Derivative represents <strong>rate of change of acceleration (jerk)</strong></li>
+</ul>
+<p><strong>P2/P3:</strong> likely staging or thrust changes<br />
+<strong>P5:</strong> astronauts experience <strong>weightlessness (free fall)</strong></p>
+<hr />
+<p><strong>19. Re-entry graph</strong></p>
+<ul>
+<li>First derivative → <strong>velocity (negative during descent)</strong><br />
+</li>
+<li>Second derivative → <strong>acceleration</strong></li>
+</ul>
+<hr />
+<p><strong>Part G: Reflection</strong></p>
+<p><strong>20.</strong></p>
+<ul>
+<li>Average rate of change = change over an interval<br />
+</li>
+<li>Instantaneous rate of change = rate at a single point</li>
+</ul>
+<p>In this context:</p>
+<ul>
+<li>AROC = average velocity<br />
+</li>
+<li>IROC = instantaneous velocity</li>
+</ul>
 </details>
 
+</div>
 </div>
 </div>
             </section>
@@ -1454,8 +1614,8 @@ D&#39;(x)=e^{x+y}(1+y&#39;).
           </div>
         </div>
       </div>
-<a href="test-2-review-material.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="test-3-review-material.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="test-4-review-material.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -1486,7 +1646,7 @@ gitbook.start({
     "size": 2
   },
   "edit": {
-    "link": "https://github.com/rstudio/bookdown-demo/edit/master/22-test_review.Rmd",
+    "link": "https://github.com/rstudio/bookdown-demo/edit/master/Applications.Rmd",
     "text": "Edit"
   },
   "history": {

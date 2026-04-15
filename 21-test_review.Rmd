@@ -447,7 +447,7 @@ Choice A forgets the coefficient 3.
 
 ---
 
-### **E. Graphical Reasoning** {-}
+### **D. Graphical Reasoning** {-}
 
 #### 14. If a graph has a sharp corner at \(x=2\), then: {-}
 
@@ -506,7 +506,7 @@ If \(f'(x)\) changes from positive to negative, then the function changes from i
 
 ---
 
-### **F. Second Derivatives and Motion** {-}
+### **E. Second Derivatives and Motion** {-}
 
 #### 17. For \(f(x)=x^3-3x^2+2\), what is \(f''(x)\)? {-}
 

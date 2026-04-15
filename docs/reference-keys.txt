@@ -1,4 +1,4 @@
-tab:unnamed-chunk-38
+tab:unnamed-chunk-3
 fig:apply-the-function-to-compute-temperature-40
 fig:temperature-time-elevation-lines
 fig:graph-change-example
@@ -698,3 +698,14 @@ step-1-differentiate-both-sides
 step-2-solve-for-dfracdydx
 step-1-differentiate-both-sides-1
 step-2-factor-out-fracdydx
+bonus-applications
+section-1-artemis-takeoff-simplified-model
+context
+model
+part-a-understanding-the-function
+part-b-average-rate-of-change-aroc
+part-c-zooming-in-toward-instantaneous-velocity
+part-d-derivative-velocity-function
+part-e-acceleration-second-derivative
+part-f-graphical-thinking
+part-g-reflection
