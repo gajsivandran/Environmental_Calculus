@@ -1001,17 +1001,18 @@ Now form the difference quotient:
 80+10h+\frac{e^{4+h}-e^4}{h}
 \]
 
-Taking the limit as \(h\to 0\):
+
+At this point you can select a small h to approximate the solution. 
+
+
+Let \(h\to 0.001\):
 
 \[
-f'(4)=80+e^4
+f'(4) \approx 134.6
 \]
 
-So the instantaneous velocity at \(x=4\) is
 
-\[
-\boxed{80+e^4}
-\]
+
 
 </details>
 
