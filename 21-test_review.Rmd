@@ -1694,7 +1694,7 @@ The **graph of a function** \( g(x) \) is shown below. Use it to answer the foll
 ![Figure: Piecewise function with discontinuities and varying behavior.](images/test_4.png){fig.alt="Graph of a piecewise function drawn in red on a coordinate grid. On the left, a horizontal segment transitions into a steep downward line that meets the x-axis, followed by a slanted segment ending with an open circle. Near x equals negative 1, a filled point begins a new piece that rises to a sharp peak near y equals 3, then descends steeply and continues into a smooth curve with a local minimum below the x-axis. The curve rises again to a local maximum marked with an open circle, then decreases and levels off into a short horizontal segment on the far right. The graph includes both open and closed circles indicating discontinuities and included endpoints."}
 
 <details><summary><strong>Solution</strong></summary>
-1. No limit at x= 1
+1. No limit at x= -1
 2. Not continuous at x= -1 and 2
 3. Not differentialble at x= -2, -1, 2 and 3
 4. Below is a sketch of the solution - remember things don't have to be perfect, relative differences in slope, key features like zeros, and point where the function have no derivative are the most important parts to capture
