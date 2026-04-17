@@ -495,6 +495,7 @@ C. Point of inflection at \(x=a\)
 D. Vertical tangent at \(x=a\)
 
 <details><summary><strong>Hint</strong></summary>
+
 Think about the graph rising before \(a\) and falling after \(a\).
 </details>
 
@@ -1650,7 +1651,7 @@ The **graph of a function** \(h(x)\) is shown below. Use it to answer the questi
 <details><summary><strong>Solution</strong></summary>
 1. No limit at x= -2 and 2
 2. Not continuous at x= -3,-2 and 2
-3. Not smooth at -4, -3,-2,2,3,4
+3. Not smooth at -4, -3,-2,0,2,3,4
 4. Below is a sketch of the solution - remember things don't have to be perfect, relative differences in slope, key features like zeros, and point where the function have no derivative are the most important parts to capture
 
 ![Figure: Solution Sketch](images/sketch_prac_1_sol.png){fig.alt="A graph titled “Rough Sketch of \(h'(x)\) with Open Endpoints (All Segments)” showing the derivative of a piecewise function. The horizontal axis is labeled \(x\) and the vertical axis is labeled \(h'(x)\). The graph is composed of several disconnected line segments, each with open circles at its endpoints to indicate the derivative is not defined at those boundary points. From \(x=-5\) to \(x=-4\), there is a horizontal segment at \(h'(x)=0\). From \(x=-4\) to \(x=0\), there is a horizontal segment at \(h'(x)=-1\), with open circles at \(x=-4\), \(x=-2\), and \(x=0\). From \(x=0\) to \(x=2\), there is an increasing straight line segment, starting below zero near \(h'(0)\approx -0.7\) and rising to about \(h'(2)\approx 1.3\), representing a changing slope. From \(x=2\) to \(x=3\), there is a horizontal segment at \(h'(x)=2\), followed by a horizontal segment at \(h'(x)=1\) from \(x=3\) to \(x=4\), and another horizontal segment at \(h'(x)=0.5\) from \(x=4\) to \(x=5\), all with open endpoints. The graph shows gaps at \(x=-4\), \(-2\), \(0\), \(2\), \(3\), and \(4\), where the derivative is undefined."}
