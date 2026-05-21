@@ -3876,14 +3876,14 @@ Test values in each interval:
 
 Sign of \( f'(x) \):
 
-- On \( (-\infty,-1) \): negative
-- On \( (-1,1) \): positive
-- On \( (1,\infty) \): negative
+- On \( (-\infty,-1) \): positive
+- On \( (-1,1) \): negative
+- On \( (1,\infty) \): positive
 
 Sign chart:
 
 \[
-(-) \quad | \quad (+) \quad | \quad (-)
+(+) \quad | \quad (-) \quad | \quad (+)
 \]
 
 **Conclusion:**
