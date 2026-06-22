@@ -113,7 +113,7 @@ Trust your instincts. Don’t be afraid to commit to your approach. **Swing thro
 
 By thinking of functions as **input-output machines** and visualizing them on a graph, you'll be better equipped to interpret and model relationships in environmental systems and beyond.
 
-![input arrow, pointing to a box with the word function in it, with an arrow leaving the box labelled output](images/In_out.png)
+![input arrow, pointing to a box with the word function in it, with an arrow leaving the box labelled output](images/In_out.png){fig.alt="Diagram of a function as an input-output machine. An arrow labeled input points into a rectangular box labeled function. An arrow labeled output exits the box on the other side, illustrating that a function takes an input value and produces an output value."}
 
 A function represents a relationship between two quantities: an **input** and an **output**. The way we represent and communicate this is through:
 
@@ -370,7 +370,7 @@ Understanding the shape of a graph is crucial for interpreting real-world phenom
 
 Let's look at an example of a quadratic function, which is commonly used to model situations with a single peak or valley. This function is an increasing function for $x<2$ and decreasing for $x>2$. It has a maximum at $x=2$. We can also notice that the concavity of the function is concave down.
 
-We can also look at the how the function is **changing** as we move along the x axis. At $x=0$ the slope of the function is positive and steep. As we approach the maximum, the slope of the function is still positive, but its not increasing as fast. We could say its increasing at a decreasing rate. At the peak, the function is not longer changing. Now as we pass $x=2$ the function is decreasing slowly at first, but faster and faster as $x$ gets further away from the peak.
+We can also look at how the function is **changing** as we move along the x-axis. At $x=0$ the slope of the function is positive and steep. As we approach the maximum, the slope of the function is still positive, but it's not increasing as fast. We could say it's increasing at a decreasing rate. At the peak, the function is no longer changing. Now as we pass $x=2$ the function is decreasing slowly at first, but faster and faster as $x$ gets further away from the peak.
 
 You can think of this as a ball in your hand. You throw it up, initially its moving fast, but as gravity acts on the ball it slows. Then for an instance, the ball hangs in the air - this is where it reaches its peak. Then the ball starts to fall, slowly at first, but it then begins to fall faster and faster.
 
@@ -386,7 +386,7 @@ curve(f, from = 0, to = 6,
 abline(h = 0, col = "gray", lty = 2)
 ```
 
-The calculus you will learn in this course will give you the tools needed to quantify these observations. Identify the rates of change at different point and find the maximas and minimas.
+The calculus you will learn in this course will give you the tools needed to quantify these observations. Identify the rates of change at different points and find the maxima and minima.
 
 ## Key Function Types
 
@@ -410,7 +410,49 @@ Here are five common functions you'll encounter:
 Sketch the rough shapes of these functions and identify some of their key features?
 :::
 
-------------------------------------------------------------------------
+---
+
+### Concept Check: Matching Functions to Systems {-}
+
+**Match each environmental scenario with the most appropriate function type: linear, quadratic, exponential, or logarithmic.**
+
+**1. An invasive insect population doubles every 3 weeks.**
+
+<details>
+<summary><strong>Click to reveal answer</strong></summary>
+
+**Exponential.** Doubling at regular intervals is the signature of exponential growth: $P(t) = P_0 \cdot 2^{t/3}$.
+
+</details>
+
+**2. Noise intensity perceived by an animal decreases as it moves away from a highway, but the relationship is not linear — the biggest drop happens in the first few meters.**
+
+<details>
+<summary><strong>Click to reveal answer</strong></summary>
+
+**Logarithmic.** Sound intensity in decibels follows a logarithmic scale. The rapid initial drop that levels off is characteristic of $y = \log(x)$ (reflected and shifted).
+
+</details>
+
+**3. The temperature in a forest drops at a steady rate of 0.5°C per 100 meters of elevation gained.**
+
+<details>
+<summary><strong>Click to reveal answer</strong></summary>
+
+**Linear.** A constant rate of change (0.5°C per 100 m) produces a straight line: $T(h) = T_0 - 0.005h$.
+
+</details>
+
+**4. A pollutant disperses from a point source. Concentration peaks at the source and decreases in both directions.**
+
+<details>
+<summary><strong>Click to reveal answer</strong></summary>
+
+**Quadratic** (or more precisely, a Gaussian/bell curve — but a downward-opening quadratic is a reasonable first approximation). The key feature is the single peak with symmetric decline.
+
+</details>
+
+---
 
 ## Units, Rates, and Word Problems
 
@@ -486,7 +528,44 @@ A **rate of change** always involves comparing how much one quantity changes rel
 > *Units don’t just check your work—they tell the story of what the math means.*  
 
 
-------------------------------------------------------------------------
+---
+
+### Concept Check: Units of Rates {-}
+
+**For each rate below, state the units:**
+
+**1. CO₂ concentration rises from 410 ppm to 420 ppm over 5 years. What are the units of the average rate of change?**
+
+<details>
+<summary><strong>Click to reveal answer</strong></summary>
+
+$$\frac{\Delta \text{CO}_2}{\Delta t} = \frac{10 \text{ ppm}}{5 \text{ years}} = 2 \text{ ppm/year}$$
+
+The units are **ppm per year**.
+
+</details>
+
+**2. A stream drops 150 meters over a horizontal distance of 30 km. What are the units of the stream gradient?**
+
+<details>
+<summary><strong>Click to reveal answer</strong></summary>
+
+$$\frac{150 \text{ m}}{30 \text{ km}} = 5 \text{ m/km}$$
+
+The units are **meters per kilometer** (or equivalently, 0.005 m/m — a dimensionless ratio).
+
+</details>
+
+**3. If you’re told a tree grows “3 rings per centimeter,” is that a rate? What are its units?**
+
+<details>
+<summary><strong>Click to reveal answer</strong></summary>
+
+Yes, it’s a rate — specifically the number of growth rings per unit of radial distance. The units are **rings/cm**. The inverse, cm/ring, would tell you the average ring width (how much the tree grew per year).
+
+</details>
+
+---
 
 ## Getting Comfortable with Word Problems
 
@@ -1070,7 +1149,7 @@ The rate of growth increases as the population gets larger.
 
 **Functions:** 1. $y = 2^x$\ 2. $y = 2x + 3$
 
-Match the tabel to the equation.
+Match the table to the equation.
 
 **a.** How did you work it out?
 
@@ -1481,6 +1560,14 @@ T(6,2000) = 10 - 5(0) - 13 = -3^\circ\text{C}
 ------------------------------------------------------------------------
 
 ## Skills Drills
+
+::: promptbox
+**Connecting Skills to Calculus**
+
+The exercises below may look like "just algebra," but every one of these skills shows up when you work with derivatives and environmental models. Function evaluation is how you *use* a model. Exponent and logarithm rules are essential for population growth and decay problems. Solving equations is how you find critical points. And unit conversions ensure your answers make physical sense.
+
+Come back to these drills anytime a later chapter asks you to do something that feels rusty.
+:::
 
 ### Getting Back in the Groove
 

@@ -95,7 +95,7 @@ In calculus, there are several common notations used to represent the **derivati
 
 #### Common Derivative Notations
 
-Let’s say we have a function, we could right this as:
+Let’s say we have a function, we could write this as:
 
 $$
 f(x) = something\ with\ x's \ in\ it \\
@@ -159,6 +159,28 @@ $$
 $$
 
 This is the **rise over run** formula you've likely used in algebra. It gives us the **slope** of the **secant line** connecting the two points on a graph.
+
+### Concept Check: Average Rate of Change {-}
+
+**1. Atmospheric CO\u2082 was 380 ppm in 2005 and 420 ppm in 2025. What is the average rate of change?**
+
+<details>
+<summary><strong>Click to reveal answer</strong></summary>
+
+$$\text{Average Rate} = \frac{420 - 380}{2025 - 2005} = \frac{40}{20} = 2 \text{ ppm per year}$$
+
+</details>
+
+**2. Does an average rate of 2 ppm/year mean CO\u2082 increased by exactly 2 ppm every single year?**
+
+<details>
+<summary><strong>Click to reveal answer</strong></summary>
+
+**No.** The average rate smooths out year-to-year variation. In reality, some years might see 1.5 ppm increases and others 2.8 ppm. The average only tells us the *overall* trend, not what happened in any specific year. That's why we'll need the *instantaneous* rate of change \u2014 to zoom in on specific moments.
+
+</details>
+
+---
 
 ### Environmental Example: Ocean Temperature
 
@@ -376,6 +398,28 @@ Think of another *lifetime pattern* in an organism:
 
 
 
+### Concept Check: Instantaneous vs. Average {-}
+
+**1. A weather station reports: "Temperature is currently rising at 1.5\u00b0C per hour." Is this an average or instantaneous rate of change?**
+
+<details>
+<summary><strong>Click to reveal answer</strong></summary>
+
+**Instantaneous.** The word "currently" signals we're asking about the rate *right now*, at this specific moment \u2014 not averaged over a longer period. This is a derivative value: $T'(t_{\text{now}}) = 1.5$ \u00b0C/hr.
+
+</details>
+
+**2. A report says: "Sea level rose 3.6 mm/year between 2006 and 2015." Is this an average or instantaneous rate?**
+
+<details>
+<summary><strong>Click to reveal answer</strong></summary>
+
+**Average.** The phrase "between 2006 and 2015" tells us this is computed over a 9-year interval. It's the slope of the secant line, not the tangent line. The actual rate at any given year within that window could be higher or lower than 3.6 mm/year.
+
+</details>
+
+---
+
 ## The Limit Definition of a Derivative
 
 In calculus, a **limit** is a tool we use to understand what happens to a function as we get *closer and closer* to a specific point—even if we can’t plug in that point directly.  
@@ -546,6 +590,39 @@ Read aloud: *“The limit of $f(x)$ as $x$ approaches $a$.”*
 
 It asks: **What value does $f(x)$ get closer and closer to as $x$ gets closer and closer to $a$?**  
 Notice: this may or may not equal $f(a)$ or in other words, we closer to $a$ but never actually get there.
+
+---
+
+### Concept Check: The Limit Definition {-}
+
+**In the expression $\displaystyle f'(a) = \lim_{h \to 0} \frac{f(a+h) - f(a)}{h}$, answer:**
+
+**1. What does $h$ represent?**
+
+<details>
+<summary><strong>Click to reveal answer</strong></summary>
+
+$h$ is the **width of the interval** between the two points we're using to compute a slope. It's the horizontal distance between $x = a$ and $x = a + h$. As $h \to 0$, this interval shrinks and the secant line approaches the tangent line.
+
+</details>
+
+**2. What does $\frac{f(a+h) - f(a)}{h}$ compute before we take the limit?**
+
+<details>
+<summary><strong>Click to reveal answer</strong></summary>
+
+It computes the **average rate of change** (slope of the secant line) between $x = a$ and $x = a + h$. This is the same "rise over run" formula, just written with $h$ as the step size.
+
+</details>
+
+**3. Why do we need the limit? Why can't we just plug in $h = 0$?**
+
+<details>
+<summary><strong>Click to reveal answer</strong></summary>
+
+If we set $h = 0$ directly, we get $\frac{f(a) - f(a)}{0} = \frac{0}{0}$, which is undefined. The limit lets us analyze what *value the expression approaches* as $h$ gets arbitrarily close to zero \u2014 without ever actually dividing by zero. This is the fundamental reason limits exist in calculus.
+
+</details>
 
 ---
 
@@ -1003,11 +1080,11 @@ text(x0, y0 + 1, labels = "(2, 4)", pos = 3)
 text(3, y0 - 1, labels = "Tangent at x = 2", pos = 3, col = "red")
 ```
 
-![Figure: Tangent line to f(x) = x^2 at x = 2.]{fig.alt="A graph shows the function f(x) = x squared as a smooth black curve. A red straight line represents the tangent line at x = 2, touching the curve at the point (2, 4), which is marked with a black dot and labeled. The tangent line has the same slope as the curve at that point and lies just below the curve for larger x-values, illustrating the idea of a linear approximation at a point."}
+*Figure: Tangent line to $f(x) = x^2$ at $x = 2$. The tangent line touches the curve at the point $(2, 4)$ and has the same slope as the curve at that point.*
 
 We are in search of the derivative at $x=2$, this is the same as the slope of the tangent line at same point. The graph above has sketched in the tangent line. We can graphically calculate the slope of the line by looking at the *rise over the run*. From $x=1$ to $x=2$ we have a *run* of 1 and a *rise* of 4. Therefore the slope would be $\frac{4}{1}=4$. This is the derivative of this function at $x=2$.
 
-We don't always have the ability to solve derivatives graphically, so now that we know the answer we are looking for lets see if we can use the limit definition to get to the same place.
+We don't always have the ability to solve derivatives graphically, so now that we know the answer we are looking for let's see if we can use the limit definition to get to the same place.
 
 $$
 f'(a)=\lim_{h \to 0} \frac{f(a + h) - f(a)}{h}

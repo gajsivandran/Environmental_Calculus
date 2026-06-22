@@ -189,6 +189,39 @@ In later sections, we’ll apply this framework to environmental examples such a
 ---
 
 
+### Concept Check: Common Optimization Mistakes {-}
+
+**1. A student sets $f(x) = 0$ to find the optimal point. What did they do wrong?**
+
+<details>
+<summary><strong>Click to reveal answer</strong></summary>
+
+They set the **function** equal to zero instead of the **derivative**. To find extrema, we solve $f'(x) = 0$, not $f(x) = 0$. Setting $f(x) = 0$ finds the *roots* (where the function crosses the x-axis), not where it reaches a peak or valley.
+
+</details>
+
+**2. A student finds a critical point at $x = 15$ for a planting density problem where the feasible range is $0 \le x \le 10$. What should they conclude?**
+
+<details>
+<summary><strong>Click to reveal answer</strong></summary>
+
+The critical point $x = 15$ is **outside the feasible domain**, so it can't be the answer. The optimum must occur at one of the **endpoints**: either $x = 0$ or $x = 10$. Compare $f(0)$ and $f(10)$ to determine which is the maximum or minimum.
+
+This is why checking endpoints is critical in real-world optimization — physical constraints often limit the domain.
+
+</details>
+
+**3. True or false: If there is only one critical point in the domain and it's a local maximum, it must also be the global maximum.**
+
+<details>
+<summary><strong>Click to reveal answer</strong></summary>
+
+**It depends on the domain.** On an *open* interval, yes — a single local max is the global max. But on a *closed* interval $[a, b]$, the function value at an endpoint could exceed the local max. Always compare the critical point value with the endpoint values.
+
+</details>
+
+---
+
 ## Derivatives and Critical Points in Optimization
 
 Once we express an environmental quantity as a function \( f(x) \), the next step is to understand *how that function changes*. Derivatives give us a precise way to measure the rate of change and identify where the system switches direction — from increasing to decreasing or vice versa. These turning points are where optima occur.
@@ -636,6 +669,38 @@ text(
 ```
 
 :::
+
+### Concept Check: Interpreting Optimization Results {-}
+
+**1. In the carbon uptake model, increasing planting density beyond the optimum *decreases* total carbon uptake. Name two ecological mechanisms that could explain this.**
+
+<details>
+<summary><strong>Click to reveal answer</strong></summary>
+
+1. **Competition for light:** At high densities, trees shade each other, reducing photosynthesis per tree faster than the additional trees can compensate.
+2. **Competition for water and nutrients:** More trees draw from the same soil resources, stunting individual growth and potentially increasing mortality.
+
+Other possibilities include increased susceptibility to disease or fire in dense stands.
+
+</details>
+
+**2. A manager says: "The math says 400 trees per hectare is optimal, so we should plant exactly 400." What important considerations might the math be missing?**
+
+<details>
+<summary><strong>Click to reveal answer</strong></summary>
+
+Several factors the simplified model doesn't capture:
+
+- **Seedling mortality:** If 20% of seedlings die, you might plant 500 to end up near 400.
+- **Species diversity:** Monoculture at optimal density might be ecologically fragile; a mix of species at slightly lower density could be more resilient.
+- **Spatial variation:** Soil quality, slope, and water availability vary across the site — a single density won't be optimal everywhere.
+- **Model uncertainty:** The quadratic model is an approximation. The true optimum might differ, and a flat region near the peak means a range of densities could perform nearly as well.
+
+Optimization gives a starting point for decision-making, not a final answer.
+
+</details>
+
+---
 
 ### Minimizing Pollution Concentration Downstream
 

@@ -26,7 +26,7 @@ In environmental systems, extrema are rarely just mathematical curiosities. They
 Understanding these points helps scientists **predict**, **manage**, and **mitigate** changes in ecosystems.
 
 
-![A cartoon split into two contrasting halves under the title “Why Extremes Matter.” The left side shows a lush green landscape with a large leafy tree, a flowing river, and three white rabbits sitting on grass. A wooden sign labeled “Maximum” stands near the tree. The right side depicts a barren, cracked landscape with a dead tree, a wilted plant, and dark storm clouds overhead. A wooden sign labeled “Minimum” stands near the dead tree. The center of the image forms a curved transition between the two environments, illustrating ecological extremes. Text below explains that maxima can indicate carrying capacity or peak pollution, while minima can represent nutrient scarcity or drought intensity, emphasizing the importance of understanding these points in ecosystems](images/extrema.png)
+![A cartoon split into two contrasting halves under the title “Why Extremes Matter.” The left side shows a lush green landscape with a large leafy tree, a flowing river, and three white rabbits sitting on grass. A wooden sign labeled “Maximum” stands near the tree. The right side depicts a barren, cracked landscape with a dead tree, a wilted plant, and dark storm clouds overhead. A wooden sign labeled “Minimum” stands near the dead tree. The center of the image forms a curved transition between the two environments, illustrating ecological extremes. Text below explains that maxima can indicate carrying capacity or peak pollution, while minima can represent nutrient scarcity or drought intensity, emphasizing the importance of understanding these points in ecosystems](images/extrema.png){fig.alt="A cartoon split into two contrasting halves. The left side shows a lush green landscape with trees, a river, and rabbits, labeled Maximum. The right side shows a barren cracked landscape with a dead tree and storm clouds, labeled Minimum. The image illustrates that maxima can indicate carrying capacity or peak pollution, while minima can represent nutrient scarcity or drought intensity."}
 
 ---
 
@@ -130,6 +130,37 @@ Sometimes, the highest or lowest value of a system happens right at the edge of 
 > **Example:**  
 > If we model daily solar radiation between sunrise and sunset,  
 > the **minimum** radiation occurs **at sunrise and sunset** — the endpoints of the domain.
+
+---
+
+### Concept Check: Local vs. Global Extrema {-}
+
+**1. A temperature function over a 24-hour day has a peak at noon and a smaller peak at midnight. Which is the global maximum and which is the local maximum?**
+
+<details>
+<summary><strong>Click to reveal answer</strong></summary>
+
+The **noon peak** is the global maximum (highest temperature of the entire day). The **midnight peak** is a local maximum — it's higher than nearby values but not the highest overall. Both are local maxima, but only the noon peak is also the global maximum.
+
+</details>
+
+**2. Can a function have a local minimum that is higher than a local maximum at a different point? Sketch an example if yes.**
+
+<details>
+<summary><strong>Click to reveal answer</strong></summary>
+
+**Yes.** Consider a function that oscillates with an overall upward trend — like seasonal CO₂ with a rising baseline. A local minimum in 2024 could be higher than a local maximum from 2020. The key is that "local" only compares a point to its *immediate neighbors*, not to the entire domain.
+
+</details>
+
+**3. True or false: A function on a closed interval $[a, b]$ must have both a global maximum and a global minimum.**
+
+<details>
+<summary><strong>Click to reveal answer</strong></summary>
+
+**True.** This is the **Extreme Value Theorem**: a continuous function on a closed, bounded interval is guaranteed to reach both a global max and a global min somewhere on that interval. This is why checking endpoints matters — the global extremum might be at the boundary, not at a critical point.
+
+</details>
 
 ---
 
@@ -403,6 +434,38 @@ We can use:
 > Solving \( f'(x) = 0 \) gives us the *candidates* for maxima and minima —  
 > further analysis confirms which ones truly are.
 
+
+
+
+### Concept Check: Critical Points {-}
+
+**1. If $f'(c) = 0$, does that guarantee $c$ is a maximum or minimum?**
+
+<details>
+<summary><strong>Click to reveal answer</strong></summary>
+
+**No.** $f'(c) = 0$ means $c$ is a **critical point**, but it could also be an **inflection point** — a place where the function levels off momentarily without changing direction. For example, $f(x) = x^3$ has $f'(0) = 0$, but $x = 0$ is neither a max nor a min.
+
+You need additional information (a sign chart or second derivative test) to classify the critical point.
+
+</details>
+
+**2. A population model has $P'(t) = 0$ at $t = 5$ years. List three possible ecological interpretations of what might be happening at $t = 5$.**
+
+<details>
+<summary><strong>Click to reveal answer</strong></summary>
+
+The population growth rate is momentarily zero at $t = 5$. This could mean:
+
+1. The population has reached its **carrying capacity** (a maximum) and is about to decline.
+2. The population hit a **low point** (a minimum) after a decline and is about to recover.
+3. The population is at a **temporary plateau** — growth paused but will resume in the same direction (an inflection point, not an extremum).
+
+The sign chart of $P'(t)$ around $t = 5$ determines which interpretation applies.
+
+</details>
+
+---
 
 ### Environmental Example
 
@@ -1005,6 +1068,81 @@ text(t2, P2 , labels = "Local Max\n(3, 20)", col = "red", pos = 3)
 ```
 
 
+### Concept Check: Reading Sign Charts {-}
+
+**Here is a completed first derivative sign chart for a function $f(x)$ with critical points at $x = 2$ and $x = 6$:**
+
+| Interval | $(0, 2)$ | $(2, 6)$ | $(6, 10)$ |
+|----------|----------|----------|-----------|
+| Sign of $f'(x)$ | $+$ | $-$ | $+$ |
+
+**1. Classify the critical point at $x = 2$.**
+
+<details>
+<summary><strong>Click to reveal answer</strong></summary>
+
+$x = 2$ is a **local maximum**. The derivative changes from positive (increasing) to negative (decreasing), so the function reaches a peak at $x = 2$.
+
+</details>
+
+**2. Classify the critical point at $x = 6$.**
+
+<details>
+<summary><strong>Click to reveal answer</strong></summary>
+
+$x = 6$ is a **local minimum**. The derivative changes from negative (decreasing) to positive (increasing), so the function reaches a valley at $x = 6$.
+
+</details>
+
+**3. Sketch a rough graph of $f(x)$ on $[0, 10]$ consistent with this sign chart.**
+
+<details>
+<summary><strong>Click to reveal answer</strong></summary>
+
+The function rises from $x = 0$ to a peak at $x = 2$, then falls to a valley at $x = 6$, then rises again to $x = 10$. The shape looks like a wave with one crest and one trough.
+
+If this modeled streamflow over 10 days, it would describe a flood pulse: rising flow, a peak, receding flow, a low point, then another rise.
+
+</details>
+
+---
+
+### Concept Check: Applying the Four-Step Process {-}
+
+**1. A simplified model for algal biomass in a lake is $A(t) = -t^2 + 8t + 3$, where $t$ is weeks after spring begins. Without doing the full calculation, predict: will this function have a maximum, a minimum, or both?**
+
+<details>
+<summary><strong>Click to reveal answer</strong></summary>
+
+Since the leading coefficient is **negative** ($-t^2$), this is a downward-opening parabola. It will have a **maximum** only — no minimum (the function decreases to $-\infty$ in both directions). The maximum occurs at the vertex.
+
+In context: algal biomass peaks at some point during spring and then declines — perhaps due to nutrient depletion or grazing.
+
+</details>
+
+**2. For the same function $A(t) = -t^2 + 8t + 3$, find the critical point and the maximum biomass.**
+
+<details>
+<summary><strong>Click to reveal answer</strong></summary>
+
+**Step 1:** $A'(t) = -2t + 8$
+
+**Step 2:** Set $A'(t) = 0$: $-2t + 8 = 0 \Rightarrow t = 4$
+
+**Step 3 (sign chart):**
+
+- For $t < 4$: $A'(t) > 0$ (increasing)
+- For $t > 4$: $A'(t) < 0$ (decreasing)
+- Confirms: **local maximum** at $t = 4$
+
+**Step 4:** $A(4) = -16 + 32 + 3 = 19$
+
+The algal biomass peaks at **19 units** during **week 4** of spring.
+
+</details>
+
+---
+
 ### Final Takeaways
 
 - **Work with the factored form** of the derivative — it makes sign analysis quicker and more transparent.  
@@ -1102,6 +1240,44 @@ p4 <- plot_concavity(f4, f2_4, c(-2, 2), inf_pts,
 ```
 
 
+
+### Concept Check: Concavity and the Second Derivative {-}
+
+**1. If $f''(x) > 0$, is the function concave up or concave down? What does this look like on a graph?**
+
+<details>
+<summary><strong>Click to reveal answer</strong></summary>
+
+$f''(x) > 0$ means the function is **concave up** — it bends upward like a bowl. On the graph, the curve lies *above* any tangent line drawn to it.
+
+**Environmental meaning:** If $f(t)$ is CO₂ concentration and $f''(t) > 0$, then the rate of CO₂ increase is itself *increasing* — emissions are accelerating.
+
+</details>
+
+**2. Global temperature anomaly has been rising ($f'(t) > 0$) and the rate of rise has been increasing ($f''(t) > 0$). Describe what this means in plain language.**
+
+<details>
+<summary><strong>Click to reveal answer</strong></summary>
+
+The planet is warming, and **it's warming faster and faster**. The first derivative being positive means temperatures are going up. The second derivative being positive means the warming is **accelerating** — each decade is warming more than the one before it.
+
+If $f''(t)$ were to become negative (while $f'(t)$ stays positive), temperatures would still be rising, but the *rate of warming would be slowing down*.
+
+</details>
+
+**3. A population grows according to a logistic model. During the early growth phase, is $P''(t)$ positive or negative? What about after the inflection point?**
+
+<details>
+<summary><strong>Click to reveal answer</strong></summary>
+
+- **Early growth (below carrying capacity/2):** $P''(t) > 0$ — the population is growing and *accelerating* (concave up).
+- **After the inflection point:** $P''(t) < 0$ — the population is still growing but *decelerating* (concave down) as it approaches carrying capacity.
+
+The inflection point is where $P''(t) = 0$ — the moment the population switches from accelerating growth to decelerating growth. This is often the point of maximum growth rate.
+
+</details>
+
+---
 
 ### Understanding Concavity Through Visual Examples
 

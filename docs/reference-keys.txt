@@ -93,7 +93,7 @@ what-is-calculus
 how-this-book-works
 success-in-this-class
 looking-ahead
-a-big-disclaimer
+about-this-book
 pre-calculus-foundations
 learning-objectives
 what-youre-expected-to-know

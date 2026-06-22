@@ -4,92 +4,144 @@ author: "Gaj Sivandran"
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
 lang: en-US
-output: bookdown::gitbook
+output: bookdown::bs4_book
 documentclass: book     
 bibliography: [book.bib]  
 biblio-style: apalike
 link-citations: yes
-github-repo: rstudio/bookdown-demo
-description: "A textbook companion to the Univeristy of Washington QSci 291 class"
+github-repo: gajsivandran/Environmental_Calculus
+description: "A textbook companion to the University of Washington QSci 291 class"
 ---
 
 # Why Calculus?
 
-Welcome to *Calculus for Environmental Science*. 🌱  
+A salmon run peaks in a Pacific Northwest river. How quickly is the number of returning fish changing day by day? Over the entire season, how many total fish passed the counting station? A wildfire burns through a dry forest. How fast is the fire line advancing right now? How much total carbon has been released into the atmosphere since it started?
 
-This book is your companion for exploring the natural world through the lens of calculus—especially the powerful ideas of **change** and **accumulation**. You’ll find that calculus is not just about symbols on a page—it’s about asking meaningful questions, interpreting patterns, and making sense of complex environmental systems. And along the way, you’ll see that you are absolutely capable of mastering these ideas.  
+These questions—*how fast is something changing?* and *how much has accumulated?*—are the two core questions of calculus. They show up everywhere in the environmental sciences, and by the end of this book you'll have the tools to answer them.
+
+Welcome to *Calculus for Environmental Science*.
+
+This book is your companion for exploring the natural world through the lens of calculus—especially the powerful ideas of **change** and **accumulation**. Calculus is not just symbols on a page. It's a way of asking meaningful questions, interpreting patterns, and making sense of the complex environmental systems you care about. And along the way, you'll discover that you are absolutely capable of mastering these ideas.
 
 ---
 
 ## Why This Book?
 
-Most calculus textbooks lean heavily on physics examples—motion, velocity, and acceleration—because calculus was originally developed to solve physics problems. Those examples are powerful, and we’ll use them from time to time because they give us an intuitive “feel” for how change works.  
+Most calculus textbooks lean heavily on physics examples—motion, velocity, and acceleration—because calculus was originally developed to solve physics problems. Those examples are powerful, and we'll use them from time to time because they give us an intuitive "feel" for how change works.
 
-But today, calculus is a tool used across many disciplines: biology, ecology, environmental science, economics, engineering, and beyond. In this book, we’ll focus on examples that resonate with your studies and your interests as an environmental scientist.  
+But calculus has grown far beyond physics. Today it is an essential tool across biology, ecology, environmental science, economics, and engineering. In this book, we anchor our learning in the systems you study as environmental scientists—because concepts stick best when they're connected to things you care about.
 
-Environmental scientists face some of the most urgent and complex challenges of our time—climate change, biodiversity loss, resource management, and pollution. Calculus gives us tools to:
+Environmental scientists face some of the most urgent challenges of our time: climate change, biodiversity loss, resource management, and pollution. Calculus gives us the mathematical language to describe these challenges precisely:
 
-- Predict how systems evolve over time  
-- Estimate impacts and risks  
-- Model natural and human systems with differential equations  
-- Analyze rates of change and long-term accumulation  
+- **Predict** how populations, pollutants, and temperatures evolve over time  
+- **Quantify** risks, impacts, and total accumulations  
+- **Model** natural and human systems with equations that capture real behavior  
+- **Communicate** findings with the clarity that decision-makers need  
 
-Throughout this book, you’ll work with **real environmental data**, use **visual and conceptual approaches**, and practice skills that matter for sustainability. Our goal is not just to “get through calculus,” but to see how these mathematical ideas open doors for discovery and problem-solving in the real world.  
+Throughout this book, you'll work with real environmental data, use visual and conceptual approaches, and practice skills that matter for sustainability. Our goal is not just to "get through calculus," but to see how these ideas open doors for discovery and problem-solving in the real world.
 
 ---
 
 ## What Is Calculus?
 
-At its heart, calculus is the mathematics of **change** and **accumulation**. These two ideas are everywhere in science:  
+At its heart, calculus is the mathematics of **change** and **accumulation**. These two ideas appear in every branch of environmental science. Here are a few examples you'll encounter in this course:
 
-- The **rate of CO₂ increase** in the atmosphere is a derivative.  
-- The **total added CO₂** over a year is an integral.  
+| System | The Derivative (Rate of Change) | The Integral (Accumulation) |
+|--------|--------------------------------|----------------------------|
+| **Atmosphere** | How fast CO₂ concentration is rising right now | Total CO₂ added over a decade |
+| **Populations** | The growth rate of a salmon population this season | Total fish that passed a weir over the run |
+| **Hydrology** | How quickly streamflow is increasing during a storm | Total volume of water that flowed past a gauge |
+| **Toxicology** | Rate at which a contaminant leaches into groundwater | Total mass of contaminant accumulated in soil |
 
-Traditionally, calculus is first introduced through physics examples like velocity (rate of change of position) and acceleration (rate of change of velocity). These are helpful because most of us can *feel* what it means to move faster or slower. We’ll use those examples when they make ideas clearer.  
+Notice the pattern: a *derivative* tells you how fast something is changing at a specific moment; an *integral* tells you how much has piled up over time. These two ideas are deeply connected—in fact, the Fundamental Theorem of Calculus says they are two sides of the same coin. We'll get there step by step.
 
-But throughout this book, our main goal is to connect calculus directly to the environment you are studying. You’ll see derivatives and integrals applied to population growth, forest carbon storage, water flow in rivers, and other natural systems.  
+Traditionally, calculus uses physics examples like velocity (rate of change of position) and acceleration (rate of change of velocity). These are helpful because most of us can *feel* what it means to move faster or slower, so we'll use them when they make ideas clearer. But our main goal is always to connect calculus directly to the environment you are studying—population growth, forest carbon storage, water flow in rivers, and other natural systems.
 
-We’ll build your understanding of these concepts step by step, supported by graphs, data, and hands-on examples. And if it’s been a while since your last math class, that’s completely okay—you’ll find plenty of support here. We’ll meet you where you are and grow your skills together.  
-
+We'll build your understanding step by step, supported by graphs, data, and hands-on examples. And if it's been a while since your last math class, that's completely okay—you'll find plenty of support here.
 
 ::: promptbox
 
 **Change is Everywhere**
 
-In a small group, discuss where  *change* could be happening in this image?
+In a small group, discuss: where is *change* happening in this image? Try to identify at least three different processes. For each one, what might be changing, and how fast?
 
-![Image of a river, shrubs on the banks, large trees in the background, a deer drinking at the stream](images/Nature.png)
-<br><br><br><br><br><br>
+![A river scene with water flowing between vegetated banks. Shrubs line the near bank, large trees stand in the background, and a deer drinks at the water's edge.](images/Nature.png){fig.alt="A photograph of a natural river scene. Water flows through a channel bordered by green shrubs and grasses on the near bank. Tall deciduous and coniferous trees fill the background. A deer stands at the edge of the stream, lowering its head to drink. The scene illustrates multiple environmental processes happening simultaneously—water flow, plant growth, animal behavior, and nutrient cycling."}
+
+<div class="writein tall"></div>
 :::
+
+---
+
+### Concept Check: Derivatives and Integrals {-}
+
+See if you can identify which questions are about a *rate of change* (derivative) and which are about a *total accumulation* (integral).
+
+**1. A researcher measures that a lake's pH is dropping by 0.03 units per year. Is this a derivative or an integral?**
+
+<details>
+<summary><strong>Click to reveal answer</strong></summary>
+
+This is a **derivative** — it describes *how fast* the pH is changing at a given time (a rate of change per year).
+
+</details>
+
+**2. Over the past 50 years, atmospheric CO₂ has increased by about 100 ppm. Is this a derivative or an integral?**
+
+<details>
+<summary><strong>Click to reveal answer</strong></summary>
+
+This is an **integral** — it describes *how much total change* has accumulated over a period of time. To get this number, you would need to add up all the small year-by-year increases.
+
+</details>
+
+**3. A stream gauge shows that 2.4 million cubic meters of water passed a monitoring station during March. Is this a derivative or an integral?**
+
+<details>
+<summary><strong>Click to reveal answer</strong></summary>
+
+This is an **integral** — it describes the *total volume accumulated* over the month. The streamflow rate (cubic meters per second) at any given instant would be the derivative.
+
+</details>
 
 ---
 
 ## How This Book Works
 
-Each chapter is designed to support you as a learner. You’ll find:
+Each chapter is designed to support you as an active learner. Here's what you'll encounter:
 
-- Clear explanations of key concepts  
-- Environmental examples to connect math with meaning  
-- Practice problems to strengthen your skills  
-- Reflection prompts to help you think about what you’re learning  
+**Explanations with environmental context.** Key concepts are introduced with clear language, supported by graphs and real data from ecological and earth science systems. We define terms carefully and build ideas step by step.
+
+**Prompt boxes** are places to pause and think. Some ask you to discuss with a partner, some ask you to sketch or write, and some pose a question to wrestle with before reading on. They look like this:
+
+::: promptbox
+**Example Prompt**
+
+This is where you'll find a question or activity. The write-in space below is for your notes.
+
+<div class="writein"></div>
+:::
+
+**Concept checks** appear throughout each chapter. These are low-stakes questions with click-to-reveal answers so you can immediately test whether a concept has clicked. If you get one wrong, that's useful information—go back and re-read the section, or bring the question to class.
+
+**Worked examples** walk through environmental problems step by step, showing not just the math but the reasoning: *what* we're doing, *why*, and *what the answer means in context*.
+
+**Workbook chapters** follow each content chapter. These give you space for guided practice, with prompts, write-in areas, and additional problems to work through at your own pace.
 
 ---
 
 ## Success in This Class
 
-![Figure: Conceptual illustration of interconnected natural and cognitive systems.](images/Growth Mindset.png){fig.alt="Artistic illustration of a human head in profile with a glowing brain at the center. Branching connections extend outward from the brain to various environmental elements including trees, clouds, water, and landscapes, symbolizing connections between human thinking and natural systems. Additional icons such as graphs, waves, and molecules are faintly visible in the background, suggesting links between cognition, data, and environmental processes."}
+![Conceptual illustration of interconnected natural and cognitive systems.](images/Growth Mindset.png){fig.alt="Artistic illustration of a human head in profile with a glowing brain at the center. Branching connections extend outward from the brain to various environmental elements including trees, clouds, water, and landscapes, symbolizing connections between human thinking and natural systems. Additional icons such as graphs, waves, and molecules are faintly visible in the background, suggesting links between cognition, data, and environmental processes."}
 
-First and foremost, know this: **we believe in your ability to learn and grow.** You bring unique strengths and perspectives, and your effort matters here.  
+First and foremost, know this: **we believe in your ability to learn and grow.** You bring unique strengths and perspectives, and your effort matters here.
 
-Mistakes are not a setback—they are the very heart of learning. When you get something wrong, you uncover where your thinking needs refinement, and that creates the space for real growth. Struggle is not a sign you don’t belong; it’s proof that your brain is stretching and building new connections.  
+Mistakes are not a setback—they are the very heart of learning. When you get something wrong, you uncover where your thinking needs refinement, and that creates the space for real growth. Struggle is not a sign you don't belong; it's proof that your brain is stretching and building new connections.
 
-Just like in science, learning calculus is about **iteration**—trying, testing, revising, and improving. That process is what makes your understanding deeper and more durable.  
+Just like in science, learning calculus is about **iteration**—trying, testing, revising, and improving. That process is what makes your understanding deeper and more durable.
 
-Assessments in this class are snapshots of your thinking at a particular moment in time. They are not final judgments about your intelligence, your worth, or your potential. You will have chances to revisit concepts, refine your understanding, and demonstrate what you’ve learned. Growth comes from re-engaging with the material, not from perfection on the first try.  
+Assessments in this class are snapshots of your thinking at a particular moment in time. They are not final judgments about your intelligence, your worth, or your potential. You will have chances to revisit concepts, refine your understanding, and demonstrate what you've learned. Growth comes from re-engaging with the material, not from perfection on the first try.
 
-So give yourself permission to be imperfect. Keep engaging, reflecting, and asking questions. We’ll be here to support you every step of the way. 
-
-
+So give yourself permission to be imperfect. Keep engaging, reflecting, and asking questions. We'll be here to support you every step of the way.
 
 ---
 
@@ -97,29 +149,22 @@ So give yourself permission to be imperfect. Keep engaging, reflecting, and aski
 
 By the end of this course, you will be able to:
 
-- Apply calculus concepts to natural systems  
-- Analyze environmental data with confidence  
-- Interpret and communicate your results to others  
+- **Interpret derivatives** as rates of change in systems like population dynamics, streamflow, and atmospheric chemistry  
+- **Use differentiation rules** to analyze how environmental quantities respond to changing conditions  
+- **Find and interpret extrema** to identify tipping points, optimal strategies, and critical thresholds in ecological systems  
+- **Read and create graphs** that communicate environmental trends with mathematical precision  
+- **Set up and solve applied problems** using real data from the environmental sciences  
 
-But even more important than any specific skill, you’ll leave this course with a stronger belief in your ability to *learn mathematics*.  
-
-Calculus is not just a hurdle to clear—it’s a tool that expands how you see and understand the world. Our hope is that by connecting it to the environment you care about, you’ll discover both its usefulness and its beauty.  
-
-Most importantly, you’ll leave with the confidence to keep growing—using mathematics as a tool to explore, protect, and better understand the natural world around you.  
+But even more important than any specific skill, you'll leave this course with a stronger belief in your ability to *learn mathematics*—and the confidence to keep growing, using math as a tool to explore, protect, and better understand the natural world around you.
 
 ---
 
-## ⚠️ A Big Disclaimer ⚠️
+## About This Book
 
-I started writing this textbook to create a calculus resource that speaks directly to your interests as environmental scientists. My goal is to make calculus feel relevant, supportive, and connected to the systems you care about.  
+I started writing this textbook to create a calculus resource that speaks directly to your interests as environmental scientists. My goal is to make calculus feel relevant, supportive, and connected to the systems you care about.
 
-That said, this is very much a **work in progress**. This draft will have typos, rough edges, and the occasional mistake. But here’s the good news: it’s also **free**. 🎉  
+That said, this is very much a **work in progress**. This draft will have typos, rough edges, and the occasional mistake. But here's the good news: it's also **free**.
 
-If you come across an error—big or small—please let me know so I can fix it for you and for future students. Your feedback is not just welcome, it’s essential to making this a better resource.  
+If you come across an error—big or small—please let me know so I can fix it for you and for future students. Your feedback is not just welcome, it's essential to making this a better resource.
 
-Thanks for your patience, your sharp eyes, and your willingness to learn from (and with) an evolving text. Together, we’ll keep improving it.  
-  
-
-
-
-
+Thanks for your patience, your sharp eyes, and your willingness to learn from (and with) an evolving text. Together, we'll keep improving it.

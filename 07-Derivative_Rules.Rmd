@@ -392,6 +392,30 @@ $$
 \boxed{0}
 $$
 
+### Concept Check: The Constant Rule {-}
+
+**1. A lake's baseline phosphorus concentration is 12 µg/L regardless of time. If we write this as $P(t) = 12$, what is $P'(t)$?**
+
+<details>
+<summary><strong>Click to reveal answer</strong></summary>
+
+$P'(t) = 0$
+
+A constant function has zero rate of change — the phosphorus level isn't increasing or decreasing. The derivative of any constant is always zero.
+
+</details>
+
+**2. True or false: If $f'(x) = 0$ for all $x$, then $f(x)$ must equal zero.**
+
+<details>
+<summary><strong>Click to reveal answer</strong></summary>
+
+**False.** $f'(x) = 0$ means the function is *constant*, but that constant could be any value — not necessarily zero. For example, $f(x) = 42$ has $f'(x) = 0$.
+
+</details>
+
+---
+
 ### The Power Rule
 
 The **Power Rule** is one of the most important and widely used rules in calculus. It tells us how to differentiate expressions involving powers of \(x\). Because so many functions in environmental science (and beyond) can be expressed as polynomials, this rule becomes one of the most frequently applied tools in your calculus toolkit.  
@@ -521,6 +545,43 @@ $$
 
 :::
 
+### Concept Check: The Power Rule {-}
+
+**1. Find the derivative of $f(x) = x^5$.**
+
+<details>
+<summary><strong>Click to reveal answer</strong></summary>
+
+$$f'(x) = 5x^4$$
+
+Using the power rule: bring the exponent down as a coefficient and reduce the exponent by one.
+
+</details>
+
+**2. The volume of a spherical raindrop is $V(r) = \frac{4}{3}\pi r^3$. Find $\frac{dV}{dr}$. What does this derivative represent physically?**
+
+<details>
+<summary><strong>Click to reveal answer</strong></summary>
+
+$$\frac{dV}{dr} = 4\pi r^2$$
+
+This is the rate at which volume changes with respect to radius. Notice it equals the surface area of the sphere — as the radius increases, the volume grows at a rate proportional to the surface area.
+
+</details>
+
+**3. Rewrite $\frac{1}{x^3}$ using a negative exponent and then differentiate.**
+
+<details>
+<summary><strong>Click to reveal answer</strong></summary>
+
+$$\frac{1}{x^3} = x^{-3}$$
+
+$$\frac{d}{dx}\left(x^{-3}\right) = -3x^{-4} = -\frac{3}{x^4}$$
+
+</details>
+
+---
+
 ### The Constant Multiple Rule
 
 The **Constant Multiple Rule** tells us that when a function is multiplied by a constant, we can find the derivative by simply multiplying the derivative of the function by that constant.  
@@ -638,6 +699,32 @@ The constant just **comes along for the ride**. Differentiate the function as us
 
 ---
 
+
+### Concept Check: The Constant Multiple Rule {-}
+
+**1. A glacier retreats according to $L(t) = 200 - 1.5t^2$ meters, where $t$ is years. Find $L'(t)$ and interpret it.**
+
+<details>
+<summary><strong>Click to reveal answer</strong></summary>
+
+$$L'(t) = -3t$$
+
+The retreat rate is $-3t$ meters per year. The negative sign tells us the glacier is shrinking, and the rate of shrinkage *increases* over time (it's losing ice faster and faster).
+
+</details>
+
+**2. If $f(x) = 7x^4$, what is $f'(x)$?**
+
+<details>
+<summary><strong>Click to reveal answer</strong></summary>
+
+$$f'(x) = 7 \cdot 4x^3 = 28x^3$$
+
+The constant 7 stays as a multiplier, and we apply the power rule to $x^4$.
+
+</details>
+
+---
 
 ### The Sum and Difference Rules
 
@@ -764,6 +851,43 @@ Break the function into pieces using **+** and **–** signs.
 Apply known derivative rules to each term, then combine them.
 
 > **Tip**: Combine the **Constant Multiple Rule** with the **Sum and Difference Rules** to quickly differentiate polynomials and real-world models.
+
+---
+
+### Concept Check: Sum and Difference Rules {-}
+
+**1. Temperature decreases with elevation according to $T(h) = 25 - 0.0065h$, where $h$ is meters above sea level. Find $T'(h)$ and state its units.**
+
+<details>
+<summary><strong>Click to reveal answer</strong></summary>
+
+$$T'(h) = -0.0065$$
+
+The units are **°C per meter**. This is the atmospheric lapse rate — temperature drops by 0.0065°C for every meter of elevation gained. Because $T(h)$ is linear, the derivative is constant.
+
+</details>
+
+**2. Find the derivative of $g(x) = 3x^4 - 2x^2 + 5x - 9$.**
+
+<details>
+<summary><strong>Click to reveal answer</strong></summary>
+
+$$g'(x) = 12x^3 - 4x + 5$$
+
+Apply the power rule to each term separately, and remember: the derivative of a constant ($-9$) is zero.
+
+</details>
+
+**3. A simplified cost model for reforestation is $C(n) = 50n + 0.02n^2$, where $n$ is the number of seedlings. Find $C'(n)$ and explain what it represents.**
+
+<details>
+<summary><strong>Click to reveal answer</strong></summary>
+
+$$C'(n) = 50 + 0.04n$$
+
+This is the **marginal cost** — the cost of planting one additional seedling. Notice it increases with $n$: the more seedlings you plant, the more expensive each additional one becomes (perhaps due to labor, logistics, or site preparation).
+
+</details>
 
 ---
 
@@ -907,6 +1031,44 @@ Can you think of natural exponential processes that are of concern>
 - Exponential models describe **growth at a rate proportional to value**.
 - This rule forms the backbone of many environmental models involving **runaway feedback**, like **CO₂ buildup** or **species invasion**.
 
+### Concept Check: The Exponential Rule {-}
+
+**1. A bacteria population grows as $N(t) = 500e^{0.1t}$. Find $N'(t)$ and calculate the growth rate at $t = 10$ hours.**
+
+<details>
+<summary><strong>Click to reveal answer</strong></summary>
+
+$$N'(t) = 500 \cdot 0.1 \cdot e^{0.1t} = 50e^{0.1t}$$
+
+At $t = 10$:
+$$N'(10) = 50e^{1} \approx 50(2.718) \approx 136 \text{ bacteria per hour}$$
+
+Notice that the growth rate itself is growing — this is the hallmark of exponential growth.
+
+</details>
+
+**2. True or false: The derivative of $e^x$ is $xe^{x-1}$.**
+
+<details>
+<summary><strong>Click to reveal answer</strong></summary>
+
+**False.** That would be applying the *power rule*, which is for $x^n$, not $e^x$. The derivative of $e^x$ is $e^x$ — the exponential function is its own derivative. This is one of the most remarkable facts in calculus.
+
+</details>
+
+**3. Radioactive decay is modeled by $A(t) = A_0 e^{-0.03t}$. Without computing, will $A'(t)$ be positive or negative? What does that mean?**
+
+<details>
+<summary><strong>Click to reveal answer</strong></summary>
+
+$A'(t)$ will be **negative** because the exponent $-0.03t$ makes the function *decrease* over time. The derivative tells us the substance is decaying — losing mass over time.
+
+Specifically: $A'(t) = -0.03 A_0 e^{-0.03t}$. The negative coefficient confirms the decreasing trend.
+
+</details>
+
+---
+
 ### The Natural Logarithm Rule
 
 The natural logarithm function \( \ln(x) \) is the **inverse** of the exponential function \( e^x \). While the exponential function grows at a rate proportional to its current size, the logarithm grows more and more slowly as \( x \) increases.  
@@ -982,6 +1144,32 @@ In each case, the logarithm captures the idea that the “marginal returns” di
 - This makes logarithmic models ideal for studying **slowing growth**, **saturation effects**, and **resource limits** in environmental systems.  
 
 
+
+### Concept Check: The Natural Logarithm Rule {-}
+
+**1. Find $\frac{d}{dx}[\ln(x)]$. If $x$ represents concentration in mg/L, what are the units of the derivative?**
+
+<details>
+<summary><strong>Click to reveal answer</strong></summary>
+
+$$\frac{d}{dx}[\ln(x)] = \frac{1}{x}$$
+
+If $x$ is in mg/L, then the derivative has units of $\frac{1}{\text{mg/L}}$, or equivalently **L/mg**. This means the derivative tells us how sensitive the logarithmic response is per unit change in concentration.
+
+</details>
+
+**2. The pH of a solution is defined as $\text{pH} = -\log_{10}[H^+]$. If we write this using natural log, $\text{pH} = -\frac{\ln[H^+]}{\ln 10}$, what is $\frac{d(\text{pH})}{d[H^+]}$?**
+
+<details>
+<summary><strong>Click to reveal answer</strong></summary>
+
+$$\frac{d(\text{pH})}{d[H^+]} = -\frac{1}{\ln(10)} \cdot \frac{1}{[H^+]}$$
+
+The derivative is always negative, which makes sense: as hydrogen ion concentration increases, pH *decreases* (the solution becomes more acidic). The $\frac{1}{[H^+]}$ factor means pH is more sensitive to changes at low concentrations.
+
+</details>
+
+---
 
 ## Product, Quotient, and Chain Rule
 
@@ -1384,6 +1572,48 @@ The Product Rule isn’t just an abstract formula—it matches how environmental
 > Intuition: change from the first factor **plus** change from the second factor.  
 > Differentiate **one factor at a time**, then add.
 
+
+### Concept Check: The Product Rule {-}
+
+**1. Which of these requires the product rule to differentiate? (Select all that apply)**
+
+- a) $f(x) = 3x^2$
+- b) $f(x) = x^2 \cdot e^x$
+- c) $f(x) = (2x+1)(x^3 - 4)$
+- d) $f(x) = 5 \ln(x)$
+
+<details>
+<summary><strong>Click to reveal answer</strong></summary>
+
+**b)** and **c)** require the product rule.
+
+- a) is just a constant multiple of a power — use the constant multiple rule
+- b) is a product of two *different types* of functions ($x^2$ and $e^x$)
+- c) is a product of two polynomial expressions
+- d) is just a constant multiple of $\ln(x)$ — use the constant multiple rule
+
+**The key question:** are there two separate functions being *multiplied* together, where both depend on $x$?
+
+</details>
+
+**2. Biomass accumulation in a forest can be modeled as $B(t) = t^2 \cdot e^{-0.1t}$ (growth times natural decay). Find $B'(t)$ using the product rule.**
+
+<details>
+<summary><strong>Click to reveal answer</strong></summary>
+
+Let $u = t^2$ and $v = e^{-0.1t}$.
+
+Then $u' = 2t$ and $v' = -0.1e^{-0.1t}$.
+
+$$B'(t) = u'v + uv' = 2t \cdot e^{-0.1t} + t^2 \cdot (-0.1e^{-0.1t})$$
+
+$$B'(t) = e^{-0.1t}(2t - 0.1t^2)$$
+
+Setting this to zero: $t(2 - 0.1t) = 0$, giving $t = 0$ or $t = 20$. So biomass peaks at $t = 20$ years.
+
+</details>
+
+---
 
 ## The Quotient Rule
 
@@ -1807,6 +2037,49 @@ This example shows why the **Chain Rule is essential in environmental modeling**
 
 
 
+
+### Concept Check: The Chain Rule {-}
+
+**1. Identify the "outer" and "inner" functions in $f(x) = e^{-0.03x^2}$.**
+
+<details>
+<summary><strong>Click to reveal answer</strong></summary>
+
+- **Outer function:** $e^{(\cdot)}$ (the exponential)
+- **Inner function:** $-0.03x^2$ (what's plugged into the exponential)
+
+To differentiate: apply the derivative of the outer ($e^{(\cdot)}$) and multiply by the derivative of the inner ($-0.06x$):
+
+$$f'(x) = e^{-0.03x^2} \cdot (-0.06x) = -0.06x \, e^{-0.03x^2}$$
+
+</details>
+
+**2. Dissolved oxygen in a lake follows $D(t) = \ln(t^2 + 1)$. Find $D'(t)$.**
+
+<details>
+<summary><strong>Click to reveal answer</strong></summary>
+
+The outer function is $\ln(\cdot)$ and the inner is $t^2 + 1$.
+
+$$D'(t) = \frac{1}{t^2 + 1} \cdot 2t = \frac{2t}{t^2 + 1}$$
+
+At $t = 0$, $D'(0) = 0$ \u2014 the dissolved oxygen isn't changing. For $t > 0$, $D'(t) > 0$ \u2014 DO is increasing, but at a decreasing rate.
+
+</details>
+
+**3. True or false: $\frac{d}{dx}[\ln(5x)] = \frac{1}{5x}$.**
+
+<details>
+<summary><strong>Click to reveal answer</strong></summary>
+
+**False.** By the chain rule:
+$$\frac{d}{dx}[\ln(5x)] = \frac{1}{5x} \cdot 5 = \frac{1}{x}$$
+
+The $5$ from the derivative of the inner function cancels the $5$ in the denominator. In fact, $\ln(5x) = \ln 5 + \ln x$, so the derivative is just $\frac{1}{x}$ (the constant $\ln 5$ disappears).
+
+</details>
+
+---
 
 ## Implicit Differentiation
 
