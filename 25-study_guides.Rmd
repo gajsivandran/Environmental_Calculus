@@ -1,0 +1,766 @@
+# (PART) Study Guides {-}
+
+# Study Guides {-}
+
+These study guides are designed to help you prepare for each test. Each guide follows the same structure:
+
+1. **Prep Worksheet** — Build your own reference sheet before you practice
+2. **Concept Check In** — Quick questions to test readiness before each section
+3. **Practice Problems** — Organized by topic with hints and full solutions
+4. **Concept Check Out** — Verify understanding after each section
+5. **Answer Key** — Complete worked solutions
+
+**Suggested workflow:** Complete the prep worksheet first, then work through each section's Concept Check In → Problems → Concept Check Out. Use the answer key only after attempting the problems yourself.
+
+---
+
+# Module 1: Limits, Continuity, and Derivatives {-}
+
+*Building intuition for change — average rate of change, the limit definition of the derivative, and reading derivatives off a graph.*
+
+## Skills Checklist {-}
+
+| Test Skill | What You Need To Be Able To Do |
+|:-----------|:-------------------------------|
+| Average rate of change | Compute $\frac{f(b)-f(a)}{b-a}$ and interpret with units |
+| Limit definition of the derivative | Apply $f'(x) = \lim_{h\to 0}\frac{f(x+h)-f(x)}{h}$ to polynomials |
+| Instantaneous rate of change | Evaluate $f'(a)$ at a specific point and explain it as a tangent slope |
+| Continuity and differentiability | Tell the difference between continuous-but-not-differentiable (corner) and discontinuous (jump, hole, asymptote) |
+| One-sided derivatives | Use $f'(a^-)$ and $f'(a^+)$ to check whether $f'(a)$ exists |
+| Reading graphs | Identify where $g'$ is positive, negative, zero, or undefined directly from a graph of $g$ |
+| Sketching the derivative | Translate a graph of $g$ into a qualitatively correct sketch of $g'$ |
+| Units and interpretation | Always state derivatives and rates of change with the correct units |
+
+---
+
+## Prep Worksheet: Build Your Reference Sheet {-}
+
+Fill this in before you practice. The goal is to make your own one-page reference sheet instead of passively reading one.
+
+::: promptbox
+**1. Vocabulary I Need to Know**
+
+The average rate of change of $f$ on $[a,b]$ is:
+<div class="writein"></div>
+
+The instantaneous rate of change of $f$ at $x=a$ is:
+<div class="writein"></div>
+
+A secant line is:
+<div class="writein"></div>
+
+A tangent line is:
+<div class="writein"></div>
+
+A function is continuous at $x=a$ if (3 conditions):
+<div class="writein tall"></div>
+
+A function is differentiable at $x=a$ if:
+<div class="writein"></div>
+:::
+
+::: promptbox
+**2. The Limit Definition of the Derivative**
+
+Write the formula in three different but equivalent forms:
+
+Slope of secant line from $a$ to $b$:
+<div class="writein"></div>
+
+Slope of tangent line at $x=a$ (using $h$):
+$$f'(a) = \lim_{h\to 0}$$
+<div class="writein"></div>
+
+Slope of tangent line at $x=a$ (using $x$):
+$$f'(a) = \lim_{x\to a}$$
+<div class="writein"></div>
+:::
+
+::: promptbox
+**3. The Five-Step Limit-Definition Recipe**
+
+| Step | What I Do | My Notes |
+|:----:|:----------|:---------|
+| 1 | Write $f(x+h)$. Substitute $(x+h)$ everywhere $x$ appears. | |
+| 2 | Expand carefully. Watch the squaring of binomials. | |
+| 3 | Subtract $f(x)$. Terms without $h$ should all cancel. | |
+| 4 | Divide by $h$. Every remaining term should have a factor of $h$ to cancel. | |
+| 5 | Take the limit as $h\to 0$. Plug in $h=0$ in what remains. | |
+:::
+
+::: promptbox
+**4. When Does a Derivative Not Exist?**
+
+A derivative fails to exist at $x=a$ when:
+
+1. Discontinuity (any type):
+2. Corner:
+3. Cusp:
+4. Vertical tangent:
+
+<div class="writein"></div>
+:::
+
+::: promptbox
+**5. Reading $g'$ from a Graph of $g$**
+
+| What I See on the Graph of $g$ | What This Means for $g'(x)$ |
+|:-------------------------------|:----------------------------|
+| $g$ is going up (increasing) | |
+| $g$ is going down (decreasing) | |
+| $g$ is flat (horizontal tangent) | |
+| $g$ has a corner | |
+| $g$ has a jump or hole | |
+| $g$ has a vertical tangent | |
+:::
+
+::: promptbox
+**6. Before I Start the Practice Problems**
+
+One mistake I want to avoid:
+<div class="writein"></div>
+
+One algebra step I find tricky:
+<div class="writein"></div>
+
+One rule I can explain clearly to someone else:
+<div class="writein"></div>
+:::
+
+---
+
+## Average Rate of Change {-}
+
+**Formula:** $\text{Average rate of change} = \frac{f(b)-f(a)}{b-a}$
+
+**Units matter.** If $f$ is in mg/L and $x$ is in years, then the average rate of change is in (mg/L)/year — always read the rate as "output units per input unit."
+
+### Concept Check In {-}
+
+**1.** In your own words, what is a secant line?
+
+<details><summary><strong>Answer</strong></summary>
+A secant line is a straight line through two distinct points on the graph of $f$.
+</details>
+
+**2.** Why do we divide by $b-a$ rather than just compute $f(b)-f(a)$?
+
+<details><summary><strong>Answer</strong></summary>
+Dividing by $b-a$ converts a total change into a rate (change per unit of $x$). Without it, you'd just have $\Delta f$, not a rate.
+</details>
+
+**3.** If $f$ measures water depth in meters and $x$ is in hours, what are the units of the average rate of change?
+
+<details><summary><strong>Answer</strong></summary>
+Meters per hour (m/h).
+</details>
+
+**4.** Can the average rate of change be negative? What does that mean physically?
+
+<details><summary><strong>Answer</strong></summary>
+Yes. A negative average rate of change means $f$ decreased on average over the interval — e.g. water depth dropping over time.
+</details>
+
+### Practice Problems {-}
+
+**1.** $f(x)=x^2$. Find the average rate of change from $x=1$ to $x=3$.
+
+<details><summary><strong>Solution</strong></summary>
+$\text{ARC} = \frac{f(3)-f(1)}{3-1} = \frac{9-1}{2} = 4$.
+</details>
+
+**2.** $g(x)=3x+5$. Find the average rate of change from $x=2$ to $x=10$. What do you notice?
+
+<details><summary><strong>Solution</strong></summary>
+$\text{ARC} = \frac{35-11}{8} = 3$. This equals the slope of the line — the average rate of change of any linear function over any interval equals the slope.
+</details>
+
+**3.** $C(t)=4t^2+2$ (pollutant concentration in mg/L, $t$ in years). Find the average rate of change from $t=1$ to $t=4$. State units.
+
+<details><summary><strong>Solution</strong></summary>
+$C(1)=6$, $C(4)=66$. $\text{ARC}=\frac{66-6}{3}=20$ mg/L per year.
+</details>
+
+**4.** A table of stream discharge $Q(t)$ in m³/s:
+
+| $t$ (h) | 0 | 2 | 5 | 8 |
+|:-------:|:--:|:--:|:--:|:--:|
+| $Q$ (m³/s) | 12 | 18 | 30 | 22 |
+
+(a) Find the ARC from $t=0$ to $t=2$.
+(b) From $t=2$ to $t=5$.
+(c) From $t=5$ to $t=8$.
+(d) What story does this tell about the stream?
+
+<details><summary><strong>Solution</strong></summary>
+(a) $(18-12)/2 = 3$ m³/s per hour.
+(b) $(30-18)/3 = 4$ m³/s per hour.
+(c) $(22-30)/3 \approx -2.67$ m³/s per hour.
+(d) Discharge is rising (perhaps a storm), peaks somewhere around $t=5$, then drops.
+</details>
+
+**Units drill.** For each scenario, name the units of the average rate of change:
+
+1. Population $P(t)$ in number of fish, $t$ in months.
+2. Temperature $T(z)$ in °C, $z$ in m below the surface.
+3. Concentration $C(t)$ in µg/L, $t$ in days.
+
+<details><summary><strong>Solution</strong></summary>
+1. fish per month. 2. °C per meter. 3. µg/L per day.
+</details>
+
+---
+
+## The Limit Definition of the Derivative {-}
+
+**The five-step recipe:**
+
+1. Write $f(x+h)$ by substituting $(x+h)$ for $x$.
+2. Expand carefully. $(x+h)^2 = x^2 + 2xh + h^2$.
+3. Subtract $f(x)$. Every term without $h$ should cancel.
+4. Divide by $h$. Every remaining term should have a factor of $h$ to cancel.
+5. Take the limit as $h\to 0$.
+
+### Concept Check In {-}
+
+**1.** What does $\frac{f(x+h)-f(x)}{h}$ represent geometrically before the limit is taken?
+
+<details><summary><strong>Answer</strong></summary>
+It is the slope of the secant line through $(x, f(x))$ and $(x+h, f(x+h))$.
+</details>
+
+**2.** Why do we need the limit? What goes wrong if we just plug in $h=0$?
+
+<details><summary><strong>Answer</strong></summary>
+Plugging $h=0$ gives $\frac{0}{0}$, which is indeterminate. The limit is the only way to make "$h\to 0$" precise.
+</details>
+
+### Practice Problems {-}
+
+For each function, use the limit definition to find $f'(x)$, then evaluate at the requested point(s).
+
+**1.** $f(x)=x^2$. Find $f'(x)$, then $f'(2)$.
+
+<details><summary><strong>Solution</strong></summary>
+$f(x+h) = x^2 + 2xh + h^2$. $f(x+h)-f(x) = 2xh + h^2$. Divide by $h$: $2x+h$. Limit: $f'(x) = 2x$. $f'(2) = 4$.
+</details>
+
+**2.** $f(x)=x^2-6x+1$. Find $f'(x)$, then $f'(1)$ and $f'(3)$.
+
+<details><summary><strong>Solution</strong></summary>
+$f(x+h) = x^2+2xh+h^2-6x-6h+1$. $f(x+h)-f(x) = 2xh+h^2-6h$. Divide: $2x+h-6$. Limit: $f'(x) = 2x-6$. $f'(1) = -4$; $f'(3) = 0$.
+</details>
+
+**3.** $C(t)=4t^2+2$ (pollutant in mg/L, $t$ in years). Find $C'(t)$, then $C'(1)$ and $C'(4)$.
+
+<details><summary><strong>Solution</strong></summary>
+$C(t+h) = 4t^2+8th+4h^2+2$. $C(t+h)-C(t) = 8th+4h^2$. Divide: $8t+4h$. Limit: $C'(t) = 8t$. $C'(1) = 8$ mg/L per year. $C'(4) = 32$ mg/L per year.
+</details>
+
+**4.** $f(x)=x^3$. Find $f'(x)$.
+
+<details><summary><strong>Solution</strong></summary>
+$f(x+h) = x^3+3x^2h+3xh^2+h^3$. $f(x+h)-f(x) = 3x^2h+3xh^2+h^3$. Divide: $3x^2+3xh+h^2$. Limit: $f'(x) = 3x^2$.
+</details>
+
+**5.** $f(x)=\frac{1}{x}$. Find $f'(x)$.
+
+<details><summary><strong>Solution</strong></summary>
+$f(x+h)-f(x) = \frac{1}{x+h}-\frac{1}{x} = \frac{x-(x+h)}{x(x+h)} = \frac{-h}{x(x+h)}$. Divide by $h$: $\frac{-1}{x(x+h)}$. Limit: $f'(x) = -\frac{1}{x^2}$.
+</details>
+
+**6.** Numerical estimate. For $f(x)=e^{2x}$, estimate $f'(1)$ by computing the difference quotient at $h=0.1$, $h=0.01$, and $h=0.001$.
+
+<details><summary><strong>Solution</strong></summary>
+
+| $h$ | $\frac{e^{2(1+h)}-e^2}{h}$ |
+|:---:|:--:|
+| 0.1 | $\approx 16.36$ |
+| 0.01 | $\approx 14.93$ |
+| 0.001 | $\approx 14.79$ |
+
+The values approach $2e^2 \approx 14.778$.
+</details>
+
+---
+
+## Continuity and Differentiability {-}
+
+**Continuity at $x=a$ requires three conditions:**
+
+1. $f(a)$ is defined.
+2. $\lim_{x\to a} f(x)$ exists.
+3. $\lim_{x\to a} f(x) = f(a)$.
+
+**Differentiability requires:** continuity AND smoothness (no corner, cusp, or vertical tangent).
+
+**Key relationship:** Differentiable $\Rightarrow$ Continuous, but not the reverse.
+
+### Practice Problems {-}
+
+**1.** Classify the discontinuity at $x=2$: $f(x) = \frac{x^2-4}{x-2}$
+
+<details><summary><strong>Solution</strong></summary>
+$\frac{(x-2)(x+2)}{x-2}$: the factor cancels for $x\neq 2$, but $f$ is undefined at $x=2$. Removable (hole).
+</details>
+
+**2.** $g(x) = \begin{cases} x^2 & x \le 1 \\ 3-x & x > 1 \end{cases}$. Is $g$ continuous at $x=1$? Differentiable?
+
+<details><summary><strong>Solution</strong></summary>
+$g(1) = 1$; $\lim_{x\to 1^-} g = 1$; $\lim_{x\to 1^+} g = 2$. Left and right limits disagree $\Rightarrow$ limit DNE $\Rightarrow$ not continuous $\Rightarrow$ not differentiable.
+</details>
+
+**3.** $f(x) = |x|$. Is $f$ continuous at $x=0$? Differentiable?
+
+<details><summary><strong>Solution</strong></summary>
+Continuous (limit and value both equal 0). Left derivative $= -1$, right derivative $= +1$. The two disagree, so $f'(0)$ does not exist. (Classic corner.)
+</details>
+
+**4.** $f(x) = \begin{cases} ax+1 & x\le 2 \\ x^2-3 & x>2 \end{cases}$. Find $a$ that makes $f$ continuous at $x=2$.
+
+<details><summary><strong>Solution</strong></summary>
+Left limit $= 2a+1$; right limit $= 4-3=1$. Set $2a+1=1 \Rightarrow a=0$.
+</details>
+
+---
+
+## Reading Graphs and Sketching the Derivative {-}
+
+**Translation table:**
+
+| What I see on $g$ | What it means for $g'(x)$ |
+|:-------------------|:--------------------------|
+| $g$ going up | $g'(x) > 0$ |
+| $g$ going down | $g'(x) < 0$ |
+| $g$ flat (peak/valley) | $g'(x) = 0$ |
+| $g$ has a corner | $g'(x)$ does not exist (jump in $g'$) |
+| $g$ has a jump/hole | $g'$ doesn't exist there |
+| $g$ is a line segment | $g'$ is the constant slope |
+
+### Practice Problems {-}
+
+**1.** $g$ is increasing on $(-\infty,0)$, has a peak at $x=0$, then decreases on $(0,\infty)$. Where is $g'(x)$ positive? Negative? Zero?
+
+<details><summary><strong>Solution</strong></summary>
+$g'>0$ on $(-\infty,0)$; $g'<0$ on $(0,\infty)$; $g'(0)=0$.
+</details>
+
+**2.** A reservoir's water level $W(t)$ rises, plateaus, then falls. Sketch $W'(t)$.
+
+<details><summary><strong>Solution</strong></summary>
+$W'(t)$ is positive during the rise, zero on the plateau, then negative during the fall. At the transitions, $W'$ may have corners or smooth transitions depending on whether the original function is smooth.
+</details>
+
+---
+
+## Multiple Choice Practice {-}
+
+**1.** What does the derivative $f'(a)$ represent conceptually?
+
+(A) the average value of $f(x)$ near $x=a$
+(B) the slope of the secant line through $x=a$
+(C) the slope of the tangent line at $x=a$
+(D) the total change in $f(x)$ from 0 to $a$
+
+<details><summary><strong>Answer</strong></summary>
+**(C)** The derivative is the slope of the tangent line at $x=a$.
+</details>
+
+**2.** A function is continuous at $x=2$ but not differentiable there. The graph near $x=2$ could show:
+
+(A) a jump discontinuity
+(B) a removable hole
+(C) a sharp corner
+(D) a vertical asymptote
+
+<details><summary><strong>Answer</strong></summary>
+**(C)** A sharp corner is the canonical "continuous but not differentiable" case.
+</details>
+
+**3.** If $f'(a) = 0$, what must be true at $x=a$?
+
+(A) $f$ has a local maximum
+(B) $f$ has a local minimum
+(C) $f$ is constant near $a$
+(D) the tangent line has slope 0
+
+<details><summary><strong>Answer</strong></summary>
+**(D)** $f'(a)=0$ means the tangent line is horizontal. It could be a max, a min, or neither — the only guaranteed conclusion is the horizontal tangent.
+</details>
+
+---
+
+# Module 2: Derivative Rules {-}
+
+*Mastering the rules of differentiation — power, exponential, logarithm, product, quotient, chain, second derivatives, and implicit differentiation.*
+
+## Skills Checklist {-}
+
+| Test Skill | What You Need To Be Able To Do |
+|:-----------|:-------------------------------|
+| Basic rules | Differentiate polynomials, constants, $e^x$, $a^x$, $\ln(x)$ |
+| The chain rule | Spot a composition and apply outside-derivative-times-inside-derivative |
+| The product rule | Apply $(uv)' = u'v + uv'$ |
+| The quotient rule | Apply $\left(\frac{u}{v}\right)' = \frac{u'v-uv'}{v^2}$ |
+| Second derivatives | Differentiate twice; the second derivative often needs chain or product rule |
+| Implicit differentiation | Differentiate both sides, attach $\frac{dy}{dx}$ to $y$-terms, solve |
+| Combining rules | Recognize functions that need stacked rules |
+
+---
+
+## Prep Worksheet: Build Your Reference Sheet {-}
+
+::: promptbox
+**1. The Basic Rules**
+
+| Rule | Formula |
+|:-----|:--------|
+| Constant: $\frac{d}{dx}[c]$ | |
+| Power: $\frac{d}{dx}[x^n]$ | |
+| Constant multiple: $\frac{d}{dx}[c\cdot f(x)]$ | |
+| Sum/difference | |
+| $e^x$ | |
+| $a^x$ | |
+| $\ln(x)$ | |
+| $\sin(x)$ | |
+| $\cos(x)$ | |
+:::
+
+::: promptbox
+**2. The Three Big Combination Rules**
+
+Product rule: $\frac{d}{dx}[u\cdot v] =$
+<div class="writein"></div>
+
+Quotient rule: $\frac{d}{dx}\left[\frac{u}{v}\right] =$
+<div class="writein"></div>
+
+Chain rule: If $y = f(g(x))$, then $\frac{dy}{dx} =$
+<div class="writein"></div>
+:::
+
+::: promptbox
+**3. Choosing the Right Rule (Decision Tree)**
+
+- Is it a sum of terms? → Differentiate each term separately
+- Is it a constant times a function? → Factor out the constant
+- Is it a composition $f(g(x))$? → Chain rule
+- Is it a product of two functions? → Product rule
+- Is it a quotient? → Quotient rule (or rewrite as product with negative power)
+- Are $y$'s and $x$'s mixed? → Implicit differentiation
+- Several stacked? → Outer rule first, handle each piece
+:::
+
+::: promptbox
+**4. Common Pitfalls I Want to Avoid**
+
+1. Forgetting the $g'(x)$ part of the chain rule
+2. Mixing up the order of the quotient rule
+3. Writing $\frac{d}{dx}[a^x] = x\cdot a^{x-1}$ (wrong rule!)
+4. Forgetting that $\pi e^\pi$ is a constant (derivative is 0)
+5. Forgetting to attach $\frac{dy}{dx}$ when differentiating $y$-terms implicitly
+:::
+
+---
+
+## Basic Rules Practice {-}
+
+**1.** $f(x) = \frac{x^4}{3} - 2x + 2$
+
+<details><summary><strong>Solution</strong></summary>
+$f'(x) = \frac{4x^3}{3} - 2$.
+</details>
+
+**2.** $f(x) = \pi^x + e^\pi x^2 + \pi e^\pi$
+
+<details><summary><strong>Solution</strong></summary>
+$\pi^x$: exponential rule $\Rightarrow \pi^x\ln(\pi)$. $e^\pi x^2$: constant multiple $\Rightarrow 2e^\pi x$. $\pi e^\pi$: pure constant $\Rightarrow 0$. So $f'(x) = \pi^x\ln(\pi) + 2e^\pi x$.
+</details>
+
+**3.** $f(x) = 4x^7 - 3x^{-2} + 6\sqrt{x} - \frac{1}{x} + 10$
+
+<details><summary><strong>Solution</strong></summary>
+$f'(x) = 28x^6 + 6x^{-3} + 3x^{-1/2} + x^{-2} = 28x^6 + \frac{6}{x^3} + \frac{3}{\sqrt{x}} + \frac{1}{x^2}$.
+</details>
+
+---
+
+## Chain Rule Practice {-}
+
+**1.** $f(x) = (2x+5)^3$
+
+<details><summary><strong>Solution</strong></summary>
+Outer: $(\cdot)^3$, inner: $2x+5$, inner derivative: 2. $f'(x) = 3(2x+5)^2\cdot 2 = 6(2x+5)^2$.
+</details>
+
+**2.** $f(x) = e^{x^2}$
+
+<details><summary><strong>Solution</strong></summary>
+$f'(x) = e^{x^2}\cdot 2x = 2xe^{x^2}$.
+</details>
+
+**3.** $f(x) = \ln(4x^3+x)$
+
+<details><summary><strong>Solution</strong></summary>
+$f'(x) = \frac{12x^2+1}{4x^3+x}$.
+</details>
+
+**4.** $f(x) = \sin(2x^2)$
+
+<details><summary><strong>Solution</strong></summary>
+$f'(x) = \cos(2x^2)\cdot 4x = 4x\cos(2x^2)$.
+</details>
+
+---
+
+## Product and Quotient Rules Practice {-}
+
+**1.** $f(x) = x^2\cdot e^x$
+
+<details><summary><strong>Solution</strong></summary>
+$u=x^2$, $u'=2x$; $v=e^x$, $v'=e^x$. $f'(x) = 2xe^x + x^2e^x = e^x(x^2+2x)$.
+</details>
+
+**2.** $f(x) = \frac{\ln(x)}{x^2}$
+
+<details><summary><strong>Solution</strong></summary>
+$f'(x) = \frac{(1/x)\cdot x^2 - \ln(x)\cdot 2x}{x^4} = \frac{x-2x\ln(x)}{x^4} = \frac{1-2\ln(x)}{x^3}$.
+</details>
+
+**3.** $f(x) = \frac{x}{e^{2x}}$ (rewrite as $xe^{-2x}$)
+
+<details><summary><strong>Solution</strong></summary>
+Product rule: $f'(x) = e^{-2x} + x(-2e^{-2x}) = (1-2x)e^{-2x}$.
+</details>
+
+---
+
+## Implicit Differentiation Practice {-}
+
+**1.** $x^2 + y^2 = 25$
+
+<details><summary><strong>Solution</strong></summary>
+$2x + 2y\frac{dy}{dx} = 0 \Rightarrow \frac{dy}{dx} = -\frac{x}{y}$.
+</details>
+
+**2.** $x^2 + xy + y^3 = 7$
+
+<details><summary><strong>Solution</strong></summary>
+$2x + y + x\frac{dy}{dx} + 3y^2\frac{dy}{dx} = 0$. Collect: $(x+3y^2)\frac{dy}{dx} = -(2x+y)$. So $\frac{dy}{dx} = -\frac{2x+y}{x+3y^2}$.
+</details>
+
+---
+
+# Module 3: Sign Charts and Applications {-}
+
+*Understanding function behavior through first and second derivative analysis — extrema, concavity, inflection points, and curve sketching.*
+
+## Skills Checklist {-}
+
+| Test Skill | What You Need To Be Able To Do |
+|:-----------|:-------------------------------|
+| First derivative sign charts | Identify where $f$ is increasing/decreasing and locate extrema |
+| Second derivative sign charts | Identify concavity and inflection points |
+| Classifying critical points | Use sign change or second derivative test |
+| Curve sketching | Combine $f'$ and $f''$ information to sketch $f$ |
+| Asymptotes | Find and interpret vertical and horizontal asymptotes |
+
+---
+
+## Prep Worksheet {-}
+
+::: promptbox
+**Key Relationships**
+
+| $f'(x) > 0$ | $f$ is ______ |
+|:-------------|:--------------|
+| $f'(x) < 0$ | $f$ is ______ |
+| $f'(x) = 0$ | $f$ has a possible ______ |
+| $f''(x) > 0$ | $f$ is concave ______ |
+| $f''(x) < 0$ | $f$ is concave ______ |
+| $f''(x) = 0$ | $f$ has a possible ______ |
+:::
+
+::: promptbox
+**Classification Table**
+
+| At a critical point $c$ | What it tells you | Conclusion |
+|:------------------------|:------------------|:-----------|
+| $f''(c) > 0$ | | |
+| $f''(c) < 0$ | | |
+| $f''(c) = 0$ | | |
+| $f'$ changes $+\to-$ | | |
+| $f'$ changes $-\to+$ | | |
+| $f'$ does not change sign | | |
+:::
+
+---
+
+## First Derivative Sign Chart Practice {-}
+
+**1.** $f'(x) = (x+2)(x-1)$. Find all critical points and classify them.
+
+<details><summary><strong>Solution</strong></summary>
+Critical points: $x=-2, 1$. Signs of $f'(x)$: positive on $(-\infty,-2)$, negative on $(-2,1)$, positive on $(1,\infty)$. Local maximum at $x=-2$; local minimum at $x=1$.
+</details>
+
+**2.** $H'(x) = x^2-6x+8 = (x-2)(x-4)$. Find critical points and classify.
+
+<details><summary><strong>Solution</strong></summary>
+Critical points: $x=2, 4$. Signs: positive on $(-\infty,2)$, negative on $(2,4)$, positive on $(4,\infty)$. Local maximum at $x=2$; local minimum at $x=4$.
+</details>
+
+---
+
+## Second Derivative and Concavity Practice {-}
+
+**1.** $f''(x) = 2x-6 = 2(x-3)$. Where is $f$ concave up? Concave down? Inflection point?
+
+<details><summary><strong>Solution</strong></summary>
+Concave down on $(-\infty,3)$, concave up on $(3,\infty)$. Inflection point at $x=3$.
+</details>
+
+**2.** $s''(x) = 12x^2-12 = 12(x-1)(x+1)$. Find inflection points.
+
+<details><summary><strong>Solution</strong></summary>
+Concave up on $(-\infty,-1)$, concave down on $(-1,1)$, concave up on $(1,\infty)$. Inflection points at $x=-1$ and $x=1$.
+</details>
+
+---
+
+# Module 4: Optimization {-}
+
+*Setting up objectives, applying constraints, classifying candidates, and interpreting optima in real environmental decisions.*
+
+## Skills Checklist {-}
+
+| Test Skill | What You Need To Be Able To Do |
+|:-----------|:-------------------------------|
+| Identify the objective function | Name the quantity to maximize or minimize |
+| Identify the constraint | Name the relationship tying variables together |
+| Reduce to one variable | Solve constraint and substitute into objective |
+| Find critical points | Differentiate, set $f'(x)=0$, solve |
+| Classify critical points | First or second derivative test |
+| Closed-interval optimization | Check critical points AND endpoints |
+| Reject infeasible candidates | Discard solutions outside the domain |
+| Interpret the answer | State optimum with correct units and context |
+
+---
+
+## Prep Worksheet {-}
+
+::: promptbox
+**The Four-Step Optimization Recipe**
+
+| Step | What I Do | My Notes |
+|:----:|:----------|:---------|
+| 1 | Identify objective and constraint | |
+| 2 | Reduce to one variable; state feasible domain | |
+| 3 | Differentiate; find critical points | |
+| 4 | Classify; check endpoints; reject infeasible values | |
+| 5 | State the answer in context with units | |
+:::
+
+::: promptbox
+**Common Traps**
+
+1. Forgetting to convert to a single variable before differentiating
+2. Solving for $x$ and stopping — report all dimensions and the optimal value
+3. Accepting an infeasible critical point (negative length, outside allowed range)
+
+<div class="writein"></div>
+:::
+
+---
+
+## Setting Up Optimization Problems {-}
+
+For each problem, identify (i) the objective function, (ii) the constraint, and (iii) the feasible domain. Do not solve.
+
+**1.** A rectangular wildlife enclosure must have an area of 600 m². Minimize total fencing.
+
+<details><summary><strong>Solution</strong></summary>
+Objective: $P=2x+2y$ to minimize. Constraint: $xy=600$. Feasible domain: $x>0$.
+</details>
+
+**2.** A rectangular wetland adjacent to a river (no fence on river side). You have 120 m of fencing. Maximize area.
+
+<details><summary><strong>Solution</strong></summary>
+Objective: $A=xy$ to maximize. Constraint: $2x+y=120$. Feasible domain: $0<x<60$.
+</details>
+
+**3.** An open-top box with square base must hold 32 m³. Minimize surface area.
+
+<details><summary><strong>Solution</strong></summary>
+Objective: $S=x^2+4xh$ (base + four sides). Constraint: $x^2h=32$. Feasible domain: $x>0$.
+</details>
+
+---
+
+## Closed-Interval Optimization Practice {-}
+
+**1.** $f(x) = x^2-8x+10$ on $[0,6]$.
+
+<details><summary><strong>Solution</strong></summary>
+$f'(x) = 2x-8=0 \Rightarrow x=4 \in [0,6]$. Values: $f(0)=10$, $f(4)=-6$, $f(6)=-2$. Absolute max $=10$ at $x=0$; absolute min $=-6$ at $x=4$.
+</details>
+
+**2.** $g(x)=x^3-6x^2+9x+2$ on $[0,4]$.
+
+<details><summary><strong>Solution</strong></summary>
+$g'(x) = 3(x-1)(x-3)=0 \Rightarrow x=1, 3$. Values: $g(0)=2$, $g(1)=6$, $g(3)=2$, $g(4)=6$. Absolute max $=6$ (at $x=1$ and $x=4$); absolute min $=2$ (at $x=0$ and $x=3$).
+</details>
+
+---
+
+## Constrained Optimization Word Problems {-}
+
+**1. Garden along a river.** Area 200 m², borders a river on one side. Perpendicular sides cost \$10/m; parallel side costs \$6/m. Minimize cost.
+
+<details><summary><strong>Solution</strong></summary>
+Variables: $x$ = side $\perp$ river, $y$ = side $\parallel$ river. Constraint: $xy=200$. Cost: $C = 20x + 6y$. Substitute $y=200/x$: $C(x) = 20x + 1200/x$, $x>0$. $C'(x) = 20 - 1200/x^2 = 0 \Rightarrow x^2 = 60 \Rightarrow x = 2\sqrt{15} \approx 7.75$ m. $C'' > 0$ confirms minimum. $y \approx 25.82$ m. Minimum cost $\approx$ \$309.84.
+</details>
+
+**2. Open-top box.** Square base, volume 108 cm³. Minimize surface area.
+
+<details><summary><strong>Solution</strong></summary>
+$x^2h=108 \Rightarrow h=108/x^2$. $S = x^2+4xh = x^2+432/x$. $S'(x) = 2x-432/x^2=0 \Rightarrow x^3=216 \Rightarrow x=6$. $h=3$. $S=108$ cm². Base $6\times 6$ cm, height 3 cm.
+</details>
+
+**3. Salmon swimming speed.** Energy per unit distance: $E(v)=v^2+\frac{50}{v}$ for $v>0$. Find the speed minimizing energy.
+
+<details><summary><strong>Solution</strong></summary>
+$E'(v) = 2v - 50/v^2 = 0 \Rightarrow v^3 = 25 \Rightarrow v = 25^{1/3} \approx 2.92$ m/s. $E''>0$ confirms minimum.
+</details>
+
+---
+
+## Classifying Critical Points {-}
+
+**1.** $f(x)=x^3-3x^2+4$ has $f'(x)=3x(x-2)$. Classify each critical point.
+
+<details><summary><strong>Solution</strong></summary>
+$f''(x)=6x-6$. At $x=0$: $f''(0)=-6<0 \Rightarrow$ local max, $f(0)=4$. At $x=2$: $f''(2)=6>0 \Rightarrow$ local min, $f(2)=0$.
+</details>
+
+**2.** $f(x)=(x-1)^3$. There is a critical point at $x=1$. Max, min, or neither?
+
+<details><summary><strong>Solution</strong></summary>
+$f'(x)=3(x-1)^2 \ge 0$ everywhere. The derivative does not change sign at $x=1$, so $x=1$ is **neither** a max nor a min. ($f''(1)=0$, so the second derivative test is inconclusive — the first derivative test is needed.)
+</details>
+
+---
+
+## Interpretation Drills {-}
+
+**1.** A model gives optimal dimension $x^*=4$ m with minimum cost $f(x^*)=250$ dollars. Write the full answer.
+
+<details><summary><strong>Solution</strong></summary>
+"A square pen with sides of length 4 m minimizes the total fencing, giving a minimum cost of \$250."
+</details>
+
+**2.** A foraging model gives optimal patch time $t^*=1.5$ h with energy rate $\bar{E}(t^*)=14$ kcal/h. Write a one-sentence interpretation.
+
+<details><summary><strong>Solution</strong></summary>
+"The forager maximizes its long-run rate of energy intake by spending 1.5 hours at each patch, gaining 14 kcal/h on average."
+</details>

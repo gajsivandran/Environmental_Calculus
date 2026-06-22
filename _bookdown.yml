@@ -17,6 +17,7 @@ rmd_files:
   - 22-test_review.Rmd
   - 23-test_review.Rmd
   - 24-test_review.Rmd
+  - 25-study_guides.Rmd
   - Applications.Rmd
 
 output_dir: "docs"
