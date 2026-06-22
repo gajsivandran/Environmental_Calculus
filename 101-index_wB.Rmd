@@ -26,7 +26,7 @@
 
 - I have an 11yr old daughter that helps me write exam questions
 - Dogs >Cats, Cricket > Baseball,  AFL > NFL, Vegemite > Peanut butter 
-- I like to run very very long distances, stilling working on why
+- I like to run very very long distances, still working on why
 
 ## Classroom Etiquette
 
@@ -63,13 +63,13 @@ Class Make Up
 
 
 
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<div class="writein tall"></div>
 :::
 
 ## What is Calculus?
 
 ![Figure: Why Calculus](images/change1.png){fig.alt="Graphic with a framed quote that reads, 'Change is the only constant in life.' attributed to Heraclitus. The design features stylized quotation marks and a simple, muted background." style="float:right; width:300px; margin:10px;"}
-![Figure: Calculus as tme mathematical language of change](images/change2.png){fig.alt="Image of Charles Darwin alongside a quote that reads, 'It is not the strongest of the species that survives, nor the most intelligent that survives. It is the one that is most adaptable to change.' The quote is displayed next to a portrait of Darwin against a muted green background." style="width:400px; margin:10px;"}
+![Figure: Calculus as the mathematical language of change](images/change2.png){fig.alt="Image of Charles Darwin alongside a quote that reads, 'It is not the strongest of the species that survives, nor the most intelligent that survives. It is the one that is most adaptable to change.' The quote is displayed next to a portrait of Darwin against a muted green background." style="width:400px; margin:10px;"}
 
 
 ::: promptbox
@@ -79,8 +79,7 @@ Class Make Up
 What do you see in this graph?
 
 ![Figure: Hottest 10 years](images/change3.png){fig.alt="Bar chart titled '10 Hottest U.S. Years on Record' showing increasing temperature anomalies. The bars represent years from 1998 to 2024, with the most recent years generally being the warmest. The tallest bar corresponds to 2024, indicating it is the hottest year on record, with several other recent years such as 2012, 2016, 2020, 2021, and 2023 also among the hottest." style="float:center; width:800px; margin:10px;"}
-<br><br><br><br>
-
+<div class="writein"></div>
 :::
 
 ## My Expectations of You
@@ -105,11 +104,9 @@ In a small group make 2 lists
 
 - What can you come to see me about?
 
-<br><br><br><br><br><br><br><br>
-
+<div class="writein tall"></div>
 - What should you find someone else for?
-<br><br><br><br><br><br><br><br>
-
+<div class="writein tall"></div>
 :::
 
 ## Syllabus Highlights
@@ -149,10 +146,10 @@ In a small group make 2 lists
 
 Why do you think there is so much weight on tests and participation?
 
-<br><br><br><br>
+<div class="writein"></div>
 :::
 
-### Acedemic Integrity
+### Academic Integrity
 
 This class has been designed to reward you for doing your **own** work.
 
@@ -169,8 +166,7 @@ Using these resources will only make studying for tests harder. Many of these re
 
 **Class discussion**
 
-<br><br><br><br><br><br><br><br><br>
-
+<div class="writein tall"></div>
 :::
 
 
@@ -195,8 +191,7 @@ To accommodate for this, 5% of the total preparation and participation assessmen
 What do we consider **exceptional circumstances**?
 
 ![Figure: Dog ate my homework](images/excuses.png){fig.alt="Cartoon of a student surrounded by exaggerated excuses for not doing homework, including a computer showing '404 homework not found,' an alarm clock, a tangled mess, a UFO, an alien, and a calendar with homework crossed out. A dog sits at the desk with tissues while the student looks overwhelmed, suggesting avoidance and distraction." style="float:left; width:300px; margin:10px;"}
-<br><br><br><br><br><br><br><br><br><br><br><br>
-
+<div class="writein tall"></div>
 :::
 
 ### Test Retakes Policy
@@ -238,9 +233,8 @@ For an appointment check my calendar link.
 
 **Class discussion**
 
-Ask me anything - whats on your mind - need clarification on any of the things we've talked about?
-<br><br><br><br><br><br><br><br><br>
-
+Ask me anything - what's on your mind - need clarification on any of the things we've talked about?
+<div class="writein tall"></div>
 :::
 
 ## Paper Planes
@@ -277,9 +271,7 @@ We are going to break into 4 groups:
 **Discussion**
 
 Why did we make paper planes in calculus?
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-
-
+<div class="writein tall"></div>
 :::
 
 
@@ -294,7 +286,7 @@ Why did we make paper planes in calculus?
 
 When we try to understand derivatives, the most common place to start is Position->Velocity->Acceleration and how they are linked.
 
-Lets have a look at this while watching Usain Bolt run the 100m in 9.69s
+Let's have a look at this while watching Usain Bolt run the 100m in 9.69s
 
 While we watch this video I want you to keep in mind the idea of change - what variables are changing as we move through this race.
 
@@ -303,40 +295,64 @@ While we watch this video I want you to keep in mind the idea of change - what v
 **Group Discussion**
 
 1) How fast did he run? Can you calculate it?
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-
+<div class="writein tall"></div>
 2) What was the fastest he ran? OR what was his top speed (velocity)?
 When do you think this happened?
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-
+<div class="writein tall"></div>
 3)The time it took him to get to 10m markers was measured, and the plot is below. What does this tell us about how fast he ran?
 
 ![Figure: Distance vs Time](images/Bolt2.png){fig.alt="Position versus time graph for a 100 meter race, showing distance increasing from 0 to 100 meters over about 10 seconds. The graph is divided into segments with changing slopes, indicating changes in speed. Early segments are steeper at first, with one labeled about 1.83 seconds, while a middle segment is labeled about 0.82 seconds, showing faster movement later in the race." style="width:500px; margin:10px;"}
-<br><br><br><br><br><br><br>
-
-
+<div class="writein"></div>
 4)If we fit a smooth curve to this path, instead of looking at the slope over every 10m, we can look at the **instantaneous rate of change** or the derivative at any point. 
 
 Note: The reason the curve needs to be smooth will be covered later - this is all just a preview
 
 ![Figure: Distance vs Time smoothed](images/Bolt3.png){fig.alt="Position versus time graph for a 100 meter race, showing distance increasing from 0 to 100 meters over about 10 seconds. Unlike a piecewise linear graph, the data points are connected by a smooth curve, representing continuous changes in speed throughout the race." style="width:500px; margin:10px;"}
-<br><br><br><br><br><br><br>
-
-5) No if we calculate the instantaneous rate of change and plot it against time - we get the velocity vs time relationship.
+<div class="writein"></div>
+5) Now if we calculate the instantaneous rate of change and plot it against time - we get the velocity vs time relationship.
 
 Using this - try to describe how is velocity (speed) varied during the race.
 
 ![Figure: Velocity vs Time](images/Bolt4.png){fig.alt="Velocity versus time graph for a 100 meter race. The curve shows velocity increasing rapidly at the start, leveling off near a maximum speed, and then decreasing slightly toward the end of the race. An inset image shows runners sprinting on a track." style="width:500px; margin:10px;"}
-<br><br><br><br><br><br><br>
-
-6) The world wondered how fast he could actually run the 100m. A year later at the world championships sensors were places along the tract to capture in high resolution his position with time.
+<div class="writein"></div>
+6) The world wondered how fast he could actually run the 100m. A year later at the world championships sensors were placed along the track to capture in high resolution his position with time.
 
 - What do you notice this time?
 - What is causing the oscillating in the red line?
 
 ![Figure: Velocity vs Time high resolution](images/Bolt5.png){fig.alt="Velocity versus distance graph for a sprint. A smooth black curve shows average speed increasing quickly at the start and then leveling off near 12 meters per second. A red line oscillates around the black curve, representing instantaneous speed that fluctuates slightly above and below the average throughout the race." style="width:500px; margin:10px;"}
-<br><br><br><br><br><br><br>
+<div class="writein"></div>
+:::
 
+
+## Rate of Change in the Environment
+
+::: promptbox
+
+**Connecting to Environmental Systems**
+
+We just looked at how Usain Bolt's speed (rate of change of position) varied during a race. Now let's think about the same ideas in an environmental context.
+
+**A salmon swimming upstream** faces a similar analysis:
+
+- Its **position** along the river changes over time
+- Its **speed** (rate of change of position) varies — fast in open water, slow through rapids
+- Its **acceleration** (rate of change of speed) tells us when it's surging or struggling
+
+But there are many other rates of change in environmental systems that don't involve motion at all:
+
+**Small Group Discussion:**
+
+Pick one of the following environmental quantities and discuss how its **rate of change** might behave over time. Is the rate constant? Does it speed up or slow down? When might it be zero?
+
+1. CO₂ concentration in the atmosphere over a year
+2. Snow depth on a mountain over a winter season
+3. Water level in a lake during spring snowmelt
+4. The number of salmon returning to a river during a run
+
+<div class="writein tall"></div>
+
+**Key Takeaway:** Whether it's a sprinter on a track or carbon in the atmosphere, calculus gives us the language to describe *how fast* things change and *when* that rate itself is changing. That's the power of the derivative — and it's what this course is all about.
 
 :::
 

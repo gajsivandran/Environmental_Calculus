@@ -29,7 +29,7 @@ Optimization is the process of finding the **best possible outcome** in a system
 - **Interpretation in context:**  
   The mathematical optimum must be evaluated in ecological, ethical, and practical terms.
 
-### **Why It Matters in Environmental Science**s
+### **Why It Matters in Environmental Science**
 
 Optimization helps us answer questions like:
 
@@ -48,20 +48,20 @@ This is an image of different rooting profiles of Prairie Plants
 
 What might these plants be optimizing?
 
-![root profile of plants](images/roots.jpg)
+![root profile of plants](images/roots.jpg){fig.alt="Illustration showing the underground root systems of various prairie plants. The roots extend to different depths, some reaching several feet underground, demonstrating how different species optimize their access to water and nutrients by occupying different soil layers."}
 
 ### Structures {-}
 
 What do you notice about these structures?
-![historical housing structures](images/structures.png)
+![historical housing structures](images/structures.png){fig.alt="Photographs or illustrations of historical housing structures from different cultures, showing various architectural shapes and designs that evolved to optimize for different environmental conditions such as wind resistance, heat retention, or material efficiency."}
 
-### What is the Opimtal shape {-}
+### What is the Optimal shape {-}
 Before we can answer this - we need to ask the question what are we optimizing for?
 
 
 
 
-## Qualitative Optimizating
+## Qualitative Optimization
 
 ::: promptbox
 
@@ -1847,3 +1847,25 @@ function unlock_set4() {
   }
 }
 </script>
+
+---
+
+## Optimization Reflection
+
+::: promptbox
+**Looking Back**
+
+Now that you've worked through several optimization problems, reflect on the process:
+
+1. What are the key steps that every optimization problem shares?
+<div class="writein"></div>
+
+2. What's the most common mistake you've made (or could imagine making) in an optimization problem?
+<div class="writein"></div>
+
+3. Think of an environmental management question from your field of interest that could be framed as an optimization problem. What would the decision variable be? What would you maximize or minimize? What constraints exist?
+<div class="writein tall"></div>
+
+4. Mathematical optimization gives us a number — but that number isn't always the final answer. What other factors should environmental managers consider beyond the mathematical optimum?
+<div class="writein"></div>
+:::

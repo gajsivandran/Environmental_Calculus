@@ -226,14 +226,11 @@ x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}
 
 #### How to build a sign chart {-}
  \( f'(x) = 3x^2 - 6x \)
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-
+<div class="writein tall"></div>
 \( f'(x) = -2(x-3) \)
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-
+<div class="writein tall"></div>
 \( f'(x) = 4x^3 - 10x \)
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-
+<div class="writein tall"></div>
 :::
 
 

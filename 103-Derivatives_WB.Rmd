@@ -14,8 +14,7 @@ For each objective, write one sentence in your own words or a question you still
 4. How could you apply derivatives to a **real-world environmental example**?  
 
 **Notes:**  
-<br><br><br><br><br><br>
-<br><br><br><br><br><br>
+<div class="writein tall"></div>
 :::
 
 ---
@@ -27,7 +26,7 @@ For each objective, write one sentence in your own words or a question you still
 ### Class Brainstorm: What’s Changing?
 ::: promptbox
 **Activity:**  
-![QR code for shared google doc](images/change_brainstorm.png){style="float:right; width:250px; margin:10px;"}
+![QR code for shared google doc](images/change_brainstorm.png){fig.alt="QR code linking to a shared Google Doc for the change brainstorm activity." style="float:right; width:250px; margin:10px;"}
 [Shared Google Doc](https://docs.google.com/document/d/1FgOMQHnzNYIyq1sEqhB6YfLKFwI-kqfl90Zuy9IlBsY/edit?usp=sharing)
 
 1. As a group, pick an **environmental system** you are interested in (e.g. Lake Washington).  
@@ -43,9 +42,7 @@ For each objective, write one sentence in your own words or a question you still
 **Notes:**  
 
 
-<br><br><br><br><br><br>
-<br><br><br><br><br><br>
-
+<div class="writein tall"></div>
 :::
 
 
@@ -61,8 +58,7 @@ Using your scenario:
 3. How would the decisions based on these two rates differ?  
 
 **Notes:**  
-<br><br><br><br><br><br>
-<br><br><br><br><br><br>
+<div class="writein tall"></div>
 :::
 
 ---
@@ -78,10 +74,7 @@ Sketch a simple curve of your quantity vs. its input (e.g., population vs. time)
 - For each mark, write a one-sentence *story* of what’s happening.  
 - What does the steepness tell you about your quantity?
 **Notes:**  
-<br><br><br><br><br><br>
-<br><br><br><br><br><br>
-
-
+<div class="writein tall"></div>
 :::
 
 ---
@@ -96,8 +89,7 @@ Imagine you only have resources to collect limited data.
 3. What extra data (resolution, sensors) would help improve your estimates?  
 
 **Notes:**  
-<br><br><br><br><br><br>
-<br><br><br><br><br><br>
+<div class="writein tall"></div>
 :::
 
 ---
@@ -121,8 +113,7 @@ A coastal city is monitoring **sea level rise** to plan future flood defenses.
 - What can the snapshot alone tell the city planners?  
 - What critical information is missing if they only have the snapshot?  
 - How does the speed of change alter the urgency of decisions?  
-<br><br><br><br><br><br>
-
+<div class="writein"></div>
 ---
 
 **Step 2: Consequences of Missing Information**  
@@ -130,16 +121,14 @@ A coastal city is monitoring **sea level rise** to plan future flood defenses.
 - If planners **only use the snapshot**, what mistakes could they make?  
 - If they **only use the speed**, what context would be missing?  
 - Why do they need *both*?  
-<br><br><br><br><br><br>
-
+<div class="writein"></div>
 ---
 
 **Step 3: Push Further**  
 
 - How would decisions differ if the speed of rise is *constant* vs. *accelerating*?  
 - What additional data (short-term vs. long-term) would make predictions more reliable?  
-<br><br><br><br><br><br>
-
+<div class="writein"></div>
 ---
 
 **Step 4: Generalize**  
@@ -150,7 +139,7 @@ Complete this sentence as a group:
 ---
 
 **Notes:**  
-<br><br><br><br><br><br>
+<div class="writein"></div>
 :::
 
 ## What Is A Derivative? 
@@ -264,7 +253,7 @@ Complete this thought:
 > *A derivative is not just a formula — it’s a way of describing ________.*  
 
 **Notes:**  
-<br><br><br><br><br><br>
+<div class="writein"></div>
 :::
 
 ## Average Rate of Change
@@ -301,7 +290,7 @@ $$\frac{f(b) - f(a)}{b - a}$$
 * What does the sign of your slope tell you about how the function is changing?
 * Write a descriptive sentence about what your value represents
 
-**Notes:** <br><br><br><br><br><br><br><br><br><br><br><br>
+**Notes:** <div class="writein tall"></div>
 :::
 
 ---
@@ -323,7 +312,7 @@ The table below shows the amount of carbon stored in forest soil over time.
 * Compute the average rate of change from 2000 to 2010.
 * Write one or two sentences explaining what these numbers mean in the context of carbon storage.
 
-**Notes:** <br><br><br><br><br><br><br><br><br><br><br><br>
+**Notes:** <div class="writein tall"></div>
 :::
 
 ---
@@ -344,7 +333,7 @@ where $S(t)$ is in millimeters and $t$ is years since 2000.
 * Is there a shortcut to finding the average rate of change?
 * Visualize this function with a sketch, add in the secant line, what do you notice?
 
-**Notes:** <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+**Notes:** <div class="writein tall"></div>
 :::
 
 ---
@@ -440,7 +429,7 @@ points(2010, f(2010), pch = 19, col = "red")
 * Imagine drawing a tangent line right at that point. How is this different from a secant line?
 * How might the meaning of this slope change if this were a glacier, a population, or a pollutant concentration?
 
-**Notes:** <br><br><br><br><br><br><br><br><br><br><br><br>
+**Notes:** <div class="writein tall"></div>
 :::
 
 ---
@@ -507,9 +496,7 @@ for (i in 1:3) {
 
 *Discuss:* What does each slope mean in an environmental context (e.g., population peak, fastest growth, fastest decline)? Break up the function into regions and tell a story.
 
-**Notes:** <br><br><br><br><br><br><br><br><br><br><br><br>
-
-
+**Notes:** <div class="writein tall"></div>
 **Challenge**: Can you sketch the derivative - don't worry about getting the right magnitudes, just the right shape. [Hint: start with some points you know for sure, then ask yourself as you move left to right what is happening to the slope]
 
 ```{r tangent-slope-and-blank-derivative, fig.cap="Using tangent slopes to sketch the derivative.", fig.alt="Two stacked panels show a function and a blank coordinate grid for its derivative. The top panel shows a smooth curve over the interval from 0 to 10 with three marked points. Dashed tangent lines at those points show one positive slope, one zero slope, and one negative slope, illustrating how the sign of the derivative depends on local behavior of the function. The bottom panel is a blank graph labeled f prime of x with horizontal and vertical reference lines, intended for sketching the derivative based on the slope information from the top panel.", echo=FALSE, message=FALSE, warning=FALSE}
@@ -585,15 +572,9 @@ Imagine tracking the weight of a bear throughout its life. Sketch or imagine the
 
 *Group Discussion:* Why might wildlife managers care about whether the rate of weight gain is accelerating or decelerating?
 
-**Notes:** <br><br><br><br><br><br>
-
-
-
-
-
+**Notes:** <div class="writein"></div>
 Now try sketching the derivative, or the rate of change of the bear's weight.
- <br><br><br><br><br><br><br><br><br><br><br><br>
-
+ <div class="writein tall"></div>
 :::
 
 ---
@@ -607,9 +588,7 @@ $$
 \frac{f(b)-f(a)}{b-a} = \frac{f(a+h)-f(a)}{h}
 $$
 
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>  
-
-
+<div class="writein tall"></div>
 :::
 
 ---
@@ -636,12 +615,11 @@ with $h = 1$.
 * Was it possible to calculate the instantaneous rate of change at day 6?
 * How would a higher-resolution data set (more frequent measurements) improve your estimate?
 
-**Notes:** <br><br><br><br><br><br><br><br><br><br><br><br>
-
+**Notes:** <div class="writein tall"></div>
 >REMEMBER: We are just estimating here! If h is small enough its a good estimate, if h is big, well it becomes the 'average' rate of change. 
 
 **Discuss**: Is this more of an average or instantaneous rate of change?
- <br><br><br><br><br>
+ <div class="writein"></div>
 :::
 
 ---
@@ -660,7 +638,7 @@ Compare these two statements:
 * Why does the distinction matter for scientists, policymakers, or communities?
 * Brainstorm 2–3 other examples where average vs. instantaneous rates tell very different stories.
 
-**Notes:** <br><br><br><br><br><br>
+**Notes:** <div class="writein"></div>
 :::
 
 ---
@@ -686,12 +664,7 @@ Let’s first build an intuition for what daylight hours look like over a year i
 Sketch what you think the curve looks like (peak near late June, minimum near late December), then compare to the model above. 
 Annotate interesting points along this function.
 
-<br><br><br><br><br><br><br><br><br>
-
-
-
-
-
+<div class="writein tall"></div>
 ---
 
 ### Connect to the Question
@@ -705,7 +678,7 @@ Lets pick a specific day $a=250$ (**day 250** ≈ early Sep).
 
 * Why might we want the **instantaneous** rate of change instead?
 
-**Notes:** <br><br><br><br><br><br>
+**Notes:** <div class="writein"></div>
 :::
 
 ---
@@ -730,7 +703,7 @@ $$
 * What does the **numerator** represent in context?
 * What are the **units** of this average rate?
 
-**Notes:** <br><br><br><br><br><br><br><br><br><br><br><br>
+**Notes:** <div class="writein tall"></div>
 :::
 
 ::: promptbox
@@ -751,8 +724,7 @@ So if we use the data below we can see we are shrinking our $h$ getting it close
 
 Calculate the average rate of change with an $h=1$
 
-<br><br><br><br><br><br>
-
+<div class="writein"></div>
 What if we shrink the interval even further and make $h=0.01$
 
 | Day of Year | Daylight Hours (hrs) |
@@ -762,18 +734,11 @@ What if we shrink the interval even further and make $h=0.01$
 | 250.02      | 13.257965             |
 
 
-<br><br><br><br><br><br>
-
+<div class="writein"></div>
 * Why can’t we just set $h=0$ directly?
 * In words, what does this limit do with the two-day comparison?
 
-**Notes:** <br><br><br><br><br><br>
-
-
-
-
-
-
+**Notes:** <div class="writein"></div>
 **Challenge:** In your groups discuss this table, what do you notice on both ends of the table?
 
 | h       | Average Rate of Change (hrs/day) |
@@ -790,8 +755,7 @@ What if we shrink the interval even further and make $h=0.01$
 | 0.001   | -0.063720                        |
 | 0.00001 | -0.063720                        |
 
-<br><br><br><br><br><br>
-
+<div class="writein"></div>
 >Technically what have found here is an **estimate** for the instantaneous rate of change at a point
 
 :::
@@ -861,7 +825,7 @@ Using your numerical/visual estimate of $D'(a)$:
 * If $D'(a) < 0$, what time of year might that correspond to?
 * If $D'(a) \approx 0$, what’s happening seasonally?
 
-**Notes:** <br><br><br><br><br><br>
+**Notes:** <div class="writein"></div>
 :::
 
 ---
@@ -872,7 +836,7 @@ Using your numerical/visual estimate of $D'(a)$:
 **Prompt:**
 Explain—in your own words—why the **limit** is essential for defining the **instantaneous rate of change**, using the Seattle daylight model as your example.
 
-**Notes:** <br><br><br><br><br><br>
+**Notes:** <div class="writein"></div>
 :::
 
 ## Introducing Limit Notation
@@ -896,7 +860,7 @@ As you move closer to 1 km, what value does the concentration seem to be approac
 This “approaching behavior” is what we call the **limit**.
 
 **Notes:**  
-<br><br><br><br><br><br>
+<div class="writein"></div>
 :::
 
 ---
@@ -915,7 +879,7 @@ The formal symbol is:
 - What is \(f(x)\) approaching as \(x\) gets closer to \(a\)?  
 
 **Notes:**  
-<br><br><br><br><br><br>
+<div class="writein"></div>
 :::
 
 ---
@@ -930,7 +894,7 @@ $$
 f'(a) \;=\; \lim_{h \to 0} \frac{f(a+h) - f(a)}{h}
 $$
 **Notes:**  
-<br><br><br><br><br><br>
+<div class="writein"></div>
 :::
 
 ---
@@ -945,8 +909,7 @@ We can approach a point from the **left** (\(a^-\)) or from the **right** (\(a^+
 - Sketch a graph where they are **different**. Can you link this to a real-world example?
 
 **Notes:**  
-<br><br><br><br><br><br>
-<br><br><br><br><br><br>
+<div class="writein tall"></div>
 :::
 
 ## From Average to Instantaneous: The Role of Limits
@@ -971,45 +934,41 @@ Start with the average rate formula:
    \]  
    - What does the numerator mean?  
    - What does the denominator mean?  
-   <br><br><br><br><br><br>
-
+   <div class="writein"></div>
 2. Introduce a new variable \(h = b-a\).  
    - Rewrite the denominator in terms of \(h\).  
    - Replace \(b\) with \(a+h\).  
-<br><br><br><br><br><br>
-
+<div class="writein"></div>
 3. Show that the formula becomes:  
    \[
    \frac{f(a+h) - f(a)}{h}
    \]  
    - Why is this still the average rate of change, just written differently? Try to explain this with a sketch.  
 
-<br><br><br><br><br><br>
-
+<div class="writein"></div>
 4. Now imagine shrinking the interval smaller and smaller: let \(h \to 0\). This makes the slope of secant line approach the slope of the tangent line.  
    - What problem happens if you just set \(h=0\)?  
    - How does the **limit** fix this?  
    - Add in the limit notation
-   <br><br><br><br><br><br>
-
+   <div class="writein"></div>
 5. Arrive at the definition of the derivative:  
    \[
    f'(a) = \lim_{h \to 0} \frac{f(a+h) - f(a)}{h}
    \]  
 
 **Notes:**  
-<br><br><br><br><br><br>
+<div class="writein"></div>
 :::
 
 
 
 ::: promptbox
 Let's annotate this equation so we know what everything is and what to do with it.
-<br><br><br>
-   \[
+<div class="writein"></div>
+\[
    f'(a) = \lim_{h \to 0} \frac{f(a+h) - f(a)}{h}
    \]  
-<br><br><br>
+<div class="writein"></div>
 :::
 
 ## Finding the Derivative Using the Limit Definition of a Derivative
@@ -1044,7 +1003,7 @@ We want to find the derivative at \(x = 2\).
 3. What expression do you now have?  
 
 **Notes:**  
-<br><br><br><br><br><br>
+<div class="writein"></div>
 :::
 
 ---
@@ -1064,7 +1023,7 @@ f(2+h) - f(2)
 4. Write your result in expanded form.  
 
 **Notes:**  
-<br><br><br><br><br><br>
+<div class="writein"></div>
 :::
 
 ---
@@ -1083,8 +1042,7 @@ Now substitute your numerator back into:
 3. Why is this helpful?  
 
 **Notes:**  
-<br><br><br><br><br><br>
-<br><br><br><br><br><br>
+<div class="writein tall"></div>
 :::
 
 ---
@@ -1099,8 +1057,7 @@ Finally, take the limit as \(h \to 0\).
 3. Interpret: What does this mean in terms of the slope of the tangent line?  
 
 **Notes:**  
-<br><br><br><br><br><br>
-
+<div class="writein"></div>
 >You've found the **derivative at a point** $a=2$
 :::
 
@@ -1122,9 +1079,7 @@ f'(x) = \lim_{h \to 0} \frac{f(x+h) - f(x)}{h}
 4. What is the **general derivative function** of \(f(x) = x^2\)?  
 
 **Notes:**  
-<br><br><br><br><br><br>
-<br><br><br><br><br><br>
-
+<div class="writein tall"></div>
 >You've now found the **derivative function**
 :::
 
@@ -1152,7 +1107,7 @@ f'(a) = \lim_{h \to 0} \frac{f(a+h) - f(a)}{h}
 - Don’t expand yet, just write down the expression.
 
 **Notes:**  
-<br><br><br><br><br><br>
+<div class="writein"></div>
 :::
 
 #### Step 2: Expand
@@ -1163,7 +1118,7 @@ f'(a) = \lim_{h \to 0} \frac{f(a+h) - f(a)}{h}
 - Simplify your numerator.
 
 **Notes:**  
-<br><br><br><br><br><br>
+<div class="writein"></div>
 :::
 
 #### Step 3: Simplify the Fraction
@@ -1174,7 +1129,7 @@ f'(a) = \lim_{h \to 0} \frac{f(a+h) - f(a)}{h}
 - What remains?  
 
 **Notes:**  
-<br><br><br><br><br><br>
+<div class="writein"></div>
 :::
 
 #### Step 4: Take the Limit
@@ -1185,7 +1140,7 @@ f'(a) = \lim_{h \to 0} \frac{f(a+h) - f(a)}{h}
 - Interpret: What does this slope mean for the cubic function at \(x=a\)?  
 
 **Notes:**  
-<br><br><br><br><br><br>
+<div class="writein"></div>
 :::
 
 ### Step 5: Generalize
@@ -1195,7 +1150,7 @@ Repeat the same process, but this time use \(x\) instead of a fixed number $a$.
 
 What is the derivative function?
 **Notes:**  
-<br><br><br><br><br><br>
+<div class="writein"></div>
 :::
 
 ---
@@ -1216,7 +1171,7 @@ f'(a) = \lim_{h \to 0} \frac{f(a+h) - f(a)}{h}
 - Substitute \(f(x) = 3x^2 + 7x\).  
 
 **Notes:**  
-<br><br><br><br><br><br>
+<div class="writein"></div>
 :::
 
 #### Step 2: Expand
@@ -1227,7 +1182,7 @@ f'(a) = \lim_{h \to 0} \frac{f(a+h) - f(a)}{h}
 - Simplify your numerator.  
 
 **Notes:**  
-<br><br><br><br><br><br>
+<div class="writein"></div>
 :::
 
 #### Step 3: Simplify the Fraction
@@ -1238,7 +1193,7 @@ f'(a) = \lim_{h \to 0} \frac{f(a+h) - f(a)}{h}
 - What remains?  
 
 **Notes:**  
-<br><br><br><br><br><br>
+<div class="writein"></div>
 :::
 
 #### Step 4: Take the Limit
@@ -1249,7 +1204,7 @@ f'(a) = \lim_{h \to 0} \frac{f(a+h) - f(a)}{h}
 - Interpret: How do the terms \(3x^2\) and \(7x\) each behave under differentiation?  
 
 **Notes:**  
-<br><br><br><br><br><br>
+<div class="writein"></div>
 :::
 
 ### Step 5: Generalize
@@ -1260,7 +1215,7 @@ Repeat the same process, but this time use \(x\) instead of a fixed number $a$.
 What is the derivative function?
 
 **Notes:**  
-<br><br><br><br><br><br>
+<div class="writein"></div>
 :::
 
 ### Example 3: Environmental Application — Glacier Retreat
@@ -1289,7 +1244,7 @@ We want to compute the **instantaneous rate of change** of glacier area at \(t =
 - How would you explain your result to a policymaker?  
 
 **Notes:**  
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<div class="writein tall"></div>
 :::
 
 
@@ -1299,7 +1254,7 @@ We want to compute the **instantaneous rate of change** of glacier area at \(t =
 Given \(f(x)=7x\)
 
 Find an expression for the derivative function \(f'(x)\), using the limit definition of the derivative.
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<div class="writein tall"></div>
 :::
 
 
@@ -1309,7 +1264,7 @@ Find an expression for the derivative function \(f'(x)\), using the limit defini
 Given \(f(x)=3x^2+6x+2\)
 
 Find an expression for the derivative function \(f'(x)\), using the limit definition of the derivative.
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<div class="writein tall"></div>
 :::
 
 ::: promptbox
@@ -1318,7 +1273,7 @@ Find an expression for the derivative function \(f'(x)\), using the limit defini
 Given \(f(x)=27\)
 
 Find an expression for the derivative function \(f'(x)\), using the limit definition of the derivative.
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<div class="writein tall"></div>
 :::
 
 ::: promptbox
@@ -1327,7 +1282,7 @@ Find an expression for the derivative function \(f'(x)\), using the limit defini
 Given \(f(x)=\frac{1}{x}\)
 
 Find an expression for the derivative function \(f'(x)\), using the limit definition of the derivative.
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<div class="writein tall"></div>
 :::
 
 ::: promptbox
@@ -1336,7 +1291,7 @@ Find an expression for the derivative function \(f'(x)\), using the limit defini
 Given \(f(x)=e^x\)
 
 Estimate, using the limit definition of the derivative, \(f'(1)\).
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<div class="writein tall"></div>
 :::
 
 
@@ -1376,7 +1331,7 @@ In your own words, what does it mean for a function to be **differentiable**?
 How is this related to the idea of a function being **continuous** and **smooth**?
 
 **Notes:**  
-<br><br><br><br>
+<div class="writein"></div>
 :::
 
 ---
@@ -1400,7 +1355,7 @@ Sketch or describe an example of a function that is *not defined* at a point.
 What happens to continuity there?
 
 **Notes:**  
-<br><br><br><br>
+<div class="writein"></div>
 :::
 
 ---
@@ -1419,7 +1374,7 @@ Give an example where the left-hand and right-hand limits are *different*.
 How does this affect continuity?
 
 **Notes:**  
-<br><br><br><br>
+<div class="writein"></div>
 :::
 
 ---
@@ -1557,7 +1512,7 @@ par(op)
 
 
 **Notes:**  
-<br><br><br><br>
+<div class="writein"></div>
 :::
 
 ---
@@ -1594,7 +1549,7 @@ What visual features in a graph help you decide whether a function is “smooth�
 List or sketch examples of what *fails* to be smooth.
 
 **Notes:**  
-<br><br><br><br>
+<div class="writein"></div>
 :::
 
 ---
@@ -1672,7 +1627,7 @@ grid()
 par(op)
 ```
 **Notes:**  
-<br><br><br><br>
+<div class="writein"></div>
 :::
 
 ---
@@ -1734,7 +1689,7 @@ Sketch or describe a function that is continuous but not differentiable.
 What feature prevents the derivative from existing?
 
 **Notes:**  
-<br><br><br><br>
+<div class="writein"></div>
 :::
 
 ---
@@ -1937,7 +1892,7 @@ points(1.5, 0.1*(1.5-1.5)^3 - 0.4*(1.5-1.5)^2 + 2, pch=1, col="darkred")
 - What are the key steps?
 - What are the checks?
 
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<div class="writein tall"></div>
 :::
 
 ::: promptbox
@@ -1958,7 +1913,7 @@ y - f(a) = f'(a)\,(x - a)
 \[
 y = mx+b
 \]
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<div class="writein tall"></div>
 :::
 
 ::: promptbox
@@ -1981,7 +1936,52 @@ f(x) = \frac{x^2 + 1}{x - 1}
    \]
 
 3. Is this function differentiable everywhere?
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<div class="writein tall"></div>
+:::
+
+
+::: promptbox
+**Environmental Application: Stream Temperature at a Dam**
+
+A dam releases cold water from deep in the reservoir. The stream temperature downstream is modeled by:
+
+$$T(x) = 8 + 4\left(1 - e^{-0.1x}\right)$$
+
+where $x$ is the distance downstream in km and $T$ is temperature in °C.
+
+1. What is the water temperature right at the dam ($x = 0$)?
+<div class="writein"></div>
+
+2. What happens to the temperature as you go far downstream ($x \to \infty$)?
+<div class="writein"></div>
+
+3. Use the limit definition (or your intuition) to describe: is the temperature changing *faster* near the dam or far downstream? How do you know?
+<div class="writein"></div>
+
+4. Sketch what the derivative $T'(x)$ might look like. Is it positive or negative? Increasing or decreasing?
+<div class="writein tall"></div>
+
+5. At what distance downstream would you expect the temperature to be changing most rapidly? What ecological implication does this have for fish and aquatic organisms?
+<div class="writein"></div>
+:::
+
+---
+
+### Wrapping Up: What Is a Derivative?
+
+::: promptbox
+**Synthesis**
+
+In your own words, complete these sentences:
+
+1. A derivative tells us...
+<div class="writein"></div>
+
+2. The difference between an average rate and an instantaneous rate is...
+<div class="writein"></div>
+
+3. One environmental system where derivatives matter is... because...
+<div class="writein"></div>
 :::
 
 

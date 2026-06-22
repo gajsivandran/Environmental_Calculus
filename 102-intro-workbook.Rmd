@@ -55,7 +55,7 @@ Calculus is about making sense of change. Use these steps as a guide when solvin
 
 ::: promptbox
 ### Analogy Prompt:Planning a Hike
-Think about the the process of planning a hike
+Think about the process of planning a hike
 
 - What decisions do you make to undertake this task?  
 - How do you weigh different factors?  
@@ -66,8 +66,7 @@ How might this be similar to the way we’ll approach calculus problems?
 
 **Notes:**  
 
-<br><br>  <br><br> <br><br> 
-
+<div class="writein"></div>
 :::
 
 
@@ -79,8 +78,7 @@ How might this be similar to the way we’ll approach calculus problems?
 What are we trying to answer - define the questions in your own terms.
 **Notes:**  
 
-<br><br>  <br><br> <br><br> 
-
+<div class="writein"></div>
 :::
 
 ---
@@ -93,8 +91,7 @@ Make a quick sketch if it helps.
 
 **Notes:**  
 
-<br><br>  <br><br> <br><br> 
-
+<div class="writein"></div>
 :::
 
 ---
@@ -107,9 +104,7 @@ Think about what each **term** means in your own words?
 
 **Notes:**  
 
-<br><br>  <br><br> <br><br> 
-
-
+<div class="writein"></div>
 :::
 
 ---
@@ -129,8 +124,7 @@ Then think about complexity:
 
 **Notes:**  
 
-<br><br>  <br><br> <br><br> 
-
+<div class="writein"></div>
 :::
 
 ---
@@ -146,8 +140,7 @@ Does your result make sense?
 
 **Notes:**  
 
-<br><br>  <br><br> <br><br> 
-
+<div class="writein"></div>
 :::
 
 ---
@@ -160,8 +153,7 @@ Write it here as a reminder.
 
 **Notes:**  
 
-<br><br>  <br><br> <br><br> 
-
+<div class="writein"></div>
 :::
 
 ## How We Communicate Relationships
@@ -193,10 +185,7 @@ Then reflect:
 
 **Notes:**  
 
-<br><br>  <br><br> <br><br> 
-<br><br>  <br><br> <br><br> 
-
-
+<div class="writein tall"></div>
 :::
 
 ---
@@ -212,9 +201,7 @@ Air temperature usually drops as you climb a mountain (the “lapse rate”).
 
 **Notes:**  
 
-<br><br>  <br><br> <br><br> 
-<br><br>  <br><br> <br><br> 
-  
+<div class="writein tall"></div>
 :::
 
 ## Functions and Their Representations
@@ -236,8 +223,7 @@ They can be written in many forms, but always represent a relationship.
 
 **Notes:**  
 
-<br><br>  <br><br> <br><br> 
-
+<div class="writein"></div>
 :::
 
 ---
@@ -245,7 +231,7 @@ They can be written in many forms, but always represent a relationship.
 ### Meaningful Names
 ::: promptbox
 **Practice:**  
-Lets look at two functions:
+Let's look at two functions:
 
 - a generic function like \(f(x) = 0.2x + 3\) 
 - \(T(d) = 0.2d +3\) where d is distance from the shore and T is the land temperature  
@@ -256,8 +242,7 @@ Lets look at two functions:
 
 **Notes:**  
 
-<br><br>  <br><br> <br><br> 
-  
+<div class="writein"></div>
 :::
 
 ---
@@ -273,8 +258,7 @@ Think of an environmental process that depends on more than one variable.
 
 **Notes:**  
 
-<br><br>  <br><br> <br><br> 
-  
+<div class="writein"></div>
 :::
 
 ### Activity: Growth of a Tree
@@ -289,8 +273,7 @@ In a group, discuss the factors that control the growth of a tree.
 
 **Notes:**  
 
-<br><br>  <br><br> <br><br> 
-  
+<div class="writein"></div>
 :::
 
 ---
@@ -312,9 +295,7 @@ Reflect:
 
 **Notes:**  
 
-<br><br>  <br><br> <br><br> 
-<br><br>  <br><br> <br><br> 
-
+<div class="writein tall"></div>
 :::
 
 ### Activity: Telling the Story of a Complex Equation
@@ -343,11 +324,7 @@ Where:
 
 **Notes:**  
 
-<br><br>  <br><br> <br><br> 
-<br><br>  <br><br> <br><br> 
-<br><br>  <br><br> <br><br> 
-
-
+<div class="writein tall"></div>
 > Seeing math as a complex story rather than symbols is a key to building mathematical literacy 
 
 :::
@@ -388,10 +365,7 @@ plot(x_vals, y_vals, type = "l", lwd = 2, col = "steelblue",
 - What real-world system might this graph represent?  
 
 **Notes:**  
-<br><br>  <br><br> <br><br> 
-<br><br>  <br><br> <br><br> 
-
-
+<div class="writein tall"></div>
 :::
 
 ---
@@ -415,8 +389,7 @@ Try to sketch the vertical position of the ball through time.
 - How does the slope of the height vs. time graph change throughout?  
 
 **Notes:**  
-<br><br>  <br><br> <br><br> 
- 
+<div class="writein"></div>
 :::
 
 ---
@@ -451,9 +424,7 @@ x2 <- 3
 - What real-world process might this model - can you tell a story? 
 
 **Notes:**  
-<br><br>  <br><br> <br><br> 
-<br><br>  <br><br> <br><br> 
-  
+<div class="writein tall"></div>
 :::
 
 ---
@@ -476,10 +447,7 @@ For each:
 - How does concavity help tell the story?  
 
 **Notes:**  
-<br><br>  <br><br> <br><br> 
-<br><br>  <br><br> <br><br> 
-<br><br>  <br><br> <br><br> 
-
+<div class="writein tall"></div>
 :::
 
 ---
@@ -541,9 +509,7 @@ par(mfrow = c(1, 1))
 
 **Notes:**  
 
-<br><br>  <br><br> <br><br> 
-<br><br>  <br><br> <br><br> 
- 
+<div class="writein tall"></div>
 :::
 
 ---
@@ -560,9 +526,7 @@ Match each situation to a function type:
 
 **Notes:**  
 
-<br><br>  <br><br> <br><br> 
-<br><br>  <br><br> <br><br> 
-
+<div class="writein tall"></div>
 :::
 
 ---
@@ -578,8 +542,7 @@ Think of **two environmental processes** you know about (from ecology, hydrology
 
 **Notes:**  
 
-<br><br>  <br><br> <br><br> 
- 
+<div class="writein"></div>
 :::
 
 ## Units, Rates, and Word Problems 
@@ -608,9 +571,7 @@ Where:
 
 **Notes:**  
 
-<br><br>  <br><br> <br><br> 
-<br><br>  <br><br> <br><br> 
-
+<div class="writein tall"></div>
 :::
 
 
@@ -626,9 +587,7 @@ A famous NASA mission failed because one team used English units and another use
 
 **Notes:**  
 
-<br><br>  <br><br> <br><br> 
- 
-
+<div class="writein"></div>
 >I hope you've never made a mistake that cost you $300M+ 
 
 :::
@@ -645,9 +604,7 @@ Atmospheric CO₂ increases from **400 ppm** to **420 ppm** over **5 years**.
 
 **Notes:**  
 
-<br><br>  <br><br> <br><br> 
-<br><br>  <br><br> <br><br> 
-
+<div class="writein tall"></div>
 :::
 
 ---
@@ -663,9 +620,7 @@ You measure rainfall in **mm** over **hours**.
 
 **Notes:**  
 
-<br><br>  <br><br> <br><br> 
-
-
+<div class="writein"></div>
 :::
 
 ---
@@ -681,8 +636,7 @@ You computed a melt rate of a glacier as **3 m/day**.
 
 **Notes:**  
 
-<br><br>  <br><br> <br><br> 
-  
+<div class="writein"></div>
 :::
 
 ---
@@ -699,8 +653,7 @@ You computed a melt rate of a glacier as **3 m/day**.
 
 **Notes:**  
 
-<br><br>  <br><br> <br><br> 
-  
+<div class="writein"></div>
 :::
 
 ---
@@ -725,8 +678,7 @@ A glacier is melting at a rate that **increases each year**.
 
 **Notes:**  
 
-<br><br>  <br><br> <br><br> 
-
+<div class="writein"></div>
 :::
 
 ---
@@ -740,9 +692,7 @@ Write your own short word problem and sketch how you’d model it.
 
 **Notes:**  
 
-<br><br>  <br><br> <br><br> 
-<br><br>  <br><br> <br><br> 
-
+<div class="writein tall"></div>
 :::
 
 ---
@@ -765,8 +715,7 @@ These drills are for extra practice. Each topic includes a few problems that bui
 A bacterial culture triples every 6 hours. Write an exponential model and find the growth factor.  
 
 **Notes:**  
-<br><br><br><br><br><br>  
-  <br><br><br><br><br><br>
+<div class="writein tall"></div>
 :::
 
 ---
@@ -784,8 +733,7 @@ The pH of a solution is given by \( \text{pH} = -\log_{10}[H^+] \).
 Find the pH when \([H^+] = 10^{-6}\).  
 
 **Notes:**  
-<br><br><br><br><br><br>  
-<br><br><br><br><br><br>  
+<div class="writein tall"></div>
 :::
 
 ---
@@ -803,8 +751,7 @@ The area of a rectangle is \(A = x^2 + 7x + 10\).
 Factor to find possible integer side lengths.  
 
 **Notes:**  
-<br><br><br><br><br><br>  
-<br><br><br><br><br><br> 
+<div class="writein tall"></div>
 :::
 
 ---
@@ -822,8 +769,7 @@ The revenue for selling \(x\) items at a price of \((5 - 0.2x)\) each is
 \(R(x) = x(5 - 0.2x)\). Expand and simplify.  
 
 **Notes:**  
-<br><br><br><br><br><br>  
-<br><br><br><br><br><br>
+<div class="writein tall"></div>
 :::
 
 ---
@@ -840,8 +786,7 @@ The revenue for selling \(x\) items at a price of \((5 - 0.2x)\) each is
 If \(C(x) = 200 + 4x\) is the cost of producing \(x\) items, evaluate \(C(50)\).  
 
 **Notes:**  
-<br><br><br><br><br><br>  
-<br><br><br><br><br><br>
+<div class="writein tall"></div>
 :::
 
 ---
@@ -859,8 +804,7 @@ The velocity of a falling object is \(v(t) = \tfrac{2t^2 - 8}{t - 2}\).
 Simplify the expression.  
 
 **Notes:**  
-<br><br><br><br><br><br>  
-<br><br><br><br><br><br> 
+<div class="writein tall"></div>
 :::
 
 ---
@@ -877,8 +821,7 @@ Simplify the expression.
 A pollutant concentration is \(0.002\ \text{g/L}\). Express in mg/L.  
 
 **Notes:**  
-<br><br><br><br><br><br>  
-<br><br><br><br><br><br>
+<div class="writein tall"></div>
 :::
 
 ---
@@ -896,8 +839,7 @@ A ball is launched with \(h(t) = -5t^2 + 15t + 2\).
 Solve for when the ball hits the ground.  
 
 **Notes:**  
-<br><br><br><br><br><br>  
-<br><br><br><br><br><br>
+<div class="writein tall"></div>
 :::
 
 ---
@@ -915,8 +857,7 @@ Temperature in Fahrenheit is \(F(C) = \tfrac{9}{5}C + 32\).
 Find the inverse to convert back to Celsius.  
 
 **Notes:**  
-<br><br><br><br><br><br>  
-<br><br><br><br><br><br>
+<div class="writein tall"></div>
 :::
 
 ---
@@ -934,8 +875,7 @@ Atmospheric CO₂ rises from 400 ppm to 416 ppm in 4 years.
 Find the average rate of change in ppm/year.  
 
 **Notes:**  
-<br><br><br><br><br><br>  
-<br><br><br><br><br><br>
+<div class="writein tall"></div>
 :::
 
 
