@@ -167,4 +167,21 @@ That said, this is very much a **work in progress**. This draft will have typos,
 
 If you come across an error—big or small—please let me know so I can fix it for you and for future students. Your feedback is not just welcome, it's essential to making this a better resource.
 
-Thanks for your patience, your sharp eyes, and your willingness to learn from (and with) an evolving text. Together, we'll keep improving it.
+Thanks for your patience, your sharp eyes, and your willingness to learn from (and with) an evolving text. Together, we'll keep improving it. 
+
+## AI Transparency {-}
+
+I developed this book for students in my quantitative science courses at UW. I ask those students to be open about how they use AI, so the same standard applies to me.
+
+The course design is mine: what we cover, in what order, the environmental case studies, and how each idea is explained. 
+
+I used generative AI tools to:
+
+- edit for grammar and consistency. 
+- draft practice problems, concept checks and their worked solutions
+- format and convert material, including the reveal-answer blocks and the study guides
+- meet digital accessibility requirements (WCAG 2.1 AA): drafting alt text for figures, checking heading structure, color contrast and table markup, and producing accessible Word versions of course documents
+
+I reviewed and edited all AI-generated material before publishing.
+
+
