@@ -15,30 +15,21 @@ description: "A textbook companion to the University of Washington QSci 291 clas
 
 # Why Calculus?
 
-A salmon run peaks in a Pacific Northwest river. How quickly is the number of returning fish changing day by day? Over the entire season, how many total fish passed the counting station? A wildfire burns through a dry forest. How fast is the fire line advancing right now? How much total carbon has been released into the atmosphere since it started?
+A salmon run is building in a Pacific Northwest river. How fast are fish arriving at the counting station today? How many have passed since the run began? A wildfire is moving through dry forest. How fast is the fire line advancing right now? How much carbon has it released so far?
 
-These questions—*how fast is something changing?* and *how much has accumulated?*—are the two core questions of calculus. They show up everywhere in the environmental sciences, and by the end of this book you'll have the tools to answer them.
+Those are the two questions calculus answers. How fast is something changing? How much has built up? Every chapter in this book comes back to one or the other.
 
-Welcome to *Calculus for Environmental Science*.
-
-This book is your companion for exploring the natural world through the lens of calculus—especially the powerful ideas of **change** and **accumulation**. Calculus is not just symbols on a page. It's a way of asking meaningful questions, interpreting patterns, and making sense of the complex environmental systems you care about. And along the way, you'll discover that you are absolutely capable of mastering these ideas.
+Welcome to *Environmental Calculus*.
 
 ---
 
 ## Why This Book?
 
-Most calculus textbooks lean heavily on physics examples—motion, velocity, and acceleration—because calculus was originally developed to solve physics problems. Those examples are powerful, and we'll use them from time to time because they give us an intuitive "feel" for how change works.
+Most calculus textbooks are written for physics and engineering students. That makes sense. Calculus was invented to describe motion, and motion is easy to feel. We'll still use it when it helps.
 
-But calculus has grown far beyond physics. Today it is an essential tool across biology, ecology, environmental science, economics, and engineering. In this book, we anchor our learning in the systems you study as environmental scientists—because concepts stick best when they're connected to things you care about.
+But you're here to study oceans, rivers, forests, populations and the atmosphere, so that's where the examples come from: streamflow during a storm, CO₂ at Mauna Loa, contaminants moving through soil. If an example doesn't connect to something you could actually measure, I've tried to cut it.
 
-Environmental scientists face some of the most urgent challenges of our time: climate change, biodiversity loss, resource management, and pollution. Calculus gives us the mathematical language to describe these challenges precisely:
-
-- **Predict** how populations, pollutants, and temperatures evolve over time  
-- **Quantify** risks, impacts, and total accumulations  
-- **Model** natural and human systems with equations that capture real behavior  
-- **Communicate** findings with the clarity that decision-makers need  
-
-Throughout this book, you'll work with real environmental data, use visual and conceptual approaches, and practice skills that matter for sustainability. Our goal is not just to "get through calculus," but to see how these ideas open doors for discovery and problem-solving in the real world.
+I'm a hydrologist by training. I've spent my career using these tools on real water problems, and this book is my attempt to get you doing the same within the science you are pursuing. 
 
 ---
 
@@ -169,7 +160,7 @@ If you come across an error—big or small—please let me know so I can fix it 
 
 Thanks for your patience, your sharp eyes, and your willingness to learn from (and with) an evolving text. Together, we'll keep improving it. 
 
-## AI Transparency {-}
+## AI Transparency
 
 I developed this book for students in my quantitative science courses at UW. I ask those students to be open about how they use AI, so the same standard applies to me.
 

@@ -94,6 +94,7 @@ how-this-book-works
 success-in-this-class
 looking-ahead
 about-this-book
+ai-transparency
 pre-calculus-foundations
 learning-objectives
 what-youre-expected-to-know
