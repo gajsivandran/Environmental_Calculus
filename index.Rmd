@@ -15,7 +15,7 @@ description: "A textbook companion to the University of Washington QSci 291 clas
 
 # Why Calculus?
 
-A salmon run is building in a Pacific Northwest river. How fast are fish arriving at the counting station today? How many have passed since the run began? A wildfire is moving through dry forest. How fast is the fire line advancing right now? How much carbon has it released so far?
+A few weeks after the salmon start running in the Pacific Northwest we might start asking questions like: how fast are fish arriving at the counting station today? How many have passed since the run began? In the middle of a dry summer we might be interested in understanding how fast a wildfire is moving through a forest. We might be interested in how fast is the fire line advancing right now? How much carbon has it released to the atmosphere over last fire season?
 
 Those are the two questions calculus answers. How fast is something changing? How much has built up? Every chapter in this book comes back to one or the other.
 
@@ -25,9 +25,9 @@ Welcome to *Environmental Calculus*.
 
 ## Why This Book?
 
-Most calculus textbooks are written for physics and engineering students. That makes sense. Calculus was invented to describe motion, and motion is easy to feel. We'll still use it when it helps.
+Calculus textbooks are typically written for physics and engineering students. That makes sense. Calculus was invented to describe motion, and motion is easy to feel. We'll still use some examples from these fields when it helps.
 
-But you're here to study oceans, rivers, forests, populations and the atmosphere, so that's where the examples come from: streamflow during a storm, CO₂ at Mauna Loa, contaminants moving through soil. If an example doesn't connect to something you could actually measure, I've tried to cut it.
+But you're here to study oceans, rivers, forests, populations and the atmosphere, so that's where the examples will come from: streamflow during a storm, CO₂ at Mauna Loa, contaminants moving through soil. If an example doesn't connect to something you could actually measure, I've tried to cut it.
 
 I'm a hydrologist by training. I've spent my career using these tools on real water problems, and this book is my attempt to get you doing the same within the science you are pursuing. 
 
@@ -44,11 +44,8 @@ At its heart, calculus is the mathematics of **change** and **accumulation**. Th
 | **Hydrology** | How quickly streamflow is increasing during a storm | Total volume of water that flowed past a gauge |
 | **Toxicology** | Rate at which a contaminant leaches into groundwater | Total mass of contaminant accumulated in soil |
 
-Notice the pattern: a *derivative* tells you how fast something is changing at a specific moment; an *integral* tells you how much has piled up over time. These two ideas are deeply connected—in fact, the Fundamental Theorem of Calculus says they are two sides of the same coin. We'll get there step by step.
+Notice the pattern: a *derivative* tells you how fast something is changing at a specific moment; an *integral* tells you how much has piled up over time. These two ideas are deeply connected—in fact, the Fundamental Theorem of Calculus says they are two sides of the same coin.
 
-Traditionally, calculus uses physics examples like velocity (rate of change of position) and acceleration (rate of change of velocity). These are helpful because most of us can *feel* what it means to move faster or slower, so we'll use them when they make ideas clearer. But our main goal is always to connect calculus directly to the environment you are studying—population growth, forest carbon storage, water flow in rivers, and other natural systems.
-
-We'll build your understanding step by step, supported by graphs, data, and hands-on examples. And if it's been a while since your last math class, that's completely okay—you'll find plenty of support here.
 
 ::: promptbox
 
@@ -102,7 +99,7 @@ Each chapter is designed to support you as an active learner. Here's what you'll
 
 **Explanations with environmental context.** Key concepts are introduced with clear language, supported by graphs and real data from ecological and earth science systems. We define terms carefully and build ideas step by step.
 
-**Prompt boxes** are places to pause and think. Some ask you to discuss with a partner, some ask you to sketch or write, and some pose a question to wrestle with before reading on. They look like this:
+**Prompt boxes** are places to pause and think. Some ask you to discuss with a partner, some ask you to sketch or write, and some pose a question to ponder before reading on. They look like this:
 
 ::: promptbox
 **Example Prompt**
@@ -112,11 +109,11 @@ This is where you'll find a question or activity. The write-in space below is fo
 <div class="writein"></div>
 :::
 
-**Concept checks** appear throughout each chapter. These are low-stakes questions with click-to-reveal answers so you can immediately test whether a concept has clicked. If you get one wrong, that's useful information—go back and re-read the section, or bring the question to class.
+**Concept checks** appear throughout each chapter. These are low-stakes questions with click-to-reveal answers so you can immediately test whether a concept has clicked. If you get one wrong, that's useful feedback for you — go back and re-read the section, or bring the question to class or office hours.
 
-**Worked examples** walk through environmental problems step by step, showing not just the math but the reasoning: *what* we're doing, *why*, and *what the answer means in context*.
+**Worked examples** walk through environmental problems step by step, showing not just the math but the reasoning: *what* we're doing, *why*, and *what the answer means in context*. This is how you will encounter these ideas outside of this class in the environmental science fields you have chosen to study.
 
-**Workbook chapters** follow each content chapter. These give you space for guided practice, with prompts, write-in areas, and additional problems to work through at your own pace.
+**Workbook chapters** are at the back of the book and follow the content of each chapter. These give you space for guided practice, with prompts, write-in areas, and additional problems to work through at your own pace.
 
 ---
 
@@ -126,11 +123,11 @@ This is where you'll find a question or activity. The write-in space below is fo
 
 First and foremost, know this: **we believe in your ability to learn and grow.** You bring unique strengths and perspectives, and your effort matters here.
 
-Mistakes are not a setback—they are the very heart of learning. When you get something wrong, you uncover where your thinking needs refinement, and that creates the space for real growth. Struggle is not a sign you don't belong; it's proof that your brain is stretching and building new connections.
+Mistakes are not a setback—they are the very heart of learning. When you get something wrong, you uncover where your thinking needs refinement, and that creates the space for real growth. Struggle is not a sign you don't belong; it's proof that your brain is building new connections and its when learning begins. Productive struggle is what we aim for, the majority of these questions in this book should be able to be completed in under 10 minutes. If you find yourself stuck after 10 minutes, bring the question to class or an office hours - you've done the productive part of the struggle and we can help you get through the sticking point.
 
-Just like in science, learning calculus is about **iteration**—trying, testing, revising, and improving. That process is what makes your understanding deeper and more durable.
+Just like in science, learning calculus is about **iteration**—trying, testing, revising, and improving. Sometimes (and more often than you think), restarting a problem on a clean page makes it easier to find an error that combing through your working searching for a flipped sign. Chances are you don't make the same mistake twice. That process is what makes your understanding deeper and more durable.
 
-Assessments in this class are snapshots of your thinking at a particular moment in time. They are not final judgments about your intelligence, your worth, or your potential. You will have chances to revisit concepts, refine your understanding, and demonstrate what you've learned. Growth comes from re-engaging with the material, not from perfection on the first try.
+Assessments in this class are snapshots of your thinking at a particular moment in time. They are not a final judgments about your intelligence, your worth, or your potential. You will have chances to revisit concepts, refine your understanding, and demonstrate what you've learned. Growth comes from re-engaging with the material, not from getting a perfect score on the first try.
 
 So give yourself permission to be imperfect. Keep engaging, reflecting, and asking questions. We'll be here to support you every step of the way.
 
@@ -146,7 +143,7 @@ By the end of this course, you will be able to:
 - **Read and create graphs** that communicate environmental trends with mathematical precision  
 - **Set up and solve applied problems** using real data from the environmental sciences  
 
-But even more important than any specific skill, you'll leave this course with a stronger belief in your ability to *learn mathematics*—and the confidence to keep growing, using math as a tool to explore, protect, and better understand the natural world around you.
+But even more important than any specific skill, you'll leave this course with a stronger belief in your ability to *learn mathematics*—and the confidence to use math as a tool to explore, protect, and better understand the natural world around you.
 
 ---
 
@@ -170,7 +167,8 @@ I used generative AI tools to:
 
 - edit for grammar and consistency. 
 - draft practice problems, concept checks and their worked solutions
-- format and convert material, including the reveal-answer blocks and the study guides
+- write the code blocks needed for graphs and other R generated images
+- format and convert material, including the reveal-answer blocks and the study guides to work within the bookdown framework
 - meet digital accessibility requirements (WCAG 2.1 AA): drafting alt text for figures, checking heading structure, color contrast and table markup, and producing accessible Word versions of course documents
 
 I reviewed and edited all AI-generated material before publishing.

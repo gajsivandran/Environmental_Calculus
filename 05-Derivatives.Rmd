@@ -13,9 +13,9 @@ By the end of this chapter, you will be able to:
 
 ## Understanding The Speed Of Change
 
-Imagine you're a marine biologist monitoring the population of a reef-dwelling fish species in a protected area. Over the past five years, the fish population has started to rebound after a ban on commercial fishing. But the key question isn't just how many fish are there now?—it's how fast is the population recovering?
+Imagine you're a marine biologist monitoring the population of a reef fish species in a protected area. Over the last five years, the fish population has started to rebound after a ban on commercial fishing. But the key question isn't just how many fish are there now?—it's how fast is the population recovering?
 
-Or picture a team of conservationists tracking the spread of an invasive plant through a national park. The plant’s total coverage increases each month—but is that rate speeding up, slowing down, or holding steady?
+Or picture a team of conservationists tracking the spread of an invasive plant through a national park. The total coverage increases each month—but is that rate speeding up, slowing down, or holding steady?
 
 These are not just ecological observations. They're questions about change. And answering them requires calculus.
 
